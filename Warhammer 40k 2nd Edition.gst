@@ -141,9 +141,14 @@
     <categoryEntry id="f209-8cb3-5cae-0f0b" name="Tyranids" hidden="false"/>
     <categoryEntry id="b373-19ca-9b61-1a4c" name="Chaos" hidden="false"/>
     <categoryEntry id="0f7a-2cd5-df51-dccd" name="Daemons" hidden="false"/>
+    <categoryEntry id="6741-c4c6-274e-36cf" name="Support - Ally" hidden="false"/>
   </categoryEntries>
   <forceEntries>
-    <forceEntry id="5eaa-5b96-5986-4194" name="Don&apos;t pick this - Click to change" hidden="true"/>
+    <forceEntry id="5eaa-5b96-5986-4194" name="Don&apos;t pick this - Click to change" hidden="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true"/>
+      </modifiers>
+    </forceEntry>
   </forceEntries>
   <sharedSelectionEntries>
     <selectionEntry id="ba47-de18-97b6-db04" name="Blades and Saws" publicationId="06e5-8e36-e8c8-aec3" page="6" hidden="false" collective="false" import="true" type="upgrade">
@@ -2439,6 +2444,21 @@ See Wargear Rulebook Pg. 54 for full details on firing the weapon</description>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="1b28-92ed-1800-9958" name="Seeking Ammo" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="9225-c991-7d29-ac30" name="Seeking Ammo" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+          <characteristics>
+            <characteristic name="Special" typeId="f917-8cd8-7592-47dd">May only be used with a single projectile weapon the model is equipped with that you choose before the game
+starts. When the model bearing this card fires a shot with the selected weapon, you may choose to use Seeking
+Ammo. Seeking Ammo always hits its target on a to-hit roll of 2+, and may be fired at targets which are hidden or out of sight as long as the target is detected and lies within weapon range. Seeking ammo may not be used
+in combination with other kinds of ammo. Discarded after use.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="3a8b-4669-b2f5-b7f1" name="Vehicle Wargear Cards (Generic)" hidden="false" collective="false" import="true"/>
@@ -2791,6 +2811,14 @@ See Wargear Rulebook Pg. 54 for full details on firing the weapon</description>
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="1.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="ab51-62ee-72eb-11a1" name="Seeking Ammo" hidden="false" collective="false" import="true" targetId="1b28-92ed-1800-9958" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a42-d8c4-bb46-bd60" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="5.0"/>
           </costs>
         </entryLink>
       </entryLinks>

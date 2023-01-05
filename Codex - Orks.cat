@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="82c6-3e15-54c5-a35f" name="Codex - Orks" revision="8" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="82c6-3e15-54c5-a35f" name="Codex - Orks" revision="9" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="23ab-e52d-6e65-01d5" name="Characters" hidden="false"/>
     <categoryEntry id="f72b-82f4-2a38-7d26" name="Mobs" hidden="false"/>
@@ -3316,7 +3316,7 @@
     </selectionEntry>
     <selectionEntry id="e0a6-b80b-81e8-bd34" name="Ork Dreadnought" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="739a-c680-e567-c451" value="1.0">
+        <modifier type="set" field="739a-c680-e567-c451" value="99.0">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
@@ -3398,7 +3398,7 @@
     </selectionEntry>
     <selectionEntry id="d29b-7c41-486d-2ae8" name="Space Ork Battlewagon" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="07cd-7140-e1e8-065f" value="1.0">
+        <modifier type="set" field="07cd-7140-e1e8-065f" value="99.0">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
@@ -3430,7 +3430,7 @@
     </selectionEntry>
     <selectionEntry id="546b-5a19-135d-52d4" name="Pulsa Rokkit" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="462b-ab25-80ab-8b52" value="1.0">
+        <modifier type="set" field="462b-ab25-80ab-8b52" value="99.0">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
@@ -3467,7 +3467,7 @@
     </selectionEntry>
     <selectionEntry id="ede6-bc00-9736-dc96" name="Squig Katapult" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="8098-91a5-39b1-d43b" value="1.0">
+        <modifier type="set" field="8098-91a5-39b1-d43b" value="99.0">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
@@ -3504,7 +3504,7 @@
     </selectionEntry>
     <selectionEntry id="b2c9-2c9c-bc66-deb0" name="Smasha Cannon" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="1649-3d40-0b4c-f7d7" value="1.0">
+        <modifier type="set" field="1649-3d40-0b4c-f7d7" value="99.0">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
@@ -3541,7 +3541,7 @@
     </selectionEntry>
     <selectionEntry id="c3a3-8222-0fcd-6aa2" name="Traktor Kannon" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="f049-8119-9d7a-f5bb" value="1.0">
+        <modifier type="set" field="f049-8119-9d7a-f5bb" value="99.0">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
@@ -3578,7 +3578,7 @@
     </selectionEntry>
     <selectionEntry id="a69e-9760-e603-7984" name="Splatta Kannon" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="0058-91df-d2dc-b984" value="1.0">
+        <modifier type="set" field="0058-91df-d2dc-b984" value="99.0">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
@@ -3677,7 +3677,7 @@
     </selectionEntry>
     <selectionEntry id="1351-119c-f689-6e7f" name="Ork War Buggy" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="2016-d252-ca14-105d" value="1.0">
+        <modifier type="set" field="2016-d252-ca14-105d" value="99.0">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
@@ -3744,7 +3744,7 @@
     </selectionEntry>
     <selectionEntry id="f433-c85b-8f5e-34a0" name="Ork Scorcher" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="009f-37e0-b4e9-3a87" value="1.0">
+        <modifier type="set" field="009f-37e0-b4e9-3a87" value="99.0">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
@@ -3787,7 +3787,7 @@
     </selectionEntry>
     <selectionEntry id="3c70-b58d-2ca0-a5db" name="Ork Wartrak" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="a4b2-4702-9ccb-2242" value="1.0">
+        <modifier type="set" field="a4b2-4702-9ccb-2242" value="99.0">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>

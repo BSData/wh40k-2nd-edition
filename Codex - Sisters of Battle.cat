@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b7a0-f77c-22d5-5989" name="Codex - Sisters of Battle" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b7a0-f77c-22d5-5989" name="Codex - Sisters of Battle" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7900-d214-741e-e36e" name="Squads" hidden="false"/>
     <categoryEntry id="0623-7337-2260-e37e" name="Support" hidden="false"/>

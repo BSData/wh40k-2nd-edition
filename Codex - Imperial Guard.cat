@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="82fc-8ad4-7b4b-dd4a" name="Codex - Imperial Guard" revision="6" battleScribeVersion="2.03" authorName="Boff" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="82fc-8ad4-7b4b-dd4a" name="Codex - Imperial Guard" revision="6" battleScribeVersion="2.03" authorName="Boff" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>I haven&apos;t put restrictions for the Regimental style to build a list, such as 1 Command HQ, 3 Guard/Heavy Weapons teams, 3 additional unit. Doing so would be rather messy and complicated with all the possible choices, and frankly isn&apos;t really a huge deal.
 
 Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct units.</readme>
@@ -2335,6 +2335,9 @@ Re-roll any failed Break test</characteristic>
       <entryLinks>
         <entryLink id="a727-c002-587d-e121" name="Vehicle Wargear Cards" hidden="false" collective="false" import="true" targetId="ed25-a595-1a9d-129d" type="selectionEntryGroup"/>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="1764-c068-d2f2-64ce" name="Lord Commander Solar Macharius" publicationId="a1e3-886b-e509-d15a" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>

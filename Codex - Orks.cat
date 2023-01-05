@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="82c6-3e15-54c5-a35f" name="Codex - Orks" revision="8" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="82c6-3e15-54c5-a35f" name="Codex - Orks" revision="8" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="23ab-e52d-6e65-01d5" name="Characters" hidden="false"/>
     <categoryEntry id="f72b-82f4-2a38-7d26" name="Mobs" hidden="false"/>
@@ -601,6 +601,11 @@
         <entryLink id="3c31-9765-abd7-5fe4" name="Assault Weapons" hidden="false" collective="false" import="true" targetId="5062-76ee-9085-6293" type="selectionEntryGroup"/>
         <entryLink id="37de-c76f-16dd-0f3a" name="Special Weapons" hidden="false" collective="false" import="true" targetId="f7fe-0d89-7999-1912" type="selectionEntryGroup"/>
         <entryLink id="eb78-5ed5-2647-11c7" name="Stikkbombz" hidden="false" collective="false" import="true" targetId="0fa9-1829-1611-efc8" type="selectionEntryGroup"/>
+        <entryLink id="001d-c5f1-ec8e-441b" name="Wargear Cards" hidden="false" collective="false" import="true" targetId="fff1-a6e4-735f-541f" type="selectionEntryGroup">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="71ae-386f-9588-0672" type="max"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="35.0"/>
@@ -1957,7 +1962,7 @@
             <infoLink id="bf86-920d-e654-8ae7" name="Stormyboyz" hidden="false" targetId="08f4-ae51-7f99-6c65" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="12.0"/>
+            <cost name="pts" typeId="points" value="11.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2899,6 +2904,9 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e8b0-f19c-273e-d37f" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>

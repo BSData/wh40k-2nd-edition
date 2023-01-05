@@ -5048,17 +5048,17 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
           <entryLinks>
             <entryLink id="28cf-24d5-9433-50c5" name="Lascannon" hidden="false" collective="false" import="true" targetId="601b-a85f-4654-80d0" type="selectionEntry">
               <costs>
-                <cost name="pts" typeId="points" value="45.0"/>
+                <cost name="pts" typeId="points" value="90.0"/>
               </costs>
             </entryLink>
             <entryLink id="aea4-2a15-558f-e100" name="Heavy Bolter" page="" hidden="false" collective="false" import="true" targetId="4c82-0e56-d20a-6b1c" type="selectionEntry">
               <costs>
-                <cost name="pts" typeId="points" value="15.0"/>
+                <cost name="pts" typeId="points" value="30.0"/>
               </costs>
             </entryLink>
             <entryLink id="2035-5852-e837-0f58" name="Heavy Flamer" hidden="false" collective="false" import="true" targetId="4da3-a884-c204-2800" type="selectionEntry">
               <costs>
-                <cost name="pts" typeId="points" value="25.0"/>
+                <cost name="pts" typeId="points" value="50.0"/>
               </costs>
             </entryLink>
           </entryLinks>

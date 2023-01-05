@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="9ea8-c89d-9104-ed03" name="Warhammer 40k 2nd Edition" revision="22" battleScribeVersion="2.03" authorName="Boff" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="9ea8-c89d-9104-ed03" name="Warhammer 40k 2nd Edition" revision="23" battleScribeVersion="2.03" authorName="Boff" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <comment>Warhammer 2nd Edition 40k</comment>
+  <readme>Added more wargear cards</readme>
   <publications>
     <publication id="2bb8-b6de-8b70-7f41" name="Warhammer 40k 2nd Edition Rulebook" shortName="2nd Rulebook" publicationDate="1993"/>
     <publication id="06e5-8e36-e8c8-aec3" name="Warhammer 40,000: Wargear (2nd Edition)" shortName="Wargear" publicationDate="1993"/>
@@ -142,6 +143,7 @@
     <categoryEntry id="b373-19ca-9b61-1a4c" name="Chaos" hidden="false"/>
     <categoryEntry id="0f7a-2cd5-df51-dccd" name="Daemons" hidden="false"/>
     <categoryEntry id="6741-c4c6-274e-36cf" name="Support - Ally" hidden="false"/>
+    <categoryEntry id="722d-8a5c-d442-498a" name="Necrons" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="5eaa-5b96-5986-4194" name="Don&apos;t pick this - Click to change" hidden="true">
@@ -2459,6 +2461,229 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="6308-5cb4-3afb-1b39" name="Vortex Grenade" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="b7d2-9ab5-c636-5e76" name="Vortex Grenade" hidden="false" typeId="4fd7-adb4-cddd-0136" typeName="Weapon - Missile / Grenade">
+          <characteristics>
+            <characteristic name="Strength" typeId="51dd-04c1-d98c-138d">-</characteristic>
+            <characteristic name="Damage" typeId="1028-07d4-bd9d-15d3">-</characteristic>
+            <characteristic name="Save Modifier" typeId="572d-e3e8-a08a-5603">-</characteristic>
+            <characteristic name="Blast Area" typeId="c090-9b36-533a-a5a0">1½&quot; Radius</characteristic>
+            <characteristic name="Special" typeId="0193-4cf7-077c-97ba">Vortex Grenade, 1 use only</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="a62d-2b3d-77b1-c8be" name="Vortex Grenade" hidden="false">
+          <description>Anything covered is automatically destroyed, anything partial is destroyed on a 4+. This includes vehicles, terrain, etc. If a vehicle is partially covered, each location on the vehicle covered by the vortex is hit on a D6 roll of 4+ — the vehicle‘s armour is penetrated automatically; roll for damage on the appropriate table with a +1 modifier.No armour save is possible at all. Vortex blocks out sight and cannot be fired through. At the beginning of each subsequent player turn roll a D6 and consult the below chart:
+
+1-2: Vortex disappears
+3-4: Vortex remains in play
+5-6: Vortex moves D6&quot; in a random direction determined with a scatter dice
+</description>
+        </rule>
+      </rules>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5c5a-5864-5f50-d4e0" name="Warp Jump" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="87ea-6a13-4ab1-1546" name="Warp Jump" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+          <characteristics>
+            <characteristic name="Special" typeId="f917-8cd8-7592-47dd">A model with such a generator may choose to teleport to any point on the battlefield during its movement phase instead of moving normally. Roll a Scatter Die to see if the model teleports on target; a “Hit” means it is on target; an arrow means it scatters 2D10” in the direction indicated. However, if a double-1 is rolled, it means the model is permanently lost in the warp. The model may shoot and fight in hand-to-hand combat on the same turn, but doesn‘t count as charging.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0108-499f-c0b5-f17c" name="Virus Grenade" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="e5f6-aeb3-0fa2-a902" name="Virus Grenade" hidden="false" typeId="4fd7-adb4-cddd-0136" typeName="Weapon - Missile / Grenade">
+          <characteristics>
+            <characteristic name="Strength" typeId="51dd-04c1-d98c-138d">-</characteristic>
+            <characteristic name="Damage" typeId="1028-07d4-bd9d-15d3">-</characteristic>
+            <characteristic name="Save Modifier" typeId="572d-e3e8-a08a-5603">-</characteristic>
+            <characteristic name="Blast Area" typeId="c090-9b36-533a-a5a0">2&quot; Radius</characteristic>
+            <characteristic name="Special" typeId="0193-4cf7-077c-97ba">Virus Grenade, 1 use only</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="f296-75f8-5bfd-3c3b" name="Virus Grenade" hidden="false">
+          <description>Models affected by the template must roll to see whether the gas affects them.Space Marines, Eldar Aspect Warriors, Dreadnoughts, Terminators, and enclosed vehicles are immune to its effects. Other models must roll a 1 or 2 on D6 to avoid the affects. Affected models are effectively slain — but are left on the battlefield. Lie affected models on their sides, and roll a D6 — this is the contact range for the virus in inches. Any normally vulnerable model within the contact range of a victim of the Virus is slain on a D6 roll of 4+. Each time a model is slain by the effects of the virus, lay it on its side and roll for the contact range again. It is possible that a single model may have to test to see if it is slain several times because it lies within the contact range of more than one victim. Once there are no more victims within the contact range of all slain models, the virus has no further effects.</description>
+        </rule>
+      </rules>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c1c1-24d3-9d15-a132" name="Toxin Grenade" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="26a3-3780-4cfc-7d84" name="Toxin Grenade" hidden="false" typeId="4fd7-adb4-cddd-0136" typeName="Weapon - Missile / Grenade">
+          <characteristics>
+            <characteristic name="Strength" typeId="51dd-04c1-d98c-138d">-</characteristic>
+            <characteristic name="Damage" typeId="1028-07d4-bd9d-15d3">-</characteristic>
+            <characteristic name="Save Modifier" typeId="572d-e3e8-a08a-5603">-</characteristic>
+            <characteristic name="Blast Area" typeId="c090-9b36-533a-a5a0">1½&quot; Radius</characteristic>
+            <characteristic name="Special" typeId="0193-4cf7-077c-97ba">Toxin Grenade, 1 use only</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="8be0-55d1-14bb-e9c2" name="Toxin Grenade" hidden="false">
+          <description>Models affected by the template must roll to see if the toxin affects them — Space Marines, Eldar Aspect Warriors, Dreadnoughts, Terminators, and enclosed vehicles are immune to the effects. Imperial Guard, Squats, Eldar Guardians, Space Marine Scouts, and Orks in &apos;Eavy armour must roll a 1 or 2 on D6 to avoid the toxin‘s effects. Other models, Orks, and Gretchin must roll a 1 to avoid being affected. Affected models must roll a D6; on a 2+, they are slain regardless of their Wounds.</description>
+        </rule>
+      </rules>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2ed2-cee9-c66b-61b9" name="Stasis Grenade" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="d1af-5af8-8ac2-c710" name="Stasis Grenade" hidden="false" typeId="4fd7-adb4-cddd-0136" typeName="Weapon - Missile / Grenade">
+          <characteristics>
+            <characteristic name="Strength" typeId="51dd-04c1-d98c-138d">-</characteristic>
+            <characteristic name="Damage" typeId="1028-07d4-bd9d-15d3">-</characteristic>
+            <characteristic name="Save Modifier" typeId="572d-e3e8-a08a-5603">-</characteristic>
+            <characteristic name="Blast Area" typeId="c090-9b36-533a-a5a0">2&quot; Radius</characteristic>
+            <characteristic name="Special" typeId="0193-4cf7-077c-97ba">Stasis Grenade, 1 use only</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="8c47-4424-be93-5a20" name="Stasis Grenade" hidden="false">
+          <description>Everything under the marker is trapped in a stasis loop. Models inside the marker may neither act nor be affected by anything outside the loop; they cannot move or shoot and cannot be shot at. Line of Sight may be drawn through the stasis field. Vehicles and troops within 2” of the edge of the blast marker move at half speed and may only shoot or use psychic powers if they first roll a 4+ on D6. Close combat is only worked out every other turn for models within 2” of the marker. There is a –2 to hit modifier for shooting into, through, or out of the area within 2” of the marker. The field remains in play; at the beginning of each side‘s turn, roll a D6:
+
+1-2 Stasis effect persists until the end of this turn and then the grenade‘s power source is exhausted, and the template is removed.
+3-6 The effect remains</description>
+        </rule>
+      </rules>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ff93-6c11-25e9-72dc" name="Power Field" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="bbee-0005-ab65-f4cc" name="Power Field" hidden="false" typeId="4657-2671-1065-d493" typeName="Armour">
+          <characteristics>
+            <characteristic name="Saving Throw" typeId="b439-323a-9cfe-6340">2+ (unmodified)</characteristic>
+            <characteristic name="Special" typeId="b7f1-73cd-d19d-26a6">No protection in close combat. Model counts as encumbered for the purpose of close combat. Only one personal field may be used at a time.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a305-80f8-973b-90d4" name="Master-Crafted Laspistol" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="503a-14fe-1a0a-0bac" name="Master-Crafted Laspistol" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">8</characteristic>
+            <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">24</characteristic>
+            <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">+2</characteristic>
+            <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">+1</characteristic>
+            <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">6</characteristic>
+            <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
+            <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-1</characteristic>
+            <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+6</characteristic>
+            <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Sustained Fire 1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="904f-5cff-eab8-0e84" name="Close Combat" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
+        <infoLink id="e3df-10d3-aa4a-36d7" name="Sustained Fire" hidden="false" targetId="0b67-c911-308c-4960" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9395-c085-9b29-2302" name="Immune" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="fda9-992e-0a42-0dea" name="Immune" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+          <characteristics>
+            <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Model may totally ignore the effects of the following types: choke, hallucinogen, rad, scare, toxin, and virus</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0ad2-92fa-5b56-644e" name="Haywire Grenade" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="084e-8258-e5b8-c152" name="Haywire Grenade" hidden="false" typeId="4fd7-adb4-cddd-0136" typeName="Weapon - Missile / Grenade">
+          <characteristics>
+            <characteristic name="Strength" typeId="51dd-04c1-d98c-138d">-</characteristic>
+            <characteristic name="Damage" typeId="1028-07d4-bd9d-15d3">-</characteristic>
+            <characteristic name="Save Modifier" typeId="572d-e3e8-a08a-5603">-</characteristic>
+            <characteristic name="Blast Area" typeId="c090-9b36-533a-a5a0">1½&quot;</characteristic>
+            <characteristic name="Special" typeId="0193-4cf7-077c-97ba">Haywire Grenade, 1 use only</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="ceb0-4a8c-d572-f812" name="Haywire Grenade" hidden="false">
+          <description>Only affects vehicles, dreadnoughts, robots, Wraithguard, and Terminators. If any of these models is hit with a Haywire Grenade, their armour is penetrated automatically. Roll to hit locations covered by the template as normal, and then roll on the appropriate damage table with a –1 modifier. Vehicle crewmen or Terminators hit by this grenade suffer a S3 hit causing 1 wound with no armour save possible. </description>
+        </rule>
+      </rules>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7299-aa89-aeeb-37a1" name="Graviton Gun" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="179b-cbd0-e146-ee6a" name="Graviton Gun" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">8</characteristic>
+            <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">16</characteristic>
+            <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">+1</characteristic>
+            <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+            <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">-</characteristic>
+            <characteristic name="Damage" typeId="8978-f9c3-8957-1481">-</characteristic>
+            <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-</characteristic>
+            <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">Auto</characteristic>
+            <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">1&quot; Blast, Graviton</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="98e3-05fb-f9ee-81cd" name="Graviton Gun" hidden="false">
+          <description>Living targets are immobilized for the rest of the game and may not move or shoot, though a psyker thus affected may use his powers. Vehicles roll for hit location as normal and ignore armour penetration. Add +1 to the die score when you roll for damage on the appropriate table</description>
+        </rule>
+      </rules>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4490-0f7f-8f88-8729" name="Combat Drugs" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="0a6a-767c-3803-ea21" name="Combat Drugs" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+          <characteristics>
+            <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Model may use Combat Drugs at any time with immediate effects on his characteristics. The model speeds up (Move x 2, Initiative x 2, Attacks x 2) and becomes harder to injure (Toughness +1) and stronger (Strength +1). At the end of each of the models‘ turns after which he has taken the drugs, roll a D6; on a 5+, the model suffers 1 wound with no save possible. The effects of the drugs last until the model suffers a wound for any reason — at which point this card is discarded and the model‘s characteristics return to normal. Combat Drugs may not be used in combination with Frenzon.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d895-75cf-96df-ca33" name="Cameleoline" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="6ef3-0ecb-f539-a80e" name="Cameleoline" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+          <characteristics>
+            <characteristic name="Special" typeId="f917-8cd8-7592-47dd">All shots fired at a stationary model wearing a Cameleoline are at -1 to hit in addition to other modifieres. If the model hides, troops that move into a position to see the hiding model - or move within their Initiative distance - will only detect him rather than spot him</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="3a8b-4669-b2f5-b7f1" name="Vehicle Wargear Cards (Generic)" hidden="false" collective="false" import="true"/>
@@ -2821,6 +3046,111 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
             <cost name="pts" typeId="points" value="5.0"/>
           </costs>
         </entryLink>
+        <entryLink id="7c91-c4ca-8504-ae0f" name="Vortex Grenade" hidden="false" collective="false" import="true" targetId="6308-5cb4-3afb-1b39" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ae1-7cbe-35a2-1bcd" type="max"/>
+            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="44a9-1419-6504-72d0" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="50.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="2ca2-12f1-baca-9f75" name="Warp Jump" hidden="false" collective="false" import="true" targetId="5c5a-5864-5f50-d4e0" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="94be-7299-c93d-dbf1" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c04-b43a-e54a-6864" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="30.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="feff-1e79-768d-ea23" name="Virus Grenade" hidden="false" collective="false" import="true" targetId="0108-499f-c0b5-f17c" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c32e-cabd-ac8c-c057" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f93-fb60-ebaf-73f2" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="50.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="9339-9809-5c9d-f8e3" name="Toxin Grenade" hidden="false" collective="false" import="true" targetId="c1c1-24d3-9d15-a132" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c6a4-d22b-4e62-311c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="15e8-ea7e-9542-e89d" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="15.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="7666-8e30-2519-7c0d" name="Stasis Grenade" hidden="false" collective="false" import="true" targetId="2ed2-cee9-c66b-61b9" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8317-e525-ee09-326c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b17-5027-f4c3-c8af" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="20.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="610f-0274-d25d-c964" name="Power Field" hidden="false" collective="false" import="true" targetId="ff93-6c11-25e9-72dc" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="866c-e907-67fd-a154" type="max"/>
+            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ff50-e0b0-8ba2-58df" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="35.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="7817-529e-1446-a953" name="Master-Crafted Laspistol" hidden="false" collective="false" import="true" targetId="a305-80f8-973b-90d4" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4404-baec-c8ee-3943" type="max"/>
+            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5d2e-19ac-d148-7f04" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="10.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="b1b2-977c-26af-3aaa" name="Immune" hidden="false" collective="false" import="true" targetId="9395-c085-9b29-2302" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6470-83b4-8d29-30b0" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="5.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="9f0d-f5d1-ab40-e808" name="Haywire Grenade" hidden="false" collective="false" import="true" targetId="0ad2-92fa-5b56-644e" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c841-b503-e369-09c9" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="10.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="2a54-9f61-df33-6779" name="Displacer Field" hidden="false" collective="false" import="true" targetId="9051-aabb-b632-2aa7" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="74ad-4111-f8db-30d8" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0829-0b52-f6d2-3b96" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="20.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="859c-85eb-23a4-e999" name="Combat Drugs" hidden="false" collective="false" import="true" targetId="4490-0f7f-8f88-8729" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="55dc-b6e1-0702-3401" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b27c-b32f-e013-9b20" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="25.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="b446-3124-bdad-60a4" name="Cameleoline" hidden="false" collective="false" import="true" targetId="d895-75cf-96df-ca33" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a8e-d8e7-f262-c21c" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="5.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="7536-f993-73e8-d438" name="Wargear Cards (Eldar)" hidden="false" collective="false" import="true"/>
@@ -2880,6 +3210,34 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="8.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="165b-2aea-cfdc-fe1d" name="Storm Shield" hidden="false" collective="false" import="true" targetId="5b69-dbfc-8a02-2d96" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8764-91af-50ec-7b92" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="10.0"/>
+          </costs>
+        </entryLink>
+        <entryLink id="3fd2-9422-352e-95c3" name="Graviton Gun" hidden="false" collective="false" import="true" targetId="7299-aa89-aeeb-37a1" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a800-8c47-b465-29bc" type="notEqualTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="19b3-4511-2419-edeb" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="471e-a863-3688-9f84" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="40.0"/>
           </costs>
         </entryLink>
       </entryLinks>

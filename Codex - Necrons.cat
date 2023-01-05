@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue id="f649-eb44-08cb-0ba3" name="Codex - Necrons" revision="1" battleScribeVersion="2.03" authorName="Boff" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <readme>V1 is just the White Dwarf units. May add the fan rules in later if people want</readme>
+  <categoryEntries>
+    <categoryEntry id="2ea9-09f2-fdbd-4ae7" name="Characters" hidden="false"/>
+    <categoryEntry id="a674-4bce-893e-4a31" name="Squads" hidden="false"/>
+    <categoryEntry id="d343-afc5-46fd-9c02" name="Support" hidden="false"/>
+  </categoryEntries>
+  <forceEntries>
+    <forceEntry id="871d-0043-0042-8883" name="Necrons" hidden="false">
+      <categoryLinks>
+        <categoryLink id="3e9a-959b-d825-797e" name="Characters" hidden="false" targetId="2ea9-09f2-fdbd-4ae7" primary="false">
+          <constraints>
+            <constraint field="points" scope="parent" value="50.0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="187e-1047-0733-759e" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="4709-48b0-040d-5575" name="Squads" hidden="false" targetId="a674-4bce-893e-4a31" primary="false">
+          <constraints>
+            <constraint field="points" scope="parent" value="25.0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="01b2-1eb4-5b3b-5a1d" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="7222-123e-60f1-c650" name="Support" hidden="false" targetId="d343-afc5-46fd-9c02" primary="false">
+          <constraints>
+            <constraint field="points" scope="parent" value="50.0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="158f-3eb2-88d6-bff3" type="max"/>
+          </constraints>
+        </categoryLink>
+      </categoryLinks>
+    </forceEntry>
+  </forceEntries>
+  <entryLinks>
+    <entryLink id="5e18-36c7-0d37-4cfb" name="Necron Lord" hidden="false" collective="false" import="true" targetId="8a1f-c19a-1e19-d04f" type="selectionEntry"/>
+    <entryLink id="0500-a1ef-ab98-518d" name="Necron Warrior Squad" hidden="false" collective="false" import="true" targetId="e075-3b44-b3c3-8834" type="selectionEntry"/>
+    <entryLink id="b88c-0fbc-4853-95dd" name="Scarab" hidden="false" collective="false" import="true" targetId="16d1-76ae-1849-9e8b" type="selectionEntry"/>
+    <entryLink id="39f4-cf2e-bcf9-c96d" name="Necron Destroyer" hidden="false" collective="false" import="true" targetId="2d33-f5d2-342c-bac6" type="selectionEntry"/>
+  </entryLinks>
+  <rules>
+    <rule id="3b4d-8974-ac46-9492" name="Repair: &quot;I&apos;ll Be Back&quot;" publicationId="8eed-45fd-d4be-9a1b" hidden="false">
+      <description>Slain Necrons are not removed as casualties but are placed on their sides in a manner similar to that of a slain Tyranid with the Regeneration Biomorph. The Necron takes no part in the game while in this condition and cannot be further harmed. At the start of each of its controller‘s turns, roll a D6: 
+
+6: The Necron is repaired. It rises to its feet and can immediately move
+and fight as normal.
+2-5: The Necron remains on the ground.
+1: The Necron‘s body fails to repair itself and wastes away; remove the
+model as a casualty.</description>
+    </rule>
+    <rule id="f97e-fdde-ef43-7bb8" name="Leadership and Defeat" publicationId="8eed-45fd-d4be-9a1b" hidden="false">
+      <description>Necrons do not take Leadership tests — any test they would normally be required to take, they automatically pass. The Ld of 10 has been provided for convenience. If the entire Necron force is reduced to 25% or less of its original number at the start of any Necron turn, then the whole army will mysteriously vanish; the Necrons are assumed to have been driven away. 
+Necrons which have fallen down but not yet removed can‘t be counted as part of the remaining force, so a Necron army can be defeated if enough models are knocked down even if they are not permanently destroyed.</description>
+    </rule>
+    <rule id="46f7-34cc-cd68-7256" name="Isolation" hidden="false">
+      <description>Necrons ordinarily must maintain squad coherency as is normal for a squad. However, ―active‖ Necrons do not need to maintain this coherency with Necrons which have been downed in combat and are attempting to repair themselves. Thus a Necron which repairs itself may find itself outside of normal coherency to the rest of its squad. Necrons in such a condition are said to be isolated. 
+Necrons which recover must try to join up with a Necron unit of the same type as themselves or with another individual model of the same kind. Until it does so, the Necron is isolated. Isolated Necrons cannot shoot, although fights as normal in all other respects.</description>
+    </rule>
+    <rule id="e15c-f42f-5457-05a1" name="Disruptor Zone" publicationId="8eed-45fd-d4be-9a1b" hidden="false">
+      <description>If a vehicle or a dreadnought is within 6” of a Necron at the start of its turn, then it must roll a 4+ on D6 to move at all that turn. Even if successful at this roll, its movement is halved that turn. Any weapon attempting to shoot suffers a –1 To Hit penalty for each Necron within 6”. Enemies in close combat may not use the Strength of any close combat weapons when resolving hits; use the Strength of the model itself. This rule applies to all weapons, except Tyranid weaponry.</description>
+    </rule>
+    <rule id="49c2-92a7-84a2-6621" name="Deployment" publicationId="8eed-45fd-d4be-9a1b" hidden="false">
+      <description>The Necron player always deploys last and always gets the first turn.</description>
+    </rule>
+  </rules>
+  <sharedSelectionEntries>
+    <selectionEntry id="606a-4a36-b1c4-fd10" name="Staff of Light" publicationId="8eed-45fd-d4be-9a1b" page="" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="669e-8963-93f1-3b6a" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4107-eea7-c5e7-a4dc" type="min"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="218f-aa85-385f-7535" name="Staff of Light" hidden="false" targetId="0cc8-5789-b5cf-1db2" type="profile"/>
+        <infoLink id="1f32-7bd2-0607-f5b7" name="Close Combat" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="8a1f-c19a-1e19-d04f" name="Necron Lord" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="1415-0975-a325-777f" name="Necron Lord" hidden="false" targetId="557c-cb2d-cb45-6cbb" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="4348-ec97-6515-dc7a" name="New CategoryLink" hidden="false" targetId="2ea9-09f2-fdbd-4ae7" primary="true"/>
+        <categoryLink id="3e43-fde6-3902-95e3" name="Necrons" hidden="false" targetId="722d-8a5c-d442-498a" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="d499-ca5e-fe6d-5501" name="Staff of Light" hidden="false" collective="false" import="true" targetId="606a-4a36-b1c4-fd10" type="selectionEntry"/>
+        <entryLink id="b0e2-76a4-8977-9709" name="Armoured Body" hidden="false" collective="false" import="true" targetId="19c2-4ca5-46a6-ad63" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="84.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="19c2-4ca5-46a6-ad63" name="Armoured Body" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="87df-3c40-7347-e26a" type="min"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc45-10ff-9528-4d72" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="4e76-fc09-4f49-bbc0" name="Armoured Body" hidden="false" targetId="a851-11cb-78f5-a9b4" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="e075-3b44-b3c3-8834" name="Necron Warrior Squad" publicationId="8eed-45fd-d4be-9a1b" hidden="false" collective="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="c7a5-7de4-4b08-3fa0" name="New CategoryLink" hidden="false" targetId="a674-4bce-893e-4a31" primary="true"/>
+        <categoryLink id="f7d4-0a05-2b60-f365" name="Necrons" hidden="false" targetId="722d-8a5c-d442-498a" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="a77a-781a-4db8-b21a" name="Necron Warriors" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e939-a6a2-c04d-0d2f" type="min"/>
+            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e32e-a24e-3365-de63" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="35c6-a13f-571c-6d79" name="Necron Warrior" hidden="false" targetId="e17a-064b-0b34-f7a8" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="44.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="48fa-f867-e3b8-d1fe" name="Armoured Body" hidden="false" collective="false" import="true" targetId="19c2-4ca5-46a6-ad63" type="selectionEntry"/>
+        <entryLink id="9623-44f1-36c6-fb27" name="Gauss-Flayer Gun" hidden="false" collective="false" import="true" targetId="4e51-e456-76f2-ef94" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3689-459e-f4b5-f156" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d7d-71e9-4a81-0deb" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry id="4e51-e456-76f2-ef94" name="Gauss-Flayer Gun" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="475b-90c5-4151-0342" name="Gauss-Flayer Gun" hidden="false" targetId="9bd5-521f-335d-2065" type="profile"/>
+        <infoLink id="98ce-085a-cdcf-2f83" name="Metal Flayer" hidden="false" targetId="01b4-1353-5ffc-a871" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="16d1-76ae-1849-9e8b" name="Scarab" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="increment" field="b55f-8785-8f4b-984e" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="5.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a77a-781a-4db8-b21a" repeats="2" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b55f-8785-8f4b-984e" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="fa7a-46cf-8f44-80d4" name="Scarab" hidden="false" targetId="8cf8-78a1-18b8-2317" type="profile"/>
+        <infoLink id="fb17-31bb-7041-a092" name="Metal Eater" hidden="false" targetId="3b0a-f62e-7bd0-6210" type="rule"/>
+        <infoLink id="52ca-1487-b13b-21de" name="Scarabs" hidden="false" targetId="49cc-8456-7ce2-dd4f" type="rule"/>
+        <infoLink id="791d-d5fb-663c-78ad" name="Scarab Movement" hidden="false" targetId="c972-1d7e-f0a0-19ce" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="558d-c20c-147d-42d2" name="New CategoryLink" hidden="false" targetId="a674-4bce-893e-4a31" primary="true"/>
+        <categoryLink id="510d-5c0e-4974-1acd" name="Necrons" hidden="false" targetId="722d-8a5c-d442-498a" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="b992-dd11-c0a0-3dad" name="Armoured Body" hidden="false" collective="false" import="true" targetId="19c2-4ca5-46a6-ad63" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="30.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2d33-f5d2-342c-bac6" name="Necron Destroyer" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="9599-b87c-9154-6171" name="Necron Destroyer" hidden="false" targetId="e36a-0897-706c-61c1" type="profile"/>
+        <infoLink id="e863-6c8a-4357-a552" name="Destroyer Damage Table" hidden="false" targetId="f8b4-3df7-bcce-5673" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="83f5-5010-12e6-f8a2" name="Support" hidden="false" targetId="d343-afc5-46fd-9c02" primary="true"/>
+        <categoryLink id="8def-db50-6a5f-4a49" name="Necrons" hidden="false" targetId="722d-8a5c-d442-498a" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="8489-1168-968c-ca3f" name="Necron Warriors" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="363e-d073-bfdb-c156" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c611-a22d-f157-93a4" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="22c3-b879-f464-30b5" name="Necron Warrior" hidden="false" targetId="e17a-064b-0b34-f7a8" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="44.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="2391-b386-224d-ae8d" name="Gaus Cannon" hidden="false" collective="false" import="true" targetId="c000-2cad-9f8c-9170" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba0f-1de4-4194-04a7" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff35-4fed-1e29-2586" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="75.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c000-2cad-9f8c-9170" name="Gaus Cannon" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="f6cb-862b-13a7-bf12" name="Metal Flayer" hidden="false" targetId="01b4-1353-5ffc-a871" type="rule"/>
+        <infoLink id="9247-2de0-e464-be66" name="Gaus Cannon" hidden="false" targetId="91ed-210f-defd-6cb8" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+  </sharedSelectionEntries>
+  <sharedRules>
+    <rule id="01b4-1353-5ffc-a871" name="Metal Flayer" publicationId="8eed-45fd-d4be-9a1b" hidden="false">
+      <description>If you roll a 6 when determining Armour Penetration, roll a further D6 and add it to the score, resulting in a total penetration of 2D6+4 points</description>
+    </rule>
+    <rule id="f8b4-3df7-bcce-5673" name="Destroyer Damage Table" publicationId="8eed-45fd-d4be-9a1b" hidden="false">
+      <description>
+1: Gauss Cannon is destroyed
+2: Destroyer may only move at Slow speed for the rest of the game.
+3: Roll a D6 at the start of each of the Destroyer‘s movement phases. On a 4+, the
+Necron retains control and can move normally; otherwise, the Destroyer moves out of
+control for that turn
+4: Destroyer moves out of control and crashes to the ground, where it is destroyed.
+Anybody under the model when it crashes takes D3 S6 hits with a –2 save modifier.
+5: Destroyer plummets straight to the ground and is destroyed. Anybody under the
+Destroyer when it strikes the ground takes D3 S6 hits with a –2 save modifier
+6: Destroyer moves out of control and then explodes spectacularly. Anyone beneath the
+fireball takes D6 S6 hits with a –4 save modifier.
+
+If the Warrior is hit, roll to wound the Warrior as normal; if the Necron is slain, the Destroyer moves out of control, and continues to move in this manner until it moves off the table, is destroyed, or the Necron Warrior makes a successful repair roll, in which case he regains
+control of the vehicle</description>
+    </rule>
+    <rule id="49cc-8456-7ce2-dd4f" name="Scarabs" publicationId="8eed-45fd-d4be-9a1b" hidden="false">
+      <description>They do not form units and fight independently like characters do. Enemy troops do not have to shoot at Scarabs if they are the closest unit.  
+</description>
+    </rule>
+    <rule id="c972-1d7e-f0a0-19ce" name="Scarab Movement" publicationId="8eed-45fd-d4be-9a1b" hidden="false">
+      <description>Instead of its normal 8” move, a Scarab may make a leap of up to 16”. Leaping Scarabs may move over any terrain during their leap without penalty, but are assumed to land at the end of the leap. </description>
+    </rule>
+    <rule id="72ef-d63a-b193-5ca7" name="New Rule" hidden="false"/>
+    <rule id="3b0a-f62e-7bd0-6210" name="Metal Eater" publicationId="8eed-45fd-d4be-9a1b" hidden="false">
+      <description>Scarabs attached to a vehicle or a unit with armour locations reduce the Armour Value at all locations by 3 while they are attached. This effect is cumulative; so a Leman Russ Battle Tank with three Scarabs attached to it would have a Turret armour value of 16 from the front (25-9). It does not matter where the Scarabs are physically attached to the tank, since all armour locations are affected equally. </description>
+    </rule>
+  </sharedRules>
+  <sharedProfiles>
+    <profile id="557c-cb2d-cb45-6cbb" name="Necron Lord" publicationId="8eed-45fd-d4be-9a1b" page="" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Lord</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">4</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">4</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">5</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">5</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">3</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">4</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">3</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="e17a-064b-0b34-f7a8" name="Necron Warrior" publicationId="8eed-45fd-d4be-9a1b" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Warrior</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">4</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">4</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">4</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">5</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">2</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="8cf8-78a1-18b8-2317" name="Scarab" publicationId="8eed-45fd-d4be-9a1b" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Scarab</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">8</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">1</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">0</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">3</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">8</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">2</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="e36a-0897-706c-61c1" name="Necron Destroyer" publicationId="8eed-45fd-d4be-9a1b" hidden="false" typeId="371a-1ec9-2157-1eb6" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Slow Speed" typeId="7c52-da5f-7f1a-95fd">8</characteristic>
+        <characteristic name="Combat Speed" typeId="87a6-dd16-ba8f-ff71">20</characteristic>
+        <characteristic name="Fast Speed" typeId="92f6-98b4-3770-d8d9">30</characteristic>
+        <characteristic name="Type" typeId="8567-afc3-f137-4d64">Skimmer</characteristic>
+        <characteristic name="Crew" typeId="7ee3-c2ef-4b92-55e1">1 Warrior</characteristic>
+        <characteristic name="Ram Strength" typeId="13de-7be1-9f05-c48a">5</characteristic>
+        <characteristic name="Ram Damage" typeId="2ddf-d6d1-359f-bc9d">D4</characteristic>
+        <characteristic name="Ram Save Modfier" typeId="40ae-53ec-dee8-af1f">-5</characteristic>
+        <characteristic name="Armour Location" typeId="30da-ce76-ecb6-61ab">Destroyer</characteristic>
+        <characteristic name="Front Armour" typeId="fafe-592c-1a65-1376">12</characteristic>
+        <characteristic name="Side/Rear Armour" typeId="fbc3-8073-078a-ac79">12</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="0cc8-5789-b5cf-1db2" name="Staff of Light" publicationId="8eed-45fd-d4be-9a1b" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">6</characteristic>
+        <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">18</characteristic>
+        <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">+1</characteristic>
+        <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+        <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">5</characteristic>
+        <characteristic name="Damage" typeId="8978-f9c3-8957-1481">D3</characteristic>
+        <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-2</characteristic>
+        <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+D3+5</characteristic>
+        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Close Combat</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="9bd5-521f-335d-2065" name="Gauss-Flayer Gun" publicationId="8eed-45fd-d4be-9a1b" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">6</characteristic>
+        <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">24</characteristic>
+        <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">+1</characteristic>
+        <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+        <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">4</characteristic>
+        <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
+        <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-2</characteristic>
+        <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+4</characteristic>
+        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Metal Flayer</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="91ed-210f-defd-6cb8" name="Gaus Cannon" publicationId="8eed-45fd-d4be-9a1b" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">12</characteristic>
+        <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">36</characteristic>
+        <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">+1</characteristic>
+        <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+        <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">6</characteristic>
+        <characteristic name="Damage" typeId="8978-f9c3-8957-1481">D6</characteristic>
+        <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-3</characteristic>
+        <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">2D6+6</characteristic>
+        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Metal Flayer</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="a851-11cb-78f5-a9b4" name="Armoured Body" publicationId="8eed-45fd-d4be-9a1b" hidden="false" typeId="4657-2671-1065-d493" typeName="Armour">
+      <characteristics>
+        <characteristic name="Saving Throw" typeId="b439-323a-9cfe-6340">2+</characteristic>
+        <characteristic name="Special" typeId="b7f1-73cd-d19d-26a6"/>
+      </characteristics>
+    </profile>
+  </sharedProfiles>
+</catalogue>

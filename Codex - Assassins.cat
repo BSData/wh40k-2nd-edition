@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7bb5-646e-ec66-1cdd" name="Codex - Assassins" revision="5" battleScribeVersion="2.03" authorName="Boff" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7bb5-646e-ec66-1cdd" name="Codex - Assassins" revision="5" battleScribeVersion="2.03" authorName="Boff" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="9778-1163-ce67-b2e4" name="Assassins Ally" hidden="false"/>
   </categoryEntries>

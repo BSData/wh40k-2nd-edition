@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="5bd8-0ec7-a752-694d" name="Codex - Chaos" revision="6" battleScribeVersion="2.03" authorName="Boff" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="5bd8-0ec7-a752-694d" name="Codex - Chaos" revision="7" battleScribeVersion="2.03" authorName="Boff" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>Chaos Rewards note - You cannot give any 2 models the exact same combo of rewards. However, attempting to bulid that into this would cause unending pain. Just be mindful when gifting your little warriors</readme>
   <profileTypes>
     <profileType id="4fa6-d4f7-781c-53f9" name="Mark of Chaos">
@@ -9988,11 +9988,11 @@ Allows the Bloodletter to Parry</characteristic>
         <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">CC Only</characteristic>
         <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328"/>
         <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c"/>
-        <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">5</characteristic>
-        <characteristic name="Damage" typeId="8978-f9c3-8957-1481">D3</characteristic>
+        <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">+1</characteristic>
+        <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
         <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-2</characteristic>
-        <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">2D6+D3+5</characteristic>
-        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d"/>
+        <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">S+D6</characteristic>
+        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Close Combat</characteristic>
       </characteristics>
     </profile>
     <profile id="396c-a28a-4dc9-d532" name="Plague Knife" publicationId="02e1-3f69-7ae7-f5c5" page="75" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">

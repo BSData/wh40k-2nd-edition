@@ -460,6 +460,11 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
                 <cost name="pts" typeId="points" value="31.0"/>
               </costs>
             </entryLink>
+            <entryLink id="f4e5-455e-412c-8718" name="Deathspitter" hidden="false" collective="false" import="true" targetId="84b8-1f6e-5d28-f55f" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="13.0"/>
+              </costs>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>

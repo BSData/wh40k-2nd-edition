@@ -423,9 +423,21 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df11-904b-0f81-717d" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="d5c8-cb09-4efe-e5fd" name="Lash Whip" hidden="false" collective="false" import="true" targetId="04be-29cd-fa25-ae71" type="selectionEntry"/>
-            <entryLink id="7b45-6642-ef8d-c4de" name="Spinefist" hidden="false" collective="false" import="true" targetId="7946-9a40-e997-ab65" type="selectionEntry"/>
-            <entryLink id="3165-7de0-0d52-f546" name="Bonesword" hidden="false" collective="false" import="true" targetId="9fdd-6d9e-e4de-e3e4" type="selectionEntry"/>
+            <entryLink id="d5c8-cb09-4efe-e5fd" name="Lash Whip" hidden="false" collective="false" import="true" targetId="04be-29cd-fa25-ae71" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="9.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="7b45-6642-ef8d-c4de" name="Spinefist" hidden="false" collective="false" import="true" targetId="7946-9a40-e997-ab65" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="7.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="3165-7de0-0d52-f546" name="Bonesword" hidden="false" collective="false" import="true" targetId="9fdd-6d9e-e4de-e3e4" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="6.0"/>
+              </costs>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="11ec-17a9-35c1-dcc7" name="Ranged Weapons" hidden="false" collective="false" import="true">
@@ -433,9 +445,21 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4fe-9e3c-bf73-dbb0" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="1946-739b-cf2c-c5c8" name="Devourer" hidden="false" collective="false" import="true" targetId="4f71-a6e3-3aa9-97ec" type="selectionEntry"/>
-            <entryLink id="522f-3eaf-f891-3adf" name="Venom Cannon" hidden="false" collective="false" import="true" targetId="4f89-76a0-e8dd-8570" type="selectionEntry"/>
-            <entryLink id="0051-9397-6ab9-9fed" name="Barbed Strangler" hidden="false" collective="false" import="true" targetId="0b1b-e8c2-20e9-dd99" type="selectionEntry"/>
+            <entryLink id="1946-739b-cf2c-c5c8" name="Devourer" hidden="false" collective="false" import="true" targetId="4f71-a6e3-3aa9-97ec" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="9.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="522f-3eaf-f891-3adf" name="Venom Cannon" hidden="false" collective="false" import="true" targetId="4f89-76a0-e8dd-8570" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="40.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="0051-9397-6ab9-9fed" name="Barbed Strangler" hidden="false" collective="false" import="true" targetId="0b1b-e8c2-20e9-dd99" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="31.0"/>
+              </costs>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>

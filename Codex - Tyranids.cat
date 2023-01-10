@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4026-2a6f-5a07-ce65" name="Codex - Tyranids" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4026-2a6f-5a07-ce65" name="Codex - Tyranids" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="584a-05fe-7c57-360c" name="Biomorphs">
       <characteristicTypes>
@@ -64,6 +64,7 @@
     <entryLink id="9367-7351-537d-6d20" name="Tyranid Malefactor" hidden="false" collective="false" import="true" targetId="0ea3-c0f5-5b5f-8756" type="selectionEntry"/>
     <entryLink id="5d04-5f3c-7796-24c1" name="Tyranid Exocrine" hidden="false" collective="false" import="true" targetId="874b-b669-16bb-4404" type="selectionEntry"/>
     <entryLink id="9020-e4b0-ba1a-baea" name="Hormagaunt Brood" hidden="false" collective="false" import="true" targetId="0207-1291-2587-cda4" type="selectionEntry"/>
+    <entryLink id="f518-1750-9b6b-69b3" name="Tyranid Dactylis" hidden="false" collective="false" import="true" targetId="8398-c660-2467-1542" type="selectionEntry"/>
   </entryLinks>
   <rules>
     <rule id="86d3-f9d3-0f5e-3b20" name="Targetting Tyranids" publicationId="4740-6730-10c0-9b25" page="59" hidden="false">
@@ -1897,13 +1898,13 @@ Crewman hit by the spreading rot take their armour save or suffer 1 wound</descr
             <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
             <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-1</characteristic>
             <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+4</characteristic>
-            <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">-</characteristic>
+            <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Spore Cysts</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <rules>
         <rule id="1466-c13e-8906-e37e" name="Spore Cysts" hidden="false">
-          <description>Each enemy model that moves within 8&quot; of the Malefactor is fired at immediately using the Malefactor&apos;s BS, the spore cyst weapon stats and normal shooting modifiers including the -1 hit modifier for overwatch targets coming out of cover if applicable. During the Tyranid shooting phase (not movement phase), the Malefactor automatically fires its spore cysts once at each enemy model within 8&quot; that is not in close combat with the Malefactor. Dreadnoughts and closed vehicles are always ignored</description>
+          <description>Each enemy model that moves within 8&quot; of the model is fired at immediately using the models BS, the spore cyst weapon stats and normal shooting modifiers including the -1 hit modifier for overwatch targets coming out of cover if applicable. During the Tyranid shooting phase (not movement phase), the model automatically fires its spore cysts once at each enemy model within 8&quot; that is not in close combat with the model. Dreadnoughts and closed vehicles are always ignored</description>
         </rule>
       </rules>
       <costs>
@@ -1954,6 +1955,44 @@ Crewman hit by the spreading rot take their armour save or suffer 1 wound</descr
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="8398-c660-2467-1542" name="Tyranid Dactylis" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="a917-0878-7aee-ab21" name="Tyranid Dactylis" hidden="false" targetId="14eb-ce58-f30c-8712" type="profile"/>
+        <infoLink id="806a-1600-b493-0b70" name="Tyranid Dactylis - Nesting" hidden="false" targetId="3462-16bc-f280-2fd8" type="rule"/>
+        <infoLink id="053b-1413-a824-5ad1" name="Tyranid Dactylis Damage Table" hidden="false" targetId="bfce-3f30-3007-7a02" type="rule"/>
+        <infoLink id="44ea-cb22-a4a0-4ed2" name="Dactylis Close Combat" hidden="false" targetId="79aa-795d-9f48-e35d" type="rule"/>
+        <infoLink id="5f92-4318-0452-0f44" name="Fear" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
+        <infoLink id="77c7-b9fc-c77d-2289" name="Immune to Psychology" hidden="false" targetId="8fb6-dd3b-4958-9616" type="rule"/>
+        <infoLink id="7a64-6cde-9ce5-3c1e" name="Tyranid Vehicle Targetting" hidden="false" targetId="7689-cdc9-5c99-988b" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="07da-b36c-904e-94ba" name="New CategoryLink" hidden="false" targetId="f209-8cb3-5cae-0f0b" primary="false"/>
+        <categoryLink id="6fef-c0bd-7aef-0406" name="New CategoryLink" hidden="false" targetId="795f-7f64-4e25-925e" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="125a-759c-e184-e58a" name="Spore Cysts" hidden="false" collective="false" import="true" targetId="0546-680b-92d4-438b" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="10c6-91d1-a28b-45f5" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc29-ac25-6d42-3125" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="0caf-802b-d8e8-e95d" name="Bile Pods" hidden="false" collective="false" import="true" targetId="d850-5cda-740e-2748" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e300-fc44-49fe-de22" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8bba-be9d-e946-4517" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="200.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d850-5cda-740e-2748" name="Bile Pods" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="2ed1-4778-5ac4-1409" name="Bile Pods" hidden="false" targetId="9c2f-8b39-6eb3-6f7c" type="rule"/>
+        <infoLink id="8555-e319-6f1f-48db" name="Bile Pods" hidden="false" targetId="bd44-904c-6150-f055" type="profile"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -2359,6 +2398,24 @@ When a Tyranid vehicle rams or charges another vehicle, work out damage to the o
 1: Foot
 2-4: Body
 5-6: Bio-Cannon</description>
+    </rule>
+    <rule id="bfce-3f30-3007-7a02" name="Tyranid Dactylis Damage Table" hidden="false">
+      <description>
+1: Foot
+2-4: Body
+5-6: Arms*
+Closest to attacker is hit</description>
+    </rule>
+    <rule id="3462-16bc-f280-2fd8" name="Tyranid Dactylis - Nesting" hidden="false">
+      <description>If the Dactylis&apos; link with the HIve Mind is severed, it will Nest. While Nesting it will remain stationary and fire it&apos;s bile pods at the nearest enemy target, whether vehicle or infantry. The Dactylis is immune to psychology, and causes Fear</description>
+    </rule>
+    <rule id="9c2f-8b39-6eb3-6f7c" name="Bile Pods" hidden="false">
+      <description>Any models within 1&quot; of a pile pod blast marker will be splashed with corrosive bile on a D6 roll of 4+. Resolve splash hits with the normal stats of the weapon</description>
+    </rule>
+    <rule id="79aa-795d-9f48-e35d" name="Dactylis Close Combat" hidden="false">
+      <description>The Dactylis uses its Ram Value for any damage inflicted by it in close combat. Because the Dactylis is so large, the extra dice and +1 WS bonuses for additional attackers do not apply in any close combat with the Dactylis
+
+When it rams or charges another vehicle, work out damage to the other vehicle as normal. For the Tyranid vehicle the location that actually touches the other vehicles is hit on a 4+ and other locations are hit on a 6+. Work out damage for any hit locations as normal.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -2900,6 +2957,45 @@ Bio-Cannon</characteristic>
         <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-6</characteristic>
         <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">4D6+8</characteristic>
         <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Bio-Cannon</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="14eb-ce58-f30c-8712" name="Tyranid Dactylis" hidden="false" typeId="0395-7b02-e47f-3cdb" typeName="Walker / Dread">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="0675-1bfc-2cd4-7bff">Dactylis</characteristic>
+        <characteristic name="M" typeId="dc7a-3534-af75-90a3">Slow 5
+Combat 10
+Fast 15</characteristic>
+        <characteristic name="WS" typeId="d2ce-a8c3-3117-2b1d">4</characteristic>
+        <characteristic name="BS" typeId="ab78-c57a-10cb-e9c6">4</characteristic>
+        <characteristic name="S" typeId="8c44-fd71-0b47-7ab0">8</characteristic>
+        <characteristic name="I" typeId="76cb-4fd1-7571-e697">4</characteristic>
+        <characteristic name="A" typeId="6d89-52f1-9c48-ac8c">2</characteristic>
+        <characteristic name="LD" typeId="dfcc-1070-ddf7-ad7d">10</characteristic>
+        <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0">Strenght 8
+D12 Damage
+-5 Save</characteristic>
+        <characteristic name="Armour Location" typeId="8376-0954-7923-aeb7">Foot
+Body
+Arms*</characteristic>
+        <characteristic name="Front Armour" typeId="1987-9b10-fba2-d45f">20
+22
+19</characteristic>
+        <characteristic name="Side/Rear Armour" typeId="7504-90c0-b957-d29c">18
+18
+17</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="bd44-904c-6150-f055" name="Bile Pods" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">20</characteristic>
+        <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">72</characteristic>
+        <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+        <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+        <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">8</characteristic>
+        <characteristic name="Damage" typeId="8978-f9c3-8957-1481">2D6</characteristic>
+        <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-4</characteristic>
+        <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">2D6+8</characteristic>
+        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">2&quot; Blast. Bio Pods</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

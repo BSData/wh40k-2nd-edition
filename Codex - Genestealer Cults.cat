@@ -396,9 +396,8 @@ Note this test only happens if the leaders are KILLED. It is not taken if they a
                 <categoryLink id="7c2c-c0b7-ac11-2485" name="Broods" hidden="false" targetId="b70e-fd2c-12be-b090" primary="false"/>
               </categoryLinks>
               <selectionEntryGroups>
-                <selectionEntryGroup id="8fb4-8348-13bd-7480" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="59fe-3382-85c2-19e8">
+                <selectionEntryGroup id="8fb4-8348-13bd-7480" name="Armour" hidden="false" collective="false" import="true">
                   <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2009-d2b0-d8e9-9747" type="min"/>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="45f2-8b14-0dd7-35a3" type="max"/>
                   </constraints>
                   <entryLinks>
@@ -434,7 +433,7 @@ Note this test only happens if the leaders are KILLED. It is not taken if they a
                 <entryLink id="1611-06c1-301f-5a26" name="Heavy Weapons" hidden="false" collective="false" import="true" targetId="b344-eefb-5259-a1f5" type="selectionEntryGroup"/>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="points" value="9.0"/>
+                <cost name="pts" typeId="points" value="8.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="8bc7-2e91-94ca-bf98" name="Neophyte Hybrid" hidden="false" collective="false" import="true" type="upgrade">
@@ -446,9 +445,8 @@ Note this test only happens if the leaders are KILLED. It is not taken if they a
                 <categoryLink id="4518-d94b-fe6a-9e73" name="Broods" hidden="false" targetId="b70e-fd2c-12be-b090" primary="false"/>
               </categoryLinks>
               <selectionEntryGroups>
-                <selectionEntryGroup id="b2cd-d1c8-580d-dc93" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="67d3-3480-2c6b-47b8">
+                <selectionEntryGroup id="b2cd-d1c8-580d-dc93" name="Armour" hidden="false" collective="false" import="true">
                   <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8de8-8fae-65d4-72f5" type="min"/>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a602-64e3-7d1b-4a60" type="max"/>
                   </constraints>
                   <entryLinks>
@@ -484,7 +482,7 @@ Note this test only happens if the leaders are KILLED. It is not taken if they a
                 <entryLink id="fd10-e7c4-8eda-bfbf" name="Heavy Weapons" hidden="false" collective="false" import="true" targetId="b344-eefb-5259-a1f5" type="selectionEntryGroup"/>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="points" value="10.0"/>
+                <cost name="pts" typeId="points" value="9.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -602,9 +600,6 @@ Note this test only happens if the leaders are KILLED. It is not taken if they a
           <infoLinks>
             <infoLink id="8ae8-4bcd-8da7-e14b" name="Brood Brother" hidden="false" targetId="196e-8332-fa9c-20ac" type="profile"/>
           </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="6.0"/>
-          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1100,9 +1095,6 @@ Note this test only happens if the leaders are KILLED. It is not taken if they a
       <entryLinks>
         <entryLink id="b652-5289-b442-268d" name="Vehicle Wargear Cards" hidden="false" collective="false" import="true" targetId="a7d1-2f29-9533-7071" type="selectionEntryGroup"/>
       </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="75.0"/>
-      </costs>
     </selectionEntry>
     <selectionEntry id="98da-65da-8117-22f2" name="Leman Russ Battle Tank" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>

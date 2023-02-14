@@ -600,7 +600,7 @@ The model is protected by a Daemonic Aura (4+ unmodified save).</description>
               <modifiers>
                 <modifier type="increment" field="points" value="5.0">
                   <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2186-e6fb-c499-d496" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5b70-970f-ebac-f3e0" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -624,11 +624,17 @@ The model is protected by a Daemonic Aura (4+ unmodified save).</description>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="369d-b4de-371a-31c3" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="15.0"/>
+              </costs>
             </entryLink>
             <entryLink id="d5ec-0980-72bc-6899" name="Blastmaster" hidden="false" collective="false" import="true" targetId="81ec-f097-1a14-6446" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b3b6-0d86-3f1e-cc70" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="45.0"/>
+              </costs>
             </entryLink>
             <entryLink id="ac3a-a69e-1d1c-e596" name="Sonic Blaster" hidden="false" collective="false" import="true" targetId="ffc4-c635-cf30-3777" type="selectionEntry">
               <modifiers>
@@ -641,6 +647,9 @@ The model is protected by a Daemonic Aura (4+ unmodified save).</description>
               <constraints>
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c8a-c062-4ff0-2756" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="10.0"/>
+              </costs>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -1568,10 +1577,10 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
                 <infoLink id="95c1-8123-247c-2306" name="Psychic Level 1" hidden="false" targetId="2653-20e1-0ea7-dcc5" type="profile"/>
               </infoLinks>
               <entryLinks>
-                <entryLink id="8192-72ca-739b-f2cf" name="Psyker" hidden="false" collective="false" import="true" targetId="56e9-7608-b945-ac81" type="selectionEntry">
+                <entryLink id="8ad2-3cfa-b0a5-c76a" name="Psyker" hidden="false" collective="false" import="true" targetId="56e9-7608-b945-ac81" type="selectionEntry">
                   <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd62-f12c-77c5-3610" type="min"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9458-f8cc-a749-94e2" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c8f-fa83-26a4-4268" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7277-341c-22d9-4973" type="max"/>
                   </constraints>
                 </entryLink>
               </entryLinks>
@@ -3442,7 +3451,7 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
               <modifiers>
                 <modifier type="increment" field="b112-3ac1-fdb9-1b8d" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a078-f30f-8c1b-cdcf" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c012-2c99-b5f6-a847" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>

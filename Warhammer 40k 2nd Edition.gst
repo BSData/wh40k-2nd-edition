@@ -17,6 +17,7 @@
     <publication id="71ba-82e2-d83c-d33d" name="Codex - Eldar" shortName="Eldar" publisher="" publicationDate="1994"/>
     <publication id="4740-6730-10c0-9b25" name="Codex - Tyranids" shortName="Tyranid" publicationDate="1993" publisherUrl=""/>
     <publication id="02e1-3f69-7ae7-f5c5" name="Codex - Chaos" shortName="Chaos" publicationDate="1996"/>
+    <publication id="b5c1-b072-4d0b-383a" name="Codex - Imperialis" shortName="Imperialis" publicationDate="1993"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="-1.0" hidden="false"/>
@@ -142,8 +143,9 @@
     <categoryEntry id="f209-8cb3-5cae-0f0b" name="Tyranids" hidden="false"/>
     <categoryEntry id="b373-19ca-9b61-1a4c" name="Chaos" hidden="false"/>
     <categoryEntry id="0f7a-2cd5-df51-dccd" name="Daemons" hidden="false"/>
-    <categoryEntry id="6741-c4c6-274e-36cf" name="Support - Ally" hidden="false"/>
+    <categoryEntry id="6741-c4c6-274e-36cf" name="Allies" hidden="false"/>
     <categoryEntry id="722d-8a5c-d442-498a" name="Necrons" hidden="false"/>
+    <categoryEntry id="156f-b304-5133-1fff" name="Support" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="5eaa-5b96-5986-4194" name="Don&apos;t pick this - Click to change" hidden="true">
@@ -2899,7 +2901,7 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="56e9-7608-b945-ac81" type="notEqualTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="56e9-7608-b945-ac81" type="notEqualTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2978,14 +2980,14 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="56e9-7608-b945-ac81" type="notEqualTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="56e9-7608-b945-ac81" type="notEqualTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="27ba-3266-75d5-a282" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="27ba-3266-75d5-a282" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="5.0"/>
@@ -2997,7 +2999,7 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="56e9-7608-b945-ac81" type="notEqualTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="56e9-7608-b945-ac81" type="notEqualTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -3017,14 +3019,14 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="56e9-7608-b945-ac81" type="notEqualTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="56e9-7608-b945-ac81" type="notEqualTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f1a3-0a1d-20e7-25eb" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f1a3-0a1d-20e7-25eb" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="10.0"/>

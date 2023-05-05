@@ -4049,9 +4049,34 @@ Members of the Deathwing must charge him if he is within charge range, or move s
       </costs>
     </selectionEntry>
     <selectionEntry id="8a8b-ac83-762f-8ef3" name="Imperial Guard Baneblade" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="cd98-ee6d-acb0-412f" name="Tank Commander" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+          <characteristics>
+            <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Tank Commander</characteristic>
+            <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+            <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">4</characteristic>
+            <characteristic name="BS" typeId="f859-88a3-fdd3-b298">4</characteristic>
+            <characteristic name="S" typeId="5916-04ef-0fd1-6557">3</characteristic>
+            <characteristic name="T" typeId="2e7d-2383-f92f-16f9">3</characteristic>
+            <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
+            <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">4</characteristic>
+            <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
+            <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">8</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="6dbc-397d-7a62-fd0e" name="Turret Firing Arcs" hidden="false">
+          <description>The lascannon and Battlecannon must be fired within the same 45° arc. Firing the first weapon sets the arc for the remainder. </description>
+        </rule>
+        <rule id="6fe7-2db8-5e12-692e" name="Baneblade Crew" hidden="false">
+          <description>The Baneblade has 9 Imperial Guard (standard statline) and 1 Tank Commander. All have flak armour and a laspistol. </description>
+        </rule>
+      </rules>
       <infoLinks>
         <infoLink id="eae2-7769-6956-3a1f" name="Imperial Guard Baneblade" page="datafax" hidden="false" targetId="1e93-e7f7-d9f7-c78d" type="profile"/>
         <infoLink id="286b-ec04-2d82-129b" name="Baneblade Tank Damage Table" hidden="false" targetId="e26c-d5d2-52f7-bded" type="rule"/>
+        <infoLink id="ced6-8672-7465-600a" name="Terror" hidden="false" targetId="05e0-cd40-2d9e-a9f9" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="1da1-c164-58e7-a660" name="New CategoryLink" hidden="false" targetId="e69e-43d8-7b4a-0119" primary="true"/>
@@ -4095,6 +4120,183 @@ Members of the Deathwing must charge him if he is within charge range, or move s
           <entryLinks>
             <entryLink id="a25a-2b2d-9bd7-40b3" name="Boltgun" hidden="false" collective="false" import="true" targetId="0e81-7914-e52a-0a8d" type="selectionEntry"/>
           </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="35f7-b8a1-93a5-ed55" name="Wargear Cards - Baneblade" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="dd56-df5f-2804-ace0" name="Bulldozer Blade" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1aaf-5d6b-4264-0635" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="c0ae-f20c-0c25-3f31" name="Bulldozer Blade" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+                  <characteristics>
+                    <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Increases the Strength of the vehicle&apos;s ram value by +1 and adds +1D6 to the ram damage it inflicts. This is in addition to the +D6 ram bonus against buildings received by vehicles with a ram bar noted in the rulebook. 
+Any shots that hit the front of the vehicle&apos;s hull will hit the dozerblade on a 4+. If it is hit, the dozer adds +D6 to the vehicle&apos;s front hull armour value for that shot only. If the vehicle suffers a penetrating hit from the front the blade is automatically wrekced and hte card discarded. </characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="45.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f19f-5e40-e17e-311c" name="Hunter-Killer Missile" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9187-ca83-9433-d2c7" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bcf7-c063-7aca-a066" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2ea7-ced8-d2ec-2939" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile id="ddf6-7fea-12a1-d5fc" name="Hunter-Killer Missile" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">Special</characteristic>
+                    <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">Special</characteristic>
+                    <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+                    <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                    <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">8</characteristic>
+                    <characteristic name="Damage" typeId="8978-f9c3-8957-1481">2D10</characteristic>
+                    <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-6</characteristic>
+                    <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">2D10+D6+8</characteristic>
+                    <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Hunter Killer Missile</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="9dc9-a9ab-ef37-d85c" name="Hunter-Killer Missile" hidden="false">
+                  <description>One Use Only
+May only targe vehicles, walkers, or buildings
+Always hits on a 3+ regardless of range and hit modifiers for target size, speed, cover, etc. </description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="points" value="30.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="738b-ba75-98f3-a993" name="Heavy Flamer Upgrade" hidden="true" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="points" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aac3-4788-82a3-a9ad" type="atLeast"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" field="hidden" value="false">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c82-0e56-d20a-6b1c" type="atLeast"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aac3-4788-82a3-a9ad" type="atLeast"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <rules>
+                <rule id="79c1-726b-6414-0108" name="Heavy Flamer Upgrade" hidden="false">
+                  <description>Must purchase the wargear card for each Heavy Bolter you upgrade
+Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</description>
+                </rule>
+              </rules>
+              <entryLinks>
+                <entryLink id="9399-5b18-c1b5-8b0b" name="Heavy Flamer" hidden="false" collective="false" import="true" targetId="4da3-a884-c204-2800" type="selectionEntry">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c56d-4f9a-36c9-5c2f" type="min"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d958-bfad-48fa-1b48" type="max"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="10.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="54b8-818e-4d7c-5b71" name="Ablative Armour" publicationId="6d24-ac0a-2721-b4e2" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f647-ab99-ca20-e390" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="a52f-adf5-f797-bfca" name="Ablative Armour" hidden="false" targetId="0d4f-5ae0-6ceb-6867" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="45.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="7ffa-8936-2691-8744" name="Ceramite Armour" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4af5-2a6a-5522-3327" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="786f-c3fc-0024-c3fb" name="Ceramite Armour" hidden="false" targetId="93b9-4ea2-7969-e3e6" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="50.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="d432-1717-36f1-316d" name="Electro-Hull" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f258-c237-ab06-962f" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="6b63-2064-5f06-d079" name="Electro-Hull" hidden="false" targetId="4406-56c4-c326-53be" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="20.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="13e4-6939-85bb-d7bd" name="Null-Shield" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="020a-db7c-4516-8b8c" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="2531-4d79-6fc0-4d87" name="Null-Shield" hidden="false" targetId="de05-6890-7c48-25e3" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="35.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="682a-4f0e-61d6-b0db" name="Reinforced Armour" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="12fd-15ab-f81f-ebcc" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="9d78-415b-f04f-20de" name="Reinforced Armour" hidden="false" targetId="f1df-defe-0409-ed9e" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="50.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="0cdf-b123-9102-cdd4" name="Searchlight" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3544-9771-4ac1-d237" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="5b40-b255-f768-c92b" name="Searchlight" hidden="false" targetId="1e73-66f2-ada3-5f4a" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3b49-63be-1506-a29d" name="Vortex Detonator" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="de3c-f5bc-d8c8-fce2" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="a983-bb66-bdc3-8bf7" name="Vortex Detonator" hidden="false" targetId="9ceb-7407-a2ee-0c34" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="50.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>

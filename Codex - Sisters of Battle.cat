@@ -62,6 +62,7 @@
     <entryLink id="e62c-77b2-1e9e-98fa" name="Uriah Jacobus, Protector of the Faith" hidden="false" collective="false" import="true" targetId="db9a-b592-f8d4-bbb3" type="selectionEntry"/>
     <entryLink id="b72e-7ec9-de36-fc52" name="Redemptor Kyrinov, Arch-Confessor" hidden="false" collective="false" import="true" targetId="3f01-e37f-3553-91b9" type="selectionEntry"/>
     <entryLink id="1a94-cb84-c9f9-a35f" name="Cardinal Armandus Helfire" hidden="false" collective="false" import="true" targetId="2ea5-5850-6d12-4fda" type="selectionEntry"/>
+    <entryLink id="beea-a8b4-e602-4f24" name="Preacher" hidden="false" collective="false" import="true" targetId="60f1-6189-7935-f3fc" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="2edc-e2da-fa73-e35a" name="Flail" hidden="false" collective="false" import="true" type="upgrade">

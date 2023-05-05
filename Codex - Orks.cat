@@ -4414,7 +4414,7 @@ In addition, if the Ork is hit by an attack then he is treated in the same way a
         </entryLink>
         <entryLink id="c9d8-1cd6-c390-92f5" name="Wargear Cards" hidden="false" collective="false" import="true" targetId="fff1-a6e4-735f-541f" type="selectionEntryGroup">
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51a2-89f8-bf35-068c" type="max"/>
+            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51a2-89f8-bf35-068c" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="2eb2-26d6-94ae-83ae" name="Kustom Blasta" publicationId="9f92-b7df-cf75-9a46" page="48" hidden="false" collective="false" import="true" type="upgrade">

@@ -2826,7 +2826,7 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca7e-453f-87f9-cdbd" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="5.0"/>
+            <cost name="pts" typeId="points" value="25.0"/>
           </costs>
         </entryLink>
         <entryLink id="d359-30c8-d92c-69c0" name="Master-Crafted Plasma Pistol" hidden="false" collective="false" import="true" targetId="15ce-5ec2-efe7-e895" type="selectionEntry">

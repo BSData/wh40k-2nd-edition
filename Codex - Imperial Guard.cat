@@ -185,6 +185,21 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
                 <cost name="pts" typeId="points" value="157.0"/>
               </costs>
             </entryLink>
+            <entryLink id="b6f1-61fe-1b5e-5251" name="Primaris Master" hidden="false" collective="false" import="true" targetId="c48e-a154-93bc-6230" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="110.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="1793-990a-e381-6172" name="Primaris Psyker" hidden="false" collective="false" import="true" targetId="2efb-66fb-4140-ec72" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="32.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="fe5c-0f09-c632-1c6c" name="Primaris Champion" hidden="false" collective="false" import="true" targetId="60f8-c476-e846-eb85" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="69.0"/>
+              </costs>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="67e5-4a3f-4659-418a" name="Special Characters" hidden="false" collective="false" import="true">

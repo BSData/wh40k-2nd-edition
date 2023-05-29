@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b7a0-f77c-22d5-5989" name="Codex - Sisters of Battle" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b7a0-f77c-22d5-5989" name="Codex - Sisters of Battle" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7900-d214-741e-e36e" name="Squads" hidden="false"/>
     <categoryEntry id="0623-7337-2260-e37e" name="Support" hidden="false"/>
@@ -555,6 +555,36 @@
         <categoryLink id="a90a-f364-4850-a633" name="New CategoryLink" hidden="false" targetId="ef51-a705-d29d-aa4d" primary="true"/>
         <categoryLink id="5c3a-418d-d581-70b0" name="Sisters of Battle" hidden="false" targetId="a949-140a-176f-6700" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="331d-4120-9c67-01ce" name="Mounted" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0098-da59-d73f-65bd" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c9b6-2140-388c-7970" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="63ce-65d9-dde1-82a2" name="Warhorse" publicationId="a1e3-886b-e509-d15a" page="18" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+              <characteristics>
+                <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Warhorse</characteristic>
+                <characteristic name="M" typeId="4934-7872-3dd7-a8b6">8</characteristic>
+                <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">3</characteristic>
+                <characteristic name="BS" typeId="f859-88a3-fdd3-b298">0</characteristic>
+                <characteristic name="S" typeId="5916-04ef-0fd1-6557">3</characteristic>
+                <characteristic name="T" typeId="2e7d-2383-f92f-16f9">3</characteristic>
+                <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
+                <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">3</characteristic>
+                <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
+                <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">5</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="5e9f-5944-9b56-65dc" name="Cavalry" hidden="false" targetId="cc6d-c869-82ab-fcaa" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="3.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="53fe-fb09-b987-5a64" name="Armour" hidden="false" collective="false" import="true">
           <entryLinks>
@@ -709,6 +739,36 @@
         <categoryLink id="e339-5383-1516-1de3" name="New CategoryLink" hidden="false" targetId="ef51-a705-d29d-aa4d" primary="true"/>
         <categoryLink id="90d0-6351-3b4b-b060" name="Sisters of Battle" hidden="false" targetId="a949-140a-176f-6700" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="4d78-de42-0b02-541a" name="Mounted" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c6b6-6255-c189-3684" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1633-604f-6eda-2820" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="bd5c-dfd3-ee22-ab13" name="Warhorse" publicationId="a1e3-886b-e509-d15a" page="18" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+              <characteristics>
+                <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Warhorse</characteristic>
+                <characteristic name="M" typeId="4934-7872-3dd7-a8b6">8</characteristic>
+                <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">3</characteristic>
+                <characteristic name="BS" typeId="f859-88a3-fdd3-b298">0</characteristic>
+                <characteristic name="S" typeId="5916-04ef-0fd1-6557">3</characteristic>
+                <characteristic name="T" typeId="2e7d-2383-f92f-16f9">3</characteristic>
+                <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
+                <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">3</characteristic>
+                <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
+                <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">5</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="3328-dae9-9005-f5cc" name="Cavalry" hidden="false" targetId="cc6d-c869-82ab-fcaa" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="3.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="941b-b4a8-5d5f-aaef" name="Armour" hidden="false" collective="false" import="true">
           <entryLinks>
@@ -765,6 +825,36 @@
         <categoryLink id="abc0-6aab-4ece-c33f" name="New CategoryLink" hidden="false" targetId="ef51-a705-d29d-aa4d" primary="true"/>
         <categoryLink id="d64d-3234-a1ed-59c2" name="Sisters of Battle" hidden="false" targetId="a949-140a-176f-6700" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="fd14-705d-cfd2-8518" name="Mounted" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="79e5-526d-910b-a821" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6d6-ad34-19f5-607d" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="abb3-226c-d36a-8c81" name="Warhorse" publicationId="a1e3-886b-e509-d15a" page="18" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+              <characteristics>
+                <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Warhorse</characteristic>
+                <characteristic name="M" typeId="4934-7872-3dd7-a8b6">8</characteristic>
+                <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">3</characteristic>
+                <characteristic name="BS" typeId="f859-88a3-fdd3-b298">0</characteristic>
+                <characteristic name="S" typeId="5916-04ef-0fd1-6557">3</characteristic>
+                <characteristic name="T" typeId="2e7d-2383-f92f-16f9">3</characteristic>
+                <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
+                <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">3</characteristic>
+                <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
+                <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">5</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="2d62-932b-1b1a-db64" name="Cavalry" hidden="false" targetId="cc6d-c869-82ab-fcaa" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="3.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="4490-a57c-89ef-f868" name="Weapons" hidden="false" collective="false" import="true">
           <entryLinks>
@@ -1263,6 +1353,40 @@
           <costs>
             <cost name="pts" typeId="points" value="4.0"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry id="4199-cbe7-c485-1ebc" name="Mounted" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="points" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="182a-8e15-565e-1af5" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5134-173e-2992-9d75" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd9b-0c11-cbf4-0af3" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3eb7-11b1-8096-6af9" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d17-c48a-4c2c-d272" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="484b-9048-6b59-4984" name="Warhorse" publicationId="a1e3-886b-e509-d15a" page="18" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+              <characteristics>
+                <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Warhorse</characteristic>
+                <characteristic name="M" typeId="4934-7872-3dd7-a8b6">8</characteristic>
+                <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">3</characteristic>
+                <characteristic name="BS" typeId="f859-88a3-fdd3-b298">0</characteristic>
+                <characteristic name="S" typeId="5916-04ef-0fd1-6557">3</characteristic>
+                <characteristic name="T" typeId="2e7d-2383-f92f-16f9">3</characteristic>
+                <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
+                <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">3</characteristic>
+                <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
+                <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">5</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="d9dc-3349-b288-1a71" name="Cavalry" hidden="false" targetId="cc6d-c869-82ab-fcaa" type="rule"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>

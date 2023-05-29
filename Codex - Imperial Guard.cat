@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="82fc-8ad4-7b4b-dd4a" name="Codex - Imperial Guard" revision="6" battleScribeVersion="2.03" authorName="Boff" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="82fc-8ad4-7b4b-dd4a" name="Codex - Imperial Guard" revision="6" battleScribeVersion="2.03" authorName="Boff" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>I haven&apos;t put restrictions for the Regimental style to build a list, such as 1 Command HQ, 3 Guard/Heavy Weapons teams, 3 additional unit. Doing so would be rather messy and complicated with all the possible choices, and frankly isn&apos;t really a huge deal.
 
 Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct units.</readme>
@@ -4584,7 +4584,7 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
             <infoLink id="530a-bfc1-45f6-9c4f" name="Grizzled" hidden="false" targetId="22f0-2365-bfa6-9f8b" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="15.0"/>
+            <cost name="pts" typeId="points" value="10.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="2f33-8a1f-3446-351a" name="Dead Eye Shots" hidden="false" collective="false" import="true" type="upgrade">

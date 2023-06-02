@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="138e-c671-3180-f615" name="Codex - Ultramarines" revision="18" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="138e-c671-3180-f615" name="Codex - Ultramarines" revision="18" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>Ultramarines Codex</readme>
   <categoryEntries>
     <categoryEntry id="8be3-6d17-d7d3-faa0" name="Characters" hidden="false"/>
@@ -55,6 +55,25 @@
           </modifiers>
           <constraints>
             <constraint field="points" scope="roster" value="0.0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="f52b-cc76-583d-abd2" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="54b8-24c0-1103-3ca8" name="Support" hidden="false" targetId="2ce9-bd7e-1b19-0211" primary="false">
+          <modifiers>
+            <modifier type="set" field="83a9-cd51-4052-715b" value="50.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b686-76f8-6874-e3e9" type="atLeast"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6186-0c50-3540-dc37" type="atLeast"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9fec-6f81-5e76-3592" type="atLeast"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="261d-dcfd-16cf-3caf" type="atLeast"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="points" scope="roster" value="0.0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="83a9-cd51-4052-715b" type="max"/>
           </constraints>
         </categoryLink>
       </categoryLinks>
@@ -232,6 +251,7 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       </constraints>
       <infoLinks>
         <infoLink id="46a1-9964-8507-f1e8" name="Space Marine Bike Damage Table" hidden="false" targetId="94d9-fb22-095a-edae" type="rule"/>
+        <infoLink id="e377-819e-b915-b19e" name="Space Marine Bike" hidden="false" targetId="1c64-2eb5-83c1-06f7" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a260-187a-4e5a-3118" name="New CategoryLink" hidden="false" targetId="3017-162b-c153-6519" primary="true"/>

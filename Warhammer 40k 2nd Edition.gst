@@ -17,7 +17,8 @@
     <publication id="71ba-82e2-d83c-d33d" name="Codex - Eldar" shortName="Eldar" publisher="" publicationDate="1994"/>
     <publication id="4740-6730-10c0-9b25" name="Codex - Tyranids" shortName="Tyranid" publicationDate="1993" publisherUrl=""/>
     <publication id="02e1-3f69-7ae7-f5c5" name="Codex - Chaos" shortName="Chaos" publicationDate="1996"/>
-    <publication id="b5c1-b072-4d0b-383a" name="Codex - Imperialis" shortName="Imperialis" publicationDate="1993"/>
+    <publication id="053a-a071-db83-283c" name="Codex - Army Lists" shortName=" Army Lists" publisher="40k Box Set" publicationDate="1993"/>
+    <publication id="d829-388d-3717-5aca" name="Codex - Imperialis" shortName="Imperialis" publicationDate="1993"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="-1.0" hidden="false"/>
@@ -146,6 +147,8 @@
     <categoryEntry id="6741-c4c6-274e-36cf" name="Allies" hidden="false"/>
     <categoryEntry id="722d-8a5c-d442-498a" name="Necrons" hidden="false"/>
     <categoryEntry id="156f-b304-5133-1fff" name="Support" hidden="false"/>
+    <categoryEntry id="7b75-aa9e-1b94-f4a5" name="Imperial Agents" hidden="false"/>
+    <categoryEntry id="e206-c273-bb7e-6132" name="Squats" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="5eaa-5b96-5986-4194" name="Don&apos;t pick this - Click to change" hidden="true">
@@ -2686,6 +2689,14 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="592b-ad47-6290-0c1f" name="Suppression Shield" hidden="false" collective="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="0e58-1d93-fbc8-3cab" name="Suppression Shield" hidden="false" targetId="b4b5-4868-17d8-d563" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="3a8b-4669-b2f5-b7f1" name="Vehicle Wargear Cards (Generic)" hidden="false" collective="false" import="true"/>
@@ -5137,6 +5148,12 @@ Place a 2&quot; blast marker anywhere within Line of Sight of the vehicle using 
         <characteristic name="Saving Throw" typeId="b439-323a-9cfe-6340">3+</characteristic>
         <characteristic name="Special" typeId="b7f1-73cd-d19d-26a6">If a 3+ is rolled on the save, shift the model D6&quot; in a random direction using hte scatter dice. This causes the hit to miss, unless it is a blast or template hit that doesn&apos;t move the model far enough away. Reroll if the scatter would place the model inside a wall/vehicle/other model etc. 
 Does not work against vortex grenades</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="b4b5-4868-17d8-d563" name="Suppression Shield" publicationId="06e5-8e36-e8c8-aec3" page="69" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+      <characteristics>
+        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">A model equipped with a Suppression Shield automatically inflicts an S3 hit resolves on a single opponent when it charges into hand-to-hand combat; this is resolved before HtH is started. Models wearing a Shield also receive a +2 bonus to their armour saving throw. As with all shields, these effects only apply if the incoming
+attack is from the model‘s front 90 arc of sight.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

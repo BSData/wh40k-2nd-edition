@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7c0f-1fc4-d5a5-dc73" name="Codex - Angels of Deaths (Dark Angels)" revision="10" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7c0f-1fc4-d5a5-dc73" name="Codex - Angels of Deaths (Dark Angels)" revision="10" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="5ea0-5809-8883-b277" name="Characters" hidden="false"/>
     <categoryEntry id="8887-ca93-cfef-dc21" name="Squads" hidden="false"/>
@@ -240,6 +240,7 @@ and  courage  in  the face of death. Once broken, a Space Marine squad may rally
       </constraints>
       <infoLinks>
         <infoLink id="46a1-9964-8507-f1e8" name="Space Marine Bike Damage Table" hidden="false" targetId="94d9-fb22-095a-edae" type="rule"/>
+        <infoLink id="bcb6-2b8c-9b03-bad4" name="Space Marine Bike" hidden="false" targetId="1c64-2eb5-83c1-06f7" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="6b12-bc51-182e-43fe" name="Skimmer/Bike" hidden="false" targetId="9187-ca83-9433-d2c7" primary="false"/>

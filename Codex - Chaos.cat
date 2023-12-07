@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="5bd8-0ec7-a752-694d" name="Codex - Chaos" revision="7" battleScribeVersion="2.03" authorName="Boff" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="5bd8-0ec7-a752-694d" name="Codex - Chaos" revision="7" battleScribeVersion="2.03" authorName="Boff" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>Chaos Rewards note - You cannot give any 2 models the exact same combo of rewards. However, attempting to bulid that into this would cause unending pain. Just be mindful when gifting your little warriors</readme>
   <profileTypes>
     <profileType id="4fa6-d4f7-781c-53f9" name="Mark of Chaos">
@@ -8351,6 +8351,47 @@ The Tear attack nominates a single location on the target. Roll penetration as n
           </selectionEntryGroups>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4fd0-eb99-4a13-5acc" name="Terminator Armour: Combi-weapon &amp; Lightning Claw" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="b177-18c2-d2ac-02a4" name="Chaos Terminator Armour" hidden="false" targetId="6c8c-438d-9db3-3404" type="profile"/>
+          </infoLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="4a06-b667-1a3d-cdfd" name="Combi-Weapon" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="305f-d47c-704f-0b74" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf15-1750-06cf-6930" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="0d44-0b07-34dd-e096" name="Twin Bolter" hidden="false" collective="false" import="true" targetId="f82d-f5e2-2e7c-c3a7" type="selectionEntry">
+                  <costs>
+                    <cost name="pts" typeId="points" value="6.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="7a2c-febe-a68d-7b86" name="Combi-Flamer" hidden="false" collective="false" import="true" targetId="6358-8ace-fcba-6056" type="selectionEntry">
+                  <costs>
+                    <cost name="pts" typeId="points" value="12.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="5ce1-1244-7e66-01b1" name="Combi-Melta" hidden="false" collective="false" import="true" targetId="b00e-bbb9-e4a9-af42" type="selectionEntry">
+                  <costs>
+                    <cost name="pts" typeId="points" value="12.0"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <entryLinks>
+            <entryLink id="4b2c-9317-fd5d-a5a4" name="Lightning Claws" hidden="false" collective="false" import="true" targetId="ff45-72d3-781e-6006" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e120-c010-5bd1-45c5" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="955c-f48a-22e4-3562" type="min"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="47.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>

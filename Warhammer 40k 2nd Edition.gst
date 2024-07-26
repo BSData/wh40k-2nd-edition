@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="9ea8-c89d-9104-ed03" name="Warhammer 40k 2nd Edition" revision="24" battleScribeVersion="2.03" authorName="Boff" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="9ea8-c89d-9104-ed03" name="Warhammer 40k 2nd Edition" revision="24" battleScribeVersion="2.03" authorName="Boff" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
   <comment>Warhammer 2nd Edition 40k</comment>
   <readme>Added more wargear cards</readme>
   <publications>
     <publication id="2bb8-b6de-8b70-7f41" name="Warhammer 40k 2nd Edition Rulebook" shortName="2nd Rulebook" publicationDate="1993"/>
     <publication id="06e5-8e36-e8c8-aec3" name="Warhammer 40,000: Wargear (2nd Edition)" shortName="Wargear" publicationDate="1993"/>
-    <publication id="6d24-ac0a-2721-b4e2" name=" Warhammer 40K Dark Millennium" shortName="Dark Millenium" publicationDate="1994"/>
+    <publication id="6d24-ac0a-2721-b4e2" name="Warhammer 40K Dark Millennium" shortName="Dark Millenium" publicationDate="1994"/>
     <publication id="4590-6ba9-5482-a1fa" name="Codex - Ultramarines" shortName="Ultramarines" publicationDate="1995"/>
     <publication id="8eed-45fd-d4be-9a1b" name="White Dwarf" shortName="WD"/>
     <publication id="308f-63b0-ee37-1c6b" name="Codex - Angels of Death" shortName="Angels of Death" publicationDate="1996"/>
-    <publication id="0f8d-af97-3972-324c" name="Codex - Space Wolves" shortName="Space Wolves" publisher="" publicationDate="1994"/>
+    <publication id="0f8d-af97-3972-324c" name="Codex - Space Wolves" shortName="Space Wolves" publicationDate="1994"/>
     <publication id="4e3f-569f-151e-9c5c" name="Codex - Assassins" shortName="Assassins" publicationDate="1997"/>
     <publication id="a1e3-886b-e509-d15a" name="Codex - Imperial Guard" shortName="Imperial Guard" publicationDate="1995"/>
     <publication id="cad3-a694-b720-6309" name="Codex - Sisters of Battle" shortName="Sisters of Battle" publicationDate="1997"/>
-    <publication id="9f92-b7df-cf75-9a46" name="Codex - Orks" shortName="Orks" publisher="" publicationDate="1994"/>
-    <publication id="71ba-82e2-d83c-d33d" name="Codex - Eldar" shortName="Eldar" publisher="" publicationDate="1994"/>
-    <publication id="4740-6730-10c0-9b25" name="Codex - Tyranids" shortName="Tyranid" publicationDate="1993" publisherUrl=""/>
+    <publication id="9f92-b7df-cf75-9a46" name="Codex - Orks" shortName="Orks" publicationDate="1994"/>
+    <publication id="71ba-82e2-d83c-d33d" name="Codex - Eldar" shortName="Eldar" publicationDate="1994"/>
+    <publication id="4740-6730-10c0-9b25" name="Codex - Tyranids" shortName="Tyranid" publicationDate="1993"/>
     <publication id="02e1-3f69-7ae7-f5c5" name="Codex - Chaos" shortName="Chaos" publicationDate="1996"/>
-    <publication id="053a-a071-db83-283c" name="Codex - Army Lists" shortName=" Army Lists" publisher="40k Box Set" publicationDate="1993"/>
+    <publication id="053a-a071-db83-283c" name="Codex - Army Lists" shortName="Army Lists" publisher="40k Box Set" publicationDate="1993"/>
     <publication id="d829-388d-3717-5aca" name="Codex - Imperialis" shortName="Imperialis" publicationDate="1993"/>
   </publications>
   <costTypes>
-    <costType id="points" name="pts" defaultCostLimit="-1.0" hidden="false"/>
+    <costType id="points" name="pts" defaultCostLimit="-1" hidden="false"/>
   </costTypes>
   <profileTypes>
     <profileType id="219f-0faa-a2d8-f766" name="Unit">
@@ -180,7 +180,7 @@
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="04a2-74da-3458-52d1" name="Master-Crafted Bolt Pistol" publicationId="06e5-8e36-e8c8-aec3" page="Card" hidden="false" collective="false" import="true" type="upgrade">
@@ -189,7 +189,7 @@
         <infoLink id="8778-eb36-4034-108d" name="Master-Crafted Bolt Pistol" hidden="false" targetId="c720-cb12-a072-7b1b" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="10.0"/>
+        <cost name="pts" typeId="points" value="10"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b5bb-7853-53cb-bec4" name="Bolt Pistol" publicationId="06e5-8e36-e8c8-aec3" page="14" hidden="false" collective="false" import="true" type="upgrade">
@@ -214,19 +214,19 @@
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="223b-6b82-1907-d976" name="Power Armour" publicationId="06e5-8e36-e8c8-aec3" page="67" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b3c-98b8-49bc-d086" type="min"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="33b5-f5e6-b83a-0774" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b3c-98b8-49bc-d086" type="min"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="33b5-f5e6-b83a-0774" type="max"/>
       </constraints>
       <infoLinks>
         <infoLink id="88ce-e408-edef-b7f8" name="Power Armour" hidden="false" targetId="3f80-695d-2a45-93e8" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0bf9-3a64-2700-ff30" name="Chainsword" publicationId="06e5-8e36-e8c8-aec3" page="7" hidden="false" collective="false" import="true" type="upgrade">
@@ -251,12 +251,11 @@
         </rule>
         <rule id="f98c-d948-5549-9db5" name="Parry" publicationId="2bb8-b6de-8b70-7f41" hidden="false">
           <description>A warrior armed with a sword (including chainswords. power swords and force swords) can parry or turn aside an opponent&apos; blow with his own blade. To represent thi a model armed with a sword can force an opponent to re-roll his highest attack dice before the winner of the combat is determined. Models armed with two swords can force their opponent to re-roll one or two of his attack dice.
-The swordsman doesn&apos;t have to parry if he doesn&apos;t want to. Though parries are useful it is possible an opponent may re-roll and get a better score. An opponent who rolls several dice can always pick his next highest score and use that to determine who won the combat rather than use the score of his re-rolled dice. Re-rolled dice can still produce fumbles or critical hits as described below. Two opposing models which both have parries cancel each other out - neither can force a re-roll!
-</description>
+The swordsman doesn&apos;t have to parry if he doesn&apos;t want to. Though parries are useful it is possible an opponent may re-roll and get a better score. An opponent who rolls several dice can always pick his next highest score and use that to determine who won the combat rather than use the score of his re-rolled dice. Re-rolled dice can still produce fumbles or critical hits as described below. Two opposing models which both have parries cancel each other out - neither can force a re-roll!</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b690-d341-fa77-01b8" name="Power Axe" publicationId="06e5-8e36-e8c8-aec3" page="10" hidden="false" collective="false" import="true" type="upgrade">
@@ -293,11 +292,11 @@ The swordsman doesn&apos;t have to parry if he doesn&apos;t want to. Though parr
           <description>May be used in close combat</description>
         </rule>
         <rule id="a842-a57a-aa33-ae82" name="1 or 2 Handed" publicationId="06e5-8e36-e8c8-aec3" page="10" hidden="false">
-          <description>The weapon can be used either one-handed to facilitate the wielding of another close combat weapon or two-handed to bring its full devastating power to bear. </description>
+          <description>The weapon can be used either one-handed to facilitate the wielding of another close combat weapon or two-handed to bring its full devastating power to bear.</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d6c8-382a-4d74-36af" name="Power Fist" publicationId="06e5-8e36-e8c8-aec3" page="10" hidden="false" collective="false" import="true" type="upgrade">
@@ -322,7 +321,7 @@ The swordsman doesn&apos;t have to parry if he doesn&apos;t want to. Though parr
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f721-a663-b7be-011f" name="Power Maul" hidden="false" collective="false" import="true" type="upgrade">
@@ -346,12 +345,11 @@ The swordsman doesn&apos;t have to parry if he doesn&apos;t want to. Though parr
           <description>May be used in close combat</description>
         </rule>
         <rule id="b9d9-1c42-fe09-b7e0" name="Knocked Out" publicationId="06e5-8e36-e8c8-aec3" page="11" hidden="false">
-          <description>In game terms it matters little whether a model is knocked out or slain, so the profile reflects the weapon&apos;s maximum ability. However, any model &apos;killed&apos; by a power maul is assumed to be unconscious and automatically recovers once the game is over.
-</description>
+          <description>In game terms it matters little whether a model is knocked out or slain, so the profile reflects the weapon&apos;s maximum ability. However, any model &apos;killed&apos; by a power maul is assumed to be unconscious and automatically recovers once the game is over.</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4e44-58a0-2af5-519c" name="Power Sword" hidden="false" collective="false" import="true" type="upgrade">
@@ -373,15 +371,14 @@ The swordsman doesn&apos;t have to parry if he doesn&apos;t want to. Though parr
       <rules>
         <rule id="4f74-eee2-f477-0e5c" name="Parry" publicationId="2bb8-b6de-8b70-7f41" page="41" hidden="false">
           <description>A warrior armed with a sword (including chainswords. power swords and force swords) can parry or turn aside an opponent&apos; blow with his own blade. To represent thi a model armed with a sword can force an opponent to re-roll his highest attack dice before the winner of the combat is determined. Models armed with two swords can force their opponent to re-roll one or two of his attack dice.
-The swordsman doesn&apos;t have to parry if he doesn&apos;t want to. Though parries are useful it is possible an opponent may re-roll and get a better score. An opponent who rolls several dice can always pick his next highest score and use that to determine who won the combat rather than use the score of his re-rolled dice. Re-rolled dice can still produce fumbles or critical hits as described below. Two opposing models which both have parries cancel each other out - neither can force a re-roll!
-</description>
+The swordsman doesn&apos;t have to parry if he doesn&apos;t want to. Though parries are useful it is possible an opponent may re-roll and get a better score. An opponent who rolls several dice can always pick his next highest score and use that to determine who won the combat rather than use the score of his re-rolled dice. Re-rolled dice can still produce fumbles or critical hits as described below. Two opposing models which both have parries cancel each other out - neither can force a re-roll!</description>
         </rule>
         <rule id="a480-ecd4-be27-68a7" name="Close Combat" publicationId="06e5-8e36-e8c8-aec3" page="40" hidden="false">
           <description>May be used in close combat</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2e7d-f34c-b6c8-8d78" name="Hand Flamer" hidden="false" collective="false" import="true" type="upgrade">
@@ -410,7 +407,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="87cb-d8fc-1889-18a9" name="Plasma Pistol" hidden="false" collective="false" import="true" type="upgrade">
@@ -420,7 +417,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         <infoLink id="c67b-4996-b2bf-3896" name="Plasma Pistol" hidden="false" targetId="34d4-5242-2fd3-3b37" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0e81-7914-e52a-0a8d" name="Boltgun" publicationId="06e5-8e36-e8c8-aec3" page="21" hidden="false" collective="false" import="true" type="upgrade">
@@ -440,7 +437,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a1e4-59e5-1938-5372" name="Flamer" hidden="false" collective="false" import="true" type="upgrade">
@@ -466,7 +463,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9a87-ceb4-676f-1386" name="Meltagun" hidden="false" collective="false" import="true" type="upgrade">
@@ -486,7 +483,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1d2f-532f-87ed-3d6b" name="Plasma Gun" hidden="false" collective="false" import="true" type="upgrade">
@@ -507,18 +504,15 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
       </profiles>
       <rules>
         <rule id="0bac-bb45-5fc6-ee02" name="Plasma" publicationId="06e5-8e36-e8c8-aec3" page="17" hidden="false">
-          <description>The energy used by a plasma weapon is so vast that once it has been fired it takes time for it to recharge. If a plasma weapon is fired it cannot then be used in the player&apos;s following turn, and is only ready to fire again in the player&apos;s turn after next. Place a &apos;plasma weapon recharging&apos; marker next to model as a reminder. This does not affect the model&apos;s ability to move or to use another weapon if it carries one.
-</description>
+          <description>The energy used by a plasma weapon is so vast that once it has been fired it takes time for it to recharge. If a plasma weapon is fired it cannot then be used in the player&apos;s following turn, and is only ready to fire again in the player&apos;s turn after next. Place a &apos;plasma weapon recharging&apos; marker next to model as a reminder. This does not affect the model&apos;s ability to move or to use another weapon if it carries one.</description>
         </rule>
         <rule id="d729-c751-91c6-fd1a" name="Sustained Fire" publicationId="2bb8-b6de-8b70-7f41" page="38" hidden="false">
           <description>The player nominates the initial target and rolls to hit exactly as normal. If the player makes the to hit roll he can roll one or more special sustained fire dice to see how many actual hits are scored. The first of these hits will be scored on the initial target but any extra hits can be allocated to other visible targets within 4&quot; of the first. Once all hits have been allocated roll to wound as normal. 
-The number of sustained fire dice a weapon can roll is indicated in its description in the Wargear book. A sustained fire weapon can always be fired using less dice than its maximum if desired.
-
-</description>
+The number of sustained fire dice a weapon can roll is indicated in its description in the Wargear book. A sustained fire weapon can always be fired using less dice than its maximum if desired.</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cbd3-5929-68b1-2cc8" name="Autocannon" hidden="false" collective="false" import="true" type="upgrade">
@@ -540,13 +534,11 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
       <rules>
         <rule id="a856-17b0-01d5-397e" name="Sustained Fire" publicationId="2bb8-b6de-8b70-7f41" page="38" hidden="false">
           <description>The player nominates the initial target and rolls to hit exactly as normal. If the player makes the to hit roll he can roll one or more special sustained fire dice to see how many actual hits are scored. The first of these hits will be scored on the initial target but any extra hits can be allocated to other visible targets within 4&quot; of the first. Once all hits have been allocated roll to wound as normal. 
-The number of sustained fire dice a weapon can roll is indicated in its description in the Wargear book. A sustained fire weapon can always be fired using less dice than its maximum if desired.
-
-</description>
+The number of sustained fire dice a weapon can roll is indicated in its description in the Wargear book. A sustained fire weapon can always be fired using less dice than its maximum if desired.</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4c82-0e56-d20a-6b1c" name="Heavy Bolter" hidden="false" collective="false" import="true" type="upgrade">
@@ -568,13 +560,11 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
       <rules>
         <rule id="261d-5d18-763b-7fcb" name="Sustained Fire" publicationId="2bb8-b6de-8b70-7f41" page="38" hidden="false">
           <description>The player nominates the initial target and rolls to hit exactly as normal. If the player makes the to hit roll he can roll one or more special sustained fire dice to see how many actual hits are scored. The first of these hits will be scored on the initial target but any extra hits can be allocated to other visible targets within 4&quot; of the first. Once all hits have been allocated roll to wound as normal. 
-The number of sustained fire dice a weapon can roll is indicated in its description in the Wargear book. A sustained fire weapon can always be fired using less dice than its maximum if desired.
-
-</description>
+The number of sustained fire dice a weapon can roll is indicated in its description in the Wargear book. A sustained fire weapon can always be fired using less dice than its maximum if desired.</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="21a1-0e65-42d4-072a" name="Hellfire Shell" publicationId="06e5-8e36-e8c8-aec3" page="35" hidden="false" collective="false" import="true" type="upgrade">
@@ -594,15 +584,14 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         </profile>
       </profiles>
       <rules>
-        <rule id="7116-425a-093a-1ece" name="Acid Splatter " publicationId="06e5-8e36-e8c8-aec3" page="35" hidden="false">
+        <rule id="7116-425a-093a-1ece" name="Acid Splatter" publicationId="06e5-8e36-e8c8-aec3" page="35" hidden="false">
           <description>If a target is saved by its armour, splinters of  glass and gobbets of mutagenic acid may rebound and hit others models within 2&quot;. Roll a dice for each  model  within 2&quot; of  the original target. Any  models rolling a 6 are hit by acid splashes and  automatically  suffer  I  wound  -  this may  be  saved  by armour  in  the  normal manner.
 
-A  target  which  is  not  made of  living flesh, such as a robot or vehicle, cannot be harmed by a Hellfire shell - any attempt to fire a Hellfire shell against a  non-living  target is treated like a normal heavy bolter shot.
-</description>
+A  target  which  is  not  made of  living flesh, such as a robot or vehicle, cannot be harmed by a Hellfire shell - any attempt to fire a Hellfire shell against a  non-living  target is treated like a normal heavy bolter shot.</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="601b-a85f-4654-80d0" name="Lascannon" publicationId="06e5-8e36-e8c8-aec3" page="41" hidden="false" collective="false" import="true" type="upgrade">
@@ -622,7 +611,7 @@ A  target  which  is  not  made of  living flesh, such as a robot or vehicle, ca
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a423-4c2c-53af-a9c3" name="Missile Launcher with Frag and Krak Missiles" publicationId="06e5-8e36-e8c8-aec3" page="42-43" hidden="false" collective="false" import="true" type="upgrade">
@@ -660,7 +649,7 @@ A  target  which  is  not  made of  living flesh, such as a robot or vehicle, ca
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a17e-632e-5e7d-1882" name="Targeter" hidden="false" collective="false" import="true" type="upgrade">
@@ -677,7 +666,7 @@ A  target  which  is  not  made of  living flesh, such as a robot or vehicle, ca
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0e2a-0bac-c5dd-32e8" name="Frag Missile" hidden="false" collective="false" import="true" type="upgrade">
@@ -685,7 +674,7 @@ A  target  which  is  not  made of  living flesh, such as a robot or vehicle, ca
         <infoLink id="9975-0776-4a0d-cb08" name="Frag Missile" hidden="false" targetId="2b18-0c9c-ad4b-a167" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ef82-5484-7fd3-bbbe" name="Krak Missile" hidden="false" collective="false" import="true" type="upgrade">
@@ -701,7 +690,7 @@ A  target  which  is  not  made of  living flesh, such as a robot or vehicle, ca
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6198-b6bf-05ad-288e" name="Melta Missile" hidden="false" collective="false" import="true" type="upgrade">
@@ -717,7 +706,7 @@ A  target  which  is  not  made of  living flesh, such as a robot or vehicle, ca
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b20d-a155-ae7b-59b5" name="Blind MIssile" hidden="false" collective="false" import="true" type="upgrade">
@@ -736,12 +725,11 @@ A  target  which  is  not  made of  living flesh, such as a robot or vehicle, ca
         <rule id="276b-4862-09d6-7601" name="Blind Missile" publicationId="06e5-8e36-e8c8-aec3" page="43" hidden="false">
           <description>Blind Missiles may be aimed against any visible piece of ground. Models may not see through, or into, or out of, the blind marker. Models may not use targeters or infra-vision to see through the marker. Psykers may not see or use their powers through the marker. 
 Any models within the blind cloud have the choice of remaining stationary, or moving at half rate in a random direction. Opposing models in hand-to-hand combat within a blind cloud may fight, but will only hit their enemy on the D6 score of a 6
-See Wargear Rulebook pg. 43 for further rules
-</description>
+See Wargear Rulebook pg. 43 for further rules</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7f95-5d77-6e9f-58e4" name="Anti-plant Missile" hidden="false" collective="false" import="true" type="upgrade">
@@ -760,12 +748,11 @@ See Wargear Rulebook pg. 43 for further rules
         <rule id="2d0e-8041-f21b-7dbc" name="Anti-plant" publicationId="06e5-8e36-e8c8-aec3" page="43" hidden="false">
           <description>This  missile  was developed as a defoliant to clear areas of vegetation  which  could  act as 
 cover to enemy  troops. All vegetation  in  the area  effect of  the  missile  is automatically
-destroyed. The missile cannot affect other models.
-</description>
+destroyed. The missile cannot affect other models.</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="60b0-2de6-8391-2b13" name="Plasma Missile" hidden="false" collective="false" import="true" type="upgrade">
@@ -782,12 +769,11 @@ destroyed. The missile cannot affect other models.
       </profiles>
       <rules>
         <rule id="0226-0a58-c93e-641e" name="Plasma Missile" publicationId="06e5-8e36-e8c8-aec3" page="43" hidden="false">
-          <description>Determine  where  the  missile  lands  as  normal and  place  a 1  1/2&quot;  radius  blast  marker or ball  of cotton  wool.  Work  out damage  on  targets  within the area  as  normal.  Any models which  survive  are  thrown  outside  the  area  covered  by the marker as a result of the blast. For plasma ball chart after firing see Wargear Rulebook pg. 43
-</description>
+          <description>Determine  where  the  missile  lands  as  normal and  place  a 1  1/2&quot;  radius  blast  marker or ball  of cotton  wool.  Work  out damage  on  targets  within the area  as  normal.  Any models which  survive  are  thrown  outside  the  area  covered  by the marker as a result of the blast. For plasma ball chart after firing see Wargear Rulebook pg. 43</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4429-f97a-006f-4632" name="Multi-Melta" hidden="false" collective="false" import="true" type="upgrade">
@@ -807,7 +793,7 @@ destroyed. The missile cannot affect other models.
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9d75-2468-4857-a347" name="Heavy Plasma Gun" publicationId="06e5-8e36-e8c8-aec3" page="37" hidden="false" collective="false" import="true" type="upgrade">
@@ -841,12 +827,11 @@ destroyed. The missile cannot affect other models.
       </profiles>
       <rules>
         <rule id="c06f-de9f-5c7f-faf5" name="Plasma" publicationId="06e5-8e36-e8c8-aec3" page="17" hidden="false">
-          <description>The energy used by a plasma weapon is so vast that once it has been fired it takes time for it to recharge. If a plasma weapon is fired it cannot then be used in the player&apos;s following turn, and is only ready to fire again in the player&apos;s turn after next. Place a &apos;plasma weapon recharging&apos; marker next to model as a reminder. This does not affect the model&apos;s ability to move or to use another weapon if it carries one.
-</description>
+          <description>The energy used by a plasma weapon is so vast that once it has been fired it takes time for it to recharge. If a plasma weapon is fired it cannot then be used in the player&apos;s following turn, and is only ready to fire again in the player&apos;s turn after next. Place a &apos;plasma weapon recharging&apos; marker next to model as a reminder. This does not affect the model&apos;s ability to move or to use another weapon if it carries one.</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2f34-8601-063a-8e1c" name="Shotgun" hidden="false" collective="false" import="true" type="upgrade">
@@ -880,12 +865,11 @@ destroyed. The missile cannot affect other models.
       </profiles>
       <rules>
         <rule id="db08-696c-7515-8015" name="Knockback" publicationId="06e5-8e36-e8c8-aec3" page="31" hidden="false">
-          <description>If  a  target  is  hit   by  a  shotgun  but  not  slain,  then  it  is automatically  knocked back 2&quot; and will fall  over on a  D6  roll of  4+.  A  knocked  over  model must spend  its  next movement phase standing up. Note that  this  rule  only  affects  ordinary troopers - not vehicles, robots, Terminators or dreadnoughts.
-</description>
+          <description>If  a  target  is  hit   by  a  shotgun  but  not  slain,  then  it  is automatically  knocked back 2&quot; and will fall  over on a  D6  roll of  4+.  A  knocked  over  model must spend  its  next movement phase standing up. Note that  this  rule  only  affects  ordinary troopers - not vehicles, robots, Terminators or dreadnoughts.</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="dadb-6f1e-1f01-7776" name="Autogun" hidden="false" collective="false" import="true" type="upgrade">
@@ -905,7 +889,7 @@ destroyed. The missile cannot affect other models.
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6476-3281-0e1c-d0a6" name="Needle Sniper Rifle" hidden="false" collective="false" import="true" type="upgrade">
@@ -930,7 +914,7 @@ destroyed. The missile cannot affect other models.
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="808c-e433-c780-ec03" name="Sword" hidden="false" collective="false" import="true" type="upgrade">
@@ -952,15 +936,14 @@ destroyed. The missile cannot affect other models.
       <rules>
         <rule id="fc44-c31b-bc07-a748" name="Parry" publicationId="2bb8-b6de-8b70-7f41" page="41" hidden="false">
           <description>A warrior armed with a sword (including chainswords. power swords and force swords) can parry or turn aside an opponent&apos; blow with his own blade. To represent thi a model armed with a sword can force an opponent to re-roll his highest attack dice before the winner of the combat is determined. Models armed with two swords can force their opponent to re-roll one or two of his attack dice.
-The swordsman doesn&apos;t have to parry if he doesn&apos;t want to. Though parries are useful it is possible an opponent may re-roll and get a better score. An opponent who rolls several dice can always pick his next highest score and use that to determine who won the combat rather than use the score of his re-rolled dice. Re-rolled dice can still produce fumbles or critical hits as described below. Two opposing models which both have parries cancel each other out - neither can force a re-roll!
-</description>
+The swordsman doesn&apos;t have to parry if he doesn&apos;t want to. Though parries are useful it is possible an opponent may re-roll and get a better score. An opponent who rolls several dice can always pick his next highest score and use that to determine who won the combat rather than use the score of his re-rolled dice. Re-rolled dice can still produce fumbles or critical hits as described below. Two opposing models which both have parries cancel each other out - neither can force a re-roll!</description>
         </rule>
         <rule id="1598-d5a0-ca97-4eec" name="Close Combat" publicationId="06e5-8e36-e8c8-aec3" page="40" hidden="false">
           <description>May be used in close combat</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c2ba-db92-5ff9-38c2" name="Axe" hidden="false" collective="false" import="true" type="upgrade">
@@ -985,7 +968,7 @@ The swordsman doesn&apos;t have to parry if he doesn&apos;t want to. Though parr
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="09e8-4dd1-0d92-ecde" name="Blind Grenade" hidden="false" collective="false" import="true" type="upgrade">
@@ -1004,12 +987,11 @@ The swordsman doesn&apos;t have to parry if he doesn&apos;t want to. Though parr
         <rule id="2776-ba1c-6869-2b99" name="Blind Grenade" publicationId="06e5-8e36-e8c8-aec3" page="56" hidden="false">
           <description>Models may not see through, or into, or out of, the blind marker. Models may not use targeters or infra-vision to see through the marker. Psykers may not see or use their powers through the marker. 
 Any models within the blind cloud have the choice of remaining stationary, or moving at half rate in a random direction.Models in  hand-to-hand combat within a cloud may fight, but as they are completely blinded they  halve their Weapon Skill rounding  up.
-See Wargear Rulebook pg. 56 for further rules
-</description>
+See Wargear Rulebook pg. 56 for further rules</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="14a4-25fa-8840-ab29" name="Anti-plant Grenade" publicationId="06e5-8e36-e8c8-aec3" page="56" hidden="false" collective="false" import="true" type="upgrade">
@@ -1028,12 +1010,11 @@ See Wargear Rulebook pg. 56 for further rules
         <rule id="662f-a353-9836-96ad" name="Anti-plant" publicationId="06e5-8e36-e8c8-aec3" page="56" hidden="false">
           <description>This  grenade was developed as a defoliant to clear areas of vegetation  which  could  act as 
 cover to enemy  troops. All vegetation  in  the area  effect of  the  grenade is automatically
-destroyed. The grenade cannot affect other models.
-</description>
+destroyed. The grenade cannot affect other models.</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3d89-89a0-ca70-e3b1" name="Choke Grenade" hidden="false" collective="false" import="true" type="upgrade">
@@ -1054,7 +1035,7 @@ destroyed. The grenade cannot affect other models.
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cc7b-eac9-7cc5-a156" name="Frag Grenade" publicationId="06e5-8e36-e8c8-aec3" page="57" hidden="false" collective="false" import="true" type="upgrade">
@@ -1062,7 +1043,7 @@ destroyed. The grenade cannot affect other models.
         <infoLink id="6008-7abf-3260-d75b" name="Frag Grenade" hidden="false" targetId="122b-b17a-4e87-5994" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e685-3188-3939-60f9" name="Hallucinogen Grenade" publicationId="06e5-8e36-e8c8-aec3" page="58" hidden="false" collective="false" import="true" type="upgrade">
@@ -1083,7 +1064,7 @@ destroyed. The grenade cannot affect other models.
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7ac5-935d-8ecf-59c0" name="Krak Grenade" publicationId="06e5-8e36-e8c8-aec3" page="62" hidden="false" collective="false" import="true" type="upgrade">
@@ -1092,7 +1073,7 @@ destroyed. The grenade cannot affect other models.
         <infoLink id="ae9d-f77e-b3b6-7cf1" name="Krak Grenade" hidden="false" targetId="92bb-c543-83b0-5755" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="101f-9872-9b6f-cfc7" name="Melta Bomb" publicationId="06e5-8e36-e8c8-aec3" page="62" hidden="false" collective="false" import="true" type="upgrade">
@@ -1109,11 +1090,11 @@ destroyed. The grenade cannot affect other models.
       </profiles>
       <rules>
         <rule id="8be8-5125-bf3b-f33b" name="Melta Bomb" publicationId="06e5-8e36-e8c8-aec3" page="62" hidden="false">
-          <description>Cannot be thrown, may only be used in close combat. </description>
+          <description>Cannot be thrown, may only be used in close combat.</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="89f8-b27c-1632-e96a" name="Photon Flash Flare" publicationId="06e5-8e36-e8c8-aec3" page="62" hidden="false" collective="false" import="true" type="upgrade">
@@ -1134,7 +1115,7 @@ destroyed. The grenade cannot affect other models.
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9277-633c-d567-56be" name="Plasma Grenade" publicationId="06e5-8e36-e8c8-aec3" page="63" hidden="false" collective="false" import="true" type="upgrade">
@@ -1155,7 +1136,7 @@ destroyed. The grenade cannot affect other models.
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8dbb-bf33-3ef5-09f5" name="Rad Grenade" publicationId="06e5-8e36-e8c8-aec3" page="63" hidden="false" collective="false" import="true" type="upgrade">
@@ -1164,7 +1145,7 @@ destroyed. The grenade cannot affect other models.
         <infoLink id="48e2-dbe4-8e8a-43c4" name="Rad Grenade" hidden="false" targetId="e344-464e-7d41-0296" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f58d-efa5-cfcb-6ce5" name="Scare Grenade" publicationId="06e5-8e36-e8c8-aec3" page="64" hidden="false" collective="false" import="true" type="upgrade">
@@ -1185,7 +1166,7 @@ destroyed. The grenade cannot affect other models.
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a82b-4d61-46e7-d761" name="Smoke Grenade" publicationId="06e5-8e36-e8c8-aec3" page="65" hidden="false" collective="false" import="true" type="upgrade">
@@ -1206,7 +1187,7 @@ destroyed. The grenade cannot affect other models.
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="770b-c9eb-8a39-6cf0" name="Tanglefoot Grenade" publicationId="06e5-8e36-e8c8-aec3" page="65" hidden="false" collective="false" import="true" type="upgrade">
@@ -1227,7 +1208,7 @@ destroyed. The grenade cannot affect other models.
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="222b-075f-d34c-7093" name="Auto-Launcher" publicationId="06e5-8e36-e8c8-aec3" page="20" hidden="false" collective="false" import="true" type="upgrade">
@@ -1249,12 +1230,11 @@ destroyed. The grenade cannot affect other models.
       <rules>
         <rule id="9323-6f94-080d-1fed" name="Auto-Launcher" publicationId="06e5-8e36-e8c8-aec3" page="20" hidden="false">
           <description>The auto-launcher carries six grenade all of the same type, which are fired off in two salvoes of three. Once the auto­ launcher is out of ammunition it may not fire again for the remainder of the battle.
-The auto-launcher can be triggered in the shooting phase of the vehicle&apos;s turn in addition to normal firing. The first grenade in the spread automatically hits a point exactly 6&quot; away in the auto-launcher&apos;s forward 90° fire arc. The other two grenades deviate D3&quot; away from the target point of the first grenade. An auto-launcher may be pre-loaded with a single type of grenade, the choice being either frag, krak or blind.
-</description>
+The auto-launcher can be triggered in the shooting phase of the vehicle&apos;s turn in addition to normal firing. The first grenade in the spread automatically hits a point exactly 6&quot; away in the auto-launcher&apos;s forward 90° fire arc. The other two grenades deviate D3&quot; away from the target point of the first grenade. An auto-launcher may be pre-loaded with a single type of grenade, the choice being either frag, krak or blind.</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9d43-a036-5991-2470" name="Terminator Armour" hidden="false" collective="false" import="true" type="upgrade">
@@ -1264,7 +1244,7 @@ The auto-launcher can be triggered in the shooting phase of the vehicle&apos;s t
         <infoLink id="1361-4300-e548-ddd2" name="Teleport Homer" hidden="false" targetId="4b0d-194f-884b-338b" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8b0c-9093-dc69-c9e8" name="Storm Bolter" hidden="false" collective="false" import="true" type="upgrade">
@@ -1286,13 +1266,11 @@ The auto-launcher can be triggered in the shooting phase of the vehicle&apos;s t
       <rules>
         <rule id="cb0e-f1b8-467e-3eed" name="Sustained Fire" publicationId="2bb8-b6de-8b70-7f41" page="38" hidden="false">
           <description>The player nominates the initial target and rolls to hit exactly as normal. If the player makes the to hit roll he can roll one or more special sustained fire dice to see how many actual hits are scored. The first of these hits will be scored on the initial target but any extra hits can be allocated to other visible targets within 4&quot; of the first. Once all hits have been allocated roll to wound as normal. 
-The number of sustained fire dice a weapon can roll is indicated in its description in the Wargear book. A sustained fire weapon can always be fired using less dice than its maximum if desired.
-
-</description>
+The number of sustained fire dice a weapon can roll is indicated in its description in the Wargear book. A sustained fire weapon can always be fired using less dice than its maximum if desired.</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8953-2383-fa02-9003" name="Assault Cannon" hidden="false" collective="false" import="true" type="upgrade">
@@ -1317,13 +1295,11 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         </rule>
         <rule id="860c-0ee1-ed59-9855" name="Sustained Fire" publicationId="2bb8-b6de-8b70-7f41" page="38" hidden="false">
           <description>The player nominates the initial target and rolls to hit exactly as normal. If the player makes the to hit roll he can roll one or more special sustained fire dice to see how many actual hits are scored. The first of these hits will be scored on the initial target but any extra hits can be allocated to other visible targets within 4&quot; of the first. Once all hits have been allocated roll to wound as normal. 
-The number of sustained fire dice a weapon can roll is indicated in its description in the Wargear book. A sustained fire weapon can always be fired using less dice than its maximum if desired.
-
-</description>
+The number of sustained fire dice a weapon can roll is indicated in its description in the Wargear book. A sustained fire weapon can always be fired using less dice than its maximum if desired.</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4da3-a884-c204-2800" name="Heavy Flamer" hidden="false" collective="false" import="true" type="upgrade">
@@ -1349,7 +1325,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bd6a-bc0f-d03b-6ef0" name="Cyclone Terminator Missile Launcher" hidden="false" collective="false" import="true" type="upgrade">
@@ -1369,7 +1345,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3913-2299-4778-933b" name="Chainfist" hidden="false" collective="false" import="true" type="upgrade">
@@ -1394,7 +1370,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="66d4-a295-9b7a-29f5" name="Crozius Arcanum" publicationId="06e5-8e36-e8c8-aec3" page="8" hidden="false" collective="false" import="true" type="upgrade">
@@ -1403,7 +1379,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         <infoLink id="e6d4-f5fe-84ba-7f67" name="Crozius Arcanum" hidden="false" targetId="8466-5626-893f-cda4" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ff45-72d3-781e-6006" name="Lightning Claws" hidden="false" collective="false" import="true" type="upgrade">
@@ -1413,7 +1389,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         <infoLink id="893a-d05f-84dc-e2b3" name="Close Combat" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bc7d-3f6b-9ee5-8e42" name="Thunder Hammer" publicationId="06e5-8e36-e8c8-aec3" page="12" hidden="false" collective="false" import="true" type="upgrade">
@@ -1434,14 +1410,14 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
       </profiles>
       <rules>
         <rule id="1a6d-469e-f999-9dbf" name="Crushing Blow" publicationId="06e5-8e36-e8c8-aec3" page="12" hidden="false">
-          <description>Thunder Hammers automatically wound any unit they hit (but they still take armour saves if applicable). If this is a vehicle, then it automatically penetrate the armour. </description>
+          <description>Thunder Hammers automatically wound any unit they hit (but they still take armour saves if applicable). If this is a vehicle, then it automatically penetrate the armour.</description>
         </rule>
         <rule id="5978-c811-e655-bdad" name="Close Combat" publicationId="06e5-8e36-e8c8-aec3" page="40" hidden="false">
           <description>May be used in close combat</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5b69-dbfc-8a02-2d96" name="Storm Shield" hidden="false" collective="false" import="true" type="upgrade">
@@ -1449,7 +1425,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         <infoLink id="b3d1-51ab-7f80-9042" name="Storm Shield" hidden="false" targetId="8743-1b1c-e5ba-ddfe" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="391b-3edc-8774-7593" name="Rosarius" hidden="false" collective="false" import="true" type="upgrade">
@@ -1457,7 +1433,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         <infoLink id="d05a-8b99-b8a3-4c12" name="Rosarius" hidden="false" targetId="c7ad-cdba-f44b-a71e" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="fe7e-3beb-6d63-4daa" name="Thunder Hammer &amp; Storm Shield" publicationId="06e5-8e36-e8c8-aec3" page="12" hidden="false" collective="false" import="true" type="upgrade">
@@ -1477,20 +1453,20 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         </profile>
         <profile id="3223-df1c-f8b2-2d99" name="Storm Shield" publicationId="06e5-8e36-e8c8-aec3" page="69" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
           <characteristics>
-            <characteristic name="Special" typeId="f917-8cd8-7592-47dd">An extra armour save of 4+ against shooting or close combat damage from the front facing. This save ignores armour modifiers. </characteristic>
+            <characteristic name="Special" typeId="f917-8cd8-7592-47dd">An extra armour save of 4+ against shooting or close combat damage from the front facing. This save ignores armour modifiers.</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <rules>
         <rule id="c02f-f316-644c-e680" name="Crushing Blow" publicationId="06e5-8e36-e8c8-aec3" page="12" hidden="false">
-          <description>Thunder Hammers automatically wound any unit they hit (but they still take armour saves if applicable). If this is a vehicle, then it automatically penetrate the armour. </description>
+          <description>Thunder Hammers automatically wound any unit they hit (but they still take armour saves if applicable). If this is a vehicle, then it automatically penetrate the armour.</description>
         </rule>
         <rule id="3f97-db6a-8b01-da03" name="Close Combat" publicationId="06e5-8e36-e8c8-aec3" page="40" hidden="false">
           <description>May be used in close combat</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f08d-6269-4950-3e3b" name="Plasma Blaster" hidden="false" collective="false" import="true" type="upgrade">
@@ -1499,7 +1475,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9d43-a036-5991-2470" type="notEqualTo"/>
+                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9d43-a036-5991-2470" type="notEqualTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1510,7 +1486,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         <infoLink id="1a70-57a8-1ff6-05aa" name="Plasma Blaster" hidden="false" targetId="88ae-c1c5-fb81-2dd2" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0131-5861-194b-e8dc" name="Terminator Auto-Launchers" hidden="false" collective="false" import="true" type="upgrade">
@@ -1519,7 +1495,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9d43-a036-5991-2470" type="notEqualTo"/>
+                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9d43-a036-5991-2470" type="notEqualTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1531,7 +1507,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         <infoLink id="ab92-86c6-032a-c29d" name="Terminator Auto-Launchers Frag" hidden="false" targetId="a8fb-c514-c140-7214" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="5.0"/>
+        <cost name="pts" typeId="points" value="5"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ef79-fd24-6a28-7271" name="Photon Beam Searchlight" hidden="false" collective="false" import="true" type="upgrade">
@@ -1540,7 +1516,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9d43-a036-5991-2470" type="notEqualTo"/>
+                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9d43-a036-5991-2470" type="notEqualTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1552,7 +1528,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         <infoLink id="da89-a531-9541-4a5b" name="Photon Beam Searchlight" hidden="false" targetId="e2d6-0575-c357-2018" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="20.0"/>
+        <cost name="pts" typeId="points" value="20"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a076-1d1f-a718-8cdd" name="Medi-pack" hidden="false" collective="false" import="true" type="upgrade">
@@ -1561,7 +1537,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         <infoLink id="fe0f-0532-0fb3-bbeb" name="Medi-pack" hidden="false" targetId="10c8-6b48-5803-f944" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="81b3-68bd-167d-76c0" name="Jump Pack" publicationId="06e5-8e36-e8c8-aec3" page="71" hidden="false" collective="false" import="true" type="upgrade">
@@ -1570,7 +1546,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         <infoLink id="f768-e436-4310-111a" name="Jump Pack" hidden="false" targetId="7964-fe90-6c2a-fe91" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e8ab-fe0e-b832-6b89" name="Scout Armour" hidden="false" collective="false" import="true" type="upgrade">
@@ -1578,7 +1554,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         <infoLink id="5a55-7073-bc82-1679" name="Scout Armour" hidden="false" targetId="9ce0-7098-2c19-5629" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="aac3-4788-82a3-a9ad" name="Twin Heavy Bolters" hidden="false" collective="false" import="true" type="upgrade">
@@ -1593,7 +1569,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         </infoLink>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3450-9415-d591-d15c" name="Twin Lascannons" hidden="false" collective="false" import="true" type="upgrade">
@@ -1607,7 +1583,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         <infoLink id="e34c-6f6d-4ecc-7e13" name="Twin Linked" hidden="false" targetId="1ec9-01dd-59c6-d1d5" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="507a-86d1-3d5b-a291" name="Power Fist With Built-in Storm Bolter" hidden="false" collective="false" import="true" type="upgrade">
@@ -1645,13 +1621,11 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         </rule>
         <rule id="2198-9494-e4e5-c40c" name="Sustained Fire" publicationId="2bb8-b6de-8b70-7f41" page="38" hidden="false">
           <description>The player nominates the initial target and rolls to hit exactly as normal. If the player makes the to hit roll he can roll one or more special sustained fire dice to see how many actual hits are scored. The first of these hits will be scored on the initial target but any extra hits can be allocated to other visible targets within 4&quot; of the first. Once all hits have been allocated roll to wound as normal. 
-The number of sustained fire dice a weapon can roll is indicated in its description in the Wargear book. A sustained fire weapon can always be fired using less dice than its maximum if desired.
-
-</description>
+The number of sustained fire dice a weapon can roll is indicated in its description in the Wargear book. A sustained fire weapon can always be fired using less dice than its maximum if desired.</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="dcbe-b293-f255-ab25" name="Heavy Flamer With Built-in Storm Bolter" hidden="false" collective="false" import="true" type="upgrade">
@@ -1690,22 +1664,18 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         </rule>
         <rule id="a1bf-9e8f-82d4-de58" name="Sustained Fire" publicationId="2bb8-b6de-8b70-7f41" page="38" hidden="false">
           <description>The player nominates the initial target and rolls to hit exactly as normal. If the player makes the to hit roll he can roll one or more special sustained fire dice to see how many actual hits are scored. The first of these hits will be scored on the initial target but any extra hits can be allocated to other visible targets within 4&quot; of the first. Once all hits have been allocated roll to wound as normal. 
-The number of sustained fire dice a weapon can roll is indicated in its description in the Wargear book. A sustained fire weapon can always be fired using less dice than its maximum if desired.
-
-</description>
+The number of sustained fire dice a weapon can roll is indicated in its description in the Wargear book. A sustained fire weapon can always be fired using less dice than its maximum if desired.</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7832-cfa1-9339-fb7f" name="Twin Autocannon" hidden="false" collective="false" import="true" type="upgrade">
       <rules>
         <rule id="d577-dd96-037d-29f5" name="Sustained Fire" publicationId="2bb8-b6de-8b70-7f41" page="38" hidden="false">
           <description>The player nominates the initial target and rolls to hit exactly as normal. If the player makes the to hit roll he can roll one or more special sustained fire dice to see how many actual hits are scored. The first of these hits will be scored on the initial target but any extra hits can be allocated to other visible targets within 4&quot; of the first. Once all hits have been allocated roll to wound as normal. 
-The number of sustained fire dice a weapon can roll is indicated in its description in the Wargear book. A sustained fire weapon can always be fired using less dice than its maximum if desired.
-
-</description>
+The number of sustained fire dice a weapon can roll is indicated in its description in the Wargear book. A sustained fire weapon can always be fired using less dice than its maximum if desired.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -1718,7 +1688,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         </infoLink>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0d02-16b0-d553-4889" name="Twin Missile Launchers with Super-Krak Grenades" hidden="false" collective="false" import="true" type="upgrade">
@@ -1746,7 +1716,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="0489-92d8-4232-a24e" name="Twin Linked" hidden="false" targetId="1ec9-01dd-59c6-d1d5" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="aa57-07dd-d476-081d" name="Multi-Launcher" publicationId="4590-6ba9-5482-a1fa" page="56" hidden="false" collective="false" import="true" type="upgrade">
@@ -1755,7 +1725,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="68d2-4d97-8a37-2594" name="Multi-Launcher" hidden="false" targetId="8f90-0651-9a44-1862" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="dd32-5d68-e4bc-9dff" name="Twin Linked Bolters" publicationId="06e5-8e36-e8c8-aec3" page="21" hidden="false" collective="false" import="true" type="upgrade">
@@ -1782,7 +1752,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="66a7-4acc-858f-aaf7" name="Twin Linked" hidden="false" targetId="1ec9-01dd-59c6-d1d5" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="aba7-5058-89a0-b56a" name="Razorback Turret" hidden="false" collective="false" import="true" type="upgrade">
@@ -1790,18 +1760,18 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="6948-1729-79b5-064e" name="Plasma" hidden="false" targetId="c185-8532-d008-ff65" type="rule"/>
         <infoLink id="7724-061d-b18f-9a4b" name="Twin Linked" hidden="false" targetId="1ec9-01dd-59c6-d1d5" type="rule"/>
         <infoLink id="5fef-1b76-304f-371b" name="Lascannon" hidden="false" targetId="057a-ec2a-8faf-0a63" type="profile"/>
-        <infoLink id="620d-809d-bdcf-e24f" name="Twin Plasma Guns Razorback" hidden="false" targetId="af77-7c2e-e157-6175" type="profile"/>
+        <infoLink id="620d-809d-bdcf-e24f" name="Twin Plasma Guns" hidden="false" targetId="af77-7c2e-e157-6175" type="profile"/>
       </infoLinks>
       <entryLinks>
         <entryLink id="6eed-eb18-ec30-c62a" name="Targeter" hidden="false" collective="false" import="true" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a185-9cb5-dc32-7187" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="920b-f391-8574-8460" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a185-9cb5-dc32-7187" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="920b-f391-8574-8460" type="min"/>
           </constraints>
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4b28-0dbc-f447-849b" name="Force Axe" page="Datacards" hidden="false" collective="false" import="true" type="upgrade">
@@ -1811,7 +1781,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="5ce5-ac96-0949-205a" name="Force Axe" hidden="false" targetId="f764-8d31-4672-d578" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="15ce-5ec2-efe7-e895" name="Master-Crafted Plasma Pistol" hidden="false" collective="false" import="true" type="upgrade">
@@ -1822,21 +1792,21 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="9221-67f3-a639-5ff3" name="Sustained Fire" hidden="false" targetId="0b67-c911-308c-4960" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a800-8c47-b465-29bc" name="ServoCapable" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="56e9-7608-b945-ac81" name="Psyker" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f1d5-9c0b-dcc8-1aff" type="max"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8498-06f6-97a7-52da" type="min"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f1d5-9c0b-dcc8-1aff" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8498-06f6-97a7-52da" type="min"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2311-7072-654a-5c8f" name="Servo Arm" hidden="false" collective="false" import="true" type="upgrade">
@@ -1844,7 +1814,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="69f1-ca54-59a0-807f" name="Servo-arm" hidden="false" targetId="3f09-3ad5-c341-d4cd" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d8a5-b1c1-bcac-7a86" name="Hood of Hellfire" publicationId="4590-6ba9-5482-a1fa" page="48" hidden="false" collective="false" import="true" type="upgrade">
@@ -1852,7 +1822,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="71b7-6093-e985-92c8" name="Hood of Hellfire" hidden="false" targetId="e1c5-b6d0-61e6-c366" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="25.0"/>
+        <cost name="pts" typeId="points" value="25"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="fe0c-7658-0a38-e32c" name="Aegis Suit" hidden="false" collective="false" import="true" type="upgrade">
@@ -1860,7 +1830,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="f7b2-9d9e-4ef5-9f15" name="Aegis Suit" hidden="false" targetId="63d2-73dc-6207-df49" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a75e-218b-dbb7-494f" name="Armour-Piercing Ammo" hidden="false" collective="false" import="true" type="upgrade">
@@ -1868,7 +1838,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="80e7-ebba-8426-a5a7" name="Armour-Piercing Ammo" hidden="false" targetId="4467-08bd-0856-cd5d" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d306-9f85-34cf-ae58" name="Auxiliary Grenade Launcher" hidden="false" collective="false" import="true" type="upgrade">
@@ -1882,14 +1852,14 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ac5-935d-8ecf-59c0" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ac5-935d-8ecf-59c0" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="05dd-530c-9010-758a" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="05dd-530c-9010-758a" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="73dc-bb33-206c-496b" name="Krak Grenade" hidden="false" collective="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
@@ -1898,19 +1868,19 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cc7b-eac9-7cc5-a156" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cc7b-eac9-7cc5-a156" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="434e-7ad6-ed05-cf5c" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="434e-7ad6-ed05-cf5c" type="max"/>
           </constraints>
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="35a2-e523-f218-fcf7" name="Bionic Eye" hidden="false" collective="false" import="true" type="upgrade">
@@ -1918,7 +1888,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="eab5-69ab-f433-fd4a" name="Bionic Eye" hidden="false" targetId="539e-a0e3-7486-e85d" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2e29-4e82-fe5c-6f8d" name="Bionic Leg" hidden="false" collective="false" import="true" type="upgrade">
@@ -1926,7 +1896,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="a580-2093-7402-7d92" name="Bionic Leg" hidden="false" targetId="1063-0c71-9090-4b15" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c9b5-3795-6d7c-eb3e" name="Bionic Arm" hidden="false" collective="false" import="true" type="upgrade">
@@ -1934,7 +1904,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="881c-0604-a01d-4a33" name="Bionic Arm" hidden="false" targetId="05cf-2782-f21b-2f93" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1666-282c-28b0-2e0b" name="Psychic Hood" hidden="false" collective="false" import="true" type="upgrade">
@@ -1942,7 +1912,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="f2f6-9d56-0356-6f9f" name="Psychic Hood" hidden="false" targetId="eb87-7ef1-ea5e-35f3" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bb5e-09f7-72d9-a377" name="Conversion Field" hidden="false" collective="false" import="true" type="upgrade">
@@ -1950,7 +1920,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="176c-234e-6795-978a" name="Conversion Field" hidden="false" targetId="ebcb-6a49-4666-8b68" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1b9c-07a0-11db-984f" name="Frenzon" hidden="false" collective="false" import="true" type="upgrade">
@@ -1958,7 +1928,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="a9ba-e81a-df85-c46a" name="Frenzon" hidden="false" targetId="4f65-8729-a2d0-c6b6" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="119a-0c1b-9800-72ca" name="Teleport Jammer" hidden="false" collective="false" import="true" type="upgrade">
@@ -1966,17 +1936,17 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="768e-99ee-accb-a936" name="Teleport Jammer" hidden="false" targetId="dbb0-d495-5c5b-6249" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0316-f054-534a-d96b" name="Show Wargear Cards" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3314-8c50-15ff-30bc" name="Digi-Lasers" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
-        <cost name="pts" typeId="points" value="6.0"/>
+        <cost name="pts" typeId="points" value="6"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b00e-bbb9-e4a9-af42" name="Combi-Melta" hidden="false" collective="false" import="true" type="upgrade">
@@ -1986,7 +1956,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="2891-a2fc-5483-6e0e" name="Meltagun" hidden="false" targetId="61cb-f45b-e205-b562" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b2f1-53c8-cca8-a46d" name="Combi-Plasma" hidden="false" collective="false" import="true" type="upgrade">
@@ -1998,7 +1968,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="c64d-e498-41fc-aed6" name="Sustained Fire" hidden="false" targetId="0b67-c911-308c-4960" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6358-8ace-fcba-6056" name="Combi-Flamer" hidden="false" collective="false" import="true" type="upgrade">
@@ -2009,7 +1979,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="bb1f-feb1-aa6a-3c57" name="Combi-Weapon" hidden="false" targetId="42ec-de15-9b65-6d3f" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="11c2-dae7-3e31-e10a" name="Combi-Bolter" hidden="false" collective="false" import="true" type="upgrade">
@@ -2023,7 +1993,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="e32a-0d42-a6bc-6170" name="Combi-Weapon" hidden="false" targetId="42ec-de15-9b65-6d3f" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="48c5-f522-8ba5-94e6" name="Refractor Field" hidden="false" collective="false" import="true" type="upgrade">
@@ -2031,7 +2001,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="0ae5-538b-ab1c-e052" name="Refractor Field" hidden="false" targetId="147b-b713-b40b-c1a4" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="88df-e65f-8f11-a7d4" name="Force Sword" hidden="false" collective="false" import="true" type="upgrade">
@@ -2042,7 +2012,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="2ed9-acf7-4298-b646" name="Close Combat" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1356-9b17-42ce-17db" name="Force Rod" hidden="false" collective="false" import="true" type="upgrade">
@@ -2051,7 +2021,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="5030-7a8b-bdc7-91cf" name="Force Rod" hidden="false" targetId="cf9d-bbca-5892-c2d0" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6e11-978c-f2f0-8477" name="Laspistol" hidden="false" collective="false" import="true" type="upgrade">
@@ -2060,7 +2030,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="0335-e142-4178-a464" name="Laspistol" hidden="false" targetId="97e4-8f7b-c22e-dd98" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="dec7-82c8-a97f-f2d1" name="Needle Pistol" publicationId="2bb8-b6de-8b70-7f41" page="17" hidden="false" collective="false" import="true" type="upgrade">
@@ -2070,7 +2040,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="4610-3817-ba6c-96f6" name="Toxin" hidden="false" targetId="2c66-3235-95b7-0250" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a1e7-fa16-a4fd-1cde" name="Autopistol" hidden="false" collective="false" import="true" type="upgrade">
@@ -2079,7 +2049,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="4cc2-c1ec-9856-8815" name="Autopistol" hidden="false" targetId="74fc-e6c6-4db6-9ce9" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3ca8-39e7-2673-786f" name="Grenade Launcher" publicationId="06e5-8e36-e8c8-aec3" page="25" hidden="false" collective="false" import="true" type="upgrade">
@@ -2089,19 +2059,19 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
       <entryLinks>
         <entryLink id="0024-cd69-ebe5-f482" name="Krak Grenade" hidden="false" collective="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d4d9-fe8a-2435-fdbd" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a34-6a36-5d8f-9b99" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d4d9-fe8a-2435-fdbd" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a34-6a36-5d8f-9b99" type="min"/>
           </constraints>
         </entryLink>
         <entryLink id="8f03-9f6a-1c19-4254" name="Frag Grenade" hidden="false" collective="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d7db-ab71-1ddd-a0f9" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9dd7-5ddb-681d-5855" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d7db-ab71-1ddd-a0f9" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9dd7-5ddb-681d-5855" type="min"/>
           </constraints>
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0568-5866-b015-7be9" name="Lasgun" hidden="false" collective="false" import="true" type="upgrade">
@@ -2109,7 +2079,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="a126-9976-8c65-5f25" name="Lasgun" hidden="false" targetId="0553-5fdc-310a-8d06" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="73c7-e55f-280c-5a3d" name="Flak Armour" hidden="false" collective="false" import="true" type="upgrade">
@@ -2117,7 +2087,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="b0b7-9487-029a-e445" name="Flak Armour" hidden="false" targetId="b29a-3632-b822-1060" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="38a3-999a-3611-033a" name="Carapace Armour" hidden="false" collective="false" import="true" type="upgrade">
@@ -2125,7 +2095,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="9fba-c18f-6a60-2bfc" name="Carapace Armour" hidden="false" targetId="6223-5a69-d3de-4d01" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9310-3f4c-a4f1-47f2" name="Battle Standard" hidden="false" collective="false" import="true" type="upgrade">
@@ -2133,7 +2103,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="e3f5-1157-df14-d90a" name="Battle Standard" hidden="false" targetId="7c48-9994-b0f9-a83e" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e23e-a06a-39b5-027f" name="Multi-laser" hidden="false" collective="false" import="true" type="upgrade">
@@ -2142,7 +2112,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="827c-c988-ab67-0a5e" name="Multi-laser" hidden="false" targetId="c46d-3e00-6bd2-0284" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b0fa-8535-b915-baf4" name="Hunting Lance" hidden="false" collective="false" import="true" type="upgrade">
@@ -2151,7 +2121,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="02e6-748b-931d-a8f6" name="Hunting Lance" hidden="false" targetId="e76c-a14d-4b16-ca56" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="43b4-5745-9efd-c2e0" name="Mesh Armour" hidden="false" collective="false" import="true" type="upgrade">
@@ -2159,7 +2129,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="5738-16ca-c887-1792" name="Mesh Armour" hidden="false" targetId="7b11-8353-49af-a7f0" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2c88-b43f-7ee7-17dd" name="Handbow" hidden="false" collective="false" import="true" type="upgrade">
@@ -2168,7 +2138,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="05ca-9e0b-1f21-b8e9" name="Handbow" hidden="false" targetId="691c-68d4-5ff2-5610" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1e13-7d03-165a-7616" name="Heavy Stubber" hidden="false" collective="false" import="true" type="upgrade">
@@ -2177,7 +2147,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="efaa-06d9-768c-310b" name="Heavy Stubber" hidden="false" targetId="8e2f-aa57-ec48-3c54" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d0a4-3144-7085-3fcb" name="Primitive Shield" hidden="false" collective="false" import="true" type="upgrade">
@@ -2185,7 +2155,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="f48a-37af-6cb5-6f81" name="Primitive Shield" hidden="false" targetId="1708-41de-e4ed-0ca0" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f68e-87b2-f6be-d4ba" name="Crossbow" hidden="false" collective="false" import="true" type="upgrade">
@@ -2194,7 +2164,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="00d0-384b-e94a-396f" name="Crossbow" hidden="false" targetId="7fc8-c52a-a731-cefe" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="defc-35dd-7368-c255" name="Bow" hidden="false" collective="false" import="true" type="upgrade">
@@ -2203,7 +2173,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="965c-e69a-403a-3a58" name="Bow" hidden="false" targetId="6753-d804-4aa6-fe3f" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0637-93ce-90ec-d7d1" name="Musket" hidden="false" collective="false" import="true" type="upgrade">
@@ -2211,7 +2181,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="c0a2-2a43-8732-017f" name="Musket" hidden="false" targetId="bc5c-75b9-5b47-82df" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2c9e-4f69-d073-1353" name="Close Combat" hidden="false" collective="false" import="true" type="upgrade">
@@ -2220,7 +2190,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="1977-34a6-7827-9571" name="Stub Gun" hidden="false" targetId="ac7f-7f5d-c133-56b6" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="213e-1248-4b5c-80c8" name="Web Pistol" hidden="false" collective="false" import="true" type="upgrade">
@@ -2230,7 +2200,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="fc9a-6e15-337c-f292" name="Close Combat" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="81d8-699b-fb18-f3c8" name="Stub Gun" hidden="false" collective="false" import="true" type="upgrade">
@@ -2239,7 +2209,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="aa58-028f-2e97-83b0" name="Stub Gun" hidden="false" targetId="ac7f-7f5d-c133-56b6" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6283-c9e0-9d28-5fda" name="Purity Seal" hidden="false" collective="false" import="true" type="upgrade">
@@ -2247,7 +2217,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="adbd-0853-c3ac-d2f6" name="Purity Seal" hidden="false" targetId="cc2d-f975-533e-48f3" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="8.0"/>
+        <cost name="pts" typeId="points" value="8"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f9ef-bd5c-8bb9-4747" name="Scanner" hidden="false" collective="false" import="true" type="upgrade">
@@ -2255,22 +2225,22 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="1a80-6d7a-9b90-0d61" name="Scanner" hidden="false" targetId="77e9-5805-184b-a42e" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b6ca-03b2-9301-c1c9" name="Army Commander" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="cea5-73de-8004-f126" type="max"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="34f4-a5c3-f9d2-ed7a" type="min"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d7ca-e77a-06d8-a393" type="max"/>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="cea5-73de-8004-f126" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="34f4-a5c3-f9d2-ed7a" type="min"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d7ca-e77a-06d8-a393" type="max"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2a8c-f9a4-dd89-826d" name="Blunderbuss" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7909-b24e-fe25-33b3" name="Primitive Armour" hidden="false" collective="false" import="true" type="upgrade">
@@ -2278,7 +2248,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="6b7a-1006-f1cc-3009" name="Primitive Armour" hidden="false" targetId="11ec-f3ce-c024-7eea" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="31de-fa19-2f99-4812" name="Ripper gun" hidden="false" collective="false" import="true" type="upgrade">
@@ -2288,7 +2258,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="23d8-784e-2ce2-09e9" name="Sustained Fire" hidden="false" targetId="0b67-c911-308c-4960" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4635-9876-cb56-4aab" name="Supercharged Engine" publicationId="6d24-ac0a-2721-b4e2" hidden="false" collective="false" import="true" type="upgrade">
@@ -2296,7 +2266,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="9c2f-28d2-1db2-3ee1" name="Supercharged Engine" hidden="false" targetId="3512-220e-25f7-7253" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="26e2-4a44-2602-a3fd" name="Ablative Armour" publicationId="6d24-ac0a-2721-b4e2" hidden="false" collective="false" import="true" type="upgrade">
@@ -2304,7 +2274,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="2f2d-53b7-8cd5-21ea" name="Ablative Armour" hidden="false" targetId="0d4f-5ae0-6ceb-6867" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f74f-9e64-38c1-9503" name="Ceramite Armour" hidden="false" collective="false" import="true" type="upgrade">
@@ -2312,7 +2282,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="6478-4aa7-4f90-cdb5" name="Ceramite Armour" hidden="false" targetId="93b9-4ea2-7969-e3e6" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f927-24ed-15ca-0c96" name="Electro-Hull" hidden="false" collective="false" import="true" type="upgrade">
@@ -2320,7 +2290,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="55af-b5a2-413d-8d60" name="Electro-Hull" hidden="false" targetId="4406-56c4-c326-53be" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="47cb-e484-5d6a-3911" name="Null-Shield" hidden="false" collective="false" import="true" type="upgrade">
@@ -2328,7 +2298,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="85db-809a-9895-55e7" name="Null-Shield" hidden="false" targetId="de05-6890-7c48-25e3" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="fa44-ccaf-6c06-bed4" name="Reinforced Armour" hidden="false" collective="false" import="true" type="upgrade">
@@ -2336,7 +2306,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="7211-6b72-656c-024f" name="Reinforced Armour" hidden="false" targetId="f1df-defe-0409-ed9e" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="64e7-1568-72da-bd59" name="Searchlight" hidden="false" collective="false" import="true" type="upgrade">
@@ -2344,7 +2314,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="8c8e-b71b-f96e-9f6c" name="Searchlight" hidden="false" targetId="1e73-66f2-ada3-5f4a" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2976-4443-5709-a1a6" name="Vortex Detonator" hidden="false" collective="false" import="true" type="upgrade">
@@ -2352,7 +2322,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="415b-d8d2-e22f-1952" name="Vortex Detonator" hidden="false" targetId="9ceb-7407-a2ee-0c34" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="50.0"/>
+        <cost name="pts" typeId="points" value="50"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="22d8-8c7c-b04b-9156" name="Destroyer" hidden="false" collective="false" import="true" type="upgrade">
@@ -2360,7 +2330,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="9977-aa56-b5e4-575c" name="Destroyer" hidden="false" targetId="772b-8fb7-1adc-199d" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="21e9-f397-7329-a32f" name="Coruscating Warp Flame" hidden="false" collective="false" import="true" type="upgrade">
@@ -2368,7 +2338,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="a1fe-8d70-a734-969d" name="Coruscating Warp Flame" hidden="false" targetId="264b-3eb0-d088-f769" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4d5e-38d7-72a7-c462" name="Shuriken Pistol" hidden="false" collective="false" import="true" type="upgrade">
@@ -2377,7 +2347,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="a9c5-3094-935c-88df" name="Shuriken Pistol" hidden="false" targetId="121e-186d-7d24-89a5" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="76e3-9fb7-a0b0-91cd" name="Shuriken Catapult" hidden="false" collective="false" import="true" type="upgrade">
@@ -2386,7 +2356,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="a610-f846-4026-4d7a" name="Sustained Fire" hidden="false" targetId="0b67-c911-308c-4960" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9051-aabb-b632-2aa7" name="Displacer Field" hidden="false" collective="false" import="true" type="upgrade">
@@ -2394,7 +2364,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink id="7466-e577-0b39-daec" name="Displacer Field" hidden="false" targetId="0539-adb2-7abc-6b2e" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="dafc-31f6-2183-39a3" name="Mole Mortar" hidden="false" collective="false" import="true" type="upgrade">
@@ -2420,7 +2390,7 @@ Accuracy table and damage table found as well as additional units found in Warge
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f84b-acbb-d911-a36b" name="Thudd Gun" hidden="false" collective="false" import="true" type="upgrade">
@@ -2448,7 +2418,7 @@ See Wargear Rulebook Pg. 54 for full details on firing the weapon</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1b28-92ed-1800-9958" name="Seeking Ammo" hidden="false" collective="false" import="true" type="upgrade">
@@ -2463,7 +2433,7 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6308-5cb4-3afb-1b39" name="Vortex Grenade" hidden="false" collective="false" import="true" type="upgrade">
@@ -2484,12 +2454,11 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
 
 1-2: Vortex disappears
 3-4: Vortex remains in play
-5-6: Vortex moves D6&quot; in a random direction determined with a scatter dice
-</description>
+5-6: Vortex moves D6&quot; in a random direction determined with a scatter dice</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5c5a-5864-5f50-d4e0" name="Warp Jump" hidden="false" collective="false" import="true" type="upgrade">
@@ -2501,7 +2470,7 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0108-499f-c0b5-f17c" name="Virus Grenade" hidden="false" collective="false" import="true" type="upgrade">
@@ -2522,7 +2491,7 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c1c1-24d3-9d15-a132" name="Toxin Grenade" hidden="false" collective="false" import="true" type="upgrade">
@@ -2543,7 +2512,7 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2ed2-cee9-c66b-61b9" name="Stasis Grenade" hidden="false" collective="false" import="true" type="upgrade">
@@ -2567,7 +2536,7 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ff93-6c11-25e9-72dc" name="Power Field" hidden="false" collective="false" import="true" type="upgrade">
@@ -2580,7 +2549,7 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a305-80f8-973b-90d4" name="Master-Crafted Laspistol" hidden="false" collective="false" import="true" type="upgrade">
@@ -2604,7 +2573,7 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
         <infoLink id="e3df-10d3-aa4a-36d7" name="Sustained Fire" hidden="false" targetId="0b67-c911-308c-4960" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9395-c085-9b29-2302" name="Immune" hidden="false" collective="false" import="true" type="upgrade">
@@ -2616,7 +2585,7 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0ad2-92fa-5b56-644e" name="Haywire Grenade" hidden="false" collective="false" import="true" type="upgrade">
@@ -2633,11 +2602,11 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
       </profiles>
       <rules>
         <rule id="ceb0-4a8c-d572-f812" name="Haywire Grenade" hidden="false">
-          <description>Only affects vehicles, dreadnoughts, robots, Wraithguard, and Terminators. If any of these models is hit with a Haywire Grenade, their armour is penetrated automatically. Roll to hit locations covered by the template as normal, and then roll on the appropriate damage table with a –1 modifier. Vehicle crewmen or Terminators hit by this grenade suffer a S3 hit causing 1 wound with no armour save possible. </description>
+          <description>Only affects vehicles, dreadnoughts, robots, Wraithguard, and Terminators. If any of these models is hit with a Haywire Grenade, their armour is penetrated automatically. Roll to hit locations covered by the template as normal, and then roll on the appropriate damage table with a –1 modifier. Vehicle crewmen or Terminators hit by this grenade suffer a S3 hit causing 1 wound with no armour save possible.</description>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7299-aa89-aeeb-37a1" name="Graviton Gun" hidden="false" collective="false" import="true" type="upgrade">
@@ -2662,7 +2631,7 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4490-0f7f-8f88-8729" name="Combat Drugs" hidden="false" collective="false" import="true" type="upgrade">
@@ -2674,7 +2643,7 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d895-75cf-96df-ca33" name="Cameleoline" hidden="false" collective="false" import="true" type="upgrade">
@@ -2686,7 +2655,7 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="592b-ad47-6290-0c1f" name="Suppression Shield" hidden="false" collective="false" import="true" type="upgrade">
@@ -2694,7 +2663,58 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
         <infoLink id="0e58-1d93-fbc8-3cab" name="Suppression Shield" hidden="false" targetId="b4b5-4868-17d8-d563" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4bdc-4529-5bda-a508" name="Flak Armour" hidden="false" collective="true" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="b5eb-17c5-59d2-d1e8" name="Flak Armour" hidden="false" targetId="b29a-3632-b822-1060" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6d94-aacf-91cb-a8a2" name="Lasgun" hidden="false" collective="true" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="43a7-1352-0130-a1c8" name="Lasgun" hidden="false" targetId="0553-5fdc-310a-8d06" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4f18-8086-0a3b-74ed" name="Laspistol" hidden="false" collective="true" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="5662-70d5-9913-b2a6" name="Close Combat" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
+        <infoLink id="7e98-7171-1ef0-7eac" name="Laspistol" hidden="false" targetId="97e4-8f7b-c22e-dd98" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c0ea-1829-edfe-c42c" name="Frag Grenade" publicationId="06e5-8e36-e8c8-aec3" page="57" hidden="false" collective="true" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="de99-4719-cf0d-5f41" name="Frag Grenade" hidden="false" targetId="122b-b17a-4e87-5994" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b779-5c27-56d2-14b9" name="Ripper gun" hidden="false" collective="true" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="f9d1-cf23-25c3-92ee" name="Ripper Gun" hidden="false" targetId="fe3b-e9df-4600-c5fc" type="rule"/>
+        <infoLink id="e0d5-0231-ef27-8385" name="Ripper Gun" hidden="false" targetId="c273-63b3-4b80-6b6c" type="profile"/>
+        <infoLink id="57f5-dcfc-571d-31aa" name="Sustained Fire" hidden="false" targetId="0b67-c911-308c-4960" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5dd8-506b-8721-eb7d" name="Mesh Armour" hidden="false" collective="true" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink id="3c13-5ab5-86f3-d8a5" name="Mesh Armour" hidden="false" targetId="7b11-8353-49af-a7f0" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -2704,57 +2724,57 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
       <selectionEntries>
         <selectionEntry id="7e9e-c9c4-1f4f-2534" name="Destory Mind" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c990-67e9-beef-6783" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c990-67e9-beef-6783" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="cdaf-940b-1be3-f9a6" name="Destroy Mind" hidden="false" targetId="8c79-de3f-bd5c-1dd7" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7a8d-9566-82b9-65bb" name="Hellfire" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0e21-ecee-50b9-604f" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0e21-ecee-50b9-604f" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="f3b9-4ec0-5940-23fe" name="Hellfire" hidden="false" targetId="c618-8992-f70a-38ce" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7c8e-0a56-0b07-da85" name="Psychic Shield" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c1a-931e-db36-1ad8" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c1a-931e-db36-1ad8" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="12f4-98d3-a2a7-fff1" name="Psychic Shield" hidden="false" targetId="2534-d7ad-5692-4e16" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="a40e-c5ef-bdc9-9c9e" name="Purge Psyker" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1dd7-4e7c-0b32-77c0" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1dd7-4e7c-0b32-77c0" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="10e2-e1fd-b50b-c5b8" name="Purge Psyker" hidden="false" targetId="1c63-d427-1cfa-b51e" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3625-c3c4-4f46-6539" name="Teleport" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6408-3789-2223-120b" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6408-3789-2223-120b" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="40c9-d973-b0a8-4dbd" name="Teleport" hidden="false" targetId="7a7d-d79c-bce4-069e" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2763,10 +2783,10 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
       <entryLinks>
         <entryLink id="bf7e-777a-3d82-611f" name="Terminator Auto-Launchers" hidden="false" collective="false" import="true" targetId="0131-5861-194b-e8dc" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="094e-08b9-f902-3def" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="094e-08b9-f902-3def" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="5.0"/>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
         </entryLink>
         <entryLink id="dd73-9248-930b-6800" name="Plasma Blaster" hidden="false" collective="false" import="true" targetId="f08d-6269-4950-3e3b" type="selectionEntry">
@@ -2775,26 +2795,26 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9d43-a036-5991-2470" type="notEqualTo"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9d43-a036-5991-2470" type="notEqualTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c0f7-4175-4bd2-7c79" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b356-98c9-8518-1508" type="max"/>
+            <constraint field="selections" scope="roster" value="2" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c0f7-4175-4bd2-7c79" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b356-98c9-8518-1508" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="15.0"/>
+            <cost name="pts" typeId="points" value="15"/>
           </costs>
         </entryLink>
         <entryLink id="507f-3205-c2a0-c549" name="Photon Beam Searchlight" hidden="false" collective="false" import="true" targetId="ef79-fd24-6a28-7271" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="74af-06e3-b8b5-fa32" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="74af-06e3-b8b5-fa32" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="20.0"/>
+            <cost name="pts" typeId="points" value="20"/>
           </costs>
         </entryLink>
         <entryLink id="a3d8-4525-561e-2c55" name="Hood of Hellfire" hidden="false" collective="false" import="true" targetId="d8a5-b1c1-bcac-7a86" type="selectionEntry">
@@ -2803,19 +2823,19 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="56e9-7608-b945-ac81" type="notEqualTo"/>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1666-282c-28b0-2e0b" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="56e9-7608-b945-ac81" type="notEqualTo"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1666-282c-28b0-2e0b" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c352-e8f9-4aea-9daf" type="max"/>
-            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1241-3693-f951-da67" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c352-e8f9-4aea-9daf" type="max"/>
+            <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1241-3693-f951-da67" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="25.0"/>
+            <cost name="pts" typeId="points" value="25"/>
           </costs>
         </entryLink>
       </entryLinks>
@@ -2824,86 +2844,86 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
       <entryLinks>
         <entryLink id="b4b5-aee4-bf88-98b8" name="Master-Crafted Bolt Pistol" hidden="false" collective="false" import="true" targetId="04a2-74da-3458-52d1" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c0b0-6907-5e05-b6fb" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6eff-c4ad-ff92-27fc" type="max"/>
+            <constraint field="selections" scope="roster" value="4" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c0b0-6907-5e05-b6fb" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6eff-c4ad-ff92-27fc" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="10.0"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </entryLink>
         <entryLink id="ab94-a654-02b1-01b8" name="Rad Grenade" hidden="false" collective="false" import="true" targetId="8dbb-bf33-3ef5-09f5" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7e37-d9f2-efc9-80de" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca7e-453f-87f9-cdbd" type="max"/>
+            <constraint field="selections" scope="roster" value="2" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7e37-d9f2-efc9-80de" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca7e-453f-87f9-cdbd" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="25.0"/>
+            <cost name="pts" typeId="points" value="25"/>
           </costs>
         </entryLink>
         <entryLink id="d359-30c8-d92c-69c0" name="Master-Crafted Plasma Pistol" hidden="false" collective="false" import="true" targetId="15ce-5ec2-efe7-e895" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="30f1-30f2-ace9-2a57" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c908-c6c2-4654-612a" type="max"/>
+            <constraint field="selections" scope="roster" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="30f1-30f2-ace9-2a57" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c908-c6c2-4654-612a" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="15.0"/>
+            <cost name="pts" typeId="points" value="15"/>
           </costs>
         </entryLink>
         <entryLink id="6c7b-dbe1-a38c-c354" name="Aegis Suit" hidden="false" collective="false" import="true" targetId="fe0c-7658-0a38-e32c" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f579-aad5-cf6d-779e" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5698-a8d8-7e57-5c53" type="max"/>
+            <constraint field="selections" scope="roster" value="2" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f579-aad5-cf6d-779e" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5698-a8d8-7e57-5c53" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="18.0"/>
+            <cost name="pts" typeId="points" value="18"/>
           </costs>
         </entryLink>
         <entryLink id="2f97-3104-c0f7-c62a" name="Armour-Piercing Ammo" hidden="false" collective="false" import="true" targetId="a75e-218b-dbb7-494f" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="daeb-d970-f687-0223" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="daeb-d970-f687-0223" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="5.0"/>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
         </entryLink>
         <entryLink id="2955-728d-cc7f-7431" name="Auxiliary Grenade Launcher" hidden="false" collective="false" import="true" targetId="d306-9f85-34cf-ae58" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba09-3c0f-d7ee-6482" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba09-3c0f-d7ee-6482" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="8.0"/>
+            <cost name="pts" typeId="points" value="8"/>
           </costs>
         </entryLink>
         <entryLink id="3e56-0211-9c0d-a725" name="Bionic Arm" hidden="false" collective="false" import="true" targetId="c9b5-3795-6d7c-eb3e" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed54-3858-ec29-85bc" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed54-3858-ec29-85bc" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="5.0"/>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
         </entryLink>
         <entryLink id="7a1f-64f8-f5e9-2e7f" name="Bionic Eye" hidden="false" collective="false" import="true" targetId="35a2-e523-f218-fcf7" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4aa9-4fad-7fb5-a0b2" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4aa9-4fad-7fb5-a0b2" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="5.0"/>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
         </entryLink>
         <entryLink id="d89d-4a28-cf76-45d5" name="Bionic Leg" hidden="false" collective="false" import="true" targetId="2e29-4e82-fe5c-6f8d" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="39cf-e715-9b0d-b56b" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="39cf-e715-9b0d-b56b" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="3.0"/>
+            <cost name="pts" typeId="points" value="3"/>
           </costs>
         </entryLink>
         <entryLink id="4880-2ca3-5beb-0c3f" name="Medi-pack" hidden="false" collective="false" import="true" targetId="a076-1d1f-a718-8cdd" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba13-f5b0-a36f-abbf" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba13-f5b0-a36f-abbf" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="10.0"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </entryLink>
         <entryLink id="7fd5-89b9-1af5-bd4e" name="Psychic Hood" hidden="false" collective="false" import="true" targetId="1666-282c-28b0-2e0b" type="selectionEntry">
@@ -2912,77 +2932,77 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="56e9-7608-b945-ac81" type="notEqualTo"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="56e9-7608-b945-ac81" type="notEqualTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c6b-608a-472b-3f82" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b94e-3a7d-9260-004c" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0047-f4b5-a3b4-f6d1" type="max"/>
+            <constraint field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c6b-608a-472b-3f82" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b94e-3a7d-9260-004c" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0047-f4b5-a3b4-f6d1" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="25.0"/>
+            <cost name="pts" typeId="points" value="25"/>
           </costs>
         </entryLink>
         <entryLink id="3cfa-95b7-5157-ff7d" name="Jump Pack" hidden="false" collective="false" import="true" targetId="81b3-68bd-167d-76c0" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a236-faba-f1e6-64aa" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a236-faba-f1e6-64aa" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="10.0"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </entryLink>
         <entryLink id="1c44-bab9-c29d-0213" name="Conversion Field" hidden="false" collective="false" import="true" targetId="bb5e-09f7-72d9-a377" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0115-7e20-0344-68c0" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ea9c-b5fa-fbcf-8a0b" type="max"/>
+            <constraint field="selections" scope="roster" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0115-7e20-0344-68c0" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ea9c-b5fa-fbcf-8a0b" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="10.0"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </entryLink>
         <entryLink id="df2e-b9c9-d719-5a9b" name="Frenzon" hidden="false" collective="false" import="true" targetId="1b9c-07a0-11db-984f" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1eab-27c4-9028-f363" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1eab-27c4-9028-f363" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="5.0"/>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
         </entryLink>
         <entryLink id="3dc1-1754-3fa3-8827" name="Targeter" hidden="false" collective="false" import="true" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f5d0-64f7-378f-062d" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f5d0-64f7-378f-062d" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="2.0"/>
+            <cost name="pts" typeId="points" value="2"/>
           </costs>
         </entryLink>
         <entryLink id="98a3-5b1a-5ae0-6de6" name="Teleport Jammer" hidden="false" collective="false" import="true" targetId="119a-0c1b-9800-72ca" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f77d-78ac-7192-1912" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="abdc-330e-d628-8dcf" type="max"/>
+            <constraint field="selections" scope="roster" value="2" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f77d-78ac-7192-1912" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="abdc-330e-d628-8dcf" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="20.0"/>
+            <cost name="pts" typeId="points" value="20"/>
           </costs>
         </entryLink>
         <entryLink id="0c45-8701-7fd1-7157" name="Digi-Lasers" hidden="false" collective="false" import="true" targetId="3314-8c50-15ff-30bc" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f1f9-f22b-5132-ef7c" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f1f9-f22b-5132-ef7c" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="6.0"/>
+            <cost name="pts" typeId="points" value="6"/>
           </costs>
         </entryLink>
         <entryLink id="18ed-594c-8167-2fd3" name="Refractor Field" hidden="false" collective="false" import="true" targetId="48c5-f522-8ba5-94e6" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3023-0ad9-7489-0208" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3023-0ad9-7489-0208" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="5.0"/>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
         </entryLink>
         <entryLink id="948d-6b7a-170c-cedd" name="Force Sword" hidden="false" collective="false" import="true" targetId="88df-e65f-8f11-a7d4" type="selectionEntry">
@@ -2991,17 +3011,17 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="56e9-7608-b945-ac81" type="notEqualTo"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="56e9-7608-b945-ac81" type="notEqualTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="27ba-3266-75d5-a282" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="27ba-3266-75d5-a282" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="10.0"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </entryLink>
         <entryLink id="c4c5-e0b6-25ba-da9d" name="Force Rod" hidden="false" collective="false" import="true" targetId="1356-9b17-42ce-17db" type="selectionEntry">
@@ -3010,18 +3030,18 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="56e9-7608-b945-ac81" type="notEqualTo"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="56e9-7608-b945-ac81" type="notEqualTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b2e5-ea53-5638-bcda" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fcc3-ee33-e25a-837e" type="max"/>
+            <constraint field="selections" scope="roster" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b2e5-ea53-5638-bcda" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fcc3-ee33-e25a-837e" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="15.0"/>
+            <cost name="pts" typeId="points" value="15"/>
           </costs>
         </entryLink>
         <entryLink id="c3ef-5306-94d9-49ec" name="Force Axe" hidden="false" collective="false" import="true" targetId="4b28-0dbc-f447-849b" type="selectionEntry">
@@ -3030,138 +3050,138 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="56e9-7608-b945-ac81" type="notEqualTo"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="56e9-7608-b945-ac81" type="notEqualTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f1a3-0a1d-20e7-25eb" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f1a3-0a1d-20e7-25eb" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="10.0"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </entryLink>
         <entryLink id="d240-2d94-5f3d-f12a" name="Scanner" hidden="false" collective="false" import="true" targetId="f9ef-bd5c-8bb9-4747" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf47-58dc-ac38-388d" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf47-58dc-ac38-388d" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="1.0"/>
+            <cost name="pts" typeId="points" value="1"/>
           </costs>
         </entryLink>
         <entryLink id="ab51-62ee-72eb-11a1" name="Seeking Ammo" hidden="false" collective="false" import="true" targetId="1b28-92ed-1800-9958" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a42-d8c4-bb46-bd60" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a42-d8c4-bb46-bd60" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="5.0"/>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
         </entryLink>
         <entryLink id="7c91-c4ca-8504-ae0f" name="Vortex Grenade" hidden="false" collective="false" import="true" targetId="6308-5cb4-3afb-1b39" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ae1-7cbe-35a2-1bcd" type="max"/>
-            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="44a9-1419-6504-72d0" type="max"/>
+            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ae1-7cbe-35a2-1bcd" type="max"/>
+            <constraint field="selections" scope="roster" value="2" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="44a9-1419-6504-72d0" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="50.0"/>
+            <cost name="pts" typeId="points" value="50"/>
           </costs>
         </entryLink>
         <entryLink id="2ca2-12f1-baca-9f75" name="Warp Jump" hidden="false" collective="false" import="true" targetId="5c5a-5864-5f50-d4e0" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="94be-7299-c93d-dbf1" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c04-b43a-e54a-6864" type="max"/>
+            <constraint field="selections" scope="roster" value="2" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="94be-7299-c93d-dbf1" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c04-b43a-e54a-6864" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="30.0"/>
+            <cost name="pts" typeId="points" value="30"/>
           </costs>
         </entryLink>
         <entryLink id="feff-1e79-768d-ea23" name="Virus Grenade" hidden="false" collective="false" import="true" targetId="0108-499f-c0b5-f17c" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c32e-cabd-ac8c-c057" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f93-fb60-ebaf-73f2" type="max"/>
+            <constraint field="selections" scope="roster" value="2" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c32e-cabd-ac8c-c057" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f93-fb60-ebaf-73f2" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="50.0"/>
+            <cost name="pts" typeId="points" value="50"/>
           </costs>
         </entryLink>
         <entryLink id="9339-9809-5c9d-f8e3" name="Toxin Grenade" hidden="false" collective="false" import="true" targetId="c1c1-24d3-9d15-a132" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c6a4-d22b-4e62-311c" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="15e8-ea7e-9542-e89d" type="max"/>
+            <constraint field="selections" scope="roster" value="2" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c6a4-d22b-4e62-311c" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="15e8-ea7e-9542-e89d" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="15.0"/>
+            <cost name="pts" typeId="points" value="15"/>
           </costs>
         </entryLink>
         <entryLink id="7666-8e30-2519-7c0d" name="Stasis Grenade" hidden="false" collective="false" import="true" targetId="2ed2-cee9-c66b-61b9" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8317-e525-ee09-326c" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b17-5027-f4c3-c8af" type="max"/>
+            <constraint field="selections" scope="roster" value="2" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8317-e525-ee09-326c" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b17-5027-f4c3-c8af" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="20.0"/>
+            <cost name="pts" typeId="points" value="20"/>
           </costs>
         </entryLink>
         <entryLink id="610f-0274-d25d-c964" name="Power Field" hidden="false" collective="false" import="true" targetId="ff93-6c11-25e9-72dc" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="866c-e907-67fd-a154" type="max"/>
-            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ff50-e0b0-8ba2-58df" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="866c-e907-67fd-a154" type="max"/>
+            <constraint field="selections" scope="roster" value="2" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ff50-e0b0-8ba2-58df" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="35.0"/>
+            <cost name="pts" typeId="points" value="35"/>
           </costs>
         </entryLink>
         <entryLink id="7817-529e-1446-a953" name="Master-Crafted Laspistol" hidden="false" collective="false" import="true" targetId="a305-80f8-973b-90d4" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4404-baec-c8ee-3943" type="max"/>
-            <constraint field="selections" scope="roster" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5d2e-19ac-d148-7f04" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4404-baec-c8ee-3943" type="max"/>
+            <constraint field="selections" scope="roster" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5d2e-19ac-d148-7f04" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="10.0"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </entryLink>
         <entryLink id="b1b2-977c-26af-3aaa" name="Immune" hidden="false" collective="false" import="true" targetId="9395-c085-9b29-2302" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6470-83b4-8d29-30b0" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6470-83b4-8d29-30b0" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="5.0"/>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
         </entryLink>
         <entryLink id="9f0d-f5d1-ab40-e808" name="Haywire Grenade" hidden="false" collective="false" import="true" targetId="0ad2-92fa-5b56-644e" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c841-b503-e369-09c9" type="max"/>
+            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c841-b503-e369-09c9" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="10.0"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </entryLink>
         <entryLink id="2a54-9f61-df33-6779" name="Displacer Field" hidden="false" collective="false" import="true" targetId="9051-aabb-b632-2aa7" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="74ad-4111-f8db-30d8" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0829-0b52-f6d2-3b96" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="74ad-4111-f8db-30d8" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0829-0b52-f6d2-3b96" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="20.0"/>
+            <cost name="pts" typeId="points" value="20"/>
           </costs>
         </entryLink>
         <entryLink id="859c-85eb-23a4-e999" name="Combat Drugs" hidden="false" collective="false" import="true" targetId="4490-0f7f-8f88-8729" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="55dc-b6e1-0702-3401" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b27c-b32f-e013-9b20" type="max"/>
+            <constraint field="selections" scope="roster" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="55dc-b6e1-0702-3401" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b27c-b32f-e013-9b20" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="25.0"/>
+            <cost name="pts" typeId="points" value="25"/>
           </costs>
         </entryLink>
         <entryLink id="b446-3124-bdad-60a4" name="Cameleoline" hidden="false" collective="false" import="true" targetId="d895-75cf-96df-ca33" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a8e-d8e7-f262-c21c" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a8e-d8e7-f262-c21c" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="5.0"/>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
         </entryLink>
       </entryLinks>
@@ -3171,27 +3191,27 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
       <selectionEntryGroups>
         <selectionEntryGroup id="c083-268b-3dc0-768d" name="Combi-Weapon" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0499-f0d5-ed9b-1a0d" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0499-f0d5-ed9b-1a0d" type="max"/>
           </constraints>
           <entryLinks>
             <entryLink id="643a-1843-f004-94aa" name="Combi-Plasma" hidden="false" collective="false" import="true" targetId="b2f1-53c8-cca8-a46d" type="selectionEntry">
               <costs>
-                <cost name="pts" typeId="points" value="10.0"/>
+                <cost name="pts" typeId="points" value="10"/>
               </costs>
             </entryLink>
             <entryLink id="9647-8452-1499-26e1" name="Combi-Bolter" hidden="false" collective="false" import="true" targetId="11c2-dae7-3e31-e10a" type="selectionEntry">
               <costs>
-                <cost name="pts" typeId="points" value="10.0"/>
+                <cost name="pts" typeId="points" value="10"/>
               </costs>
             </entryLink>
             <entryLink id="1515-09e5-b206-9bbe" name="Combi-Flamer" hidden="false" collective="false" import="true" targetId="6358-8ace-fcba-6056" type="selectionEntry">
               <costs>
-                <cost name="pts" typeId="points" value="10.0"/>
+                <cost name="pts" typeId="points" value="10"/>
               </costs>
             </entryLink>
             <entryLink id="151e-e7b8-0c00-ce9f" name="Combi-Melta" hidden="false" collective="false" import="true" targetId="b00e-bbb9-e4a9-af42" type="selectionEntry">
               <costs>
-                <cost name="pts" typeId="points" value="10.0"/>
+                <cost name="pts" typeId="points" value="10"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -3204,33 +3224,33 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a800-8c47-b465-29bc" type="notEqualTo"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a800-8c47-b465-29bc" type="notEqualTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd02-9265-d3d8-7433" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd02-9265-d3d8-7433" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="10.0"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </entryLink>
         <entryLink id="f812-ad1c-f18a-1a9c" name="Purity Seal" hidden="false" collective="false" import="true" targetId="6283-c9e0-9d28-5fda" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab39-459a-a74e-1690" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab39-459a-a74e-1690" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="8.0"/>
+            <cost name="pts" typeId="points" value="8"/>
           </costs>
         </entryLink>
         <entryLink id="165b-2aea-cfdc-fe1d" name="Storm Shield" hidden="false" collective="false" import="true" targetId="5b69-dbfc-8a02-2d96" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8764-91af-50ec-7b92" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8764-91af-50ec-7b92" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="10.0"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </entryLink>
         <entryLink id="3fd2-9422-352e-95c3" name="Graviton Gun" hidden="false" collective="false" import="true" targetId="7299-aa89-aeeb-37a1" type="selectionEntry">
@@ -3239,18 +3259,18 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a800-8c47-b465-29bc" type="notEqualTo"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a800-8c47-b465-29bc" type="notEqualTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="19b3-4511-2419-edeb" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="471e-a863-3688-9f84" type="max"/>
+            <constraint field="selections" scope="roster" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="19b3-4511-2419-edeb" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="471e-a863-3688-9f84" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="40.0"/>
+            <cost name="pts" typeId="points" value="40"/>
           </costs>
         </entryLink>
       </entryLinks>
@@ -3259,10 +3279,10 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
       <entryLinks>
         <entryLink id="0cbf-a68b-b9b6-056b" name="Ablative Armour" hidden="false" collective="false" import="true" targetId="26e2-4a44-2602-a3fd" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e909-f9ce-ba4f-2a6c" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e909-f9ce-ba4f-2a6c" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="15.0"/>
+            <cost name="pts" typeId="points" value="15"/>
           </costs>
         </entryLink>
         <entryLink id="3748-c1a5-f947-7dee" name="Supercharged Engine" hidden="false" collective="false" import="true" targetId="4635-9876-cb56-4aab" type="selectionEntry">
@@ -3271,73 +3291,73 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bcf7-c063-7aca-a066" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bcf7-c063-7aca-a066" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73af-559d-eb7c-6b44" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73af-559d-eb7c-6b44" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="5.0"/>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
         </entryLink>
         <entryLink id="0597-fea7-881c-2f82" name="Auto-Launcher" hidden="false" collective="false" import="true" targetId="222b-075f-d34c-7093" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d08-3f02-156b-79b6" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d08-3f02-156b-79b6" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="5.0"/>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
         </entryLink>
         <entryLink id="326d-bc3f-4297-361e" name="Ceramite Armour" hidden="false" collective="false" import="true" targetId="f74f-9e64-38c1-9503" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c942-e8b5-538e-56bf" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c942-e8b5-538e-56bf" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="50.0"/>
+            <cost name="pts" typeId="points" value="50"/>
           </costs>
         </entryLink>
         <entryLink id="a731-f50f-d384-7219" name="Electro-Hull" hidden="false" collective="false" import="true" targetId="f927-24ed-15ca-0c96" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8109-fff7-ec09-7707" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8109-fff7-ec09-7707" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="10.0"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </entryLink>
         <entryLink id="3a51-b2c7-73ea-c058" name="Null-Shield" hidden="false" collective="false" import="true" targetId="47cb-e484-5d6a-3911" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c53-6d00-6735-b138" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c53-6d00-6735-b138" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="35.0"/>
+            <cost name="pts" typeId="points" value="35"/>
           </costs>
         </entryLink>
         <entryLink id="5528-e4f3-6a03-1dfd" name="Reinforced Armour" hidden="false" collective="false" import="true" targetId="fa44-ccaf-6c06-bed4" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="22a8-2d84-dfd3-8906" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="22a8-2d84-dfd3-8906" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="10.0"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </entryLink>
         <entryLink id="bdb8-75e1-d484-d47e" name="Searchlight" hidden="false" collective="false" import="true" targetId="64e7-1568-72da-bd59" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4630-8f8f-6c40-fe19" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4630-8f8f-6c40-fe19" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="5.0"/>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
         </entryLink>
         <entryLink id="b8b4-41af-4e28-c332" name="Vortex Detonator" hidden="false" collective="false" import="true" targetId="2976-4443-5709-a1a6" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ff8-1194-a0be-bf28" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ff8-1194-a0be-bf28" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="50.0"/>
+            <cost name="pts" typeId="points" value="50"/>
           </costs>
         </entryLink>
       </entryLinks>
@@ -3354,7 +3374,7 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
         </entryLink>
         <entryLink id="3999-ceda-197c-1c91" name="Coruscating Warp Flame" hidden="false" collective="false" import="true" targetId="21e9-f397-7329-a32f" type="selectionEntry">
           <costs>
-            <cost name="pts" typeId="points" value="45.0"/>
+            <cost name="pts" typeId="points" value="45"/>
           </costs>
         </entryLink>
       </entryLinks>
@@ -3365,19 +3385,19 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
           <rules>
             <rule id="f8e8-c21a-5bf4-cc30" name="Auxiliary Storm Bolters" hidden="false">
               <description>Any jams rolled on the sustained fire dice can be rerolled
-Any crew or passengers can fire the auxiliary storm bolter instead of their own weapon. </description>
+Any crew or passengers can fire the auxiliary storm bolter instead of their own weapon.</description>
             </rule>
           </rules>
           <entryLinks>
             <entryLink id="8804-bf52-21a6-031e" name="Storm Bolter" hidden="false" collective="false" import="true" targetId="8b0c-9093-dc69-c9e8" type="selectionEntry">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d8b6-7b32-e7fd-9034" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c33d-fc4a-07d9-fb8e" type="min"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d8b6-7b32-e7fd-9034" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c33d-fc4a-07d9-fb8e" type="min"/>
               </constraints>
             </entryLink>
           </entryLinks>
           <costs>
-            <cost name="pts" typeId="points" value="5.0"/>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="d346-35ce-be3b-1cda" name="Bulldozer Blade" hidden="false" collective="false" import="true" type="upgrade">
@@ -3386,27 +3406,27 @@ Any crew or passengers can fire the auxiliary storm bolter instead of their own 
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bcf7-c063-7aca-a066" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9187-ca83-9433-d2c7" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2ea7-ced8-d2ec-2939" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bcf7-c063-7aca-a066" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9187-ca83-9433-d2c7" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2ea7-ced8-d2ec-2939" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="25eb-600f-7242-37a1" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="25eb-600f-7242-37a1" type="max"/>
           </constraints>
           <profiles>
             <profile id="c304-b9eb-3281-36dc" name="Bulldozer Blade" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
               <characteristics>
                 <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Increases the Strength of the vehicle&apos;s ram value by +1 and adds +1D6 to the ram damage it inflicts. This is in addition to the +D6 ram bonus against buildings received by vehicles with a ram bar noted in the rulebook. 
-Any shots that hit the front of the vehicle&apos;s hull will hit the dozerblade on a 4+. If it is hit, the dozer adds +D6 to the vehicle&apos;s front hull armour value for that shot only. If the vehicle suffers a penetrating hit from the front the blade is automatically wrekced and hte card discarded. </characteristic>
+Any shots that hit the front of the vehicle&apos;s hull will hit the dozerblade on a 4+. If it is hit, the dozer adds +D6 to the vehicle&apos;s front hull armour value for that shot only. If the vehicle suffers a penetrating hit from the front the blade is automatically wrekced and hte card discarded.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="15.0"/>
+            <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b84d-f421-bf2b-5619" name="Hunter-Killer Missile" hidden="false" collective="false" import="true" type="upgrade">
@@ -3415,9 +3435,9 @@ Any shots that hit the front of the vehicle&apos;s hull will hit the dozerblade 
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9187-ca83-9433-d2c7" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bcf7-c063-7aca-a066" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2ea7-ced8-d2ec-2939" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9187-ca83-9433-d2c7" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bcf7-c063-7aca-a066" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2ea7-ced8-d2ec-2939" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -3442,20 +3462,20 @@ Any shots that hit the front of the vehicle&apos;s hull will hit the dozerblade 
             <rule id="d8f6-c1ec-914a-80c3" name="Hunter-Killer Missile" hidden="false">
               <description>One Use Only
 May only targe vehicles, walkers, or buildings
-Always hits on a 3+ regardless of range and hit modifiers for target size, speed, cover, etc. </description>
+Always hits on a 3+ regardless of range and hit modifiers for target size, speed, cover, etc.</description>
             </rule>
           </rules>
           <costs>
-            <cost name="pts" typeId="points" value="30.0"/>
+            <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="8c12-6657-ce25-f615" name="Heavy Flamer Upgrade" hidden="true" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="points" value="0.0">
+            <modifier type="set" field="points" value="0">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aac3-4788-82a3-a9ad" type="atLeast"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aac3-4788-82a3-a9ad" type="atLeast"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -3464,8 +3484,8 @@ Always hits on a 3+ regardless of range and hit modifiers for target size, speed
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c82-0e56-d20a-6b1c" type="atLeast"/>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aac3-4788-82a3-a9ad" type="atLeast"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c82-0e56-d20a-6b1c" type="atLeast"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aac3-4788-82a3-a9ad" type="atLeast"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -3480,13 +3500,13 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
           <entryLinks>
             <entryLink id="8ce2-b6f0-0c49-727e" name="Heavy Flamer" hidden="false" collective="false" import="true" targetId="4da3-a884-c204-2800" type="selectionEntry">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c960-b8f6-9561-ff12" type="min"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa61-8fef-c39f-372f" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c960-b8f6-9561-ff12" type="min"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa61-8fef-c39f-372f" type="max"/>
               </constraints>
             </entryLink>
           </entryLinks>
           <costs>
-            <cost name="pts" typeId="points" value="10.0"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -3495,18 +3515,18 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
       <selectionEntries>
         <selectionEntry id="f0cd-2b6f-1cdf-67d6" name="Command Comm-Link" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f6a2-34e8-fad8-1d06" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f6a2-34e8-fad8-1d06" type="max"/>
           </constraints>
           <profiles>
             <profile id="a57f-500a-75a7-4cb2" name="Command Comm-Link" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
               <characteristics>
                 <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Must have a character in or on the vehicle
-When rolling to see which side goes first, a Space Marine force that includes this vehicle may roll two D6 and add their strategy rating to the best result. </characteristic>
+When rolling to see which side goes first, a Space Marine force that includes this vehicle may roll two D6 and add their strategy rating to the best result.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="30.0"/>
+            <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="25cb-654c-8541-a4d1" name="Recon Pack" hidden="false" collective="false" import="true" type="upgrade">
@@ -3515,24 +3535,24 @@ When rolling to see which side goes first, a Space Marine force that includes th
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2ea7-ced8-d2ec-2939" type="notInstanceOf"/>
+                    <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2ea7-ced8-d2ec-2939" type="notInstanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b67-823e-7856-b5ee" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b67-823e-7856-b5ee" type="max"/>
           </constraints>
           <profiles>
             <profile id="4f68-3904-5daa-6f49" name="Recon Pack" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
               <characteristics>
-                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">A force that includes this vehicle may add 1 to their strategy rating. In addition, on a D6 roll of a 4+ you may force your opponent to discard one of his Strategy cards. </characteristic>
+                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">A force that includes this vehicle may add 1 to their strategy rating. In addition, on a D6 roll of a 4+ you may force your opponent to discard one of his Strategy cards.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="20.0"/>
+            <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="72e9-41f5-6038-5ec4" name="Ammo Feed" hidden="true" collective="false" import="true" type="upgrade">
@@ -3541,8 +3561,8 @@ When rolling to see which side goes first, a Space Marine force that includes th
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c82-0e56-d20a-6b1c" type="atLeast"/>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aac3-4788-82a3-a9ad" type="atLeast"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c82-0e56-d20a-6b1c" type="atLeast"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aac3-4788-82a3-a9ad" type="atLeast"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -3558,7 +3578,7 @@ Must purchase for each Heavy Bolter</characteristic>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="5.0"/>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -3570,35 +3590,29 @@ Must purchase for each Heavy Bolter</characteristic>
     </rule>
     <rule id="049d-3ed2-a1bf-86b0" name="Parry" publicationId="2bb8-b6de-8b70-7f41" page="41" hidden="false">
       <description>A warrior armed with a sword (including chainswords. power swords and force swords) can parry or turn aside an opponent&apos; blow with his own blade. To represent thi a model armed with a sword can force an opponent to re-roll his highest attack dice before the winner of the combat is determined. Models armed with two swords can force their opponent to re-roll one or two of his attack dice.
-The swordsman doesn&apos;t have to parry if he doesn&apos;t want to. Though parries are useful it is possible an opponent may re-roll and get a better score. An opponent who rolls several dice can always pick his next highest score and use that to determine who won the combat rather than use the score of his re-rolled dice. Re-rolled dice can still produce fumbles or critical hits as described below. Two opposing models which both have parries cancel each other out - neither can force a re-roll!
-</description>
+The swordsman doesn&apos;t have to parry if he doesn&apos;t want to. Though parries are useful it is possible an opponent may re-roll and get a better score. An opponent who rolls several dice can always pick his next highest score and use that to determine who won the combat rather than use the score of his re-rolled dice. Re-rolled dice can still produce fumbles or critical hits as described below. Two opposing models which both have parries cancel each other out - neither can force a re-roll!</description>
     </rule>
     <rule id="575b-0fd0-25da-4323" name="Knocked Out" publicationId="06e5-8e36-e8c8-aec3" page="11" hidden="false">
-      <description>In game terms it matters little whether a model is knocked out or slain, so the profile reflects the weapon&apos;s maximum ability. However, any model &apos;killed&apos; by a power maul is assumed to be unconscious and automatically recovers once the game is over.
-</description>
+      <description>In game terms it matters little whether a model is knocked out or slain, so the profile reflects the weapon&apos;s maximum ability. However, any model &apos;killed&apos; by a power maul is assumed to be unconscious and automatically recovers once the game is over.</description>
     </rule>
     <rule id="c185-8532-d008-ff65" name="Plasma" publicationId="06e5-8e36-e8c8-aec3" page="17" hidden="false">
-      <description>The energy used by a plasma weapon is so vast that once it has been fired it takes time for it to recharge. If a plasma weapon is fired it cannot then be used in the player&apos;s following turn, and is only ready to fire again in the player&apos;s turn after next. Place a &apos;plasma weapon recharging&apos; marker next to model as a reminder. This does not affect the model&apos;s ability to move or to use another weapon if it carries one.
-</description>
+      <description>The energy used by a plasma weapon is so vast that once it has been fired it takes time for it to recharge. If a plasma weapon is fired it cannot then be used in the player&apos;s following turn, and is only ready to fire again in the player&apos;s turn after next. Place a &apos;plasma weapon recharging&apos; marker next to model as a reminder. This does not affect the model&apos;s ability to move or to use another weapon if it carries one.</description>
     </rule>
     <rule id="0b67-c911-308c-4960" name="Sustained Fire" publicationId="2bb8-b6de-8b70-7f41" page="38" hidden="false">
       <description>The player nominates the initial target and rolls to hit exactly as normal. If the player makes the to hit roll he can roll one or more special sustained fire dice to see how many actual hits are scored. The first of these hits will be scored on the initial target but any extra hits can be allocated to other visible targets within 4&quot; of the first. Once all hits have been allocated roll to wound as normal. 
-The number of sustained fire dice a weapon can roll is indicated in its description in the Wargear book. A sustained fire weapon can always be fired using less dice than its maximum if desired.
-
-</description>
+The number of sustained fire dice a weapon can roll is indicated in its description in the Wargear book. A sustained fire weapon can always be fired using less dice than its maximum if desired.</description>
     </rule>
     <rule id="2a3d-8d0b-bb6b-d4fa" name="1 or 2 Handed" publicationId="06e5-8e36-e8c8-aec3" page="10" hidden="false">
-      <description>The weapon can be used either one-handed to facilitate the wielding of another close combat weapon or two-handed to bring its full devastating power to bear. </description>
+      <description>The weapon can be used either one-handed to facilitate the wielding of another close combat weapon or two-handed to bring its full devastating power to bear.</description>
     </rule>
     <rule id="a0b5-9f98-7420-f3a4" name="Flamer" publicationId="06e5-8e36-e8c8-aec3" page="15" hidden="false">
       <description>Small flame template. Partial models, hit a on a 4+. Fully covered auto hit. In close combat, auto hit the target you&apos;re fighting but no template. 
 If target is not killed, check to see if on fire on a 4+. Further instructions found in Wargear book</description>
     </rule>
-    <rule id="1fa4-0ea9-fd72-45ae" name="Acid Splatter " publicationId="06e5-8e36-e8c8-aec3" page="35" hidden="false">
+    <rule id="1fa4-0ea9-fd72-45ae" name="Acid Splatter" publicationId="06e5-8e36-e8c8-aec3" page="35" hidden="false">
       <description>If a target is saved by its armour, splinters of  glass and gobbets of mutagenic acid may rebound and hit others models within 2&quot;. Roll a dice for each  model  within 2&quot; of  the original target. Any  models rolling a 6 are hit by acid splashes and  automatically  suffer  I  wound  -  this may  be  saved  by armour  in  the  normal manner.
 
-A  target  which  is  not  made of  living flesh, such as a robot or vehicle, cannot be harmed by a Hellfire shell - any attempt to fire a Hellfire shell against a  non-living  target is treated like a normal heavy bolter shot.
-</description>
+A  target  which  is  not  made of  living flesh, such as a robot or vehicle, cannot be harmed by a Hellfire shell - any attempt to fire a Hellfire shell against a  non-living  target is treated like a normal heavy bolter shot.</description>
     </rule>
     <rule id="cdb6-37f3-d392-86e7" name="Targeter" hidden="false">
       <description>A model using a weapon with a targeter gains a+1 modifier on its roll to hit with that weapon. Targeters are always fitted to specific weapons, so a Space Marine armed with a bolt pistol and a missile launcher with a targeter would get+1 to hit when he was shooting with the missile launcher but not with the bolt pistol. Targeters may not be interchanged between weapons during a battle. Weapons which are linked to fire in unison, such as the dual lascannon on a land raider,may use a single targeter.</description>
@@ -3606,22 +3620,18 @@ A  target  which  is  not  made of  living flesh, such as a robot or vehicle, ca
     <rule id="1972-0933-9bcd-0749" name="Blind Missile" publicationId="06e5-8e36-e8c8-aec3" page="43" hidden="false">
       <description>Blind Missiles may be aimed against any visible piece of ground. Models may not see through, or into, or out of, the blind marker. Models may not use targeters or infra-vision to see through the marker. Psykers may not see or use their powers through the marker. 
 Any models within the blind cloud have the choice of remaining stationary, or moving at half rate in a random direction. Opposing models in hand-to-hand combat within a blind cloud may fight, but will only hit their enemy on the D6 score of a 6
-See Wargear Rulebook pg. 43 for further rules
-</description>
+See Wargear Rulebook pg. 43 for further rules</description>
     </rule>
     <rule id="4efb-36ee-e69c-359a" name="Anti-plant" hidden="false">
       <description>This  missile  was developed as a defoliant to clear areas of vegetation  which  could  act as 
 cover to enemy  troops. All vegetation  in  the area  effect of  the  missile  is automatically
-destroyed. The missile cannot affect other models.
-</description>
+destroyed. The missile cannot affect other models.</description>
     </rule>
     <rule id="904b-6be5-a1c9-baf8" name="Plasma Missile" publicationId="06e5-8e36-e8c8-aec3" page="43" hidden="false">
-      <description>Determine  where  the  missile  lands  as  normal and  place  a 1  1/2&quot;  radius  blast  marker or ball  of cotton  wool.  Work  out damage  on  targets  within the area  as  normal.  Any models which  survive  are  thrown  outside  the  area  covered  by the marker as a result of the blast. For plasma ball chart after firing see Wargear Rulebook pg. 43
-</description>
+      <description>Determine  where  the  missile  lands  as  normal and  place  a 1  1/2&quot;  radius  blast  marker or ball  of cotton  wool.  Work  out damage  on  targets  within the area  as  normal.  Any models which  survive  are  thrown  outside  the  area  covered  by the marker as a result of the blast. For plasma ball chart after firing see Wargear Rulebook pg. 43</description>
     </rule>
     <rule id="b489-7fd5-2670-ae32" name="Knockback" publicationId="06e5-8e36-e8c8-aec3" page="31" hidden="false">
-      <description>If  a  target  is  hit   by  a  shotgun  but  not  slain,  then  it  is automatically  knocked back 2&quot; and will fall  over on a  D6  roll of  4+.  A  knocked  over  model must spend  its  next movement phase standing up. Note that  this  rule  only  affects  ordinary troopers - not vehicles, robots, Terminators or dreadnoughts.
-</description>
+      <description>If  a  target  is  hit   by  a  shotgun  but  not  slain,  then  it  is automatically  knocked back 2&quot; and will fall  over on a  D6  roll of  4+.  A  knocked  over  model must spend  its  next movement phase standing up. Note that  this  rule  only  affects  ordinary troopers - not vehicles, robots, Terminators or dreadnoughts.</description>
     </rule>
     <rule id="2c66-3235-95b7-0250" name="Toxin" publicationId="06e5-8e36-e8c8-aec3" page="27" hidden="false">
       <description>When used against living targets roll to hit as normal. If the weapon hits, then immediately make a saving throw, no Strength or toughness roll is required. The toxin automatically takes effect if the saving throw is not successful. Does not affect daemons, Eldar Avatar, Tyrarids and Genestealers although Genestealer hybrids are affected as normal.</description>
@@ -3636,7 +3646,7 @@ destroyed. The missile cannot affect other models.
       <description>-1 to hit when thrown. If misses, scatter grenade as normal and if it hits another target consider that a hit and work the damage as normal.</description>
     </rule>
     <rule id="27e7-ea95-f9b1-91be" name="Melta Bomb" publicationId="06e5-8e36-e8c8-aec3" page="62" hidden="false">
-      <description>Cannot be thrown, may only be used in close combat. </description>
+      <description>Cannot be thrown, may only be used in close combat.</description>
     </rule>
     <rule id="4123-ec86-937c-1e6f" name="Photon Flash Flare" publicationId="06e5-8e36-e8c8-aec3" page="62" hidden="false">
       <description>See Wargear Rulebook pg. 62 for full rules and charts</description>
@@ -3659,34 +3669,29 @@ destroyed. The missile cannot affect other models.
     <rule id="1ec9-01dd-59c6-d1d5" name="Twin Linked" publicationId="2bb8-b6de-8b70-7f41" page="80" hidden="false">
       <description>Only one dice roll to hit is made  for a  linked  weapon.  If a  hit  is scored  both  the linked  weapons score  a  hit. Likewise, if the shot misses both weapons miss. The hits  from  such  weapons  will  be  fairly tightly grouped, so in this case just make one  roll for location. 
 Both of  the  linked  weapons  strike  the same  point,  but  roll penetration  and damage separately  for each  weapon.  In the case of linked weapons shooting at ordinary models one roll is made to hit but two rolls are made to wound  and two separate armour saves are required  if both  weapons wound. 
-If a linked  weapon  has sustained  fire capability, like the  twin autocannon on an Ork  warbike, roll  to hit as  normal as  if one weapon  were firing.  If  a  hit  is  scored  roll  the  sustained  fire dice for both  weapons together: jam  results on either dice will jam  both  of  the  linked  weapons  but  as  usual any  hits  are resolved  before the weapon(s) jam.
-</description>
+If a linked  weapon  has sustained  fire capability, like the  twin autocannon on an Ork  warbike, roll  to hit as  normal as  if one weapon  were firing.  If  a  hit  is  scored  roll  the  sustained  fire dice for both  weapons together: jam  results on either dice will jam  both  of  the  linked  weapons  but  as  usual any  hits  are resolved  before the weapon(s) jam.</description>
     </rule>
     <rule id="98bf-310c-9d9d-1102" name="Auto-Launcher Vehicle" publicationId="06e5-8e36-e8c8-aec3" page="20" hidden="false">
       <description>The auto-launcher carries six grenade all of the same type, which are fired off in two salvoes of three. Once the auto­ launcher is out of ammunition it may not fire again for the remainder of the battle.
-The auto-launcher can be triggered in the shooting phase of the vehicle&apos;s turn in addition to normal firing. The first grenade in the spread automatically hits a point exactly 6&quot; away in the auto-launcher&apos;s forward 90° fire arc. The other two grenades deviate D3&quot; away from the target point of the first grenade. An auto-launcher may be pre-loaded with a single type of grenade, the choice being either frag, krak or blind.
-</description>
+The auto-launcher can be triggered in the shooting phase of the vehicle&apos;s turn in addition to normal firing. The first grenade in the spread automatically hits a point exactly 6&quot; away in the auto-launcher&apos;s forward 90° fire arc. The other two grenades deviate D3&quot; away from the target point of the first grenade. An auto-launcher may be pre-loaded with a single type of grenade, the choice being either frag, krak or blind.</description>
     </rule>
     <rule id="4b0d-194f-884b-338b" name="Teleport Homer" publicationId="06e5-8e36-e8c8-aec3" page="77" hidden="false">
-      <description>If  a squad  are  teleporting  to a  point  within  6&quot;  of  an  active teleport  homer  (carried by  another squad, for example) a  roll of  a  HIT  on  the scatter dice  indicates  that  the squad  have locked  onto  the  homer and don&apos;t deviate as they  teleport.  A roll  of  an  arrow  indicates  the squad  has deviated  as  normal despite the homer.
-</description>
+      <description>If  a squad  are  teleporting  to a  point  within  6&quot;  of  an  active teleport  homer  (carried by  another squad, for example) a  roll of  a  HIT  on  the scatter dice  indicates  that  the squad  have locked  onto  the  homer and don&apos;t deviate as they  teleport.  A roll  of  an  arrow  indicates  the squad  has deviated  as  normal despite the homer.</description>
     </rule>
     <rule id="5580-0d5c-a15d-81ef" name="Explodes" publicationId="06e5-8e36-e8c8-aec3" page="34" hidden="false">
       <description>If 3 Jam results together on the sustained fire dice while using this weapon it will explode, instantly killing hte user with no save allowed</description>
     </rule>
     <rule id="b086-7aeb-78af-4b13" name="Lightning Claws" publicationId="06e5-8e36-e8c8-aec3" page="9" hidden="false">
       <description>+1 attack if using pair
-Lightning claws  penetrate  vehicle armour differently from other weapons. First work out if the lightning claws hit. If only one  hit  is  scored  then  the  amount  of  armour  pierced  is 8+D3+D20+D6. If  two or more  hits are scored the player has the option of working out each hit separately or combining hits into a single attack penetrating 8+3D6+D20.
-</description>
+Lightning claws  penetrate  vehicle armour differently from other weapons. First work out if the lightning claws hit. If only one  hit  is  scored  then  the  amount  of  armour  pierced  is 8+D3+D20+D6. If  two or more  hits are scored the player has the option of working out each hit separately or combining hits into a single attack penetrating 8+3D6+D20.</description>
     </rule>
     <rule id="85e2-0fc9-ef8c-648c" name="Crushing Blow" publicationId="06e5-8e36-e8c8-aec3" page="12" hidden="false">
-      <description>Thunder Hammers automatically wound any unit they hit (but they still take armour saves if applicable). If this is a vehicle, then it automatically penetrate the armour. </description>
+      <description>Thunder Hammers automatically wound any unit they hit (but they still take armour saves if applicable). If this is a vehicle, then it automatically penetrate the armour.</description>
     </rule>
     <rule id="c7ef-dc7b-3ecc-91f5" name="Fear" publicationId="2bb8-b6de-8b70-7f41" hidden="false">
       <description>If charged by an enemy causing fear, take a psychology check. If passed, fight as normal. If failed, automatically break if outnumbered by charging enemy. If enemy does not outnumber, half the units WS (rounding up) in the first turn of combat and cannot fire overwatch. 
 If charging enemy unit that causes fear, must take psychology check. If failed, cannot charge and must remain stationary for the turn (but can fire normally). 
-If hit by a weapon that causes fear it must take a Break test regardless of casualties inflicted by the weapon 
-</description>
+If hit by a weapon that causes fear it must take a Break test regardless of casualties inflicted by the weapon</description>
     </rule>
     <rule id="b13c-ac94-f4ca-8e14" name="Auto-Launcher Terminator" publicationId="2bb8-b6de-8b70-7f41" page="47" hidden="false">
       <description>The Terminator can trigger the auto-launchers in addition to normal firing. The first grenade hits a point exactly 6&quot; away from the Terminators front arc. The other two deviate D3&quot; away from the target point. Auto-launchesrs may be pre-loaded with frag or blind grenades (block LOS)</description>
@@ -3703,7 +3708,7 @@ If hit by a weapon that causes fear it must take a Break test regardless of casu
 	5-6: Model stands back up, 1 wound remaining and can act normally on the next turn
 3 - Restore vision on a model that was blinded
 4 - Cure effects of gas (if not standing in current cloud)
-5 - Negate any suffering psychological effects.  </description>
+5 - Negate any suffering psychological effects.</description>
     </rule>
     <rule id="94ce-f08f-6c85-ac9d" name="Jump Pack" publicationId="06e5-8e36-e8c8-aec3" page="71" hidden="false">
       <description>Can move 18&quot; in a straight line, or 12&quot; if jumping a single story building. Remove a further 6&quot; for each story higher.
@@ -3723,15 +3728,13 @@ Further rules in Wargear book</description>
 Can move 4&quot; per turn, but not through difficult terrain or obstacles. 
 May move and fire in the same turn
 In short range distance, enemy can choose to shoot the Tarantula turret or the crewman. At long range, it is random. If the crewman dies, the weapon is useless until someone else takes over. Armour value of Tarantula is 10 and if penetrated it is automatically destroyed.
-Weapons attached are twin linked and fired as a pair. 
-</description>
+Weapons attached are twin linked and fired as a pair.</description>
     </rule>
     <rule id="1f71-5395-c068-2ccd" name="Rapier Laser Destroyer" publicationId="06e5-8e36-e8c8-aec3" page="51" hidden="false">
       <description>Moves up to 4&quot; a turn, half in difficult terrain, 1&quot; vertical. 
 Requires crew to be within 4&quot; to operate
 45° front arc for firing. Remember it cannot move and fire
-In short range distance, enemy can choose to shoot the Rapier or the crewman. At long range, it is random. If the crewman dies, the weapon is useless until someone else takes over. Armour value of Rapier is 10 and if penetrated it is automatically destroyed. . 
-</description>
+In short range distance, enemy can choose to shoot the Rapier or the crewman. At long range, it is random. If the crewman dies, the weapon is useless until someone else takes over. Armour value of Rapier is 10 and if penetrated it is automatically destroyed. .</description>
     </rule>
     <rule id="db11-c527-cf9d-54dc" name="Multi-Launcher" publicationId="4590-6ba9-5482-a1fa" page="56" hidden="false">
       <description>10 rockets, firing 2 per turn max.
@@ -3747,7 +3750,7 @@ Automatically wounds Daemons when they are hit in close combat.
 Negates the unmodified daemonic saving throw</description>
     </rule>
     <rule id="0e86-209c-fe59-fe87" name="Frenzy" publicationId="2bb8-b6de-8b70-7f41" page="67" hidden="false">
-      <description>See rulebook page 67 - too long to describe </description>
+      <description>See rulebook page 67 - too long to describe</description>
     </rule>
     <rule id="c166-07e8-a977-6d38" name="Digi-Lasers" page="Wargear Cards" hidden="false">
       <description>Digi-lasers do not prevent a model using any other weapons. They are automatically fired at the start of hand to hand combat against opponents in base to base contact, before any dice are rolled and regardless of whose turn it is. The shots are worked out exactly the same way as normal. Shots may be divided amongst multiple opponents if desired. Once close combat has started the digi-lasers have no effect, the model doesn&apos;t gain any extra attack dice for having them.</description>
@@ -3781,10 +3784,10 @@ If the model fails to break free it must make a saving throw, and if failed take
 Vehicles cannot be webbed but crews or troops in open topped vehicles may be affected. If the driver is webbed, they cannot drive and the vehicle goes out of control</description>
     </rule>
     <rule id="05e0-cd40-2d9e-a9f9" name="Terror" publicationId="2bb8-b6de-8b70-7f41" hidden="false">
-      <description>See rulebook page 66- too long to describe </description>
+      <description>See rulebook page 66- too long to describe</description>
     </rule>
     <rule id="fe3b-e9df-4600-c5fc" name="Ripper Gun" publicationId="a1e3-886b-e509-d15a" page="28" hidden="false">
-      <description>No &quot;to hit&quot; dice is needed at short range, automatically hits. </description>
+      <description>No &quot;to hit&quot; dice is needed at short range, automatically hits.</description>
     </rule>
     <rule id="cc6d-c869-82ab-fcaa" name="Cavalry" hidden="false">
       <description>A cavalry model is treated as a single model, and if the rider is slain the entire model is removed.
@@ -3794,7 +3797,7 @@ When the cavalry model is attacked the rider&apos;s Toughness and Wounds charact
 Cavalry rider gain +1 to their save
 In close combat the rider of a cavalry mount adds the steeds Attack characteristic to his own.
 
-See pg. 17 of 40k Rulebook for more clarifications </description>
+See pg. 17 of 40k Rulebook for more clarifications</description>
     </rule>
     <rule id="a572-823c-5114-ba17" name="Hatred" publicationId="2bb8-b6de-8b70-7f41" page="67" hidden="false">
       <description>Troops who hate their adversaries take any Break and Rally tests with a Leadership of 10.
@@ -4495,7 +4498,7 @@ the player‘s movement phase and may not return later in the game.</description
     </profile>
     <profile id="8743-1b1c-e5ba-ddfe" name="Storm Shield" publicationId="06e5-8e36-e8c8-aec3" page="69" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
       <characteristics>
-        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">An extra armour save of 4+ against shooting or close combat damage from the front facing. This save ignores armour modifiers. </characteristic>
+        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">An extra armour save of 4+ against shooting or close combat damage from the front facing. This save ignores armour modifiers.</characteristic>
       </characteristics>
     </profile>
     <profile id="c7ad-cdba-f44b-a71e" name="Rosarius" publicationId="06e5-8e36-e8c8-aec3" page="68" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
@@ -4606,14 +4609,14 @@ If the psyker is hit by another psychic attack they ignore the affects on a 4+.<
       <characteristics>
         <characteristic name="Name" typeId="f6df-d058-1a8b-c2f7">Purge Psyker</characteristic>
         <characteristic name="Cast on" typeId="f4e5-8437-16be-8b1f">5+</characteristic>
-        <characteristic name="Special" typeId="8ec1-f69b-9d13-1fff">Choose an enemy psyker on the battlefield. Roll 2D6 and add your psyker mastery level. The target player does the same. The higher score wins. If the casting player wins, the enemy psyker loses 1 wound for each point of difference in the dice roll. If the enemy wins or it is a draw, nothing happens. If the enemy score is double the caster, suffer D6 wounds to the caster. </characteristic>
+        <characteristic name="Special" typeId="8ec1-f69b-9d13-1fff">Choose an enemy psyker on the battlefield. Roll 2D6 and add your psyker mastery level. The target player does the same. The higher score wins. If the casting player wins, the enemy psyker loses 1 wound for each point of difference in the dice roll. If the enemy wins or it is a draw, nothing happens. If the enemy score is double the caster, suffer D6 wounds to the caster.</characteristic>
       </characteristics>
     </profile>
     <profile id="a935-c516-de5a-786e" name="Power Vomit" hidden="false" typeId="11a6-8e13-a1ad-7e34" typeName="Unit Psychic Powers">
       <characteristics>
         <characteristic name="Name" typeId="f6df-d058-1a8b-c2f7">Power Vomit</characteristic>
         <characteristic name="Cast on" typeId="f4e5-8437-16be-8b1f">4+</characteristic>
-        <characteristic name="Special" typeId="8ec1-f69b-9d13-1fff">Draw a straight line 18&quot; from the Weirdboy. Any models under the line are struck by the vomit and sustain a S5 hit with a -2 save modifer. This will pass through any target even if it causes no damage. Buildings or terrain do not block this power. </characteristic>
+        <characteristic name="Special" typeId="8ec1-f69b-9d13-1fff">Draw a straight line 18&quot; from the Weirdboy. Any models under the line are struck by the vomit and sustain a S5 hit with a -2 save modifer. This will pass through any target even if it causes no damage. Buildings or terrain do not block this power.</characteristic>
       </characteristics>
     </profile>
     <profile id="10c8-6b48-5803-f944" name="Medi-pack" publicationId="06e5-8e36-e8c8-aec3" page="72" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
@@ -4711,7 +4714,7 @@ If the psyker is hit by another psychic attack they ignore the affects on a 4+.<
     </profile>
     <profile id="63d2-73dc-6207-df49" name="Aegis Suit" page="Wargear Card" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
       <characteristics>
-        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">The model gains an additional saving throw of 4+ against any enemy psychic power used against it. </characteristic>
+        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">The model gains an additional saving throw of 4+ against any enemy psychic power used against it.</characteristic>
       </characteristics>
     </profile>
     <profile id="4467-08bd-0856-cd5d" name="Armour-Piercing Ammo" page="Datacard" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
@@ -4771,7 +4774,7 @@ Blind models cannot move or shoot and fight in CC at WS 1</characteristic>
     <profile id="4f65-8729-a2d0-c6b6" name="Frenzon" page="Wargear Card" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
       <characteristics>
         <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Can be used to induce Frenzy or Hatred (see Psychological Effects in 2nd Ed Rulebook). No test against LD is needed. Only 1 psychological state can be induced at a time. 
-Every use after the first roll a D6: On a 1, suffer D3 wounds. </characteristic>
+Every use after the first roll a D6: On a 1, suffer D3 wounds.</characteristic>
       </characteristics>
     </profile>
     <profile id="dbb0-d495-5c5b-6249" name="Teleport Jammer" page="Wargear Card" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
@@ -4790,8 +4793,7 @@ No effect on psykers using their powers to teleport.</characteristic>
         <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
         <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-1</characteristic>
         <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+3</characteristic>
-        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Digi-Lasers
-</characteristic>
+        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Digi-Lasers</characteristic>
       </characteristics>
     </profile>
     <profile id="147b-b713-b40b-c1a4" name="Refractor Field" publicationId="06e5-8e36-e8c8-aec3" page="68" hidden="false" typeId="4657-2671-1065-d493" typeName="Armour">
@@ -4816,8 +4818,7 @@ The wielder may also expend the stored Force card to gain an extra +3 Strength a
     </profile>
     <profile id="cf9d-bbca-5892-c2d0" name="Force Rod" page="Wargear Cards" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
       <characteristics>
-        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">May store up to 3 unused Force card in the sword instead of discarding. May be used in the subsequent psychic phases. Stored force cards may be retrieved from the rod and used in subsequent psychic phases.
-</characteristic>
+        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">May store up to 3 unused Force card in the sword instead of discarding. May be used in the subsequent psychic phases. Stored force cards may be retrieved from the rod and used in subsequent psychic phases.</characteristic>
       </characteristics>
     </profile>
     <profile id="97e4-8f7b-c22e-dd98" name="Laspistol" publicationId="06e5-8e36-e8c8-aec3" page="16" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
@@ -4899,7 +4900,7 @@ The wielder may also expend the stored Force card to gain an extra +3 Strength a
     </profile>
     <profile id="7c48-9994-b0f9-a83e" name="Battle Standard" publicationId="2bb8-b6de-8b70-7f41" page="71" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
       <characteristics>
-        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Any squad within 12&quot; of the battle standard may retake a failed Break test. May only retake once per turn. </characteristic>
+        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Any squad within 12&quot; of the battle standard may retake a failed Break test. May only retake once per turn.</characteristic>
       </characteristics>
     </profile>
     <profile id="c46d-3e00-6bd2-0284" name="Multi-laser" publicationId="06e5-8e36-e8c8-aec3" page="44" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">

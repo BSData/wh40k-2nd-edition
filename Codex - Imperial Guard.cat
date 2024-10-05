@@ -40,7 +40,7 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
             <constraint field="points" scope="parent" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="e593-9362-80bb-241c" type="min"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="faa9-a53b-70c9-4c79" name="Additional Unit" hidden="false" targetId="070f-0182-955b-1543" primary="false">
+        <categoryLink id="faa9-a53b-70c9-4c79" name="Additional Unit (1 Per 1 Regimental)" hidden="false" targetId="070f-0182-955b-1543" primary="false">
           <modifiers>
             <modifier type="increment" field="47e7-e16c-8fad-a3a7" value="1">
               <repeats>
@@ -52,7 +52,7 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
             <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="47e7-e16c-8fad-a3a7" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Mandatory Squad" hidden="false" id="4870-4b34-c89e-5427" targetId="41ed-6110-b458-67f9" type="category">
+        <categoryLink name="Mandatory Squad (Add Another Command Platoon)" hidden="false" id="4870-4b34-c89e-5427" targetId="41ed-6110-b458-67f9">
           <constraints>
             <constraint type="max" value="0" field="selections" scope="force" shared="true" id="7635-5218-5ae4-78d5" includeChildSelections="true"/>
           </constraints>
@@ -64,7 +64,7 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
             </modifier>
           </modifiers>
         </categoryLink>
-        <categoryLink name="Only 6 Units Per HQ/Command" hidden="false" id="6595-42a5-e106-87d5" targetId="2c51-43b2-2f6a-f890" type="category">
+        <categoryLink name="Only 6 Units Per HQ/Command" hidden="false" id="6595-42a5-e106-87d5" targetId="2c51-43b2-2f6a-f890">
           <constraints>
             <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="0bdf-76da-369c-095b"/>
           </constraints>
@@ -276,7 +276,18 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
             <selectionEntryGroup id="5237-97a2-11c8-418f" name="Weapons" hidden="false" collective="false" import="true">
               <entryLinks>
                 <entryLink id="5d76-f676-ca98-6a9d" name="Assault Weapons" hidden="false" collective="false" import="true" targetId="09eb-7fa1-b3e9-4c02" type="selectionEntryGroup"/>
-                <entryLink id="9089-3c90-e4a5-8d31" name="Special Weapons" hidden="false" collective="false" import="true" targetId="e23a-3808-6313-dec2" type="selectionEntryGroup"/>
+                <entryLink id="9089-3c90-e4a5-8d31" name="Special Weapons" hidden="false" collective="false" import="true" targetId="e23a-3808-6313-dec2" type="selectionEntryGroup">
+                  <constraints>
+                    <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="b585-c600-ecbe-c86c"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="increment" value="1" field="b585-c600-ecbe-c86c">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="76c3-d098-063a-8c71" childId="f3a3-e6d6-9d80-05ce" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -709,24 +720,24 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
           <modifiers>
             <modifier type="decrement" field="d422-4f42-629d-6752" value="2">
               <repeats>
-                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="73fd-ca2f-c089-8af5" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3609-930e-18d8-bf32" repeats="1" roundUp="false"/>
               </repeats>
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="73fd-ca2f-c089-8af5" type="atLeast"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3609-930e-18d8-bf32" type="atLeast"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
             <modifier type="decrement" field="0668-00cc-e8c2-9eec" value="2">
               <repeats>
-                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="73fd-ca2f-c089-8af5" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3609-930e-18d8-bf32" repeats="1" roundUp="false"/>
               </repeats>
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="73fd-ca2f-c089-8af5" type="atLeast"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3609-930e-18d8-bf32" type="atLeast"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1178,7 +1189,7 @@ Re-roll any failed Break test</characteristic>
       <categoryLinks>
         <categoryLink id="9884-bdb3-8461-a658" name="Imperial Guard" hidden="false" targetId="ef00-5e3b-a59a-902f" primary="false"/>
         <categoryLink id="b1d7-b79a-c9c1-4783" name="Battle Line" hidden="false" targetId="e69e-43d8-7b4a-0119" primary="true"/>
-        <categoryLink targetId="41ed-6110-b458-67f9" id="414c-4149-6430-c3d6" primary="false" name="Mandatory Squad"/>
+        <categoryLink targetId="41ed-6110-b458-67f9" id="414c-4149-6430-c3d6" primary="false" name="Mandatory Squad (Add Another Command Platoon)"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="c4b8-f876-4340-14ce" name="Guardsman" hidden="false" collective="false" import="true" type="upgrade">
@@ -1340,7 +1351,7 @@ Re-roll any failed Break test</characteristic>
       <categoryLinks>
         <categoryLink id="14ba-ecb2-32eb-7ccb" name="Imperial Guard" hidden="false" targetId="ef00-5e3b-a59a-902f" primary="false"/>
         <categoryLink id="fb54-750b-9330-8068" name="Battle Line" hidden="false" targetId="e69e-43d8-7b4a-0119" primary="true"/>
-        <categoryLink targetId="41ed-6110-b458-67f9" id="0abc-2021-dd52-b391" primary="false" name="Mandatory Squad"/>
+        <categoryLink targetId="41ed-6110-b458-67f9" id="0abc-2021-dd52-b391" primary="false" name="Mandatory Squad (Add Another Command Platoon)"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="caa8-c76f-c6b3-592c" name="Squad Options" hidden="false" collective="false" import="true">
@@ -1378,7 +1389,7 @@ Re-roll any failed Break test</characteristic>
       <categoryLinks>
         <categoryLink id="462e-cc9a-23af-66a0" name="Imperial Guard" hidden="false" targetId="ef00-5e3b-a59a-902f" primary="false"/>
         <categoryLink id="0442-8761-49ab-a0b6" name="Battle Line" hidden="false" targetId="e69e-43d8-7b4a-0119" primary="true"/>
-        <categoryLink targetId="070f-0182-955b-1543" id="f2f9-8cdf-dd33-9ee0" primary="false" name="Additional Unit"/>
+        <categoryLink targetId="070f-0182-955b-1543" id="f2f9-8cdf-dd33-9ee0" primary="false" name="Additional Unit (1 Per 1 Regimental)"/>
         <categoryLink targetId="2c51-43b2-2f6a-f890" id="8007-01be-ae49-f127" primary="false" name="Only 6 Units Per HQ/Command"/>
       </categoryLinks>
       <selectionEntries>
@@ -1488,7 +1499,7 @@ Re-roll any failed Break test</characteristic>
       <categoryLinks>
         <categoryLink id="16e2-67ea-41fb-3e6b" name="Imperial Guard" hidden="false" targetId="ef00-5e3b-a59a-902f" primary="false"/>
         <categoryLink id="8835-989a-d506-28e8" name="Battle Line" hidden="false" targetId="e69e-43d8-7b4a-0119" primary="true"/>
-        <categoryLink id="cca5-81cd-f45c-31c3" name="Additional Unit" hidden="false" targetId="070f-0182-955b-1543" primary="false"/>
+        <categoryLink id="cca5-81cd-f45c-31c3" name="Additional Unit (1 Per 1 Regimental)" hidden="false" targetId="070f-0182-955b-1543" primary="false"/>
         <categoryLink targetId="2c51-43b2-2f6a-f890" id="90b4-ff79-2237-8db1" primary="false" name="Only 6 Units Per HQ/Command"/>
       </categoryLinks>
       <selectionEntries>
@@ -1558,7 +1569,7 @@ Re-roll any failed Break test</characteristic>
       <categoryLinks>
         <categoryLink id="5294-f6d2-eaab-4440" name="Battle Line" hidden="false" targetId="e69e-43d8-7b4a-0119" primary="true"/>
         <categoryLink id="d7f2-0170-083f-0c57" name="Imperial Guard" hidden="false" targetId="ef00-5e3b-a59a-902f" primary="false"/>
-        <categoryLink id="5141-3cae-d019-b598" name="Additional Unit" hidden="false" targetId="070f-0182-955b-1543" primary="false"/>
+        <categoryLink id="5141-3cae-d019-b598" name="Additional Unit (1 Per 1 Regimental)" hidden="false" targetId="070f-0182-955b-1543" primary="false"/>
         <categoryLink targetId="2c51-43b2-2f6a-f890" id="5dc9-bb96-adf5-9e17" primary="false" name="Only 6 Units Per HQ/Command"/>
       </categoryLinks>
       <selectionEntries>
@@ -1605,7 +1616,7 @@ Re-roll any failed Break test</characteristic>
       <categoryLinks>
         <categoryLink id="1932-a8b1-b32a-31c6" name="Imperial Guard" hidden="false" targetId="ef00-5e3b-a59a-902f" primary="false"/>
         <categoryLink id="e519-3794-c523-3bf8" name="Battle Line" hidden="false" targetId="e69e-43d8-7b4a-0119" primary="true"/>
-        <categoryLink id="abd7-e082-499f-a824" name="Additional Unit" hidden="false" targetId="070f-0182-955b-1543" primary="false"/>
+        <categoryLink id="abd7-e082-499f-a824" name="Additional Unit (1 Per 1 Regimental)" hidden="false" targetId="070f-0182-955b-1543" primary="false"/>
         <categoryLink targetId="2c51-43b2-2f6a-f890" id="ebdb-7a1f-d622-ab38" primary="false" name="Only 6 Units Per HQ/Command"/>
       </categoryLinks>
       <selectionEntries>
@@ -1826,7 +1837,7 @@ Re-roll any failed Break test</characteristic>
       <categoryLinks>
         <categoryLink id="066a-7395-07d4-31b1" name="Imperial Guard" hidden="false" targetId="ef00-5e3b-a59a-902f" primary="false"/>
         <categoryLink id="043a-ae1c-1024-8ce4" name="Battle Line" hidden="false" targetId="e69e-43d8-7b4a-0119" primary="true"/>
-        <categoryLink id="24c9-6696-6430-95fb" name="Additional Unit" hidden="false" targetId="070f-0182-955b-1543" primary="false"/>
+        <categoryLink id="24c9-6696-6430-95fb" name="Additional Unit (1 Per 1 Regimental)" hidden="false" targetId="070f-0182-955b-1543" primary="false"/>
         <categoryLink targetId="2c51-43b2-2f6a-f890" id="003d-0f21-6a4b-2f0e" primary="false" name="Only 6 Units Per HQ/Command"/>
       </categoryLinks>
       <selectionEntries>
@@ -1919,7 +1930,7 @@ Re-roll any failed Break test</characteristic>
       <categoryLinks>
         <categoryLink id="98f6-d135-4546-09c6" name="Imperial Guard" hidden="false" targetId="ef00-5e3b-a59a-902f" primary="false"/>
         <categoryLink id="b01e-cc2c-b364-ae89" name="Battle Line" hidden="false" targetId="e69e-43d8-7b4a-0119" primary="true"/>
-        <categoryLink id="ba01-2778-0ef2-ba0a" name="Additional Unit" hidden="false" targetId="070f-0182-955b-1543" primary="false"/>
+        <categoryLink id="ba01-2778-0ef2-ba0a" name="Additional Unit (1 Per 1 Regimental)" hidden="false" targetId="070f-0182-955b-1543" primary="false"/>
         <categoryLink targetId="2c51-43b2-2f6a-f890" id="1c0d-2f4d-96c9-600d" primary="false" name="Only 6 Units Per HQ/Command"/>
       </categoryLinks>
       <selectionEntries>
@@ -2017,8 +2028,8 @@ Re-roll any failed Break test</characteristic>
       <categoryLinks>
         <categoryLink id="d8ba-8c5e-f169-098b" name="Imperial Guard" hidden="false" targetId="ef00-5e3b-a59a-902f" primary="false"/>
         <categoryLink id="0195-857b-3ddf-763e" name="Battle Line" hidden="false" targetId="e69e-43d8-7b4a-0119" primary="true"/>
-        <categoryLink id="66e2-b759-0a4a-f459" name="Additional Unit" hidden="false" targetId="070f-0182-955b-1543" primary="false"/>
-        <categoryLink targetId="2c51-43b2-2f6a-f890" id="bfb8-995e-43a1-3675" primary="false" name="maxUnitsPerPlatoon"/>
+        <categoryLink id="66e2-b759-0a4a-f459" name="Additional Unit (1 Per 1 Regimental)" hidden="false" targetId="070f-0182-955b-1543" primary="false"/>
+        <categoryLink targetId="2c51-43b2-2f6a-f890" id="bfb8-995e-43a1-3675" primary="false" name="Only 6 Units Per HQ/Command"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="096f-d0fa-3849-51ea" name="Battlecannon" hidden="false" collective="false" import="true" type="upgrade">
@@ -2145,8 +2156,8 @@ Re-roll any failed Break test</characteristic>
       <categoryLinks>
         <categoryLink id="cd33-9b79-f575-3be2" name="Imperial Guard" hidden="false" targetId="ef00-5e3b-a59a-902f" primary="false"/>
         <categoryLink id="be5d-0cbc-c201-b36d" name="Battle Line" hidden="false" targetId="e69e-43d8-7b4a-0119" primary="true"/>
-        <categoryLink id="9462-695d-ab1e-eff2" name="Additional Unit" hidden="false" targetId="070f-0182-955b-1543" primary="false"/>
-        <categoryLink targetId="2c51-43b2-2f6a-f890" id="386c-a97e-f05d-3761" primary="false" name="maxUnitsPerPlatoon"/>
+        <categoryLink id="9462-695d-ab1e-eff2" name="Additional Unit (1 Per 1 Regimental)" hidden="false" targetId="070f-0182-955b-1543" primary="false"/>
+        <categoryLink targetId="2c51-43b2-2f6a-f890" id="386c-a97e-f05d-3761" primary="false" name="Only 6 Units Per HQ/Command"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="7381-902b-451a-db63" name="Demolisher" hidden="false" collective="false" import="true" type="upgrade">
@@ -2318,7 +2329,7 @@ Re-roll any failed Break test</characteristic>
       <categoryLinks>
         <categoryLink id="1f19-4702-2b9d-2d0c" name="Imperial Guard" hidden="false" targetId="ef00-5e3b-a59a-902f" primary="false"/>
         <categoryLink id="83d1-d248-6d65-de3b" name="Battle Line" hidden="false" targetId="e69e-43d8-7b4a-0119" primary="true"/>
-        <categoryLink id="a886-9761-d27c-4b13" name="Additional Unit" hidden="false" targetId="070f-0182-955b-1543" primary="false"/>
+        <categoryLink id="a886-9761-d27c-4b13" name="Additional Unit (1 Per 1 Regimental)" hidden="false" targetId="070f-0182-955b-1543" primary="false"/>
         <categoryLink targetId="2c51-43b2-2f6a-f890" id="ba28-6242-db7e-0041" primary="false" name="Only 6 Units Per HQ/Command"/>
       </categoryLinks>
       <entryLinks>
@@ -2409,7 +2420,7 @@ Re-roll any failed Break test</characteristic>
         <categoryLink id="f9fe-96cb-3b30-9be0" name="Imperial Guard" hidden="false" targetId="ef00-5e3b-a59a-902f" primary="false"/>
         <categoryLink id="03a5-84e2-c3e8-2a8e" name="Battle Line" hidden="false" targetId="e69e-43d8-7b4a-0119" primary="true"/>
         <categoryLink id="5d72-76f5-25e5-c3ff" name="Walkers" hidden="false" targetId="bcf7-c063-7aca-a066" primary="false"/>
-        <categoryLink id="cf57-5412-c6f2-e09b" name="Additional Unit" hidden="false" targetId="070f-0182-955b-1543" primary="false"/>
+        <categoryLink id="cf57-5412-c6f2-e09b" name="Additional Unit (1 Per 1 Regimental)" hidden="false" targetId="070f-0182-955b-1543" primary="false"/>
         <categoryLink targetId="2c51-43b2-2f6a-f890" id="1957-9482-4cb1-061c" primary="false" name="Only 6 Units Per HQ/Command"/>
       </categoryLinks>
       <selectionEntries>
@@ -3065,7 +3076,7 @@ Re-roll any failed Break test</characteristic>
         <categoryLink id="c4ed-1d23-b890-bc3e" name="Battle Line" hidden="false" targetId="e69e-43d8-7b4a-0119" primary="true"/>
         <categoryLink id="a0bd-19d5-2b51-d17b" name="Imperial Guard" hidden="false" targetId="ef00-5e3b-a59a-902f" primary="false"/>
         <categoryLink id="3632-9528-5d6e-95ec" name="Skimmer/Bike" hidden="false" targetId="9187-ca83-9433-d2c7" primary="false"/>
-        <categoryLink id="6e03-67d8-c47d-3d99" name="Additional Unit" hidden="false" targetId="070f-0182-955b-1543" primary="false"/>
+        <categoryLink id="6e03-67d8-c47d-3d99" name="Additional Unit (1 Per 1 Regimental)" hidden="false" targetId="070f-0182-955b-1543" primary="false"/>
         <categoryLink targetId="2c51-43b2-2f6a-f890" id="f19b-07c3-dc83-2f45" primary="false" name="Only 6 Units Per HQ/Command"/>
       </categoryLinks>
       <selectionEntryGroups>
@@ -4173,7 +4184,7 @@ Members of the Deathwing must charge him if he is within charge range, or move s
       </infoLinks>
       <categoryLinks>
         <categoryLink id="1da1-c164-58e7-a660" name="Battle Line" hidden="false" targetId="e69e-43d8-7b4a-0119" primary="true"/>
-        <categoryLink id="803a-e7a4-1d3e-214c" name="Additional Unit" hidden="false" targetId="070f-0182-955b-1543" primary="false"/>
+        <categoryLink id="803a-e7a4-1d3e-214c" name="Additional Unit (1 Per 1 Regimental)" hidden="false" targetId="070f-0182-955b-1543" primary="false"/>
         <categoryLink targetId="2c51-43b2-2f6a-f890" id="befd-867d-9481-e944" primary="false" name="Only 6 Units Per HQ/Command"/>
       </categoryLinks>
       <selectionEntries>
@@ -4453,7 +4464,7 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
       <categoryLinks>
         <categoryLink id="db5d-b178-09db-45a7" name="Imperial Guard" hidden="false" targetId="ef00-5e3b-a59a-902f" primary="false"/>
         <categoryLink id="369d-7ccf-93c7-2121" name="Battle Line" hidden="false" targetId="e69e-43d8-7b4a-0119" primary="true"/>
-        <categoryLink id="5ffb-4d92-9d87-1ef0" name="Additional Unit" hidden="false" targetId="070f-0182-955b-1543" primary="false"/>
+        <categoryLink id="5ffb-4d92-9d87-1ef0" name="Additional Unit (1 Per 1 Regimental)" hidden="false" targetId="070f-0182-955b-1543" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="ce19-634f-e99d-aea7" name="Storm Bolter" hidden="false" collective="false" import="true" targetId="8b0c-9093-dc69-c9e8" type="selectionEntry">
@@ -4604,9 +4615,6 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="e23a-3808-6313-dec2" name="Special Weapons" publicationId="4590-6ba9-5482-a1fa" page="61" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc3e-0ec1-8398-7770" type="max"/>
-      </constraints>
       <entryLinks>
         <entryLink id="d3e0-cebc-b9f5-83a8" name="Flamer" hidden="false" collective="false" import="true" targetId="a1e4-59e5-1938-5372" type="selectionEntry">
           <costs>

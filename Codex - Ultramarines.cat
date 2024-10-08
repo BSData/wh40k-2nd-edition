@@ -1650,102 +1650,6 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
             <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a794-78f6-7418-37c5" type="min"/>
           </constraints>
           <selectionEntryGroups>
-            <selectionEntryGroup id="8939-b0f3-68b7-ae56" name="Melee Weapon" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="cace-9280-bba2-7fc7" includeChildSelections="false"/>
-                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="d705-65d8-7c02-7ebc" includeChildSelections="false"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="83bb-1fd7-8a2a-fe56" name="Terminator Assault Weapons" hidden="false" collective="false" import="true" targetId="d13f-8fc7-8fe2-9420" type="selectionEntryGroup"/>
-              </entryLinks>
-              <modifiers>
-                <modifier type="increment" value="1" field="d705-65d8-7c02-7ebc" affects="">
-                  <repeats>
-                    <repeat value="1" repeats="1" field="selections" scope="cddd-3cb1-aeb7-7edb" childId="2d75-a22f-7e3d-98c1" shared="true" roundUp="false" includeChildSelections="true"/>
-                  </repeats>
-                </modifier>
-                <modifier type="increment" value="1" field="cace-9280-bba2-7fc7" affects="">
-                  <repeats>
-                    <repeat value="1" repeats="1" field="selections" scope="cddd-3cb1-aeb7-7edb" childId="2d75-a22f-7e3d-98c1" shared="true" roundUp="false" includeChildSelections="true"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-            </selectionEntryGroup>
-            <selectionEntryGroup id="8bbc-fd6c-912b-ac5b" name="Ranged Weapon" hidden="false" collective="false" import="true">
-              <entryLinks>
-                <entryLink id="1f9e-8d9f-ecf2-c333" name="Terminator Heavy Weapons" hidden="false" collective="false" import="true" targetId="84f3-7757-5bd7-1b67" type="selectionEntryGroup">
-                  <modifierGroups>
-                    <modifierGroup>
-                      <comment>Remove bolter when dual melee</comment>
-                      <modifiers>
-                        <modifier type="increment" field="989c-d0c2-63d0-3dac" value="1">
-                          <conditionGroups>
-                            <conditionGroup type="or">
-                              <conditions>
-                                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e44-58a0-2af5-519c" type="equalTo"/>
-                                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3913-2299-4778-933b" type="equalTo"/>
-                                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d6c8-382a-4d74-36af" type="equalTo"/>
-                              </conditions>
-                            </conditionGroup>
-                          </conditionGroups>
-                        </modifier>
-                        <modifier type="decrement" field="989c-d0c2-63d0-3dac" value="1">
-                          <conditionGroups>
-                            <conditionGroup type="or">
-                              <conditions>
-                                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe7e-3beb-6d63-4daa" type="equalTo"/>
-                                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff45-72d3-781e-6006" type="equalTo"/>
-                              </conditions>
-                            </conditionGroup>
-                          </conditionGroups>
-                        </modifier>
-                      </modifiers>
-                    </modifierGroup>
-                  </modifierGroups>
-                  <constraints>
-                    <constraint field="selections" scope="cddd-3cb1-aeb7-7edb" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2c02-922a-8647-7cda" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="989c-d0c2-63d0-3dac" type="max"/>
-                    <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e413-9c78-b630-868f" type="min"/>
-                  </constraints>
-                </entryLink>
-                <entryLink id="5c2c-fde3-7304-8e49" name="Storm Bolter" hidden="false" collective="false" import="true" targetId="8b0c-9093-dc69-c9e8" type="selectionEntry">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8449-8c6a-1fd0-562d" type="max"/>
-                    <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f11c-6f93-da90-db8b" type="min"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="increment" value="1" field="f11c-6f93-da90-db8b">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition type="equalTo" value="1" field="selections" scope="2d75-a22f-7e3d-98c1" childId="4e44-58a0-2af5-519c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                            <condition type="equalTo" value="1" field="selections" scope="2d75-a22f-7e3d-98c1" childId="3913-2299-4778-933b" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                            <condition type="equalTo" value="1" field="selections" scope="2d75-a22f-7e3d-98c1" childId="d6c8-382a-4d74-36af" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                      <repeats>
-                        <repeat value="1" repeats="1" field="selections" scope="cddd-3cb1-aeb7-7edb" childId="2d75-a22f-7e3d-98c1" shared="true" roundUp="false"/>
-                      </repeats>
-                    </modifier>
-                    <modifier type="increment" value="1" field="8449-8c6a-1fd0-562d">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition type="equalTo" value="1" field="selections" scope="2d75-a22f-7e3d-98c1" childId="4e44-58a0-2af5-519c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                            <condition type="equalTo" value="1" field="selections" scope="2d75-a22f-7e3d-98c1" childId="3913-2299-4778-933b" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                            <condition type="equalTo" value="1" field="selections" scope="2d75-a22f-7e3d-98c1" childId="d6c8-382a-4d74-36af" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                      <repeats>
-                        <repeat value="1" repeats="1" field="selections" scope="cddd-3cb1-aeb7-7edb" childId="2d75-a22f-7e3d-98c1" shared="true" roundUp="false"/>
-                      </repeats>
-                    </modifier>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-            </selectionEntryGroup>
             <selectionEntryGroup id="196a-720d-f669-177b" name="1 Wargear Card Per Terminator" hidden="false" collective="false" import="true">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
@@ -1797,100 +1701,6 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="26da-6678-631a-8503" type="max"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="622c-4fdb-b734-6df4" type="min"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntryGroup>
-            <selectionEntryGroup id="2686-d578-fb3d-11c6" name="Melee Weapon" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="af5b-2143-e4ca-f20a" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="489d-7f2c-428a-0464" type="min"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="87ac-4f88-d66c-2393" name="Terminator Assault Weapons" hidden="false" collective="false" import="true" targetId="d13f-8fc7-8fe2-9420" type="selectionEntryGroup"/>
-              </entryLinks>
-            </selectionEntryGroup>
-            <selectionEntryGroup id="859e-5b29-0852-b9af" name="Ranged Weapon" hidden="false" collective="false" import="true">
-              <entryLinks>
-                <entryLink id="9aeb-74ed-bc40-b47c" name="Terminator Heavy Weapons" hidden="false" collective="false" import="true" targetId="84f3-7757-5bd7-1b67" type="selectionEntryGroup">
-                  <modifierGroups>
-                    <modifierGroup>
-                      <comment>Remove bolter when dual melee</comment>
-                      <modifiers>
-                        <modifier type="increment" field="e1ca-2772-8cdf-0e67" value="1">
-                          <conditionGroups>
-                            <conditionGroup type="or">
-                              <conditions>
-                                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d6c8-382a-4d74-36af" type="equalTo"/>
-                                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3913-2299-4778-933b" type="equalTo"/>
-                                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e44-58a0-2af5-519c" type="equalTo"/>
-                              </conditions>
-                            </conditionGroup>
-                          </conditionGroups>
-                        </modifier>
-                        <modifier type="decrement" field="e1ca-2772-8cdf-0e67" value="1">
-                          <conditionGroups>
-                            <conditionGroup type="or">
-                              <conditions>
-                                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe7e-3beb-6d63-4daa" type="equalTo"/>
-                                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff45-72d3-781e-6006" type="equalTo"/>
-                              </conditions>
-                            </conditionGroup>
-                          </conditionGroups>
-                        </modifier>
-                      </modifiers>
-                    </modifierGroup>
-                  </modifierGroups>
-                  <constraints>
-                    <constraint field="selections" scope="cddd-3cb1-aeb7-7edb" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b944-e579-59ff-94e8" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e1ca-2772-8cdf-0e67" type="max"/>
-                    <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7349-62ed-7a2f-a1b0" type="min"/>
-                  </constraints>
-                </entryLink>
-                <entryLink id="70b3-686c-810e-1d54" name="Storm Bolter" hidden="false" collective="false" import="true" targetId="8b0c-9093-dc69-c9e8" type="selectionEntry">
-                  <modifierGroups>
-                    <modifierGroup>
-                      <comment>Remove bolter when dual melee</comment>
-                      <modifiers>
-                        <modifier type="increment" field="5f9f-9a26-9292-9d86" value="1">
-                          <conditionGroups>
-                            <conditionGroup type="or">
-                              <conditions>
-                                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e44-58a0-2af5-519c" type="equalTo"/>
-                                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3913-2299-4778-933b" type="equalTo"/>
-                                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d6c8-382a-4d74-36af" type="equalTo"/>
-                              </conditions>
-                            </conditionGroup>
-                          </conditionGroups>
-                        </modifier>
-                        <modifier type="decrement" field="2b2b-94d0-f832-2d44" value="1">
-                          <conditionGroups>
-                            <conditionGroup type="or">
-                              <conditions>
-                                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff45-72d3-781e-6006" type="equalTo"/>
-                                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe7e-3beb-6d63-4daa" type="equalTo"/>
-                              </conditions>
-                            </conditionGroup>
-                          </conditionGroups>
-                        </modifier>
-                        <modifier type="set" field="hidden" value="true">
-                          <conditionGroups>
-                            <conditionGroup type="or">
-                              <conditions>
-                                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bd6a-bc0f-d03b-6ef0" type="equalTo"/>
-                                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4da3-a884-c204-2800" type="equalTo"/>
-                                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8953-2383-fa02-9003" type="equalTo"/>
-                                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dd73-9248-930b-6800" type="equalTo"/>
-                              </conditions>
-                            </conditionGroup>
-                          </conditionGroups>
-                        </modifier>
-                      </modifiers>
-                    </modifierGroup>
-                  </modifierGroups>
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b2b-94d0-f832-2d44" type="max"/>
-                    <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f9f-9a26-9292-9d86" type="min"/>
                   </constraints>
                 </entryLink>
               </entryLinks>
@@ -1966,6 +1776,95 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="315"/>
       </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Weapons" id="81ab-9806-ca6d-2532" hidden="false">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Ranged Weapon" id="d078-87fa-4e81-1323" hidden="false" collective="false" import="true">
+              <entryLinks>
+                <entryLink import="true" name="Terminator Heavy Weapons" hidden="false" id="e5e0-b65a-19fe-5283" collective="false" targetId="84f3-7757-5bd7-1b67" type="selectionEntryGroup">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9252-0d95-0b38-aeaa" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="4b36-2f0c-2b2b-80fd" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="decrement" value="1" field="9252-0d95-0b38-aeaa">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="greaterThan" value="4" field="selections" scope="cddd-3cb1-aeb7-7edb" childId="ff45-72d3-781e-6006" shared="true" includeChildSelections="true"/>
+                            <condition type="greaterThan" value="4" field="selections" scope="cddd-3cb1-aeb7-7edb" childId="bc7d-3f6b-9ee5-8e42" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Storm Bolter" hidden="false" id="8a5a-77e5-d291-caf4" collective="false" targetId="8b0c-9093-dc69-c9e8" type="selectionEntry">
+                  <constraints>
+                    <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="fbcb-5ab7-5f7c-8e90" includeChildSelections="false"/>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="2532-bc07-410b-920f" includeChildSelections="false"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="increment" value="1" field="fbcb-5ab7-5f7c-8e90">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="cddd-3cb1-aeb7-7edb" childId="2d75-a22f-7e3d-98c1" shared="true" roundUp="false"/>
+                        <repeat value="1" repeats="1" field="selections" scope="cddd-3cb1-aeb7-7edb" childId="ce84-94f9-cb96-2c61" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                    <modifier type="increment" value="1" field="2532-bc07-410b-920f">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="cddd-3cb1-aeb7-7edb" childId="2d75-a22f-7e3d-98c1" shared="true" roundUp="false"/>
+                        <repeat value="1" repeats="1" field="selections" scope="cddd-3cb1-aeb7-7edb" childId="ce84-94f9-cb96-2c61" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="decrement" value="1" field="fbcb-5ab7-5f7c-8e90">
+                          <repeats>
+                            <repeat value="1" repeats="1" field="selections" scope="cddd-3cb1-aeb7-7edb" childId="9459-0f24-d871-d900" shared="true" roundUp="false" includeChildSelections="true"/>
+                            <repeat value="1" repeats="1" field="selections" scope="cddd-3cb1-aeb7-7edb" childId="0e9d-adbe-5f0e-e501" shared="true" roundUp="false" includeChildSelections="true"/>
+                            <repeat value="1" repeats="1" field="selections" scope="cddd-3cb1-aeb7-7edb" childId="e5e0-b65a-19fe-5283" shared="true" roundUp="false" includeChildSelections="true"/>
+                          </repeats>
+                        </modifier>
+                        <modifier type="decrement" value="1" field="2532-bc07-410b-920f">
+                          <repeats>
+                            <repeat value="1" repeats="1" field="selections" scope="cddd-3cb1-aeb7-7edb" childId="fe7e-3beb-6d63-4daa" shared="true" roundUp="false"/>
+                            <repeat value="1" repeats="1" field="selections" scope="cddd-3cb1-aeb7-7edb" childId="ff45-72d3-781e-6006" shared="true" roundUp="false"/>
+                            <repeat value="1" repeats="1" field="selections" scope="cddd-3cb1-aeb7-7edb" childId="e5e0-b65a-19fe-5283" shared="true" roundUp="false" includeChildSelections="true"/>
+                          </repeats>
+                        </modifier>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Melee Weapon" id="8226-9fe1-e1c1-480e" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8217-0e57-7b68-8435" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6b5b-bbf1-a902-772f" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Terminator Assault Weapons" hidden="false" id="6495-7e0e-7e1f-9025" collective="false" targetId="d13f-8fc7-8fe2-9420" type="selectionEntryGroup"/>
+              </entryLinks>
+              <modifiers>
+                <modifier type="increment" value="1" field="6b5b-bbf1-a902-772f" affects="">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="cddd-3cb1-aeb7-7edb" childId="2d75-a22f-7e3d-98c1" shared="true" roundUp="false" includeChildSelections="true"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" value="1" field="8217-0e57-7b68-8435" affects="">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="cddd-3cb1-aeb7-7edb" childId="2d75-a22f-7e3d-98c1" shared="true" roundUp="false" includeChildSelections="true"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="a9c2-db98-1732-541e" name="Terminator Sergeant" hidden="false" collective="false" import="true" type="upgrade">
       <costs>
@@ -4446,9 +4345,6 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
     <selectionEntryGroup id="84f3-7757-5bd7-1b67" name="Terminator Heavy Weapons" publicationId="4590-6ba9-5482-a1fa" page="62" hidden="false" collective="false" import="true">
       <entryLinks>
         <entryLink id="1b53-0b2f-12d9-2c18" name="Cyclone Terminator Missile Launcher" hidden="false" collective="false" import="true" targetId="bd6a-bc0f-d03b-6ef0" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="99d9-62fb-57ff-8704" type="max"/>
-          </constraints>
           <entryLinks>
             <entryLink id="95e9-2dbe-8556-2b66" name="Storm Bolter" hidden="false" collective="false" import="true" targetId="8b0c-9093-dc69-c9e8" type="selectionEntry">
               <constraints>
@@ -4462,17 +4358,11 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
           </costs>
         </entryLink>
         <entryLink id="f4a8-1726-1a1e-c029" name="Assault Cannon" hidden="false" collective="false" import="true" targetId="8953-2383-fa02-9003" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="abda-0bcf-6086-9058" type="max"/>
-          </constraints>
           <costs>
             <cost name="pts" typeId="points" value="41"/>
           </costs>
         </entryLink>
         <entryLink id="a3e4-a524-f8e2-4217" name="Heavy Flamer" hidden="false" collective="false" import="true" targetId="4da3-a884-c204-2800" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="637a-7799-90b6-a6c0" type="max"/>
-          </constraints>
           <costs>
             <cost name="pts" typeId="points" value="21"/>
           </costs>
@@ -4481,18 +4371,10 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
     </selectionEntryGroup>
     <selectionEntryGroup id="d13f-8fc7-8fe2-9420" name="Terminator Assault Weapons" publicationId="4590-6ba9-5482-a1fa" page="62" hidden="false" collective="false" import="true" defaultSelectionEntryId="2290-38ce-7119-ef36">
       <entryLinks>
-        <entryLink id="2290-38ce-7119-ef36" name="Power Sword" hidden="false" collective="false" import="true" targetId="4e44-58a0-2af5-519c" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2d75-a22f-7e3d-98c1" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
+        <entryLink id="2290-38ce-7119-ef36" name="Power Sword (Sergeant Only)" hidden="false" collective="false" import="true" targetId="4e44-58a0-2af5-519c" type="selectionEntry">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7cef-ce93-9ccd-5457" includeChildSelections="false"/>
+          </constraints>
         </entryLink>
         <entryLink id="0e9d-adbe-5f0e-e501" name="Lightning Claws" hidden="false" collective="false" import="true" targetId="ff45-72d3-781e-6006" type="selectionEntry">
           <costs>

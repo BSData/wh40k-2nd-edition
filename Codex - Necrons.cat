@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f649-eb44-08cb-0ba3" name="Codex - Necrons" revision="1" battleScribeVersion="2.03" authorName="Boff" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="f649-eb44-08cb-0ba3" name="Codex - Necrons" revision="1" battleScribeVersion="2.03" authorName="Boff" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>V1 is just the White Dwarf units. May add the fan rules in later if people want</readme>
   <categoryEntries>
     <categoryEntry id="2ea9-09f2-fdbd-4ae7" name="Characters" hidden="false"/>
@@ -11,17 +11,17 @@
       <categoryLinks>
         <categoryLink id="3e9a-959b-d825-797e" name="Characters" hidden="false" targetId="2ea9-09f2-fdbd-4ae7" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="50.0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="187e-1047-0733-759e" type="max"/>
+            <constraint field="points" scope="parent" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="187e-1047-0733-759e" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="4709-48b0-040d-5575" name="Squads" hidden="false" targetId="a674-4bce-893e-4a31" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="25.0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="01b2-1eb4-5b3b-5a1d" type="min"/>
+            <constraint field="points" scope="parent" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="01b2-1eb4-5b3b-5a1d" type="min"/>
           </constraints>
         </categoryLink>
         <categoryLink id="7222-123e-60f1-c650" name="Support" hidden="false" targetId="d343-afc5-46fd-9c02" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="50.0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="158f-3eb2-88d6-bff3" type="max"/>
+            <constraint field="points" scope="parent" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="158f-3eb2-88d6-bff3" type="max"/>
           </constraints>
         </categoryLink>
       </categoryLinks>
@@ -61,8 +61,8 @@ Necrons which recover must try to join up with a Necron unit of the same type as
   <sharedSelectionEntries>
     <selectionEntry id="606a-4a36-b1c4-fd10" name="Staff of Light" publicationId="8eed-45fd-d4be-9a1b" page="" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="669e-8963-93f1-3b6a" type="max"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4107-eea7-c5e7-a4dc" type="min"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="669e-8963-93f1-3b6a" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4107-eea7-c5e7-a4dc" type="min"/>
       </constraints>
       <infoLinks>
         <infoLink id="218f-aa85-385f-7535" name="Staff of Light" hidden="false" targetId="0cc8-5789-b5cf-1db2" type="profile"/>
@@ -74,7 +74,7 @@ Necrons which recover must try to join up with a Necron unit of the same type as
         <infoLink id="1415-0975-a325-777f" name="Necron Lord" hidden="false" targetId="557c-cb2d-cb45-6cbb" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="4348-ec97-6515-dc7a" name="New CategoryLink" hidden="false" targetId="2ea9-09f2-fdbd-4ae7" primary="true"/>
+        <categoryLink id="4348-ec97-6515-dc7a" name="Characters" hidden="false" targetId="2ea9-09f2-fdbd-4ae7" primary="true"/>
         <categoryLink id="3e43-fde6-3902-95e3" name="Necrons" hidden="false" targetId="722d-8a5c-d442-498a" primary="false"/>
       </categoryLinks>
       <entryLinks>
@@ -82,13 +82,13 @@ Necrons which recover must try to join up with a Necron unit of the same type as
         <entryLink id="b0e2-76a4-8977-9709" name="Armoured Body" hidden="false" collective="false" import="true" targetId="19c2-4ca5-46a6-ad63" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="84.0"/>
+        <cost name="pts" typeId="points" value="84"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="19c2-4ca5-46a6-ad63" name="Armoured Body" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="87df-3c40-7347-e26a" type="min"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc45-10ff-9528-4d72" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="87df-3c40-7347-e26a" type="min"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc45-10ff-9528-4d72" type="max"/>
       </constraints>
       <infoLinks>
         <infoLink id="4e76-fc09-4f49-bbc0" name="Armoured Body" hidden="false" targetId="a851-11cb-78f5-a9b4" type="profile"/>
@@ -96,20 +96,20 @@ Necrons which recover must try to join up with a Necron unit of the same type as
     </selectionEntry>
     <selectionEntry id="e075-3b44-b3c3-8834" name="Necron Warrior Squad" publicationId="8eed-45fd-d4be-9a1b" hidden="false" collective="false" import="true" type="upgrade">
       <categoryLinks>
-        <categoryLink id="c7a5-7de4-4b08-3fa0" name="New CategoryLink" hidden="false" targetId="a674-4bce-893e-4a31" primary="true"/>
+        <categoryLink id="c7a5-7de4-4b08-3fa0" name="Squads" hidden="false" targetId="a674-4bce-893e-4a31" primary="true"/>
         <categoryLink id="f7d4-0a05-2b60-f365" name="Necrons" hidden="false" targetId="722d-8a5c-d442-498a" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="a77a-781a-4db8-b21a" name="Necron Warriors" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e939-a6a2-c04d-0d2f" type="min"/>
-            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e32e-a24e-3365-de63" type="max"/>
+            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e939-a6a2-c04d-0d2f" type="min"/>
+            <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e32e-a24e-3365-de63" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="35c6-a13f-571c-6d79" name="Necron Warrior" hidden="false" targetId="e17a-064b-0b34-f7a8" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="44.0"/>
+            <cost name="pts" typeId="points" value="44"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -117,8 +117,8 @@ Necrons which recover must try to join up with a Necron unit of the same type as
         <entryLink id="48fa-f867-e3b8-d1fe" name="Armoured Body" hidden="false" collective="false" import="true" targetId="19c2-4ca5-46a6-ad63" type="selectionEntry"/>
         <entryLink id="9623-44f1-36c6-fb27" name="Gauss-Flayer Gun" hidden="false" collective="false" import="true" targetId="4e51-e456-76f2-ef94" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3689-459e-f4b5-f156" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d7d-71e9-4a81-0deb" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3689-459e-f4b5-f156" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d7d-71e9-4a81-0deb" type="min"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -131,14 +131,14 @@ Necrons which recover must try to join up with a Necron unit of the same type as
     </selectionEntry>
     <selectionEntry id="16d1-76ae-1849-9e8b" name="Scarab" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="increment" field="b55f-8785-8f4b-984e" value="1.0">
+        <modifier type="increment" field="b55f-8785-8f4b-984e" value="1">
           <repeats>
-            <repeat field="selections" scope="roster" value="5.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a77a-781a-4db8-b21a" repeats="2" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="5" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a77a-781a-4db8-b21a" repeats="2" roundUp="false"/>
           </repeats>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b55f-8785-8f4b-984e" type="max"/>
+        <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b55f-8785-8f4b-984e" type="max"/>
       </constraints>
       <infoLinks>
         <infoLink id="fa7a-46cf-8f44-80d4" name="Scarab" hidden="false" targetId="8cf8-78a1-18b8-2317" type="profile"/>
@@ -147,14 +147,14 @@ Necrons which recover must try to join up with a Necron unit of the same type as
         <infoLink id="791d-d5fb-663c-78ad" name="Scarab Movement" hidden="false" targetId="c972-1d7e-f0a0-19ce" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="558d-c20c-147d-42d2" name="New CategoryLink" hidden="false" targetId="a674-4bce-893e-4a31" primary="true"/>
+        <categoryLink id="558d-c20c-147d-42d2" name="Squads" hidden="false" targetId="a674-4bce-893e-4a31" primary="true"/>
         <categoryLink id="510d-5c0e-4974-1acd" name="Necrons" hidden="false" targetId="722d-8a5c-d442-498a" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="b992-dd11-c0a0-3dad" name="Armoured Body" hidden="false" collective="false" import="true" targetId="19c2-4ca5-46a6-ad63" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="30.0"/>
+        <cost name="pts" typeId="points" value="30"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2d33-f5d2-342c-bac6" name="Necron Destroyer" hidden="false" collective="false" import="true" type="upgrade">
@@ -169,27 +169,27 @@ Necrons which recover must try to join up with a Necron unit of the same type as
       <selectionEntries>
         <selectionEntry id="8489-1168-968c-ca3f" name="Necron Warriors" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="363e-d073-bfdb-c156" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c611-a22d-f157-93a4" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="363e-d073-bfdb-c156" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c611-a22d-f157-93a4" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="22c3-b879-f464-30b5" name="Necron Warrior" hidden="false" targetId="e17a-064b-0b34-f7a8" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="44.0"/>
+            <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="2391-b386-224d-ae8d" name="Gaus Cannon" hidden="false" collective="false" import="true" targetId="c000-2cad-9f8c-9170" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba0f-1de4-4194-04a7" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff35-4fed-1e29-2586" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba0f-1de4-4194-04a7" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff35-4fed-1e29-2586" type="min"/>
           </constraints>
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="75.0"/>
+        <cost name="pts" typeId="points" value="75"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c000-2cad-9f8c-9170" name="Gaus Cannon" hidden="false" collective="false" import="true" type="upgrade">
@@ -204,8 +204,7 @@ Necrons which recover must try to join up with a Necron unit of the same type as
       <description>If you roll a 6 when determining Armour Penetration, roll a further D6 and add it to the score, resulting in a total penetration of 2D6+4 points</description>
     </rule>
     <rule id="f8b4-3df7-bcce-5673" name="Destroyer Damage Table" publicationId="8eed-45fd-d4be-9a1b" hidden="false">
-      <description>
-1: Gauss Cannon is destroyed
+      <description>1: Gauss Cannon is destroyed
 2: Destroyer may only move at Slow speed for the rest of the game.
 3: Roll a D6 at the start of each of the Destroyer‘s movement phases. On a 4+, the
 Necron retains control and can move normally; otherwise, the Destroyer moves out of
@@ -221,15 +220,14 @@ If the Warrior is hit, roll to wound the Warrior as normal; if the Necron is sla
 control of the vehicle</description>
     </rule>
     <rule id="49cc-8456-7ce2-dd4f" name="Scarabs" publicationId="8eed-45fd-d4be-9a1b" hidden="false">
-      <description>They do not form units and fight independently like characters do. Enemy troops do not have to shoot at Scarabs if they are the closest unit.  
-</description>
+      <description>They do not form units and fight independently like characters do. Enemy troops do not have to shoot at Scarabs if they are the closest unit.</description>
     </rule>
     <rule id="c972-1d7e-f0a0-19ce" name="Scarab Movement" publicationId="8eed-45fd-d4be-9a1b" hidden="false">
-      <description>Instead of its normal 8” move, a Scarab may make a leap of up to 16”. Leaping Scarabs may move over any terrain during their leap without penalty, but are assumed to land at the end of the leap. </description>
+      <description>Instead of its normal 8” move, a Scarab may make a leap of up to 16”. Leaping Scarabs may move over any terrain during their leap without penalty, but are assumed to land at the end of the leap.</description>
     </rule>
     <rule id="72ef-d63a-b193-5ca7" name="New Rule" hidden="false"/>
     <rule id="3b0a-f62e-7bd0-6210" name="Metal Eater" publicationId="8eed-45fd-d4be-9a1b" hidden="false">
-      <description>Scarabs attached to a vehicle or a unit with armour locations reduce the Armour Value at all locations by 3 while they are attached. This effect is cumulative; so a Leman Russ Battle Tank with three Scarabs attached to it would have a Turret armour value of 16 from the front (25-9). It does not matter where the Scarabs are physically attached to the tank, since all armour locations are affected equally. </description>
+      <description>Scarabs attached to a vehicle or a unit with armour locations reduce the Armour Value at all locations by 3 while they are attached. This effect is cumulative; so a Leman Russ Battle Tank with three Scarabs attached to it would have a Turret armour value of 16 from the front (25-9). It does not matter where the Scarabs are physically attached to the tank, since all armour locations are affected equally.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

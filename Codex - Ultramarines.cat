@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="138e-c671-3180-f615" name="Codex - Ultramarines" revision="18" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="138e-c671-3180-f615" name="Codex - Ultramarines" revision="19" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Ultramarines Codex</readme>
   <categoryEntries>
     <categoryEntry id="8be3-6d17-d7d3-faa0" name="Characters" hidden="false"/>
@@ -1850,12 +1850,12 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
                 <entryLink import="true" name="Terminator Assault Weapons" hidden="false" id="6495-7e0e-7e1f-9025" collective="false" targetId="d13f-8fc7-8fe2-9420" type="selectionEntryGroup"/>
               </entryLinks>
               <modifiers>
-                <modifier type="increment" value="1" field="6b5b-bbf1-a902-772f" affects="">
+                <modifier type="increment" value="1" field="6b5b-bbf1-a902-772f">
                   <repeats>
                     <repeat value="1" repeats="1" field="selections" scope="cddd-3cb1-aeb7-7edb" childId="2d75-a22f-7e3d-98c1" shared="true" roundUp="false" includeChildSelections="true"/>
                   </repeats>
                 </modifier>
-                <modifier type="increment" value="1" field="8217-0e57-7b68-8435" affects="">
+                <modifier type="increment" value="1" field="8217-0e57-7b68-8435">
                   <repeats>
                     <repeat value="1" repeats="1" field="selections" scope="cddd-3cb1-aeb7-7edb" childId="2d75-a22f-7e3d-98c1" shared="true" roundUp="false" includeChildSelections="true"/>
                   </repeats>
@@ -4371,7 +4371,7 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
     </selectionEntryGroup>
     <selectionEntryGroup id="d13f-8fc7-8fe2-9420" name="Terminator Assault Weapons" publicationId="4590-6ba9-5482-a1fa" page="62" hidden="false" collective="false" import="true" defaultSelectionEntryId="2290-38ce-7119-ef36">
       <entryLinks>
-        <entryLink id="2290-38ce-7119-ef36" name="Power Sword (Sergeant Only)" hidden="false" collective="false" import="true" targetId="4e44-58a0-2af5-519c" type="selectionEntry">
+        <entryLink id="2290-38ce-7119-ef36" name="Power Sword" hidden="false" collective="false" import="true" targetId="4e44-58a0-2af5-519c" type="selectionEntry">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7cef-ce93-9ccd-5457" includeChildSelections="false"/>
           </constraints>
@@ -4895,6 +4895,11 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </entryLink>
+        <entryLink import="true" name="Lascannon" hidden="false" id="e961-1d38-4ef1-5cf3" type="selectionEntry" targetId="601b-a85f-4654-80d0">
+          <costs>
+            <cost name="pts" typeId="points" value="30"/>
+          </costs>
+        </entryLink>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="57f9-e471-ddcb-3e7d" name="Tarantula Weapons" publicationId="06e5-8e36-e8c8-aec3" page="68" hidden="false" collective="false" import="true">
@@ -4943,7 +4948,7 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
                 <cost name="pts" typeId="points" value="90"/>
               </costs>
             </entryLink>
-            <entryLink id="aea4-2a15-558f-e100" name="Heavy Bolter" page="" hidden="false" collective="false" import="true" targetId="4c82-0e56-d20a-6b1c" type="selectionEntry">
+            <entryLink id="aea4-2a15-558f-e100" name="Heavy Bolter" hidden="false" collective="false" import="true" targetId="4c82-0e56-d20a-6b1c" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
@@ -5799,7 +5804,7 @@ Turret</characteristic>
         <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">8</characteristic>
       </characteristics>
     </profile>
-    <profile id="cd72-030f-1907-2d9e" name="The Animus Malorum" publicationId="8eed-45fd-d4be-9a1b" page="" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+    <profile id="cd72-030f-1907-2d9e" name="The Animus Malorum" publicationId="8eed-45fd-d4be-9a1b" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
       <characteristics>
         <characteristic name="Special" typeId="f917-8cd8-7592-47dd">During Psychic phase may target a single living enemy model within 12&quot;. You may use between 1 and 3 Force cards to power the skull. Roll a D6 for every Force card used. If the result is more than the target&apos;s Ld value then the model is killed regardless of Wounds or armour. If killed in this way then you may resurrect a dead Legion of the Damned model, placed within normal unit coherency. Cannot increase unit beyond original size. Can be nullified like a psychic power on a 4+</characteristic>
       </characteristics>

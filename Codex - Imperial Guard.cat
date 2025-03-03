@@ -1491,6 +1491,13 @@ Re-roll any failed Break test</characteristic>
           </conditionGroups>
         </modifier>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Veteran Abilities" hidden="false" id="e244-776e-85e2-932c" collective="false" targetId="d15e-9b29-96bc-9bce" type="selectionEntryGroup">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7afa-e19c-dcb2-9c38" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry id="4d8b-06db-e312-c297" name="Ogryns" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
@@ -1812,6 +1819,13 @@ Re-roll any failed Break test</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="130"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Veteran Abilities" hidden="false" id="cff6-964f-c017-7481" collective="false" targetId="d15e-9b29-96bc-9bce" type="selectionEntryGroup">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="afac-83a7-e2ce-dff4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry id="bcc7-973a-5302-8722" name="Hotshot Lasgun" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
@@ -4688,6 +4702,13 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="30" field="costs">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="9e10-1a9e-ad76-95d6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="2f33-8a1f-3446-351a" name="Dead Eye Shots" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -4710,6 +4731,17 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="4d8b-06db-e312-c297" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="acce-b99d-1f74-862b" name="Guerrillas" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -4721,6 +4753,17 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
           <costs>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="4d8b-06db-e312-c297" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="467b-be32-2527-bd70" name="Hardened Fighters" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -4743,6 +4786,13 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="50" field="costs">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="9e10-1a9e-ad76-95d6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="666f-2cfa-7222-b75a" name="Slick Crew" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -4765,6 +4815,19 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
           <costs>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="425f-9e96-3ca7-7cfd" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="874f-1bf5-6adc-d5bf" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="6451-0996-7569-51b0" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="5e7a-716a-4ed6-2fdc" name="Stealthy" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -4776,6 +4839,17 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="4d8b-06db-e312-c297" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="8170-fc34-899d-0dd4" name="Tank Hunters" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>

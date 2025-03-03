@@ -767,6 +767,11 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
             <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="15dd-cf7e-3660-d1b1" type="max"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Veteran Abilities" hidden="false" id="3ff7-e026-d2ed-8085" collective="false" targetId="d15e-9b29-96bc-9bce" type="selectionEntryGroup">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c89-25ba-ff8d-46b8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="60"/>

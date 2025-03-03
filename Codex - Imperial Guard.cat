@@ -1623,6 +1623,9 @@ Re-roll any failed Break test</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="80"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Veteran Abilities" hidden="false" id="e293-101a-46d0-cf69" type="selectionEntryGroup" targetId="d15e-9b29-96bc-9bce"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry id="5a60-00ab-4faf-3853" name="Storm Troopers" hidden="false" collective="false" import="true" type="upgrade">
       <categoryLinks>
@@ -4708,9 +4711,9 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
             <cost name="pts" typeId="points" value="10"/>
           </costs>
           <modifiers>
-            <modifier type="set" value="30" field="costs">
+            <modifier type="set" value="30" field="points">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="9e10-1a9e-ad76-95d6" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9e10-1a9e-ad76-95d6" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -4741,7 +4744,7 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="4d8b-06db-e312-c297" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4d8b-06db-e312-c297" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -4792,9 +4795,9 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
             <cost name="pts" typeId="points" value="25"/>
           </costs>
           <modifiers>
-            <modifier type="set" value="50" field="costs">
+            <modifier type="set" value="50" field="points">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="9e10-1a9e-ad76-95d6" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9e10-1a9e-ad76-95d6" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -4825,9 +4828,9 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="425f-9e96-3ca7-7cfd" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="874f-1bf5-6adc-d5bf" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="6451-0996-7569-51b0" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="425f-9e96-3ca7-7cfd" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="874f-1bf5-6adc-d5bf" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6451-0996-7569-51b0" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -4849,7 +4852,10 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="4d8b-06db-e312-c297" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4d8b-06db-e312-c297" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="425f-9e96-3ca7-7cfd" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="874f-1bf5-6adc-d5bf" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6451-0996-7569-51b0" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>

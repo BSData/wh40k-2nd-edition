@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="82c6-3e15-54c5-a35f" name="Codex - Orks" revision="10" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="82c6-3e15-54c5-a35f" name="Codex - Orks" revision="11" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="23ab-e52d-6e65-01d5" name="Characters" hidden="false"/>
     <categoryEntry id="f72b-82f4-2a38-7d26" name="Mobs" hidden="false"/>
@@ -966,8 +966,8 @@
         <entryLink id="8b9d-6070-3043-8d1c" name="Psyker" hidden="false" collective="false" import="true" targetId="56e9-7608-b945-ac81" type="selectionEntry"/>
         <entryLink id="a3ea-cf9a-d7a0-7058" name="Minderz" hidden="false" collective="false" import="true" targetId="64fc-9ae7-b32b-6a64" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83d5-b618-fb39-1763" type="min"/>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1111-bfe0-4b2f-3533" type="max"/>
+            <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83d5-b618-fb39-1763" type="min"/>
+            <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1111-bfe0-4b2f-3533" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="e34a-6ec3-6f0c-7801" name="Wargear Cards" hidden="false" collective="false" import="true" targetId="fff1-a6e4-735f-541f" type="selectionEntryGroup">

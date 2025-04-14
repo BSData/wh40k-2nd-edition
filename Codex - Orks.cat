@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="82c6-3e15-54c5-a35f" name="Codex - Orks" revision="11" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="82c6-3e15-54c5-a35f" name="Codex - Orks" revision="10" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="23ab-e52d-6e65-01d5" name="Characters" hidden="false"/>
     <categoryEntry id="f72b-82f4-2a38-7d26" name="Mobs" hidden="false"/>
@@ -966,8 +966,8 @@
         <entryLink id="8b9d-6070-3043-8d1c" name="Psyker" hidden="false" collective="false" import="true" targetId="56e9-7608-b945-ac81" type="selectionEntry"/>
         <entryLink id="a3ea-cf9a-d7a0-7058" name="Minderz" hidden="false" collective="false" import="true" targetId="64fc-9ae7-b32b-6a64" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83d5-b618-fb39-1763" type="min"/>
-            <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1111-bfe0-4b2f-3533" type="max"/>
+            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83d5-b618-fb39-1763" type="min"/>
+            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1111-bfe0-4b2f-3533" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="e34a-6ec3-6f0c-7801" name="Wargear Cards" hidden="false" collective="false" import="true" targetId="fff1-a6e4-735f-541f" type="selectionEntryGroup">
@@ -1151,12 +1151,6 @@
         <entryLink id="25ef-b974-491d-6151" name="Special Weapons" hidden="false" collective="false" import="true" targetId="f7fe-0d89-7999-1912" type="selectionEntryGroup"/>
         <entryLink id="65aa-d7df-c021-170f" name="Stikkbombz" hidden="false" collective="false" import="true" targetId="0fa9-1829-1611-efc8" type="selectionEntryGroup"/>
         <entryLink id="d567-3cdc-3b51-cbd1" name="Heavy Weapons" hidden="false" collective="false" import="true" targetId="3285-06f0-7e31-29ea" type="selectionEntryGroup"/>
-        <entryLink id="9dee-92de-2799-793f" name="Bolt Pistol" hidden="false" collective="false" import="true" targetId="b5bb-7853-53cb-bec4" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b9fc-1535-048e-173d" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="55ae-1ae1-6859-f163" type="min"/>
-          </constraints>
-        </entryLink>
         <entryLink id="5db3-fec5-a679-1608" name="Axe" hidden="false" collective="false" import="true" targetId="c2ba-db92-5ff9-38c2" type="selectionEntry">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe48-694a-8518-3ad4" type="max"/>
@@ -1174,6 +1168,29 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Bolt Pistol or Bolter" id="4168-5abd-d35b-943b" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Bolt Pistol" hidden="false" id="8b56-31d8-21a6-b70b" collective="false" targetId="b5bb-7853-53cb-bec4" type="selectionEntry">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3d05-35fc-a79c-f05f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Boltgun" hidden="false" id="e4ad-9a82-3b38-908c" type="selectionEntry" targetId="0e81-7914-e52a-0a8d">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a121-d612-3c16-ef06" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="1"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7db6-dbb0-7471-c033" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9314-f9e6-f325-0652" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="7f5d-c599-9a25-9e7d" name="Blood Axe Kommando Mob" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>

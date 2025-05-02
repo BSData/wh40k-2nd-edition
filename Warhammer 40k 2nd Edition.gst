@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="9ea8-c89d-9104-ed03" name="Warhammer 40k 2nd Edition" revision="24" battleScribeVersion="2.03" authorName="Boff" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
+<gameSystem id="9ea8-c89d-9104-ed03" name="Warhammer 40k 2nd Edition" revision="25" battleScribeVersion="2.03" authorName="Boff" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
   <comment>Warhammer 2nd Edition 40k</comment>
   <readme>Added more wargear cards</readme>
   <publications>
@@ -2716,6 +2716,34 @@ in combination with other kinds of ammo. Discarded after use.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Lightning Claw With Built-in Heavy Flamer" hidden="false" id="030a-58b8-0441-0cb4">
+      <infoLinks>
+        <infoLink name="Lightning Claws" id="b51d-311a-6b22-9edb" hidden="false" targetId="4b57-ea4c-065b-2408" type="profile"/>
+        <infoLink name="Close Combat" id="938b-528b-a419-66cf" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
+        <infoLink name="Lightning Claws" id="b1f0-da09-fa8d-286f" hidden="false" targetId="b086-7aeb-78af-4b13" type="rule"/>
+      </infoLinks>
+      <profiles>
+        <profile name="Heavy Flamer" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="a342-ef67-2a9d-120a" publicationId="06e5-8e36-e8c8-aec3" page="36">
+          <characteristics>
+            <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">Flame Template</characteristic>
+            <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">Flame Template</characteristic>
+            <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328"/>
+            <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c"/>
+            <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">5</characteristic>
+            <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
+            <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-3</characteristic>
+            <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+5</characteristic>
+            <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Flamer</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule name="Flamer" id="7482-ef13-1707-edf2" hidden="false" publicationId="06e5-8e36-e8c8-aec3" page="15">
+          <description>Small flame template. Partial models, hit a on a 4+. Fully covered auto hit. In close combat, auto hit the target you&apos;re fighting but no template. 
+If target is not killed, check to see if on fire on a 4+. Further instructions found in Wargear book</description>
+        </rule>
+      </rules>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>

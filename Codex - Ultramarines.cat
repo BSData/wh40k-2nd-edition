@@ -1555,7 +1555,7 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf30-f61e-864d-c546" type="max"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="points" value="5"/>
+                <cost name="pts" typeId="points" value="0"/>
               </costs>
             </entryLink>
           </entryLinks>

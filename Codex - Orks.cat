@@ -1125,17 +1125,32 @@
       <entryLinks>
         <entryLink id="a4c1-144c-20ad-c792" name="Nob" hidden="false" collective="false" import="true" targetId="7469-d0bf-7dae-4a55" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce35-dd6c-f49e-8ee1" type="min"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce35-dd6c-f49e-8ee1" type="min"/>
             <constraint field="selections" scope="parent" value="15" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d0c-5f3e-f936-e8b4" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="3" field="ce35-dd6c-f49e-8ee1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="cc22-d490-be9c-add4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Nobflag" hidden="false" id="cc22-d490-be9c-add4" flatten="true">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cab1-4400-b07f-49e0"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cb27-60a5-c1b5-8ceb"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry id="7469-d0bf-7dae-4a55" name="Nob" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
@@ -1150,7 +1165,11 @@
         <entryLink id="a47a-020a-3f69-9cb6" name="Assault Weapons" hidden="false" collective="false" import="true" targetId="5062-76ee-9085-6293" type="selectionEntryGroup"/>
         <entryLink id="25ef-b974-491d-6151" name="Special Weapons" hidden="false" collective="false" import="true" targetId="f7fe-0d89-7999-1912" type="selectionEntryGroup"/>
         <entryLink id="65aa-d7df-c021-170f" name="Stikkbombz" hidden="false" collective="false" import="true" targetId="0fa9-1829-1611-efc8" type="selectionEntryGroup"/>
-        <entryLink id="d567-3cdc-3b51-cbd1" name="Heavy Weapons" hidden="false" collective="false" import="true" targetId="3285-06f0-7e31-29ea" type="selectionEntryGroup"/>
+        <entryLink id="d567-3cdc-3b51-cbd1" name="Heavy Weapons" hidden="false" collective="false" import="true" targetId="3285-06f0-7e31-29ea" type="selectionEntryGroup">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bb2a-95bf-c657-e59a"/>
+          </constraints>
+        </entryLink>
         <entryLink id="5db3-fec5-a679-1608" name="Axe" hidden="false" collective="false" import="true" targetId="c2ba-db92-5ff9-38c2" type="selectionEntry">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe48-694a-8518-3ad4" type="max"/>
@@ -3496,6 +3515,7 @@
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4239-fecc-9d06-d706" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3c7-9896-d918-9c99" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="1d11-1731-2b68-cf33" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3533,6 +3553,7 @@
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4239-fecc-9d06-d706" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3c7-9896-d918-9c99" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="1d11-1731-2b68-cf33" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3570,6 +3591,7 @@
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4239-fecc-9d06-d706" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3c7-9896-d918-9c99" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="1d11-1731-2b68-cf33" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3607,6 +3629,7 @@
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4239-fecc-9d06-d706" type="atLeast"/>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3c7-9896-d918-9c99" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="1d11-1731-2b68-cf33" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>

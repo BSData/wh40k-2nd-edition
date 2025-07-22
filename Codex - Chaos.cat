@@ -1391,7 +1391,7 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
     </selectionEntry>
     <selectionEntry id="9075-c5e9-0912-0340" name="Chaos Lord" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f45-e617-1e4e-2094" type="min"/>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1f45-e617-1e4e-2094" type="min"/>
       </constraints>
       <infoLinks>
         <infoLink id="35c0-acaa-b090-4ffa" name="Chaos Lord" hidden="false" targetId="8682-f019-05d0-a702" type="profile"/>
@@ -1609,11 +1609,28 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4da9-e8a0-4cd2-d1fc" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
         </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="91"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="0" field="1f45-e617-1e4e-2094">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4322-6b60-18e2-5bc7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="719b-71a6-2809-47b8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ed46-5374-3801-0d90" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="f280-6991-f2c1-a5a9" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="02f8-f442-7f85-b1ed" name="Power Mace" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -1786,13 +1803,16 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="365e-6c8c-140d-7c02" type="notEqualTo"/>
+                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="223b-6b82-1907-d976" type="notEqualTo"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8fc8-7e28-b3b1-3ede" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
         </entryLink>
         <entryLink id="c601-3c60-54b6-e3c8" name="Chaos Rewards" hidden="false" collective="false" import="true" targetId="f130-ec76-3fd2-cfdc" type="selectionEntryGroup">
           <constraints>
@@ -1934,13 +1954,16 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="365e-6c8c-140d-7c02" type="notEqualTo"/>
+                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="223b-6b82-1907-d976" type="notEqualTo"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fdb4-5ae8-47dd-6ce9" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
         </entryLink>
         <entryLink id="d418-8ec5-6993-d18e" name="Chaos Rewards" hidden="false" collective="false" import="true" targetId="f130-ec76-3fd2-cfdc" type="selectionEntryGroup">
           <modifiers>
@@ -2322,9 +2345,6 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
                   </conditionGroups>
                 </modifier>
               </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4c3-df6e-83c5-4d73" type="max"/>
-              </constraints>
             </entryLink>
             <entryLink id="2b20-979b-7601-9abd" name="Grenades" hidden="false" collective="false" import="true" targetId="1d95-a696-1664-22ee" type="selectionEntryGroup">
               <modifiers>
@@ -2360,13 +2380,16 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="365e-6c8c-140d-7c02" type="notEqualTo"/>
+                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="223b-6b82-1907-d976" type="notEqualTo"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="020c-c468-35fe-38e3" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
         </entryLink>
         <entryLink id="1fa2-e63d-3c71-16c0" name="Chaos Rewards" hidden="false" collective="false" import="true" targetId="f130-ec76-3fd2-cfdc" type="selectionEntryGroup">
           <constraints>
@@ -3148,7 +3171,7 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
               <modifiers>
                 <modifier type="decrement" field="000e-9a59-d72f-e8fc" value="1">
                   <repeats>
-                    <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4d14-423e-9e23-ebe0" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d531-8a35-c846-c0ba" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
@@ -4183,7 +4206,7 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
-                <condition field="points" scope="roster" value="1001" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="lessThan"/>
+                <condition type="lessThan" value="1001" field="points" scope="roster" childId="any" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -4512,6 +4535,7 @@ In close combat, the Black Staff adds +4 to Ahrimans Strength</characteristic>
             <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ade2-b043-3e40-c590" type="max"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Army Commander" hidden="false" id="70da-78dc-d79e-934b" collective="false" targetId="304e-0079-0a70-ccd5" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="316"/>

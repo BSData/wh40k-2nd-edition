@@ -4771,7 +4771,7 @@ When firing that weapon, you may choose to use the Armour-Piercing rounds. You g
     </profile>
     <profile id="05cf-2782-f21b-2f93" name="Bionic Arm" page="Wargear Cards" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
       <characteristics>
-        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">+1 Strenght in close combat and throwing grenades
+        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">+1 Strength in close combat and throwing grenades
 +1 Initiative in close combat</characteristic>
       </characteristics>
     </profile>

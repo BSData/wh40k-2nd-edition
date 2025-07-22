@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7c0f-1fc4-d5a5-dc73" name="Codex - Angels of Deaths (Dark Angels)" revision="12" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="7c0f-1fc4-d5a5-dc73" name="Codex - Angels of Death (Dark Angels)" revision="12" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="5ea0-5809-8883-b277" name="Characters" hidden="false"/>
     <categoryEntry id="8887-ca93-cfef-dc21" name="Squads" hidden="false"/>

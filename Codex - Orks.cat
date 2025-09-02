@@ -7985,7 +7985,7 @@ Instead of rolling D3 for the deviation of the jump, roll an Artillery dice inst
         <characteristic name="S" typeId="5916-04ef-0fd1-6557">3</characteristic>
         <characteristic name="T" typeId="2e7d-2383-f92f-16f9">4</characteristic>
         <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
-        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf"/>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">3</characteristic>
         <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
         <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">8</characteristic>
       </characteristics>

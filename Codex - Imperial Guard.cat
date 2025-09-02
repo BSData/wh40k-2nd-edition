@@ -316,6 +316,7 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
     <selectionEntry id="339b-2518-f590-b20c" name="Captain" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="5257-9139-a968-f075" name="Leadership" hidden="false" targetId="c458-2be2-efb6-2ff8" type="rule"/>
+        <infoLink name="Captain" id="fa6d-330f-35eb-b4b6" hidden="false" type="profile" targetId="f2ed-df5d-c38d-a422"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="4472-d6c2-2936-1fcb" name="Weapons" hidden="false" collective="false" import="true">
@@ -361,6 +362,7 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
     <selectionEntry id="0d46-03b4-e75f-d0fd" name="Colonel" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="4bff-a383-c394-13a4" name="Leadership" hidden="false" targetId="c458-2be2-efb6-2ff8" type="rule"/>
+        <infoLink name="Colonel" id="3965-4717-176a-1d3b" hidden="false" type="profile" targetId="e2a1-5115-4bca-3318"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="4bf7-5412-78dc-f2fc" name="Command" hidden="false" targetId="a565-5175-f3dd-77bd" primary="true"/>
@@ -1201,18 +1203,18 @@ Re-roll any failed Break test</characteristic>
           <modifiers>
             <modifier type="decrement" field="ad96-27c3-f76c-db9b" value="2">
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="73fd-ca2f-c089-8af5" type="atLeast"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6710-edb3-0be8-4551" type="atLeast"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
             <modifier type="decrement" field="a385-42f3-0ecd-4b11" value="2">
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="73fd-ca2f-c089-8af5" type="atLeast"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6710-edb3-0be8-4551" type="atLeast"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>

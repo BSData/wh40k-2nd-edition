@@ -2102,6 +2102,7 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
                         <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8e92-d7fd-51f0-a14e" type="lessThan"/>
                         <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ec82-b75b-46df-7ba2" type="lessThan"/>
                         <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="995b-33ab-91b9-361a" type="lessThan"/>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="4322-6b60-18e2-5bc7" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -2142,6 +2143,7 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
                         <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c885-9d1b-76e7-6d83" type="lessThan"/>
                         <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8e92-d7fd-51f0-a14e" type="lessThan"/>
                         <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e5c1-d35d-fced-84df" type="lessThan"/>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="4322-6b60-18e2-5bc7" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -2181,6 +2183,7 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
                         <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6e38-ffd3-93de-5667" type="lessThan"/>
                         <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8e92-d7fd-51f0-a14e" type="lessThan"/>
                         <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a820-1ed7-6c46-65c0" type="lessThan"/>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="4322-6b60-18e2-5bc7" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -2220,6 +2223,7 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
                         <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="36e6-7b5f-1e06-2e95" type="lessThan"/>
                         <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8e92-d7fd-51f0-a14e" type="lessThan"/>
                         <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="07e4-aebc-c22e-623b" type="lessThan"/>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="4322-6b60-18e2-5bc7" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>

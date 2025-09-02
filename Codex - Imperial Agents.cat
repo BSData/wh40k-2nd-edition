@@ -867,7 +867,7 @@
             </selectionEntry>
             <selectionEntry id="7bb3-be66-67f7-5dce" name="Inquisitor Lord" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
-                <infoLink id="c824-33e3-90e3-74e6" name="Tech Priest Mighty Hero" hidden="false" targetId="2da5-d403-f51c-bbc3" type="profile"/>
+                <infoLink name="Inquisitor Lord" id="0114-1a04-76c9-c411" hidden="false" type="profile" targetId="decc-1026-1317-7dfb"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="110"/>

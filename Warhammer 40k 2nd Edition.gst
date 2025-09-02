@@ -1423,6 +1423,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
     <selectionEntry id="5b69-dbfc-8a02-2d96" name="Storm Shield" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="b3d1-51ab-7f80-9042" name="Storm Shield" hidden="false" targetId="8743-1b1c-e5ba-ddfe" type="profile"/>
+        <infoLink name="Parry" id="cef5-42a5-f15b-5eb4" hidden="false" type="rule" targetId="049d-3ed2-a1bf-86b0"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
@@ -4526,7 +4527,7 @@ the player‘s movement phase and may not return later in the game.</description
     </profile>
     <profile id="8743-1b1c-e5ba-ddfe" name="Storm Shield" publicationId="06e5-8e36-e8c8-aec3" page="69" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
       <characteristics>
-        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">An extra armour save of 4+ against shooting or close combat damage from the front facing. This save ignores armour modifiers.</characteristic>
+        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">An extra armour save of 4+ against shooting or close combat damage from the front facing. This save ignores armour modifiers. May also Parry</characteristic>
       </characteristics>
     </profile>
     <profile id="c7ad-cdba-f44b-a71e" name="Rosarius" publicationId="06e5-8e36-e8c8-aec3" page="68" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">

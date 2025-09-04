@@ -94,6 +94,7 @@
     <entryLink id="6bac-486f-1172-bad6" name="Space Marine Predator" hidden="false" collective="false" import="true" targetId="99ca-3028-39ad-7d09" type="selectionEntry"/>
     <entryLink id="2d6c-3a19-b938-4f7b" name="Space Marine Attack Bike" hidden="false" collective="false" import="true" targetId="a266-fb50-cff9-0a00" type="selectionEntry"/>
     <entryLink id="51b1-8233-4d47-4799" name="Space Marine Whirlwind" hidden="false" collective="false" import="true" targetId="a283-2271-e6e1-4577" type="selectionEntry"/>
+    <entryLink import="true" name="Ork Stompa" hidden="false" id="74cb-981e-b0b3-7706" type="selectionEntry" targetId="2bdf-3e08-cc73-a77d"/>
   </entryLinks>
   <rules>
     <rule id="a5a3-075e-40e2-129d" name="WAAAARGH!" publicationId="9f92-b7df-cf75-9a46" page="49" hidden="false">
@@ -6936,6 +6937,284 @@ See datafax for damage table</description>
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Ork Stompa" hidden="false" id="2bdf-3e08-cc73-a77d" page="datafax">
+      <costs>
+        <cost name="pts" typeId="points" value="450"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="3512-45d3-a466-0e54" id="1f0a-4952-2f88-c74f" primary="false" name="Orks"/>
+        <categoryLink targetId="1cb3-5add-3535-4a1f" id="762a-dc18-d4df-dd2f" primary="true" name="Support"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Ork Stompa" typeId="371a-1ec9-2157-1eb6" typeName="Vehicle" hidden="false" id="96f3-46cb-32d9-7922">
+          <characteristics>
+            <characteristic name="Slow Speed" typeId="7c52-da5f-7f1a-95fd">5</characteristic>
+            <characteristic name="Combat Speed" typeId="87a6-dd16-ba8f-ff71">10</characteristic>
+            <characteristic name="Fast Speed" typeId="92f6-98b4-3770-d8d9">15</characteristic>
+            <characteristic name="Type" typeId="8567-afc3-f137-4d64">Walker</characteristic>
+            <characteristic name="Crew" typeId="7ee3-c2ef-4b92-55e1">1 Commander, 2 Gunners, 1 Driver, 1 Gretchin</characteristic>
+            <characteristic name="Ram Strength" typeId="13de-7be1-9f05-c48a">10</characteristic>
+            <characteristic name="Ram Damage" typeId="2ddf-d6d1-359f-bc9d">2D8</characteristic>
+            <characteristic name="Ram Save Modfier" typeId="40ae-53ec-dee8-af1f">-7</characteristic>
+            <characteristic name="Armour Location" typeId="30da-ce76-ecb6-61ab">Head
+Body
+Right Arm
+Left Arm
+Legs</characteristic>
+            <characteristic name="Front Armour" typeId="fafe-592c-1a65-1376">22
+25
+19
+19
+20</characteristic>
+            <characteristic name="Side/Rear Armour" typeId="fbc3-8073-078a-ac79">20
+20
+19
+19
+20</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Crew Upgrades" id="d2be-f843-97e6-767e" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Mek Boy Gunner" hidden="false" id="6d2f-3b3d-eefb-cfe8">
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bcde-b2fd-f6af-c347" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Additional Gretchin Riggers" hidden="false" id="3b37-8420-a0ee-fda1">
+              <costs>
+                <cost name="pts" typeId="points" value="4"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="8" field="selections" scope="parent" shared="true" id="f1de-fe51-d442-bb5d" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Big Boss" hidden="false" id="50d5-891d-b13e-f716">
+              <costs>
+                <cost name="pts" typeId="points" value="60"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0a66-e205-189e-ca4a" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="War Boss" hidden="false" id="e4fa-1811-a6e8-bed3">
+              <costs>
+                <cost name="pts" typeId="points" value="85"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="da32-36e7-4cf2-027d" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Weapon Options" id="c12a-634b-0d34-a65b" hidden="false">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Head" id="526a-507b-cc45-d522" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Heavy Plasma Gun" hidden="false" id="8c36-6bac-81ec-7be4" type="selectionEntry" targetId="9d75-2468-4857-a347"/>
+                <entryLink import="true" name="2x Heavy Bolter" hidden="false" id="fb6a-c3a9-8cf4-33dc" type="selectionEntry" targetId="4c82-0e56-d20a-6b1c">
+                  <modifiers>
+                    <modifier type="set" value="2x Heavy Bolters" field="name"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4a33-7740-4123-3902" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="959d-cc30-2d34-269d" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Left Arm" id="82c8-1b66-f4ae-db56" hidden="false">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6fb8-b64d-951d-7764" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f97c-3aaf-6bcf-b65b" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Battlecannon &amp; Multilauncher" hidden="false" id="415d-65a6-8107-f54d" collective="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2b62-f7fc-e170-6282" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="Targeter" hidden="false" id="c26b-6129-d18b-2050" collective="false" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2175-3e32-d3d0-0fe6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ee03-67fe-726d-0905" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                  <profiles>
+                    <profile name="Battlecannon" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="8fd7-94ab-0bd3-c9c4" publicationId="a1e3-886b-e509-d15a" page="datafax">
+                      <characteristics>
+                        <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">20</characteristic>
+                        <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">72</characteristic>
+                        <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+                        <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                        <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">8</characteristic>
+                        <characteristic name="Damage" typeId="8978-f9c3-8957-1481">2D6</characteristic>
+                        <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-3</characteristic>
+                        <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">3D6+8</characteristic>
+                        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">2&quot; radius</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="Multilauncher" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="e4c7-9862-cb7e-f281">
+                      <characteristics>
+                        <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">20</characteristic>
+                        <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">72</characteristic>
+                        <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+                        <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                        <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">8</characteristic>
+                        <characteristic name="Damage" typeId="8978-f9c3-8957-1481">D10</characteristic>
+                        <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-6</characteristic>
+                        <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D10+D6+8</characteristic>
+                        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Template</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Battlecannon &amp; Gatling Cannon" hidden="false" id="d964-078f-0f66-bc12" collective="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a741-952d-aff9-db67" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Sustained Fire" id="4cc4-404f-f2af-428b" hidden="false" type="rule" targetId="0b67-c911-308c-4960"/>
+                  </infoLinks>
+                  <entryLinks>
+                    <entryLink import="true" name="Targeter" hidden="false" id="e367-d770-f4b6-55ea" collective="false" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7474-14f3-f045-4c14" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ead3-03bc-3bc4-df65" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                  <profiles>
+                    <profile name="Battlecannon" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="5cf8-5dd3-babf-2806" publicationId="a1e3-886b-e509-d15a" page="datafax">
+                      <characteristics>
+                        <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">20</characteristic>
+                        <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">72</characteristic>
+                        <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+                        <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                        <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">8</characteristic>
+                        <characteristic name="Damage" typeId="8978-f9c3-8957-1481">2D6</characteristic>
+                        <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-3</characteristic>
+                        <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">3D6+8</characteristic>
+                        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">2&quot; radius</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="Gatling Cannon" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="5895-bd62-8a48-e77f" page="datafax">
+                      <characteristics>
+                        <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">20</characteristic>
+                        <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">48</characteristic>
+                        <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">+1</characteristic>
+                        <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                        <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">7</characteristic>
+                        <characteristic name="Damage" typeId="8978-f9c3-8957-1481">D6</characteristic>
+                        <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-4</characteristic>
+                        <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">2D6+7</characteristic>
+                        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">2 Sustain Fire</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Body" id="5d32-aa1f-744c-17d7" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Heavy Flamer" hidden="false" id="646c-e81b-2dde-f55e" type="selectionEntry" targetId="4da3-a884-c204-2800"/>
+                <entryLink import="true" name="Heavy Bolter" hidden="false" id="e0ee-b07a-c8d6-c1eb" type="selectionEntry" targetId="4c82-0e56-d20a-6b1c"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="51da-a75f-e739-812d" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e05e-57c1-f986-9433" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Right Arm" id="2074-a1f4-c316-22f5" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Twin Lascannons" hidden="false" id="5f1c-07c4-bf80-6856" type="selectionEntry" targetId="3450-9415-d591-d15c">
+                  <modifiers>
+                    <modifier type="set" value="Chainsword &amp; Twin Lascannon" field="name"/>
+                  </modifiers>
+                  <profiles>
+                    <profile name="Chainsword" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="0fa3-ad49-d1ff-5f23">
+                      <characteristics>
+                        <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">Combat</characteristic>
+                        <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">Combat</characteristic>
+                        <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">Special</characteristic>
+                        <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">Special</characteristic>
+                        <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">10</characteristic>
+                        <characteristic name="Damage" typeId="8978-f9c3-8957-1481">2D4</characteristic>
+                        <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-8</characteristic>
+                        <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D20+2D4+10</characteristic>
+                        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Parry</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Parry" id="0f84-951a-d7e3-afa5" hidden="false" type="rule" targetId="049d-3ed2-a1bf-86b0"/>
+                  </infoLinks>
+                </entryLink>
+                <entryLink import="true" name="Twin Autocannon" hidden="false" id="3aa6-a266-b5a5-a6d4" type="selectionEntry" targetId="7832-cfa1-9339-fb7f">
+                  <modifiers>
+                    <modifier type="set" value="Chainsword &amp; Twin Autocannons" field="name"/>
+                  </modifiers>
+                  <profiles>
+                    <profile name="Chainsword" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="ed50-33ea-f593-16aa">
+                      <characteristics>
+                        <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">Combat</characteristic>
+                        <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">Combat</characteristic>
+                        <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">Special</characteristic>
+                        <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">Special</characteristic>
+                        <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">10</characteristic>
+                        <characteristic name="Damage" typeId="8978-f9c3-8957-1481">2D4</characteristic>
+                        <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-8</characteristic>
+                        <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D20+2D4+10</characteristic>
+                        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Parry</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Parry" id="5f9e-736a-4270-68bc" hidden="false" type="rule" targetId="049d-3ed2-a1bf-86b0"/>
+                  </infoLinks>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1ca4-8c42-25dd-a9dc" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1f45-db35-06b9-9dac" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Power Field" hidden="false" id="05f2-0d82-3ffd-75f0">
+          <costs>
+            <cost name="pts" typeId="points" value="300"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d877-7cbc-cbc3-b852" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <rules>
+        <rule name="Move Through Cover" id="873e-8aa9-fa42-8604" hidden="false">
+          <description>Due to the size of the stomper, objects 2&quot; tall or less may be ignored for movement purposes</description>
+        </rule>
+        <rule name="Repairs and Crew Shooting" id="cb07-267b-2b35-7316" hidden="false">
+          <description>The Gretchin can fire autoguns out of hatches in 360 degrees. The Mekaniak can repair instead of shooting. Any non-destroyed damage may be repaired on a 1 or 2 on a D12 dice. This number is increased by +1 for each available Gretchin rigger. May attempt repairs once per turn in the shooting phase. </description>
+        </rule>
+        <rule name="Stompa Damage Table" id="db7c-5365-20ad-9b2a" hidden="false" publicationId="9f92-b7df-cf75-9a46" page="datafax">
+          <description>Please see datafax card - too much to list</description>
+        </rule>
+      </rules>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>

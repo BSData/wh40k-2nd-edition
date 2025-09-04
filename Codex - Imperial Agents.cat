@@ -1281,8 +1281,11 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df19-5365-f44c-dc70" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="175"/>
+            <cost name="pts" typeId="points" value="1"/>
           </costs>
+          <modifiers>
+            <modifier type="multiply" value="1.5" field="points" scope="89f6-08ba-21de-93f6" affects="self.entries.recursive"/>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -1299,18 +1302,78 @@
           </constraints>
         </entryLink>
         <entryLink id="4088-ab1b-d204-de76" name="Psyker" hidden="false" collective="false" import="true" targetId="56e9-7608-b945-ac81" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc0b-205d-4793-8cb1" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c35-a3ee-b52b-c376" type="min"/>
-          </constraints>
           <infoLinks>
             <infoLink id="f349-5c18-8f6e-a8d6" name="Psychic Level 1" hidden="false" targetId="2653-20e1-0ea7-dcc5" type="profile"/>
           </infoLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Psyker Level" id="0c01-e7c0-daa9-2c6a" hidden="false" defaultSelectionEntryId="46a4-1b39-1a88-8807">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Level 1" hidden="false" id="46a4-1b39-1a88-8807">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6adc-27e9-a4aa-bfd0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="350"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Level 2" hidden="false" id="7735-b37a-f8b2-6ad7">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eb91-5ce4-314c-905e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="375"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Level 3" hidden="false" id="dba5-c9ab-7df6-c3be">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fd88-e0a2-7b36-b56a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="400"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Level 4" hidden="false" id="d62d-6827-133b-15eb">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c441-ccf0-a669-3795" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="425"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="51b0-ef4c-f009-76b8" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3de8-caae-8395-e1b5" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="350"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Wargear" id="5318-172b-dba9-a164" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Aegis Suit" hidden="false" id="54e4-b6e1-81b2-6961" type="selectionEntry" targetId="fe0c-7658-0a38-e32c">
+              <costs>
+                <cost name="pts" typeId="points" value="50"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e1a9-98b1-c976-a25a" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Refractor Field" hidden="false" id="f9e8-690c-1677-4afe" type="selectionEntry" targetId="48c5-f522-8ba5-94e6">
+              <costs>
+                <cost name="pts" typeId="points" value="30"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="026f-a3eb-f698-b59d" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="e441-d5f8-bed4-221e" name="Bike" page="datafax" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>

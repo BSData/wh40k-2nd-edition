@@ -1804,7 +1804,6 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
     <selectionEntry id="56e9-7608-b945-ac81" name="Psyker" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f1d5-9c0b-dcc8-1aff" type="max"/>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8498-06f6-97a7-52da" type="min"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="points" value="0"/>

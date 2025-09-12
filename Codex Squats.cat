@@ -154,24 +154,24 @@ Bike</characteristic>
   <forceEntries>
     <forceEntry name="Squats" id="c9c5-6fe5-5c66-cf35" hidden="false">
       <categoryLinks>
-        <categoryLink name="Characters" hidden="false" id="2363-7072-6c70-0e9c" targetId="909c-af95-a2b2-da83" type="categoryEntry">
+        <categoryLink name="Characters" hidden="false" id="2363-7072-6c70-0e9c" targetId="909c-af95-a2b2-da83">
           <constraints>
             <constraint type="max" value="50" field="points" scope="parent" shared="true" id="a7a2-9f17-455e-0699" percentValue="true" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Squads" hidden="false" id="c0f5-0092-cdbc-4926" targetId="6d88-45c5-5fed-59fd" type="categoryEntry">
+        <categoryLink name="Squads" hidden="false" id="c0f5-0092-cdbc-4926" targetId="6d88-45c5-5fed-59fd">
           <constraints>
             <constraint type="min" value="25" field="points" scope="parent" shared="true" id="8bca-3b32-4c4d-25eb" percentValue="true" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Support" hidden="false" id="f9e6-c95d-3513-f8b8" targetId="a83f-e89f-e777-fc11" type="categoryEntry">
+        <categoryLink name="Support" hidden="false" id="f9e6-c95d-3513-f8b8" targetId="a83f-e89f-e777-fc11">
           <constraints>
             <constraint type="max" value="50" field="points" scope="parent" shared="true" id="3962-9b6f-5d24-62fa" percentValue="true" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
         </categoryLink>
       </categoryLinks>
     </forceEntry>
-    <forceEntry name="Squats - Ally List" id="026c-e076-5fc3-9857" hidden="false" childForcesLabel=""/>
+    <forceEntry name="Squats - Ally List" id="026c-e076-5fc3-9857" hidden="false"/>
   </forceEntries>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Warlord" hidden="false" id="a79b-360c-aabd-7a3b">
@@ -691,8 +691,56 @@ Roll a D6 at the end of the turn:
       <costs>
         <cost name="pts" typeId="points" value="143"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Squat Warrior" hidden="false" id="519e-f242-bf27-e849" type="selectionEntry" targetId="7af4-7a49-4223-e582">
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="ea00-8a49-16d9-e574" includeChildSelections="false"/>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="1b56-a509-edf3-c7b5" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Assault Weapons" hidden="false" id="3af9-9d5a-9b7c-2e90" type="selectionEntryGroup" targetId="c902-8da4-0475-53cd"/>
+        <entryLink import="true" name="Special Weapons" hidden="false" id="4871-ecfc-566f-63f7" type="selectionEntryGroup" targetId="839a-8bc6-9007-ef9e">
+          <constraints>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="23a5-c551-370f-4a3c" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Squat Bike" hidden="false" id="759d-9fb6-b3e1-f4e9" type="selectionEntry" targetId="ddab-c0b4-c032-9b83">
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="c3dd-f010-e409-d474" includeChildSelections="false"/>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="7345-bfa8-00cb-1259" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <categoryLinks>
+        <categoryLink targetId="a83f-e89f-e777-fc11" id="9ad2-64cc-42fe-b9a2" primary="true" name="Support"/>
+        <categoryLink targetId="e206-c273-bb7e-6132" id="155f-e5c8-73fa-1789" primary="false" name="Squats"/>
+      </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Squat Bike" hidden="false" id="ddab-c0b4-c032-9b83"/>
+    <selectionEntry type="upgrade" import="true" name="Squat Bike" hidden="false" id="ddab-c0b4-c032-9b83">
+      <infoLinks>
+        <infoLink name="Squat Bike" id="edb9-1d50-0c50-2ffe" hidden="false" type="profile" targetId="dde1-11d7-4116-4d97"/>
+        <infoLink name="Squat Bike Damage Table" id="a38d-b36d-96f9-0904" hidden="false" type="rule" targetId="3c7a-84be-6349-7dc9"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Twin Linked Bolters" hidden="false" id="ce3f-9a25-5464-eeca" type="selectionEntry" targetId="dd32-5d68-e4bc-9dff">
+          <entryLinks>
+            <entryLink import="true" name="Targeter" hidden="false" id="d57d-59f7-bc69-5a8a" type="selectionEntry" targetId="a17e-632e-5e7d-1882">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4fb2-5cb5-4dcf-543a" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1032-6856-ccd1-ecca" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ce87-e152-92b7-5cb9" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b402-059f-3c2d-1de7" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Grenades" id="051b-a87e-7271-da2e" hidden="false">
@@ -1051,11 +1099,12 @@ Roll a D6 at the end of the turn:
     <entryLink import="true" name="Attack Squad" hidden="false" id="5bae-a11f-7214-a153" type="selectionEntry" targetId="241c-056c-2c08-cb8f"/>
     <entryLink import="true" name="Thunderer Squad" hidden="false" id="41a2-55f2-ca0c-cee9" type="selectionEntry" targetId="0c82-f247-3748-d44a"/>
     <entryLink import="true" name="Weapon Team" hidden="false" id="d727-9155-8a8d-3e9b" type="selectionEntry" targetId="57fa-3615-ff18-8e40"/>
+    <entryLink import="true" name="Bike Squad" hidden="false" id="da20-adad-85f7-1d6a" type="selectionEntry" targetId="b333-732b-3c8e-dcbf"/>
   </entryLinks>
   <infoLinks>
     <infoLink name="Hatred" id="7294-4e59-fa14-9ba5" hidden="false" type="rule" targetId="a572-823c-5114-ba17">
       <modifiers>
-        <modifier type="set" value="" field="name">
+        <modifier type="set" field="name">
           <comment>Hatred (Orks)</comment>
         </modifier>
       </modifiers>
@@ -1064,9 +1113,7 @@ Roll a D6 at the end of the turn:
   <sharedRules>
     <rule name="Squat Bike Damage Table" id="3c7a-84be-6349-7dc9" hidden="false" publicationId="9f92-b7df-cf75-9a46" page="datafax">
       <description>1-2: Crew
-3-6: Bike
-
-</description>
+3-6: Bike</description>
     </rule>
   </sharedRules>
 </catalogue>

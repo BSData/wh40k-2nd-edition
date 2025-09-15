@@ -2505,13 +2505,18 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
         <selectionEntryGroup id="0333-8455-8c55-3c10" name="Heavy Weapon Choice" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe19-1bde-647a-0285" type="min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="62d6-0854-2688-b351" includeChildSelections="false"/>
           </constraints>
           <entryLinks>
             <entryLink id="d15b-4e07-dc8b-32e4" name="Multi-Melta" hidden="false" collective="false" import="true" targetId="4429-f97a-006f-4632" type="selectionEntry">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3cb7-05fd-c552-8ff3" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d01-b944-83a2-99c3" type="min"/>
-              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="65"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Heavy Bolter" hidden="false" id="18a5-5608-1c74-0e08" type="selectionEntry" targetId="4c82-0e56-d20a-6b1c">
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -2588,7 +2593,7 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
         <entryLink id="d0c1-738a-4a93-9d7d" name="Vehicle Wargear Cards" hidden="false" collective="false" import="true" targetId="fcf7-39a4-11f3-7097" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="110"/>
+        <cost name="pts" typeId="points" value="45"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="beec-c8b6-3175-e050" name="Space Marine Dreadnought" publicationId="4590-6ba9-5482-a1fa" page="68" hidden="false" collective="false" import="true" type="upgrade">
@@ -5225,9 +5230,12 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <characteristic name="Ram Strength" typeId="13de-7be1-9f05-c48a">5</characteristic>
         <characteristic name="Ram Damage" typeId="2ddf-d6d1-359f-bc9d">D4</characteristic>
         <characteristic name="Ram Save Modfier" typeId="40ae-53ec-dee8-af1f">-2</characteristic>
-        <characteristic name="Armour Location" typeId="30da-ce76-ecb6-61ab">Bike</characteristic>
-        <characteristic name="Front Armour" typeId="fafe-592c-1a65-1376">10</characteristic>
-        <characteristic name="Side/Rear Armour" typeId="fbc3-8073-078a-ac79">10</characteristic>
+        <characteristic name="Armour Location" typeId="30da-ce76-ecb6-61ab">Crew
+Bike</characteristic>
+        <characteristic name="Front Armour" typeId="fafe-592c-1a65-1376">Crew*
+10</characteristic>
+        <characteristic name="Side/Rear Armour" typeId="fbc3-8073-078a-ac79">Crew*
+10</characteristic>
       </characteristics>
     </profile>
     <profile id="ff4f-cb9c-ec73-ae35" name="Company Standard" publicationId="4590-6ba9-5482-a1fa" page="64" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
@@ -5489,9 +5497,12 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <characteristic name="Ram Strength" typeId="13de-7be1-9f05-c48a">6</characteristic>
         <characteristic name="Ram Damage" typeId="2ddf-d6d1-359f-bc9d">D6</characteristic>
         <characteristic name="Ram Save Modfier" typeId="40ae-53ec-dee8-af1f">-3</characteristic>
-        <characteristic name="Armour Location" typeId="30da-ce76-ecb6-61ab">Bike</characteristic>
-        <characteristic name="Front Armour" typeId="fafe-592c-1a65-1376">10</characteristic>
-        <characteristic name="Side/Rear Armour" typeId="fbc3-8073-078a-ac79">10</characteristic>
+        <characteristic name="Armour Location" typeId="30da-ce76-ecb6-61ab">Crew
+Bike</characteristic>
+        <characteristic name="Front Armour" typeId="fafe-592c-1a65-1376">Crew*
+10</characteristic>
+        <characteristic name="Side/Rear Armour" typeId="fbc3-8073-078a-ac79">Crew*
+10</characteristic>
       </characteristics>
     </profile>
     <profile id="e2d5-6ffe-e186-a650" name="Space Marine Dreadnought" publicationId="4590-6ba9-5482-a1fa" page="68" hidden="false" typeId="0395-7b02-e47f-3cdb" typeName="Walker / Dread">

@@ -133,16 +133,88 @@
         <characteristic name="Combat Speed" typeId="87a6-dd16-ba8f-ff71">15</characteristic>
         <characteristic name="Fast Speed" typeId="92f6-98b4-3770-d8d9">30</characteristic>
         <characteristic name="Type" typeId="8567-afc3-f137-4d64">Bike</characteristic>
-        <characteristic name="Crew" typeId="7ee3-c2ef-4b92-55e1">1 Squat</characteristic>
+        <characteristic name="Crew" typeId="7ee3-c2ef-4b92-55e1">1 Squat Warrior</characteristic>
         <characteristic name="Ram Strength" typeId="13de-7be1-9f05-c48a">5</characteristic>
         <characteristic name="Ram Damage" typeId="2ddf-d6d1-359f-bc9d">D4</characteristic>
         <characteristic name="Ram Save Modfier" typeId="40ae-53ec-dee8-af1f">-2</characteristic>
-        <characteristic name="Armour Location" typeId="30da-ce76-ecb6-61ab">Squat Rider
+        <characteristic name="Armour Location" typeId="30da-ce76-ecb6-61ab">Crew
 Bike</characteristic>
-        <characteristic name="Front Armour" typeId="fafe-592c-1a65-1376">*Crew
+        <characteristic name="Front Armour" typeId="fafe-592c-1a65-1376">Crew
 10</characteristic>
-        <characteristic name="Side/Rear Armour" typeId="fbc3-8073-078a-ac79">*Crew
+        <characteristic name="Side/Rear Armour" typeId="fbc3-8073-078a-ac79">Crew
 10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Squat Heavy Bike" typeId="371a-1ec9-2157-1eb6" typeName="Vehicle" hidden="false" id="9974-1f2b-3438-763f">
+      <characteristics>
+        <characteristic name="Slow Speed" typeId="7c52-da5f-7f1a-95fd">8</characteristic>
+        <characteristic name="Combat Speed" typeId="87a6-dd16-ba8f-ff71">18</characteristic>
+        <characteristic name="Fast Speed" typeId="92f6-98b4-3770-d8d9">24</characteristic>
+        <characteristic name="Type" typeId="8567-afc3-f137-4d64">Bike</characteristic>
+        <characteristic name="Crew" typeId="7ee3-c2ef-4b92-55e1">2 Squat Warriors</characteristic>
+        <characteristic name="Ram Strength" typeId="13de-7be1-9f05-c48a">6</characteristic>
+        <characteristic name="Ram Damage" typeId="2ddf-d6d1-359f-bc9d">D6</characteristic>
+        <characteristic name="Ram Save Modfier" typeId="40ae-53ec-dee8-af1f">-3</characteristic>
+        <characteristic name="Armour Location" typeId="30da-ce76-ecb6-61ab">Crew
+Bike</characteristic>
+        <characteristic name="Front Armour" typeId="fafe-592c-1a65-1376">Crew
+10</characteristic>
+        <characteristic name="Side/Rear Armour" typeId="fbc3-8073-078a-ac79">Crew
+10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Rhino" typeId="371a-1ec9-2157-1eb6" typeName="Vehicle" hidden="false" id="a60c-1107-515a-2068" page="datafax">
+      <characteristics>
+        <characteristic name="Slow Speed" typeId="7c52-da5f-7f1a-95fd">8</characteristic>
+        <characteristic name="Combat Speed" typeId="87a6-dd16-ba8f-ff71">18</characteristic>
+        <characteristic name="Fast Speed" typeId="92f6-98b4-3770-d8d9">25</characteristic>
+        <characteristic name="Type" typeId="8567-afc3-f137-4d64">Tracked</characteristic>
+        <characteristic name="Crew" typeId="7ee3-c2ef-4b92-55e1">1 Squat Warrior</characteristic>
+        <characteristic name="Ram Strength" typeId="13de-7be1-9f05-c48a">7</characteristic>
+        <characteristic name="Ram Damage" typeId="2ddf-d6d1-359f-bc9d">D12</characteristic>
+        <characteristic name="Ram Save Modfier" typeId="40ae-53ec-dee8-af1f">-5</characteristic>
+        <characteristic name="Armour Location" typeId="30da-ce76-ecb6-61ab">Track
+Hull
+Weapons</characteristic>
+        <characteristic name="Front Armour" typeId="fafe-592c-1a65-1376">15
+20
+12</characteristic>
+        <characteristic name="Side/Rear Armour" typeId="fbc3-8073-078a-ac79">15
+18
+12</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Land Raider" typeId="371a-1ec9-2157-1eb6" typeName="Vehicle" hidden="false" id="11e0-e2e0-3bf4-0e92" page="datafax">
+      <characteristics>
+        <characteristic name="Slow Speed" typeId="7c52-da5f-7f1a-95fd">7</characteristic>
+        <characteristic name="Combat Speed" typeId="87a6-dd16-ba8f-ff71">14</characteristic>
+        <characteristic name="Fast Speed" typeId="92f6-98b4-3770-d8d9">20</characteristic>
+        <characteristic name="Type" typeId="8567-afc3-f137-4d64">Tracked</characteristic>
+        <characteristic name="Crew" typeId="7ee3-c2ef-4b92-55e1">3 Squat Warrior</characteristic>
+        <characteristic name="Ram Strength" typeId="13de-7be1-9f05-c48a">8</characteristic>
+        <characteristic name="Ram Damage" typeId="2ddf-d6d1-359f-bc9d">D12</characteristic>
+        <characteristic name="Ram Save Modfier" typeId="40ae-53ec-dee8-af1f">-5</characteristic>
+        <characteristic name="Armour Location" typeId="30da-ce76-ecb6-61ab">Track
+Hull
+Lascannon</characteristic>
+        <characteristic name="Front Armour" typeId="fafe-592c-1a65-1376">17
+22
+18</characteristic>
+        <characteristic name="Side/Rear Armour" typeId="fbc3-8073-078a-ac79">17
+20
+18</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Land Raider Transport" typeId="e609-756e-9d6d-3c69" typeName="Transport" hidden="false" id="031e-71c3-3d9e-fdcb" page="datafax">
+      <characteristics>
+        <characteristic name="Transport" typeId="517b-f87c-b705-6e9a">Land Raider (Transport)</characteristic>
+        <characteristic name="Capacity" typeId="9b3e-28dc-77c7-207a">10 Squats</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Rhino transport" typeId="e609-756e-9d6d-3c69" typeName="Transport" hidden="false" id="bdec-1525-78ec-c085" page="datafax">
+      <characteristics>
+        <characteristic name="Transport" typeId="517b-f87c-b705-6e9a">Rhino (Transport)</characteristic>
+        <characteristic name="Capacity" typeId="9b3e-28dc-77c7-207a">10 Squats</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
@@ -683,6 +755,7 @@ Roll a D6 at the end of the turn:
         <entryLink import="true" name="Support Weapons" hidden="false" id="ee84-3135-d62c-b732" type="selectionEntryGroup" targetId="e891-bb58-840f-6921">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5347-13d6-d6f6-b25f" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d933-1bcc-5dfb-4ba1" includeChildSelections="false"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -736,9 +809,252 @@ Roll a D6 at the end of the turn:
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b402-059f-3c2d-1de7" includeChildSelections="false"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Wargear Cards (Vehicle - Generic)" hidden="false" id="302a-7911-522f-7075" collective="false" targetId="52d8-9a1c-a258-0ed7" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Heavy Weapons Bike" hidden="false" id="6d58-aa4a-e0e0-d9e2">
+      <infoLinks>
+        <infoLink name="Squat Heavy Bike" id="88f5-58c5-ab1a-b5a8" hidden="false" type="profile" targetId="9974-1f2b-3438-763f"/>
+        <infoLink name="Squat Heavy Bike Damage Table" id="b1b8-c734-7e32-a92a" hidden="false" type="rule" targetId="f2aa-409e-261f-77b5"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Twin Linked Bolters" hidden="false" id="dab6-6f87-6723-1e11" type="selectionEntry" targetId="dd32-5d68-e4bc-9dff">
+          <entryLinks>
+            <entryLink import="true" name="Targeter" hidden="false" id="172b-91cc-425e-e3a0" type="selectionEntry" targetId="a17e-632e-5e7d-1882">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="58e7-ca87-ec70-8b8f" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bba5-c4fe-e18e-f888" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a78f-69bd-b5f9-7399" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5806-c3aa-e684-7f53" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Multi-Melta" hidden="false" id="6531-6c5a-24f1-0310" type="selectionEntry" targetId="4429-f97a-006f-4632">
+          <entryLinks>
+            <entryLink import="true" name="Targeter" hidden="false" id="6df7-fe26-62d3-6bb2" type="selectionEntry" targetId="a17e-632e-5e7d-1882">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b967-ce9b-32bc-6336" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2d56-2fba-e11a-c84d" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2608-b1a6-7e0d-4e3f" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="25ab-2ae4-7bdd-214a" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Wargear Cards (Vehicle - Generic)" hidden="false" id="047e-9e7c-2243-cb9e" collective="false" targetId="52d8-9a1c-a258-0ed7" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="85"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Squat Warrior" hidden="false" id="302e-6f75-ac38-605d">
+          <infoLinks>
+            <infoLink name="Squat Warrior" id="c8a9-0248-af13-78f5" hidden="false" type="profile" targetId="d197-46ba-92b5-fa00"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Frag Grenade" hidden="false" id="f518-c892-3d38-38a4" type="selectionEntry" targetId="cc7b-eac9-7cc5-a156">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ffca-5e05-652e-9e49" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2061-e1c9-c79d-a8bb" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Laspistol" hidden="false" id="e002-ab50-5fb4-1060" type="selectionEntry" targetId="6e11-978c-f2f0-8477">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="edf7-c396-ade4-71f3" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e073-d1b9-0b99-8f15" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Krak Grenade" hidden="false" id="cf85-cf52-64ab-29a9" type="selectionEntry" targetId="7ac5-935d-8ecf-59c0">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f415-6b7a-e3f0-d515" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b2c9-3ec2-39e0-0d64" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Flak Armour" hidden="false" id="3038-b644-9beb-4d52" type="selectionEntry" targetId="73c7-e55f-280c-5a3d">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2727-2958-4c31-bdf8" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="aed1-0441-066b-d0a9" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="8a8e-ab3a-9af5-abee" includeChildSelections="false"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="ba80-749f-2aad-6f47" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <categoryLinks>
+        <categoryLink targetId="a83f-e89f-e777-fc11" id="317e-7317-01ec-4e2e" primary="true" name="Support"/>
+        <categoryLink targetId="e206-c273-bb7e-6132" id="45d7-cbe5-2027-6eb5" primary="false" name="Squats"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Rhino" hidden="false" id="ff73-3b73-86b2-537e" publicationId="4590-6ba9-5482-a1fa" page="70" collective="false">
+      <infoLinks>
+        <infoLink name="Rhino Damage Table" id="92d0-ea72-01f4-8f94" hidden="false" targetId="64ec-12df-30fd-8457" type="rule"/>
+        <infoLink name="Rhino transport" id="03a6-03e6-cdc1-ac10" hidden="false" targetId="bdec-1525-78ec-c085" type="profile"/>
+        <infoLink name="Rhino" id="b96e-4515-3cc1-f829" hidden="false" targetId="a60c-1107-515a-2068" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink targetId="a83f-e89f-e777-fc11" id="ee40-343d-3ce5-4e11" primary="true" name="Support"/>
+        <categoryLink targetId="e206-c273-bb7e-6132" id="b022-632b-acaf-4bf0" primary="false" name="Squats"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Auto-Launcher" hidden="false" id="bfe4-32dc-1d6d-3943" collective="false" targetId="222b-075f-d34c-7093" type="selectionEntry">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cae6-b35c-4181-dc30" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Frag Grenade" hidden="false" id="5c87-5ed3-ec93-1f0f" collective="false" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="09e8-4dd1-0d92-ecde" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="156d-58f5-c714-1878" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Blind Grenade" hidden="false" id="f5bb-c581-da4c-f9bd" collective="false" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="cc7b-eac9-7cc5-a156" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7749-1374-caa4-0d5b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
+          </costs>
+        </entryLink>
+        <entryLink import="true" name="Twin Linked Bolters" hidden="false" id="f405-b890-b7d9-1c8b" collective="false" targetId="dd32-5d68-e4bc-9dff" type="selectionEntry">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a80c-3245-af8a-f608" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a734-aef5-21ea-96cf" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Targeter" hidden="false" id="358f-dbbf-7701-2e8d" collective="false" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="04e5-7b19-bba4-9b5b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6d40-ce22-243b-e6c3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="Wargear Cards (Vehicle - Generic)" hidden="false" id="ffaf-6814-0107-6670" collective="false" targetId="52d8-9a1c-a258-0ed7" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="50"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Land Raider" hidden="false" id="a8f2-dc80-00a8-00e1" collective="false">
+      <infoLinks>
+        <infoLink name="Land Raider" id="049c-9a13-86d5-bdcc" hidden="false" targetId="11e0-e2e0-3bf4-0e92" type="profile"/>
+        <infoLink name="Land Raider Damage Table" id="fd7f-7581-84a5-fae4" hidden="false" targetId="d927-6e09-d144-c24e" type="rule"/>
+        <infoLink name="Land Raider Transport" id="f5c8-dd1f-924c-083a" hidden="false" targetId="031e-71c3-3d9e-fdcb" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink name="Ultramarines" hidden="false" id="6af8-6a4d-a43f-fb10" targetId="6186-0c50-3540-dc37" primary="false"/>
+        <categoryLink targetId="a83f-e89f-e777-fc11" id="25a5-8188-9a33-7930" primary="true" name="Support"/>
+        <categoryLink targetId="e206-c273-bb7e-6132" id="3417-6056-aea3-4130" primary="false" name="Squats"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Twin Lascannons" hidden="false" id="bfab-da52-2ac7-ee5a" collective="false" targetId="3450-9415-d591-d15c" type="selectionEntry">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9b8f-1ff7-8265-58c1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0043-e0dd-4ecd-1a39" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Targeter" hidden="false" id="5542-f93c-bf36-5f35" collective="false" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8eac-1f3f-c263-3b3a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2a52-8b70-6404-57cd" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="Twin Heavy Bolters" hidden="false" id="d015-50b6-affc-6b99" collective="false" targetId="aac3-4788-82a3-a9ad" type="selectionEntry">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e088-3111-42d9-bf6d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="678f-04ae-9a12-7595" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Targeter" hidden="false" id="539a-684c-5cb4-6c12" collective="false" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2a8a-e3f0-58de-a81f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="34fc-bfaf-0ce1-3082" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="Auto-Launcher" hidden="false" id="8f11-25ae-7817-7157" collective="false" targetId="222b-075f-d34c-7093" type="selectionEntry">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8ad1-ab55-20f5-72ac" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Frag Grenade" hidden="false" id="0cf5-9915-39a1-e501" collective="false" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="09e8-4dd1-0d92-ecde" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7551-cbc2-3a82-af41" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Blind Grenade" hidden="false" id="3a5d-907b-d749-7b87" collective="false" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="cc7b-eac9-7cc5-a156" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f63c-e874-b9c9-4611" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
+          </costs>
+        </entryLink>
+        <entryLink import="true" name="Wargear Cards (Vehicle - Generic)" hidden="false" id="fbb6-74ec-95e8-4605" collective="false" targetId="52d8-9a1c-a258-0ed7" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="220"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -1100,11 +1416,14 @@ Roll a D6 at the end of the turn:
     <entryLink import="true" name="Thunderer Squad" hidden="false" id="41a2-55f2-ca0c-cee9" type="selectionEntry" targetId="0c82-f247-3748-d44a"/>
     <entryLink import="true" name="Weapon Team" hidden="false" id="d727-9155-8a8d-3e9b" type="selectionEntry" targetId="57fa-3615-ff18-8e40"/>
     <entryLink import="true" name="Bike Squad" hidden="false" id="da20-adad-85f7-1d6a" type="selectionEntry" targetId="b333-732b-3c8e-dcbf"/>
+    <entryLink import="true" name="Heavy Weapons Bike" hidden="false" id="c77a-3f4a-4b03-408b" type="selectionEntry" targetId="6d58-aa4a-e0e0-d9e2"/>
+    <entryLink import="true" name="Rhino" hidden="false" id="6972-bcf2-f4e5-aa46" type="selectionEntry" targetId="ff73-3b73-86b2-537e"/>
+    <entryLink import="true" name="Space Marine Land Raider" hidden="false" id="058e-eb15-653b-6bc7" type="selectionEntry" targetId="a8f2-dc80-00a8-00e1"/>
   </entryLinks>
   <infoLinks>
     <infoLink name="Hatred" id="7294-4e59-fa14-9ba5" hidden="false" type="rule" targetId="a572-823c-5114-ba17">
       <modifiers>
-        <modifier type="set" field="name">
+        <modifier type="set" field="name" value="Hatred (Orks)">
           <comment>Hatred (Orks)</comment>
         </modifier>
       </modifiers>
@@ -1113,7 +1432,32 @@ Roll a D6 at the end of the turn:
   <sharedRules>
     <rule name="Squat Bike Damage Table" id="3c7a-84be-6349-7dc9" hidden="false" publicationId="9f92-b7df-cf75-9a46" page="datafax">
       <description>1-2: Crew
-3-6: Bike</description>
+3-6: Bike
+See datafax for damage table</description>
+    </rule>
+    <rule name="Squat Heavy Bike Damage Table" id="f2aa-409e-261f-77b5" hidden="false" publicationId="9f92-b7df-cf75-9a46" page="datafax">
+      <description>1-3: Crew*
+4-6: Bike
+See datafax for damage table
+Hit the one nearest the Attack</description>
+    </rule>
+    <rule name="Rhino Damage Table" id="64ec-12df-30fd-8457" hidden="false" page="Datafax">
+      <description>1: Track - Closest track to shooter
+2-5: Hull
+6: Weapons
+See datafax for damage table</description>
+    </rule>
+    <rule name="Rhino Damage Table" id="d44d-6e87-98d8-44e9" hidden="false" page="Datafax">
+      <description>1: Track - Closest track to shooter
+2-5: Hull
+6: Weapons
+See datafax for damage table</description>
+    </rule>
+    <rule name="Land Raider Damage Table" id="d927-6e09-d144-c24e" hidden="false" page="Datafax">
+      <description>1-2: Track - Hit closest to shooter
+3-5: Hull
+6: Lascannon - Hit closest to shooter
+See datafax for damage table</description>
     </rule>
   </sharedRules>
 </catalogue>

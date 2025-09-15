@@ -2446,14 +2446,19 @@ and  courage  in  the face of death. Once broken, a Space Marine squad may rally
       <selectionEntryGroups>
         <selectionEntryGroup id="0333-8455-8c55-3c10" name="Heavy Weapon Choice" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe19-1bde-647a-0285" type="min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dfae-fc35-5336-2e3e" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6729-b6a0-f904-54ce" includeChildSelections="false"/>
           </constraints>
           <entryLinks>
             <entryLink id="d15b-4e07-dc8b-32e4" name="Multi-Melta" hidden="false" collective="false" import="true" targetId="4429-f97a-006f-4632" type="selectionEntry">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3cb7-05fd-c552-8ff3" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d01-b944-83a2-99c3" type="min"/>
-              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="65"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Heavy Bolter" hidden="false" id="1db9-19ba-2ff1-f252" type="selectionEntry" targetId="4c82-0e56-d20a-6b1c">
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -2530,7 +2535,7 @@ and  courage  in  the face of death. Once broken, a Space Marine squad may rally
         <entryLink id="78cc-c91a-d70a-7e77" name="Vehicle Wargear Cards" hidden="false" collective="false" import="true" targetId="ce49-153f-9d61-e31a" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="110"/>
+        <cost name="pts" typeId="points" value="45"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="beec-c8b6-3175-e050" name="Space Marine Dreadnought" publicationId="4590-6ba9-5482-a1fa" page="68" hidden="false" collective="false" import="true" type="upgrade">

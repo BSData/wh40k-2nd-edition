@@ -1419,6 +1419,7 @@ Roll a D6 at the end of the turn:
     <entryLink import="true" name="Heavy Weapons Bike" hidden="false" id="c77a-3f4a-4b03-408b" type="selectionEntry" targetId="6d58-aa4a-e0e0-d9e2"/>
     <entryLink import="true" name="Rhino" hidden="false" id="6972-bcf2-f4e5-aa46" type="selectionEntry" targetId="ff73-3b73-86b2-537e"/>
     <entryLink import="true" name="Space Marine Land Raider" hidden="false" id="058e-eb15-653b-6bc7" type="selectionEntry" targetId="a8f2-dc80-00a8-00e1"/>
+    <entryLink import="true" name="Hearthguard" hidden="false" id="062f-a7ff-7495-296a" type="selectionEntry" targetId="45cf-ec53-ab52-b8a4"/>
   </entryLinks>
   <infoLinks>
     <infoLink name="Hatred" id="7294-4e59-fa14-9ba5" hidden="false" type="rule" targetId="a572-823c-5114-ba17">

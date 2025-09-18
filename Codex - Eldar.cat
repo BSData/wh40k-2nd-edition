@@ -1847,8 +1847,8 @@ When the vehicle is penetrated on a section with the web roll on the Crystalline
             <constraint field="selections" scope="parent" value="7" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e80-aaf9-604d-8391" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="ee3b-ca8b-3d77-e8b1" name="Striking Scorpion Aspect Armour" hidden="false" targetId="1a6a-0a03-054f-f6a6" type="profile"/>
-            <infoLink id="4539-4d6d-5bf0-9a15" name="Striking Scorpion" hidden="false" targetId="8d71-b2dc-4f47-e639" type="profile"/>
+            <infoLink id="ee3b-ca8b-3d77-e8b1" name="Warp Spider Aspect Armour" hidden="false" targetId="5e57-1e5f-ead9-5d8d" type="profile"/>
+            <infoLink id="4539-4d6d-5bf0-9a15" name="Warp Spider" hidden="false" targetId="fd26-a9e9-bdf9-891a" type="profile"/>
           </infoLinks>
           <entryLinks>
             <entryLink id="42cf-918e-e494-03ef" name="Warp Spider Jump Generator" hidden="false" collective="false" import="true" targetId="5db8-25cf-4b58-23b8" type="selectionEntry">

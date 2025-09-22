@@ -471,6 +471,12 @@ Lascannon</characteristic>
             <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="7472-2b84-93d4-84ff" includeChildSelections="false"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="ServoCapable" hidden="false" id="e753-2c3a-576c-2b60" type="selectionEntry" targetId="a800-8c47-b465-29bc">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="88d9-3cb3-febb-64bf" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="463f-29d9-07f3-96fa" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Guildmaster" id="ebc8-493c-79b2-b6bd" hidden="false" type="profile" targetId="0de9-4128-7c57-4089"/>
@@ -1299,45 +1305,16 @@ Roll a D6 at the end of the turn:
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="83e9-8c6a-15c7-8b4f" includeChildSelections="false"/>
               </constraints>
             </entryLink>
+            <entryLink import="true" name="Twin Lascannons" hidden="false" id="d8ae-9402-dd09-5e08" type="selectionEntry" targetId="3450-9415-d591-d15c">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7886-4d91-4787-4f07" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7b0a-d2b5-543c-ee81" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
           <infoLinks>
             <infoLink name="Tarantula" id="beca-39cc-95db-9ac3" hidden="false" type="profile" targetId="ba57-da04-9852-b5da"/>
           </infoLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Weapon Options" id="c6c2-1b3f-44a0-6644" hidden="false">
-              <entryLinks>
-                <entryLink import="true" name="Twin Missile Launchers with Super-Krak Grenades" hidden="false" id="cf20-ff1c-d57a-83fb" type="selectionEntry" targetId="0d02-16b0-d553-4889">
-                  <costs>
-                    <cost name="pts" typeId="points" value="55"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Multi-Melta" hidden="false" id="08b3-b06f-acff-c111" type="selectionEntry" targetId="4429-f97a-006f-4632">
-                  <costs>
-                    <cost name="pts" typeId="points" value="65"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Twin Lascannons" hidden="false" id="36fe-85be-f16f-bc9b" type="selectionEntry" targetId="3450-9415-d591-d15c">
-                  <costs>
-                    <cost name="pts" typeId="points" value="55"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Twin Autocannon" hidden="false" id="abc5-6b9c-2c52-046b" type="selectionEntry" targetId="7832-cfa1-9339-fb7f">
-                  <costs>
-                    <cost name="pts" typeId="points" value="50"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Twin Heavy Bolters" hidden="false" id="d27d-3509-ecc4-787d" type="selectionEntry" targetId="aac3-4788-82a3-a9ad">
-                  <costs>
-                    <cost name="pts" typeId="points" value="30"/>
-                  </costs>
-                </entryLink>
-              </entryLinks>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4943-9497-1e3b-a30e" includeChildSelections="false"/>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="26dc-5c46-497b-1639" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Rapier Laser Destroyer" hidden="false" id="0c70-59f6-fcd5-dd2b">
           <costs>
@@ -1418,7 +1395,7 @@ Roll a D6 at the end of the turn:
     <entryLink import="true" name="Bike Squad" hidden="false" id="da20-adad-85f7-1d6a" type="selectionEntry" targetId="b333-732b-3c8e-dcbf"/>
     <entryLink import="true" name="Heavy Weapons Bike" hidden="false" id="c77a-3f4a-4b03-408b" type="selectionEntry" targetId="6d58-aa4a-e0e0-d9e2"/>
     <entryLink import="true" name="Rhino" hidden="false" id="6972-bcf2-f4e5-aa46" type="selectionEntry" targetId="ff73-3b73-86b2-537e"/>
-    <entryLink import="true" name="Space Marine Land Raider" hidden="false" id="058e-eb15-653b-6bc7" type="selectionEntry" targetId="a8f2-dc80-00a8-00e1"/>
+    <entryLink import="true" name="Land Raider" hidden="false" id="058e-eb15-653b-6bc7" type="selectionEntry" targetId="a8f2-dc80-00a8-00e1"/>
     <entryLink import="true" name="Hearthguard" hidden="false" id="062f-a7ff-7495-296a" type="selectionEntry" targetId="45cf-ec53-ab52-b8a4"/>
   </entryLinks>
   <infoLinks>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="12fb-bbf1-3d12-aef9" name="Codex - Angels of Death (Blood Angels)" revision="11" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="12fb-bbf1-3d12-aef9" name="Codex - Angels of Death (Blood Angels)" revision="12" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="d667-1478-0ee6-6183" name="Support" hidden="false"/>
     <categoryEntry id="ea97-27b5-39c7-4630" name="Squads" hidden="false"/>
@@ -1985,6 +1985,11 @@ and  courage  in  the face of death. Once broken, a Space Marine squad may rally
             <entryLink id="2376-db79-334c-239a" name="Special Weapons" hidden="false" collective="false" import="true" targetId="717e-c382-eaca-bd29" type="selectionEntryGroup">
               <modifiers>
                 <modifier type="set" field="43f4-7d87-21e2-f623" value="2"/>
+                <modifier type="decrement" value="1" field="43f4-7d87-21e2-f623">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="5a40-e578-67a0-559d" childId="b19f-8063-662f-6fa8" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
             </entryLink>
           </entryLinks>
@@ -2044,7 +2049,7 @@ and  courage  in  the face of death. Once broken, a Space Marine squad may rally
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="165"/>
+        <cost name="pts" typeId="points" value="330"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8d0e-3b8b-18d7-f3d9" name="Assault Squad" publicationId="4590-6ba9-5482-a1fa" page="66" hidden="false" collective="false" import="true" type="unit">
@@ -3974,9 +3979,6 @@ and  courage  in  the face of death. Once broken, a Space Marine squad may rally
                   </conditionGroups>
                 </modifier>
               </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5626-d637-13a1-039f" type="max"/>
-              </constraints>
             </entryLink>
             <entryLink id="8fd9-cbbc-6938-4556" name="Grenades" hidden="false" collective="false" import="true" targetId="e531-ba57-c468-3f1f" type="selectionEntryGroup">
               <modifiers>

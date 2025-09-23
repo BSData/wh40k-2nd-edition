@@ -8673,6 +8673,22 @@ The Tear attack nominates a single location on the target. Roll penetration as n
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Daemon Weapon" hidden="false" id="f559-f0e2-ea53-2fc2">
+          <costs>
+            <cost name="pts" typeId="points" value="25"/>
+          </costs>
+          <profiles>
+            <profile name="Daemon Weapon" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear" hidden="false" id="bb41-0dd4-bdd4-aeed" page="battle bible 226">
+              <characteristics>
+                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">A model wielding a Daemon Weapon gains +2 to their WS and Strength, and always wounds psykers and daemons on a roll of 2+ regardless of their Toughness. Living models wounded by this weapon during hand-to-hand combat must pass a Leadership test; if they fail, they die.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9d1b-9fb9-06c1-af7c" includeChildSelections="false"/>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="c011-3716-b45a-07b9" includeChildSelections="true"/>
+          </constraints>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="017a-7cc9-9961-aa60" name="Terminator Ranged Weapons" hidden="false" collective="false" import="true">

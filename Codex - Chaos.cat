@@ -148,6 +148,7 @@
     <entryLink id="f2e4-1a83-a7c2-401a" name="Beastmen" hidden="false" collective="false" import="true" targetId="3d9f-f0a6-eea2-80cc" type="selectionEntry"/>
     <entryLink id="7b78-714a-5822-eea4" name="Minotaurs" hidden="false" collective="false" import="true" targetId="b01a-7ed8-9bd0-3370" type="selectionEntry"/>
     <entryLink id="982a-e5d4-455e-0da6" name="Trolls" hidden="false" collective="false" import="true" targetId="922d-dd2a-b35a-e9e3" type="selectionEntry"/>
+    <entryLink import="true" name="Huron Blackheart" hidden="false" id="8994-dff0-b363-b7fe" type="selectionEntry" targetId="5785-abb3-0a25-ed37"/>
   </entryLinks>
   <rules>
     <rule id="085c-3681-c24f-928c" name="Daemonic Animosity" publicationId="02e1-3f69-7ae7-f5c5" page="51" hidden="true">
@@ -700,7 +701,7 @@ The model is protected by a Daemonic Aura (4+ unmodified save).</description>
       </costs>
       <rules>
         <rule name="Regeneration" id="630a-06d5-e94d-7e90" hidden="false" publicationId="02e1-3f69-7ae7-f5c5" page="53">
-          <description>Place any Bloodletters that are slain onto their side instead of removing from play. At the Rally Phase, roll for each model. On a 4+ they regenerate any damage suffered and stand back up. </description>
+          <description>Place any Bloodletters that are slain onto their side instead of removing from play. At the Rally Phase, roll for each model. On a 4+ they regenerate any damage suffered and stand back up.</description>
         </rule>
       </rules>
     </selectionEntry>

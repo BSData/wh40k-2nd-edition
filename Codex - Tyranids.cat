@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4026-2a6f-5a07-ce65" name="Codex - Tyranids" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4026-2a6f-5a07-ce65" name="Codex - Tyranids" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <profileTypes>
     <profileType id="584a-05fe-7c57-360c" name="Biomorphs">
       <characteristicTypes>
@@ -32,17 +32,17 @@
       <categoryLinks>
         <categoryLink id="6726-e718-87fd-cd1e" name=" Support" hidden="false" targetId="795f-7f64-4e25-925e" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="50.0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="31ce-048f-11e3-1706" type="max"/>
+            <constraint field="points" scope="force" value="50" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="31ce-048f-11e3-1706" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="52c1-0e96-e897-9acd" name="Individuals" hidden="false" targetId="1439-f160-c1a8-1061" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="50.0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="7817-0c94-00fd-c049" type="max"/>
+            <constraint field="points" scope="force" value="50" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="7817-0c94-00fd-c049" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="6b56-d47a-27b1-a596" name="Broods" hidden="false" targetId="0de2-91d6-86dc-d0bc" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="25.0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="7549-62dc-3560-98ec" type="min"/>
+            <constraint field="points" scope="force" value="25" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="7549-62dc-3560-98ec" type="min"/>
           </constraints>
         </categoryLink>
       </categoryLinks>
@@ -60,7 +60,7 @@
     <entryLink id="a189-9c21-ae7e-71b5" name="Ripper Swarm" hidden="false" collective="false" import="true" targetId="002d-4b1c-aae9-e6c4" type="selectionEntry"/>
     <entryLink id="4973-ebeb-3917-119e" name="Spore Mine" hidden="false" collective="false" import="true" targetId="3bbe-cef1-f452-5191" type="selectionEntry"/>
     <entryLink id="98e0-114a-0824-019b" name="Biovores" hidden="false" collective="false" import="true" targetId="f0aa-a3fc-e732-ce86" type="selectionEntry"/>
-    <entryLink id="6d57-0c7f-769c-8106" name="Haruspex" hidden="false" collective="false" import="true" targetId="2387-26e1-f400-7bf0" type="selectionEntry"/>
+    <entryLink id="6d57-0c7f-769c-8106" name="Tyranid Haruspex" hidden="false" collective="false" import="true" targetId="2387-26e1-f400-7bf0" type="selectionEntry"/>
     <entryLink id="9367-7351-537d-6d20" name="Tyranid Malefactor" hidden="false" collective="false" import="true" targetId="0ea3-c0f5-5b5f-8756" type="selectionEntry"/>
     <entryLink id="5d04-5f3c-7796-24c1" name="Tyranid Exocrine" hidden="false" collective="false" import="true" targetId="874b-b669-16bb-4404" type="selectionEntry"/>
     <entryLink id="9020-e4b0-ba1a-baea" name="Hormagaunt Brood" hidden="false" collective="false" import="true" targetId="0207-1291-2587-cda4" type="selectionEntry"/>
@@ -84,13 +84,13 @@ Ork Pulsa Rokkit and Shokk attack gun: All Tyranids are counted as &quot;Foot tr
 Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranids&quot; and have a 4+ save against Buzzer Squigs</description>
     </rule>
     <rule id="4d98-8fce-1b86-0760" name="Breaking Off From Combat" publicationId="4740-6730-10c0-9b25" page="62" hidden="false">
-      <description>Hive Tyrants, Lictors, Zoanthropes, Tyranid Warriors and Carnifexes can move out of close combat in their movement phase. May shoot after leaving combat. May charge into another enemy. </description>
+      <description>Hive Tyrants, Lictors, Zoanthropes, Tyranid Warriors and Carnifexes can move out of close combat in their movement phase. May shoot after leaving combat. May charge into another enemy.</description>
     </rule>
     <rule id="0202-61f4-3fcf-bc1a" name="Firing into Close Combat" publicationId="4740-6730-10c0-9b25" page="62" hidden="false">
       <description>May fire into close combat against Tyranids. Randomly allocate who is hit, including if hit by a template. Monstrous Creatures count as double the size as a man and Small Creatures count as half the size of a man.</description>
     </rule>
     <rule id="78aa-0e55-9162-1bf6" name="Squad/Brood Coherency" publicationId="4740-6730-10c0-9b25" page="62" hidden="false">
-      <description>Models in close combat may be ignored for the purposes of the Squad or Brood coherency. Models which follow-up are also permitted to move out of the normal 2&quot; coherency. However once a close combat engagement is over models become subject to the Coherency rules again and move back to within 2&quot; of the rest of their squad or brood as soon as possible. </description>
+      <description>Models in close combat may be ignored for the purposes of the Squad or Brood coherency. Models which follow-up are also permitted to move out of the normal 2&quot; coherency. However once a close combat engagement is over models become subject to the Coherency rules again and move back to within 2&quot; of the rest of their squad or brood as soon as possible.</description>
     </rule>
   </rules>
   <sharedSelectionEntries>
@@ -101,7 +101,7 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
         <infoLink id="396d-07b0-a684-44b4" name="Close Combat" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="04be-29cd-fa25-ae71" name="Lash Whip" hidden="false" collective="false" import="true" type="upgrade">
@@ -110,7 +110,7 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
         <infoLink id="1170-855b-435c-6800" name="Lash Whip" hidden="false" targetId="8132-1bc5-ba7c-a9e1" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7946-9a40-e997-ab65" name="Spinefist" hidden="false" collective="false" import="true" type="upgrade">
@@ -120,7 +120,7 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
         <infoLink id="0362-ec1f-dbac-9e10" name="Close Combat" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5c64-62fc-400a-83b6" name="Strangleweb" hidden="false" collective="false" import="true" type="upgrade">
@@ -130,7 +130,7 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
         <infoLink id="8d50-6db0-9c13-9e35" name="Strangleweb" hidden="false" targetId="cb0e-f5fb-d838-9293" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="84b8-1f6e-5d28-f55f" name="Deathspitter" hidden="false" collective="false" import="true" type="upgrade">
@@ -139,7 +139,7 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
         <infoLink id="4427-c7fe-6bed-23c9" name="Deathspitter" hidden="false" targetId="796f-2668-c08c-81ae" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a903-a6a7-d13f-ddee" name="Flamespurt" hidden="false" collective="false" import="true" type="upgrade">
@@ -148,7 +148,7 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
         <infoLink id="c100-ed10-a40a-ac45" name="Flamespurt" hidden="false" targetId="e376-f3f0-4ab3-54a0" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b42e-0f97-7566-7bc9" name="Fleshborer" hidden="false" collective="false" import="true" type="upgrade">
@@ -156,7 +156,7 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
         <infoLink id="cfa5-fdcb-f531-2924" name="Fleshborer" hidden="false" targetId="cb2a-0c67-0796-4418" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e7ee-39f7-5c7e-6f15" name="Flesh Hooks" hidden="false" collective="false" import="true" type="upgrade">
@@ -165,7 +165,7 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
         <infoLink id="0c62-b8f0-7a9e-72f4" name="Flesh Hooks" hidden="false" targetId="a0e6-e9d4-3c24-fc30" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="72fa-9969-2784-166c" name="Spike Rifle" hidden="false" collective="false" import="true" type="upgrade">
@@ -173,7 +173,7 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
         <infoLink id="d403-15f0-795d-700e" name="Spike Rifle" hidden="false" targetId="34dd-d104-c195-c6a3" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4f71-a6e3-3aa9-97ec" name="Devourer" hidden="false" collective="false" import="true" type="upgrade">
@@ -184,7 +184,7 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
         <infoLink id="9b41-16a9-3143-e52a" name="Devourer" hidden="false" targetId="02a7-9159-537d-019d" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0b1b-e8c2-20e9-dd99" name="Barbed Strangler" hidden="false" collective="false" import="true" type="upgrade">
@@ -193,7 +193,7 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
         <infoLink id="b325-425e-8082-0b74" name="Barbed Strangler" hidden="false" targetId="646e-b902-14d2-0e47" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4f89-76a0-e8dd-8570" name="Venom Cannon" hidden="false" collective="false" import="true" type="upgrade">
@@ -202,7 +202,7 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
         <infoLink id="0723-6a77-bc3a-6099" name="Venom Cannon" hidden="false" targetId="78e0-5e04-16da-1012" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4a48-469a-c2a0-27a8" name="Bio-Plasma" hidden="false" collective="false" import="true" type="upgrade">
@@ -210,20 +210,20 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
         <infoLink id="0861-2523-4b81-7d71" name="Bio-Plasma" hidden="false" targetId="15a6-3e91-dfb9-d24a" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5047-398c-1218-a11c" name="Hive Tyrant" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="increment" field="1586-ff1d-b9eb-a0ff" value="1.0">
+        <modifier type="increment" field="1586-ff1d-b9eb-a0ff" value="1">
           <repeats>
-            <repeat field="points" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f209-8cb3-5cae-0f0b" repeats="1" roundUp="false"/>
+            <repeat field="points" scope="roster" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f209-8cb3-5cae-0f0b" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1586-ff1d-b9eb-a0ff" type="max"/>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dd52-e29d-e6cf-5959" type="min"/>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1586-ff1d-b9eb-a0ff" type="max"/>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dd52-e29d-e6cf-5959" type="min"/>
       </constraints>
       <infoLinks>
         <infoLink id="aca5-ade2-29a8-6449" name="Hive Tyrant" hidden="false" targetId="82a0-d7ee-6f97-8195" type="profile"/>
@@ -234,74 +234,74 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
         <infoLink id="1734-7c62-d079-1f1b" name="Chitin Carapace Armour" hidden="false" targetId="7fa5-c5cb-96e4-4981" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="4898-20b6-80e2-652d" name="New CategoryLink" hidden="false" targetId="1439-f160-c1a8-1061" primary="true"/>
+        <categoryLink id="4898-20b6-80e2-652d" name="Individuals" hidden="false" targetId="1439-f160-c1a8-1061" primary="true"/>
         <categoryLink id="f548-7cda-47c8-5dd1" name="Tyranids" hidden="false" targetId="f209-8cb3-5cae-0f0b" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="b049-66cb-3d84-b89c" name="Tyranid Biomorphs" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="031a-9df8-7b89-d8ef" type="max"/>
+            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="031a-9df8-7b89-d8ef" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="f1c3-b8c6-9c23-f35e" name="Acid Blood" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="150c-17a6-dc4b-0200" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="150c-17a6-dc4b-0200" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="2d08-ea28-8134-cbaf" name="Acid Blood" hidden="false" targetId="132f-88ff-538a-df77" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="5.0"/>
+                <cost name="pts" typeId="points" value="5"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="cc76-1ff5-1262-3e7a" name="Bio-Plasma Attack" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6b7-72a7-6ae1-5462" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6b7-72a7-6ae1-5462" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="4826-fc6d-adab-168a" name="Bio-Plasma" hidden="false" targetId="15a6-3e91-dfb9-d24a" type="profile"/>
                 <infoLink id="d338-bd31-cddf-2d65" name="Bio-Plasma Attack" hidden="false" targetId="240e-8ca9-114f-3c4f" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="40.0"/>
+                <cost name="pts" typeId="points" value="40"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="41d3-0ccb-0a9e-98fb" name="Adrenaline Sac" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ae18-0495-e082-5f98" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ae18-0495-e082-5f98" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="fe41-1f68-ba3e-47ad" name="Adrenaline Sac" hidden="false" targetId="107d-0c15-4c84-066a" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="10.0"/>
+                <cost name="pts" typeId="points" value="10"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="b3ac-1268-20ed-7bb3" name="Aura of Torment" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="58c6-bdb3-afbc-789d" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="58c6-bdb3-afbc-789d" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="6b74-f7f2-8f53-1937" name="Aura of Torment" hidden="false" targetId="e867-5cc5-e640-7611" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="10.0"/>
+                <cost name="pts" typeId="points" value="10"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="fda7-757a-80fe-6ed6" name="Enhanced Senses" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d21d-9935-6144-6247" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d21d-9935-6144-6247" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="149f-3520-b28a-9351" name="Enhanced Senses" hidden="false" targetId="5355-8025-ba2d-37ca" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="2.0"/>
+                <cost name="pts" typeId="points" value="2"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="011e-2054-f403-616a" name="Flesh Hooks" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a04b-b32e-dc84-81d8" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a04b-b32e-dc84-81d8" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="e94a-35ca-ad52-969f" name="Flesh Hooks Biomorph" hidden="false" targetId="451b-3c43-c56f-6291" type="profile"/>
@@ -309,161 +309,161 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
               <entryLinks>
                 <entryLink id="0254-c3c7-b3cd-3282" name="Flesh Hooks" hidden="false" collective="false" import="true" targetId="e7ee-39f7-5c7e-6f15" type="selectionEntry">
                   <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64c7-2844-4b43-f13c" type="min"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6797-7105-a75e-6454" type="max"/>
+                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64c7-2844-4b43-f13c" type="min"/>
+                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6797-7105-a75e-6454" type="max"/>
                   </constraints>
                 </entryLink>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="points" value="7.0"/>
+                <cost name="pts" typeId="points" value="7"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="2c53-0516-dcef-ac7f" name="Hardened Carapace" publicationId="4740-6730-10c0-9b25" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a9e-a53c-cf80-921f" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a9e-a53c-cf80-921f" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="2ac9-0095-3f2d-b4d1" name="Hardened Carapace" hidden="false" targetId="11f4-120f-d25e-5069" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="10.0"/>
+                <cost name="pts" typeId="points" value="10"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="5e29-38a5-6175-26a9" name="Null Zone" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="413b-73cf-8196-2c23" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="413b-73cf-8196-2c23" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="3c9d-3df8-b7a8-59ae" name="Null Zone" hidden="false" targetId="e90d-359c-bfd3-f0f7" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="35.0"/>
+                <cost name="pts" typeId="points" value="35"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="cd2a-236b-0987-5bdb" name="Optic Membranes" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac90-7bed-438e-1b62" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac90-7bed-438e-1b62" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="29a1-79ac-a1ea-e33e" name="Optic Membranes" hidden="false" targetId="1a36-cb69-dd91-7fc3" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="1.0"/>
+                <cost name="pts" typeId="points" value="1"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="05df-1bb7-6bbb-b85d" name="Regenerate" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f34b-dbe0-e7db-3957" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f34b-dbe0-e7db-3957" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="05eb-b6e7-6ddd-6c31" name="Regenerate" hidden="false" targetId="1c4d-b414-d0c1-e4e7" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="50.0"/>
+                <cost name="pts" typeId="points" value="50"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="0eb2-49b7-ad9c-a9b6" name="Toughened Exoskeleton" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0cec-1948-d99e-ed18" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0cec-1948-d99e-ed18" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="4f56-034b-fe57-cb92" name="Toughened Exoskeleton" hidden="false" targetId="82e0-1298-c78d-5b5e" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="10.0"/>
+                <cost name="pts" typeId="points" value="10"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="d190-3daa-1ea7-1762" name="Sharpened Claws" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2547-08ce-6699-1329" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2547-08ce-6699-1329" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="4337-46b3-f533-43a8" name="Sharpened Claws" hidden="false" targetId="66c3-9362-0c10-d2b8" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="5.0"/>
+                <cost name="pts" typeId="points" value="5"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="e659-e533-0695-8568" name="Venom Sacs" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3697-7714-1dff-7edf" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3697-7714-1dff-7edf" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="1f40-5b41-bc95-c630" name="Venom Sacs" hidden="false" targetId="94ee-d665-a00a-009d" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="5.0"/>
+                <cost name="pts" typeId="points" value="5"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="838c-76d0-137d-cfd3" name="Voltage Field" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d814-3ade-6724-b1cd" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d814-3ade-6724-b1cd" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="6e64-856f-cb92-f1ac" name="Voltage Field" hidden="false" targetId="d5eb-113b-6747-b078" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="20.0"/>
+                <cost name="pts" typeId="points" value="20"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="df0c-da95-d7df-726c" name="Warp Field" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="91ef-933b-9656-6f7a" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="91ef-933b-9656-6f7a" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="fb7e-6f88-90ee-8a9f" name="Warp Field" hidden="false" targetId="f9c8-9293-a5b1-917a" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="40.0"/>
+                <cost name="pts" typeId="points" value="40"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="6265-c46e-d096-9e54" name="Melee Weapons" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df11-904b-0f81-717d" type="max"/>
+            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df11-904b-0f81-717d" type="max"/>
           </constraints>
           <entryLinks>
             <entryLink id="d5c8-cb09-4efe-e5fd" name="Lash Whip" hidden="false" collective="false" import="true" targetId="04be-29cd-fa25-ae71" type="selectionEntry">
               <costs>
-                <cost name="pts" typeId="points" value="9.0"/>
+                <cost name="pts" typeId="points" value="9"/>
               </costs>
             </entryLink>
             <entryLink id="7b45-6642-ef8d-c4de" name="Spinefist" hidden="false" collective="false" import="true" targetId="7946-9a40-e997-ab65" type="selectionEntry">
               <costs>
-                <cost name="pts" typeId="points" value="7.0"/>
+                <cost name="pts" typeId="points" value="7"/>
               </costs>
             </entryLink>
             <entryLink id="3165-7de0-0d52-f546" name="Bonesword" hidden="false" collective="false" import="true" targetId="9fdd-6d9e-e4de-e3e4" type="selectionEntry">
               <costs>
-                <cost name="pts" typeId="points" value="6.0"/>
+                <cost name="pts" typeId="points" value="6"/>
               </costs>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="11ec-17a9-35c1-dcc7" name="Ranged Weapons" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4fe-9e3c-bf73-dbb0" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4fe-9e3c-bf73-dbb0" type="max"/>
           </constraints>
           <entryLinks>
             <entryLink id="1946-739b-cf2c-c5c8" name="Devourer" hidden="false" collective="false" import="true" targetId="4f71-a6e3-3aa9-97ec" type="selectionEntry">
               <costs>
-                <cost name="pts" typeId="points" value="9.0"/>
+                <cost name="pts" typeId="points" value="9"/>
               </costs>
             </entryLink>
             <entryLink id="522f-3eaf-f891-3adf" name="Venom Cannon" hidden="false" collective="false" import="true" targetId="4f89-76a0-e8dd-8570" type="selectionEntry">
               <costs>
-                <cost name="pts" typeId="points" value="40.0"/>
+                <cost name="pts" typeId="points" value="40"/>
               </costs>
             </entryLink>
             <entryLink id="0051-9397-6ab9-9fed" name="Barbed Strangler" hidden="false" collective="false" import="true" targetId="0b1b-e8c2-20e9-dd99" type="selectionEntry">
               <costs>
-                <cost name="pts" typeId="points" value="31.0"/>
+                <cost name="pts" typeId="points" value="31"/>
               </costs>
             </entryLink>
             <entryLink id="f4e5-455e-412c-8718" name="Deathspitter" hidden="false" collective="false" import="true" targetId="84b8-1f6e-5d28-f55f" type="selectionEntry">
               <costs>
-                <cost name="pts" typeId="points" value="13.0"/>
+                <cost name="pts" typeId="points" value="13"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -472,21 +472,21 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
       <entryLinks>
         <entryLink id="6631-d359-d59f-b1bb" name="Psyker" hidden="false" collective="false" import="true" targetId="56e9-7608-b945-ac81" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0da8-1b55-35ea-2829" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b16-64a4-6fda-204a" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0da8-1b55-35ea-2829" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b16-64a4-6fda-204a" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="a070-a04d-a84c-b13e" name="Army Commander" hidden="false" collective="false" import="true" targetId="14a7-3ca1-c284-9ae1" type="selectionEntry"/>
         <entryLink id="38dc-b922-0823-7b67" name="Tyranid Psychic Powers" hidden="false" collective="false" import="true" targetId="a896-0e4a-7028-cd01" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="164.0"/>
+        <cost name="pts" typeId="points" value="164"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="14a7-3ca1-c284-9ae1" name="Army Commander" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f483-00eb-ec2a-9a35" type="max"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d0a8-7372-0e39-a7a3" type="max"/>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f483-00eb-ec2a-9a35" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d0a8-7372-0e39-a7a3" type="max"/>
       </constraints>
       <infoLinks>
         <infoLink id="be04-978f-461e-0ff9" name="Army Commander" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
@@ -496,7 +496,7 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
         </infoLink>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="927e-7594-fe18-1824" name="Zoanthropes" hidden="false" collective="false" import="true" type="upgrade">
@@ -521,39 +521,39 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
         <infoLink id="644d-3a46-c5b4-913d" name="Psychic Level 2" hidden="false" targetId="76f1-a9ec-f1f7-0162" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="33a4-bcc4-bbb9-4d0e" name="New CategoryLink" hidden="false" targetId="1439-f160-c1a8-1061" primary="true"/>
+        <categoryLink id="33a4-bcc4-bbb9-4d0e" name="Individuals" hidden="false" targetId="1439-f160-c1a8-1061" primary="true"/>
         <categoryLink id="8c32-08d6-4bbd-0725" name="Tyranids" hidden="false" targetId="f209-8cb3-5cae-0f0b" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="a140-a837-fcd9-6602" name="Warp Field" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be64-1b0c-9497-8a89" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bb0b-b0a7-57b1-df89" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be64-1b0c-9497-8a89" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bb0b-b0a7-57b1-df89" type="min"/>
           </constraints>
           <infoLinks>
             <infoLink id="022f-138a-4ad6-12b5" name="Warp Field" hidden="false" targetId="f9c8-9293-a5b1-917a" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="1501-d8d2-3c90-ede5" name="Psyker" hidden="false" collective="false" import="true" targetId="56e9-7608-b945-ac81" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1abb-2ea7-e763-f8fc" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6fc5-1921-7d9d-876a" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1abb-2ea7-e763-f8fc" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6fc5-1921-7d9d-876a" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="51e7-80e1-d20e-046d" name="Warp Blast" hidden="false" collective="false" import="true" targetId="0b48-ca90-cd69-7c76" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8fe5-7865-c63a-1f20" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="068c-bd84-795c-f2c7" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8fe5-7865-c63a-1f20" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="068c-bd84-795c-f2c7" type="max"/>
           </constraints>
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="120.0"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0b48-ca90-cd69-7c76" name="Warp Blast" hidden="false" collective="false" import="true" type="upgrade">
@@ -612,7 +612,7 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0e28-f698-333d-1571" name="Lictors" hidden="false" collective="false" import="true" type="upgrade">
@@ -633,74 +633,74 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
         <infoLink id="ea1b-e0d6-5ffd-0373" name="Exoskeleton" hidden="false" targetId="683b-ffb8-4792-29ef" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="c95f-799b-18b9-35c6" name="New CategoryLink" hidden="false" targetId="1439-f160-c1a8-1061" primary="true"/>
+        <categoryLink id="c95f-799b-18b9-35c6" name="Individuals" hidden="false" targetId="1439-f160-c1a8-1061" primary="true"/>
         <categoryLink id="1adc-0daf-da9f-8cc0" name="Tyranids" hidden="false" targetId="f209-8cb3-5cae-0f0b" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="30b5-1224-1f84-1df8" name="Tyranid Biomorphs" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="29b2-bc7b-4f94-f1f8" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="29b2-bc7b-4f94-f1f8" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="76c6-b863-ca1b-7499" name="Acid Blood" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bb84-9793-23fd-208c" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bb84-9793-23fd-208c" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="8daa-698a-d0f3-59c7" name="Acid Blood" hidden="false" targetId="132f-88ff-538a-df77" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="5.0"/>
+                <cost name="pts" typeId="points" value="5"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="7a1d-0b5d-3856-f88f" name="Bio-Plasma Attack" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="756e-fb53-c715-eb25" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="756e-fb53-c715-eb25" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="cf20-3046-730f-3577" name="Bio-Plasma" hidden="false" targetId="15a6-3e91-dfb9-d24a" type="profile"/>
                 <infoLink id="110d-45b9-e9cc-9247" name="Bio-Plasma Attack" hidden="false" targetId="240e-8ca9-114f-3c4f" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="40.0"/>
+                <cost name="pts" typeId="points" value="40"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="3300-d761-d231-dd5b" name="Adrenaline Sac" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6162-f667-c270-0ac1" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6162-f667-c270-0ac1" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="d8c0-7c72-2e91-5c90" name="Adrenaline Sac" hidden="false" targetId="107d-0c15-4c84-066a" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="10.0"/>
+                <cost name="pts" typeId="points" value="10"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="1636-a27a-6151-8ef6" name="Aura of Torment" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a12-4e17-1ea6-ddd8" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a12-4e17-1ea6-ddd8" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="6cc4-85aa-8597-a8a4" name="Aura of Torment" hidden="false" targetId="e867-5cc5-e640-7611" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="10.0"/>
+                <cost name="pts" typeId="points" value="10"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="6aba-146b-23f0-6397" name="Enhanced Senses" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="702a-a97d-82ab-d2d3" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="702a-a97d-82ab-d2d3" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="e666-5aff-2337-d6c3" name="Enhanced Senses" hidden="false" targetId="5355-8025-ba2d-37ca" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="2.0"/>
+                <cost name="pts" typeId="points" value="2"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="f79b-05a7-6cfb-7adf" name="Flesh Hooks" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="075a-3d46-3509-647e" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="075a-3d46-3509-647e" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="ad5f-88c2-b948-16c7" name="Flesh Hooks Biomorph" hidden="false" targetId="451b-3c43-c56f-6291" type="profile"/>
@@ -708,112 +708,112 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
               <entryLinks>
                 <entryLink id="b7b0-36df-513e-ef88" name="Flesh Hooks" hidden="false" collective="false" import="true" targetId="e7ee-39f7-5c7e-6f15" type="selectionEntry">
                   <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="00dd-def0-02c4-f70b" type="min"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b9f8-635a-357b-0f02" type="max"/>
+                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="00dd-def0-02c4-f70b" type="min"/>
+                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b9f8-635a-357b-0f02" type="max"/>
                   </constraints>
                 </entryLink>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="points" value="7.0"/>
+                <cost name="pts" typeId="points" value="7"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="2544-3a1a-1d9f-329c" name="Hardened Carapace" publicationId="4740-6730-10c0-9b25" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="597c-ab57-2be8-1032" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="597c-ab57-2be8-1032" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="25a5-55db-f4e5-8bcc" name="Hardened Carapace" hidden="false" targetId="11f4-120f-d25e-5069" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="10.0"/>
+                <cost name="pts" typeId="points" value="10"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="6d86-7729-0494-b538" name="Null Zone" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a66d-6f4f-f3be-7538" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a66d-6f4f-f3be-7538" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="7e53-a158-a94b-f6e4" name="Null Zone" hidden="false" targetId="e90d-359c-bfd3-f0f7" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="35.0"/>
+                <cost name="pts" typeId="points" value="35"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="23a8-ef52-e371-6e0a" name="Optic Membranes" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4599-8da5-30c7-e429" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4599-8da5-30c7-e429" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="5a80-13ea-38b9-c521" name="Optic Membranes" hidden="false" targetId="1a36-cb69-dd91-7fc3" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="1.0"/>
+                <cost name="pts" typeId="points" value="1"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="57dc-7b7c-3b89-d5cf" name="Regenerate" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="13d0-fbd8-c456-72f6" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="13d0-fbd8-c456-72f6" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="7edc-64e0-b1c0-916a" name="Regenerate" hidden="false" targetId="1c4d-b414-d0c1-e4e7" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="30.0"/>
+                <cost name="pts" typeId="points" value="30"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="b4cf-15a6-9be4-2242" name="Toughened Exoskeleton" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="30ec-fd4b-af0b-a2b1" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="30ec-fd4b-af0b-a2b1" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="d218-199f-d95f-afcf" name="Toughened Exoskeleton" hidden="false" targetId="82e0-1298-c78d-5b5e" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="10.0"/>
+                <cost name="pts" typeId="points" value="10"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="9bfb-ae1a-8604-26bd" name="Sharpened Claws" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80aa-647e-80e4-61ee" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80aa-647e-80e4-61ee" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="ee8d-c05a-4ad0-80d5" name="Sharpened Claws" hidden="false" targetId="66c3-9362-0c10-d2b8" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="5.0"/>
+                <cost name="pts" typeId="points" value="5"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="4793-bed4-7591-d86f" name="Venom Sacs" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e406-3e39-412e-f4b7" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e406-3e39-412e-f4b7" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="6463-5b66-e794-3e32" name="Venom Sacs" hidden="false" targetId="94ee-d665-a00a-009d" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="5.0"/>
+                <cost name="pts" typeId="points" value="5"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="1cf4-7852-dfcb-ee9d" name="Voltage Field" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8baa-1d05-0ed6-9597" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8baa-1d05-0ed6-9597" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="7740-85a0-d7b7-d564" name="Voltage Field" hidden="false" targetId="d5eb-113b-6747-b078" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="20.0"/>
+                <cost name="pts" typeId="points" value="20"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="6e06-02a3-56bf-1166" name="Warp Field" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d71-86dc-b45c-9f87" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d71-86dc-b45c-9f87" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="1192-eeaa-5908-4c03" name="Warp Field" hidden="false" targetId="f9c8-9293-a5b1-917a" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="40.0"/>
+                <cost name="pts" typeId="points" value="40"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -822,13 +822,13 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
       <entryLinks>
         <entryLink id="f735-30f3-fe3b-025f" name="Flesh Hooks" hidden="false" collective="false" import="true" targetId="e7ee-39f7-5c7e-6f15" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d682-a053-02ba-d930" type="min"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="49cd-00ef-3b59-59fe" type="max"/>
+            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d682-a053-02ba-d930" type="min"/>
+            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="49cd-00ef-3b59-59fe" type="max"/>
           </constraints>
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="96.0"/>
+        <cost name="pts" typeId="points" value="96"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7622-bab0-4e89-237d" name="Tyranid Warrior Brood" hidden="false" collective="false" import="true" type="upgrade">
@@ -838,14 +838,14 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
         <infoLink id="745c-ae90-f9c2-4fbd" name="Leadership" hidden="false" targetId="029d-d831-ac7e-79df" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="1944-bfd2-a12f-aed6" name="New CategoryLink" hidden="false" targetId="0de2-91d6-86dc-d0bc" primary="true"/>
+        <categoryLink id="1944-bfd2-a12f-aed6" name="Broods" hidden="false" targetId="0de2-91d6-86dc-d0bc" primary="true"/>
         <categoryLink id="e6b2-22b2-fe93-2047" name="Tyranids" hidden="false" targetId="f209-8cb3-5cae-0f0b" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="07b1-40d8-2b51-9225" name="Tyranid Warrior" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ad3-6697-5da3-a8f3" type="max"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b052-e07d-4752-bdd6" type="min"/>
+            <constraint field="selections" scope="parent" value="6" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ad3-6697-5da3-a8f3" type="max"/>
+            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b052-e07d-4752-bdd6" type="min"/>
           </constraints>
           <infoLinks>
             <infoLink id="afe8-ed38-8e1a-02ea" name="Tyranid Warrior" hidden="false" targetId="5ed4-de11-9204-42f8" type="profile"/>
@@ -854,226 +854,226 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
           <selectionEntryGroups>
             <selectionEntryGroup id="7762-0920-5b91-8c54" name="Weapon Options" hidden="false" collective="false" import="true" defaultSelectionEntryId="528d-b868-ce4d-2083">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dee7-3ba4-7b19-37ac" type="min"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eac4-6962-9958-2cc0" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dee7-3ba4-7b19-37ac" type="min"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eac4-6962-9958-2cc0" type="max"/>
               </constraints>
               <selectionEntries>
                 <selectionEntry id="528d-b868-ce4d-2083" name="Two Boneswords" hidden="false" collective="false" import="true" type="upgrade">
                   <entryLinks>
                     <entryLink id="d990-f1bd-7c72-05ef" name="Bonesword" hidden="false" collective="false" import="true" targetId="9fdd-6d9e-e4de-e3e4" type="selectionEntry">
                       <constraints>
-                        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="407b-8d6a-0cc1-b689" type="max"/>
-                        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2953-061d-643f-2e55" type="min"/>
+                        <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="407b-8d6a-0cc1-b689" type="max"/>
+                        <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2953-061d-643f-2e55" type="min"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="pts" typeId="points" value="0.0"/>
+                    <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="2cc4-52aa-982c-6506" name="Lash Whip &amp; Bonesword" hidden="false" collective="false" import="true" type="upgrade">
                   <entryLinks>
                     <entryLink id="d41b-81f4-c0ec-b399" name="Lash Whip" hidden="false" collective="false" import="true" targetId="04be-29cd-fa25-ae71" type="selectionEntry">
                       <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2cdd-ab5f-2765-57be" type="max"/>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d4b1-f3d6-283c-9e25" type="min"/>
+                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2cdd-ab5f-2765-57be" type="max"/>
+                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d4b1-f3d6-283c-9e25" type="min"/>
                       </constraints>
                     </entryLink>
                     <entryLink id="a3fa-2c57-e8c0-6f36" name="Bonesword" hidden="false" collective="false" import="true" targetId="9fdd-6d9e-e4de-e3e4" type="selectionEntry">
                       <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="87e4-1051-290b-7c8f" type="max"/>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f66-2264-e01e-1a52" type="min"/>
+                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="87e4-1051-290b-7c8f" type="max"/>
+                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f66-2264-e01e-1a52" type="min"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="pts" typeId="points" value="8.0"/>
+                    <cost name="pts" typeId="points" value="8"/>
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="82d3-68c0-98f6-9995" name="Spinefist &amp; Bonesword" hidden="false" collective="false" import="true" type="upgrade">
                   <entryLinks>
                     <entryLink id="dca8-aeb0-68db-3853" name="Spinefist" hidden="false" collective="false" import="true" targetId="7946-9a40-e997-ab65" type="selectionEntry">
                       <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6641-1f35-fbc8-6d3c" type="max"/>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f286-813e-6404-6f63" type="min"/>
+                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6641-1f35-fbc8-6d3c" type="max"/>
+                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f286-813e-6404-6f63" type="min"/>
                       </constraints>
                     </entryLink>
                     <entryLink id="d8f7-f47d-bc8b-5d3a" name="Bonesword" hidden="false" collective="false" import="true" targetId="9fdd-6d9e-e4de-e3e4" type="selectionEntry">
                       <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f042-1584-dca6-0331" type="max"/>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b4ec-2fe5-505f-a49b" type="min"/>
+                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f042-1584-dca6-0331" type="max"/>
+                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b4ec-2fe5-505f-a49b" type="min"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="pts" typeId="points" value="6.0"/>
+                    <cost name="pts" typeId="points" value="6"/>
                   </costs>
                 </selectionEntry>
               </selectionEntries>
               <entryLinks>
                 <entryLink id="9368-79e0-b91b-baa5" name="Devourer" hidden="false" collective="false" import="true" targetId="4f71-a6e3-3aa9-97ec" type="selectionEntry">
                   <costs>
-                    <cost name="pts" typeId="points" value="2.0"/>
+                    <cost name="pts" typeId="points" value="2"/>
                   </costs>
                 </entryLink>
                 <entryLink id="11ee-ef59-d872-1941" name="Deathspitter" hidden="false" collective="false" import="true" targetId="84b8-1f6e-5d28-f55f" type="selectionEntry">
                   <costs>
-                    <cost name="pts" typeId="points" value="6.0"/>
+                    <cost name="pts" typeId="points" value="6"/>
                   </costs>
                 </entryLink>
                 <entryLink id="bd13-bbcd-764a-d2c1" name="Barbed Strangler" hidden="false" collective="false" import="true" targetId="0b1b-e8c2-20e9-dd99" type="selectionEntry">
                   <modifiers>
-                    <modifier type="set" field="16a8-f92b-9e1a-2ee4" value="0.0">
+                    <modifier type="set" field="16a8-f92b-9e1a-2ee4" value="0">
                       <conditionGroups>
                         <conditionGroup type="and">
                           <conditions>
-                            <condition field="selections" scope="7622-bab0-4e89-237d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7875-5b7e-3d61-7578" type="equalTo"/>
+                            <condition field="selections" scope="7622-bab0-4e89-237d" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7875-5b7e-3d61-7578" type="equalTo"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
                     </modifier>
                   </modifiers>
                   <constraints>
-                    <constraint field="selections" scope="7622-bab0-4e89-237d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="16a8-f92b-9e1a-2ee4" type="max"/>
+                    <constraint field="selections" scope="7622-bab0-4e89-237d" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="16a8-f92b-9e1a-2ee4" type="max"/>
                   </constraints>
                   <costs>
-                    <cost name="pts" typeId="points" value="24.0"/>
+                    <cost name="pts" typeId="points" value="24"/>
                   </costs>
                 </entryLink>
                 <entryLink id="7875-5b7e-3d61-7578" name="Venom Cannon" hidden="false" collective="false" import="true" targetId="4f89-76a0-e8dd-8570" type="selectionEntry">
                   <modifiers>
-                    <modifier type="set" field="11ea-362b-274d-aa05" value="0.0">
+                    <modifier type="set" field="11ea-362b-274d-aa05" value="0">
                       <conditionGroups>
                         <conditionGroup type="and">
                           <conditions>
-                            <condition field="selections" scope="7622-bab0-4e89-237d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bd13-bbcd-764a-d2c1" type="equalTo"/>
+                            <condition field="selections" scope="7622-bab0-4e89-237d" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bd13-bbcd-764a-d2c1" type="equalTo"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
                     </modifier>
                   </modifiers>
                   <constraints>
-                    <constraint field="selections" scope="7622-bab0-4e89-237d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="11ea-362b-274d-aa05" type="max"/>
+                    <constraint field="selections" scope="7622-bab0-4e89-237d" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="11ea-362b-274d-aa05" type="max"/>
                   </constraints>
                   <costs>
-                    <cost name="pts" typeId="points" value="33.0"/>
+                    <cost name="pts" typeId="points" value="33"/>
                   </costs>
                 </entryLink>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="pts" typeId="points" value="55.0"/>
+            <cost name="pts" typeId="points" value="55"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="07e6-2244-c8d6-41bd" name="Tyranid Biomorphs - Applies to All Models" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fdae-b260-d3d1-5aa9" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fdae-b260-d3d1-5aa9" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="2f5d-8678-5770-8d2b" name="Acid Blood" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="points" value="5.0">
+                <modifier type="increment" field="points" value="5">
                   <repeats>
-                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="82b2-ac25-490c-412e" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="82b2-ac25-490c-412e" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="28f6-1206-7e3a-5049" name="Acid Blood" hidden="false" targetId="132f-88ff-538a-df77" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="pts" typeId="points" value="0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="30f4-e4fc-2ff9-6cbf" name="Bio-Plasma Attack" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="points" value="40.0">
+                <modifier type="increment" field="points" value="40">
                   <repeats>
-                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2712-9297-0662-3a95" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2712-9297-0662-3a95" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="727d-cc45-3f6e-91c0" name="Bio-Plasma" hidden="false" targetId="15a6-3e91-dfb9-d24a" type="profile"/>
                 <infoLink id="0687-bc27-9670-661d" name="Bio-Plasma Attack" hidden="false" targetId="240e-8ca9-114f-3c4f" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="pts" typeId="points" value="0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="d775-bbbf-87be-19d6" name="Adrenaline Sac" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="points" value="10.0">
+                <modifier type="increment" field="points" value="10">
                   <repeats>
-                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f208-79ae-9e0b-2e4b" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f208-79ae-9e0b-2e4b" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="b9eb-dc43-c89e-b723" name="Adrenaline Sac" hidden="false" targetId="107d-0c15-4c84-066a" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="pts" typeId="points" value="0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="8884-edd1-b90a-a7ff" name="Aura of Torment" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="points" value="10.0">
+                <modifier type="increment" field="points" value="10">
                   <repeats>
-                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa0f-fac8-f4b3-16b8" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa0f-fac8-f4b3-16b8" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="ae74-a3b7-782b-2701" name="Aura of Torment" hidden="false" targetId="e867-5cc5-e640-7611" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="pts" typeId="points" value="0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="146a-c412-691b-5897" name="Enhanced Senses" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="points" value="2.0">
+                <modifier type="increment" field="points" value="2">
                   <repeats>
-                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c00-9ca1-9c7b-f35c" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c00-9ca1-9c7b-f35c" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="a89d-fbd0-7b92-e4df" name="Enhanced Senses" hidden="false" targetId="5355-8025-ba2d-37ca" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="pts" typeId="points" value="0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="cd21-1929-b78a-6d31" name="Flesh Hooks" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="points" value="7.0">
+                <modifier type="increment" field="points" value="7">
                   <repeats>
-                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0e66-5a1d-fb08-d5ef" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0e66-5a1d-fb08-d5ef" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="7439-3745-700b-420a" name="Flesh Hooks Biomorph" hidden="false" targetId="451b-3c43-c56f-6291" type="profile"/>
@@ -1081,182 +1081,182 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
               <entryLinks>
                 <entryLink id="c60c-58c4-1fc6-9794" name="Flesh Hooks" hidden="false" collective="false" import="true" targetId="e7ee-39f7-5c7e-6f15" type="selectionEntry">
                   <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="72b8-c078-5f75-02dc" type="min"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="685e-5fa3-3177-8b96" type="max"/>
+                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="72b8-c078-5f75-02dc" type="min"/>
+                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="685e-5fa3-3177-8b96" type="max"/>
                   </constraints>
                 </entryLink>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="pts" typeId="points" value="0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="86c4-cdca-9abb-5e21" name="Hardened Carapace" publicationId="4740-6730-10c0-9b25" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="points" value="10.0">
+                <modifier type="increment" field="points" value="10">
                   <repeats>
-                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="39ed-6e13-dab7-7c32" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="39ed-6e13-dab7-7c32" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="100e-3975-7d49-7dc9" name="Hardened Carapace" hidden="false" targetId="11f4-120f-d25e-5069" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="pts" typeId="points" value="0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="ac30-953b-bafc-6559" name="Null Zone" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="points" value="35.0">
+                <modifier type="increment" field="points" value="35">
                   <repeats>
-                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6930-3054-3abb-8ce6" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6930-3054-3abb-8ce6" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="e6b6-55a3-48f1-a5b8" name="Null Zone" hidden="false" targetId="e90d-359c-bfd3-f0f7" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="pts" typeId="points" value="0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="d658-9797-1118-354f" name="Optic Membranes" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="points" value="1.0">
+                <modifier type="increment" field="points" value="1">
                   <repeats>
-                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e995-387e-80a4-f8f5" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e995-387e-80a4-f8f5" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="2511-6535-b278-f9ad" name="Optic Membranes" hidden="false" targetId="1a36-cb69-dd91-7fc3" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="pts" typeId="points" value="0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="f9bc-cb6f-2a1b-b495" name="Regenerate" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="points" value="20.0">
+                <modifier type="increment" field="points" value="20">
                   <repeats>
-                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec5d-7c26-a25e-ac99" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec5d-7c26-a25e-ac99" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="ced7-7bd3-be2f-a16e" name="Regenerate" hidden="false" targetId="1c4d-b414-d0c1-e4e7" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="pts" typeId="points" value="0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="5791-176b-d039-e9c8" name="Toughened Exoskeleton" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="points" value="10.0">
+                <modifier type="increment" field="points" value="10">
                   <repeats>
-                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="69e2-acc2-10c4-73bd" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="69e2-acc2-10c4-73bd" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="8992-514c-adc7-6276" name="Toughened Exoskeleton" hidden="false" targetId="82e0-1298-c78d-5b5e" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="pts" typeId="points" value="0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="92b2-c95e-f0b1-541f" name="Sharpened Claws" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="points" value="5.0">
+                <modifier type="increment" field="points" value="5">
                   <repeats>
-                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f163-de81-5d55-0277" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f163-de81-5d55-0277" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="b9f2-031a-df06-2408" name="Sharpened Claws" hidden="false" targetId="66c3-9362-0c10-d2b8" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="pts" typeId="points" value="0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="5c31-a704-5913-6fae" name="Venom Sacs" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="points" value="5.0">
+                <modifier type="increment" field="points" value="5">
                   <repeats>
-                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6472-e213-d873-2898" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6472-e213-d873-2898" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="2c38-80d5-21fc-29d7" name="Venom Sacs" hidden="false" targetId="94ee-d665-a00a-009d" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="pts" typeId="points" value="0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="53ba-cbad-ecf9-8ec4" name="Voltage Field" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="points" value="20.0">
+                <modifier type="increment" field="points" value="20">
                   <repeats>
-                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df45-f2f3-1a03-9cd0" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df45-f2f3-1a03-9cd0" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="5743-29f3-0b39-cc3d" name="Voltage Field" hidden="false" targetId="d5eb-113b-6747-b078" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="pts" typeId="points" value="0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="faa0-913f-aa8e-cbdd" name="Warp Field" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="points" value="40.0">
+                <modifier type="increment" field="points" value="40">
                   <repeats>
-                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="7622-bab0-4e89-237d" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="10ce-ec94-f5fc-389d" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="10ce-ec94-f5fc-389d" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="85a6-3423-3d61-d892" name="Warp Field" hidden="false" targetId="f9c8-9293-a5b1-917a" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="0.0"/>
+                <cost name="pts" typeId="points" value="0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="27e9-c638-cca6-7cd6" name="Genestealer Brood" hidden="false" collective="false" import="true" type="upgrade">
@@ -1265,82 +1265,82 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
         <infoLink id="61c7-4457-a0bc-bd4f" name="Immune to Psychology" hidden="false" targetId="8fb6-dd3b-4958-9616" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="462e-7082-4615-748a" name="New CategoryLink" hidden="false" targetId="0de2-91d6-86dc-d0bc" primary="true"/>
+        <categoryLink id="462e-7082-4615-748a" name="Broods" hidden="false" targetId="0de2-91d6-86dc-d0bc" primary="true"/>
         <categoryLink id="8810-814f-2103-d420" name="Tyranids" hidden="false" targetId="f209-8cb3-5cae-0f0b" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="cb6e-bb1a-2fdc-38fd" name="Genestealers" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e41-48d3-d722-c021" type="min"/>
-            <constraint field="selections" scope="parent" value="12.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fffd-75ac-c2eb-dc2a" type="max"/>
+            <constraint field="selections" scope="parent" value="6" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e41-48d3-d722-c021" type="min"/>
+            <constraint field="selections" scope="parent" value="12" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fffd-75ac-c2eb-dc2a" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="06b2-6c72-f035-9c37" name="Chitinous Armour" hidden="false" targetId="1a56-f7ec-afd4-de11" type="profile"/>
             <infoLink id="8792-b2da-6158-f493" name="Genestealers" hidden="false" targetId="21ee-a1e4-8a60-e460" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="28.0"/>
+            <cost name="pts" typeId="points" value="28"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8ef6-0800-7990-8c8b" name="Termagant Brood" hidden="false" collective="false" import="true" type="upgrade">
       <categoryLinks>
-        <categoryLink id="68af-11c5-5173-d932" name="New CategoryLink" hidden="false" targetId="0de2-91d6-86dc-d0bc" primary="true"/>
+        <categoryLink id="68af-11c5-5173-d932" name="Broods" hidden="false" targetId="0de2-91d6-86dc-d0bc" primary="true"/>
         <categoryLink id="9519-3df6-19ff-bf17" name="Tyranids" hidden="false" targetId="f209-8cb3-5cae-0f0b" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="f1bc-15c8-0d15-ceca" name="Termagant" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7031-406f-c225-c73c" type="min"/>
-            <constraint field="selections" scope="parent" value="24.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b18d-1c97-354b-336b" type="max"/>
+            <constraint field="selections" scope="parent" value="6" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7031-406f-c225-c73c" type="min"/>
+            <constraint field="selections" scope="parent" value="24" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b18d-1c97-354b-336b" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="c16f-0eb7-d1fa-7481" name="Termagant" hidden="false" targetId="bdd0-fc62-60c0-a298" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="6.0"/>
+            <cost name="pts" typeId="points" value="6"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="903b-550b-105b-1399" name="Weapon Options" hidden="false" collective="false" import="true" defaultSelectionEntryId="d3f7-85ca-d84c-d17c">
           <modifiers>
-            <modifier type="increment" field="f69c-ad25-3ee7-3d8c" value="1.0">
+            <modifier type="increment" field="f69c-ad25-3ee7-3d8c" value="1">
               <repeats>
-                <repeat field="selections" scope="8ef6-0800-7990-8c8b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f1bc-15c8-0d15-ceca" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="8ef6-0800-7990-8c8b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f1bc-15c8-0d15-ceca" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
-            <modifier type="increment" field="4c68-9631-35ae-c4d0" value="1.0">
+            <modifier type="increment" field="4c68-9631-35ae-c4d0" value="1">
               <repeats>
-                <repeat field="selections" scope="8ef6-0800-7990-8c8b" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f1bc-15c8-0d15-ceca" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="8ef6-0800-7990-8c8b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f1bc-15c8-0d15-ceca" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f69c-ad25-3ee7-3d8c" type="max"/>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c68-9631-35ae-c4d0" type="min"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f69c-ad25-3ee7-3d8c" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c68-9631-35ae-c4d0" type="min"/>
           </constraints>
           <entryLinks>
             <entryLink id="d3f7-85ca-d84c-d17c" name="Fleshborer" hidden="false" collective="false" import="true" targetId="b42e-0f97-7566-7bc9" type="selectionEntry"/>
             <entryLink id="1fee-9ec7-49cf-e8be" name="Spike Rifle" hidden="false" collective="false" import="true" targetId="72fa-9969-2784-166c" type="selectionEntry">
               <costs>
-                <cost name="pts" typeId="points" value="1.0"/>
+                <cost name="pts" typeId="points" value="1"/>
               </costs>
             </entryLink>
             <entryLink id="5bd5-6c23-e7b9-6eef" name="Strangleweb" hidden="false" collective="false" import="true" targetId="5c64-62fc-400a-83b6" type="selectionEntry">
               <costs>
-                <cost name="pts" typeId="points" value="6.0"/>
+                <cost name="pts" typeId="points" value="6"/>
               </costs>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0207-1291-2587-cda4" name="Hormagaunt Brood" hidden="false" collective="false" import="true" type="upgrade">
@@ -1348,25 +1348,25 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
         <infoLink id="717f-9d4d-0aad-ac55" name="Leap" hidden="false" targetId="bf61-3098-5a1c-4ffc" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="b53f-1677-05a3-15b5" name="New CategoryLink" hidden="false" targetId="0de2-91d6-86dc-d0bc" primary="true"/>
+        <categoryLink id="b53f-1677-05a3-15b5" name="Broods" hidden="false" targetId="0de2-91d6-86dc-d0bc" primary="true"/>
         <categoryLink id="cac2-ba79-67cb-19c7" name="Tyranids" hidden="false" targetId="f209-8cb3-5cae-0f0b" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="8c4f-6e97-3d5f-9c98" name="Hormagaunt" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="24.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1951-729a-bf47-e502" type="max"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="490b-1104-8152-1832" type="min"/>
+            <constraint field="selections" scope="parent" value="24" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1951-729a-bf47-e502" type="max"/>
+            <constraint field="selections" scope="parent" value="6" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="490b-1104-8152-1832" type="min"/>
           </constraints>
           <infoLinks>
             <infoLink id="ee60-ea75-d4fe-67cf" name="Hormagaunt" hidden="false" targetId="53a2-b04b-1d50-85b6" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="8.0"/>
+            <cost name="pts" typeId="points" value="8"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4982-8ffd-8731-f0ef" name="Gargoyle Brood" hidden="false" collective="false" import="true" type="upgrade">
@@ -1375,33 +1375,33 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
         <infoLink id="823a-757e-0036-5aaf" name="Gargoyle Close Combat" hidden="false" targetId="fbec-a6f0-8fc5-c910" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="4590-ff23-6355-b768" name="New CategoryLink" hidden="false" targetId="0de2-91d6-86dc-d0bc" primary="true"/>
+        <categoryLink id="4590-ff23-6355-b768" name="Broods" hidden="false" targetId="0de2-91d6-86dc-d0bc" primary="true"/>
         <categoryLink id="c4e3-a897-e8fb-88a8" name="Tyranids" hidden="false" targetId="f209-8cb3-5cae-0f0b" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="1247-d419-330d-8ffc" name="Gargoyle" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="65b2-92b3-8c87-0d24" type="min"/>
-            <constraint field="selections" scope="parent" value="12.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f49a-7e08-7511-cd5c" type="max"/>
+            <constraint field="selections" scope="parent" value="6" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="65b2-92b3-8c87-0d24" type="min"/>
+            <constraint field="selections" scope="parent" value="12" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f49a-7e08-7511-cd5c" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="4425-53a7-fe27-ed0d" name="Gargoyle" hidden="false" targetId="69e3-5595-1653-139f" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="16.0"/>
+            <cost name="pts" typeId="points" value="16"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="8ef1-903f-e14f-f1dc" name="Flamespurt" hidden="false" collective="false" import="true" targetId="a903-a6a7-d13f-ddee" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ea54-9e57-8a28-5a65" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c4ac-9a4c-7727-0a98" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ea54-9e57-8a28-5a65" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c4ac-9a4c-7727-0a98" type="max"/>
           </constraints>
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b51f-1350-df11-3ea8" name="Carnifex" hidden="false" collective="false" import="true" type="upgrade">
@@ -1417,89 +1417,89 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
         <infoLink id="75c2-a5ad-a0ad-d4bd" name="Immune to Psychology" hidden="false" targetId="8fb6-dd3b-4958-9616" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="6673-304a-20bc-6fc0" name="New CategoryLink" hidden="false" targetId="795f-7f64-4e25-925e" primary="true"/>
+        <categoryLink id="6673-304a-20bc-6fc0" name=" Support" hidden="false" targetId="795f-7f64-4e25-925e" primary="true"/>
         <categoryLink id="6a8b-d449-eaa2-0502" name="Tyranids" hidden="false" targetId="f209-8cb3-5cae-0f0b" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="5d02-95b2-0694-c923" name="Bio-Plasma Attack" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="668a-abc7-67d6-d54c" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4348-f6e7-aa88-ce3f" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="668a-abc7-67d6-d54c" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4348-f6e7-aa88-ce3f" type="min"/>
           </constraints>
           <infoLinks>
             <infoLink id="3534-4769-ce00-cac6" name="Bio-Plasma" hidden="false" targetId="15a6-3e91-dfb9-d24a" type="profile"/>
             <infoLink id="3819-d867-d4c1-c57f" name="Bio-Plasma Attack" hidden="false" targetId="240e-8ca9-114f-3c4f" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="201e-367f-1493-d867" name="Tyranid Biomorphs" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="81ae-36af-b920-3de7" type="max"/>
+            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="81ae-36af-b920-3de7" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="308f-2268-e875-116d" name="Acid Blood" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0adb-3f7e-da50-1d6a" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0adb-3f7e-da50-1d6a" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="89cb-1fc9-e450-0af2" name="Acid Blood" hidden="false" targetId="132f-88ff-538a-df77" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="5.0"/>
+                <cost name="pts" typeId="points" value="5"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="7b21-4a25-cdb1-389b" name="Bio-Plasma Attack" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="59f5-1655-dfbb-cd6a" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="59f5-1655-dfbb-cd6a" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="91f7-5cc6-0a2c-1702" name="Bio-Plasma" hidden="false" targetId="15a6-3e91-dfb9-d24a" type="profile"/>
                 <infoLink id="51bf-a4b7-eaa6-4557" name="Bio-Plasma Attack" hidden="false" targetId="240e-8ca9-114f-3c4f" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="40.0"/>
+                <cost name="pts" typeId="points" value="40"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="1211-88ff-b4a3-4e46" name="Adrenaline Sac" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2396-8035-3156-fcd1" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2396-8035-3156-fcd1" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="e28d-5639-be51-3a90" name="Adrenaline Sac" hidden="false" targetId="107d-0c15-4c84-066a" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="10.0"/>
+                <cost name="pts" typeId="points" value="10"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="4ac7-ddb7-1337-9296" name="Aura of Torment" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="adbf-7dfb-fbe8-dbc0" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="adbf-7dfb-fbe8-dbc0" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="13ca-b70b-429b-412d" name="Aura of Torment" hidden="false" targetId="e867-5cc5-e640-7611" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="10.0"/>
+                <cost name="pts" typeId="points" value="10"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="1f69-d950-f53f-6331" name="Enhanced Senses" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a10-79a1-9100-ad36" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a10-79a1-9100-ad36" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="9379-7c85-8eb0-e632" name="Enhanced Senses" hidden="false" targetId="5355-8025-ba2d-37ca" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="2.0"/>
+                <cost name="pts" typeId="points" value="2"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="d312-6dfe-407e-5dfa" name="Flesh Hooks" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d76-a4a9-f67d-5973" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d76-a4a9-f67d-5973" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="4975-f1a9-5062-b7c0" name="Flesh Hooks Biomorph" hidden="false" targetId="451b-3c43-c56f-6291" type="profile"/>
@@ -1507,124 +1507,124 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
               <entryLinks>
                 <entryLink id="d04e-48b3-71d7-7203" name="Flesh Hooks" hidden="false" collective="false" import="true" targetId="e7ee-39f7-5c7e-6f15" type="selectionEntry">
                   <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="de7d-6f5d-403b-0b8c" type="min"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d52a-d62f-be5c-48b9" type="max"/>
+                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="de7d-6f5d-403b-0b8c" type="min"/>
+                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d52a-d62f-be5c-48b9" type="max"/>
                   </constraints>
                 </entryLink>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="points" value="7.0"/>
+                <cost name="pts" typeId="points" value="7"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="c339-dbb1-31b4-5447" name="Hardened Carapace" publicationId="4740-6730-10c0-9b25" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f6e-dfd2-be30-a4ff" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f6e-dfd2-be30-a4ff" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="ddff-5e8a-271b-8572" name="Hardened Carapace" hidden="false" targetId="11f4-120f-d25e-5069" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="10.0"/>
+                <cost name="pts" typeId="points" value="10"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="8321-4a5f-0e02-a471" name="Null Zone" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc40-bc08-5970-e3ed" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc40-bc08-5970-e3ed" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="d246-d2a8-f599-0ccb" name="Null Zone" hidden="false" targetId="e90d-359c-bfd3-f0f7" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="35.0"/>
+                <cost name="pts" typeId="points" value="35"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="83c0-01c1-4649-bd62" name="Optic Membranes" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6cf8-9db7-dccb-f602" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6cf8-9db7-dccb-f602" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="51b4-f77f-22f8-f76f" name="Optic Membranes" hidden="false" targetId="1a36-cb69-dd91-7fc3" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="1.0"/>
+                <cost name="pts" typeId="points" value="1"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="3f4b-e24c-0fe9-a299" name="Regenerate" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="195e-d4c9-d7bb-5ba0" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="195e-d4c9-d7bb-5ba0" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="ff47-a146-2805-4c83" name="Regenerate" hidden="false" targetId="1c4d-b414-d0c1-e4e7" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="100.0"/>
+                <cost name="pts" typeId="points" value="100"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="5f1e-c6f3-82e3-39b7" name="Toughened Exoskeleton" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc78-d0ab-dcb0-6521" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc78-d0ab-dcb0-6521" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="201e-e586-c931-f5f9" name="Toughened Exoskeleton" hidden="false" targetId="82e0-1298-c78d-5b5e" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="10.0"/>
+                <cost name="pts" typeId="points" value="10"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="39e7-535c-5df7-4736" name="Sharpened Claws" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51fa-4d2a-e5e9-5d6b" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51fa-4d2a-e5e9-5d6b" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="0a86-95ad-96cf-a1dc" name="Sharpened Claws" hidden="false" targetId="66c3-9362-0c10-d2b8" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="5.0"/>
+                <cost name="pts" typeId="points" value="5"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="a91e-3b71-8245-2632" name="Venom Sacs" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f57-ad69-e13f-f3c9" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f57-ad69-e13f-f3c9" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="7fb6-3022-d95c-d689" name="Venom Sacs" hidden="false" targetId="94ee-d665-a00a-009d" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="5.0"/>
+                <cost name="pts" typeId="points" value="5"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="d5d3-6a01-c6de-4686" name="Voltage Field" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a67-4af2-9294-6902" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a67-4af2-9294-6902" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="1c65-d7f1-618a-f954" name="Voltage Field" hidden="false" targetId="d5eb-113b-6747-b078" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="20.0"/>
+                <cost name="pts" typeId="points" value="20"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="c32b-56bb-0a3c-68fe" name="Warp Field" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="71fd-5888-d169-d3e3" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="71fd-5888-d169-d3e3" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="d609-35a1-74f2-ee93" name="Warp Field" hidden="false" targetId="f9c8-9293-a5b1-917a" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="40.0"/>
+                <cost name="pts" typeId="points" value="40"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="points" value="199.0"/>
+        <cost name="pts" typeId="points" value="199"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="002d-4b1c-aae9-e6c4" name="Ripper Swarm" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5ecc-a082-8333-fdbd" type="max"/>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5ecc-a082-8333-fdbd" type="max"/>
       </constraints>
       <infoLinks>
         <infoLink id="c2c8-d574-432f-6ff1" name="Ripper Combat" hidden="false" targetId="913c-dbe5-f8d6-aefb" type="rule"/>
@@ -1634,7 +1634,7 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
         <infoLink id="e9a5-eba0-1950-105b" name="Leadership" hidden="false" targetId="029d-d831-ac7e-79df" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="14e8-6117-871a-5982" name="New CategoryLink" hidden="false" targetId="795f-7f64-4e25-925e" primary="true"/>
+        <categoryLink id="14e8-6117-871a-5982" name=" Support" hidden="false" targetId="795f-7f64-4e25-925e" primary="true"/>
         <categoryLink id="ec73-5cb4-7436-8508" name="Tyranids" hidden="false" targetId="f209-8cb3-5cae-0f0b" primary="false"/>
       </categoryLinks>
       <selectionEntries>
@@ -1643,24 +1643,24 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
             <infoLink id="16d0-e532-c8a6-46da" name="Ripper Swarm" hidden="false" targetId="7d0c-a485-9852-7c48" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="20.0"/>
+            <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f0aa-a3fc-e732-ce86" name="Biovores" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="increment" field="3628-ae16-2d81-b637" value="1.0">
+        <modifier type="increment" field="3628-ae16-2d81-b637" value="1">
           <repeats>
-            <repeat field="points" scope="roster" value="750.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f209-8cb3-5cae-0f0b" repeats="1" roundUp="false"/>
+            <repeat field="points" scope="roster" value="750" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f209-8cb3-5cae-0f0b" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3628-ae16-2d81-b637" type="max"/>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3628-ae16-2d81-b637" type="max"/>
       </constraints>
       <rules>
         <rule id="1b9b-fc16-0901-c822" name="Biovore Spore Mines" publicationId="4740-6730-10c0-9b25" page="25" hidden="false">
@@ -1679,18 +1679,18 @@ If the spore mine lands within 1&quot; of the non-Tyranid model it explodes imme
         <infoLink id="9c90-fdac-4276-ee63" name="Biovore" hidden="false" targetId="0065-5668-8986-4b9c" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="4684-698b-3de8-04d2" name="New CategoryLink" hidden="false" targetId="795f-7f64-4e25-925e" primary="true"/>
+        <categoryLink id="4684-698b-3de8-04d2" name=" Support" hidden="false" targetId="795f-7f64-4e25-925e" primary="true"/>
         <categoryLink id="e433-b215-dfcf-4ed7" name="Tyranids" hidden="false" targetId="f209-8cb3-5cae-0f0b" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="6bf7-d741-ba65-b7ed" name="Spore Mine" hidden="false" collective="false" import="true" targetId="3bbe-cef1-f452-5191" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="697d-4dfa-b7db-4701" type="max"/>
+            <constraint field="selections" scope="parent" value="6" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="697d-4dfa-b7db-4701" type="max"/>
           </constraints>
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="20.0"/>
+        <cost name="pts" typeId="points" value="20"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3bbe-cef1-f452-5191" name="Spore Mine" hidden="false" collective="false" import="true" type="upgrade">
@@ -1740,11 +1740,11 @@ Crewman hit by the spreading rot take their armour save or suffer 1 wound</descr
         <infoLink id="4025-6aee-f36c-6192" name="Leadership" hidden="false" targetId="029d-d831-ac7e-79df" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="5505-e047-6f9c-3105" name="New CategoryLink" hidden="false" targetId="f209-8cb3-5cae-0f0b" primary="false"/>
-        <categoryLink id="d25c-156e-17c9-bcc4" name="Support" hidden="false" targetId="795f-7f64-4e25-925e" primary="true"/>
+        <categoryLink id="5505-e047-6f9c-3105" name="Tyranids" hidden="false" targetId="f209-8cb3-5cae-0f0b" primary="false"/>
+        <categoryLink id="d25c-156e-17c9-bcc4" name=" Support" hidden="false" targetId="795f-7f64-4e25-925e" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="10.0"/>
+        <cost name="pts" typeId="points" value="10"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2387-26e1-f400-7bf0" name="Tyranid Haruspex" hidden="false" collective="false" import="true" type="upgrade">
@@ -1754,35 +1754,35 @@ Crewman hit by the spreading rot take their armour save or suffer 1 wound</descr
         <infoLink id="3745-2122-a29d-1e8e" name="Terror" hidden="false" targetId="05e0-cd40-2d9e-a9f9" type="rule"/>
         <infoLink id="f068-07cd-7205-f7a5" name="Tyranid Vehicle Targetting" hidden="false" targetId="7689-cdc9-5c99-988b" type="rule"/>
         <infoLink id="9b37-ee42-8f2f-bc7c" name="Tyranid Haruspex" hidden="false" targetId="72c3-05d3-edc7-da0d" type="profile"/>
-        <infoLink id="25ca-d595-7bc6-3a4a" name="Haruspex Rampage" hidden="false" targetId="a5f3-6f1a-eaf0-e737" type="rule"/>
+        <infoLink id="25ca-d595-7bc6-3a4a" name="Rampage" hidden="false" targetId="a5f3-6f1a-eaf0-e737" type="rule"/>
         <infoLink id="bb20-1596-841a-79f0" name="Tyranid Haruspex Close Combat" hidden="false" targetId="58c7-a733-823f-0d61" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="8774-3f5c-4ca3-95cf" name="New CategoryLink" hidden="false" targetId="795f-7f64-4e25-925e" primary="true"/>
+        <categoryLink id="8774-3f5c-4ca3-95cf" name=" Support" hidden="false" targetId="795f-7f64-4e25-925e" primary="true"/>
         <categoryLink id="7c32-2547-f7f3-1816" name="Tyranids" hidden="false" targetId="f209-8cb3-5cae-0f0b" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="9ae2-698a-66c4-5c63" name="Frag Spine Launcher" hidden="false" collective="false" import="true" targetId="386c-a0c3-8de0-b7aa" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7cdc-1ede-37e8-af26" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c56d-c9d6-cf6b-e691" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7cdc-1ede-37e8-af26" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c56d-c9d6-cf6b-e691" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="295d-bd88-9d89-00e3" name="Claws and Mandables" hidden="false" collective="false" import="true" targetId="1e52-4a27-f99f-3baf" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a4d-b5e1-edeb-de2b" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b19-3d76-aba0-b03c" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a4d-b5e1-edeb-de2b" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b19-3d76-aba0-b03c" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="a64b-c3fd-3719-d1c7" name="Acid Jet" hidden="false" collective="false" import="true" targetId="ce7a-6cdd-1fff-2527" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b110-042a-1a7a-086c" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8df3-5ba6-c17a-23c7" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b110-042a-1a7a-086c" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8df3-5ba6-c17a-23c7" type="max"/>
           </constraints>
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="250.0"/>
+        <cost name="pts" typeId="points" value="250"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ce7a-6cdd-1fff-2527" name="Acid Jet" hidden="false" collective="false" import="true" type="upgrade">
@@ -1807,7 +1807,7 @@ Crewman hit by the spreading rot take their armour save or suffer 1 wound</descr
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="386c-a0c3-8de0-b7aa" name="Frag Spine Launcher" hidden="false" collective="false" import="true" type="upgrade">
@@ -1827,7 +1827,7 @@ Crewman hit by the spreading rot take their armour save or suffer 1 wound</descr
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1e52-4a27-f99f-3baf" name="Claws and Mandables" hidden="false" collective="false" import="true" type="upgrade">
@@ -1850,7 +1850,7 @@ Crewman hit by the spreading rot take their armour save or suffer 1 wound</descr
         <infoLink id="5bf4-937d-3e87-969d" name="Close Combat" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0ea3-c0f5-5b5f-8756" name="Tyranid Malefactor" hidden="false" collective="false" import="true" type="upgrade">
@@ -1865,25 +1865,25 @@ Crewman hit by the spreading rot take their armour save or suffer 1 wound</descr
         <infoLink id="d039-86bb-3ea2-01ac" name="Tyranid Malefactor Close Combat" hidden="false" targetId="e31b-10c9-e379-3a9a" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="ed52-4cab-0e7d-3175" name="New CategoryLink" hidden="false" targetId="795f-7f64-4e25-925e" primary="true"/>
+        <categoryLink id="ed52-4cab-0e7d-3175" name=" Support" hidden="false" targetId="795f-7f64-4e25-925e" primary="true"/>
         <categoryLink id="5e4c-7bd7-016a-1971" name="Tyranids" hidden="false" targetId="f209-8cb3-5cae-0f0b" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="b996-3710-53ac-8ecb" name="Spore Cysts" hidden="false" collective="false" import="true" targetId="0546-680b-92d4-438b" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5836-a61a-ac8a-a6cd" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f69-7cfa-f35d-85c3" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5836-a61a-ac8a-a6cd" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f69-7cfa-f35d-85c3" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="509a-ea80-640a-d6cc" name="Frag Spine Launcher" hidden="false" collective="false" import="true" targetId="386c-a0c3-8de0-b7aa" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f8c-299b-0131-f80c" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3392-278e-4099-8d79" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f8c-299b-0131-f80c" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3392-278e-4099-8d79" type="max"/>
           </constraints>
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="80.0"/>
+        <cost name="pts" typeId="points" value="80"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0546-680b-92d4-438b" name="Spore Cysts" hidden="false" collective="false" import="true" type="upgrade">
@@ -1908,7 +1908,7 @@ Crewman hit by the spreading rot take their armour save or suffer 1 wound</descr
         </rule>
       </rules>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="874b-b669-16bb-4404" name="Tyranid Exocrine" hidden="false" collective="false" import="true" type="upgrade">
@@ -1926,25 +1926,25 @@ Crewman hit by the spreading rot take their armour save or suffer 1 wound</descr
         <infoLink id="515a-4b6a-2da7-9999" name="Tyranid Exocrine Damage Table" hidden="false" targetId="f08c-d0ce-7d01-7eba" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="89eb-397e-3364-d9f5" name="New CategoryLink" hidden="false" targetId="795f-7f64-4e25-925e" primary="true"/>
+        <categoryLink id="89eb-397e-3364-d9f5" name=" Support" hidden="false" targetId="795f-7f64-4e25-925e" primary="true"/>
         <categoryLink id="d286-d60e-f09f-eaa8" name="Tyranids" hidden="false" targetId="f209-8cb3-5cae-0f0b" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="5bb6-d940-63bb-2e8c" name="Spore Cysts" hidden="false" collective="false" import="true" targetId="0546-680b-92d4-438b" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b948-3bf8-62ba-0651" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b2f-b2cc-01ae-f8f8" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b948-3bf8-62ba-0651" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b2f-b2cc-01ae-f8f8" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="166c-0bda-d6dc-5a91" name="Bio-Cannon" hidden="false" collective="false" import="true" targetId="f94a-5ad0-e280-5a99" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="43bf-3ac1-9f6a-1f9f" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="57f0-6d37-0c0b-7acc" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="43bf-3ac1-9f6a-1f9f" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="57f0-6d37-0c0b-7acc" type="max"/>
           </constraints>
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="165.0"/>
+        <cost name="pts" typeId="points" value="165"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f94a-5ad0-e280-5a99" name="Bio-Cannon" hidden="false" collective="false" import="true" type="upgrade">
@@ -1953,7 +1953,7 @@ Crewman hit by the spreading rot take their armour save or suffer 1 wound</descr
         <infoLink id="8da1-e55e-00a4-2a86" name="Bio-Cannon" hidden="false" targetId="5848-e43c-41a4-62cd" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8398-c660-2467-1542" name="Tyranid Dactylis" hidden="false" collective="false" import="true" type="upgrade">
@@ -1967,25 +1967,25 @@ Crewman hit by the spreading rot take their armour save or suffer 1 wound</descr
         <infoLink id="7a64-6cde-9ce5-3c1e" name="Tyranid Vehicle Targetting" hidden="false" targetId="7689-cdc9-5c99-988b" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="07da-b36c-904e-94ba" name="New CategoryLink" hidden="false" targetId="f209-8cb3-5cae-0f0b" primary="false"/>
-        <categoryLink id="6fef-c0bd-7aef-0406" name="New CategoryLink" hidden="false" targetId="795f-7f64-4e25-925e" primary="true"/>
+        <categoryLink id="07da-b36c-904e-94ba" name="Tyranids" hidden="false" targetId="f209-8cb3-5cae-0f0b" primary="false"/>
+        <categoryLink id="6fef-c0bd-7aef-0406" name=" Support" hidden="false" targetId="795f-7f64-4e25-925e" primary="true"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="125a-759c-e184-e58a" name="Spore Cysts" hidden="false" collective="false" import="true" targetId="0546-680b-92d4-438b" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="10c6-91d1-a28b-45f5" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc29-ac25-6d42-3125" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="10c6-91d1-a28b-45f5" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc29-ac25-6d42-3125" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="0caf-802b-d8e8-e95d" name="Bile Pods" hidden="false" collective="false" import="true" targetId="d850-5cda-740e-2748" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e300-fc44-49fe-de22" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8bba-be9d-e946-4517" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e300-fc44-49fe-de22" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8bba-be9d-e946-4517" type="max"/>
           </constraints>
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="200.0"/>
+        <cost name="pts" typeId="points" value="200"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d850-5cda-740e-2748" name="Bile Pods" hidden="false" collective="false" import="true" type="upgrade">
@@ -2000,63 +2000,63 @@ Crewman hit by the spreading rot take their armour save or suffer 1 wound</descr
       <selectionEntries>
         <selectionEntry id="2195-d13d-b206-bdf8" name="Acid Blood" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7dc8-8869-4430-a097" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7dc8-8869-4430-a097" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="b5b9-e272-a80b-1905" name="Acid Blood" hidden="false" targetId="132f-88ff-538a-df77" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="5.0"/>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="32d6-8b57-1d7d-f65f" name="Bio-Plasma Attack" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ac9-1223-bf6b-c163" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ac9-1223-bf6b-c163" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="1b6c-c564-623a-9cd0" name="Bio-Plasma" hidden="false" targetId="15a6-3e91-dfb9-d24a" type="profile"/>
             <infoLink id="5b61-44fb-49fc-ee87" name="Bio-Plasma Attack" hidden="false" targetId="240e-8ca9-114f-3c4f" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="40.0"/>
+            <cost name="pts" typeId="points" value="40"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="9f3e-36de-b4dc-e684" name="Adrenaline Sac" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ff8-47a4-1188-db66" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ff8-47a4-1188-db66" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="0cf4-977e-75d7-1b60" name="Adrenaline Sac" hidden="false" targetId="107d-0c15-4c84-066a" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="10.0"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="5427-1848-f46a-94a2" name="Aura of Torment" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a34-ec2e-cddc-142f" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a34-ec2e-cddc-142f" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="1f97-7474-a82b-84f7" name="Aura of Torment" hidden="false" targetId="e867-5cc5-e640-7611" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="10.0"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="667a-1a7e-fe45-1331" name="Enhanced Senses" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c2a3-315b-5fe7-b627" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c2a3-315b-5fe7-b627" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="18ba-36ad-ddae-1e24" name="Enhanced Senses" hidden="false" targetId="5355-8025-ba2d-37ca" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="2.0"/>
+            <cost name="pts" typeId="points" value="2"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="4934-04c0-d208-f32e" name="Flesh Hooks" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7752-5cee-8afd-6908" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7752-5cee-8afd-6908" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="e076-3467-873d-4262" name="Flesh Hooks Biomorph" hidden="false" targetId="451b-3c43-c56f-6291" type="profile"/>
@@ -2064,112 +2064,112 @@ Crewman hit by the spreading rot take their armour save or suffer 1 wound</descr
           <entryLinks>
             <entryLink id="73c4-cda6-e0b5-b7db" name="Flesh Hooks" hidden="false" collective="false" import="true" targetId="e7ee-39f7-5c7e-6f15" type="selectionEntry">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df7f-d8c2-27ab-5507" type="min"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e13a-c1ec-db9e-e2d2" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df7f-d8c2-27ab-5507" type="min"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e13a-c1ec-db9e-e2d2" type="max"/>
               </constraints>
             </entryLink>
           </entryLinks>
           <costs>
-            <cost name="pts" typeId="points" value="7.0"/>
+            <cost name="pts" typeId="points" value="7"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e38f-aa45-348b-952f" name="Hardened Carapace" publicationId="4740-6730-10c0-9b25" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4776-3f75-527e-c021" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4776-3f75-527e-c021" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="485c-cff0-b5df-5b2d" name="Hardened Carapace" hidden="false" targetId="11f4-120f-d25e-5069" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="10.0"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="bd4e-e412-41cc-a579" name="Null Zone" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c78e-3cad-719e-db98" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c78e-3cad-719e-db98" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="901a-6951-9df2-8431" name="Null Zone" hidden="false" targetId="e90d-359c-bfd3-f0f7" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="35.0"/>
+            <cost name="pts" typeId="points" value="35"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="aafd-d870-69c8-bd62" name="Optic Membranes" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f93-061a-96b3-9651" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f93-061a-96b3-9651" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="fc36-0df3-a681-fae0" name="Optic Membranes" hidden="false" targetId="1a36-cb69-dd91-7fc3" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="1.0"/>
+            <cost name="pts" typeId="points" value="1"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="1474-46aa-5145-89c9" name="Regenerate" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b44e-3b83-360d-9a1e" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b44e-3b83-360d-9a1e" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="4db9-4092-a2ae-1439" name="Regenerate" hidden="false" targetId="1c4d-b414-d0c1-e4e7" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="9a14-7b0f-c912-ea54" name="Toughened Exoskeleton" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c61b-b8c6-7b57-81fa" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c61b-b8c6-7b57-81fa" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="6d39-052c-b5b2-325c" name="Toughened Exoskeleton" hidden="false" targetId="82e0-1298-c78d-5b5e" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="10.0"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e587-c377-0421-5c88" name="Sharpened Claws" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="43d3-affc-bed5-6520" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="43d3-affc-bed5-6520" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="f2e8-be33-6e51-b092" name="Sharpened Claws" hidden="false" targetId="66c3-9362-0c10-d2b8" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="5.0"/>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="d99b-b9d2-21bc-3a30" name="Venom Sacs" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9081-d974-124b-def7" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9081-d974-124b-def7" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="a5ab-7085-1016-b66e" name="Venom Sacs" hidden="false" targetId="94ee-d665-a00a-009d" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="5.0"/>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="fc07-c9c8-cd4f-e2a7" name="Voltage Field" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e7f-5dcb-d308-10b1" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e7f-5dcb-d308-10b1" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="6ba4-b15a-82c6-9867" name="Voltage Field" hidden="false" targetId="d5eb-113b-6747-b078" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="20.0"/>
+            <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="c9b5-abc7-7d9e-ba32" name="Warp Field" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e888-237e-c2f2-e46f" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e888-237e-c2f2-e46f" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="d5d4-bd92-2bb9-5fe1" name="Warp Field" hidden="false" targetId="f9c8-9293-a5b1-917a" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="40.0"/>
+            <cost name="pts" typeId="points" value="40"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2178,7 +2178,7 @@ Crewman hit by the spreading rot take their armour save or suffer 1 wound</descr
       <selectionEntries>
         <selectionEntry id="62b7-4571-a8fc-c51a" name="Hypnotic Gaze" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d36-b5e3-fd75-b90c" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d36-b5e3-fd75-b90c" type="max"/>
           </constraints>
           <profiles>
             <profile id="fb7a-00e7-43f3-08e3" name="Hypnotic Gaze" hidden="false" typeId="8169-3a6a-f9ec-e20a" typeName="Psychic Powers">
@@ -2190,12 +2190,12 @@ Crewman hit by the spreading rot take their armour save or suffer 1 wound</descr
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="20.0"/>
+            <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="4550-749e-61f6-2fea" name="Psychic Scream" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="abef-4d11-8bdc-d667" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="abef-4d11-8bdc-d667" type="max"/>
           </constraints>
           <profiles>
             <profile id="e39e-b3f5-f57e-081e" name="Psychic Scream" hidden="false" typeId="8169-3a6a-f9ec-e20a" typeName="Psychic Powers">
@@ -2207,12 +2207,12 @@ Crewman hit by the spreading rot take their armour save or suffer 1 wound</descr
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="15.0"/>
+            <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="bb0a-fee2-8fe7-55ba" name="Catalyst" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dff6-ee5e-92be-9b29" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dff6-ee5e-92be-9b29" type="max"/>
           </constraints>
           <profiles>
             <profile id="94a5-df1b-f894-c96b" name="Catalyst" hidden="false" typeId="8169-3a6a-f9ec-e20a" typeName="Psychic Powers">
@@ -2224,12 +2224,12 @@ Crewman hit by the spreading rot take their armour save or suffer 1 wound</descr
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="40.0"/>
+            <cost name="pts" typeId="points" value="40"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="bfa7-306f-cc25-d07f" name="The Horror" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6571-f49e-b784-aa05" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6571-f49e-b784-aa05" type="max"/>
           </constraints>
           <profiles>
             <profile id="db4c-97c6-7acf-05c7" name="The Horror" hidden="false" typeId="8169-3a6a-f9ec-e20a" typeName="Psychic Powers">
@@ -2241,7 +2241,7 @@ Crewman hit by the spreading rot take their armour save or suffer 1 wound</descr
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="25.0"/>
+            <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2266,7 +2266,7 @@ Any entrapped model may not do anything except use psychic powers if it has any.
 See Codex Pg. 53 for further rules</description>
     </rule>
     <rule id="90b8-357f-537c-d17d" name="Deathspitter" publicationId="4740-6730-10c0-9b25" page="54" hidden="false">
-      <description>If a Deathspitter scores a hit on an enemy model other models nearby may also be hit. Roll a D6 for any models within 2&quot; of the model hit by the Deathspitter. On a roll of 4+ they suffer a S3 hit with no save modifiers. The Deathspitter doesn&apos;t have to Wound the target before you check for splatter, only a hit is needed. </description>
+      <description>If a Deathspitter scores a hit on an enemy model other models nearby may also be hit. Roll a D6 for any models within 2&quot; of the model hit by the Deathspitter. On a roll of 4+ they suffer a S3 hit with no save modifiers. The Deathspitter doesn&apos;t have to Wound the target before you check for splatter, only a hit is needed.</description>
     </rule>
     <rule id="e1ec-dbda-798c-a323" name="Flamespurt" publicationId="4740-6730-10c0-9b25" page="54" hidden="false">
       <description>Uses medium sized flamer template.
@@ -2277,7 +2277,7 @@ Vehicles, Terminators or anything with a Toughness of 7 or higher will not be mo
     <rule id="bb9d-62e0-ac60-d702" name="Flesh Hooks" publicationId="4740-6730-10c0-9b25" page="55" hidden="false">
       <description>If a model survives a hit from a flesh hook it is snagged by the hook and dragged 2D6&quot; towards the Lictor. 
 If a model is dragged into base contact with the Lictor it must fight the creature in the close combat phase. The flesh hooks cannot drag a vehicle, dreadnought, terminator, or any model wit ha Strength or Toughness of 5 or more
-If a Lictor runs or charges in the movement phase the flesh hooks allow it to move up or down vertical surfaces with no penalty. </description>
+If a Lictor runs or charges in the movement phase the flesh hooks allow it to move up or down vertical surfaces with no penalty.</description>
     </rule>
     <rule id="e8de-6e38-d04b-86f0" name="Devourer" publicationId="4740-6730-10c0-9b25" page="56" hidden="false">
       <description>Squads that suffer 1 or more hits from this weapon must take a Leadership test for Fear. If they fail they will break as per Fear rules</description>
@@ -2285,7 +2285,7 @@ If a Lictor runs or charges in the movement phase the flesh hooks allow it to mo
     <rule id="6a62-0492-f309-667b" name="Barbed Strangler" publicationId="4740-6730-10c0-9b25" page="57" hidden="false">
       <description>Rol to hit as normal for shooting. If you miss, roll for scatter just like any other weapon with a blast marker.
 A model wounded by this attack is killed regardless of how many wounds it has. Place the 3&quot; blast marker over the dead model. Roll a D6 for each model (including Tyranid models) and vehicles that is fully or partially under the template. On a 1,2 or 3 the model or vehicle escapes and can move and fight normally in its next turn. Otherwise roll 2D6 for each trapped model or vehicle. If the roll beats the model&apos;s Strength or Ram Value (for vehicles) it can play no further part in the battle at all. Saving throws, Toughness, wounds, and psychic powers cannot protect a model against the strangler if caught.
-If the 2D6 is equal to or less than the Strength or Ram Value then the model breaks free and can move and fight as normal next turn. </description>
+If the 2D6 is equal to or less than the Strength or Ram Value then the model breaks free and can move and fight as normal next turn.</description>
     </rule>
     <rule id="d7f2-06cb-94f0-6944" name="Venom Cannon" publicationId="4740-6730-10c0-9b25" page="58" hidden="false">
       <description>Uses the Thudd Gunn Salvo template
@@ -2298,13 +2298,13 @@ If you miss, roll to scatter as normal then follow the steps in Tyranid Codex pg
       <description>No other Tyranid unit within 18&quot; of the Hive Tyrant need take any Leadership based test, they automatically pass. If an already broken unit is within 18&quot; of a Hive Tyrant in the rally phase it will automatically rally.</description>
     </rule>
     <rule id="029d-d831-ac7e-79df" name="Leadership" publicationId="4740-6730-10c0-9b25" page="18" hidden="false">
-      <description>Immune to all psychological factors. It cannot be affected by Fear, Terror, or any of the psychological factors in the Warhammer rulebook. Cannot be broken and does not have to take a Break test. Will automatically pass any Leadership-based test required to make. </description>
+      <description>Immune to all psychological factors. It cannot be affected by Fear, Terror, or any of the psychological factors in the Warhammer rulebook. Cannot be broken and does not have to take a Break test. Will automatically pass any Leadership-based test required to make.</description>
     </rule>
     <rule id="65ac-8308-b233-fe21" name="Acute Senses" publicationId="4740-6730-10c0-9b25" page="21" hidden="false">
       <description>Can spot hidden troops at twice it&apos;s Initiative distance in Inches</description>
     </rule>
     <rule id="c8b0-8316-107e-ab44" name="Chameleon Scales" publicationId="4740-6730-10c0-9b25" page="21" hidden="false">
-      <description>All shots fired at a Lictor which did not move in its previous turn suffer a -1 to hit in addition to any other modifiers. </description>
+      <description>All shots fired at a Lictor which did not move in its previous turn suffer a -1 to hit in addition to any other modifiers.</description>
     </rule>
     <rule id="0ed3-af90-812e-9646" name="Hiding" publicationId="4740-6730-10c0-9b25" page="21" hidden="false">
       <description>Lictors cannot be spotted when hidden, only detected. A scanner or Bionic Eye can only detect a hidden Lictor on a 4+. 
@@ -2342,8 +2342,7 @@ Gargoyles can disengage from close combat without incurring any blows against th
       <description>Ripper bases consume organic material as they move through terrain. Any organic terrain such as woods, plants, bushes etc. should be removed from the table as the Ripper swarm moves through it</description>
     </rule>
     <rule id="4cfe-5676-3081-344e" name="Tyranid Haruspex Damage Table" publicationId="4740-6730-10c0-9b25" hidden="false">
-      <description>
-1: Foot
+      <description>1: Foot
 2-4: Body
 5-6: Arms*
 Closest to attacker is hit</description>
@@ -2351,10 +2350,7 @@ Closest to attacker is hit</description>
     <rule id="7689-cdc9-5c99-988b" name="Tyranid Vehicle Targetting" publicationId="4740-6730-10c0-9b25" hidden="false">
       <description>Tyranid Vehicles are targeted as a Vehicle
 
-Bolt Of Change, Force Dome, Hammer of Fury, Eldrich Storm, and Assail affect Tyranid vehicles  as vehicles. Vortex, Aura Of Decay, Aquiescence, Pink Fire Of Tzeench, Executioner, Kop Dis and Da Crunch work as normal. The Leadership test-based Powers (Domination, Smite, Scourging, Beam of Slaanesh, Pavane of Slaanesh and Storm Of Wrath) will apply to any Tyranid vehicle that is outside the range of a Hive Node (Hive Tyrant,Tyranid Warrior)
-
-
-</description>
+Bolt Of Change, Force Dome, Hammer of Fury, Eldrich Storm, and Assail affect Tyranid vehicles  as vehicles. Vortex, Aura Of Decay, Aquiescence, Pink Fire Of Tzeench, Executioner, Kop Dis and Da Crunch work as normal. The Leadership test-based Powers (Domination, Smite, Scourging, Beam of Slaanesh, Pavane of Slaanesh and Storm Of Wrath) will apply to any Tyranid vehicle that is outside the range of a Hive Node (Hive Tyrant,Tyranid Warrior)</description>
     </rule>
     <rule id="a5f3-6f1a-eaf0-e737" name="Rampage" publicationId="4740-6730-10c0-9b25" hidden="false">
       <description>Rampage: If it takes damage causing it to Rampage it must charge the nearest enemy model (character, squad, or vehicle) that it can reach, moving at the fastest possible speed towards the target. May not fire any weapons when Rampaging.</description>
@@ -2368,11 +2364,10 @@ When a Tyranid vehicle rams or charges another vehicle, work out damage to the o
 
 The Haruspex does not stop at the first enemy it comes into contact with. It keeps moving the full movement distance even if it ends within a squad. Any models touching the mandibles or within the area enclosed by the mandibles at the end of movement phase are attacked in close combat. If the Haruspex is moving too fast to end its movement in the midst of a squad, it will move through them and make an overrun attack as described in the Warhammer Rulebook (pg.78)
 
-The Haruspex can attack multiple vehicles in the same turn, but does not get all of it&apos;s attacks for each vehicle. It must split it&apos;s attacks between them. </description>
+The Haruspex can attack multiple vehicles in the same turn, but does not get all of it&apos;s attacks for each vehicle. It must split it&apos;s attacks between them.</description>
     </rule>
     <rule id="9cf1-b4ca-2d2f-bc3b" name="Tyranid Malefactor Damage Table" publicationId="4740-6730-10c0-9b25" hidden="false">
-      <description>
-1: Foot
+      <description>1: Foot
 2-4: Body
 5-6: Frag Spine Arms*
 Closest to attacker is hit</description>
@@ -2394,14 +2389,12 @@ hunt other vehicles.</description>
 When a Tyranid vehicle rams or charges another vehicle, work out damage to the other vehicle as normal. For the Tyranid vehicle the location that actually touches the other vehicles is hit on a 4+ and other locations are hit on a 6+. Work out damage for any hit locations as normal</description>
     </rule>
     <rule id="f08c-d0ce-7d01-7eba" name="Tyranid Exocrine Damage Table" publicationId="4740-6730-10c0-9b25" hidden="false">
-      <description>
-1: Foot
+      <description>1: Foot
 2-4: Body
 5-6: Bio-Cannon</description>
     </rule>
     <rule id="bfce-3f30-3007-7a02" name="Tyranid Dactylis Damage Table" hidden="false">
-      <description>
-1: Foot
+      <description>1: Foot
 2-4: Body
 5-6: Arms*
 Closest to attacker is hit</description>
@@ -2615,12 +2608,12 @@ When it rams or charges another vehicle, work out damage to the other vehicle as
     </profile>
     <profile id="451b-3c43-c56f-6291" name="Flesh Hooks Biomorph" publicationId="4740-6730-10c0-9b25" page="66" hidden="false" typeId="584a-05fe-7c57-360c" typeName="Biomorphs">
       <characteristics>
-        <characteristic name="Biomorphs" typeId="b4c3-8624-ebe7-241c">May fire up to two Flesh Hooks at the same target in the shooting phase. THe creature may not use its flesh hooks and fire another weapon in the same shooting phase. </characteristic>
+        <characteristic name="Biomorphs" typeId="b4c3-8624-ebe7-241c">May fire up to two Flesh Hooks at the same target in the shooting phase. THe creature may not use its flesh hooks and fire another weapon in the same shooting phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="11f4-120f-d25e-5069" name="Hardened Carapace" publicationId="4740-6730-10c0-9b25" page="67" hidden="false" typeId="584a-05fe-7c57-360c" typeName="Biomorphs">
       <characteristics>
-        <characteristic name="Biomorphs" typeId="b4c3-8624-ebe7-241c">+2 to the creatures saving throw. A Lictor&apos;s saving throws cannot be reduced to less than 5+ by modifieres</characteristic>
+        <characteristic name="Biomorphs" typeId="b4c3-8624-ebe7-241c">The creature is granted a 2+ saving throw on D6; note that this armour save is used in lieu of any others it might have had. Note also that Lictors’ saving throws cannot be reduced to less than 5+ by modifiers.</characteristic>
       </characteristics>
     </profile>
     <profile id="e90d-359c-bfd3-f0f7" name="Null Zone" publicationId="4740-6730-10c0-9b25" page="67" hidden="false" typeId="584a-05fe-7c57-360c" typeName="Biomorphs">
@@ -2638,7 +2631,7 @@ Also gives a 4+ save against Distortion cannons, Wraithcannon, and Vortex Grenad
       <characteristics>
         <characteristic name="Biomorphs" typeId="b4c3-8624-ebe7-241c">If the creature is reduced to 0 Wounds place the model on its side. The creature can still be fired at or hit in close combat. If the creature suffers any more hits while on its side make saving throws as normal and place extra wound markers with the creatures if it suffers them.
 
-In the rally phase in the next Tyranid turn roll to regenerate each Wound marker the creature has suffered. Roll a D6 for each marker: on a 4+ the wound marker is removed. If the number of wound markers the creature has left is equal to or greater than its number of wounds the creature dies. If the creature has fewer wound markers than its number of wounds it stands back up and may act normally in the next turn. </characteristic>
+In the rally phase in the next Tyranid turn roll to regenerate each Wound marker the creature has suffered. Roll a D6 for each marker: on a 4+ the wound marker is removed. If the number of wound markers the creature has left is equal to or greater than its number of wounds the creature dies. If the creature has fewer wound markers than its number of wounds it stands back up and may act normally in the next turn.</characteristic>
       </characteristics>
     </profile>
     <profile id="82e0-1298-c78d-5b5e" name="Toughened Exoskeleton" publicationId="4740-6730-10c0-9b25" page="67" hidden="false" typeId="584a-05fe-7c57-360c" typeName="Biomorphs">

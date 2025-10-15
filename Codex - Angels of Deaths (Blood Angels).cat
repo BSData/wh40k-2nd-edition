@@ -4142,9 +4142,9 @@ and  courage  in  the face of death. Once broken, a Space Marine squad may rally
         </modifier>
       </modifiers>
       <categoryLinks>
-        <categoryLink id="7e7a-78cf-1ef6-3cf7" name="Ultramarines" hidden="false" targetId="6186-0c50-3540-dc37" primary="false"/>
         <categoryLink id="aca4-7da3-b6fd-b3d5" name="Squads" hidden="false" targetId="ea97-27b5-39c7-4630" primary="true"/>
         <categoryLink id="7bd1-0cc1-ba5c-51aa" name="Blood Angels" hidden="false" targetId="9fec-6f81-5e76-3592" primary="false"/>
+        <categoryLink targetId="6186-0c50-3540-dc37" id="54ce-c95a-404a-8af8" primary="false" name="Ultramarines"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="5c7e-edb1-201e-005a" name="Sergeant Type" hidden="false" collective="false" import="true" defaultSelectionEntryId="af29-4492-67ca-4a3c">

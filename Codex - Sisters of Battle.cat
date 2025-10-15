@@ -1628,7 +1628,7 @@
                 <infoLink id="d654-18fb-dfdc-589d" name="Close Combat" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="10"/>
+                <cost name="pts" typeId="points" value="0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1671,7 +1671,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0"/>
+        <cost name="pts" typeId="points" value="109"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1674-2932-0fe1-7739" name="Helena the Virtuos, Prioress of the Convent Sanctorum" hidden="false" collective="false" import="true" type="upgrade">
@@ -1713,7 +1713,7 @@
             <infoLink id="54ab-7cd6-8861-7ed7" name="Close Combat" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="8"/>
+            <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="cc38-aebd-d5ff-e75a" name="Mantle of Ophelia" hidden="false" collective="false" import="true" type="upgrade">
@@ -1730,7 +1730,7 @@ Lasts 1 game turn only</characteristic>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="15"/>
+            <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1760,7 +1760,7 @@ Lasts 1 game turn only</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d46f-f372-4d0b-6372" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="10"/>
+            <cost name="pts" typeId="points" value="0"/>
           </costs>
         </entryLink>
         <entryLink id="1db9-cf24-d36c-5b46" name="Targeter" hidden="false" collective="false" import="true" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
@@ -1774,6 +1774,9 @@ Lasts 1 game turn only</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c280-3eed-9df1-020b" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f417-28d2-eeb1-5e9e" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
         </entryLink>
       </entryLinks>
       <costs>

@@ -698,6 +698,11 @@ The model is protected by a Daemonic Aura (4+ unmodified save).</description>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <rules>
+        <rule name="Regeneration" id="630a-06d5-e94d-7e90" hidden="false" publicationId="02e1-3f69-7ae7-f5c5" page="53">
+          <description>Place any Bloodletters that are slain onto their side instead of removing from play. At the Rally Phase, roll for each model. On a 4+ they regenerate any damage suffered and stand back up. </description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry id="0d81-7ba2-10e6-48ed" name="Flesh Hounds" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
@@ -1626,6 +1631,7 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="719b-71a6-2809-47b8" shared="true" includeChildSelections="true" includeChildForces="true"/>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="ed46-5374-3801-0d90" shared="true" includeChildSelections="true" includeChildForces="true"/>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="f280-6991-f2c1-a5a9" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="5785-abb3-0a25-ed37" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -7567,6 +7573,91 @@ Enemy models may not attack Foulspawn in close combat.</description>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Huron Blackheart" hidden="false" id="5785-abb3-0a25-ed37">
+      <entryLinks>
+        <entryLink import="true" name="Army Commander" hidden="false" id="0559-0447-06c7-3875" collective="false" targetId="304e-0079-0a70-ccd5" type="selectionEntry"/>
+        <entryLink import="true" name="Wargear Cards" hidden="false" id="6233-6e1a-2c17-6e5b" collective="false" targetId="0c12-c9a3-9886-7ce2" type="selectionEntryGroup">
+          <constraints>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="5735-6d8e-3cd5-3d65" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Power Armour" hidden="false" id="c7ca-c74b-a918-ace8" collective="false" targetId="223b-6b82-1907-d976" type="selectionEntry">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7c02-1577-45d2-d186" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Frag Grenade" id="9cd3-ffcd-ff8c-9513" hidden="false" targetId="122b-b17a-4e87-5994" type="profile"/>
+            <infoLink name="Bolt Pistol" id="a976-2ed8-fdc6-a404" hidden="false" targetId="3741-3592-b694-79b4" type="profile"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Power Axe" hidden="false" id="9c1b-bc93-dd26-508d" type="selectionEntry" targetId="b690-d341-fa77-01b8">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7bd3-33b0-6722-687f" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2683-d2b9-563d-4af2" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Weapons" id="f4c1-c6cb-333b-d44f" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink import="true" name="Assault Weapons" hidden="false" id="526b-a59f-a5f5-59ed" collective="false" targetId="bf95-e4e4-5614-9c8a" type="selectionEntryGroup">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="1909-d063-e86d-0920" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Grenades" hidden="false" id="4ab6-e93c-6e76-d3e1" collective="false" targetId="1d95-a696-1664-22ee" type="selectionEntryGroup">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="1909-d063-e86d-0920" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Special Weapons" hidden="false" id="ae23-e8f7-cfd4-b73a" collective="false" targetId="4d14-423e-9e23-ebe0" type="selectionEntryGroup">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="1909-d063-e86d-0920" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d29e-2d24-c09d-10e1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="152"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="The Tyrant&apos;s Claw" hidden="false" id="9369-c1fa-5702-5673"/>
+      </selectionEntries>
+      <categoryLinks>
+        <categoryLink targetId="9497-ff1f-dffc-011f" id="88d0-a55c-b8f7-0db5" primary="true" name="Characters"/>
+        <categoryLink targetId="b373-19ca-9b61-1a4c" id="2850-9a9d-34f5-2ea3" primary="false" name="Chaos"/>
+      </categoryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>

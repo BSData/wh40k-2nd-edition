@@ -1948,6 +1948,25 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
       <costs>
         <cost name="pts" typeId="points" value="6"/>
       </costs>
+      <profiles>
+        <profile name="Digi-Lasers" typeId="219f-0faa-a2d8-f766" typeName="Unit" hidden="false" id="57f1-f271-1fd3-4c59">
+          <characteristics>
+            <characteristic name="Unit Type" typeId="49de-956f-8797-7436"/>
+            <characteristic name="M" typeId="4934-7872-3dd7-a8b6"/>
+            <characteristic name="WS" typeId="dc18-b600-96a9-a4a3"/>
+            <characteristic name="BS" typeId="f859-88a3-fdd3-b298"/>
+            <characteristic name="S" typeId="5916-04ef-0fd1-6557"/>
+            <characteristic name="T" typeId="2e7d-2383-f92f-16f9"/>
+            <characteristic name="W" typeId="ce31-f767-c572-72cc"/>
+            <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf"/>
+            <characteristic name="A" typeId="e39a-b0ee-e6d1-e661"/>
+            <characteristic name="LD" typeId="c751-ec1f-edb8-fd83"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule name="New Rule" id="8831-393f-19a2-b829" hidden="false"/>
+      </rules>
     </selectionEntry>
     <selectionEntry id="b00e-bbb9-e4a9-af42" name="Combi-Melta" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>

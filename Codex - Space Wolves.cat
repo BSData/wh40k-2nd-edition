@@ -57,6 +57,7 @@ If they ever change that I will update. Until then, ye olde calcuator will do!</
     <entryLink id="88c0-16cb-40f5-414b" name="Wolf Lord Ragnar Blackmane" hidden="false" collective="false" import="true" targetId="64fa-ece9-bf27-ecf6" type="selectionEntry"/>
     <entryLink id="e3de-61d7-72f7-d6e1" name="Bjorn the Fell-Handed" hidden="false" collective="false" import="true" targetId="87f0-f4da-7f87-a1e2" type="selectionEntry"/>
     <entryLink id="962e-c9ec-b106-61e0" name="Wolf Lord Kyrl Grimblood" hidden="false" collective="false" import="true" targetId="6059-468c-d757-ec09" type="selectionEntry"/>
+    <entryLink import="true" name="Chapter Master" hidden="false" id="4451-3a49-8779-9b84" type="selectionEntry" targetId="0885-b3aa-198a-320b"/>
   </entryLinks>
   <rules>
     <rule id="957a-483e-3a28-6e67" name="Break Tests" publicationId="4590-6ba9-5482-a1fa" page="49" hidden="false">
@@ -3104,6 +3105,232 @@ and  courage  in  the face of death. Once broken, a Space Marine squad may rally
       <costs>
         <cost name="pts" typeId="points" value="111"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Chapter Master" hidden="false" id="0885-b3aa-198a-320b">
+      <entryLinks>
+        <entryLink import="true" name="Army Commander" hidden="false" id="334f-3055-0dbb-9492" collective="false" targetId="4a27-f4c3-792f-0d8a" type="selectionEntry"/>
+        <entryLink import="true" name="Space Marine Bike" hidden="false" id="9166-50d3-5223-f079" collective="false" targetId="1b22-fc76-8ed0-5765" type="selectionEntry"/>
+        <entryLink import="true" name="Wargear Cards" hidden="false" id="e67c-11c6-dbb5-05e2" collective="false" targetId="578d-7254-ab21-8b13" type="selectionEntryGroup">
+          <constraints>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="ce18-5593-1d20-f9d1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Armour" id="53fc-6419-0143-f6d5" hidden="false" collective="false" import="true" defaultSelectionEntryId="6bbd-665d-3eb0-8458">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a5b4-97ef-6b84-e322" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8aca-c292-dd8c-421a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Power Armour" hidden="false" id="c54c-1ae6-012c-1bc8" collective="false" targetId="ccac-ef01-d557-349f" type="selectionEntry">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d8d9-c998-7fb7-443b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Frag Grenade" id="2d83-10ca-5223-a8ec" hidden="false" targetId="122b-b17a-4e87-5994" type="profile"/>
+                <infoLink name="Bolt Pistol" id="491c-a39d-dee0-ed15" hidden="false" targetId="3741-3592-b694-79b4" type="profile"/>
+              </infoLinks>
+            </entryLink>
+            <entryLink import="true" name="Terminator Loadouts" hidden="false" id="88d0-9378-283f-dc33" collective="false" targetId="18f8-d102-5ac5-4e6c" type="selectionEntryGroup">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="827c-9cea-5767-2807" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Weapons" id="867b-4775-60b3-46bf" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink import="true" name="Assault Weapons" hidden="false" id="5647-0fbd-aaeb-0131" collective="false" targetId="cd0a-6a8d-1f46-a6db" type="selectionEntryGroup">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="18f8-d102-5ac5-4e6c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Special Weapons" hidden="false" id="3903-2e3d-994a-724c" collective="false" targetId="717e-c382-eaca-bd29" type="selectionEntryGroup">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="18f8-d102-5ac5-4e6c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c48c-34a9-5578-a5fc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Grenades" hidden="false" id="594b-e55d-b285-f0f7" collective="false" targetId="e531-ba57-c468-3f1f" type="selectionEntryGroup">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="18f8-d102-5ac5-4e6c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Characteristic Upgrade" id="782e-6314-7a9f-b9a1" hidden="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="28d5-e5d3-37b8-6cf4" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Weapon Master" hidden="false" id="d967-0db7-6ba0-c6b2">
+              <rules>
+                <rule name="Weapon Master" id="f6db-ca2f-dbe9-11c8" hidden="false">
+                  <description>+1 WS and BS (added into profile when selected)</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Battle Hardened" hidden="false" id="dd6d-d24f-41df-f9c1">
+              <costs>
+                <cost name="pts" typeId="points" value="30"/>
+              </costs>
+              <rules>
+                <rule name=" Battle Hardened" id="4470-457e-45a2-2305" hidden="false">
+                  <description>+1 Toughness (added into profile when selected)</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Martial Prowess" hidden="false" id="7fbc-922b-de44-97cc">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <rules>
+                <rule name="Martial Prowess" id="3e66-826c-e763-1e7d" hidden="false">
+                  <description>+1 Attack and Strength (added into profile when selected)</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Resilient" hidden="false" id="2aaa-b36d-5634-1f11">
+              <rules>
+                <rule name="Resilient" id="d28b-de95-9311-064d" hidden="false">
+                  <description>+1 Wound (added into profile when selected)</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Strategist" hidden="false" id="521f-eaee-b724-a194">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <rules>
+                <rule name="Strategist" id="8eeb-ebe7-91eb-b979" hidden="false">
+                  <description>+1 Strategy Rating (added into profile when selected)</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Swift" hidden="false" id="53bb-a5ad-c94a-a4ff">
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+              <rules>
+                <rule name="Swift" id="8f2d-064b-b7e6-0b28" hidden="false">
+                  <description>+1 Movement and Initiative (added into profile when selected)</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="18c9-d503-d1f8-0005" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set-primary" value="6741-c4c6-274e-36cf" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="forces" scope="force" childId="1682-3edb-34f4-dc45" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="96"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="2cae-0005-ed61-2fd2" id="aeb1-1f85-0bcc-5d12" primary="true" name="Characters"/>
+        <categoryLink targetId="b686-76f8-6874-e3e9" id="082b-eb04-1fec-c10b" primary="false" name="Space Wolves"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Chapter Master" typeId="219f-0faa-a2d8-f766" typeName="Unit" hidden="false" id="b42f-44f8-4047-72bc" publicationId="8eed-45fd-d4be-9a1b" page="issue 209 pg 19">
+          <characteristics>
+            <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Chapter Master</characteristic>
+            <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+            <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">7</characteristic>
+            <characteristic name="BS" typeId="f859-88a3-fdd3-b298">7</characteristic>
+            <characteristic name="S" typeId="5916-04ef-0fd1-6557">5</characteristic>
+            <characteristic name="T" typeId="2e7d-2383-f92f-16f9">5</characteristic>
+            <characteristic name="W" typeId="ce31-f767-c572-72cc">3</characteristic>
+            <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">7</characteristic>
+            <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">3</characteristic>
+            <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+          </characteristics>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="increment" value="1" field="f859-88a3-fdd3-b298"/>
+                <modifier type="increment" value="1" field="dc18-b600-96a9-a4a3"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="0885-b3aa-198a-320b" childId="d967-0db7-6ba0-c6b2" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="increment" value="1" field="2e7d-2383-f92f-16f9"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="0885-b3aa-198a-320b" childId="dd6d-d24f-41df-f9c1" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="increment" value="1" field="5916-04ef-0fd1-6557"/>
+                <modifier type="increment" value="1" field="e39a-b0ee-e6d1-e661"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="0885-b3aa-198a-320b" childId="7fbc-922b-de44-97cc" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="increment" value="1" field="ce31-f767-c572-72cc"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="0885-b3aa-198a-320b" childId="2aaa-b36d-5634-1f11" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="increment" value="1" field="4934-7872-3dd7-a8b6"/>
+                <modifier type="increment" value="1" field="a9b1-bae9-25d0-fdbf"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="0885-b3aa-198a-320b" childId="53bb-a5ad-c94a-a4ff" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
+        </profile>
+      </profiles>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>

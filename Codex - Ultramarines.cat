@@ -111,6 +111,7 @@
     <entryLink id="4590-992c-ef24-1fe7" name="Captain Invictus of the Ultramarines First Company" hidden="false" collective="false" import="true" targetId="ef78-2d4e-0226-4956" type="selectionEntry"/>
     <entryLink id="770b-0f6c-3fc5-36e7" name="Legion of the Damned" hidden="false" collective="false" import="true" targetId="f319-a6b6-5a68-93de" type="selectionEntry"/>
     <entryLink id="cb70-5453-cea8-0d26" name="Space Marine Combat Squad" hidden="false" collective="false" import="true" targetId="0255-ad3f-50ec-4514" type="selectionEntry"/>
+    <entryLink import="true" name="Chapter Master" hidden="false" id="214d-15af-30a8-b6a6" type="selectionEntry" targetId="5c0d-f1e5-52f5-8d7f"/>
   </entryLinks>
   <rules>
     <rule id="957a-483e-3a28-6e67" name="Break Tests" publicationId="4590-6ba9-5482-a1fa" page="49" hidden="false">
@@ -615,7 +616,12 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <infoLinks>
         <infoLink id="8544-c7ec-8855-0527" name="Army Commander" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
           <modifiers>
-            <modifier type="set" field="d0c8-e08c-1828-77b4" value="5"/>
+            <modifier type="increment" field="d0c8-e08c-1828-77b4" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="5c0d-f1e5-52f5-8d7f" childId="7717-f970-8090-911e" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="5" field="d0c8-e08c-1828-77b4"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -4228,6 +4234,221 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Chapter Master" hidden="false" id="5c0d-f1e5-52f5-8d7f">
+      <infoLinks>
+        <infoLink name="Chapter Master" id="aee8-e4ed-5325-9ffc" hidden="false" type="profile" targetId="9350-1109-a810-3b0c">
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="increment" value="1" field="f859-88a3-fdd3-b298"/>
+                <modifier type="increment" value="1" field="dc18-b600-96a9-a4a3"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="5c0d-f1e5-52f5-8d7f" childId="1757-c0dc-e136-c2af" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="increment" value="1" field="2e7d-2383-f92f-16f9"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="5c0d-f1e5-52f5-8d7f" childId="7fdf-c327-8bd3-0b41" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="increment" value="1" field="5916-04ef-0fd1-6557"/>
+                <modifier type="increment" value="1" field="e39a-b0ee-e6d1-e661"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="5c0d-f1e5-52f5-8d7f" childId="704f-6939-71ee-3eb0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="increment" value="1" field="ce31-f767-c572-72cc"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="5c0d-f1e5-52f5-8d7f" childId="1489-e87b-d273-4f87" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="increment" value="1" field="4934-7872-3dd7-a8b6"/>
+                <modifier type="increment" value="1" field="a9b1-bae9-25d0-fdbf"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="5c0d-f1e5-52f5-8d7f" childId="c159-c97b-123e-74e4" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
+        </infoLink>
+        <infoLink name="Chapter Master" id="7542-4871-8f89-2099" hidden="false" targetId="a062-3411-7dbb-6498" type="rule"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Army Commander" hidden="false" id="0d44-254f-1aa4-7b0c" collective="false" targetId="4a27-f4c3-792f-0d8a" type="selectionEntry"/>
+        <entryLink import="true" name="Space Marine Bike" hidden="false" id="925a-ff91-355f-4314" collective="false" targetId="1b22-fc76-8ed0-5765" type="selectionEntry"/>
+        <entryLink import="true" name="Wargear Cards" hidden="false" id="5f23-adbf-44c1-602a" collective="false" targetId="578d-7254-ab21-8b13" type="selectionEntryGroup">
+          <constraints>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="8eb9-690e-c5c9-a15a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Armour" id="12ee-df49-2ce8-9b46" hidden="false" collective="false" import="true" defaultSelectionEntryId="6bbd-665d-3eb0-8458">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a14a-91f4-4f45-7d93" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7b7e-226a-5b9c-5d1d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Power Armour" hidden="false" id="6bbd-665d-3eb0-8458" collective="false" targetId="ccac-ef01-d557-349f" type="selectionEntry">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="58b8-6321-b706-8b31" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Frag Grenade" id="afbe-053c-0224-e912" hidden="false" targetId="122b-b17a-4e87-5994" type="profile"/>
+                <infoLink name="Bolt Pistol" id="c8e9-3622-0d09-9bb4" hidden="false" targetId="3741-3592-b694-79b4" type="profile"/>
+              </infoLinks>
+            </entryLink>
+            <entryLink import="true" name="Terminator Loadouts" hidden="false" id="d28f-fd09-50c4-b49a" collective="false" targetId="18f8-d102-5ac5-4e6c" type="selectionEntryGroup">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5d7c-9571-68c0-743c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Weapons" id="0ec6-f24d-41a9-5554" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink import="true" name="Assault Weapons" hidden="false" id="d720-ff58-c9db-9798" collective="false" targetId="cd0a-6a8d-1f46-a6db" type="selectionEntryGroup">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="18f8-d102-5ac5-4e6c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Special Weapons" hidden="false" id="38eb-8cad-68b4-9389" collective="false" targetId="717e-c382-eaca-bd29" type="selectionEntryGroup">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="18f8-d102-5ac5-4e6c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="894f-769d-7532-8967" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Grenades" hidden="false" id="d691-ccce-a2d6-5338" collective="false" targetId="e531-ba57-c468-3f1f" type="selectionEntryGroup">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="18f8-d102-5ac5-4e6c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Characteristic Upgrade" id="1ebd-3e77-51dd-f838" hidden="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8060-eeeb-0d7f-7b1b" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Weapon Master" hidden="false" id="1757-c0dc-e136-c2af">
+              <rules>
+                <rule name="Weapon Master" id="5bab-f83f-9232-f012" hidden="false">
+                  <description>+1 WS and BS (added into profile when selected)</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Battle Hardened" hidden="false" id="7fdf-c327-8bd3-0b41">
+              <costs>
+                <cost name="pts" typeId="points" value="30"/>
+              </costs>
+              <rules>
+                <rule name=" Battle Hardened" id="16bc-b450-68ad-170b" hidden="false">
+                  <description>+1 Toughness (added into profile when selected)</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Martial Prowess" hidden="false" id="704f-6939-71ee-3eb0">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <rules>
+                <rule name="Martial Prowess" id="9c6d-8ce2-c037-fcc2" hidden="false">
+                  <description>+1 Attack and Strength (added into profile when selected)</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Resilient" hidden="false" id="1489-e87b-d273-4f87">
+              <rules>
+                <rule name="Resilient" id="cf87-c601-d2bb-82e4" hidden="false">
+                  <description>+1 Wound (added into profile when selected)</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Strategist" hidden="false" id="7717-f970-8090-911e">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <rules>
+                <rule name="Strategist" id="598b-3d9e-3b2b-2417" hidden="false">
+                  <description>+1 Strategy Rating (added into profile when selected)</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Swift" hidden="false" id="c159-c97b-123e-74e4">
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+              <rules>
+                <rule name="Swift" id="7664-40c1-6854-6c39" hidden="false">
+                  <description>+1 Movement and Initiative (added into profile when selected)</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ce74-541b-2597-6f42" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set-primary" value="6741-c4c6-274e-36cf" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="96"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="8be3-6d17-d7d3-faa0" id="dedb-2f40-8b34-d00f" primary="true" name="Characters"/>
+        <categoryLink targetId="6186-0c50-3540-dc37" id="4d1d-d484-bb77-c7dc" primary="false" name="Ultramarines"/>
+      </categoryLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="b82f-8f32-5c16-a84b" name="Heavy Weapons" publicationId="4590-6ba9-5482-a1fa" page="61" hidden="false" collective="false" import="true">
@@ -5061,10 +5282,7 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="a062-3411-7dbb-6498" name="Space Marine Captain" publicationId="4590-6ba9-5482-a1fa" page="63" hidden="false">
-      <description>The Space Marine Captain may be your army commander.  
-Note  that the  army  may  include  both a Terminator Captain and  a Space Marine  Captain, in  which case you must nominate which will command the army.
-
-If the Captain is taken as the army commander then any Space Marine units within 12&quot; of him  may use his Leadership when they take a Leadership test.</description>
+      <description>If the Chapter Master is taken as the army commander then any Space Marine units within 12&quot; of him may use his Leadership when they take a Leadership test.</description>
     </rule>
     <rule id="d5f2-e9ed-7e30-3aba" name="Terminator Captain" publicationId="4590-6ba9-5482-a1fa" page="63" hidden="false">
       <description>The Terminator  Captain  may be your army commander if you wish. 
@@ -5252,7 +5470,7 @@ Bike</characteristic>
         <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">9</characteristic>
       </characteristics>
     </profile>
-    <profile id="9cea-5838-2fdb-8516" name="Chaplain Hero" publicationId="06e5-8e36-e8c8-aec3" page="64" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+    <profile id="9cea-5838-2fdb-8516" name="Chaplain Hero" publicationId="06e5-8e36-e8c8-aec3" page="64" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Chapter Mast">
       <characteristics>
         <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Chaplain Hero</characteristic>
         <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
@@ -5760,7 +5978,7 @@ Turret</characteristic>
         <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">9</characteristic>
       </characteristics>
     </profile>
-    <profile id="2358-3f9f-6e71-911a" name="Ancient Helveticus" publicationId="4590-6ba9-5482-a1fa" page="73" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+    <profile id="2358-3f9f-6e71-911a" name="Ancient Helveticus" publicationId="4590-6ba9-5482-a1fa" page="73" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Chapter Mast">
       <characteristics>
         <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Helveticus</characteristic>
         <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
@@ -5846,6 +6064,20 @@ Turret</characteristic>
         <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">5</characteristic>
         <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
         <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">9</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Chapter Master" typeId="219f-0faa-a2d8-f766" typeName="Unit" hidden="false" id="9350-1109-a810-3b0c" publicationId="8eed-45fd-d4be-9a1b" page="issue 209 pg 19">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Chapter Master</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">7</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">7</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">5</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">5</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">3</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">7</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">3</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

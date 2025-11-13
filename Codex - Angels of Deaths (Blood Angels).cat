@@ -10,18 +10,39 @@
       <categoryLinks>
         <categoryLink id="7c4f-ef59-4e1b-3220" name="Squads" hidden="false" targetId="ea97-27b5-39c7-4630" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="7e3f-6a87-8dd1-2c7c" type="min"/>
+            <constraint type="min" value="0" field="points" scope="roster" shared="true" id="fd53-5d9a-4dff-428b" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="fd53-5d9a-4dff-428b">
+              <repeats>
+                <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink id="f59b-1353-94e2-4568" name="Characters" hidden="false" targetId="c261-a633-c015-f943" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="87f5-3f60-c285-8969" type="max"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="d82c-ed49-1169-5445" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="d82c-ed49-1169-5445">
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink id="ef46-a2f6-4fe0-255b" name="Support" hidden="false" targetId="d667-1478-0ee6-6183" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="954d-846b-1f1c-0804" type="max"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="beaf-dc11-879b-84c4" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="beaf-dc11-879b-84c4">
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink id="d733-2af5-2dc9-694c" name="Allies" hidden="false" targetId="6741-c4c6-274e-36cf" primary="false"/>
       </categoryLinks>
@@ -2376,9 +2397,6 @@ and  courage  in  the face of death. Once broken, a Space Marine squad may rally
               <modifiers>
                 <modifier type="set" field="534d-ae84-5926-58ef" value="1"/>
               </modifiers>
-              <costs>
-                <cost name="pts" typeId="points" value="110"/>
-              </costs>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -4424,7 +4442,7 @@ and  courage  in  the face of death. Once broken, a Space Marine squad may rally
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Chapter Master" hidden="false" id="f52a-7286-642f-1f01">
       <infoLinks>
-        <infoLink name="Chapter Master" id="b566-e6cb-3cdd-2e29" hidden="false" targetId="a062-3411-7dbb-6498" type="rule"/>
+        <infoLink name="Space Marine Captain" id="b566-e6cb-3cdd-2e29" hidden="false" targetId="a062-3411-7dbb-6498" type="rule"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="Army Commander" hidden="false" id="9209-dcf5-8fa2-c505" collective="false" targetId="4a27-f4c3-792f-0d8a" type="selectionEntry"/>

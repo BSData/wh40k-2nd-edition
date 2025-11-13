@@ -9,17 +9,21 @@
       <categoryLinks>
         <categoryLink id="49e1-4637-f8a4-1b6f" name="Allies" hidden="false" targetId="6741-c4c6-274e-36cf" primary="false">
           <modifiers>
-            <modifier type="set" field="1f38-7b93-effe-9707" value="50">
+            <modifier type="increment" field="1f38-7b93-effe-9707" value="1">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b686-76f8-6874-e3e9" type="atLeast"/>
                     <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6186-0c50-3540-dc37" type="atLeast"/>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9fec-6f81-5e76-3592" type="atLeast"/>
+                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e206-c273-bb7e-6132" type="atLeast"/>
                     <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="65bb-c554-1585-91d9" type="atLeast"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="9fec-6f81-5e76-3592" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
             </modifier>
             <modifier type="set" field="1f38-7b93-effe-9707" value="25">
               <conditionGroups>
@@ -30,10 +34,13 @@
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+              <repeats>
+                <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="points" scope="roster" value="0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="1f38-7b93-effe-9707" type="max"/>
+            <constraint field="points" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f38-7b93-effe-9707" type="max"/>
           </constraints>
         </categoryLink>
       </categoryLinks>
@@ -1691,7 +1698,7 @@ Turret</characteristic>
 17
 25</characteristic>
             <characteristic name="Side/Rear Armour" typeId="fbc3-8073-078a-ac79">16
-28
+18
 17
 22</characteristic>
           </characteristics>

@@ -226,20 +226,41 @@ Lascannon</characteristic>
   <forceEntries>
     <forceEntry name="Squats" id="c9c5-6fe5-5c66-cf35" hidden="false">
       <categoryLinks>
-        <categoryLink name="Characters" hidden="false" id="2363-7072-6c70-0e9c" targetId="909c-af95-a2b2-da83">
+        <categoryLink name="Support" hidden="false" id="c192-d051-bd40-0ce4" targetId="a83f-e89f-e777-fc11" primary="false">
           <constraints>
-            <constraint type="max" value="50" field="points" scope="parent" shared="true" id="a7a2-9f17-455e-0699" percentValue="true" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="8ca9-d17e-9849-cc52" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="8ca9-d17e-9849-cc52">
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
-        <categoryLink name="Squads" hidden="false" id="c0f5-0092-cdbc-4926" targetId="6d88-45c5-5fed-59fd">
+        <categoryLink name="Squads" hidden="false" id="16d5-d7ee-f8a7-10d1" targetId="6d88-45c5-5fed-59fd" primary="false">
           <constraints>
-            <constraint type="min" value="25" field="points" scope="parent" shared="true" id="8bca-3b32-4c4d-25eb" percentValue="true" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="min" value="0" field="points" scope="roster" shared="true" id="e193-82b2-2eda-0bc8" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="e193-82b2-2eda-0bc8">
+              <repeats>
+                <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
-        <categoryLink name="Support" hidden="false" id="f9e6-c95d-3513-f8b8" targetId="a83f-e89f-e777-fc11">
+        <categoryLink name="Characters" hidden="false" id="433a-f025-bb48-f8f5" targetId="909c-af95-a2b2-da83" primary="false">
           <constraints>
-            <constraint type="max" value="50" field="points" scope="parent" shared="true" id="3962-9b6f-5d24-62fa" percentValue="true" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="d82f-470a-7060-ae10" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="d82f-470a-7060-ae10">
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
       </categoryLinks>
     </forceEntry>

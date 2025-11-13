@@ -30,16 +30,6 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
     </forceEntry>
     <forceEntry id="f93f-7f7f-eeea-f271" name="Imperial Guard" publicationId="cad3-a694-b720-6309" hidden="false">
       <categoryLinks>
-        <categoryLink id="5f4f-8d99-2d57-0411" name="Command" hidden="false" targetId="a565-5175-f3dd-77bd" primary="false">
-          <constraints>
-            <constraint field="points" scope="parent" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="c238-46b4-be3c-4cf2" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="7d70-4ede-f9f6-d5ba" name="Battle Line" hidden="false" targetId="e69e-43d8-7b4a-0119" primary="false">
-          <constraints>
-            <constraint field="points" scope="parent" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="e593-9362-80bb-241c" type="min"/>
-          </constraints>
-        </categoryLink>
         <categoryLink id="faa9-a53b-70c9-4c79" name="Additional Unit (1 Per 1 Regimental)" hidden="false" targetId="070f-0182-955b-1543" primary="false">
           <modifiers>
             <modifier type="increment" field="47e7-e16c-8fad-a3a7" value="1">
@@ -77,6 +67,30 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
             <modifier type="decrement" value="1" field="0bdf-76da-369c-095b">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="force" childId="41ed-6110-b458-67f9" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink name="Battle Line" hidden="false" id="3c97-0059-d6d0-0346" targetId="e69e-43d8-7b4a-0119" primary="false">
+          <constraints>
+            <constraint type="min" value="0" field="points" scope="roster" shared="true" id="c468-c13a-55c1-a0f1" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="c468-c13a-55c1-a0f1">
+              <repeats>
+                <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink name="Command" hidden="false" id="556b-237f-11b0-8bbf" targetId="a565-5175-f3dd-77bd" primary="false">
+          <constraints>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="6a16-6a3e-25bd-d928" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="6a16-6a3e-25bd-d928">
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -206,6 +220,42 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
               </constraints>
             </entryLink>
           </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Weapons" id="20a1-88db-c0e8-47f5" hidden="false" collective="false" import="true">
+              <entryLinks>
+                <entryLink import="true" name="Assault Weapons" hidden="false" id="4ead-f0ef-9d9b-ab1f" collective="false" targetId="09eb-7fa1-b3e9-4c02" type="selectionEntryGroup"/>
+                <entryLink import="true" name="Special Weapons" hidden="false" id="5266-fdf5-a23d-b30a" collective="false" targetId="e23a-3808-6313-dec2" type="selectionEntryGroup">
+                  <constraints>
+                    <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="29aa-c51a-2b0f-8a6b"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="increment" value="1" field="29aa-c51a-2b0f-8a6b">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="76c3-d098-063a-8c71" childId="f3a3-e6d6-9d80-05ce" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="f3c1-4b88-1931-7a2c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="decrement" value="2" field="f3c1-4b88-1931-7a2c">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="73fd-ca2f-c089-8af5" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </repeats>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="73fd-ca2f-c089-8af5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntryGroup>
         <selectionEntryGroup id="fbc4-7fde-f401-7c72" name="Add Psyker" hidden="false" collective="false" import="true">
           <constraints>
@@ -272,25 +322,6 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
             <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e59e-8d7f-8ca1-fca7" type="min"/>
             <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ca0-c720-0d52-9d30" type="max"/>
           </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="5237-97a2-11c8-418f" name="Weapons" hidden="false" collective="false" import="true">
-              <entryLinks>
-                <entryLink id="5d76-f676-ca98-6a9d" name="Assault Weapons" hidden="false" collective="false" import="true" targetId="09eb-7fa1-b3e9-4c02" type="selectionEntryGroup"/>
-                <entryLink id="9089-3c90-e4a5-8d31" name="Special Weapons" hidden="false" collective="false" import="true" targetId="e23a-3808-6313-dec2" type="selectionEntryGroup">
-                  <constraints>
-                    <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="b585-c600-ecbe-c86c"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="increment" value="1" field="b585-c600-ecbe-c86c">
-                      <repeats>
-                        <repeat value="1" repeats="1" field="selections" scope="76c3-d098-063a-8c71" childId="f3a3-e6d6-9d80-05ce" shared="true" roundUp="false"/>
-                      </repeats>
-                    </modifier>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
         </entryLink>
         <entryLink id="026f-148d-0034-4b9b" name="Veteran Abilities" hidden="false" collective="false" import="true" targetId="d15e-9b29-96bc-9bce" type="selectionEntryGroup">
           <constraints>
@@ -716,6 +747,29 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Weapons" id="c933-8f18-f1d3-fb7e" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink import="true" name="Assault Weapons" hidden="false" id="8a8d-ab9d-21fc-5bc1" collective="false" targetId="09eb-7fa1-b3e9-4c02" type="selectionEntryGroup"/>
+            <entryLink import="true" name="Special Weapons" hidden="false" id="f59e-6185-9e60-908a" collective="false" targetId="e23a-3808-6313-dec2" type="selectionEntryGroup"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="5fca-5d27-89b0-6e44" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="decrement" value="2" field="5fca-5d27-89b0-6e44">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="3609-930e-18d8-bf32" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </repeats>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="3609-930e-18d8-bf32" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="92f6-4218-716a-b024" name="Guardsman" hidden="false" collective="false" import="true" targetId="9244-6264-0eeb-6a16" type="selectionEntry">
@@ -749,14 +803,6 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
             <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0668-00cc-e8c2-9eec" type="min"/>
             <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d422-4f42-629d-6752" type="max"/>
           </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="56a0-dce6-45e1-eeb1" name="Weapons" hidden="false" collective="false" import="true">
-              <entryLinks>
-                <entryLink id="4d4a-18ba-1f69-ef10" name="Assault Weapons" hidden="false" collective="false" import="true" targetId="09eb-7fa1-b3e9-4c02" type="selectionEntryGroup"/>
-                <entryLink id="7948-669b-5fa3-5160" name="Special Weapons" hidden="false" collective="false" import="true" targetId="e23a-3808-6313-dec2" type="selectionEntryGroup"/>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
         </entryLink>
         <entryLink id="5a91-4d3e-0cd8-3b3b" name="Lieutenant" hidden="false" collective="false" import="true" targetId="ea37-eac3-7e05-c750" type="selectionEntry">
           <constraints>
@@ -5707,7 +5753,7 @@ Turret</characteristic>
 17
 25</characteristic>
         <characteristic name="Side/Rear Armour" typeId="fbc3-8073-078a-ac79">16
-28
+18
 17
 22</characteristic>
       </characteristics>

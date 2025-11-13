@@ -31,25 +31,53 @@
   <forceEntries>
     <forceEntry id="7428-ade3-bde5-7955" name="Chaos" hidden="false">
       <categoryLinks>
-        <categoryLink id="347f-9163-653d-1504" name="Characters" hidden="false" targetId="9497-ff1f-dffc-011f" primary="false">
-          <constraints>
-            <constraint field="points" scope="parent" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="7803-f320-33d0-e6a0" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="9d2c-252b-db19-5746" name="Squads" hidden="false" targetId="6185-accd-3c7f-2fc2" primary="false">
-          <constraints>
-            <constraint field="points" scope="parent" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="4e67-536c-e825-b108" type="min"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="208f-0a65-4a7b-6c31" name="Support" hidden="false" targetId="db1a-73a1-08a2-0e88" primary="false">
-          <constraints>
-            <constraint field="points" scope="parent" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="47ba-ccef-0776-eb72" type="max"/>
-          </constraints>
-        </categoryLink>
         <categoryLink id="d8a2-2111-fbe5-c84b" name="Daemons" hidden="false" targetId="a0e0-2325-a03b-f876" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="3d63-ff6d-9082-d59a" type="max"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="7b69-eec7-1ec9-a456" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="7b69-eec7-1ec9-a456">
+              <repeats>
+                <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink name="Squads" hidden="false" id="8314-9dba-8570-c071" targetId="6185-accd-3c7f-2fc2" primary="false">
+          <constraints>
+            <constraint type="min" value="0" field="points" scope="roster" shared="true" id="72c3-0966-9ff4-9f76" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="72c3-0966-9ff4-9f76">
+              <repeats>
+                <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink name="Characters" hidden="false" id="cf57-d982-4213-a336" targetId="9497-ff1f-dffc-011f" primary="false">
+          <constraints>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="5958-84fc-a814-3178" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="5958-84fc-a814-3178">
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink name="Support" hidden="false" id="bb90-764f-59c2-1499" targetId="db1a-73a1-08a2-0e88" primary="false">
+          <constraints>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="6c43-1f5d-fa27-f06c" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="6c43-1f5d-fa27-f06c">
+              <repeats>
+                <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
       </categoryLinks>
     </forceEntry>
@@ -57,18 +85,39 @@
       <categoryLinks>
         <categoryLink id="260f-406b-35d9-f8d5" name="Cult Characters" hidden="false" targetId="4817-c1e2-2c76-e5ab" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="cbb2-aef4-cc6c-d99c" type="max"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="7cf6-b5ce-a0b6-8e08" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="7cf6-b5ce-a0b6-8e08">
+              <repeats>
+                <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink id="c0b1-c52e-1b3f-d311" name="Cultists" hidden="false" targetId="8544-5a1c-7169-98b6" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="61ca-411e-8148-fa52" type="min"/>
+            <constraint type="min" value="0" field="points" scope="roster" shared="true" id="abde-4867-702c-13bb" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="abde-4867-702c-13bb">
+              <repeats>
+                <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink id="05b2-6bc1-3aac-7774" name="Daemons" hidden="false" targetId="a0e0-2325-a03b-f876" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="cf2f-957a-9921-7e1d" type="max"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="d0c5-16a9-7ece-47df" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="d0c5-16a9-7ece-47df">
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
       </categoryLinks>
     </forceEntry>
@@ -76,13 +125,27 @@
       <categoryLinks>
         <categoryLink id="83d8-3b4a-341b-399e" name="Daemons and Warbands" hidden="false" targetId="52e6-3267-0a43-64e3" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="61e5-ca7e-80bc-b59b" type="min"/>
+            <constraint type="min" value="0" field="points" scope="roster" shared="true" id="dc7a-a5d0-5380-a5d7" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="dc7a-a5d0-5380-a5d7">
+              <repeats>
+                <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink id="66ad-7544-2fc9-e546" name="Daemon Characters" hidden="false" targetId="66dc-df7d-76d8-64b9" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="3fb4-9573-a73d-2723" type="max"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="5053-6b1c-8731-91ff" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="5053-6b1c-8731-91ff">
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
       </categoryLinks>
     </forceEntry>
@@ -1586,6 +1649,19 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
           <infoLinks>
             <infoLink id="50b8-1cd9-fb47-efa0" name="Chaos Lord Leadership" hidden="false" targetId="af50-f766-11c5-9350" type="rule"/>
           </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4322-6b60-18e2-5bc7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="719b-71a6-2809-47b8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="5785-abb3-0a25-ed37" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </entryLink>
         <entryLink id="f082-80ea-5620-c842" name="Wargear Cards" hidden="false" collective="false" import="true" targetId="0c12-c9a3-9886-7ce2" type="selectionEntryGroup">
           <modifiers>
@@ -1624,16 +1700,19 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
         <cost name="pts" typeId="points" value="91"/>
       </costs>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
+        <modifier type="set" value="0" field="1f45-e617-1e4e-2094">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="4322-6b60-18e2-5bc7" shared="true" includeChildSelections="true" includeChildForces="true"/>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="719b-71a6-2809-47b8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="5785-abb3-0a25-ed37" shared="true" includeChildSelections="true" includeChildForces="true"/>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="ed46-5374-3801-0d90" shared="true" includeChildSelections="true" includeChildForces="true"/>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="f280-6991-f2c1-a5a9" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="5785-abb3-0a25-ed37" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and"/>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>

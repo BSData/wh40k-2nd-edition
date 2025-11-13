@@ -17,20 +17,41 @@
   <forceEntries>
     <forceEntry id="c53b-a4a5-4105-782b" name="Genestealer Cults" hidden="false">
       <categoryLinks>
-        <categoryLink id="b0eb-41d0-77d5-38a5" name="Characters" hidden="false" targetId="f64c-bedf-004a-f142" primary="false">
+        <categoryLink name="Broods" hidden="false" id="1d8c-8bda-c190-212b" targetId="b70e-fd2c-12be-b090" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="4459-643f-6059-f65e" type="max"/>
+            <constraint type="min" value="0" field="points" scope="roster" shared="true" id="2d55-aac5-94a9-7104" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="2d55-aac5-94a9-7104">
+              <repeats>
+                <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
-        <categoryLink id="3168-2fea-0674-cb25" name="Broods" hidden="false" targetId="b70e-fd2c-12be-b090" primary="false">
+        <categoryLink name="Characters" hidden="false" id="66a9-3aa9-c46d-e7e3" targetId="f64c-bedf-004a-f142" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="fcbc-6d19-b467-0e40" type="min"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="216a-3371-8c8f-a3f7" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="216a-3371-8c8f-a3f7">
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
-        <categoryLink id="e601-70f0-36c3-e779" name=" Support" hidden="false" targetId="8948-0e75-0ae3-034e" primary="false">
+        <categoryLink name=" Support" hidden="false" id="1f11-d27a-7c9b-de8f" targetId="8948-0e75-0ae3-034e">
           <constraints>
-            <constraint field="points" scope="parent" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="a581-bded-99ec-c509" type="max"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="5e83-b76c-770f-0283" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="5e83-b76c-770f-0283">
+              <repeats>
+                <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
       </categoryLinks>
     </forceEntry>
@@ -2197,7 +2218,7 @@ Turret</characteristic>
 17
 25</characteristic>
         <characteristic name="Side/Rear Armour" typeId="fbc3-8073-078a-ac79">16
-28
+18
 17
 22</characteristic>
       </characteristics>

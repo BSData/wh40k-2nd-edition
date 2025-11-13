@@ -9,20 +9,41 @@
   <forceEntries>
     <forceEntry id="871d-0043-0042-8883" name="Necrons" hidden="false">
       <categoryLinks>
-        <categoryLink id="3e9a-959b-d825-797e" name="Characters" hidden="false" targetId="2ea9-09f2-fdbd-4ae7" primary="false">
+        <categoryLink name="Squads" hidden="false" id="8aab-9460-57ca-b9cc" targetId="a674-4bce-893e-4a31" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="187e-1047-0733-759e" type="max"/>
+            <constraint type="min" value="0" field="points" scope="roster" shared="true" id="dbb5-6e21-196f-fea8" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="dbb5-6e21-196f-fea8">
+              <repeats>
+                <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
-        <categoryLink id="4709-48b0-040d-5575" name="Squads" hidden="false" targetId="a674-4bce-893e-4a31" primary="false">
+        <categoryLink name="Characters" hidden="false" id="04e6-89c6-7568-8a43" targetId="2ea9-09f2-fdbd-4ae7" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="01b2-1eb4-5b3b-5a1d" type="min"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="ff8a-2798-45ab-248d" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="ff8a-2798-45ab-248d">
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
-        <categoryLink id="7222-123e-60f1-c650" name="Support" hidden="false" targetId="d343-afc5-46fd-9c02" primary="false">
+        <categoryLink name="Support" hidden="false" id="078e-9be4-6579-e08c" targetId="d343-afc5-46fd-9c02" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="158f-3eb2-88d6-bff3" type="max"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="cf8e-ad19-288c-755d" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="cf8e-ad19-288c-755d">
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
       </categoryLinks>
     </forceEntry>
@@ -59,7 +80,7 @@ Necrons which recover must try to join up with a Necron unit of the same type as
     </rule>
   </rules>
   <sharedSelectionEntries>
-    <selectionEntry id="606a-4a36-b1c4-fd10" name="Staff of Light" publicationId="8eed-45fd-d4be-9a1b" page="" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="606a-4a36-b1c4-fd10" name="Staff of Light" publicationId="8eed-45fd-d4be-9a1b" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="669e-8963-93f1-3b6a" type="max"/>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4107-eea7-c5e7-a4dc" type="min"/>
@@ -231,7 +252,7 @@ control of the vehicle</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
-    <profile id="557c-cb2d-cb45-6cbb" name="Necron Lord" publicationId="8eed-45fd-d4be-9a1b" page="" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+    <profile id="557c-cb2d-cb45-6cbb" name="Necron Lord" publicationId="8eed-45fd-d4be-9a1b" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
       <characteristics>
         <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Lord</characteristic>
         <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>

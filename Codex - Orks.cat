@@ -8,20 +8,41 @@
   <forceEntries>
     <forceEntry id="d235-52bd-79b4-0b6e" name="Orks" hidden="false">
       <categoryLinks>
-        <categoryLink id="4bb8-f7c4-8f3c-bbb7" name="Characters" hidden="false" targetId="23ab-e52d-6e65-01d5" primary="false">
+        <categoryLink name="Mobs" hidden="false" id="f433-035e-ce48-bae6" targetId="f72b-82f4-2a38-7d26" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="45a9-b6c4-1b91-2247" type="max"/>
+            <constraint type="min" value="0" field="points" scope="roster" shared="true" id="20e7-1f16-8e41-b8c2" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="20e7-1f16-8e41-b8c2">
+              <repeats>
+                <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
-        <categoryLink id="32da-887c-cc6f-6cd2" name="Mobs" hidden="false" targetId="f72b-82f4-2a38-7d26" primary="false">
+        <categoryLink name="Characters" hidden="false" id="e2cc-bd3f-83a2-bf35" targetId="23ab-e52d-6e65-01d5" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="7470-45a0-cefa-d186" type="min"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="5b0f-a75d-628f-6b51" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="5b0f-a75d-628f-6b51">
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
-        <categoryLink id="2d7f-1ca2-dc65-ccd8" name="Support" hidden="false" targetId="1cb3-5add-3535-4a1f" primary="false">
+        <categoryLink name="Support" hidden="false" id="8a1f-467a-eea2-ad0b" targetId="1cb3-5add-3535-4a1f" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="05e9-a318-b1c5-cc08" type="max"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="022e-60d2-8304-f030" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="022e-60d2-8304-f030">
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
       </categoryLinks>
     </forceEntry>
@@ -740,6 +761,11 @@
         <entryLink id="1181-dd22-c34c-bc6b" name="Gretchin Assistants" hidden="false" collective="false" import="true" targetId="e2ac-72c5-3911-3b07" type="selectionEntry">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0117-2365-03fe-9cd0" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Wargear Cards" hidden="false" id="e25b-f086-a9fe-512f" collective="false" targetId="fff1-a6e4-735f-541f" type="selectionEntryGroup">
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="30d4-71b7-0f1a-09d3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -3510,14 +3536,20 @@
     </selectionEntry>
     <selectionEntry id="ede6-bc00-9736-dc96" name="Squig Katapult" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="8098-91a5-39b1-d43b" value="99">
+        <modifier type="set" value="99" field="8098-91a5-39b1-d43b">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4239-fecc-9d06-d706" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3c7-9896-d918-9c99" type="atLeast"/>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="1d11-1731-2b68-cf33" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="1d11-1731-2b68-cf33" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="e3c7-9896-d918-9c99" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -3553,9 +3585,15 @@
             <conditionGroup type="and">
               <conditions>
                 <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4239-fecc-9d06-d706" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3c7-9896-d918-9c99" type="atLeast"/>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="1d11-1731-2b68-cf33" shared="true"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="1d11-1731-2b68-cf33" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="e3c7-9896-d918-9c99" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -3586,14 +3624,20 @@
     </selectionEntry>
     <selectionEntry id="c3a3-8222-0fcd-6aa2" name="Traktor Kannon" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="f049-8119-9d7a-f5bb" value="99">
+        <modifier type="set" value="99" field="f049-8119-9d7a-f5bb">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4239-fecc-9d06-d706" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3c7-9896-d918-9c99" type="atLeast"/>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="1d11-1731-2b68-cf33" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="1d11-1731-2b68-cf33" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="e3c7-9896-d918-9c99" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -3624,14 +3668,20 @@
     </selectionEntry>
     <selectionEntry id="a69e-9760-e603-7984" name="Splatta Kannon" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="0058-91df-d2dc-b984" value="99">
+        <modifier type="set" value="99" field="0058-91df-d2dc-b984">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4239-fecc-9d06-d706" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3c7-9896-d918-9c99" type="atLeast"/>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="1d11-1731-2b68-cf33" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="1d11-1731-2b68-cf33" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="e3c7-9896-d918-9c99" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -5680,7 +5730,7 @@ Turret</characteristic>
 17
 25</characteristic>
             <characteristic name="Side/Rear Armour" typeId="fbc3-8073-078a-ac79">16
-28
+18
 17
 22</characteristic>
           </characteristics>
@@ -7017,7 +7067,7 @@ Legs</characteristic>
             <selectionEntryGroup name="Head" id="526a-507b-cc45-d522" hidden="false">
               <entryLinks>
                 <entryLink import="true" name="Heavy Plasma Gun" hidden="false" id="8c36-6bac-81ec-7be4" type="selectionEntry" targetId="9d75-2468-4857-a347"/>
-                <entryLink import="true" name="2x Heavy Bolter" hidden="false" id="fb6a-c3a9-8cf4-33dc" type="selectionEntry" targetId="4c82-0e56-d20a-6b1c">
+                <entryLink import="true" name="Heavy Bolter" hidden="false" id="fb6a-c3a9-8cf4-33dc" type="selectionEntry" targetId="4c82-0e56-d20a-6b1c">
                   <modifiers>
                     <modifier type="set" value="2x Heavy Bolters" field="name"/>
                   </modifiers>
@@ -7209,7 +7259,7 @@ Legs</characteristic>
           <description>Due to the size of the stomper, objects 2&quot; tall or less may be ignored for movement purposes</description>
         </rule>
         <rule name="Repairs and Crew Shooting" id="cb07-267b-2b35-7316" hidden="false">
-          <description>The Gretchin can fire autoguns out of hatches in 360 degrees. The Mekaniak can repair instead of shooting. Any non-destroyed damage may be repaired on a 1 or 2 on a D12 dice. This number is increased by +1 for each available Gretchin rigger. May attempt repairs once per turn in the shooting phase. </description>
+          <description>The Gretchin can fire autoguns out of hatches in 360 degrees. The Mekaniak can repair instead of shooting. Any non-destroyed damage may be repaired on a 1 or 2 on a D12 dice. This number is increased by +1 for each available Gretchin rigger. May attempt repairs once per turn in the shooting phase.</description>
         </rule>
         <rule name="Stompa Damage Table" id="db7c-5365-20ad-9b2a" hidden="false" publicationId="9f92-b7df-cf75-9a46" page="datafax">
           <description>Please see datafax card - too much to list</description>

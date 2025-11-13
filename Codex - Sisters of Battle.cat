@@ -30,20 +30,41 @@
     </forceEntry>
     <forceEntry id="618a-582a-4b9a-73e8" name="Sisters of Battle" publicationId="cad3-a694-b720-6309" hidden="false">
       <categoryLinks>
-        <categoryLink id="5268-51e6-7724-d3e8" name="Characters" hidden="false" targetId="ef51-a705-d29d-aa4d" primary="false">
+        <categoryLink name="Support" hidden="false" id="539b-3a98-960b-6eef" targetId="0623-7337-2260-e37e" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="e0f7-593d-251d-c282" type="max"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="3c23-2bbd-1034-10f3" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="3c23-2bbd-1034-10f3">
+              <repeats>
+                <repeat value="1" repeats="0.15" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
-        <categoryLink id="70d0-fcdd-a52f-3a61" name="Support" hidden="false" targetId="0623-7337-2260-e37e" primary="false">
+        <categoryLink name="Squads" hidden="false" id="7ef6-4d41-170e-4cdb" targetId="7900-d214-741e-e36e" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="15" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="e913-8987-d48c-c313" type="max"/>
+            <constraint type="min" value="0" field="points" scope="roster" shared="true" id="1a11-3823-55da-5eb3" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="1a11-3823-55da-5eb3">
+              <repeats>
+                <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
-        <categoryLink id="9bce-955a-4568-e3c7" name="Squads" hidden="false" targetId="7900-d214-741e-e36e" primary="false">
+        <categoryLink name="Characters" hidden="false" id="ee75-1d3c-c495-4b09" targetId="ef51-a705-d29d-aa4d" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="1819-c3be-fc3b-848d" type="min"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="3c2c-7dee-7124-4665" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="3c2c-7dee-7124-4665">
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
       </categoryLinks>
     </forceEntry>

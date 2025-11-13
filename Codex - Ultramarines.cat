@@ -9,20 +9,41 @@
   <forceEntries>
     <forceEntry id="4e7e-9512-b2cc-1777" name="Ultramarines" hidden="false">
       <categoryLinks>
-        <categoryLink id="2582-0bc8-11cf-7525" name="Characters" hidden="false" targetId="8be3-6d17-d7d3-faa0" primary="false">
+        <categoryLink name="Support" hidden="false" id="fe03-bd83-3e4e-7d4c" targetId="2ce9-bd7e-1b19-0211" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="ece7-8c0b-82a5-da1f" type="max"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="a18e-0c62-0024-8069" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="a18e-0c62-0024-8069">
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
-        <categoryLink id="2940-7d20-9161-51b2" name="Squads" hidden="false" targetId="3017-162b-c153-6519" primary="false">
+        <categoryLink name="Squads" hidden="false" id="218d-e17c-c976-c387" targetId="3017-162b-c153-6519" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="ac3d-637c-7e97-b104" type="min"/>
+            <constraint type="min" value="0" field="points" scope="roster" shared="true" id="4b73-2bdb-daaa-441c" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="4b73-2bdb-daaa-441c">
+              <repeats>
+                <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
-        <categoryLink id="5855-5fc8-484c-f0fd" name="Support" hidden="false" targetId="2ce9-bd7e-1b19-0211" primary="false">
+        <categoryLink name="Characters" hidden="false" id="a596-9b1f-0fac-91f3" targetId="8be3-6d17-d7d3-faa0" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="25d5-5f16-f434-7dc6" type="max"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="4802-f35e-d8cb-790a" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="4802-f35e-d8cb-790a">
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
       </categoryLinks>
     </forceEntry>
@@ -2434,9 +2455,6 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
               <modifiers>
                 <modifier type="set" field="534d-ae84-5926-58ef" value="1"/>
               </modifiers>
-              <costs>
-                <cost name="pts" typeId="points" value="110"/>
-              </costs>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -4283,7 +4301,7 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
             </modifierGroup>
           </modifierGroups>
         </infoLink>
-        <infoLink name="Chapter Master" id="7542-4871-8f89-2099" hidden="false" targetId="a062-3411-7dbb-6498" type="rule"/>
+        <infoLink name="Space Marine Captain" id="7542-4871-8f89-2099" hidden="false" targetId="a062-3411-7dbb-6498" type="rule"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="Army Commander" hidden="false" id="0d44-254f-1aa4-7b0c" collective="false" targetId="4a27-f4c3-792f-0d8a" type="selectionEntry"/>

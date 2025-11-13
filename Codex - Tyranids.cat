@@ -32,18 +32,39 @@
       <categoryLinks>
         <categoryLink id="6726-e718-87fd-cd1e" name=" Support" hidden="false" targetId="795f-7f64-4e25-925e" primary="false">
           <constraints>
-            <constraint field="points" scope="force" value="50" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="31ce-048f-11e3-1706" type="max"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="ecfb-2dea-e0d3-d9d8" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="ecfb-2dea-e0d3-d9d8">
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink id="52c1-0e96-e897-9acd" name="Individuals" hidden="false" targetId="1439-f160-c1a8-1061" primary="false">
           <constraints>
-            <constraint field="points" scope="force" value="50" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="7817-0c94-00fd-c049" type="max"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="eb04-fe7b-62c9-24f2" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="eb04-fe7b-62c9-24f2">
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink id="6b56-d47a-27b1-a596" name="Broods" hidden="false" targetId="0de2-91d6-86dc-d0bc" primary="false">
           <constraints>
-            <constraint field="points" scope="force" value="25" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="7549-62dc-3560-98ec" type="min"/>
+            <constraint type="min" value="0" field="points" scope="roster" shared="true" id="0a46-19ce-8759-92fd" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="0a46-19ce-8759-92fd">
+              <repeats>
+                <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
       </categoryLinks>
     </forceEntry>

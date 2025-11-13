@@ -11,20 +11,41 @@ If they ever change that I will update. Until then, ye olde calcuator will do!</
   <forceEntries>
     <forceEntry id="6424-93f5-0595-ee8b" name="Space Wolves" hidden="false">
       <categoryLinks>
-        <categoryLink id="b060-a538-d4ab-33a7" name="Squads" hidden="false" targetId="b960-4b95-7dcc-14c5" primary="false">
+        <categoryLink name="Support" hidden="false" id="895c-be97-a774-5f83" targetId="1201-97c2-d0c7-f0c1" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="8b2c-01d3-d9a4-cf26" type="min"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="3f40-cf7c-aef7-1e77" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="3f40-cf7c-aef7-1e77">
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
-        <categoryLink id="4211-34fe-23ad-be26" name="Characters" hidden="false" targetId="2cae-0005-ed61-2fd2" primary="false">
+        <categoryLink name="Squads" hidden="false" id="5a40-ba4d-e849-f2f9" targetId="b960-4b95-7dcc-14c5" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="61dc-3656-ec93-ffea" type="max"/>
+            <constraint type="min" value="0" field="points" scope="roster" shared="true" id="a2cf-6fa5-991f-068f" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="a2cf-6fa5-991f-068f">
+              <repeats>
+                <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
-        <categoryLink id="f73d-1760-0715-8bd2" name="Support" hidden="false" targetId="1201-97c2-d0c7-f0c1" primary="false">
+        <categoryLink name="Characters" hidden="false" id="b2d9-7c71-0d4a-b305" targetId="2cae-0005-ed61-2fd2" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="de49-6c43-fb9c-f046" type="max"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="dad1-89a7-1b84-c1bd" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="dad1-89a7-1b84-c1bd">
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
       </categoryLinks>
     </forceEntry>

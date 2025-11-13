@@ -1,32 +1,57 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7bb5-646e-ec66-1cdd" name="Codex - Assassins" revision="5" battleScribeVersion="2.03" authorName="Boff" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7bb5-646e-ec66-1cdd" name="Codex - Assassins" revision="5" battleScribeVersion="2.03" authorName="Boff" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="9778-1163-ce67-b2e4" name="Assassins Ally" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="5a6c-a998-431c-94ae" name="Assassins" hidden="false">
       <modifiers>
-        <modifier type="set" field="fca7-25d1-0cdf-10d2" value="25.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a949-140a-176f-6700" type="atLeast"/>
-          </conditions>
+        <modifier type="increment" value="1" field="d474-729c-4381-f3e6">
+          <repeats>
+            <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="65bb-c554-1585-91d9" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="6186-0c50-3540-dc37" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b686-76f8-6874-e3e9" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9fec-6f81-5e76-3592" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="e206-c273-bb7e-6132" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <comment>For 50% support armies</comment>
         </modifier>
-        <modifier type="set" field="fca7-25d1-0cdf-10d2" value="25.0">
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ef00-5e3b-a59a-902f" type="atLeast"/>
-          </conditions>
+        <modifier type="increment" value="1" field="d474-729c-4381-f3e6">
+          <repeats>
+            <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a949-140a-176f-6700" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ef00-5e3b-a59a-902f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <comment>For 25% support armies</comment>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="points" scope="roster" value="0.0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="fca7-25d1-0cdf-10d2" type="max"/>
+        <constraint type="max" value="0" field="points" scope="roster" shared="true" id="d474-729c-4381-f3e6" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
       <categoryLinks>
-        <categoryLink id="8480-68c6-52b7-3b8b" name="Assassins Ally" hidden="false" targetId="9778-1163-ce67-b2e4" primary="false"/>
+        <categoryLink name="Assassins" hidden="false" id="0114-8d60-4f1f-f191" targetId="06ba-f656-4e76-25d1"/>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
   <entryLinks>
-    <entryLink id="3077-ac5a-883a-989b" name="Assassin" hidden="false" collective="false" import="true" targetId="6d6a-c81b-bb34-7d18" type="selectionEntry"/>
+    <entryLink id="3077-ac5a-883a-989b" name="Assassin" hidden="false" collective="false" import="true" targetId="6d6a-c81b-bb34-7d18" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="06ba-f656-4e76-25d1" id="99fd-6d8e-3e02-5660" primary="true" name="Assassins"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <rules>
     <rule id="15e9-3d40-e9ed-b81d" name="Vision" publicationId="4e3f-569f-151e-9c5c" page="8" hidden="false">
@@ -54,7 +79,7 @@ If successfully dodged a blast template, place the model to the outside area of 
   <sharedSelectionEntries>
     <selectionEntry id="397f-95ea-bc04-6e70" name="Vindicare Assassin" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8223-8d99-a4f7-60c8" type="max"/>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8223-8d99-a4f7-60c8" type="max"/>
       </constraints>
       <infoLinks>
         <infoLink id="7fdc-a0bf-8e18-c9e3" name="Marksman" hidden="false" targetId="c8f4-f8db-9e69-b7ec" type="rule"/>
@@ -68,16 +93,16 @@ If successfully dodged a blast template, place the model to the outside area of 
         <infoLink id="ebf0-2a76-782c-2b2c" name="Exitus Pistol" hidden="false" targetId="a25e-52ea-7d71-db70" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="cc69-2ad0-f5ff-3682" name="New CategoryLink" hidden="false" targetId="06ba-f656-4e76-25d1" primary="false"/>
-        <categoryLink id="be8d-552e-cb53-039d" name="New CategoryLink" hidden="false" targetId="9778-1163-ce67-b2e4" primary="true"/>
+        <categoryLink id="cc69-2ad0-f5ff-3682" name="Assassins" hidden="false" targetId="06ba-f656-4e76-25d1" primary="false"/>
+        <categoryLink id="be8d-552e-cb53-039d" name="Assassins Ally" hidden="false" targetId="9778-1163-ce67-b2e4" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="215.0"/>
+        <cost name="pts" typeId="points" value="215"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6ec9-0cc7-800a-a8d5" name="Callidus Assassin" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe48-0bd3-efa7-30a2" type="max"/>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe48-0bd3-efa7-30a2" type="max"/>
       </constraints>
       <infoLinks>
         <infoLink id="c886-649b-8c47-fe97" name="Assassin" hidden="false" targetId="4486-a0ab-0905-2f8c" type="profile"/>
@@ -89,24 +114,24 @@ If successfully dodged a blast template, place the model to the outside area of 
         <infoLink id="d888-e3e5-f878-289e" name="Poison Blades" hidden="false" targetId="086b-e140-ca50-e7ea" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="2584-7f25-ba2a-f4e5" name="New CategoryLink" hidden="false" targetId="06ba-f656-4e76-25d1" primary="false"/>
-        <categoryLink id="de53-1f89-32e6-e46d" name="Assassins" hidden="false" targetId="9778-1163-ce67-b2e4" primary="true"/>
+        <categoryLink id="2584-7f25-ba2a-f4e5" name="Assassins" hidden="false" targetId="06ba-f656-4e76-25d1" primary="false"/>
+        <categoryLink id="de53-1f89-32e6-e46d" name="Assassins Ally" hidden="false" targetId="9778-1163-ce67-b2e4" primary="true"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="1b0d-5611-9239-9bed" name="C&apos;Tan Phase Sword" hidden="false" collective="false" import="true" targetId="2565-d020-50ca-6e7b" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="62a9-18d1-2238-3894" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d9f1-4a2a-3aea-d894" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="62a9-18d1-2238-3894" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d9f1-4a2a-3aea-d894" type="max"/>
           </constraints>
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="237.0"/>
+        <cost name="pts" typeId="points" value="237"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="464f-a68d-1393-8e1f" name="Eversor Assassin" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a965-0d69-eb69-1d3c" type="max"/>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a965-0d69-eb69-1d3c" type="max"/>
       </constraints>
       <infoLinks>
         <infoLink id="662a-0fc4-48d8-536b" name="Assassin" hidden="false" targetId="4486-a0ab-0905-2f8c" type="profile"/>
@@ -119,29 +144,29 @@ If successfully dodged a blast template, place the model to the outside area of 
         <infoLink id="0efb-66b9-762a-d622" name="Eversor Combat Drugs" hidden="false" targetId="9ae0-42fd-ba70-8c0f" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="fac7-2cd9-4153-3bdb" name="New CategoryLink" hidden="false" targetId="06ba-f656-4e76-25d1" primary="false"/>
-        <categoryLink id="3e2a-fd46-6245-4d57" name="New CategoryLink" hidden="false" targetId="9778-1163-ce67-b2e4" primary="true"/>
+        <categoryLink id="fac7-2cd9-4153-3bdb" name="Assassins" hidden="false" targetId="06ba-f656-4e76-25d1" primary="false"/>
+        <categoryLink id="3e2a-fd46-6245-4d57" name="Assassins Ally" hidden="false" targetId="9778-1163-ce67-b2e4" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="28d3-3d4c-81ba-6b08" name="Neuro-Gauntlet" publicationId="4e3f-569f-151e-9c5c" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f872-3b2f-21cf-1cf0" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="63ca-9921-4f0f-2552" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f872-3b2f-21cf-1cf0" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="63ca-9921-4f0f-2552" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="0a4b-dec5-71d8-bc4b" name="Neuro-Gauntlet" hidden="false" targetId="d444-0af9-806a-7cc9" type="rule"/>
             <infoLink id="e023-2847-879a-197e" name="Neuro-Gauntlet" hidden="false" targetId="32ad-2f3b-f93f-528d" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
+            <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="4595-2634-68cb-74bc" name="Plasma Grenade" hidden="false" collective="false" import="true" targetId="9277-633c-d567-56be" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4879-e2c0-7e4f-cfc4" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b57-bdf8-640a-472d" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4879-e2c0-7e4f-cfc4" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b57-bdf8-640a-472d" type="max"/>
           </constraints>
           <rules>
             <rule id="aff1-31e5-b5f9-9a16" name="Plasma Grenade - Just for example when Eversor dies - Cannot use" hidden="false"/>
@@ -149,30 +174,30 @@ If successfully dodged a blast template, place the model to the outside area of 
         </entryLink>
         <entryLink id="eaae-e0e4-32c0-e59e" name="Power Sword" hidden="false" collective="false" import="true" targetId="4e44-58a0-2af5-519c" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f1fa-22bc-1620-796a" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="59ae-6ad9-d499-e7a0" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f1fa-22bc-1620-796a" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="59ae-6ad9-d499-e7a0" type="min"/>
           </constraints>
         </entryLink>
         <entryLink id="6d8a-f016-15fe-7b61" name="Melta Bomb" hidden="false" collective="false" import="true" targetId="101f-9872-9b6f-cfc7" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="12de-1b6b-6b17-b439" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a45f-549f-d8e1-632d" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="12de-1b6b-6b17-b439" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a45f-549f-d8e1-632d" type="min"/>
           </constraints>
         </entryLink>
         <entryLink id="e7cf-17b1-4fd9-ef4c" name="Executor Pistol" hidden="false" collective="false" import="true" targetId="e60b-5b50-1274-7153" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="03db-3f77-7bcc-59d8" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="125f-415e-1e46-6b17" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="03db-3f77-7bcc-59d8" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="125f-415e-1e46-6b17" type="max"/>
           </constraints>
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="240.0"/>
+        <cost name="pts" typeId="points" value="240"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="978e-8574-f094-a0cb" name="Culexus Assassin" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5bb8-e499-441c-0a9b" type="max"/>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5bb8-e499-441c-0a9b" type="max"/>
       </constraints>
       <infoLinks>
         <infoLink id="2701-0402-3f65-e819" name="Assassin" hidden="false" targetId="4486-a0ab-0905-2f8c" type="profile"/>
@@ -186,25 +211,25 @@ If successfully dodged a blast template, place the model to the outside area of 
         <infoLink id="45af-5b7e-6136-24a0" name="Soulless" hidden="false" targetId="da1d-55c3-27b3-8e81" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="6e04-5986-3014-5e47" name="New CategoryLink" hidden="false" targetId="06ba-f656-4e76-25d1" primary="false"/>
-        <categoryLink id="95c0-554a-31ef-d4bb" name="New CategoryLink" hidden="false" targetId="9778-1163-ce67-b2e4" primary="true"/>
+        <categoryLink id="6e04-5986-3014-5e47" name="Assassins" hidden="false" targetId="06ba-f656-4e76-25d1" primary="false"/>
+        <categoryLink id="95c0-554a-31ef-d4bb" name="Assassins Ally" hidden="false" targetId="9778-1163-ce67-b2e4" primary="true"/>
       </categoryLinks>
       <entryLinks>
         <entryLink id="9939-3f8c-950d-c1d8" name="The Animus Speculum" hidden="false" collective="false" import="true" targetId="39e4-5a29-1aba-76ea" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="01d3-b536-a216-1e0b" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="21d3-965e-54b4-25f3" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="01d3-b536-a216-1e0b" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="21d3-965e-54b4-25f3" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="3190-e8ad-3cd1-aaf7" name="Psyk-Out Grenades" hidden="false" collective="false" import="true" targetId="99bb-3a97-cbae-1fb5" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="900a-9587-264a-eacf" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="22c5-920d-9609-f2cd" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="900a-9587-264a-eacf" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="22c5-920d-9609-f2cd" type="max"/>
           </constraints>
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="210.0"/>
+        <cost name="pts" typeId="points" value="210"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2565-d020-50ca-6e7b" name="C&apos;Tan Phase Sword" hidden="false" collective="false" import="true" type="upgrade">
@@ -215,7 +240,7 @@ If successfully dodged a blast template, place the model to the outside area of 
         <infoLink id="5f61-365d-0add-fdc4" name="C&apos;tan Phase Weapon" hidden="false" targetId="b018-9226-1ab2-e85a" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e60b-5b50-1274-7153" name="Executor Pistol" hidden="false" collective="false" import="true" type="upgrade">
@@ -225,19 +250,19 @@ If successfully dodged a blast template, place the model to the outside area of 
       <entryLinks>
         <entryLink id="651c-c53d-c6df-eabe" name="Needle Pistol" hidden="false" collective="false" import="true" targetId="dec7-82c8-a97f-f2d1" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c03-4d38-0187-ed89" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b03-57cc-c636-d297" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c03-4d38-0187-ed89" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b03-57cc-c636-d297" type="min"/>
           </constraints>
         </entryLink>
         <entryLink id="25d0-5346-958e-8457" name="Master-Crafted Bolt Pistol" hidden="false" collective="false" import="true" targetId="04a2-74da-3458-52d1" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d41b-e725-a028-45d4" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="95cc-8902-291e-7a21" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d41b-e725-a028-45d4" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="95cc-8902-291e-7a21" type="max"/>
           </constraints>
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="39e4-5a29-1aba-76ea" name="The Animus Speculum" hidden="false" collective="false" import="true" type="upgrade">
@@ -246,7 +271,7 @@ If successfully dodged a blast template, place the model to the outside area of 
         <infoLink id="2bda-8dd3-1941-6b1b" name="Animus Speculum" hidden="false" targetId="c1b5-e5fe-b008-b9c5" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="99bb-3a97-cbae-1fb5" name="Psyk-Out Grenades" hidden="false" collective="false" import="true" type="upgrade">
@@ -255,21 +280,21 @@ If successfully dodged a blast template, place the model to the outside area of 
         <infoLink id="fcf0-8657-22a6-87e9" name="Psyk-Out Grenades" hidden="false" targetId="a4ec-d297-beaa-41a6" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6d6a-c81b-bb34-7d18" name="Assassin" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9125-8152-44ce-c3d3" type="max"/>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9125-8152-44ce-c3d3" type="max"/>
       </constraints>
       <categoryLinks>
-        <categoryLink id="aa03-ac85-21b7-78d9" name="New CategoryLink" hidden="false" targetId="06ba-f656-4e76-25d1" primary="false"/>
-        <categoryLink id="3205-6d5a-f35b-be70" name="New CategoryLink" hidden="false" targetId="9778-1163-ce67-b2e4" primary="true"/>
+        <categoryLink id="aa03-ac85-21b7-78d9" name="Assassins" hidden="false" targetId="06ba-f656-4e76-25d1" primary="false"/>
+        <categoryLink id="3205-6d5a-f35b-be70" name="Assassins Ally" hidden="false" targetId="9778-1163-ce67-b2e4" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="05d4-8d08-eb6e-9e79" name="New SelectionEntryGroup" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7bf7-371f-1f90-5ee8" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7bf7-371f-1f90-5ee8" type="max"/>
           </constraints>
           <entryLinks>
             <entryLink id="f53a-b773-7686-4bf9" name="Callidus Assassin" hidden="false" collective="false" import="true" targetId="6ec9-0cc7-800a-a8d5" type="selectionEntry"/>
@@ -280,7 +305,7 @@ If successfully dodged a blast template, place the model to the outside area of 
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="points" value="0.0"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -296,7 +321,7 @@ Increase long range of his weapons by 50%.</description>
       <description>May make a run move and fire his Exitus Pistol in the same turn.</description>
     </rule>
     <rule id="3cdc-8693-ff2c-3d0f" name="Evade" publicationId="4e3f-569f-151e-9c5c" page="13" hidden="false">
-      <description>Any enemy shooting at the Callidus Assassin from short range suffers a -2 to hit penalty, and at long range -1. This only applies when the assassin is out in the open. </description>
+      <description>Any enemy shooting at the Callidus Assassin from short range suffers a -2 to hit penalty, and at long range -1. This only applies when the assassin is out in the open.</description>
     </rule>
     <rule id="4d72-bad7-4497-480d" name="Jump Back" publicationId="4e3f-569f-151e-9c5c" page="13" hidden="false">
       <description>At the start of the close combat phase, the Callidus Assassin may disengage from combat. The Assassin may do this automatically and the opponent gains no free strike. Move the Callidus Assassin 2&quot; out of close combat. May not be used to enter another close combat.</description>
@@ -328,7 +353,7 @@ The warp cards Reflection, Daemonic Attack, and Destroy Power may not be used to
     <rule id="425d-2f0c-af11-3a63" name="Psyk-out Grenades" publicationId="4e3f-569f-151e-9c5c" page="23" hidden="false">
       <description>Roll damage as normal. Any Psykers partially or fuly under the template cannot use any psychic powers for the rest of the turn. Any powers that psyker had in play at that moment are nullified and any force cards stored in weapons or similar item must be discarded.
 
-Any time the Assassin uses a Psyk-out grenade roll a D6. On a 1 or 2 the grenades run out. </description>
+Any time the Assassin uses a Psyk-out grenade roll a D6. On a 1 or 2 the grenades run out.</description>
     </rule>
     <rule id="22f3-20e3-1f5f-eeb7" name="Anti-Psyker" publicationId="4e3f-569f-151e-9c5c" page="23" hidden="false">
       <description>May not use any  of the warp cards dealt to the Imperial player in the psychic phase. Only gains force powers from his Force Matrix</description>
@@ -338,7 +363,7 @@ Any time the Assassin uses a Psyk-out grenade roll a D6. On a 1 or 2 the grenade
     </rule>
     <rule id="9c93-ced0-7c94-ef5b" name="Warp Disturbance" publicationId="4e3f-569f-151e-9c5c" page="24" hidden="false">
       <description>Any psyker, including friendly psykers, withint 24&quot; of the Culexus Assassin that attempts to use a power must roll a D6. If the roll is less than or equal to the number of force cards he played wit hthe psychic power, then the power is immediately nullified and the psyker suffers a wound with no armour saved allowed. 
-If a power is played using the Ultimate Force warp card, the power counts as being powered by three force cards and cannot be nullified. However, the psyker must still roll a dice, if he rolls a 3 or less he takes a wound. </description>
+If a power is played using the Ultimate Force warp card, the power counts as being powered by three force cards and cannot be nullified. However, the psyker must still roll a dice, if he rolls a 3 or less he takes a wound.</description>
     </rule>
     <rule id="bad8-a3a2-551c-402f" name="Life Drain" publicationId="4e3f-569f-151e-9c5c" page="24" hidden="false">
       <description>May only be used when in base contact with an enemy psyker. Before fighting each round of close combat the psyker should roll 2D6 and add his Leadership characteristic to the score. The Culexus Assassin should roll 3D6, choose the two highest dice and add his Leadership score. If the scores are drawn or the Culexus Assassin loses, the attack has no effect and close combat continues as normal.

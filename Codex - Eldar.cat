@@ -16,25 +16,53 @@
   <forceEntries>
     <forceEntry id="3194-a555-e345-e964" name="Eldar" hidden="false">
       <categoryLinks>
-        <categoryLink id="2b18-a272-eb9d-6c6e" name="Characters" hidden="false" targetId="f27a-c384-b8b9-6c8d" primary="false">
-          <constraints>
-            <constraint field="points" scope="parent" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="b99c-78d5-1475-a1f6" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="5da9-3901-2aa1-8d35" name="Squads" hidden="false" targetId="2b85-5dce-be87-156f" primary="false">
-          <constraints>
-            <constraint field="points" scope="parent" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="973c-09cd-b9d2-0c68" type="min"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="3ca2-6873-4b58-0507" name="Support" hidden="false" targetId="3d63-43e0-18a6-3371" primary="false">
-          <constraints>
-            <constraint field="points" scope="parent" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="7b63-ae7b-d3c3-4d1c" type="max"/>
-          </constraints>
-        </categoryLink>
         <categoryLink id="9ef0-2b1c-5259-d89c" name="Harlequins" hidden="false" targetId="cebc-d3dc-2ed1-a34c" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="82d8-59cb-e9fb-e3e0" type="max"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="5b5e-09f9-56f5-8a06" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="5b5e-09f9-56f5-8a06">
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink name="Squads" hidden="false" id="38ce-88bc-3dc2-f81d" targetId="2b85-5dce-be87-156f" primary="false">
+          <constraints>
+            <constraint type="min" value="0" field="points" scope="roster" shared="true" id="2352-ed51-e8fa-2d84" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="2352-ed51-e8fa-2d84">
+              <repeats>
+                <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink name="Characters" hidden="false" id="4150-38d1-3621-4702" targetId="f27a-c384-b8b9-6c8d" primary="false">
+          <constraints>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="353f-b788-dd76-e4cb" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="353f-b788-dd76-e4cb">
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink name="Support" hidden="false" id="180d-5242-edec-21c8" targetId="3d63-43e0-18a6-3371">
+          <constraints>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="1b67-4a0e-ae67-230b" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="1b67-4a0e-ae67-230b">
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
       </categoryLinks>
     </forceEntry>
@@ -4593,6 +4621,21 @@ Can leap out of close combat at the end of any close combat phase without suffer
       <costs>
         <cost name="pts" typeId="points" value="215"/>
       </costs>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Crystal Targeting Matrix" hidden="false" id="ddde-9ee6-0fef-8679" collective="false">
+          <profiles>
+            <profile name="Crystal Targeting Matrix" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear" hidden="false" id="1838-f407-3d0c-9e3c">
+              <characteristics>
+                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Ignore all to hit modifiers for firing at fast moving targets</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="09d4-d329-d400-20cc" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a40e-c5ab-8226-dcf8" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry id="b524-9bb4-20b2-7177" name="Prism Cannon" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
@@ -5855,9 +5898,6 @@ The weapon requires two hands to use and cannot be used to parry in close combat
         <selectionEntryGroup id="a825-ca10-bd7d-4f5f" name="Wargear Cards (Vehicle - Eldar)" hidden="false" collective="false" import="true">
           <selectionEntries>
             <selectionEntry id="ac88-6401-e476-266d" name="Crystalline Web" publicationId="71ba-82e2-d83c-d33d" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c8a3-cf84-f92d-9513" type="max"/>
-              </constraints>
               <profiles>
                 <profile id="67a3-77e0-bc04-d337" name="Crystalline Web" publicationId="71ba-82e2-d83c-d33d" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
                   <characteristics>

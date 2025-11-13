@@ -8,20 +8,41 @@
   <forceEntries>
     <forceEntry id="3fb4-3a79-14df-1292" name="Dark Angels" hidden="false">
       <categoryLinks>
-        <categoryLink id="7df3-d9ca-e7fb-fcf7" name="Characters" hidden="false" targetId="5ea0-5809-8883-b277" primary="false">
+        <categoryLink name="Squads" hidden="false" id="bb8e-86ba-896c-80d9" targetId="8887-ca93-cfef-dc21" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="ddde-530d-c316-9fd3" type="max"/>
+            <constraint type="min" value="0" field="points" scope="roster" shared="true" id="41a7-b51d-91ed-fb1d" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="41a7-b51d-91ed-fb1d">
+              <repeats>
+                <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
-        <categoryLink id="59f0-b80c-8bfb-3cd5" name="Support" hidden="false" targetId="b2b4-3f47-c7fb-a445" primary="false">
+        <categoryLink name="Characters" hidden="false" id="2f6b-aeec-1afa-b7bb" targetId="5ea0-5809-8883-b277" primary="false">
           <constraints>
-            <constraint field="points" scope="parent" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="42d7-ea86-3eae-b767" type="max"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="5394-54be-e763-96c3" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="5394-54be-e763-96c3">
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
-        <categoryLink id="6d97-c920-9a77-c240" name="Squads" hidden="false" targetId="8887-ca93-cfef-dc21" primary="false">
+        <categoryLink name="Support" hidden="false" id="24f9-e730-a01b-c809" targetId="b2b4-3f47-c7fb-a445">
           <constraints>
-            <constraint field="points" scope="parent" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="e7ee-38a5-b7ed-f090" type="min"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="304d-e2a9-12ac-d03c" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="304d-e2a9-12ac-d03c">
+              <repeats>
+                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
       </categoryLinks>
     </forceEntry>
@@ -3593,9 +3614,6 @@ and  courage  in  the face of death. Once broken, a Space Marine squad may rally
             <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ae36-4b91-6b53-7845" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d5f7-0101-ce86-a09f" type="min"/>
           </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="120"/>
-          </costs>
         </entryLink>
       </entryLinks>
       <costs>

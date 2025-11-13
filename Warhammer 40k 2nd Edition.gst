@@ -146,17 +146,9 @@
     <categoryEntry id="0f7a-2cd5-df51-dccd" name="Daemons" hidden="false"/>
     <categoryEntry id="6741-c4c6-274e-36cf" name="Allies" hidden="false"/>
     <categoryEntry id="722d-8a5c-d442-498a" name="Necrons" hidden="false"/>
-    <categoryEntry id="156f-b304-5133-1fff" name="Support" hidden="false"/>
     <categoryEntry id="7b75-aa9e-1b94-f4a5" name="Imperial Agents" hidden="false"/>
     <categoryEntry id="e206-c273-bb7e-6132" name="Squats" hidden="false"/>
   </categoryEntries>
-  <forceEntries>
-    <forceEntry id="5eaa-5b96-5986-4194" name="Don&apos;t pick this - Click to change" hidden="true">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true"/>
-      </modifiers>
-    </forceEntry>
-  </forceEntries>
   <sharedSelectionEntries>
     <selectionEntry id="ba47-de18-97b6-db04" name="Blades and Saws" publicationId="06e5-8e36-e8c8-aec3" page="6" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>

@@ -226,41 +226,146 @@ Lascannon</characteristic>
   <forceEntries>
     <forceEntry name="Squats" id="c9c5-6fe5-5c66-cf35" hidden="false">
       <categoryLinks>
-        <categoryLink name="Support" hidden="false" id="c192-d051-bd40-0ce4" targetId="a83f-e89f-e777-fc11" primary="false">
+        <categoryLink name="Squads" hidden="false" id="24cc-29fe-30b8-711d" targetId="6d88-45c5-5fed-59fd" primary="false">
           <constraints>
-            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="8ca9-d17e-9849-cc52" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
+            <constraint type="min" value="0" field="points" scope="roster" shared="true" id="1bde-336a-d174-b70f" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="min" value="25" field="points" scope="roster" shared="true" id="5515-a5f2-21bb-90ad" percentValue="true" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
-          <modifiers>
-            <modifier type="increment" value="1" field="8ca9-d17e-9849-cc52">
-              <repeats>
-                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-              </repeats>
-            </modifier>
-          </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="-1" field="1bde-336a-d174-b70f"/>
+              </modifiers>
+              <comment>When you have no points limit</comment>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="increment" value="1" field="1bde-336a-d174-b70f">
+                  <repeats>
+                    <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+                  </repeats>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="-1" field="5515-a5f2-21bb-90ad">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <comment>When having a points limit</comment>
+            </modifierGroup>
+          </modifierGroups>
         </categoryLink>
-        <categoryLink name="Squads" hidden="false" id="16d5-d7ee-f8a7-10d1" targetId="6d88-45c5-5fed-59fd" primary="false">
+        <categoryLink name="Characters" hidden="false" id="936f-3656-d0f7-76a2" targetId="909c-af95-a2b2-da83" primary="false">
           <constraints>
-            <constraint type="min" value="0" field="points" scope="roster" shared="true" id="e193-82b2-2eda-0bc8" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="2dcd-de07-d089-d2f9" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="max" value="50" field="points" scope="roster" shared="true" id="bc93-1c07-2aee-18a1" percentValue="true" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
-          <modifiers>
-            <modifier type="increment" value="1" field="e193-82b2-2eda-0bc8">
-              <repeats>
-                <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-              </repeats>
-            </modifier>
-          </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="-1" field="2dcd-de07-d089-d2f9"/>
+              </modifiers>
+              <comment>When you have no points limit</comment>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="increment" value="1" field="2dcd-de07-d089-d2f9">
+                  <repeats>
+                    <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+                  </repeats>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="-1" field="bc93-1c07-2aee-18a1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <comment>When having a points limit</comment>
+            </modifierGroup>
+          </modifierGroups>
         </categoryLink>
-        <categoryLink name="Characters" hidden="false" id="433a-f025-bb48-f8f5" targetId="909c-af95-a2b2-da83" primary="false">
+        <categoryLink name="Support" hidden="false" id="7f5e-82f8-1608-02e9" targetId="a83f-e89f-e777-fc11">
           <constraints>
-            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="d82f-470a-7060-ae10" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="b35c-a271-e9d7-554d" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="max" value="50" field="points" scope="roster" shared="true" id="f6e0-296b-6988-cd01" percentValue="true" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
-          <modifiers>
-            <modifier type="increment" value="1" field="d82f-470a-7060-ae10">
-              <repeats>
-                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-              </repeats>
-            </modifier>
-          </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="-1" field="b35c-a271-e9d7-554d"/>
+              </modifiers>
+              <comment>When you have no points limit</comment>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="increment" value="1" field="b35c-a271-e9d7-554d">
+                  <repeats>
+                    <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+                  </repeats>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="-1" field="f6e0-296b-6988-cd01">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <comment>When having a points limit</comment>
+            </modifierGroup>
+          </modifierGroups>
         </categoryLink>
       </categoryLinks>
     </forceEntry>

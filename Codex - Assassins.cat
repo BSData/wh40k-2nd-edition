@@ -4,45 +4,106 @@
     <categoryEntry id="9778-1163-ce67-b2e4" name="Assassins Ally" hidden="false"/>
   </categoryEntries>
   <forceEntries>
-    <forceEntry id="5a6c-a998-431c-94ae" name="Assassins" hidden="false">
-      <modifiers>
-        <modifier type="increment" value="1" field="d474-729c-4381-f3e6">
-          <repeats>
-            <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-          </repeats>
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="65bb-c554-1585-91d9" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="6186-0c50-3540-dc37" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b686-76f8-6874-e3e9" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9fec-6f81-5e76-3592" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="e206-c273-bb7e-6132" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-          <comment>For 50% support armies</comment>
-        </modifier>
-        <modifier type="increment" value="1" field="d474-729c-4381-f3e6">
-          <repeats>
-            <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-          </repeats>
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a949-140a-176f-6700" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ef00-5e3b-a59a-902f" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-          <comment>For 25% support armies</comment>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="max" value="0" field="points" scope="roster" shared="true" id="d474-729c-4381-f3e6" includeChildSelections="true" includeChildForces="true"/>
-      </constraints>
+    <forceEntry id="5a6c-a998-431c-94ae" name="Assassins - 50% support armies" hidden="false">
       <categoryLinks>
-        <categoryLink name="Assassins" hidden="false" id="0114-8d60-4f1f-f191" targetId="06ba-f656-4e76-25d1"/>
+        <categoryLink name="Assassins" hidden="false" id="0114-8d60-4f1f-f191" targetId="06ba-f656-4e76-25d1">
+          <constraints>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="bf6b-8325-e6a5-193d" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="max" value="50" field="points" scope="roster" shared="true" id="0c33-5590-e270-abdb" percentValue="true" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="-1" field="bf6b-8325-e6a5-193d"/>
+              </modifiers>
+              <comment>When you have no points limit</comment>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="increment" value="1" field="bf6b-8325-e6a5-193d">
+                  <repeats>
+                    <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+                  </repeats>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="-1" field="0c33-5590-e270-abdb">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <comment>When having a points limit</comment>
+            </modifierGroup>
+          </modifierGroups>
+        </categoryLink>
+      </categoryLinks>
+    </forceEntry>
+    <forceEntry name="Assassins - 25% support armies (Sisters &amp; Guard)" id="9f98-c43a-e99f-bebd" hidden="false">
+      <categoryLinks>
+        <categoryLink name="Assassins" hidden="false" id="0639-500a-648d-e044" targetId="06ba-f656-4e76-25d1">
+          <constraints>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="d211-3370-493c-27c6" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="max" value="25" field="points" scope="roster" shared="true" id="88ad-0053-e8f1-e9a0" percentValue="true" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="-1" field="d211-3370-493c-27c6"/>
+              </modifiers>
+              <comment>When you have no points limit</comment>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="increment" value="1" field="d211-3370-493c-27c6">
+                  <repeats>
+                    <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+                  </repeats>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="-1" field="88ad-0053-e8f1-e9a0">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <comment>When having a points limit</comment>
+            </modifierGroup>
+          </modifierGroups>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
   </forceEntries>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="82fc-8ad4-7b4b-dd4a" name="Codex - Imperial Guard" revision="6" battleScribeVersion="2.03" authorName="Boff" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="82fc-8ad4-7b4b-dd4a" name="Codex - Imperial Guard" revision="7" battleScribeVersion="2.03" authorName="Boff" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>I haven&apos;t put restrictions for the Regimental style to build a list, such as 1 Command HQ, 3 Guard/Heavy Weapons teams, 3 additional unit. Doing so would be rather messy and complicated with all the possible choices, and frankly isn&apos;t really a huge deal.
 
 Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct units.</readme>
@@ -71,29 +71,99 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
             </modifier>
           </modifiers>
         </categoryLink>
-        <categoryLink name="Battle Line" hidden="false" id="3c97-0059-d6d0-0346" targetId="e69e-43d8-7b4a-0119" primary="false">
+        <categoryLink name="Command" hidden="false" id="5fab-5575-27e0-0572" targetId="a565-5175-f3dd-77bd" primary="false">
           <constraints>
-            <constraint type="min" value="0" field="points" scope="roster" shared="true" id="c468-c13a-55c1-a0f1" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="c4ac-fc04-3c5c-29f2" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="max" value="50" field="points" scope="roster" shared="true" id="04c0-33b0-58f4-7212" percentValue="true" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
-          <modifiers>
-            <modifier type="increment" value="1" field="c468-c13a-55c1-a0f1">
-              <repeats>
-                <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-              </repeats>
-            </modifier>
-          </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="-1" field="c4ac-fc04-3c5c-29f2"/>
+              </modifiers>
+              <comment>When you have no points limit</comment>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="increment" value="1" field="c4ac-fc04-3c5c-29f2">
+                  <repeats>
+                    <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+                  </repeats>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="-1" field="04c0-33b0-58f4-7212">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <comment>When having a points limit</comment>
+            </modifierGroup>
+          </modifierGroups>
         </categoryLink>
-        <categoryLink name="Command" hidden="false" id="556b-237f-11b0-8bbf" targetId="a565-5175-f3dd-77bd" primary="false">
+        <categoryLink name="Battle Line" hidden="false" id="3e2b-b3da-a13f-a584" targetId="e69e-43d8-7b4a-0119" primary="false">
           <constraints>
-            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="6a16-6a3e-25bd-d928" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
+            <constraint type="min" value="0" field="points" scope="roster" shared="true" id="afa4-b0bf-a42b-9953" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="min" value="25" field="points" scope="roster" shared="true" id="405b-1b61-c2bb-3174" percentValue="true" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
-          <modifiers>
-            <modifier type="increment" value="1" field="6a16-6a3e-25bd-d928">
-              <repeats>
-                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-              </repeats>
-            </modifier>
-          </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="-1" field="afa4-b0bf-a42b-9953"/>
+              </modifiers>
+              <comment>When you have no points limit</comment>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="increment" value="1" field="afa4-b0bf-a42b-9953">
+                  <repeats>
+                    <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+                  </repeats>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="-1" field="405b-1b61-c2bb-3174">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <comment>When having a points limit</comment>
+            </modifierGroup>
+          </modifierGroups>
         </categoryLink>
       </categoryLinks>
     </forceEntry>
@@ -604,48 +674,6 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f9e-d70e-320f-f9e4" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink id="1048-536a-b39e-7635" name="Auto-Launcher" hidden="false" collective="false" import="true" targetId="222b-075f-d34c-7093" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1502-5477-e66c-6466" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="f834-38a2-0761-8c62" name="Krak Grenade" hidden="false" collective="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cc7b-eac9-7cc5-a156" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e65f-a998-18e3-9990" type="max"/>
-              </constraints>
-            </entryLink>
-            <entryLink id="4ed7-4247-bc32-335d" name="Frag Grenade" hidden="false" collective="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ac5-935d-8ecf-59c0" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b61f-1b9c-77c2-efb9" type="max"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-        </entryLink>
         <entryLink id="683b-6242-124a-c3d6" name="Frag Defender" hidden="false" collective="false" import="true" targetId="5c91-d7c8-553c-8e40" type="selectionEntry">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d36f-2642-d6f6-a695" type="max"/>
@@ -658,6 +686,49 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
           </constraints>
         </entryLink>
         <entryLink id="9c4e-3f8a-28da-91ee" name="Vehicle Wargear Cards" hidden="false" collective="false" import="true" targetId="ed25-a595-1a9d-129d" type="selectionEntryGroup"/>
+        <entryLink import="true" name="Auto-Launcher" hidden="false" id="77a8-54e3-f775-8cb3" collective="false" targetId="222b-075f-d34c-7093" type="selectionEntry">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ae1c-0d2d-e8a8-63f2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c42f-51a2-7edf-5f8a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Blind Grenade" hidden="false" id="ebd9-e3f6-6c02-8654" collective="false" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="cc7b-eac9-7cc5-a156" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5d71-006e-cfef-1913" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Frag Grenade" hidden="false" id="8e90-668e-03f3-b27e" collective="false" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="09e8-4dd1-0d92-ecde" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="984f-27cc-1b20-294f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="140"/>
@@ -1943,42 +2014,43 @@ Re-roll any failed Break test</characteristic>
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink id="ec44-9c70-951b-4148" name="Auto-Launcher" hidden="false" collective="false" import="true" targetId="222b-075f-d34c-7093" type="selectionEntry">
+        <entryLink id="df22-7969-3af4-a676" name="Vehicle Wargear Cards" hidden="false" collective="false" import="true" targetId="ed25-a595-1a9d-129d" type="selectionEntryGroup"/>
+        <entryLink import="true" name="Auto-Launcher" hidden="false" id="bc6e-ea56-dd39-bd3c" collective="false" targetId="222b-075f-d34c-7093" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d817-ffcd-83ac-e1a8" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="43ff-63d1-76ea-ed5f" type="max"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f0a9-723a-6099-aa60" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b7f6-0612-2c25-37fc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <entryLinks>
-            <entryLink id="0d79-cff4-7d39-9caf" name="Krak Grenade" hidden="false" collective="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
+            <entryLink import="true" name="Blind Grenade" hidden="false" id="0b60-d8b8-296a-9684" collective="false" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
               <modifiers>
-                <modifier type="set" field="hidden" value="true">
+                <modifier type="set" value="true" field="hidden">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cc7b-eac9-7cc5-a156" type="equalTo"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="cc7b-eac9-7cc5-a156" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c86b-1703-b920-bee2" type="max"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e3db-8dbc-e81c-5b16" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
             </entryLink>
-            <entryLink id="f33d-b317-ece8-4e77" name="Frag Grenade" hidden="false" collective="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+            <entryLink import="true" name="Frag Grenade" hidden="false" id="5ed3-e8c8-3a23-0b43" collective="false" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
               <modifiers>
-                <modifier type="set" field="hidden" value="true">
+                <modifier type="set" value="true" field="hidden">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ac5-935d-8ecf-59c0" type="equalTo"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="09e8-4dd1-0d92-ecde" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9e79-d697-5980-b27f" type="max"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="415e-2693-db85-9e2f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
             </entryLink>
           </entryLinks>
@@ -1986,7 +2058,6 @@ Re-roll any failed Break test</characteristic>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </entryLink>
-        <entryLink id="df22-7969-3af4-a676" name="Vehicle Wargear Cards" hidden="false" collective="false" import="true" targetId="ed25-a595-1a9d-129d" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="140"/>
@@ -2041,42 +2112,43 @@ Re-roll any failed Break test</characteristic>
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink id="fdc7-7ffb-ce48-fac5" name="Auto-Launcher" hidden="false" collective="false" import="true" targetId="222b-075f-d34c-7093" type="selectionEntry">
+        <entryLink id="8692-cc89-94a8-4159" name="Vehicle Wargear Cards" hidden="false" collective="false" import="true" targetId="ed25-a595-1a9d-129d" type="selectionEntryGroup"/>
+        <entryLink import="true" name="Auto-Launcher" hidden="false" id="c597-3425-465f-dc27" collective="false" targetId="222b-075f-d34c-7093" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="14a4-255d-d096-40e7" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bee4-b446-e66e-adff" type="max"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="102a-f2b9-4568-f10a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="975a-9f5b-a2a6-f895" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <entryLinks>
-            <entryLink id="a612-93b8-ecf0-90ba" name="Krak Grenade" hidden="false" collective="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
+            <entryLink import="true" name="Blind Grenade" hidden="false" id="2c4f-3268-aefa-160e" collective="false" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
               <modifiers>
-                <modifier type="set" field="hidden" value="true">
+                <modifier type="set" value="true" field="hidden">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cc7b-eac9-7cc5-a156" type="equalTo"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="cc7b-eac9-7cc5-a156" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bacc-8513-3955-a57a" type="max"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7d69-311c-6678-8ba9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
             </entryLink>
-            <entryLink id="f30c-6846-f956-f472" name="Frag Grenade" hidden="false" collective="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+            <entryLink import="true" name="Frag Grenade" hidden="false" id="f374-cad1-9e91-fedb" collective="false" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
               <modifiers>
-                <modifier type="set" field="hidden" value="true">
+                <modifier type="set" value="true" field="hidden">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ac5-935d-8ecf-59c0" type="equalTo"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="09e8-4dd1-0d92-ecde" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e25-a63b-8751-edd5" type="max"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5610-9f3e-fa8b-9dbc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
             </entryLink>
           </entryLinks>
@@ -2084,7 +2156,6 @@ Re-roll any failed Break test</characteristic>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </entryLink>
-        <entryLink id="8692-cc89-94a8-4159" name="Vehicle Wargear Cards" hidden="false" collective="false" import="true" targetId="ed25-a595-1a9d-129d" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="175"/>
@@ -2161,49 +2232,6 @@ Re-roll any failed Break test</characteristic>
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink id="49b1-425c-071e-d63d" name="Auto-Launcher" hidden="false" collective="false" import="true" targetId="222b-075f-d34c-7093" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b428-abd9-671a-e208" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ddb-d933-2bf6-5b57" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="34f6-129b-8ec2-6660" name="Krak Grenade" hidden="false" collective="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cc7b-eac9-7cc5-a156" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c3ac-f6ac-7b0e-110b" type="max"/>
-              </constraints>
-            </entryLink>
-            <entryLink id="adf9-c702-00ec-35b9" name="Frag Grenade" hidden="false" collective="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ac5-935d-8ecf-59c0" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c45-8c65-bb73-eece" type="max"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-        </entryLink>
         <entryLink id="05f9-d6e3-c1c5-834a" name="Frag Defender" hidden="false" collective="false" import="true" targetId="5c91-d7c8-553c-8e40" type="selectionEntry">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce19-0439-5b2a-0bd0" type="max"/>
@@ -2213,6 +2241,49 @@ Re-roll any failed Break test</characteristic>
           </costs>
         </entryLink>
         <entryLink id="1a99-4ff0-bc38-60ea" name="Vehicle Wargear Cards" hidden="false" collective="false" import="true" targetId="ed25-a595-1a9d-129d" type="selectionEntryGroup"/>
+        <entryLink import="true" name="Auto-Launcher" hidden="false" id="b7df-16d5-686e-2ab2" collective="false" targetId="222b-075f-d34c-7093" type="selectionEntry">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c40b-f24f-cf0d-0c39" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4e65-5296-937d-516f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Blind Grenade" hidden="false" id="4c19-26a3-82ad-d87f" collective="false" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="cc7b-eac9-7cc5-a156" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="adb2-4bef-3afd-ea1a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Frag Grenade" hidden="false" id="bebc-d2e2-543e-182f" collective="false" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="09e8-4dd1-0d92-ecde" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="abdb-8e9d-ad73-bc58" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="205"/>
@@ -2339,7 +2410,7 @@ Re-roll any failed Break test</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f36b-74e4-2070-c485" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="5e02-2126-729d-68d4" name="Krak Grenade" hidden="false" collective="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
+            <entryLink id="5e02-2126-729d-68d4" name="Blind Grenade" hidden="false" collective="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditionGroups>
@@ -2361,7 +2432,7 @@ Re-roll any failed Break test</characteristic>
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ac5-935d-8ecf-59c0" type="equalTo"/>
+                        <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="09e8-4dd1-0d92-ecde" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -2417,48 +2488,6 @@ Re-roll any failed Break test</characteristic>
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink id="4fd5-1636-c02d-916e" name="Auto-Launcher" hidden="false" collective="false" import="true" targetId="222b-075f-d34c-7093" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="46d0-1171-5db9-e56e" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="d8bb-8571-c7f0-524c" name="Krak Grenade" hidden="false" collective="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cc7b-eac9-7cc5-a156" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9891-fcdc-3298-728f" type="max"/>
-              </constraints>
-            </entryLink>
-            <entryLink id="abd6-c191-edc4-7dd5" name="Frag Grenade" hidden="false" collective="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ac5-935d-8ecf-59c0" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d484-a4c6-b459-c321" type="max"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-        </entryLink>
         <entryLink id="56b1-b56b-eb8c-2e33" name="Frag Defender" hidden="false" collective="false" import="true" targetId="5c91-d7c8-553c-8e40" type="selectionEntry">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1715-bc10-3be5-d82b" type="max"/>
@@ -2471,6 +2500,49 @@ Re-roll any failed Break test</characteristic>
           </constraints>
         </entryLink>
         <entryLink id="4de9-6ba6-aa68-2a9c" name="Vehicle Wargear Cards" hidden="false" collective="false" import="true" targetId="ed25-a595-1a9d-129d" type="selectionEntryGroup"/>
+        <entryLink import="true" name="Auto-Launcher" hidden="false" id="8315-28d2-522b-3b5e" collective="false" targetId="222b-075f-d34c-7093" type="selectionEntry">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="37bc-e334-5b8b-4a8e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b932-4a8d-2587-44e9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Blind Grenade" hidden="false" id="3434-4800-df5c-d474" collective="false" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="cc7b-eac9-7cc5-a156" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6949-8328-8d2a-0c3c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Frag Grenade" hidden="false" id="cd9a-16fe-4e88-59d0" collective="false" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="09e8-4dd1-0d92-ecde" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e750-4840-e6a2-0a59" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="165"/>
@@ -4503,21 +4575,55 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink id="928f-b054-e277-ddc3" name="Auto-Launcher" hidden="false" collective="false" import="true" targetId="222b-075f-d34c-7093" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="22c4-aed0-0d2d-9a6f" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="844b-e215-0e91-132b" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </entryLink>
         <entryLink id="11bc-7485-d665-06b0" name="Frag Defender" hidden="false" collective="false" import="true" targetId="5c91-d7c8-553c-8e40" type="selectionEntry">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="468f-bceb-30c3-8f3d" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
+          </costs>
+        </entryLink>
+        <entryLink import="true" name="Auto-Launcher" hidden="false" id="437d-651a-49dc-9c08" collective="false" targetId="222b-075f-d34c-7093" type="selectionEntry">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d70f-3dc6-c899-f6a4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="94ed-fd0a-27e4-c5a4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Blind Grenade" hidden="false" id="f23e-21b1-8eb9-0358" collective="false" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="cc7b-eac9-7cc5-a156" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a780-1c2a-f226-11f5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Frag Grenade" hidden="false" id="5fcc-78e7-653c-91dd" collective="false" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="09e8-4dd1-0d92-ecde" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7b77-a1ba-4a4c-6dda" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
         </entryLink>
       </entryLinks>
@@ -4569,48 +4675,6 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8cba-eefb-2387-211d" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink id="0509-c68c-b28b-3bc9" name="Auto-Launcher" hidden="false" collective="false" import="true" targetId="222b-075f-d34c-7093" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c79-ed00-cef2-d419" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="b261-8039-54a1-8d3a" name="Krak Grenade" hidden="false" collective="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cc7b-eac9-7cc5-a156" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d4e3-ba82-c5d2-6210" type="max"/>
-              </constraints>
-            </entryLink>
-            <entryLink id="f8ed-b172-7676-4909" name="Frag Grenade" hidden="false" collective="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ac5-935d-8ecf-59c0" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cbcc-b438-ae56-c189" type="max"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-        </entryLink>
         <entryLink id="8161-af4e-6996-1c74" name="Frag Defender" hidden="false" collective="false" import="true" targetId="5c91-d7c8-553c-8e40" type="selectionEntry">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0bfc-50f3-99a0-beb5" type="max"/>
@@ -4623,6 +4687,49 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
           </constraints>
         </entryLink>
         <entryLink id="ec24-5973-e6b7-ece8" name="Vehicle Wargear Cards" hidden="false" collective="false" import="true" targetId="ed25-a595-1a9d-129d" type="selectionEntryGroup"/>
+        <entryLink import="true" name="Auto-Launcher" hidden="false" id="f544-bbe6-b590-7afe" collective="false" targetId="222b-075f-d34c-7093" type="selectionEntry">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d4e3-aa85-80cd-d700" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="be9a-1d76-03f9-56ad" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Blind Grenade" hidden="false" id="7959-a522-ce98-8424" collective="false" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="cc7b-eac9-7cc5-a156" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cfde-d2ce-1413-91ef" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Frag Grenade" hidden="false" id="4814-c958-00f7-4324" collective="false" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="09e8-4dd1-0d92-ecde" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4ed3-31ac-dbb4-6f73" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="140"/>

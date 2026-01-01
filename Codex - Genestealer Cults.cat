@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b567-fa24-d74f-65ee" name="Codex - Genestealer Cults" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="b567-fa24-d74f-65ee" name="Codex - Genestealer Cults" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <profileTypes>
     <profileType id="c084-7b53-694a-0756" name="Psychic Powers">
       <characteristicTypes>
@@ -17,41 +17,146 @@
   <forceEntries>
     <forceEntry id="c53b-a4a5-4105-782b" name="Genestealer Cults" hidden="false">
       <categoryLinks>
-        <categoryLink name="Broods" hidden="false" id="1d8c-8bda-c190-212b" targetId="b70e-fd2c-12be-b090" primary="false">
+        <categoryLink name=" Support" hidden="false" id="a38e-d474-cb5c-21f1" targetId="8948-0e75-0ae3-034e">
           <constraints>
-            <constraint type="min" value="0" field="points" scope="roster" shared="true" id="2d55-aac5-94a9-7104" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="c824-886c-c87f-d61b" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="max" value="25" field="points" scope="roster" shared="true" id="e9ac-dd05-f161-f4d1" percentValue="true" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
-          <modifiers>
-            <modifier type="increment" value="1" field="2d55-aac5-94a9-7104">
-              <repeats>
-                <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-              </repeats>
-            </modifier>
-          </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="-1" field="c824-886c-c87f-d61b"/>
+              </modifiers>
+              <comment>When you have no points limit</comment>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="increment" value="1" field="c824-886c-c87f-d61b">
+                  <repeats>
+                    <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+                  </repeats>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="-1" field="e9ac-dd05-f161-f4d1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <comment>When having a points limit</comment>
+            </modifierGroup>
+          </modifierGroups>
         </categoryLink>
-        <categoryLink name="Characters" hidden="false" id="66a9-3aa9-c46d-e7e3" targetId="f64c-bedf-004a-f142" primary="false">
+        <categoryLink name="Broods" hidden="false" id="5a4f-8a51-39ce-ce9d" targetId="b70e-fd2c-12be-b090" primary="false">
           <constraints>
-            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="216a-3371-8c8f-a3f7" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
+            <constraint type="min" value="0" field="points" scope="roster" shared="true" id="3cb8-3aa5-3c25-2e58" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="min" value="25" field="points" scope="roster" shared="true" id="1cd9-4e84-2af0-2de6" percentValue="true" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
-          <modifiers>
-            <modifier type="increment" value="1" field="216a-3371-8c8f-a3f7">
-              <repeats>
-                <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-              </repeats>
-            </modifier>
-          </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="-1" field="3cb8-3aa5-3c25-2e58"/>
+              </modifiers>
+              <comment>When you have no points limit</comment>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="increment" value="1" field="3cb8-3aa5-3c25-2e58">
+                  <repeats>
+                    <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+                  </repeats>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="-1" field="1cd9-4e84-2af0-2de6">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <comment>When having a points limit</comment>
+            </modifierGroup>
+          </modifierGroups>
         </categoryLink>
-        <categoryLink name=" Support" hidden="false" id="1f11-d27a-7c9b-de8f" targetId="8948-0e75-0ae3-034e">
+        <categoryLink name="Characters" hidden="false" id="dcaf-86a6-22a5-fcba" targetId="f64c-bedf-004a-f142" primary="false">
           <constraints>
-            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="5e83-b76c-770f-0283" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="969b-2d97-f94c-0704" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="max" value="50" field="points" scope="roster" shared="true" id="3b93-e906-7e79-7ea4" percentValue="true" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
-          <modifiers>
-            <modifier type="increment" value="1" field="5e83-b76c-770f-0283">
-              <repeats>
-                <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-              </repeats>
-            </modifier>
-          </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="-1" field="969b-2d97-f94c-0704"/>
+              </modifiers>
+              <comment>When you have no points limit</comment>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="increment" value="1" field="969b-2d97-f94c-0704">
+                  <repeats>
+                    <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+                  </repeats>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="-1" field="3b93-e906-7e79-7ea4">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <comment>When having a points limit</comment>
+            </modifierGroup>
+          </modifierGroups>
         </categoryLink>
       </categoryLinks>
     </forceEntry>
@@ -75,6 +180,8 @@
     <entryLink id="bb3b-99d7-190f-1faf" name="Land Raider" hidden="false" collective="false" import="true" targetId="f503-0413-adb5-8bd5" type="selectionEntry"/>
     <entryLink id="1d25-1164-a322-04f3" name="Rhino" hidden="false" collective="false" import="true" targetId="1997-a5e0-1ff6-5c4d" type="selectionEntry"/>
     <entryLink id="28f1-324b-a12e-0dbd" name="Predator Tank" hidden="false" collective="false" import="true" targetId="3f21-3442-8952-ee38" type="selectionEntry"/>
+    <entryLink import="true" name="Hybrid Acolyte " hidden="false" id="a8af-34df-157a-b56e" type="selectionEntry" targetId="bd16-bcc7-70e9-3ecb"/>
+    <entryLink import="true" name="Hybrid Neophyte" hidden="false" id="b716-e6d9-47cf-14c3" type="selectionEntry" targetId="ac94-c82e-120c-fae3"/>
   </entryLinks>
   <rules>
     <rule id="3fae-5101-b2d6-7be5" name="Loss of Command" publicationId="4740-6730-10c0-9b25" hidden="false">
@@ -242,9 +349,6 @@ Note this test only happens if the leaders are KILLED. It is not taken if they a
       </costs>
     </selectionEntry>
     <selectionEntry id="ac94-c82e-120c-fae3" name="Hybrid Neophyte" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f820-337f-67e8-ac2a" type="max"/>
-      </constraints>
       <infoLinks>
         <infoLink id="9d8c-2a80-112f-c4ef" name="Hybrid Neophyte" hidden="false" targetId="5806-2a4d-b58c-be76" type="profile"/>
       </infoLinks>
@@ -291,9 +395,6 @@ Note this test only happens if the leaders are KILLED. It is not taken if they a
       </costs>
     </selectionEntry>
     <selectionEntry id="bd16-bcc7-70e9-3ecb" name="Hybrid Acolyte " hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c9d2-b7a5-3de6-a5ae" type="max"/>
-      </constraints>
       <infoLinks>
         <infoLink id="1669-2e16-2b4f-63f6" name="Hybrid Acolyte" hidden="false" targetId="8a69-4f9f-d350-5696" type="profile"/>
       </infoLinks>
@@ -578,15 +679,6 @@ Note this test only happens if the leaders are KILLED. It is not taken if they a
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="500d-01b4-7dfd-2836" type="max"/>
               </constraints>
             </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="c482-bfe3-a9d7-551e" name="Genestealer Hybrid Leader" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6d5-5615-9258-b8c5" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="641f-a5ef-cc92-0f63" name="Hybrid Acolyte " hidden="false" collective="false" import="true" targetId="bd16-bcc7-70e9-3ecb" type="selectionEntry"/>
-            <entryLink id="8a48-de1a-5903-4935" name="Hybrid Neophyte" hidden="false" collective="false" import="true" targetId="ac94-c82e-120c-fae3" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>

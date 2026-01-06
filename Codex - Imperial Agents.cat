@@ -356,6 +356,13 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="29cb-1794-9e39-884e" type="max"/>
           </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Arbites Combat Shotgun" hidden="false" id="c083-5dc0-26b5-ce20" type="selectionEntry" targetId="a17a-1006-5d1c-87e8">
+              <costs>
+                <cost name="pts" typeId="points" value="3"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
         </entryLink>
         <entryLink id="d893-5acc-0eaa-7e3a" name="Assault Weapons" hidden="false" collective="false" import="true" targetId="9a77-35e9-5d83-3239" type="selectionEntryGroup"/>
         <entryLink id="1c3c-4fcb-cdea-b9a4" name="Bolt Pistol" hidden="false" collective="false" import="true" targetId="b5bb-7853-53cb-bec4" type="selectionEntry">
@@ -1097,6 +1104,13 @@
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b589-e802-229a-c994" type="max"/>
           </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Arbites Combat Shotgun" hidden="false" id="573f-6efc-140a-82af" type="selectionEntry" targetId="a17a-1006-5d1c-87e8">
+              <costs>
+                <cost name="pts" typeId="points" value="3"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
         </entryLink>
         <entryLink id="90c4-6f59-a9ab-78b0" name="Arbites - Assault Weapons" hidden="false" collective="false" import="true" targetId="cabe-3cda-1a21-4983" type="selectionEntryGroup"/>
         <entryLink id="a45a-2e25-e938-bbed" name="Arbites Champion" hidden="false" collective="false" import="true" targetId="bfbe-7f0a-b5d5-f0f7" type="selectionEntry">
@@ -2373,6 +2387,60 @@ See datafax for damage table</description>
         <cost name="pts" typeId="points" value="50"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Arbites Combat Shotgun" hidden="false" id="a17a-1006-5d1c-87e8" publicationId="8eed-45fd-d4be-9a1b" page="Issue 169">
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <profiles>
+        <profile name="Solid Shot" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="7e59-da5c-1705-5328">
+          <characteristics>
+            <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">4</characteristic>
+            <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">18</characteristic>
+            <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+            <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-1</characteristic>
+            <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">4</characteristic>
+            <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
+            <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">0</characteristic>
+            <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">4+D6</characteristic>
+            <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Knockback</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Scatter Shot" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="c663-aaea-ff81-37bf">
+          <characteristics>
+            <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">4</characteristic>
+            <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">18</characteristic>
+            <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+            <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-1</characteristic>
+            <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">3</characteristic>
+            <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
+            <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">0</characteristic>
+            <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">3+D6</characteristic>
+            <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">1&quot; Blast</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Executioner Round" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="d1ff-d790-7a4c-72fc">
+          <characteristics>
+            <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">4</characteristic>
+            <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">18</characteristic>
+            <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-1</characteristic>
+            <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">+1</characteristic>
+            <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">4</characteristic>
+            <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
+            <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-2</characteristic>
+            <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">4+D6+D3</characteristic>
+            <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Executioner Rounds</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule name="Executioner Rounds" id="c745-12e2-8fc5-5d0a" hidden="false">
+          <description>Because it locks onto a target’s energy signature the Executioner shell may even be fired at hidden targets providing they have already been detected.</description>
+        </rule>
+        <rule name="Knockback" id="6612-5484-6d42-6b22" hidden="false" publicationId="06e5-8e36-e8c8-aec3" page="31">
+          <description>If  a  target  is  hit   by  a  shotgun  but  not  slain,  then  it  is automatically  knocked back 2&quot; and will fall  over on a  D6  roll of  4+.  A  knocked  over  model must spend  its  next movement phase standing up. Note that  this  rule  only  affects  ordinary troopers - not vehicles, robots, Terminators or dreadnoughts.</description>
+        </rule>
+      </rules>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="cabe-3cda-1a21-4983" name="Arbites - Assault Weapons" publicationId="053a-a071-db83-283c" page="12" hidden="false" collective="false" import="true">
@@ -2491,62 +2559,6 @@ See datafax for damage table</description>
           </costs>
         </entryLink>
       </entryLinks>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Arbites Combat Shotgun" hidden="false" id="98b6-f28c-173d-861a" publicationId="8eed-45fd-d4be-9a1b" page="Issue 169">
-          <costs>
-            <cost name="pts" typeId="points" value="3"/>
-          </costs>
-          <profiles>
-            <profile name="Solid Shot" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="0abe-12d8-6ddc-1012">
-              <characteristics>
-                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">4</characteristic>
-                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">18</characteristic>
-                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
-                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-1</characteristic>
-                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">4</characteristic>
-                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
-                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">0</characteristic>
-                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">4+D6</characteristic>
-                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Knockback</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Scatter Shot" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="4220-afbd-0b86-e612">
-              <characteristics>
-                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">4</characteristic>
-                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">18</characteristic>
-                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
-                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-1</characteristic>
-                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">3</characteristic>
-                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
-                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">0</characteristic>
-                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">3+D6</characteristic>
-                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">1&quot; Blast</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Executioner Round" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="1e8d-10e7-b8e4-eca4">
-              <characteristics>
-                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">4</characteristic>
-                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">18</characteristic>
-                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-1</characteristic>
-                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">+1</characteristic>
-                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">4</characteristic>
-                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
-                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-2</characteristic>
-                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">4+D6+D3</characteristic>
-                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Executioner Rounds</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <rules>
-            <rule name="Executioner Rounds" id="d6ea-a4c4-277d-2609" hidden="false">
-              <description>Because it locks onto a target’s energy signature the Executioner shell may even be fired at hidden targets providing they have already been detected.</description>
-            </rule>
-            <rule name="Knockback" id="8a00-9ddc-864a-6dfb" hidden="false" publicationId="06e5-8e36-e8c8-aec3" page="31">
-              <description>If  a  target  is  hit   by  a  shotgun  but  not  slain,  then  it  is automatically  knocked back 2&quot; and will fall  over on a  D6  roll of  4+.  A  knocked  over  model must spend  its  next movement phase standing up. Note that  this  rule  only  affects  ordinary troopers - not vehicles, robots, Terminators or dreadnoughts.</description>
-            </rule>
-          </rules>
-        </selectionEntry>
-      </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="5190-accf-be59-82fa" name="Armour" hidden="false" collective="false" import="true">
       <constraints>

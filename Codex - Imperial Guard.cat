@@ -196,6 +196,7 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
     <entryLink id="c96d-d176-97c5-e57a" name="Imperial Guard Baneblade" hidden="false" collective="false" import="true" targetId="8a8b-ac83-762f-8ef3" type="selectionEntry"/>
     <entryLink id="58d2-4943-9dd2-1bd5" name="Ratling Snipers" hidden="false" collective="false" import="true" targetId="9e10-1a9e-ad76-95d6" type="selectionEntry"/>
     <entryLink id="2b55-61e4-f0f1-ae24" name="Imperial Chimera" hidden="false" collective="false" import="true" targetId="ec47-0a44-3b8e-df3b" type="selectionEntry"/>
+    <entryLink import="true" name="Imperial Guard Shadowsword " hidden="false" id="f2bd-6dfb-672f-a071" type="selectionEntry" targetId="3c26-6d97-a3a0-d677"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="b98e-cfb8-cd7f-d988" name="Command HQ" hidden="false" collective="false" import="true" type="upgrade">
@@ -4294,7 +4295,7 @@ Members of the Deathwing must charge him if he is within charge range, or move s
         <cost name="pts" typeId="points" value="147"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8a8b-ac83-762f-8ef3" name="Imperial Guard Baneblade" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="8a8b-ac83-762f-8ef3" name="Imperial Guard Baneblade" hidden="false" collective="false" import="true" type="upgrade" publicationId="54a5-765a-b3e8-291b">
       <profiles>
         <profile id="cd98-ee6d-acb0-412f" name="Tank Commander" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
           <characteristics>
@@ -4317,6 +4318,13 @@ Members of the Deathwing must charge him if he is within charge range, or move s
         </rule>
         <rule id="6fe7-2db8-5e12-692e" name="Baneblade Crew" hidden="false">
           <description>The Baneblade has 9 Imperial Guard (standard statline) and 1 Tank Commander. All have flak armour and a laspistol.</description>
+        </rule>
+        <rule name="Tank Commander" id="a878-b237-27ca-7911" hidden="false">
+          <description>Tank Commander can direct the weapons to fire at a single target, which gives +1 to hit that target only.
+If the gunner is killed, the tank commander takes over the main weapon using his own BS but may no longer give +1 to hit bonus to a target even for his own weapon</description>
+        </rule>
+        <rule name="Movement Rules" id="7cf8-502d-d822-6435" hidden="false">
+          <description>Can move over low walls, hedges, rubble and trenches without penalty - knocking down walls and hedges and collapsing trenches in a 6&quot; wide path</description>
         </rule>
       </rules>
       <infoLinks>
@@ -4585,7 +4593,7 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
         </entryLink>
         <entryLink import="true" name="Auto-Launcher" hidden="false" id="437d-651a-49dc-9c08" collective="false" targetId="222b-075f-d34c-7093" type="selectionEntry">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d70f-3dc6-c899-f6a4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d70f-3dc6-c899-f6a4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="94ed-fd0a-27e4-c5a4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <entryLinks>
@@ -4623,7 +4631,7 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
             </entryLink>
           </entryLinks>
           <costs>
-            <cost name="pts" typeId="points" value="5"/>
+            <cost name="pts" typeId="points" value="0"/>
           </costs>
         </entryLink>
       </entryLinks>
@@ -4733,6 +4741,361 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="140"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Imperial Guard Shadowsword " hidden="false" id="3c26-6d97-a3a0-d677" collective="false" publicationId="54a5-765a-b3e8-291b">
+      <profiles>
+        <profile name="Tank Commander" typeId="219f-0faa-a2d8-f766" typeName="Unit" hidden="false" id="5b5f-777b-cd10-fc93">
+          <characteristics>
+            <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Tank Commander</characteristic>
+            <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+            <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">4</characteristic>
+            <characteristic name="BS" typeId="f859-88a3-fdd3-b298">4</characteristic>
+            <characteristic name="S" typeId="5916-04ef-0fd1-6557">3</characteristic>
+            <characteristic name="T" typeId="2e7d-2383-f92f-16f9">3</characteristic>
+            <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
+            <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">4</characteristic>
+            <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
+            <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">8</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule name="Shadowsword Crew" id="783a-0ce6-e657-909b" hidden="false">
+          <description>The Baneblade has 9 Imperial Guard (standard statline) and 1 Tank Commander. All have flak armour and a laspistol.</description>
+        </rule>
+        <rule name="Tank Commander" id="e32f-3df9-6bd0-eeef" hidden="false">
+          <description>Tank Commander can direct the weapons to fire at a single target, which gives +1 to hit that target only.
+If the gunner is killed, the tank commander takes over the main weapon using his own BS but may no longer give +1 to hit bonus to a target even for his own weapon</description>
+        </rule>
+        <rule name="Movement Rules" id="5dcf-bfde-0da8-971b" hidden="false">
+          <description>Can move over low walls, hedges, rubble and trenches without penalty - knocking down walls and hedges and collapsing trenches in a 6&quot; wide path</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink name="Imperial Guard Shadowsword" id="284b-8bb1-0c44-e727" hidden="false" page="datafax" targetId="596e-e16d-528f-5599" type="profile"/>
+        <infoLink name="Baneblade Tank Damage Table" id="2ba0-6bbf-86b5-7ff5" hidden="false" targetId="e26c-d5d2-52f7-bded" type="rule"/>
+        <infoLink name="Terror" id="24b4-5dd7-b85d-051f" hidden="false" targetId="05e0-cd40-2d9e-a9f9" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink name="Battle Line" hidden="false" id="5b6e-6f30-9474-b28d" targetId="e69e-43d8-7b4a-0119" primary="true"/>
+        <categoryLink name="Additional Unit (1 Per 1 Regimental)" hidden="false" id="8403-b074-4123-0431" targetId="070f-0182-955b-1543" primary="false"/>
+        <categoryLink name="Only 6 Units Per HQ/Command" hidden="false" id="d502-2f6d-e6e3-66be" targetId="2c51-43b2-2f6a-f890" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Volcano Cannon" hidden="false" id="dc28-c54f-3670-117e">
+          <profiles>
+            <profile name="Volcano Cannon - Primary Effect" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="2917-e224-a520-6ff4">
+              <characteristics>
+                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">20</characteristic>
+                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">96</characteristic>
+                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">10</characteristic>
+                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">5+D10</characteristic>
+                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-6</characteristic>
+                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+D10+15</characteristic>
+                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">-</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Volcano Cannon - Secondary Effect" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="8656-6c54-d47f-18b6">
+              <characteristics>
+                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">20</characteristic>
+                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">96</characteristic>
+                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">6</characteristic>
+                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">D10</characteristic>
+                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-3</characteristic>
+                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+D10+6</characteristic>
+                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">3&quot; Blast</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ed37-75d0-365c-4b73" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2fed-9bb8-2666-9926" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Sponson Bolters" id="17ef-0a90-0dc1-9dbf" hidden="false" collective="false" import="true" defaultSelectionEntryId="a25a-2b2d-9bd7-40b3">
+          <entryLinks>
+            <entryLink import="true" name="Boltgun" hidden="false" id="4420-a276-f30b-c9f6" collective="false" targetId="0e81-7914-e52a-0a8d" type="selectionEntry">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4d99-f736-587b-9872" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="64fe-ae62-ebf2-1c53" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Targeter" hidden="false" id="66f2-15d9-6b8d-f69a" collective="false" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b366-9d74-65e0-761e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c44b-08be-fc13-26a0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Wargear Cards - Shadowsword" id="9a93-e82c-2420-e9cd" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Bulldozer Blade" hidden="false" id="8c8f-b36e-5ad2-9bbe" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e15a-54cf-f8c3-b60e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Bulldozer Blade" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear" hidden="false" id="a645-bc50-f239-936f">
+                  <characteristics>
+                    <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Increases the Strength of the vehicle&apos;s ram value by +1 and adds +1D6 to the ram damage it inflicts. This is in addition to the +D6 ram bonus against buildings received by vehicles with a ram bar noted in the rulebook. 
+Any shots that hit the front of the vehicle&apos;s hull will hit the dozerblade on a 4+. If it is hit, the dozer adds +D6 to the vehicle&apos;s front hull armour value for that shot only. If the vehicle suffers a penetrating hit from the front the blade is automatically wrekced and hte card discarded.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="45"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Hunter-Killer Missile" hidden="false" id="0578-f4a8-a8fe-0a0c" collective="false">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9187-ca83-9433-d2c7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bcf7-c063-7aca-a066" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <condition type="instanceOf" value="0" field="selections" scope="parent" childId="2ea7-ced8-d2ec-2939" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Hunter-Killer Missile" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="855f-0508-6f65-9e3d">
+                  <characteristics>
+                    <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">Special</characteristic>
+                    <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">Special</characteristic>
+                    <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+                    <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                    <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">8</characteristic>
+                    <characteristic name="Damage" typeId="8978-f9c3-8957-1481">2D10</characteristic>
+                    <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-6</characteristic>
+                    <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">2D10+D6+8</characteristic>
+                    <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Hunter Killer Missile</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule name="Hunter-Killer Missile" id="7968-01d6-320f-dbd8" hidden="false">
+                  <description>One Use Only
+May only targe vehicles, walkers, or buildings
+Always hits on a 3+ regardless of range and hit modifiers for target size, speed, cover, etc.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="points" value="30"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Heavy Flamer Upgrade" hidden="true" id="34af-b242-f562-fe88" collective="false">
+              <modifiers>
+                <modifier type="set" value="0" field="points">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="aac3-4788-82a3-a9ad" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="4c82-0e56-d20a-6b1c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="aac3-4788-82a3-a9ad" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <rules>
+                <rule name="Heavy Flamer Upgrade" id="4279-04f4-6bea-0daa" hidden="false">
+                  <description>Must purchase the wargear card for each Heavy Bolter you upgrade
+Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</description>
+                </rule>
+              </rules>
+              <entryLinks>
+                <entryLink import="true" name="Heavy Flamer" hidden="false" id="783a-2cb2-f9c3-8ecd" collective="false" targetId="4da3-a884-c204-2800" type="selectionEntry">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="90a4-ac3c-4a37-ce8c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cfce-87ae-d75c-fafb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Ablative Armour" hidden="false" id="3c70-2d0c-dc19-1a37" publicationId="6d24-ac0a-2721-b4e2" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e9a4-5f4b-907b-ba67" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Ablative Armour" id="f576-2f8f-bf6d-aa6c" hidden="false" targetId="0d4f-5ae0-6ceb-6867" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="45"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Ceramite Armour" hidden="false" id="a7e4-29e3-aee7-50a5" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a5bb-4832-2519-50a8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Ceramite Armour" id="a7ea-bbda-b850-583d" hidden="false" targetId="93b9-4ea2-7969-e3e6" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="50"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Electro-Hull" hidden="false" id="dbc7-bda2-1747-3156" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1f61-1971-f725-4c45" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Electro-Hull" id="f87e-fb6f-d379-7911" hidden="false" targetId="4406-56c4-c326-53be" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Null-Shield" hidden="false" id="782a-780e-254c-3a40" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="18b7-17c3-2f92-b3aa" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Null-Shield" id="b48b-d838-189e-0879" hidden="false" targetId="de05-6890-7c48-25e3" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="35"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Reinforced Armour" hidden="false" id="978b-885d-a77c-625a" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0444-6407-c2ae-23b3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Reinforced Armour" id="581f-f8a8-d966-ad9c" hidden="false" targetId="f1df-defe-0409-ed9e" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="50"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Searchlight" hidden="false" id="acf5-c57d-1d8f-68f1" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4e31-40e8-1e62-b66d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Searchlight" id="0632-1c93-0095-cad3" hidden="false" targetId="1e73-66f2-ada3-5f4a" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Vortex Detonator" hidden="false" id="a5fa-3bdb-2098-c7e0" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ed00-6814-7a0d-8997" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Vortex Detonator" id="ce39-725a-46fa-b435" hidden="false" targetId="9ceb-7407-a2ee-0c34" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="50"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Lascannon" hidden="false" id="1d16-176f-0bd6-5361" collective="false" targetId="601b-a85f-4654-80d0" type="selectionEntry">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fed9-9310-1072-dfd9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="be64-639d-b2b0-3cf7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Targeter" hidden="false" id="5aa5-c085-8074-1bce" collective="false" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="72de-637f-80f8-4be2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3598-6a82-095c-f9fc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="Heavy Bolter" hidden="false" id="7dec-1b85-72cf-60e1" collective="false" targetId="4c82-0e56-d20a-6b1c" type="selectionEntry">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="307d-cbcb-290e-1f5d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c617-82ec-bc10-bbc9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Targeter" hidden="false" id="2157-f63f-2f5e-8f02" collective="false" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="99e2-2503-d9ba-93a7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="968d-0938-4782-b384" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="Frag Defender" hidden="false" id="cdf4-1ec9-2bc3-3485" collective="false" targetId="5c91-d7c8-553c-8e40" type="selectionEntry">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9826-30bb-0f5f-ede3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+        </entryLink>
+        <entryLink import="true" name="Auto-Launcher" hidden="false" id="fce9-4508-dd6b-48a3" collective="false" targetId="222b-075f-d34c-7093" type="selectionEntry">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="acb8-fed4-f1e1-11a6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f0e0-3561-354c-5bf9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Blind Grenade" hidden="false" id="68fb-d3da-f88a-320e" collective="false" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="cc7b-eac9-7cc5-a156" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2df3-4137-85b5-9512" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Frag Grenade" hidden="false" id="a1d0-3a12-34ba-3059" collective="false" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="09e8-4dd1-0d92-ecde" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="32d5-8009-11d4-a4b0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="350"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -5507,7 +5870,7 @@ See datafax for damage table results</description>
       <description>1: Tracks
 2-4: Hull
 5: Sponsons*
-6: Main Turret
+6: Volcano Cannon
 *Hit&apos;s closest to the shooter
 See datafax for damage table results</description>
     </rule>
@@ -6234,6 +6597,30 @@ Main Turret</characteristic>
 22
 20
 25</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Imperial Guard Shadowsword" typeId="371a-1ec9-2157-1eb6" typeName="Vehicle" hidden="false" id="596e-e16d-528f-5599">
+      <characteristics>
+        <characteristic name="Slow Speed" typeId="7c52-da5f-7f1a-95fd">4</characteristic>
+        <characteristic name="Combat Speed" typeId="87a6-dd16-ba8f-ff71">8</characteristic>
+        <characteristic name="Fast Speed" typeId="92f6-98b4-3770-d8d9">12</characteristic>
+        <characteristic name="Type" typeId="8567-afc3-f137-4d64">Tracked</characteristic>
+        <characteristic name="Crew" typeId="7ee3-c2ef-4b92-55e1">9 Guardsman</characteristic>
+        <characteristic name="Ram Strength" typeId="13de-7be1-9f05-c48a">10</characteristic>
+        <characteristic name="Ram Damage" typeId="2ddf-d6d1-359f-bc9d">D20</characteristic>
+        <characteristic name="Ram Save Modfier" typeId="40ae-53ec-dee8-af1f">-6</characteristic>
+        <characteristic name="Armour Location" typeId="30da-ce76-ecb6-61ab">Tracks
+Hull
+Sponsons
+Volcano Cannon</characteristic>
+        <characteristic name="Front Armour" typeId="fafe-592c-1a65-1376">19
+24
+20
+22</characteristic>
+        <characteristic name="Side/Rear Armour" typeId="fbc3-8073-078a-ac79">19
+22
+20
+18</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

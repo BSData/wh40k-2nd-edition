@@ -19,6 +19,7 @@
     <publication id="02e1-3f69-7ae7-f5c5" name="Codex - Chaos" shortName="Chaos" publicationDate="1996"/>
     <publication id="053a-a071-db83-283c" name="Codex - Army Lists" shortName="Army Lists" publisher="40k Box Set" publicationDate="1993"/>
     <publication id="d829-388d-3717-5aca" name="Codex - Imperialis" shortName="Imperialis" publicationDate="1993"/>
+    <publication name="Armorcast - Inquisitor Magazine" id="54a5-765a-b3e8-291b" hidden="false"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="-1" hidden="false"/>
@@ -2756,6 +2757,49 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         </rule>
       </rules>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Volcano Cannon" hidden="false" id="1291-4530-f45b-ce1c" publicationId="54a5-765a-b3e8-291b">
+      <profiles>
+        <profile name="Primary Effect" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="bfba-6869-9dad-78eb">
+          <characteristics>
+            <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">-</characteristic>
+            <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">-</characteristic>
+            <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+            <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+            <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">10</characteristic>
+            <characteristic name="Damage" typeId="8978-f9c3-8957-1481">5+D10</characteristic>
+            <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-6</characteristic>
+            <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+D10+15</characteristic>
+            <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Secondary Effect" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="347e-a269-3b9d-7e62">
+          <characteristics>
+            <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">-</characteristic>
+            <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">-</characteristic>
+            <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+            <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+            <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">6</characteristic>
+            <characteristic name="Damage" typeId="8978-f9c3-8957-1481">D10</characteristic>
+            <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-3</characteristic>
+            <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+D10+6</characteristic>
+            <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">3&quot; Blast</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Volcano Cannon" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="48b4-56b6-f4a3-976f">
+          <characteristics>
+            <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">20</characteristic>
+            <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">60</characteristic>
+            <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+            <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+            <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">-</characteristic>
+            <characteristic name="Damage" typeId="8978-f9c3-8957-1481">-</characteristic>
+            <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-</characteristic>
+            <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">-</characteristic>
+            <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="3a8b-4669-b2f5-b7f1" name="Vehicle Wargear Cards (Generic)" hidden="false" collective="false" import="true"/>
@@ -3855,6 +3899,24 @@ Teleported models can shoot and fight in on the turn they arrive, but do not cou
 teleport directly into base-to-base contact with enemy models. Troops that have paid the points cost to teleport into a
 battle may teleport out again during the owning player‘s turn. The squad is simply removed from the table during
 the player‘s movement phase and may not return later in the game.</description>
+    </rule>
+    <rule name="Drop Pods" id="03c8-f609-5fb4-8e24" hidden="false">
+      <description>Drop pods are deployed first during the movement phase after charges are declared, place a 2&quot; radius blast marker for each pod to be landed on a clear area anywhere in the battlezone. You must mark each blast marker or note down what the contents of each pod are. Do not tell the opposition! This is because pods that fail to open and become jammed can be opened if they are fired at, this may bring jammed Deathwind pods into play.
+
+
+Roll both the artillery dice and 2D6, if the artillery dice show a HIT the pod lands on target, if it shows an ARROW and NUMBERS add the roll of the 2D6 to the number shown and move the pod that distance in inches in the direction indicated by the arrow. If a MISFIRE shows on the artillery dice consult the misfire chart.
+
+
+Drop pods that land on impassable terrain are automatically destroyed, if they land on very difficult terrain roll a D6 on a roll of 1–3 the door is blocked SEE BLOCKED DOOR.
+
+
+If the pod lands on a vehicle or building work out collision damage using the pods underside armour and the vehicles side armour, if the vehicle is penetrated it is squashed and destroyed, if the pod fails to penetrate it bounces off, treat it as a landing on very difficult terrain, and roll for blocked doors.
+
+
+If the pod is going to land on troops they can attempt to either stand their ground and destroy it with weapons fire, rolling to hit and penetrate as normal, or they can flee. Fleeing troops each roll D6+1 against their initiative, if they are successful each model flees their run move away from the blast marker in a random direction using the scatter dice and counts as broken. Models that fail to destroy the pod or get out of the way take a S10 hit with a -6 save for d20 wounds, surviving models must rally/reform as soon as possible.
+
+
+If the pod goes off the table any troops it contains can be brought on and make a normal move in the following turn from the point at which it left the table. Deathwind and support pods lost in this way count as victory points for your opponent.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -5194,6 +5256,19 @@ Does not work against vortex grenades</characteristic>
       <characteristics>
         <characteristic name="Special" typeId="f917-8cd8-7592-47dd">A model equipped with a Suppression Shield automatically inflicts an S3 hit resolves on a single opponent when it charges into hand-to-hand combat; this is resolved before HtH is started. Models wearing a Shield also receive a +2 bonus to their armour saving throw. As with all shields, these effects only apply if the incoming
 attack is from the model‘s front 90 arc of sight.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Volcano Cannon" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="f912-6a2c-caa6-b996" publicationId="54a5-765a-b3e8-291b">
+      <characteristics>
+        <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">20</characteristic>
+        <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">96</characteristic>
+        <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+        <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+        <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">-</characteristic>
+        <characteristic name="Damage" typeId="8978-f9c3-8957-1481">-</characteristic>
+        <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-</characteristic>
+        <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">-</characteristic>
+        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">-</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

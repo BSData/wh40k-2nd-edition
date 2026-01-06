@@ -221,6 +221,10 @@
     <entryLink id="2d6c-3a19-b938-4f7b" name="Space Marine Attack Bike" hidden="false" collective="false" import="true" targetId="a266-fb50-cff9-0a00" type="selectionEntry"/>
     <entryLink id="51b1-8233-4d47-4799" name="Space Marine Whirlwind" hidden="false" collective="false" import="true" targetId="a283-2271-e6e1-4577" type="selectionEntry"/>
     <entryLink import="true" name="Ork Stompa" hidden="false" id="74cb-981e-b0b3-7706" type="selectionEntry" targetId="2bdf-3e08-cc73-a77d"/>
+    <entryLink import="true" name="Ork Drop Pod Kanz" hidden="false" id="247d-6b31-b405-513c" type="selectionEntry" targetId="3827-b6c9-0839-d5d7"/>
+    <entryLink import="true" name="Spleenrippa" hidden="false" id="5adc-ceaa-e298-a54f" type="selectionEntry" targetId="0eef-af07-ec4a-1d01"/>
+    <entryLink import="true" name="Bowelburna" hidden="false" id="c238-6874-de10-51ea" type="selectionEntry" targetId="393b-9fd6-4be0-3308"/>
+    <entryLink import="true" name="Evil Sunz Gobsmasha" hidden="false" id="d492-b388-26e3-1382" type="selectionEntry" targetId="c4ff-735d-e308-e300"/>
   </entryLinks>
   <rules>
     <rule id="a5a3-075e-40e2-129d" name="WAAAARGH!" publicationId="9f92-b7df-cf75-9a46" page="49" hidden="false">
@@ -7348,6 +7352,370 @@ Legs</characteristic>
           <description>Please see datafax card - too much to list</description>
         </rule>
       </rules>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Ork Drop Pod Kanz" hidden="false" id="3827-b6c9-0839-d5d7">
+      <profiles>
+        <profile name="Ork Drop Pod Kanz" typeId="371a-1ec9-2157-1eb6" typeName="Vehicle" hidden="false" id="c296-c1a5-b911-da86">
+          <characteristics>
+            <characteristic name="Slow Speed" typeId="7c52-da5f-7f1a-95fd">*</characteristic>
+            <characteristic name="Combat Speed" typeId="87a6-dd16-ba8f-ff71">*</characteristic>
+            <characteristic name="Fast Speed" typeId="92f6-98b4-3770-d8d9">*</characteristic>
+            <characteristic name="Type" typeId="8567-afc3-f137-4d64">Transport</characteristic>
+            <characteristic name="Crew" typeId="7ee3-c2ef-4b92-55e1">-</characteristic>
+            <characteristic name="Ram Strength" typeId="13de-7be1-9f05-c48a">10</characteristic>
+            <characteristic name="Ram Damage" typeId="2ddf-d6d1-359f-bc9d">D20</characteristic>
+            <characteristic name="Ram Save Modfier" typeId="40ae-53ec-dee8-af1f">-6</characteristic>
+            <characteristic name="Armour Location" typeId="30da-ce76-ecb6-61ab">Underside*
+Hull</characteristic>
+            <characteristic name="Front Armour" typeId="fafe-592c-1a65-1376">*Underside - 24</characteristic>
+            <characteristic name="Side/Rear Armour" typeId="fbc3-8073-078a-ac79">*Side/Top - 19</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Kanz Transport" typeId="e609-756e-9d6d-3c69" typeName="Transport" hidden="false" id="e604-0f8a-5eab-42fa">
+          <characteristics>
+            <characteristic name="Transport" typeId="517b-f87c-b705-6e9a">Kanz (Transport)</characteristic>
+            <characteristic name="Capacity" typeId="9b3e-28dc-77c7-207a">15 Orks, 20 Gretchin, 5 Snotling Stands, 1 Dreadnought, or 5 Bikes</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="points" value="50"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="3512-45d3-a466-0e54" id="a8aa-421f-a0a2-1861" primary="false" name="Orks"/>
+        <categoryLink targetId="1cb3-5add-3535-4a1f" id="3761-222e-a9d7-e00b" primary="true" name="Support"/>
+      </categoryLinks>
+      <rules>
+        <rule name="Kanz Disembark" id="526e-8c22-4bb2-5d09" hidden="false">
+          <description>Troops may deploy within 2&quot; of the Kan on the turn that it lands but no additional movement is allowed. Troops may, however, fire normally when they deploy</description>
+        </rule>
+        <rule name="Kanz Damage Table" id="e7c6-dd62-3b9e-e798" hidden="false">
+          <description>.
+UNDERSIDE DAMAGE TABLE
+
+1–2 Kan deviates on landing automatically.
+
+3–4 Roll a D6 for each model on board. On a 4+ they are hit and killed.
+5 Big springz blown off!! Upon landing roll a D6, on a 1–2 da “KAN” is destroyed. On a 3+ roll on the misfire table in the main rules with a –1 modifier to the roll.
+6 The Kan blows up in mid air. Killing everyone on board.
+
+HULL DAMAGE TABLE
+
+1–2 The hull splits open. Trapped troop may now exit.
+3–4 Check for each model. On a D6 roll of 4+ they are killed.
+5–6 The Kan explodes killing everyone on board.
+
+MISFIRE TABLE
+
+1–2 Roll a D6 at the beginning of each turn, on a 3+ it opens.
+3–5 Each model must roll a D6, on a 4+ they are killed. Survivors may move normally.
+6 The explosion destroys the Kan and anything else within 3&quot;. No saves!</description>
+        </rule>
+        <rule name="Drop Pods" id="1c0a-886d-fed6-4d46" hidden="false">
+          <description>Drop pods are deployed first during the movement phase after charges are declared, place a 2&quot; radius blast marker for each pod to be landed on a clear area anywhere in the battlezone. You must mark each blast marker or note down what the contents of each pod are. Do not tell the opposition! This is because pods that fail to open and become jammed can be opened if they are fired at, this may bring jammed Deathwind pods into play.
+
+
+Roll both the artillery dice and 2D6, if the artillery dice show a HIT the pod lands on target, if it shows an ARROW and NUMBERS add the roll of the 2D6 to the number shown and move the pod that distance in inches in the direction indicated by the arrow. If a MISFIRE shows on the artillery dice consult the misfire chart.
+
+
+Drop pods that land on impassable terrain are automatically destroyed, if they land on very difficult terrain roll a D6 on a roll of 1–3 the door is blocked SEE BLOCKED DOOR.
+
+
+If the pod lands on a vehicle or building work out collision damage using the pods underside armour and the vehicles side armour, if the vehicle is penetrated it is squashed and destroyed, if the pod fails to penetrate it bounces off, treat it as a landing on very difficult terrain, and roll for blocked doors.
+
+
+If the pod is going to land on troops they can attempt to either stand their ground and destroy it with weapons fire, rolling to hit and penetrate as normal, or they can flee. Fleeing troops each roll D6+1 against their initiative, if they are successful each model flees their run move away from the blast marker in a random direction using the scatter dice and counts as broken. Models that fail to destroy the pod or get out of the way take a S10 hit with a -6 save for d20 wounds, surviving models must rally/reform as soon as possible.
+
+
+If the pod goes off the table any troops it contains can be brought on and make a normal move in the following turn from the point at which it left the table. Deathwind and support pods lost in this way count as victory points for your opponent.</description>
+        </rule>
+      </rules>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Spleenrippa" hidden="false" id="0eef-af07-ec4a-1d01">
+      <categoryLinks>
+        <categoryLink targetId="1cb3-5add-3535-4a1f" id="82ed-7dc8-e69e-51b2" primary="true" name="Support"/>
+        <categoryLink targetId="3512-45d3-a466-0e54" id="ef50-57b8-f98d-ef68" primary="false" name="Orks"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="75"/>
+      </costs>
+      <profiles>
+        <profile name="Spleenrippa" typeId="371a-1ec9-2157-1eb6" typeName="Vehicle" hidden="false" id="4e85-1b3f-7317-5457">
+          <characteristics>
+            <characteristic name="Slow Speed" typeId="7c52-da5f-7f1a-95fd">10</characteristic>
+            <characteristic name="Combat Speed" typeId="87a6-dd16-ba8f-ff71">20</characteristic>
+            <characteristic name="Fast Speed" typeId="92f6-98b4-3770-d8d9">30</characteristic>
+            <characteristic name="Type" typeId="8567-afc3-f137-4d64">Wheeled</characteristic>
+            <characteristic name="Crew" typeId="7ee3-c2ef-4b92-55e1">2 Orks</characteristic>
+            <characteristic name="Ram Strength" typeId="13de-7be1-9f05-c48a">7</characteristic>
+            <characteristic name="Ram Damage" typeId="2ddf-d6d1-359f-bc9d">D8</characteristic>
+            <characteristic name="Ram Save Modfier" typeId="40ae-53ec-dee8-af1f">-4</characteristic>
+            <characteristic name="Armour Location" typeId="30da-ce76-ecb6-61ab">Wheels
+Hull
+Battle Cannon</characteristic>
+            <characteristic name="Front Armour" typeId="fafe-592c-1a65-1376">15
+20
+19</characteristic>
+            <characteristic name="Side/Rear Armour" typeId="fbc3-8073-078a-ac79">15
+18
+19</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Transport Capacity" typeId="e609-756e-9d6d-3c69" typeName="Transport" hidden="false" id="80ac-47af-36da-7b20">
+          <characteristics>
+            <characteristic name="Transport" typeId="517b-f87c-b705-6e9a">Spleenrippa (Transport)</characteristic>
+            <characteristic name="Capacity" typeId="9b3e-28dc-77c7-207a">5 Boyz or 10 Gretchin</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Vehicle Wargear Cards" hidden="false" id="dba2-7d98-cd9f-96ad" type="selectionEntryGroup" targetId="ef2e-d2f5-b5d2-60bf"/>
+      </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Battlecannon" hidden="false" id="8247-75d5-721c-ee8b" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9a00-25b8-ea82-e431" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="813c-b7f3-5233-a10a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Battlecannon" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="d63f-06b5-508d-6463" publicationId="a1e3-886b-e509-d15a" page="datafax">
+              <characteristics>
+                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">20</characteristic>
+                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">72</characteristic>
+                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">8</characteristic>
+                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">2D6</characteristic>
+                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-3</characteristic>
+                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">3D6+8</characteristic>
+                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">2&quot; radius</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <rules>
+        <rule name="Spleenrippa Shooting" id="9183-80c0-e38d-b09a" hidden="false">
+          <description>May only fire directly ahead. After the Spleenrippa has fired, any shots directed at it have a -1 to hit</description>
+        </rule>
+        <rule name="Spleenrippa Damage Table" id="2227-dd40-358a-7e82" hidden="false" publicationId="54a5-765a-b3e8-291b" page="datafax">
+          <description>1: Wheels
+2-4: Hull
+5-6: Battle Cannon
+See Datafax for additional rules</description>
+        </rule>
+      </rules>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="dd1a-51db-6cf2-d293" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="99" field="dd1a-51db-6cf2-d293">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Bowelburna" hidden="false" id="393b-9fd6-4be0-3308">
+      <costs>
+        <cost name="pts" typeId="points" value="120"/>
+      </costs>
+      <profiles>
+        <profile name="Bowelburna" typeId="371a-1ec9-2157-1eb6" typeName="Vehicle" hidden="false" id="1540-148a-a43d-021e">
+          <characteristics>
+            <characteristic name="Slow Speed" typeId="7c52-da5f-7f1a-95fd">10</characteristic>
+            <characteristic name="Combat Speed" typeId="87a6-dd16-ba8f-ff71">18</characteristic>
+            <characteristic name="Fast Speed" typeId="92f6-98b4-3770-d8d9">28</characteristic>
+            <characteristic name="Type" typeId="8567-afc3-f137-4d64">Wheeled</characteristic>
+            <characteristic name="Crew" typeId="7ee3-c2ef-4b92-55e1">4 Orks</characteristic>
+            <characteristic name="Ram Strength" typeId="13de-7be1-9f05-c48a">8</characteristic>
+            <characteristic name="Ram Damage" typeId="2ddf-d6d1-359f-bc9d">D12</characteristic>
+            <characteristic name="Ram Save Modfier" typeId="40ae-53ec-dee8-af1f">-5</characteristic>
+            <characteristic name="Armour Location" typeId="30da-ce76-ecb6-61ab">Wheels
+Turret
+Side Guns
+Hull</characteristic>
+            <characteristic name="Front Armour" typeId="fafe-592c-1a65-1376">15
+20
+17
+20</characteristic>
+            <characteristic name="Side/Rear Armour" typeId="fbc3-8073-078a-ac79">15
+20
+17
+18</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Bowelburna Transport" typeId="e609-756e-9d6d-3c69" typeName="Transport" hidden="false" id="3d05-be24-5454-a8c3">
+          <characteristics>
+            <characteristic name="Transport" typeId="517b-f87c-b705-6e9a">Bowelburna (Transport)</characteristic>
+            <characteristic name="Capacity" typeId="9b3e-28dc-77c7-207a">5 Boys or 10 Gretchin</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Vehicle Wargear Cards" hidden="false" id="bc6b-55e8-7555-de12" type="selectionEntryGroup" targetId="ef2e-d2f5-b5d2-60bf"/>
+        <entryLink import="true" name="Heavy Bolter" hidden="false" id="26c5-bb0e-0449-4769" type="selectionEntry" targetId="4c82-0e56-d20a-6b1c">
+          <constraints>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="27a1-c33d-828e-590b" includeChildSelections="false"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="02da-97a2-27b3-19ba" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="c055-4139-7e5d-b56a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="99" field="c055-4139-7e5d-b56a">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="3512-45d3-a466-0e54" id="4693-bc00-ce68-ab7a" primary="false" name="Orks"/>
+        <categoryLink targetId="1cb3-5add-3535-4a1f" id="996f-1d30-5eb1-3b50" primary="true" name="Support"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Flame cannon" hidden="false" id="cf5a-031d-5979-f5b8">
+          <profiles>
+            <profile name="Flame cannon" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="3d48-502a-2da6-6324">
+              <characteristics>
+                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">Special</characteristic>
+                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">Special</characteristic>
+                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">6</characteristic>
+                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">D3</characteristic>
+                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-3</characteristic>
+                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">6+D6+D3</characteristic>
+                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Flame Cannon</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c26e-b841-eb76-d741" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dd41-0101-1507-b097" includeChildSelections="false"/>
+          </constraints>
+          <rules>
+            <rule name="Flame Cannon" id="a967-0e4f-fd49-811e" hidden="false">
+              <description>360 degree fire arc. Flame cannon has a 12&quot; range, this is where you can choose to place the flame template. </description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink name="Flamer" id="e5bf-6d64-f90d-1d1c" hidden="false" type="rule" targetId="a0b5-9f98-7420-f3a4"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <rules>
+        <rule name="Bowelburna Damage Table" id="a89b-145d-48a2-0785" hidden="false">
+          <description>1 Wheels
+2-3 Turret
+4 Side Guns
+5-6 Hull</description>
+        </rule>
+      </rules>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Evil Sunz Gobsmasha" hidden="false" id="c4ff-735d-e308-e300">
+      <costs>
+        <cost name="pts" typeId="points" value="100"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="3512-45d3-a466-0e54" id="27f7-2be3-a4a7-b35a" primary="false" name="Orks"/>
+        <categoryLink targetId="1cb3-5add-3535-4a1f" id="5689-198f-473b-88ec" primary="true" name="Support"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="0dfc-2038-9c6b-97dc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="99" field="0dfc-2038-9c6b-97dc">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile name="Evil Sunz Gobsmasha" typeId="371a-1ec9-2157-1eb6" typeName="Vehicle" hidden="false" id="612e-4b57-f4ab-86e0">
+          <characteristics>
+            <characteristic name="Slow Speed" typeId="7c52-da5f-7f1a-95fd">10</characteristic>
+            <characteristic name="Combat Speed" typeId="87a6-dd16-ba8f-ff71">20</characteristic>
+            <characteristic name="Fast Speed" typeId="92f6-98b4-3770-d8d9">25</characteristic>
+            <characteristic name="Type" typeId="8567-afc3-f137-4d64">Wheeled</characteristic>
+            <characteristic name="Crew" typeId="7ee3-c2ef-4b92-55e1">4 Boyz</characteristic>
+            <characteristic name="Ram Strength" typeId="13de-7be1-9f05-c48a">7</characteristic>
+            <characteristic name="Ram Damage" typeId="2ddf-d6d1-359f-bc9d">D12</characteristic>
+            <characteristic name="Ram Save Modfier" typeId="40ae-53ec-dee8-af1f">-5</characteristic>
+            <characteristic name="Armour Location" typeId="30da-ce76-ecb6-61ab">Wheels*
+Hull
+Weapon*</characteristic>
+            <characteristic name="Front Armour" typeId="fafe-592c-1a65-1376">15
+18
+18</characteristic>
+            <characteristic name="Side/Rear Armour" typeId="fbc3-8073-078a-ac79">15
+16
+16</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule name="Evil Sunz Damage Table" id="6b8f-325a-4b1c-d548" hidden="false">
+          <description>
+
+1-2 Wheels
+3-4 Hull
+5-6 Weapon</description>
+        </rule>
+      </rules>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Battlecannon" hidden="false" id="c2e3-f4f6-f67a-4919" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3b48-93e2-2fff-e160" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="af4d-bab1-8cf3-729a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Battlecannon" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="c223-caa1-90ba-14a0" publicationId="a1e3-886b-e509-d15a" page="datafax">
+              <characteristics>
+                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">20</characteristic>
+                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">72</characteristic>
+                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">8</characteristic>
+                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">2D6</characteristic>
+                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-3</characteristic>
+                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">3D6+8</characteristic>
+                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">2&quot; radius</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Twin Heavy Bolters" hidden="false" id="2594-a620-b363-1cf1" type="selectionEntry" targetId="aac3-4788-82a3-a9ad">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7aa4-f95d-5d02-a054" includeChildSelections="false"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>

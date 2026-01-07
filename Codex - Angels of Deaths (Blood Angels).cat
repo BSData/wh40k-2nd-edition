@@ -1995,7 +1995,7 @@ and  courage  in  the face of death. Once broken, a Space Marine squad may rally
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Teleport Squad (Increases points by 50%)" hidden="false" id="3e69-0b6d-fe07-999d" collective="false">
+        <selectionEntry type="upgrade" import="true" name="Teleport Squad (Increases points 50%)" hidden="false" id="3e69-0b6d-fe07-999d" collective="false">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ae67-0720-7366-ef0a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>

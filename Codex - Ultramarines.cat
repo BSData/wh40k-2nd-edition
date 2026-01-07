@@ -1873,7 +1873,7 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
             <infoLink name="Terminator Sergeant" id="dc25-67e5-90ea-0ccd" hidden="false" type="profile" targetId="49a3-99fd-932d-4e12"/>
           </infoLinks>
         </selectionEntry>
-        <selectionEntry id="5b0a-f2eb-203b-101c" name="Teleport Squad (Increases points by 50%)" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="5b0a-f2eb-203b-101c" name="Teleport Squad (Increases points 50%)" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="af95-7e58-c760-654b" type="max"/>
           </constraints>

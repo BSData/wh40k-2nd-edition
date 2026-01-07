@@ -685,8 +685,16 @@ Note this test only happens if the leaders are KILLED. It is not taken if they a
       <entryLinks>
         <entryLink id="6bd8-9493-a0dd-7d3f" name="Assault Weapons" hidden="false" collective="false" import="true" targetId="5218-305c-b333-2bca" type="selectionEntryGroup"/>
         <entryLink id="5e23-cea4-85a7-c8ee" name="Basic Weapons" hidden="false" collective="false" import="true" targetId="96cd-e00a-5128-533f" type="selectionEntryGroup"/>
-        <entryLink id="2f1b-0553-811c-97f1" name="Special Weapons" hidden="false" collective="false" import="true" targetId="a74a-03c7-5444-b27f" type="selectionEntryGroup"/>
-        <entryLink id="714f-f36d-7b29-6660" name="Heavy Weapons" hidden="false" collective="false" import="true" targetId="b344-eefb-5259-a1f5" type="selectionEntryGroup"/>
+        <entryLink id="2f1b-0553-811c-97f1" name="Special Weapons" hidden="false" collective="false" import="true" targetId="a74a-03c7-5444-b27f" type="selectionEntryGroup">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="af96-ad21-a5b5-f951" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="714f-f36d-7b29-6660" name="Heavy Weapons" hidden="false" collective="false" import="true" targetId="b344-eefb-5259-a1f5" type="selectionEntryGroup">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8d85-a629-ee65-d24a" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
         <entryLink id="9f86-ac44-d00e-00cd" name="Axe" hidden="false" collective="false" import="true" targetId="c2ba-db92-5ff9-38c2" type="selectionEntry">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c442-071f-1fc9-cdab" type="min"/>
@@ -1813,9 +1821,6 @@ Note this test only happens if the leaders are KILLED. It is not taken if they a
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="a74a-03c7-5444-b27f" name="Special Weapons" publicationId="4590-6ba9-5482-a1fa" page="61" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f6b-3fb2-48dd-ac8e" type="max"/>
-      </constraints>
       <entryLinks>
         <entryLink id="40e7-4351-a1f2-2b43" name="Flamer" hidden="false" collective="false" import="true" targetId="a1e4-59e5-1938-5372" type="selectionEntry">
           <costs>
@@ -1835,9 +1840,6 @@ Note this test only happens if the leaders are KILLED. It is not taken if they a
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="b344-eefb-5259-a1f5" name="Heavy Weapons" publicationId="4590-6ba9-5482-a1fa" page="61" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6dbc-b9fd-e629-fe35" type="max"/>
-      </constraints>
       <entryLinks>
         <entryLink id="3021-d6a6-855c-32ce" name="Autocannon" hidden="false" collective="false" import="true" targetId="cbd3-5929-68b1-2cc8" type="selectionEntry">
           <costs>

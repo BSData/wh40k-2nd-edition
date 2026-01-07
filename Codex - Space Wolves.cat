@@ -2021,7 +2021,7 @@ and  courage  in  the face of death. Once broken, a Space Marine squad may rally
         <entryLink id="432d-3be8-abee-8fae" name="Vehicle Wargear Cards" hidden="false" collective="false" import="true" targetId="79ff-a71a-fe7d-aca3" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="145"/>
+        <cost name="pts" typeId="points" value="115"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4165-53ae-0eed-f9bd" name="Tarantula" publicationId="0f8d-af97-3972-324c" page="61" hidden="false" collective="false" import="true" type="upgrade">
@@ -4355,7 +4355,7 @@ and  courage  in  the face of death. Once broken, a Space Marine squad may rally
             <infoLink id="e2d0-e742-ee4c-00d2" name="Dreadnought Sustained Fire" hidden="false" targetId="06eb-1513-fe34-fbe2" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="0"/>
+            <cost name="pts" typeId="points" value="15"/>
           </costs>
         </entryLink>
         <entryLink import="true" name="Lascannon" hidden="false" id="7591-bd8e-c81f-6ab2" type="selectionEntry" targetId="601b-a85f-4654-80d0">

@@ -1767,6 +1767,11 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
             <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
           </conditions>
         </modifier>
+        <modifier type="multiply" value="1.5" field="points" affects="self.entries">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="5b0a-f2eb-203b-101c" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <infoLinks>
         <infoLink name="Terminator" id="0e31-a86f-d229-b696" hidden="false" type="profile" targetId="d6e3-d2b8-75de-2f88"/>
@@ -1868,35 +1873,13 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
             <infoLink name="Terminator Sergeant" id="dc25-67e5-90ea-0ccd" hidden="false" type="profile" targetId="49a3-99fd-932d-4e12"/>
           </infoLinks>
         </selectionEntry>
-        <selectionEntry id="5b0a-f2eb-203b-101c" name="Teleport Squad (Add 50% points)" hidden="false" collective="false" import="true" type="upgrade">
-          <comment>You must manually add the Percentage of the points for this using the options under Teleport Squad</comment>
-          <modifiers>
-            <modifier type="increment" field="points" value="1">
-              <repeats>
-                <repeat field="selections" scope="self" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="abfa-a299-2658-83e5" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
+        <selectionEntry id="5b0a-f2eb-203b-101c" name="Teleport Squad (Increases points by 50%)" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="af95-7e58-c760-654b" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="4bd8-d2d7-1ea1-4a00" name="Teleport Squad - Update your Points!" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
-              <characteristics>
-                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">You must manually add the Percentage of the points for this using the options under Teleport Squad! It is not a free upgrade! It costs 50% of the units total cost. Round up!</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <infoLinks>
             <infoLink id="4830-7251-7a50-ac33" name="Teleport" hidden="false" targetId="36dd-ed3a-7f67-5028" type="rule"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="abfa-a299-2658-83e5" name="50% of squads total points (manually enter)" hidden="false" collective="false" import="true" type="upgrade">
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>

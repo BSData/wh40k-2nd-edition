@@ -737,6 +737,20 @@ Roll a D6 at the end of the turn:
             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="3289-e6ce-5e65-93a0" includeChildSelections="false"/>
             <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="76b7-f92a-ee48-7904" includeChildSelections="false"/>
           </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Lasgun" hidden="false" id="0515-ce63-5203-1a89" type="selectionEntry" targetId="0568-5866-b015-7be9">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a900-f49c-20bb-6486" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="75d4-f26f-89db-4264" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Laspistol" hidden="false" id="8106-462e-9a16-fa4f" type="selectionEntry" targetId="6e11-978c-f2f0-8477">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="54a7-1746-450c-27d8" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d683-5f30-cb90-f6d0" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </entryLink>
         <entryLink import="true" name="Special Weapons" hidden="false" id="c21b-856e-a73c-560a" type="selectionEntryGroup" targetId="839a-8bc6-9007-ef9e">
           <constraints>
@@ -770,12 +784,6 @@ Roll a D6 at the end of the turn:
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f9e9-aef9-642d-62a6" includeChildSelections="false"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Laspistol" hidden="false" id="0515-ce63-5203-1a89" type="selectionEntry" targetId="6e11-978c-f2f0-8477">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a900-f49c-20bb-6486" includeChildSelections="false"/>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="75d4-f26f-89db-4264" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
         <entryLink import="true" name="Krak Grenade" hidden="false" id="4b88-1776-b79e-7ca3" type="selectionEntry" targetId="7ac5-935d-8ecf-59c0">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3556-f8f5-35c3-5c39" includeChildSelections="false"/>
@@ -797,6 +805,20 @@ Roll a D6 at the end of the turn:
             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="1c66-0e34-c89c-0fc0" includeChildSelections="false"/>
             <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="26ee-3234-f237-0a18" includeChildSelections="false"/>
           </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Bolt Pistol" hidden="false" id="3f2c-3c09-8bd5-65d8" type="selectionEntry" targetId="b5bb-7853-53cb-bec4">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="865f-2562-4731-187a" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c320-62bc-ad2f-14b0" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Axe" hidden="false" id="2603-756c-6260-bd53" type="selectionEntry" targetId="c2ba-db92-5ff9-38c2">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f171-d4e9-7a37-2edd" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8d9b-6f43-4711-de9a" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </entryLink>
         <entryLink import="true" name="Hearthguard" hidden="false" id="4bc8-0eb5-b321-de1b" type="selectionEntry" targetId="45cf-ec53-ab52-b8a4">
           <constraints>
@@ -830,6 +852,20 @@ Roll a D6 at the end of the turn:
             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="6090-8f9a-5f43-3b25" includeChildSelections="false"/>
             <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="90c3-7992-7903-ce30" includeChildSelections="false"/>
           </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Lasgun" hidden="false" id="b666-df85-654b-ab5a" type="selectionEntry" targetId="0568-5866-b015-7be9">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b0ec-9e45-6722-3b98" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a978-38a5-ec48-6415" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Laspistol" hidden="false" id="6931-588b-3700-ed06" type="selectionEntry" targetId="6e11-978c-f2f0-8477">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="86f2-4f26-11d5-4442" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6128-5c61-aafc-f594" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </entryLink>
         <entryLink import="true" name="Heavy Weapons" hidden="false" id="9940-36ee-81fd-c43f" type="selectionEntryGroup" targetId="216d-b889-742e-f666"/>
       </entryLinks>
@@ -902,6 +938,18 @@ Roll a D6 at the end of the turn:
             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="ea00-8a49-16d9-e574" includeChildSelections="false"/>
             <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="1b56-a509-edf3-c7b5" includeChildSelections="false"/>
           </constraints>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Lasgun or Laspistols" id="00b0-bee6-a6b9-2e3b" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Lasgun" hidden="false" id="0f24-1e2a-26f6-20cc" type="selectionEntry" targetId="0568-5866-b015-7be9"/>
+                <entryLink import="true" name="Laspistol" hidden="false" id="5b3c-889a-86a5-1ef8" type="selectionEntry" targetId="6e11-978c-f2f0-8477"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="fd38-e0ed-12c7-c513"/>
+                <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="4c2b-274a-5adb-f635"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </entryLink>
         <entryLink import="true" name="Assault Weapons" hidden="false" id="3af9-9d5a-9b7c-2e90" type="selectionEntryGroup" targetId="c902-8da4-0475-53cd"/>
         <entryLink import="true" name="Special Weapons" hidden="false" id="4871-ecfc-566f-63f7" type="selectionEntryGroup" targetId="839a-8bc6-9007-ef9e">

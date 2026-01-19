@@ -1239,7 +1239,7 @@
       <entryLinks>
         <entryLink id="a4c1-144c-20ad-c792" name="Nob" hidden="false" collective="false" import="true" targetId="7469-d0bf-7dae-4a55" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce35-dd6c-f49e-8ee1" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce35-dd6c-f49e-8ee1" type="min"/>
             <constraint field="selections" scope="parent" value="15" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d0c-5f3e-f936-e8b4" type="max"/>
           </constraints>
           <costs>
@@ -7609,7 +7609,7 @@ Hull</characteristic>
           </constraints>
           <rules>
             <rule name="Flame Cannon" id="a967-0e4f-fd49-811e" hidden="false">
-              <description>360 degree fire arc. Flame cannon has a 12&quot; range, this is where you can choose to place the flame template. </description>
+              <description>360 degree fire arc. Flame cannon has a 12&quot; range, this is where you can choose to place the flame template.</description>
             </rule>
           </rules>
           <infoLinks>
@@ -7673,9 +7673,7 @@ Weapon*</characteristic>
       </profiles>
       <rules>
         <rule name="Evil Sunz Damage Table" id="6b8f-325a-4b1c-d548" hidden="false">
-          <description>
-
-1-2 Wheels
+          <description>1-2 Wheels
 3-4 Hull
 5-6 Weapon</description>
         </rule>

@@ -1536,7 +1536,7 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
         </entryLink>
         <entryLink id="9f58-7c2c-220b-1961" name="Wargear Cards" hidden="false" collective="false" import="true" targetId="578d-7254-ab21-8b13" type="selectionEntryGroup">
           <constraints>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="32fd-ed6f-5982-4e53" type="max"/>
+            <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="32fd-ed6f-5982-4e53" type="max"/>
           </constraints>
         </entryLink>
       </entryLinks>

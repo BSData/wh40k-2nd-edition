@@ -6092,7 +6092,7 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       </selectionEntries>
       <entryLinks>
         <entryLink id="572e-c992-9242-b47d" name="Chaos Icons" hidden="false" collective="false" import="true" targetId="3ebe-ea48-c7df-936f" type="selectionEntryGroup"/>
-        <entryLink id="3d56-762d-3b62-8c44" name="Assault Weapons" hidden="false" collective="false" import="true" targetId="bf95-e4e4-5614-9c8a" type="selectionEntryGroup"/>
+        <entryLink id="3d56-762d-3b62-8c44" name="Cult Assault Weapons" hidden="false" collective="false" import="true" targetId="ecd3-a651-a047-e6f7" type="selectionEntryGroup"/>
         <entryLink id="15fc-614b-b19e-241b" name="Cult Armour" hidden="false" collective="false" import="true" targetId="ddef-dfc0-5cae-9e43" type="selectionEntryGroup">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f419-9d2b-d393-1c7d" type="max"/>

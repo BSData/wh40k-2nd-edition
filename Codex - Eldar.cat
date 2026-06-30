@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3da1-2b23-4a40-323e" name="Codex - Eldar" revision="12" battleScribeVersion="2.03" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="3da1-2b23-4a40-323e" name="Codex - Eldar" revision="13" battleScribeVersion="2.03" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <profileTypes>
     <profileType id="acfa-400e-e0d9-a9fb" name="Exarch Powers">
       <characteristicTypes>
@@ -5551,21 +5551,9 @@ Weapon may also be used in melee with its own profile</description>
           </costs>
         </selectionEntry>
         <selectionEntry id="b9f5-81ef-fe2a-5786" name="The Mask of Jain Zar" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="4068-dc8c-54b4-8840" value="1">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f325-4b23-0c2f-824d" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ddc7-9bd8-a613-72fa" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be31-b18a-ff97-567b" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4068-dc8c-54b4-8840" type="min"/>
           </constraints>
           <profiles>
             <profile id="3b8c-2443-614f-9072" name="The Mask of Jain Zar" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
@@ -5579,21 +5567,9 @@ Weapon may also be used in melee with its own profile</description>
           </costs>
         </selectionEntry>
         <selectionEntry id="248a-db45-3363-aa5a" name="The Silent Death" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="b76d-4c0f-3170-19eb" value="1">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f325-4b23-0c2f-824d" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b989-1e46-f1d0-6161" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a48-032b-7e47-6726" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b76d-4c0f-3170-19eb" type="min"/>
           </constraints>
           <profiles>
             <profile id="5aa1-2e97-04cd-2031" name="The Silent Death" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
@@ -5620,21 +5596,9 @@ Weapon may also be used in melee with its own profile</description>
           </costs>
         </selectionEntry>
         <selectionEntry id="7177-65eb-e477-efac" name="The Blade of Destruction" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="8ddf-d1d7-150d-4dc3" value="1">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f325-4b23-0c2f-824d" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f7f3-a137-a6d4-25dc" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="314e-5458-7abd-c925" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ddf-d1d7-150d-4dc3" type="min"/>
           </constraints>
           <profiles>
             <profile id="da8f-3bc2-de2a-ef1e" name="The Blade of Destruction" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="82c6-3e15-54c5-a35f" name="Codex - Orks" revision="15" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="82c6-3e15-54c5-a35f" name="Codex - Orks" revision="16" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="23ab-e52d-6e65-01d5" name="Characters" hidden="false"/>
     <categoryEntry id="f72b-82f4-2a38-7d26" name="Mobs" hidden="false"/>
@@ -7712,6 +7712,32 @@ Weapon*</characteristic>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Ork Crew" hidden="false" id="bce6-79cb-4c36-ec72" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5401-5b11-6bfc-ddfc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bff1-97cb-1a2d-e6a3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Ork" id="cd0d-4931-d7f7-3551" hidden="false" targetId="9447-b4f6-ef3e-a999" type="profile"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Bolt Pistol" hidden="false" id="5712-dac3-4293-c8a9" collective="false" targetId="b5bb-7853-53cb-bec4" type="selectionEntry">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5428-99ff-b495-4b8b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2c60-99fd-0ba8-3abb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Flak Armour" hidden="false" id="ed23-e397-d241-960b" collective="false" targetId="73c7-e55f-280c-5a3d" type="selectionEntry">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e7aa-e050-4270-f17b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7408-d9be-ebad-5026" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink import="true" name="Twin Heavy Bolters" hidden="false" id="2594-a620-b363-1cf1" type="selectionEntry" targetId="aac3-4788-82a3-a9ad">
@@ -7722,6 +7748,7 @@ Weapon*</characteristic>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </entryLink>
+        <entryLink import="true" name="Vehicle Wargear Cards" hidden="false" id="fa34-1e2d-80ff-4f71" collective="false" targetId="ef2e-d2f5-b5d2-60bf" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry id="78e3-fb14-2529-293e" name="Ork Wartrukk" hidden="false" collective="false" import="true" type="upgrade" publicationId="8eed-45fd-d4be-9a1b" page="WD 221">
@@ -8977,7 +9004,7 @@ Instead of rolling D3 for the deviation of the jump, roll an Artillery dice inst
       <characteristics>
         <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Wierdboy</characteristic>
         <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
-        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">4</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">5</characteristic>
         <characteristic name="BS" typeId="f859-88a3-fdd3-b298">4</characteristic>
         <characteristic name="S" typeId="5916-04ef-0fd1-6557">4</characteristic>
         <characteristic name="T" typeId="2e7d-2383-f92f-16f9">4</characteristic>
@@ -8991,7 +9018,7 @@ Instead of rolling D3 for the deviation of the jump, roll an Artillery dice inst
       <characteristics>
         <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Minder</characteristic>
         <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
-        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">3</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">4</characteristic>
         <characteristic name="BS" typeId="f859-88a3-fdd3-b298">4</characteristic>
         <characteristic name="S" typeId="5916-04ef-0fd1-6557">4</characteristic>
         <characteristic name="T" typeId="2e7d-2383-f92f-16f9">4</characteristic>

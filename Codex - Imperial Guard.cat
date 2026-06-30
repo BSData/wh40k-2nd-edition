@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="82fc-8ad4-7b4b-dd4a" name="Codex - Imperial Guard" revision="9" battleScribeVersion="2.03" authorName="Boff" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="82fc-8ad4-7b4b-dd4a" name="Codex - Imperial Guard" revision="10" battleScribeVersion="2.03" authorName="Boff" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>I haven&apos;t put restrictions for the Regimental style to build a list, such as 1 Command HQ, 3 Guard/Heavy Weapons teams, 3 additional unit. Doing so would be rather messy and complicated with all the possible choices, and frankly isn&apos;t really a huge deal.
 
 Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct units.</readme>
@@ -5213,8 +5213,15 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
       <comment>Black Codex</comment>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7f48-041e-bee5-e4c5" includeChildSelections="true"/>
-        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="138e-45cf-dc45-ec1a" includeChildSelections="true"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="138e-45cf-dc45-ec1a" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="138e-45cf-dc45-ec1a">
+          <conditions>
+            <condition type="atLeast" value="1" field="forces" scope="7c54-276f-406e-0548" shared="true" childId="any"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="12dd-2f8d-c7db-5750" name="Commissar" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>

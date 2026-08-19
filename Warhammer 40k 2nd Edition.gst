@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="9ea8-c89d-9104-ed03" name="Warhammer 40k 2nd Edition" revision="27" battleScribeVersion="2.03" authorName="Boff" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
+<gameSystem id="9ea8-c89d-9104-ed03" name="Warhammer 40k 2nd Edition" revision="28" battleScribeVersion="2.03" authorName="Boff" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
   <comment>Warhammer 2nd Edition 40k</comment>
   <readme>Added more wargear cards</readme>
   <publications>
@@ -3844,7 +3844,7 @@ See Datafax or Codex: Ultramarines for full rules on firing weapon and misfire t
       <description>Weapon does not need to be recharged like normal plasma</description>
     </rule>
     <rule id="2f39-2846-5e0b-fed5" name="Force Weapons" publicationId="2bb8-b6de-8b70-7f41" page="75" hidden="false">
-      <description>Add the psykers mastery level to your Strength when wounding to roll.
+      <description>Add the psyker&apos;s mastery level to your Strength when wounding to roll.
 Automatically wounds Daemons when they are hit in close combat. Negates the unmodified daemonic saving throw</description>
     </rule>
     <rule id="0e86-209c-fe59-fe87" name="Frenzy" publicationId="2bb8-b6de-8b70-7f41" page="67" hidden="false">
@@ -4930,14 +4930,14 @@ The wielder may also expend the stored Force card to gain an extra +2 Strength a
     </profile>
     <profile id="f764-8d31-4672-d578" name="Force Axe" page="Wargear Card" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
       <characteristics>
-        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">May store 1 unused Force card in the sword instead of discarding. May be used in the subsequent psychic phases.
+        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">May store 1 unused Force card in the axe instead of discarding. May be used in the subsequent psychic phases.
 
 The wielder may also expend the stored Force card to gain an extra +3 Strength and -3 armour save in close combat.</characteristic>
       </characteristics>
     </profile>
     <profile id="cf9d-bbca-5892-c2d0" name="Force Rod" page="Wargear Cards" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
       <characteristics>
-        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">May store up to 3 unused Force card in the sword instead of discarding. May be used in the subsequent psychic phases. Stored force cards may be retrieved from the rod and used in subsequent psychic phases.</characteristic>
+        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">May store up to 3 unused Force card in the rod instead of discarding. May be used in the subsequent psychic phases. Stored force cards may be retrieved from the rod and used in subsequent psychic phases.</characteristic>
       </characteristics>
     </profile>
     <profile id="97e4-8f7b-c22e-dd98" name="Laspistol" publicationId="06e5-8e36-e8c8-aec3" page="16" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3da1-2b23-4a40-323e" name="Codex - Eldar" revision="13" battleScribeVersion="2.03" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="3da1-2b23-4a40-323e" name="Codex - Eldar" revision="15" battleScribeVersion="2.03" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <profileTypes>
     <profileType id="acfa-400e-e0d9-a9fb" name="Exarch Powers">
       <characteristicTypes>
@@ -5476,7 +5476,7 @@ Can leap out of close combat at the end of any close combat phase without suffer
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d50f-39db-d7c3-2f0e" type="notEqualTo"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="56e9-7608-b945-ac81" type="notEqualTo" childName="Psyker"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -5554,6 +5554,7 @@ Weapon may also be used in melee with its own profile</description>
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ddc7-9bd8-a613-72fa" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be31-b18a-ff97-567b" type="max"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="a411-edb8-7191-d1ee" includeChildSelections="false"/>
           </constraints>
           <profiles>
             <profile id="3b8c-2443-614f-9072" name="The Mask of Jain Zar" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
@@ -5565,11 +5566,23 @@ Weapon may also be used in melee with its own profile</description>
           <costs>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="1" field="a411-edb8-7191-d1ee">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="f325-4b23-0c2f-824d" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="Jain Zar - The Storm of Silence"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="248a-db45-3363-aa5a" name="The Silent Death" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b989-1e46-f1d0-6161" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a48-032b-7e47-6726" type="max"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="3204-bf81-8d98-c1e9" includeChildSelections="false"/>
           </constraints>
           <profiles>
             <profile id="5aa1-2e97-04cd-2031" name="The Silent Death" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
@@ -5594,11 +5607,23 @@ Weapon may also be used in melee with its own profile</description>
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="1" field="3204-bf81-8d98-c1e9">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="f325-4b23-0c2f-824d" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="Jain Zar - The Storm of Silence"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="7177-65eb-e477-efac" name="The Blade of Destruction" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f7f3-a137-a6d4-25dc" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="314e-5458-7abd-c925" type="max"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="ba9d-b98c-e872-f92f" includeChildSelections="false"/>
           </constraints>
           <profiles>
             <profile id="da8f-3bc2-de2a-ef1e" name="The Blade of Destruction" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
@@ -5627,6 +5652,17 @@ Weapon may also be used in melee with its own profile</description>
           <costs>
             <cost name="pts" typeId="points" value="12"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="1" field="ba9d-b98c-e872-f92f">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="f325-4b23-0c2f-824d" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="Jain Zar - The Storm of Silence"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="90f9-2c36-b0f4-141a" name="The Scorpion&apos;s Bite" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>

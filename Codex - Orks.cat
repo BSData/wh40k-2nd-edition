@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="82c6-3e15-54c5-a35f" name="Codex - Orks" revision="16" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="82c6-3e15-54c5-a35f" name="Codex - Orks" revision="17" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="23ab-e52d-6e65-01d5" name="Characters" hidden="false"/>
     <categoryEntry id="f72b-82f4-2a38-7d26" name="Mobs" hidden="false"/>
@@ -226,6 +226,7 @@
     <entryLink import="true" name="Bowelburna" hidden="false" id="c238-6874-de10-51ea" type="selectionEntry" targetId="393b-9fd6-4be0-3308"/>
     <entryLink import="true" name="Evil Sunz Gobsmasha" hidden="false" id="d492-b388-26e3-1382" type="selectionEntry" targetId="c4ff-735d-e308-e300"/>
     <entryLink import="true" name="Ork Wartrukk" hidden="false" id="a607-b6fd-fca5-d478" type="selectionEntry" targetId="78e3-fb14-2529-293e"/>
+    <entryLink import="true" name="Flash Gitz" hidden="false" id="068c-b2e4-75f8-ce22" type="selectionEntry" targetId="f75b-dbbf-a63e-01bd"/>
   </entryLinks>
   <rules>
     <rule id="a5a3-075e-40e2-129d" name="WAAAARGH!" publicationId="9f92-b7df-cf75-9a46" page="49" hidden="false">
@@ -346,7 +347,7 @@
         <entryLink id="6c5f-2715-f08c-1aca" name="Army Commander" hidden="false" collective="false" import="true" targetId="a421-a053-976d-af75" type="selectionEntry"/>
         <entryLink id="d1c9-e811-3895-29ec" name="Wargear Cards" hidden="false" collective="false" import="true" targetId="fff1-a6e4-735f-541f" type="selectionEntryGroup">
           <constraints>
-            <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e9a3-a199-fac9-ed6c" type="max"/>
+            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e9a3-a199-fac9-ed6c" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="fb62-81d9-01c7-5c37" name="Gretchin Assistants" hidden="false" collective="false" import="true" targetId="e2ac-72c5-3911-3b07" type="selectionEntry">
@@ -529,7 +530,7 @@
         <entryLink id="0b2f-08d9-6975-8228" name="Armour" hidden="false" collective="false" import="true" targetId="728c-593a-34d7-388b" type="selectionEntryGroup"/>
         <entryLink id="0fd7-f928-d86e-79d0" name="Wargear Cards" hidden="false" collective="false" import="true" targetId="fff1-a6e4-735f-541f" type="selectionEntryGroup">
           <constraints>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3112-19cb-bf98-8d4e" type="max"/>
+            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3112-19cb-bf98-8d4e" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="3800-66b2-5e55-d8ca" name="Bolt Pistol" hidden="false" collective="false" import="true" targetId="b5bb-7853-53cb-bec4" type="selectionEntry">
@@ -624,7 +625,7 @@
       <entryLinks>
         <entryLink id="6a8c-3950-9180-c840" name="Wargear Cards" hidden="false" collective="false" import="true" targetId="fff1-a6e4-735f-541f" type="selectionEntryGroup">
           <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff14-981c-e94c-e9a3" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff14-981c-e94c-e9a3" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="8858-5593-b132-64b8" name="Assault Weapons" hidden="false" collective="false" import="true" targetId="5062-76ee-9085-6293" type="selectionEntryGroup"/>
@@ -666,7 +667,7 @@
       <entryLinks>
         <entryLink id="3c9b-b1e9-aaf8-dac3" name="Wargear Cards" hidden="false" collective="false" import="true" targetId="fff1-a6e4-735f-541f" type="selectionEntryGroup">
           <constraints>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="10ba-2ad9-3347-65e8" type="max"/>
+            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="10ba-2ad9-3347-65e8" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="0218-8b6a-ed02-abb7" name="Armour" hidden="false" collective="false" import="true" targetId="728c-593a-34d7-388b" type="selectionEntryGroup"/>
@@ -719,7 +720,7 @@
         <entryLink id="eb78-5ed5-2647-11c7" name="Stikkbombz" hidden="false" collective="false" import="true" targetId="0fa9-1829-1611-efc8" type="selectionEntryGroup"/>
         <entryLink id="001d-c5f1-ec8e-441b" name="Wargear Cards" hidden="false" collective="false" import="true" targetId="fff1-a6e4-735f-541f" type="selectionEntryGroup">
           <constraints>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="71ae-386f-9588-0672" type="max"/>
+            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="71ae-386f-9588-0672" type="max"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -853,7 +854,7 @@
         </entryLink>
         <entryLink import="true" name="Wargear Cards" hidden="false" id="e25b-f086-a9fe-512f" collective="false" targetId="fff1-a6e4-735f-541f" type="selectionEntryGroup">
           <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="30d4-71b7-0f1a-09d3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="30d4-71b7-0f1a-09d3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -891,7 +892,7 @@
         </entryLink>
         <entryLink id="c788-0723-0853-93c5" name="Wargear Cards" hidden="false" collective="false" import="true" targetId="fff1-a6e4-735f-541f" type="selectionEntryGroup">
           <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="16cb-ec68-6b87-4a05" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="16cb-ec68-6b87-4a05" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="f941-7bdc-57a8-426c" name="Flak Armour" hidden="false" collective="false" import="true" targetId="73c7-e55f-280c-5a3d" type="selectionEntry">
@@ -972,7 +973,7 @@
         <entryLink id="a9e1-7f4a-6b38-b0e4" name="Armour" hidden="false" collective="false" import="true" targetId="728c-593a-34d7-388b" type="selectionEntryGroup"/>
         <entryLink id="faf1-56b8-d878-276b" name="Wargear Cards" hidden="false" collective="false" import="true" targetId="fff1-a6e4-735f-541f" type="selectionEntryGroup">
           <constraints>
-            <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="86f0-c505-60ba-58d9" type="max"/>
+            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="86f0-c505-60ba-58d9" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="9f8b-1ada-2ba6-4dad" name="Gretchin Assistants" hidden="false" collective="false" import="true" targetId="e2ac-72c5-3911-3b07" type="selectionEntry">
@@ -1044,7 +1045,7 @@
         <entryLink id="5ed2-6d68-a836-d383" name="Army Commander" hidden="false" collective="false" import="true" targetId="a421-a053-976d-af75" type="selectionEntry"/>
         <entryLink id="1540-4125-35f3-65f7" name="Wargear Cards" hidden="false" collective="false" import="true" targetId="fff1-a6e4-735f-541f" type="selectionEntryGroup">
           <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e83-f933-8b22-ea8a" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e83-f933-8b22-ea8a" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="9047-e32a-e605-a3fe" name="Gretchin Assistants" hidden="false" collective="false" import="true" targetId="e2ac-72c5-3911-3b07" type="selectionEntry">
@@ -1087,7 +1088,7 @@
         </entryLink>
         <entryLink id="e34a-6ec3-6f0c-7801" name="Wargear Cards" hidden="false" collective="false" import="true" targetId="fff1-a6e4-735f-541f" type="selectionEntryGroup">
           <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="44da-c33a-491a-2016" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="44da-c33a-491a-2016" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="13b2-f7e0-66aa-5e51" name="Flak Armour" hidden="false" collective="false" import="true" targetId="73c7-e55f-280c-5a3d" type="selectionEntry">
@@ -1205,7 +1206,7 @@
       <entryLinks>
         <entryLink id="5f06-073a-f2ff-9c13" name="Wargear Cards" hidden="false" collective="false" import="true" targetId="fff1-a6e4-735f-541f" type="selectionEntryGroup">
           <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a6f-eea7-ee5e-beec" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a6f-eea7-ee5e-beec" type="max"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -1503,17 +1504,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="bee8-649f-785c-21fb" name="Freebooter Pirates" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="name" value="Flash Gitz">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4451-caa6-9308-ed35" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <categoryLinks>
         <categoryLink id="64e8-091c-636b-13cc" name="Mobs" hidden="false" targetId="f72b-82f4-2a38-7d26" primary="true"/>
         <categoryLink id="df79-aa33-6031-ec6a" name="Orks" hidden="false" targetId="3512-45d3-a466-0e54" primary="false"/>
@@ -1525,54 +1515,10 @@
             <constraint field="selections" scope="parent" value="20" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0684-8dd1-347c-8d23" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="4db7-cf71-8ab2-8e7d" name="Freebooter Pirate" hidden="false" targetId="fb97-26e6-afa1-92ec" type="profile">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4451-caa6-9308-ed35" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </infoLink>
-            <infoLink id="b914-7546-528d-1903" name="Flash Gitz" hidden="false" targetId="6b8b-f5f8-f8aa-278b" type="profile">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4451-caa6-9308-ed35" type="notEqualTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </infoLink>
+            <infoLink id="4db7-cf71-8ab2-8e7d" name="Freebooter Pirate" hidden="false" targetId="fb97-26e6-afa1-92ec" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="12"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="4451-caa6-9308-ed35" name="Upgrade to Flash Gitz" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dd7f-cab2-8a21-3b7a" type="notEqualTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a3ed-468a-380c-74d7" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1666,27 +1612,6 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a2a4-2516-cbc0-78a8" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="96d9-8ac7-2683-1add" type="max"/>
-          </constraints>
-        </entryLink>
-        <entryLink id="fae8-4523-6ed0-969a" name="Wargear Cards" hidden="false" collective="false" import="true" targetId="fff1-a6e4-735f-541f" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="increment" field="870f-c661-6dfd-15d0" value="1">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c8d-c2d4-80b3-43db" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4451-caa6-9308-ed35" type="notEqualTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="870f-c661-6dfd-15d0" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="589e-3c66-9998-0f56" name="Nobz Champion" hidden="false" collective="false" import="true" targetId="3243-c173-7d0e-1175" type="selectionEntry">
@@ -4320,7 +4245,7 @@
         <entryLink id="1a9a-5dbb-b828-4107" name="Transport (Boars only for Snakebites! Paint em proper)" hidden="false" collective="false" import="true" targetId="3ce0-224f-374c-3013" type="selectionEntryGroup"/>
         <entryLink id="bc76-f14f-c489-5e15" name="Wargear Cards" hidden="false" collective="false" import="true" targetId="fff1-a6e4-735f-541f" type="selectionEntryGroup">
           <constraints>
-            <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b741-e314-f24b-df84" type="max"/>
+            <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b741-e314-f24b-df84" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="cbc2-b1bc-4621-0f2e" name="Kustom Shoota" publicationId="9f92-b7df-cf75-9a46" page="45" hidden="false" collective="false" import="true" type="upgrade">
@@ -4444,7 +4369,7 @@
         <entryLink id="6e35-96ec-3a33-d467" name="Transport (Boars only for Snakebites! Paint em proper)" hidden="false" collective="false" import="true" targetId="3ce0-224f-374c-3013" type="selectionEntryGroup"/>
         <entryLink id="eded-94d9-8ee8-bc8d" name="Wargear Cards" hidden="false" collective="false" import="true" targetId="fff1-a6e4-735f-541f" type="selectionEntryGroup">
           <constraints>
-            <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c088-d0d9-c369-87b2" type="max"/>
+            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c088-d0d9-c369-87b2" type="max"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -4607,7 +4532,7 @@ In addition, if the Ork is hit by an attack then he is treated in the same way a
         </entryLink>
         <entryLink id="c9d8-1cd6-c390-92f5" name="Wargear Cards" hidden="false" collective="false" import="true" targetId="fff1-a6e4-735f-541f" type="selectionEntryGroup">
           <constraints>
-            <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51a2-89f8-bf35-068c" type="max"/>
+            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51a2-89f8-bf35-068c" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="2eb2-26d6-94ae-83ae" name="Kustom Blasta" publicationId="9f92-b7df-cf75-9a46" page="48" hidden="false" collective="false" import="true" type="upgrade">
@@ -4775,7 +4700,7 @@ May headbutt in close combat instead of making a normal attack. If he does this 
         </entryLink>
         <entryLink id="266e-a1af-c7b7-1718" name="Wargear Cards" hidden="false" collective="false" import="true" targetId="fff1-a6e4-735f-541f" type="selectionEntryGroup">
           <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e878-e048-8270-3a44" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e878-e048-8270-3a44" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="042e-28f4-4069-7fb2" name="Assault Weapons" hidden="false" collective="false" import="true" targetId="5062-76ee-9085-6293" type="selectionEntryGroup"/>
@@ -4966,7 +4891,7 @@ May headbutt in close combat instead of making a normal attack. If he does this 
         </entryLink>
         <entryLink id="ceba-7dca-f160-06e2" name="Wargear Cards" hidden="false" collective="false" import="true" targetId="fff1-a6e4-735f-541f" type="selectionEntryGroup">
           <constraints>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="799a-b2de-bc87-28b1" type="max"/>
+            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="799a-b2de-bc87-28b1" type="max"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -7811,6 +7736,193 @@ Weapon*</characteristic>
         </profile>
       </profiles>
     </selectionEntry>
+    <selectionEntry id="f75b-dbbf-a63e-01bd" name="Flash Gitz" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notEqualTo" value="1" field="selections" scope="roster" childId="dd7f-cab2-8a21-3b7a" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="8294-992a-4364-630b" name="Mobs" hidden="false" targetId="f72b-82f4-2a38-7d26" primary="true"/>
+        <categoryLink id="3745-0cb9-5934-9894" name="Orks" hidden="false" targetId="3512-45d3-a466-0e54" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="8c27-7397-4806-a23a" name="Flash Gitz" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bfd6-b739-9acb-8de4" type="min"/>
+            <constraint field="selections" scope="parent" value="20" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="607f-e30d-5857-e72b" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="a243-a576-305d-7b95" name="Flash Gitz" hidden="false" targetId="6b8b-f5f8-f8aa-278b" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="12"/>
+          </costs>
+          <entryLinks>
+            <entryLink import="true" name="Wargear Cards" hidden="false" id="b73b-47f3-370c-720d" collective="false" targetId="fff1-a6e4-735f-541f" type="selectionEntryGroup">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8621-1c69-af60-24c2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry id="f9de-6432-3679-f3ae" name="Upgrade to Flash Gitz" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dd7f-cab2-8a21-3b7a" type="notEqualTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="796d-6d76-b512-1218" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="b6cc-114f-e43b-5587" name="Stikkbombs (per model)" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="6aac-4b5f-6078-41a3" name="Krak Stikkbombz" hidden="false" collective="false" import="true" targetId="4c74-cf98-eb1c-09a7" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="3"/>
+              </costs>
+            </entryLink>
+            <entryLink id="6bba-63f8-a3d3-e8c7" name="Melta Stikkbombz" hidden="false" collective="false" import="true" targetId="b343-4ec2-6e98-e6c9" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="03f4-72d6-10dd-9fc4" name="Heavy or Special Weapon" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dce4-d860-18e0-a60f" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="b358-d880-a294-b895" name="Heavy Weapons" hidden="false" collective="false" import="true" targetId="3285-06f0-7e31-29ea" type="selectionEntryGroup"/>
+            <entryLink id="52c4-7a23-2f2a-93dd" name="Special Weapons" hidden="false" collective="false" import="true" targetId="f7fe-0d89-7999-1912" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="d95a-0f49-d387-a64a" name="Bolt Pistol or Bolter for Mob" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="adf1-0d27-bc4f-c23c" name="Bolt Pistol" hidden="false" collective="false" import="true" targetId="b5bb-7853-53cb-bec4" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="4cbc-0d4a-8b99-fc7b" value="1">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c27-7397-4806-a23a" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" field="a17d-4876-b845-7033" value="1">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c27-7397-4806-a23a" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="decrement" field="a17d-4876-b845-7033" value="1">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0e81-7914-e52a-0a8d" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="decrement" field="4cbc-0d4a-8b99-fc7b" value="1">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0e81-7914-e52a-0a8d" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a17d-4876-b845-7033" type="min"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4cbc-0d4a-8b99-fc7b" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="f6b4-3cfb-baf7-ed46" name="Boltgun" hidden="false" collective="false" import="true" targetId="0e81-7914-e52a-0a8d" type="selectionEntry">
+              <modifiers>
+                <modifier type="increment" field="6dfd-8272-e187-604d" value="1">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c27-7397-4806-a23a" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6dfd-8272-e187-604d" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="1"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="e96d-5cba-587e-2038" name="Flak Armour" hidden="false" collective="false" import="true" targetId="73c7-e55f-280c-5a3d" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ee1-1a83-4ee3-d4a3" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad89-7d77-9464-787d" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="2ad7-71c7-17d0-48bf" name="Assault Weapons" hidden="false" collective="false" import="true" targetId="5062-76ee-9085-6293" type="selectionEntryGroup"/>
+        <entryLink id="b731-6a85-7772-4827" name="Axe" hidden="false" collective="false" import="true" targetId="c2ba-db92-5ff9-38c2" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="94da-8dea-8d09-bf89" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f359-8dc9-db86-7276" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="eeb1-2208-e328-da05" name="Frag Stikkbombz" hidden="false" collective="false" import="true" targetId="2a30-773d-8168-ce90" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3458-3597-5ae5-7866" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce03-e388-a472-2190" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="8ab0-f889-9fb7-ec69" name="Nobz Champion" hidden="false" collective="false" import="true" targetId="3243-c173-7d0e-1175" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="459a-0551-cb9e-0b0e" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="13"/>
+          </costs>
+          <entryLinks>
+            <entryLink import="true" name="Wargear Cards" hidden="false" id="db4e-67df-4d62-8cbb" collective="false" targetId="fff1-a6e4-735f-541f" type="selectionEntryGroup">
+              <modifiers>
+                <modifier type="increment" value="1" field="e76d-b4a9-4a44-f09b">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="8c27-7397-4806-a23a" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notEqualTo" value="1" field="selections" scope="roster" childId="f9de-6432-3679-f3ae" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e76d-b4a9-4a44-f09b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d536-de10-cc11-f6b9" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="5062-76ee-9085-6293" name="Assault Weapons" publicationId="4590-6ba9-5482-a1fa" page="61" hidden="false" collective="false" import="true">
@@ -7875,6 +7987,7 @@ Weapon*</characteristic>
                     <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a0c4-9884-d669-6cb5" type="notInstanceOf"/>
                     <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3a51-3f5d-6fc6-16ba" type="notInstanceOf"/>
                     <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b008-f748-c4ae-4c36" type="notInstanceOf"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="parent" childId="7842-e0f8-0206-8ab7" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="Drillboss"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -8474,30 +8587,12 @@ Becomes subject to the rules for Madboyz</characteristic>
     <selectionEntryGroup id="fff1-a6e4-735f-541f" name="Wargear Cards" hidden="false" collective="false" import="true">
       <selectionEntryGroups>
         <selectionEntryGroup id="bf5b-5578-c79d-4134" name="Cards" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0316-f054-534a-d96b" type="notEqualTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
           <entryLinks>
             <entryLink id="5602-9318-2b10-c2e4" name="Wargear Cards (Orks)" hidden="false" collective="false" import="true" targetId="804e-fd3d-f19b-0bbc" type="selectionEntryGroup"/>
             <entryLink id="5a96-74fa-1807-def2" name="Wargear Cards (Generic)" hidden="false" collective="false" import="true" targetId="b5be-2d0f-67e2-6260" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="68a3-c69b-8826-b7c2" name="Show Wargear Cards" hidden="false" collective="false" import="true" targetId="0316-f054-534a-d96b" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="755a-4b28-0956-b4f3" type="max"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="fe1a-6387-546b-2a03" name="Wargear Cards (Vehicle - Orks)" hidden="false" collective="false" import="true">
       <selectionEntries>

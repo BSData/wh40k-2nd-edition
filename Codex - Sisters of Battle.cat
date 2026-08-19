@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b7a0-f77c-22d5-5989" name="Codex - Sisters of Battle" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="b7a0-f77c-22d5-5989" name="Codex - Sisters of Battle" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="7900-d214-741e-e36e" name="Squads" hidden="false"/>
     <categoryEntry id="0623-7337-2260-e37e" name="Support" hidden="false"/>
@@ -1335,7 +1335,7 @@
           </constraints>
           <entryLinks>
             <entryLink id="8605-c9f1-8c5f-340e" name="Seraphim Superior" hidden="false" collective="false" import="true" targetId="807b-1735-7dba-aca8" type="selectionEntry"/>
-            <entryLink id="e95f-c65d-572d-7860" name="Veteran Sister Superior" hidden="false" collective="false" import="true" targetId="ad7c-5f09-67fd-46a4" type="selectionEntry"/>
+            <entryLink id="e95f-c65d-572d-7860" name="Veteran Seraphim Superior" hidden="false" collective="false" import="true" targetId="b6d0-60d1-38d4-cae5" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -1908,6 +1908,29 @@ Lasts 1 game turn only</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="160"/>
       </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Bodyguard Options" id="288a-8054-650c-b1c2" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink import="true" name="Bodyguard Unit" hidden="false" id="b109-730c-fb32-bac4" collective="false" targetId="726b-8381-9ff0-fea3" type="selectionEntry">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7bc2-ca35-810c-7f52" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4a80-5523-4bc2-9204" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="150"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Banner Bearer" hidden="false" id="8628-2de6-2101-8fe7" collective="false" targetId="a952-f7c3-8d2a-290b" type="selectionEntry">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b1e8-5ec4-e217-58d9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="70"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="db9a-b592-f8d4-bbb3" name="Uriah Jacobus, Protector of the Faith" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>

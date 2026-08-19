@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="8d0e-9c4e-17af-ed93" name="Codex - Space Wolves" revision="10" battleScribeVersion="2.03" authorName="Boff" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="8d0e-9c4e-17af-ed93" name="Codex - Space Wolves" revision="11" battleScribeVersion="2.03" authorName="Boff" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Terminators cannot add the teleport ability (which you need to increase their points by 50%) due to a limitation in Battlescribe. No way to modify the points in that way. 
 
 If they ever change that I will update. Until then, ye olde calcuator will do!</readme>
@@ -1450,9 +1450,10 @@ and  courage  in  the face of death. Once broken, a Space Marine squad may rally
               <modifiers>
                 <modifier type="set" field="66e1-a50e-d335-ba07" value="0">
                   <conditionGroups>
-                    <conditionGroup type="and">
+                    <conditionGroup type="or">
                       <conditions>
                         <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff45-72d3-781e-6006" type="equalTo"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="bd6a-bc0f-d03b-6ef0" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false" childName="Cyclone Terminator Missile Launcher"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -1467,7 +1468,7 @@ and  courage  in  the face of death. Once broken, a Space Marine squad may rally
                     <modifierGroup>
                       <comment>Remove bolter when dual melee</comment>
                       <modifiers>
-                        <modifier type="increment" field="989c-d0c2-63d0-3dac" value="1">
+                        <modifier type="set" field="989c-d0c2-63d0-3dac" value="1">
                           <conditionGroups>
                             <conditionGroup type="or">
                               <conditions>
@@ -1479,7 +1480,7 @@ and  courage  in  the face of death. Once broken, a Space Marine squad may rally
                             </conditionGroup>
                           </conditionGroups>
                         </modifier>
-                        <modifier type="decrement" field="989c-d0c2-63d0-3dac" value="1">
+                        <modifier type="set" field="989c-d0c2-63d0-3dac" value="1">
                           <conditionGroups>
                             <conditionGroup type="or">
                               <conditions>
@@ -1492,7 +1493,7 @@ and  courage  in  the face of death. Once broken, a Space Marine squad may rally
                     </modifierGroup>
                   </modifierGroups>
                   <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="989c-d0c2-63d0-3dac" type="max"/>
+                    <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="989c-d0c2-63d0-3dac" type="max"/>
                     <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e413-9c78-b630-868f" type="min"/>
                   </constraints>
                 </entryLink>
@@ -3567,7 +3568,7 @@ and  courage  in  the face of death. Once broken, a Space Marine squad may rally
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="84f3-7757-5bd7-1b67" name="Terminator Weapons" publicationId="4590-6ba9-5482-a1fa" page="62" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="84f3-7757-5bd7-1b67" name="Terminator Weapons" publicationId="4590-6ba9-5482-a1fa" page="62" hidden="false" collective="false" import="true" defaultSelectionEntryId="c5cb-a04b-43af-d272">
       <entryLinks>
         <entryLink id="f4a8-1726-1a1e-c029" name="Assault Cannon" hidden="false" collective="false" import="true" targetId="8953-2383-fa02-9003" type="selectionEntry">
           <constraints>

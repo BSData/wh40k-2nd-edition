@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="82c6-3e15-54c5-a35f" name="Codex - Orks" revision="17" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="82c6-3e15-54c5-a35f" name="Codex - Orks" revision="18" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="23ab-e52d-6e65-01d5" name="Characters" hidden="false"/>
     <categoryEntry id="f72b-82f4-2a38-7d26" name="Mobs" hidden="false"/>
@@ -8,53 +8,6 @@
   <forceEntries>
     <forceEntry id="d235-52bd-79b4-0b6e" name="Orks" hidden="false">
       <categoryLinks>
-        <categoryLink name="Mobs" hidden="false" id="f0f5-1189-2379-f439" targetId="f72b-82f4-2a38-7d26" primary="false">
-          <constraints>
-            <constraint type="min" value="0" field="points" scope="roster" shared="true" id="ef97-7067-9099-6dea" includeChildSelections="true" includeChildForces="true"/>
-            <constraint type="min" value="25" field="points" scope="roster" shared="true" id="953e-73b4-c1df-3433" percentValue="true" includeChildSelections="true" includeChildForces="true"/>
-          </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <modifiers>
-                <modifier type="set" value="-1" field="ef97-7067-9099-6dea"/>
-              </modifiers>
-              <comment>When you have no points limit</comment>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifierGroup>
-            <modifierGroup type="and">
-              <modifiers>
-                <modifier type="increment" value="1" field="ef97-7067-9099-6dea">
-                  <repeats>
-                    <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-                  </repeats>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" value="-1" field="953e-73b4-c1df-3433">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <comment>When having a points limit</comment>
-            </modifierGroup>
-          </modifierGroups>
-        </categoryLink>
         <categoryLink name="Characters" hidden="false" id="9a48-2df3-23d3-f43d" targetId="23ab-e52d-6e65-01d5" primary="false">
           <constraints>
             <constraint type="max" value="0" field="points" scope="roster" shared="true" id="7691-f1ba-1ff2-4760" includeChildSelections="true" includeChildForces="true"/>
@@ -89,6 +42,53 @@
                   </conditionGroups>
                 </modifier>
                 <modifier type="set" value="-1" field="13d9-1b24-642b-8657">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <comment>When having a points limit</comment>
+            </modifierGroup>
+          </modifierGroups>
+        </categoryLink>
+        <categoryLink name="Mobs" hidden="false" id="f0f5-1189-2379-f439" targetId="f72b-82f4-2a38-7d26" primary="false">
+          <constraints>
+            <constraint type="min" value="0" field="points" scope="roster" shared="true" id="ef97-7067-9099-6dea" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="min" value="25" field="points" scope="roster" shared="true" id="953e-73b4-c1df-3433" percentValue="true" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="-1" field="ef97-7067-9099-6dea"/>
+              </modifiers>
+              <comment>When you have no points limit</comment>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="increment" value="1" field="ef97-7067-9099-6dea">
+                  <repeats>
+                    <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+                  </repeats>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="-1" field="953e-73b4-c1df-3433">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
@@ -1326,6 +1326,9 @@
           </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="add" value="{this} If you want each Nob to have a unique loadout, click the + button at the top for each Nob you want different. If you want them with the same loadout, you can click within the Nob itself on the - and + buttons to change how many are the same" field="info"/>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="7f5d-c599-9a25-9e7d" name="Blood Axe Kommando Mob" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -3398,20 +3401,8 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="e0a6-b80b-81e8-bd34" name="Ork Dreadnought" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="739a-c680-e567-c451" value="99">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4239-fecc-9d06-d706" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="04d9-1039-d3c3-999c" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <constraints>
-        <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="739a-c680-e567-c451" type="max"/>
+        <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="9ff0-e57f-c7a2-1810"/>
       </constraints>
       <infoLinks>
         <infoLink id="7b8c-c856-9279-ef4c" name="Ork Dreadnought Damage Table" hidden="false" targetId="f7f6-86e6-9534-e851" type="rule"/>
@@ -3469,6 +3460,46 @@
       <costs>
         <cost name="pts" typeId="points" value="120"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="99" field="9ff0-e57f-c7a2-1810">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="1841-7cb8-e543-9499" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Mad Doc Grotsnik, Deathskull Painboy"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="04d9-1039-d3c3-999c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Painboy"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="add" value="{this} Requires 1 Painboy and 1 Mekanik! Codex page: 61" field="error">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="1841-7cb8-e543-9499" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Mad Doc Grotsnik, Deathskull Painboy"/>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="04d9-1039-d3c3-999c" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Painboy"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="a18e-546c-6d24-4287" name="Power Claw" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
@@ -3479,18 +3510,7 @@
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d29b-7c41-486d-2ae8" name="Space Ork Battlewagon" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="07cd-7140-e1e8-065f" value="99">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4239-fecc-9d06-d706" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
+    <selectionEntry id="d29b-7c41-486d-2ae8" name="Ork Battlewagon" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="07cd-7140-e1e8-065f" type="max"/>
       </constraints>
@@ -3510,6 +3530,38 @@
       <costs>
         <cost name="pts" typeId="points" value="50"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="99" field="07cd-7140-e1e8-065f">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="dac2-9fb5-5933-86a3" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Zodgrod Wortsnagga, Snakebite Runtmaster"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="e3c7-9896-d918-9c99" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Runtherd"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="add" value="{this} Requires 1 Mekanik! Codex page: 62" field="error">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="546b-5a19-135d-52d4" name="Pulsa Rokkit" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
@@ -3554,27 +3606,48 @@
       <costs>
         <cost name="pts" typeId="points" value="50"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry id="ede6-bc00-9736-dc96" name="Squig Katapult" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" value="99" field="8098-91a5-39b1-d43b">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </conditions>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="99" field="462b-ab25-80ab-8b52">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="dac2-9fb5-5933-86a3" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Zodgrod Wortsnagga, Snakebite Runtmaster"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="e3c7-9896-d918-9c99" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Runtherd"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="add" value="{this} Requires 1 Runtheard and 1 Mekanik! Codex page: 62" field="error">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="1d11-1731-2b68-cf33" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="e3c7-9896-d918-9c99" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="dac2-9fb5-5933-86a3" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Zodgrod Wortsnagga, Snakebite Runtmaster"/>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="e3c7-9896-d918-9c99" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Runtherd"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+    </selectionEntry>
+    <selectionEntry id="ede6-bc00-9736-dc96" name="Squig Katapult" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8098-91a5-39b1-d43b" type="max"/>
       </constraints>
@@ -3598,32 +3671,53 @@
       <costs>
         <cost name="pts" typeId="points" value="40"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry id="b2c9-2c9c-bc66-deb0" name="Smasha Cannon" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="1649-3d40-0b4c-f7d7" value="99">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4239-fecc-9d06-d706" type="atLeast"/>
-              </conditions>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="99" field="8098-91a5-39b1-d43b">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="dac2-9fb5-5933-86a3" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Zodgrod Wortsnagga, Snakebite Runtmaster"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="e3c7-9896-d918-9c99" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Runtherd"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="add" value="{this} Requires 1 Runtheard and 1 Mekanik! Codex page: 62" field="error">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="1d11-1731-2b68-cf33" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="e3c7-9896-d918-9c99" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="dac2-9fb5-5933-86a3" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Zodgrod Wortsnagga, Snakebite Runtmaster"/>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="e3c7-9896-d918-9c99" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Runtherd"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+    </selectionEntry>
+    <selectionEntry id="b2c9-2c9c-bc66-deb0" name="Smasha Gun" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1649-3d40-0b4c-f7d7" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="6921-ce7a-b94f-21ec" name="Smasha Cannon" hidden="false" targetId="a557-d9ed-df3b-dd83" type="profile"/>
+        <infoLink id="6921-ce7a-b94f-21ec" name="Smasha Gun" hidden="false" targetId="a557-d9ed-df3b-dd83" type="profile"/>
         <infoLink id="7c6f-3495-d0c5-7802" name="Artillery Rules" hidden="false" targetId="15f3-31f2-768d-1112" type="rule"/>
         <infoLink id="e153-d0ca-5904-4fa2" name="Ork Field Artillery" hidden="false" targetId="4746-1263-96ff-a156" type="rule"/>
       </infoLinks>
@@ -3642,27 +3736,48 @@
       <costs>
         <cost name="pts" typeId="points" value="45"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry id="c3a3-8222-0fcd-6aa2" name="Traktor Kannon" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" value="99" field="f049-8119-9d7a-f5bb">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </conditions>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="99" field="1649-3d40-0b4c-f7d7">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="dac2-9fb5-5933-86a3" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Zodgrod Wortsnagga, Snakebite Runtmaster"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="e3c7-9896-d918-9c99" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Runtherd"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="add" value="{this} Requires 1 Runtheard and 1 Mekanik! Codex page: 62" field="error">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="1d11-1731-2b68-cf33" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="e3c7-9896-d918-9c99" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="dac2-9fb5-5933-86a3" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Zodgrod Wortsnagga, Snakebite Runtmaster"/>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="e3c7-9896-d918-9c99" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Runtherd"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+    </selectionEntry>
+    <selectionEntry id="c3a3-8222-0fcd-6aa2" name="Traktor Kannon" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f049-8119-9d7a-f5bb" type="max"/>
       </constraints>
@@ -3686,27 +3801,48 @@
       <costs>
         <cost name="pts" typeId="points" value="40"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry id="a69e-9760-e603-7984" name="Splatta Kannon" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" value="99" field="0058-91df-d2dc-b984">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </conditions>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="99" field="f049-8119-9d7a-f5bb">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="dac2-9fb5-5933-86a3" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Zodgrod Wortsnagga, Snakebite Runtmaster"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="e3c7-9896-d918-9c99" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Runtherd"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="add" value="{this} Requires 1 Runtheard and 1 Mekanik! Codex page: 62" field="error">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="1d11-1731-2b68-cf33" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="e3c7-9896-d918-9c99" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="dac2-9fb5-5933-86a3" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Zodgrod Wortsnagga, Snakebite Runtmaster"/>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="e3c7-9896-d918-9c99" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Runtherd"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+    </selectionEntry>
+    <selectionEntry id="a69e-9760-e603-7984" name="Splatta Kannon" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0058-91df-d2dc-b984" type="max"/>
       </constraints>
@@ -3730,6 +3866,46 @@
       <costs>
         <cost name="pts" typeId="points" value="60"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="99" field="0058-91df-d2dc-b984">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="dac2-9fb5-5933-86a3" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Zodgrod Wortsnagga, Snakebite Runtmaster"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="e3c7-9896-d918-9c99" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Runtherd"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="add" value="{this} Requires 1 Runtheard and 1 Mekanik! Codex page: 62" field="error">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="dac2-9fb5-5933-86a3" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Zodgrod Wortsnagga, Snakebite Runtmaster"/>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="e3c7-9896-d918-9c99" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Runtherd"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="6e46-1a6a-5779-dc4b" name="Gretchin Crew" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
@@ -3794,17 +3970,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="1351-119c-f689-6e7f" name="Ork War Buggy" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="2016-d252-ca14-105d" value="99">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4239-fecc-9d06-d706" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2016-d252-ca14-105d" type="max"/>
       </constraints>
@@ -3859,19 +4024,40 @@
       <costs>
         <cost name="pts" typeId="points" value="45"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="99" field="2016-d252-ca14-105d">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="dac2-9fb5-5933-86a3" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Zodgrod Wortsnagga, Snakebite Runtmaster"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="e3c7-9896-d918-9c99" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Runtherd"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="add" value="{this} Requires 1 Mekanik! Codex page: 63" field="error">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="f433-c85b-8f5e-34a0" name="Ork Scorcher" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="009f-37e0-b4e9-3a87" value="99">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4239-fecc-9d06-d706" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="009f-37e0-b4e9-3a87" type="max"/>
       </constraints>
@@ -3902,19 +4088,40 @@
       <costs>
         <cost name="pts" typeId="points" value="50"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="99" field="009f-37e0-b4e9-3a87">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="dac2-9fb5-5933-86a3" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Zodgrod Wortsnagga, Snakebite Runtmaster"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="e3c7-9896-d918-9c99" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Runtherd"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="add" value="{this} Requires 1 Mekanik! Codex page: 63" field="error">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="3c70-b58d-2ca0-a5db" name="Ork Wartrak" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="a4b2-4702-9ccb-2242" value="99">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4239-fecc-9d06-d706" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a4b2-4702-9ccb-2242" type="max"/>
       </constraints>
@@ -3969,6 +4176,38 @@
       <costs>
         <cost name="pts" typeId="points" value="50"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="99" field="a4b2-4702-9ccb-2242">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="dac2-9fb5-5933-86a3" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Zodgrod Wortsnagga, Snakebite Runtmaster"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="e3c7-9896-d918-9c99" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Runtherd"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="add" value="{this} Requires 1 Mekanik! Codex page: 63" field="error">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="d385-2937-ee02-d947" name="Ork Warbike" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
@@ -4958,6 +5197,11 @@ May headbutt in close combat instead of making a normal attack. If he does this 
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a33c-2951-a152-2f43" type="lessThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="Must have 1 unit of Blood Axe Boyz" field="error">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="a33c-2951-a152-2f43" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -7445,17 +7689,38 @@ See Datafax for additional rules</description>
       <constraints>
         <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="dd1a-51db-6cf2-d293" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
-      <modifiers>
-        <modifier type="set" value="99" field="dd1a-51db-6cf2-d293">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="99" field="dd1a-51db-6cf2-d293">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="dac2-9fb5-5933-86a3" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Zodgrod Wortsnagga, Snakebite Runtmaster"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="e3c7-9896-d918-9c99" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false" childName="Runtherd"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="add" value="{this} Requires 1 Mekanik!" field="error">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Bowelburna" hidden="false" id="393b-9fd6-4be0-3308">
       <costs>
@@ -7771,25 +8036,9 @@ Weapon*</characteristic>
               </constraints>
             </entryLink>
           </entryLinks>
-        </selectionEntry>
-        <selectionEntry id="f9de-6432-3679-f3ae" name="Upgrade to Flash Gitz" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dd7f-cab2-8a21-3b7a" type="notEqualTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
+            <modifier type="add" value="{this} To add a Wargear Card or unique weapons for each model, hit the + sign to add an individual model first and then equip" field="info"/>
           </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="796d-6d76-b512-1218" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -7903,7 +8152,7 @@ Weapon*</characteristic>
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="notEqualTo" value="1" field="selections" scope="roster" childId="f9de-6432-3679-f3ae" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="notEqualTo" value="1" field="selections" scope="roster" childId="f75b-dbbf-a63e-01bd" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true" childName="Flash Gitz"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -9429,7 +9678,7 @@ Body</characteristic>
         <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Close Combat</characteristic>
       </characteristics>
     </profile>
-    <profile id="9b7c-b4fd-8ef4-54fc" name="Space Ork Battlewagon" publicationId="9f92-b7df-cf75-9a46" page="datafax" hidden="false" typeId="371a-1ec9-2157-1eb6" typeName="Vehicle">
+    <profile id="9b7c-b4fd-8ef4-54fc" name="Ork Battlewagon" publicationId="9f92-b7df-cf75-9a46" page="datafax" hidden="false" typeId="371a-1ec9-2157-1eb6" typeName="Vehicle">
       <characteristics>
         <characteristic name="Slow Speed" typeId="7c52-da5f-7f1a-95fd">8</characteristic>
         <characteristic name="Combat Speed" typeId="87a6-dd16-ba8f-ff71">18</characteristic>
@@ -9482,7 +9731,7 @@ See Rules</characteristic>
         <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Move or Fire, Ork Artillery</characteristic>
       </characteristics>
     </profile>
-    <profile id="a557-d9ed-df3b-dd83" name="Smasha Cannon" publicationId="9f92-b7df-cf75-9a46" page="14" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+    <profile id="a557-d9ed-df3b-dd83" name="Smasha Gun" publicationId="9f92-b7df-cf75-9a46" page="14" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
       <characteristics>
         <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">Special</characteristic>
         <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">Special</characteristic>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7bb5-646e-ec66-1cdd" name="Codex - Assassins" revision="5" battleScribeVersion="2.03" authorName="Boff" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="7bb5-646e-ec66-1cdd" name="Codex - Assassins" revision="6" battleScribeVersion="2.03" authorName="Boff" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="9778-1163-ce67-b2e4" name="Assassins Ally" hidden="false"/>
   </categoryEntries>
@@ -80,7 +80,7 @@
               <modifiers>
                 <modifier type="increment" value="1" field="d211-3370-493c-27c6">
                   <repeats>
-                    <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+                    <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
                   </repeats>
                   <conditionGroups>
                     <conditionGroup type="and">
@@ -353,7 +353,7 @@ If successfully dodged a blast template, place the model to the outside area of 
         <categoryLink id="3205-6d5a-f35b-be70" name="Assassins Ally" hidden="false" targetId="9778-1163-ce67-b2e4" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="05d4-8d08-eb6e-9e79" name="New SelectionEntryGroup" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="05d4-8d08-eb6e-9e79" name="Assassin Type" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7bf7-371f-1f90-5ee8" type="max"/>
           </constraints>

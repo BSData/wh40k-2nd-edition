@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="9ea8-c89d-9104-ed03" name="Warhammer 40k 2nd Edition" revision="28" battleScribeVersion="2.03" authorName="Boff" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
+<gameSystem id="9ea8-c89d-9104-ed03" name="Warhammer 40k 2nd Edition" revision="29" battleScribeVersion="2.03" authorName="Boff" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
   <comment>Warhammer 2nd Edition 40k</comment>
   <readme>Added more wargear cards</readme>
   <publications>
@@ -25,7 +25,7 @@
     <costType id="points" name="pts" defaultCostLimit="-1" hidden="false"/>
   </costTypes>
   <profileTypes>
-    <profileType id="219f-0faa-a2d8-f766" name="Unit">
+    <profileType id="219f-0faa-a2d8-f766" name="Unit" kind="model">
       <comment>Movement Allowance</comment>
       <characteristicTypes>
         <characteristicType id="49de-956f-8797-7436" name="Unit Type"/>
@@ -40,7 +40,7 @@
         <characteristicType id="c751-ec1f-edb8-fd83" name="LD"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="d8e8-6c66-f558-30ee" name="Weapon">
+    <profileType id="d8e8-6c66-f558-30ee" name="Weapon" kind="weapon">
       <characteristicTypes>
         <characteristicType id="a108-ac67-8c42-6bbb" name="Short range"/>
         <characteristicType id="3acf-5fa0-de29-6094" name="Long Range"/>
@@ -59,17 +59,17 @@
         <characteristicType id="b7f1-73cd-d19d-26a6" name="Special"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="cc8b-49d5-829c-bfaf" name="Wargear">
+    <profileType id="cc8b-49d5-829c-bfaf" name="Wargear" kind="spell">
       <characteristicTypes>
         <characteristicType id="f917-8cd8-7592-47dd" name="Special"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="4a47-f6d8-5780-3394" name="Army Commander">
+    <profileType id="4a47-f6d8-5780-3394" name="Army Commander" kind="ability">
       <characteristicTypes>
         <characteristicType id="d0c8-e08c-1828-77b4" name="Strategy Rating"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="4fd7-adb4-cddd-0136" name="Weapon - Missile / Grenade">
+    <profileType id="4fd7-adb4-cddd-0136" name="Weapon - Missile / Grenade" kind="weapon">
       <characteristicTypes>
         <characteristicType id="51dd-04c1-d98c-138d" name="Strength"/>
         <characteristicType id="1028-07d4-bd9d-15d3" name="Damage"/>
@@ -78,19 +78,19 @@
         <characteristicType id="0193-4cf7-077c-97ba" name="Special"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="dcc9-06b3-a75f-6b62" name="Unit Psychic Level">
+    <profileType id="dcc9-06b3-a75f-6b62" name="Unit Psychic Level" kind="rule">
       <characteristicTypes>
         <characteristicType id="9ff5-b223-af73-69a8" name="Psychic Level"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="11a6-8e13-a1ad-7e34" name="Unit Psychic Powers">
+    <profileType id="11a6-8e13-a1ad-7e34" name="Unit Psychic Powers" kind="spell">
       <characteristicTypes>
         <characteristicType id="f6df-d058-1a8b-c2f7" name="Name"/>
         <characteristicType id="f4e5-8437-16be-8b1f" name="Cast on"/>
         <characteristicType id="8ec1-f69b-9d13-1fff" name="Special"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="371a-1ec9-2157-1eb6" name="Vehicle">
+    <profileType id="371a-1ec9-2157-1eb6" name="Vehicle" kind="model">
       <characteristicTypes>
         <characteristicType id="7c52-da5f-7f1a-95fd" name="Slow Speed"/>
         <characteristicType id="87a6-dd16-ba8f-ff71" name="Combat Speed"/>
@@ -105,7 +105,7 @@
         <characteristicType id="fbc3-8073-078a-ac79" name="Side/Rear Armour"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="0395-7b02-e47f-3cdb" name="Walker / Dread">
+    <profileType id="0395-7b02-e47f-3cdb" name="Walker / Dread" kind="model">
       <comment>Movement Allowance</comment>
       <characteristicTypes>
         <characteristicType id="0675-1bfc-2cd4-7bff" name="Unit Type"/>
@@ -122,7 +122,7 @@
         <characteristicType id="7504-90c0-b957-d29c" name="Side/Rear Armour"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="e609-756e-9d6d-3c69" name="Transport">
+    <profileType id="e609-756e-9d6d-3c69" name="Transport" kind="model">
       <characteristicTypes>
         <characteristicType id="517b-f87c-b705-6e9a" name="Transport"/>
         <characteristicType id="9b3e-28dc-77c7-207a" name="Capacity"/>
@@ -211,10 +211,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="223b-6b82-1907-d976" name="Power Armour" publicationId="06e5-8e36-e8c8-aec3" page="67" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b3c-98b8-49bc-d086" type="min"/>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="33b5-f5e6-b83a-0774" type="max"/>
-      </constraints>
       <infoLinks>
         <infoLink id="88ce-e408-edef-b7f8" name="Power Armour" hidden="false" targetId="3f80-695d-2a45-93e8" type="profile"/>
       </infoLinks>
@@ -791,7 +787,7 @@ destroyed. The missile cannot affect other models.</description>
     </selectionEntry>
     <selectionEntry id="9d75-2468-4857-a347" name="Heavy Plasma Gun" publicationId="06e5-8e36-e8c8-aec3" page="37" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
-        <profile id="cf6f-1acf-fe5e-dd19" name="Low energy" publicationId="06e5-8e36-e8c8-aec3" page="37" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+        <profile id="cf6f-1acf-fe5e-dd19" name="Plasma - Low energy" publicationId="06e5-8e36-e8c8-aec3" page="37" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
           <characteristics>
             <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">20</characteristic>
             <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">40</characteristic>
@@ -804,7 +800,7 @@ destroyed. The missile cannot affect other models.</description>
             <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Move or fire, 1 1/2&quot; radius</characteristic>
           </characteristics>
         </profile>
-        <profile id="9695-0667-0d89-96ca" name="Maximum power" publicationId="06e5-8e36-e8c8-aec3" page="37" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+        <profile id="9695-0667-0d89-96ca" name="Plasma - Maximum power" publicationId="06e5-8e36-e8c8-aec3" page="37" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
           <characteristics>
             <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">20</characteristic>
             <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">72</characteristic>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="9ea8-c89d-9104-ed03" name="Warhammer 40k 2nd Edition" revision="29" battleScribeVersion="2.03" authorName="Boff" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
+<gameSystem id="9ea8-c89d-9104-ed03" name="Warhammer 40k 2nd Edition" revision="30" battleScribeVersion="2.03" authorName="Boff" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
   <comment>Warhammer 2nd Edition 40k</comment>
   <readme>Added more wargear cards</readme>
   <publications>
@@ -211,9 +211,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="223b-6b82-1907-d976" name="Power Armour" publicationId="06e5-8e36-e8c8-aec3" page="67" hidden="false" collective="false" import="true" type="upgrade">
-      <infoLinks>
-        <infoLink id="88ce-e408-edef-b7f8" name="Power Armour" hidden="false" targetId="3f80-695d-2a45-93e8" type="profile"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>

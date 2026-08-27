@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="138e-c671-3180-f615" name="Codex - Ultramarines" revision="22" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="138e-c671-3180-f615" name="Codex - Ultramarines" revision="23" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Ultramarines Codex</readme>
   <categoryEntries>
     <categoryEntry id="8be3-6d17-d7d3-faa0" name="Characters" hidden="false"/>
@@ -154,55 +154,78 @@
     </forceEntry>
     <forceEntry id="bb80-dc7e-117d-28d5" name="Ultramarines - Ally List" hidden="false">
       <categoryLinks>
-        <categoryLink id="40fd-3c18-e095-5ed7" name="Allies" hidden="false" targetId="6741-c4c6-274e-36cf" primary="false">
+        <categoryLink id="54b8-24c0-1103-3ca8" name="Support Allies" hidden="false" targetId="2ce9-bd7e-1b19-0211" primary="false">
           <modifiers>
-            <modifier type="set" field="f52b-cc76-583d-abd2" value="50">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b686-76f8-6874-e3e9" type="atLeast"/>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6186-0c50-3540-dc37" type="atLeast"/>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9fec-6f81-5e76-3592" type="atLeast"/>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="261d-dcfd-16cf-3caf" type="atLeast"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="f52b-cc76-583d-abd2" value="25">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef00-5e3b-a59a-902f" type="atLeast"/>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a949-140a-176f-6700" type="atLeast"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
+            <modifier type="set" value="Support - Allies" field="name"/>
           </modifiers>
           <constraints>
-            <constraint field="points" scope="roster" value="0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="f52b-cc76-583d-abd2" type="max"/>
+            <constraint type="max" value="0" field="limit::points" scope="roster" shared="true" id="8e87-fb76-aaab-6a90" percentValue="true" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="5f36-ab6f-0064-dcb5" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
-        </categoryLink>
-        <categoryLink id="54b8-24c0-1103-3ca8" name="Support" hidden="false" targetId="2ce9-bd7e-1b19-0211" primary="false">
-          <modifiers>
-            <modifier type="set" field="83a9-cd51-4052-715b" value="50">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b686-76f8-6874-e3e9" type="atLeast"/>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6186-0c50-3540-dc37" type="atLeast"/>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9fec-6f81-5e76-3592" type="atLeast"/>
-                    <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="261d-dcfd-16cf-3caf" type="atLeast"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="points" scope="roster" value="0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="83a9-cd51-4052-715b" type="max"/>
-          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="increment" value="1" field="5f36-ab6f-0064-dcb5">
+                  <repeats>
+                    <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" childName="any" includeChildForces="true" percentValue="false"/>
+                  </repeats>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="65bb-c554-1585-91d9" shared="true" includeChildSelections="true" childName="Dark Angels" includeChildForces="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="6186-0c50-3540-dc37" shared="true" includeChildSelections="true" childName="Ultramarines" includeChildForces="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="261d-dcfd-16cf-3caf" shared="true" includeChildSelections="true" childName="Eldar" includeChildForces="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9fec-6f81-5e76-3592" shared="true" includeChildSelections="true" childName="Blood Angels" includeChildForces="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="e206-c273-bb7e-6132" shared="true" includeChildSelections="true" childName="Squats" includeChildForces="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <comment>For 50% armies</comment>
+                </modifier>
+                <modifier type="set" value="-1" field="8e87-fb76-aaab-6a90"/>
+              </modifiers>
+              <comment>When having a points limit and 50% forces</comment>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="increment" value="1" field="5f36-ab6f-0064-dcb5">
+                  <repeats>
+                    <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" childName="any" includeChildForces="true" percentValue="false"/>
+                  </repeats>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a949-140a-176f-6700" shared="true" includeChildSelections="true" childName="Sisters of Battle" includeChildForces="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ef00-5e3b-a59a-902f" shared="true" includeChildSelections="true" childName="Imperial Guard" includeChildForces="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <comment>For 50% armies</comment>
+                </modifier>
+                <modifier type="set" value="-1" field="8e87-fb76-aaab-6a90"/>
+              </modifiers>
+              <comment>When having a points limit and 25% forces</comment>
+            </modifierGroup>
+          </modifierGroups>
         </categoryLink>
       </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="{this} Points are shared from your Support % of the main army" field="info"/>
+      </modifiers>
     </forceEntry>
   </forceEntries>
   <entryLinks>
@@ -245,7 +268,7 @@
     <entryLink import="true" name="Combat Squad - Tactical" hidden="false" id="7905-21b9-ce38-643c" type="selectionEntry" targetId="1b31-679b-6095-9712"/>
     <entryLink import="true" name="Combat Squad - Devastator" hidden="false" id="d841-eacd-07d9-19c1" type="selectionEntry" targetId="326b-b8b9-14df-bffb"/>
     <entryLink import="true" name="Combat Squad - Assault" hidden="false" id="d781-497f-633d-093b" type="selectionEntry" targetId="a2a8-5962-db60-11cc"/>
-    <entryLink import="true" name="Veteran Squad" hidden="false" id="7d7a-54d7-2b78-814d" type="selectionEntry" targetId="c5f0-4ff4-f1d2-147d"/>
+    <entryLink import="true" name="Veteran Space Marine Squad" hidden="false" id="7d7a-54d7-2b78-814d" type="selectionEntry" targetId="c5f0-4ff4-f1d2-147d"/>
   </entryLinks>
   <rules>
     <rule id="957a-483e-3a28-6e67" name="Break Tests" publicationId="4590-6ba9-5482-a1fa" page="49" hidden="false">
@@ -265,13 +288,6 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
   </rules>
   <sharedSelectionEntries>
     <selectionEntry id="e664-c21f-4492-a7dc" name="Space Marine Captain" publicationId="4590-6ba9-5482-a1fa" page="63" hidden="false" collective="false" import="true" type="model">
-      <modifiers>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5721-3574-fdd2-92dc" type="max"/>
       </constraints>
@@ -373,6 +389,23 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="96"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="1b22-fc76-8ed0-5765" name="Space Marine Bike" publicationId="4590-6ba9-5482-a1fa" page="63" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
@@ -770,11 +803,6 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
-        </modifier>
         <modifier type="add" value="{this} Must have 1 unit of Terminators" field="error">
           <conditionGroups>
             <conditionGroup type="and">
@@ -821,7 +849,7 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3631-43f8-9569-6535" type="min"/>
           </constraints>
           <entryLinks>
-            <entryLink id="fb89-951a-35c4-c16b" name="Terminator Assault Weapons" hidden="false" collective="false" import="true" targetId="d13f-8fc7-8fe2-9420" type="selectionEntryGroup"/>
+            <entryLink id="fb89-951a-35c4-c16b" name="Terminator Assault Weapons" hidden="false" collective="false" import="true" targetId="d13f-8fc7-8fe2-9420" type="selectionEntryGroup" sortIndex="1"/>
             <entryLink import="true" name="Terminator 2 Hand Assault Weapons" hidden="false" id="1923-fca4-769a-a72a" type="selectionEntryGroup" targetId="0abf-c9fa-40ea-b0ff"/>
           </entryLinks>
         </selectionEntryGroup>
@@ -875,13 +903,39 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="125"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="dd11-eede-074e-7b62" name="Company Standard" publicationId="4590-6ba9-5482-a1fa" page="63" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
+        <modifier type="set" value="0" field="f392-4fa0-fdc9-c023">
           <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="6029-55f6-5155-dcdc" shared="true" includeChildSelections="true" includeChildForces="true" childName="Ancient Helveticus, Bearer of the Battle Standard of Macragge"/>
           </conditions>
+        </modifier>
+        <modifier type="add" value="{this} cannot be included in an army that already has Ancient Helveticus" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="6029-55f6-5155-dcdc" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true" childName="Ancient Helveticus, Bearer of the Battle Standard of Macragge"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -972,15 +1026,25 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="55"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="54de-be57-4ec3-3913" name="Chaplain" publicationId="4590-6ba9-5482-a1fa" page="64" hidden="false" collective="false" import="true" type="model">
-      <modifiers>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <infoLinks>
         <infoLink id="23a6-24d6-c712-2f9b" name="Chaplain" hidden="false" targetId="7301-bdcb-4049-1f7f" type="rule"/>
       </infoLinks>
@@ -1113,6 +1177,22 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="54f7-3050-8549-73cd" name="Chaplain Mighty Hero" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
@@ -1235,13 +1315,6 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       </costs>
     </selectionEntry>
     <selectionEntry id="4f11-67fa-3adf-e0e1" name="Librarian" hidden="false" collective="false" import="true" type="model">
-      <modifiers>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <categoryLinks>
         <categoryLink id="4f4b-ea60-e6ec-0a0e" name="Characters" hidden="false" targetId="8be3-6d17-d7d3-faa0" primary="true"/>
         <categoryLink id="c2e7-1943-e214-e647" name="Ultramarines" hidden="false" targetId="6186-0c50-3540-dc37" primary="false"/>
@@ -1403,15 +1476,25 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="d503-8428-85ee-d4d6" name="Apothecary" publicationId="4590-6ba9-5482-a1fa" page="65" hidden="false" collective="false" import="true" type="model">
-      <modifiers>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <infoLinks>
         <infoLink id="ca69-c1eb-6cbd-f5a7" name="Apothecary" hidden="false" targetId="f627-428f-620b-4d6a" type="profile">
           <modifiers>
@@ -1514,15 +1597,25 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="40"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="ee10-1b3b-ecac-e1e7" name="Techmarine" publicationId="4590-6ba9-5482-a1fa" page="65" hidden="false" collective="false" import="true" type="model">
-      <modifiers>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <infoLinks>
         <infoLink id="344a-5c57-ee1e-4274" name="Techmarine" hidden="false" targetId="1562-2aaa-6e2a-3947" type="rule"/>
         <infoLink id="d70f-4f8d-1081-aa14" name="Techmarine" hidden="false" targetId="9a85-1f35-89ef-da33" type="profile">
@@ -1626,10 +1719,27 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="33"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="99e2-e911-aba3-1722" name="Veteran Sergeant" publicationId="4590-6ba9-5482-a1fa" page="65" hidden="false" collective="false" import="true" type="model">
       <infoLinks>
-        <infoLink id="3a13-d92c-659f-9f24" name="Veteran Sergeants" hidden="false" targetId="df15-6524-e608-c3b9" type="profile">
+        <infoLink id="3a13-d92c-659f-9f24" name="Veteran Sergeant" hidden="false" targetId="df15-6524-e608-c3b9" type="profile">
           <modifiers>
             <modifier type="increment" value="1" field="e39a-b0ee-e6d1-e661">
               <conditions>
@@ -1733,19 +1843,12 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       </costs>
     </selectionEntry>
     <selectionEntry id="e300-75bb-3598-67fd" name="Tactical Squad" publicationId="4590-6ba9-5482-a1fa" page="67" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <categoryLinks>
         <categoryLink id="169e-37d8-c15f-f615" name="Squads" hidden="false" targetId="3017-162b-c153-6519" primary="true"/>
         <categoryLink id="0d1e-25b3-0e05-ae29" name="Ultramarines" hidden="false" targetId="6186-0c50-3540-dc37" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Tactical Marine" hidden="false" id="a67b-9a80-fc65-51f7">
+        <selectionEntry type="model" import="true" name="Tactical Marine" hidden="false" id="a67b-9a80-fc65-51f7" sortIndex="3">
           <constraints>
             <constraint type="max" value="9" field="selections" scope="parent" shared="true" id="0b7a-7ff2-e994-119c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
             <constraint type="min" value="9" field="selections" scope="parent" shared="true" id="d29b-e114-5797-42fc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -1877,7 +1980,7 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="087e-4b19-3572-3b2e" name="Krak Grenade" hidden="false" collective="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
+        <entryLink id="087e-4b19-3572-3b2e" name="Krak Grenade" hidden="false" collective="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry" sortIndex="2">
           <modifiers>
             <modifier type="set" field="name" value="Krak Grenades for squad"/>
           </modifiers>
@@ -1892,6 +1995,23 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="300"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="4734-78a9-8b21-702e" name="Space Marine Sergeant" publicationId="4590-6ba9-5482-a1fa" page="67" hidden="false" collective="false" import="true" type="model">
       <infoLinks>
@@ -1940,13 +2060,6 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       </costs>
     </selectionEntry>
     <selectionEntry id="8d0e-3b8b-18d7-f3d9" name="Assault Squad" publicationId="4590-6ba9-5482-a1fa" page="66" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <categoryLinks>
         <categoryLink id="fa21-f726-7ce4-d317" name="Squads" hidden="false" targetId="3017-162b-c153-6519" primary="true"/>
         <categoryLink id="4cef-d05f-4376-01b8" name="Ultramarines" hidden="false" targetId="6186-0c50-3540-dc37" primary="false"/>
@@ -2121,15 +2234,25 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="300"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="6e2c-c4c7-fac2-94e8" name="Scout Squad" publicationId="4590-6ba9-5482-a1fa" page="67" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <infoLinks>
         <infoLink id="841a-7492-b772-9929" name="Infiltration" hidden="false" targetId="f4b6-ebd6-edee-8d7e" type="rule"/>
         <infoLink id="a290-463b-4991-478f" name="Dispersed Formations" hidden="false" targetId="0540-4f49-13ce-7a98" type="rule"/>
@@ -2140,7 +2263,7 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
         <categoryLink id="c24e-b811-feb6-9084" name="Ultramarines" hidden="false" targetId="6186-0c50-3540-dc37" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="4879-1829-6a91-78ab" name="Scouts" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="4879-1829-6a91-78ab" name="Scouts" hidden="false" collective="false" import="true" type="model" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c95-1221-69b8-69b5" type="max"/>
             <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d945-e0ac-ed9f-dd24" type="min"/>
@@ -2151,44 +2274,42 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
+          <entryLinks>
+            <entryLink import="true" name="Scout Armour" hidden="false" id="57b2-41e6-248b-6d76" collective="false" targetId="e8ab-fe0e-b832-6b89" type="selectionEntry">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="acff-11b4-7269-a5f8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c57c-23f1-b06e-7d87" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Bolt Pistol" hidden="false" id="8485-37c4-cc57-789f" collective="false" targetId="b5bb-7853-53cb-bec4" type="selectionEntry">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="092c-4cc3-7ed4-6a56" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d900-e45c-f0b2-370d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Frag Grenade" hidden="false" id="708c-8c2d-f28a-e1b2" collective="false" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5c0c-d4ca-2ffe-f79c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5069-1683-a43f-2a35" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <modifiers>
+            <modifier type="decrement" value="1" field="6c95-1221-69b8-69b5">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="cec4-166b-0865-4eeb" shared="true" roundUp="false" childName="Scout"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="1" field="d945-e0ac-ed9f-dd24">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="cec4-166b-0865-4eeb" shared="true" roundUp="false" childName="Scout"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="0bb9-6b6f-c8b0-f6cd" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="74c6-95f0-c11f-9d61">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b0b-c31b-6e9b-eaed" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7c28-4a0d-cc61-b199" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="74c6-95f0-c11f-9d61" name="Scout Armour" hidden="false" collective="false" import="true" targetId="e8ab-fe0e-b832-6b89" type="selectionEntry">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b7d2-661b-0c2c-b19d" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="2a0c-ceb4-8849-e972" name="Frag Grenade" hidden="false" targetId="122b-b17a-4e87-5994" type="profile"/>
-                <infoLink id="7de8-4b5f-c064-43f2" name="Bolt Pistol" hidden="false" targetId="3741-3592-b694-79b4" type="profile"/>
-              </infoLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="4cc2-83af-a598-c71e" name="1 Special or Heavy Weapon" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e80-a008-514f-2ce0" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="9b4c-24a8-d519-b3f4" name="Heavy Weapons" hidden="false" collective="false" import="true" targetId="b82f-8f32-5c16-a84b" type="selectionEntryGroup">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3de2-c43d-7dca-bdcd" type="max"/>
-              </constraints>
-            </entryLink>
-            <entryLink id="1982-10dc-475c-b1ec" name="Special Weapons" hidden="false" collective="false" import="true" targetId="717e-c382-eaca-bd29" type="selectionEntryGroup">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d313-4991-a130-bfc0" type="max"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="1e8a-497c-2bba-1cc5" name="Sergeant Type" hidden="false" collective="false" import="true" defaultSelectionEntryId="4440-f605-3230-a5c5">
+        <selectionEntryGroup id="1e8a-497c-2bba-1cc5" name="Sergeant Type" hidden="false" collective="false" import="true" defaultSelectionEntryId="4440-f605-3230-a5c5" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d2ea-eb14-5f80-5b03" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a209-7d63-211f-490d" type="min"/>
@@ -2198,6 +2319,26 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e447-fd9b-55c6-40c4" type="max"/>
               </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Bolt Pistol" hidden="false" id="186b-7670-5d79-b596" collective="false" targetId="b5bb-7853-53cb-bec4" type="selectionEntry">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a014-83d9-9426-52b4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ad14-3dbc-a44c-58ec" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Frag Grenade" hidden="false" id="c38d-f026-48e9-77af" collective="false" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="09df-96eb-4123-df06" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3a46-e5bf-4994-3ef8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Scout Armour" hidden="false" id="390a-5d23-bb2d-93c1" collective="false" targetId="e8ab-fe0e-b832-6b89" type="selectionEntry">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="38a8-4534-5c20-8cf1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="160d-7e83-579f-408e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
             <entryLink id="c257-31a3-be11-c45e" name="Veteran Sergeant" hidden="false" collective="false" import="true" targetId="99e2-e911-aba3-1722" type="selectionEntry">
               <constraints>
@@ -2206,43 +2347,105 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Grenades" id="1ddd-6b83-4cb5-1d21" hidden="false" sortIndex="4">
+          <entryLinks>
+            <entryLink import="true" name="Krak Grenade" hidden="false" id="bb31-8acd-97e6-e135" collective="false" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="Krak Grenades for squad" field="name"/>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3efd-4673-a7f6-f262" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Scout w/ Special or Heavy Weapon" id="32a1-ac92-b764-db65" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Scout (Special/Heavy Weapon)" hidden="false" id="cec4-166b-0865-4eeb" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3184-f07a-1209-2f6e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Scout" id="7640-0657-2c35-d457" hidden="false" targetId="be75-8108-3eb2-c26c" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <entryLinks>
+                <entryLink import="true" name="Scout Armour" hidden="false" id="73a5-506b-c82d-31b7" collective="false" targetId="e8ab-fe0e-b832-6b89" type="selectionEntry">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="19a7-7de8-ae59-f925" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7faf-329a-5379-4e5e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Bolt Pistol" hidden="false" id="9f73-83a7-494e-92ce" collective="false" targetId="b5bb-7853-53cb-bec4" type="selectionEntry">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7ec1-59c7-3e3a-2fe6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b5b9-9e78-31dd-81db" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Frag Grenade" hidden="false" id="3f00-1a6e-b3e1-dc85" collective="false" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c5b6-8cf2-85b1-dec8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3d86-b3b0-9ddd-a9d4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="1 Special or Heavy Weapon" id="91d7-b0b4-2198-8705" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bc99-2cb9-13a2-a0d7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="Heavy Weapons" hidden="false" id="b7dc-a408-9493-4e1b" collective="false" targetId="b82f-8f32-5c16-a84b" type="selectionEntryGroup">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c597-b5a9-771f-8595" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Special Weapons" hidden="false" id="28b6-453a-b71d-3b75" collective="false" targetId="717e-c382-eaca-bd29" type="selectionEntryGroup">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="09bc-3197-b855-0051" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="e365-9ca7-85da-7ee4" name="Krak Grenade" hidden="false" collective="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="name" value="Krak Grenades for squad"/>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bfc0-be16-e827-5bef" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-        </entryLink>
-        <entryLink id="47e7-b2b4-e471-a8ef" name="Scout Weapons" hidden="false" collective="false" import="true" targetId="e933-2bc4-7e49-d5e1" type="selectionEntryGroup"/>
+        <entryLink id="47e7-b2b4-e471-a8ef" name="Scout Weapons" hidden="false" collective="false" import="true" targetId="e933-2bc4-7e49-d5e1" type="selectionEntryGroup" sortIndex="3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="2f46-8a6c-cf10-cbca" name="Scout Sergeant" hidden="false" collective="false" import="true" type="model">
       <infoLinks>
         <infoLink id="399e-61a9-e1f1-ec90" name="Scout Sergeant" hidden="false" targetId="3032-db82-7bf8-d2db" type="profile"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="5de9-7e6a-05ac-67af" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="7ca0-ae7e-8c0d-8360">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b582-b2dc-0c7a-06d0" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d891-f3ff-98f6-c964" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="7ca0-ae7e-8c0d-8360" name="Scout Armour" hidden="false" collective="false" import="true" targetId="e8ab-fe0e-b832-6b89" type="selectionEntry">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3aed-f914-e1c5-e39e" type="max"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
         <selectionEntryGroup id="5403-3938-72c9-1d72" name="Weapons" hidden="false" collective="false" import="true">
           <entryLinks>
             <entryLink id="095d-1e60-8681-6325" name="Assault Weapons" hidden="false" collective="false" import="true" targetId="cd0a-6a8d-1f46-a6db" type="selectionEntryGroup"/>
@@ -2255,13 +2458,6 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       </costs>
     </selectionEntry>
     <selectionEntry id="65b2-1949-1b47-113e" name="Devastator Squad" publicationId="4590-6ba9-5482-a1fa" page="67" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <categoryLinks>
         <categoryLink id="a439-0a5d-4b57-3ba7" name="Squads" hidden="false" targetId="3017-162b-c153-6519" primary="true"/>
         <categoryLink id="fe15-7493-0e22-395a" name="Ultramarines" hidden="false" targetId="6186-0c50-3540-dc37" primary="false"/>
@@ -2372,22 +2568,32 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="300"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
-    <selectionEntry id="ed88-0736-5a4c-2795" name="Bike Squadron" publicationId="4590-6ba9-5482-a1fa" page="67" hidden="false" collective="false" import="true" type="model">
-      <modifiers>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+    <selectionEntry id="ed88-0736-5a4c-2795" name="Bike Squadron" publicationId="4590-6ba9-5482-a1fa" page="67" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink id="cae6-d8ec-db07-90d5" name="Ultramarines" hidden="false" targetId="6186-0c50-3540-dc37" primary="false"/>
         <categoryLink id="cd6e-708a-cc3c-f0ae" name="Squads" hidden="false" targetId="3017-162b-c153-6519" primary="true"/>
         <categoryLink id="b3e1-462b-0890-e2bf" name="Skimmer/Bike" hidden="false" targetId="9187-ca83-9433-d2c7" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="52d1-ea07-ae1f-a787" name="Marine Bikers" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="52d1-ea07-ae1f-a787" name="Marine Bikers" hidden="false" collective="false" import="true" type="model" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="322b-8fbd-5354-df3c" type="max"/>
             <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f3ac-b17b-712f-3ee1" type="min"/>
@@ -2424,7 +2630,7 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="13e8-0e6b-d20d-20f8" name="Max 2 special weapons" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="13e8-0e6b-d20d-20f8" name="Max 2 special weapons" hidden="false" collective="false" import="true" sortIndex="3">
           <entryLinks>
             <entryLink id="e1b4-811b-4a91-cec2" name="Special Weapons" hidden="false" collective="false" import="true" targetId="717e-c382-eaca-bd29" type="selectionEntryGroup">
               <modifiers>
@@ -2433,7 +2639,7 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="81c9-f424-8ca5-f0d4" name="Grenades" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="81c9-f424-8ca5-f0d4" name="Grenades" hidden="false" collective="false" import="true" sortIndex="4">
           <entryLinks>
             <entryLink id="5a11-e3e8-3034-9c91" name="Blind Grenade" hidden="false" collective="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
               <modifiers>
@@ -2466,14 +2672,14 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d700-a83d-6935-a0da" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="962a-8fe9-ce44-cb1f" name="Space Marine Attack Bike" page="Datafax" hidden="false" collective="false" import="true" targetId="f5af-7608-d010-83e6" type="selectionEntry">
+            <entryLink id="962a-8fe9-ce44-cb1f" name="Space Marine Attack Bike Upgrade" page="Datafax" hidden="false" collective="false" import="true" targetId="e47e-d1c1-775c-bc4d" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="534d-ae84-5926-58ef" value="1"/>
               </modifiers>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="89c9-dcd1-0195-4d17" name="Assault Weapons for bikers" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="89c9-dcd1-0195-4d17" name="Assault Weapons for bikers" hidden="false" collective="false" import="true" sortIndex="2">
           <entryLinks>
             <entryLink id="a617-fbc4-3754-ba54" name="Assault Weapons" hidden="false" collective="false" import="true" targetId="cd0a-6a8d-1f46-a6db" type="selectionEntryGroup"/>
           </entryLinks>
@@ -2482,10 +2688,27 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="f5af-7608-d010-83e6" name="Space Marine Attack Bike" page="Datafax" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="set" field="534d-ae84-5926-58ef" value="20">
+        <modifier type="set" field="534d-ae84-5926-58ef" value="-1">
           <comment>Need at least 1 Techmarine</comment>
           <conditionGroups>
             <conditionGroup type="and">
@@ -2497,10 +2720,16 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
+        <modifier type="add" value="{this} must have at least 1 Techmarine the list" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ee10-1b3b-ecac-e1e7" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false">
+                  <comment>Need at least 1 Techmarine</comment>
+                </condition>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -2634,31 +2863,45 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="45"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="beec-c8b6-3175-e050" name="Space Marine Dreadnought" publicationId="4590-6ba9-5482-a1fa" page="68" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="set" field="b9d9-ad93-e73a-4277" value="20">
-          <comment>Need at least 1 Techmarine</comment>
+        <modifier type="set" value="-1" field="78d2-2093-b338-d40a">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ee10-1b3b-ecac-e1e7" shared="true" includeChildSelections="true" includeChildForces="true" childName="Techmarine"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="{this} must have at least 1 Techmarine the list" field="error">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ee10-1b3b-ecac-e1e7" type="atLeast">
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ee10-1b3b-ecac-e1e7" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b9d9-ad93-e73a-4277" type="max">
-          <comment>Need at least 1 Techmarine</comment>
-        </constraint>
+        <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="78d2-2093-b338-d40a"/>
       </constraints>
       <infoLinks>
         <infoLink id="e4d5-8eba-61cf-006a" name="Dreadnought Damage Table" hidden="false" targetId="36d9-dc3d-1005-1810" type="rule"/>
@@ -2719,39 +2962,48 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="115"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="4165-53ae-0eed-f9bd" name="Tarantula" publicationId="4590-6ba9-5482-a1fa" page="68" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="increment" field="e6eb-0a01-8cae-206b" value="3">
-          <repeats>
-            <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ee10-1b3b-ecac-e1e7" repeats="1" roundUp="false"/>
-          </repeats>
+        <modifier type="add" value="{this} must have at least 1 Techmarine the list" field="error">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ee10-1b3b-ecac-e1e7" type="atLeast">
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ee10-1b3b-ecac-e1e7" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="decrement" field="e6eb-0a01-8cae-206b" value="1">
-          <repeats>
-            <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7cef-91cc-d553-c1af" repeats="1" roundUp="false"/>
-          </repeats>
+        <modifier type="set" value="-1" field="e6eb-0a01-8cae-206b">
+          <comment>Need at least 1 Techmarine</comment>
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7cef-91cc-d553-c1af" type="atLeast"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ee10-1b3b-ecac-e1e7" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false">
+                  <comment>Need at least 1 Techmarine</comment>
+                </condition>
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -2790,12 +3042,39 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="20"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="6282-6f49-021b-1958" name="Servitor" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
           <conditions>
             <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" value="5" field="d28e-33a7-7cae-adb3">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="ee10-1b3b-ecac-e1e7" shared="true" roundUp="false" childName="Techmarine" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+        </modifier>
+        <modifier type="add" value="{this} Must have 1 Techmarine for each 5 servitors" field="info">
+          <conditions>
+            <condition type="greaterThan" value="4" field="selections" scope="roster" childId="6282-6f49-021b-1958" shared="true" childName="Servitor" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2810,39 +3089,34 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="d28e-33a7-7cae-adb3" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
     </selectionEntry>
-    <selectionEntry id="7cef-91cc-d553-c1af" name="Rapier Laser Destroyer" publicationId="4590-6ba9-5482-a1fa" page="68" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="7cef-91cc-d553-c1af" name="Rapier Laser Destroyer" publicationId="4590-6ba9-5482-a1fa" page="68" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="decrement" field="7858-8391-1a7d-89ab" value="1">
-          <repeats>
-            <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4165-53ae-0eed-f9bd" repeats="1" roundUp="false"/>
-          </repeats>
+        <modifier type="add" value="{this} must have at least 1 Techmarine the list" field="error">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4165-53ae-0eed-f9bd" type="atLeast"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="increment" field="7858-8391-1a7d-89ab" value="3">
-          <repeats>
-            <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ee10-1b3b-ecac-e1e7" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ee10-1b3b-ecac-e1e7" type="atLeast">
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ee10-1b3b-ecac-e1e7" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
+        <modifier type="set" value="-1" field="7858-8391-1a7d-89ab">
+          <comment>Need at least 1 Techmarine</comment>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ee10-1b3b-ecac-e1e7" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false">
+                  <comment>Need at least 1 Techmarine</comment>
+                </condition>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -2850,21 +3124,11 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
           <comment>Need at least 1 Techmarine</comment>
         </constraint>
       </constraints>
-      <infoLinks>
-        <infoLink id="f589-da56-7dd0-c9a4" name="Rapier Laser Destroyer" hidden="false" targetId="1f71-5395-c068-2ccd" type="rule"/>
-        <infoLink id="d6f1-ee28-6d78-7e78" name="Rapier Laser Destroyer" hidden="false" targetId="4df3-1900-5847-3fcd" type="profile"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="0104-b02b-f6a6-c781" name="Support" hidden="false" targetId="2ce9-bd7e-1b19-0211" primary="true"/>
         <categoryLink id="c490-6084-a59c-bf92" name="Ultramarines" hidden="false" targetId="6186-0c50-3540-dc37" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="7d12-dc9c-1c03-5c00" name="Targeter" hidden="false" collective="false" import="true" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="77a6-d255-13e1-8c26" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7404-e82d-4c04-8b46" type="min"/>
-          </constraints>
-        </entryLink>
         <entryLink id="8241-1d66-0852-9b42" name="Servitor" hidden="false" collective="false" import="true" targetId="6282-6f49-021b-1958" type="selectionEntry">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b85-7040-bb02-0d8f" type="max"/>
@@ -2875,10 +3139,47 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="65"/>
       </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Rapier Laser Destroyer" hidden="false" id="bfff-4619-ce95-3303">
+          <entryLinks>
+            <entryLink import="true" name="Targeter" hidden="false" id="d483-f791-0583-8269" collective="false" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cb13-8e0f-ffdd-58c7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8e3e-62e7-1fa2-5248" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Rapier Laser Destroyer" id="21e0-ec1f-9af3-8363" hidden="false" targetId="4df3-1900-5847-3fcd" type="profile"/>
+            <infoLink name="Rapier Laser Destroyer" id="c074-1434-0559-6d6c" hidden="false" targetId="1f71-5395-c068-2ccd" type="rule"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="51d1-cd7d-052c-8c86" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="871e-7f23-be45-d84d" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="9691-6ae2-65f7-ba31" name="Space Marine Whirlwind" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="set" field="90fd-299f-36fa-a8a2" value="20">
+        <modifier type="set" field="90fd-299f-36fa-a8a2" value="-1">
           <comment>Need at least 1 Techmarine</comment>
           <conditionGroups>
             <conditionGroup type="and">
@@ -2890,10 +3191,16 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
+        <modifier type="add" value="{this} must have at least 1 Techmarine the list" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ee10-1b3b-ecac-e1e7" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false">
+                  <comment>Need at least 1 Techmarine</comment>
+                </condition>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -2959,14 +3266,37 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
           </costs>
         </entryLink>
         <entryLink id="043a-4782-4487-5a61" name="Vehicle Wargear Cards" hidden="false" collective="false" import="true" targetId="fcf7-39a4-11f3-7097" type="selectionEntryGroup"/>
+        <entryLink import="true" name="Space Marine Vehicle Crew" hidden="false" id="8bf8-edda-c6c8-9b7b" type="selectionEntry" targetId="78be-f19b-ef3f-ba0a">
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="6f2e-d56e-3ae8-29a9" includeChildSelections="false"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="ab0e-25ef-e217-20ee" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="aeb6-ea8f-40f7-a5ba" name="Space Marine Land Raider" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="set" field="d159-d592-d686-838c" value="20">
+        <modifier type="set" field="d159-d592-d686-838c" value="-1">
           <comment>Need at least 1 Techmarine</comment>
           <conditionGroups>
             <conditionGroup type="and">
@@ -2978,10 +3308,16 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
+        <modifier type="add" value="{this} must have at least 1 Techmarine the list" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ee10-1b3b-ecac-e1e7" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false">
+                  <comment>Need at least 1 Techmarine</comment>
+                </condition>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -3012,6 +3348,14 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
               </constraints>
             </entryLink>
           </entryLinks>
+          <infoLinks>
+            <infoLink name="Lascannon" id="402f-e017-9456-2dd7" hidden="false" targetId="057a-ec2a-8faf-0a63" type="profile">
+              <modifiers>
+                <modifier type="append" value=",Twin Linked" field="9fb9-b2be-dfa5-713d"/>
+                <modifier type="set" value="Twin Lascannons" field="name"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </entryLink>
         <entryLink id="6a22-0d84-5c74-967a" name="Twin Heavy Bolters" hidden="false" collective="false" import="true" targetId="aac3-4788-82a3-a9ad" type="selectionEntry">
           <constraints>
@@ -3070,14 +3414,37 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
           </costs>
         </entryLink>
         <entryLink id="dd64-083b-fd5e-837a" name="Vehicle Wargear Cards" hidden="false" collective="false" import="true" targetId="fcf7-39a4-11f3-7097" type="selectionEntryGroup"/>
+        <entryLink import="true" name="Space Marine Vehicle Crew" hidden="false" id="73e7-902c-37ff-b20d" type="selectionEntry" targetId="78be-f19b-ef3f-ba0a">
+          <constraints>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="5d95-0c50-c95d-a573" includeChildSelections="false"/>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="f13c-dee0-7126-8b1c" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="220"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="43cb-628a-f96c-84ad" name="Space Marine Predator" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="set" field="d1bc-eab3-cbd9-e6b2" value="20">
+        <modifier type="set" field="d1bc-eab3-cbd9-e6b2" value="-1">
           <comment>Need at least 1 Techmarine</comment>
           <conditionGroups>
             <conditionGroup type="and">
@@ -3089,10 +3456,16 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
+        <modifier type="add" value="{this} must have at least 1 Techmarine the list" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ee10-1b3b-ecac-e1e7" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false">
+                  <comment>Need at least 1 Techmarine</comment>
+                </condition>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -3153,14 +3526,55 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
           </costs>
         </entryLink>
         <entryLink id="5afd-26a2-bfff-b573" name="Vehicle Wargear Cards" hidden="false" collective="false" import="true" targetId="fcf7-39a4-11f3-7097" type="selectionEntryGroup"/>
+        <entryLink import="true" name="Space Marine Vehicle Crew" hidden="false" id="f48c-334b-36a5-5824" type="selectionEntry" targetId="78be-f19b-ef3f-ba0a">
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="acab-964d-9e19-cf95" includeChildSelections="false"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="9f1b-d986-f019-92c7" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="acab-964d-9e19-cf95">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="773d-7dbf-d115-d4cc" shared="true" childName="Side Sponsons" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="9f1b-d986-f019-92c7">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="773d-7dbf-d115-d4cc" shared="true" childName="Side Sponsons" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="add" value="{this} Needs 3 crew if you have sponsons" field="error">
+              <conditions>
+                <condition type="lessThan" value="3" field="selections" scope="parent" childId="f48c-334b-36a5-5824" shared="true" childName="Space Marine Vehicle Crew"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="773d-7dbf-d115-d4cc" shared="true" childName="Side Sponsons" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="90"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="00cb-45a0-d102-67c7" name="Space Marine Rhino" publicationId="4590-6ba9-5482-a1fa" page="70" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="set" field="0c94-28e0-b025-3017" value="20">
+        <modifier type="set" field="0c94-28e0-b025-3017" value="-1">
           <comment>Need at least 1 Techmarine</comment>
           <conditionGroups>
             <conditionGroup type="and">
@@ -3172,10 +3586,16 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
+        <modifier type="add" value="{this} must have at least 1 Techmarine the list" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ee10-1b3b-ecac-e1e7" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false">
+                  <comment>Need at least 1 Techmarine</comment>
+                </condition>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -3250,14 +3670,37 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
           </entryLinks>
         </entryLink>
         <entryLink id="8066-d624-bf7d-2a2b" name="Vehicle Wargear Cards" hidden="false" collective="false" import="true" targetId="fcf7-39a4-11f3-7097" type="selectionEntryGroup"/>
+        <entryLink import="true" name="Space Marine Vehicle Crew" hidden="false" id="96a6-ce39-cc1a-d812" type="selectionEntry" targetId="78be-f19b-ef3f-ba0a">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1f0f-f806-9473-981f" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="86c7-4079-e301-3e6f" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="50"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="9ecc-e264-2619-a029" name="Space Marine Razorback" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="set" field="dace-eb4f-6fcc-8e92" value="20">
+        <modifier type="set" field="dace-eb4f-6fcc-8e92" value="-1">
           <comment>Need at least 1 Techmarine</comment>
           <conditionGroups>
             <conditionGroup type="and">
@@ -3269,10 +3712,16 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
+        <modifier type="add" value="{this} must have at least 1 Techmarine the list" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ee10-1b3b-ecac-e1e7" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false">
+                  <comment>Need at least 1 Techmarine</comment>
+                </condition>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -3339,14 +3788,37 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
           </constraints>
         </entryLink>
         <entryLink id="4a89-9f7d-84d0-aadd" name="Vehicle Wargear Cards" hidden="false" collective="false" import="true" targetId="fcf7-39a4-11f3-7097" type="selectionEntryGroup"/>
+        <entryLink import="true" name="Space Marine Vehicle Crew" hidden="false" id="069e-b71a-3191-ef38" type="selectionEntry" targetId="78be-f19b-ef3f-ba0a">
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="be70-8190-eec6-d754" includeChildSelections="false"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="d4c5-356e-79e5-a29d" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
-    <selectionEntry id="4769-a098-b8e1-e70b" name="Space Marine Land Speeder" publicationId="4590-6ba9-5482-a1fa" page="70" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="4769-a098-b8e1-e70b" name="Space Marine Land Speeder" publicationId="4590-6ba9-5482-a1fa" page="70" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="41f6-2fb0-d1a7-bbe5" value="20">
+        <modifier type="set" field="41f6-2fb0-d1a7-bbe5" value="-1">
           <comment>Need at least 1 Techmarine</comment>
           <conditionGroups>
             <conditionGroup type="and">
@@ -3358,10 +3830,16 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
+        <modifier type="add" value="{this} must have at least 1 Techmarine the list" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ee10-1b3b-ecac-e1e7" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false">
+                  <comment>Need at least 1 Techmarine</comment>
+                </condition>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -3378,29 +3856,6 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
         <categoryLink id="da6f-2949-4e8b-37c6" name="Ultramarines" hidden="false" targetId="6186-0c50-3540-dc37" primary="false"/>
         <categoryLink id="9b8a-1d2b-be24-313f" name="Skimmer/Bike" hidden="false" targetId="9187-ca83-9433-d2c7" primary="false"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="bce7-4056-32b8-54e1" name="Marine Crew" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="baef-c628-faed-39b6" type="max"/>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4b67-b576-83d3-1ce1" type="min"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="1e02-21a6-1353-e169" name="Space Marine" hidden="false" targetId="23c0-aa55-825b-534e" type="profile"/>
-            <infoLink id="cc17-b2e1-d224-d6c5" name="Power Armour" hidden="false" targetId="3f80-695d-2a45-93e8" type="profile"/>
-          </infoLinks>
-          <entryLinks>
-            <entryLink id="683f-d92c-e040-cdf2" name="Bolt Pistol" hidden="false" collective="false" import="true" targetId="b5bb-7853-53cb-bec4" type="selectionEntry">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1893-a5eb-c7e0-e4ec" type="min"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a850-7b73-2972-f645" type="max"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="a528-19c3-b153-6582" name="Crew weapons" hidden="false" collective="false" import="true">
           <selectionEntryGroups>
@@ -3432,26 +3887,42 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="13be-c9b1-3b6e-c302" type="min"/>
           </constraints>
         </entryLink>
-        <entryLink id="cd18-d1fc-71c4-981b" name="Targeter" hidden="false" collective="false" import="true" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
+        <entryLink id="cd18-d1fc-71c4-981b" name="Targeter" hidden="false" collective="false" import="true" targetId="a17e-632e-5e7d-1882" type="selectionEntry" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f6b2-5c02-5577-d4a0" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eef7-aaec-5d07-4d05" type="min"/>
           </constraints>
         </entryLink>
         <entryLink id="1ab1-4b9e-12a6-bd8e" name="Vehicle Wargear Cards" hidden="false" collective="false" import="true" targetId="fcf7-39a4-11f3-7097" type="selectionEntryGroup"/>
+        <entryLink import="true" name="Space Marine Vehicle Crew" hidden="false" id="09c6-2a46-134d-d019" type="selectionEntry" targetId="78be-f19b-ef3f-ba0a">
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="2826-263a-cb21-a42f" includeChildSelections="false"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="f7b9-4cdd-ed80-6119" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="145"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="145c-21a0-1469-dae3" name="Chief Librarian Tigurius" hidden="false" collective="false" import="true" type="model">
-      <modifiers>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc2b-f6db-6466-c912" type="max"/>
       </constraints>
@@ -3497,20 +3968,34 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
             <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f68-f6c0-863a-03d4" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink id="8523-fe84-6243-ab3f" name="Psyker" hidden="false" collective="false" import="true" targetId="56e9-7608-b945-ac81" type="selectionEntry"/>
+        <entryLink id="8523-fe84-6243-ab3f" name="Psyker" hidden="false" collective="false" import="true" targetId="56e9-7608-b945-ac81" type="selectionEntry">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a61c-5f4e-2714-ec07" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="199"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="a1dd-ee6c-ab43-cd6e" name="Marneus Calgar Master of the Ultramarines" hidden="false" collective="false" import="true" type="model">
-      <modifiers>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="77f0-4e9b-c6a7-a361" type="max"/>
       </constraints>
@@ -3584,15 +4069,25 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="116"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="4e2b-02c3-08b1-cb32" name="Ultramarines Chaplain Cassius" hidden="false" collective="false" import="true" type="model">
-      <modifiers>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3669-f7e3-b774-5864" type="max"/>
       </constraints>
@@ -3641,6 +4136,23 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="75"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="6029-55f6-5155-dcdc" name="Ancient Helveticus, Bearer of the Battle Standard of Macragge" publicationId="4590-6ba9-5482-a1fa" page="63" hidden="false" collective="false" import="true" type="model">
       <modifiers>
@@ -3653,10 +4165,14 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
+        <modifier type="add" value="{this} cannot be included in an army without Marneus Calgar" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="a1dd-ee6c-ab43-cd6e" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -3724,15 +4240,25 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="61"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="ef78-2d4e-0226-4956" name="Captain Invictus of the Ultramarines First Company" publicationId="4590-6ba9-5482-a1fa" page="74" hidden="false" collective="false" import="true" type="model">
-      <modifiers>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7c2f-4044-c7ae-315a" type="max"/>
       </constraints>
@@ -3772,6 +4298,23 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="125"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="98b7-e9e0-3f7b-8642" name="Captain Invictus Bodyguard" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
@@ -3783,11 +4326,6 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -3803,13 +4341,6 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       </costs>
     </selectionEntry>
     <selectionEntry id="f319-a6b6-5a68-93de" name="Legion of the Damned" publicationId="4590-6ba9-5482-a1fa" page="67" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set-primary" field="category" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition field="forces" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb80-dc7e-117d-28d5" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac0f-b378-11e8-010e" type="max"/>
       </constraints>
@@ -3822,7 +4353,7 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
         <categoryLink id="b476-2c81-ce85-92c5" name="Squads" hidden="false" targetId="3017-162b-c153-6519" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="8da0-b780-e33c-d78a" name="Legionnaires" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="8da0-b780-e33c-d78a" name="Legionnaires" hidden="false" collective="false" import="true" type="model" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="parent" value="9" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f005-677f-62be-6765" type="max"/>
             <constraint field="selections" scope="parent" value="9" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f07-89e0-3e80-cbd0" type="min"/>
@@ -3833,28 +4364,108 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
+          <entryLinks>
+            <entryLink import="true" name="Bolt Pistol" hidden="false" id="3015-5e42-c94d-7e4a" collective="false" targetId="b5bb-7853-53cb-bec4" type="selectionEntry">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cdba-63a8-33a1-67f8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a282-ae6e-bc53-d558" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Boltgun" hidden="false" id="efb8-2911-33b0-4fb0" collective="false" targetId="0e81-7914-e52a-0a8d" type="selectionEntry">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2dd0-839d-adba-22b6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6c34-00a9-9b3f-7da9" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Frag Grenade" hidden="false" id="a4a8-b925-fa4d-7efd" collective="false" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="954d-e4a7-143e-8e1f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c7f8-8658-e23e-67e7" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Power Armour" hidden="false" id="9199-333e-a45a-8d0f" collective="false" targetId="223b-6b82-1907-d976" type="selectionEntry">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5e35-1e3c-97ec-7ecb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="758c-af8b-f9f8-2566" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <modifiers>
+            <modifier type="decrement" value="1" field="f005-677f-62be-6765">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="a3d9-a429-04cc-f47c" shared="true" roundUp="false" includeChildSelections="true" childName="Legionnaire w/ Special Weapon"/>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="d45b-ed8d-e8d3-8386" shared="true" roundUp="false" includeChildSelections="true" childName="Legionnaire w/ Heavy Weapon"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="1" field="7f07-89e0-3e80-cbd0">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="d45b-ed8d-e8d3-8386" shared="true" roundUp="false" includeChildSelections="true" childName="Legionnaire w/ Heavy Weapon"/>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="a3d9-a429-04cc-f47c" shared="true" roundUp="false" includeChildSelections="true" childName="Legionnaire w/ Special Weapon"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Legionnaire w/ Heavy Weapon" hidden="false" id="d45b-ed8d-e8d3-8386">
+          <entryLinks>
+            <entryLink import="true" name="Bolt Pistol" hidden="false" id="b834-0114-6c63-fed0" type="selectionEntry" targetId="b5bb-7853-53cb-bec4">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6950-098d-2d00-ed7f" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="79e1-7abc-d61f-e746" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Frag Grenade" hidden="false" id="f712-53ab-2077-b9c4" type="selectionEntry" targetId="cc7b-eac9-7cc5-a156">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="46b9-6272-d164-d7d8" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7f32-d423-215d-76fb" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Heavy Weapons" hidden="false" id="5527-de35-8e2d-a056" type="selectionEntryGroup" targetId="b82f-8f32-5c16-a84b"/>
+            <entryLink import="true" name="Power Armour" hidden="false" id="32ac-b832-fe27-146e" collective="false" targetId="223b-6b82-1907-d976" type="selectionEntry">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d9fb-fc1b-cb47-fcc6" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="14e4-3b98-f3da-bb2e" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Legion of the Damned" id="861d-40c5-5981-95c9" hidden="false" targetId="7336-eef6-8c3c-0ed3" type="profile"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2fe2-3dea-0a12-6f0a" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Legionnaire w/ Special Weapon" hidden="false" id="a3d9-a429-04cc-f47c">
+          <entryLinks>
+            <entryLink import="true" name="Bolt Pistol" hidden="false" id="b4ae-d947-509d-c2ce" type="selectionEntry" targetId="b5bb-7853-53cb-bec4">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f7cf-5040-7fd4-451c" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="91db-2bbf-79a6-4f2d" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Frag Grenade" hidden="false" id="2766-7f13-da28-d383" type="selectionEntry" targetId="cc7b-eac9-7cc5-a156">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="83a4-ac33-1219-a441" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6566-bdcb-3851-d6d7" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Special Weapons" hidden="false" id="702f-4ffa-6cef-b22d" type="selectionEntryGroup" targetId="717e-c382-eaca-bd29"/>
+            <entryLink import="true" name="Power Armour" hidden="false" id="0bbc-3bd4-2143-33ab" collective="false" targetId="223b-6b82-1907-d976" type="selectionEntry">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5f65-fa75-913d-4b07" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b9f3-436f-7077-b787" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Legion of the Damned" id="648f-b819-21c4-9f04" hidden="false" targetId="7336-eef6-8c3c-0ed3" type="profile"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="74a2-c1a2-2c29-09df" includeChildSelections="false"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="ab6d-2409-78d1-a866" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="8df0-8a18-e032-aeca">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b3e-fa07-8852-43f9" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a152-cd39-957f-6042" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="8df0-8a18-e032-aeca" name="Power Armour" hidden="false" collective="false" import="true" targetId="223b-6b82-1907-d976" type="selectionEntry">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e363-ceb0-c9a2-683c" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="1055-cc7a-fe79-cc13" name="Frag Grenade" hidden="false" targetId="122b-b17a-4e87-5994" type="profile"/>
-                <infoLink id="b8a1-d9b8-5426-5e71" name="Bolt Pistol" hidden="false" targetId="3741-3592-b694-79b4" type="profile"/>
-                <infoLink id="4622-ca08-8d2d-d4c0" name="Boltgun" hidden="false" targetId="58d4-7a23-0618-b39b" type="profile"/>
-              </infoLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="264f-e2fa-1d49-4451" name="Sergeant Type" hidden="false" collective="false" import="true" defaultSelectionEntryId="f58f-2a42-7da6-a686">
+        <selectionEntryGroup id="264f-e2fa-1d49-4451" name="Sergeant Type" hidden="false" collective="false" import="true" defaultSelectionEntryId="f58f-2a42-7da6-a686" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9407-ba87-fa2e-f5df" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa46-656e-5d41-899a" type="min"/>
@@ -3870,7 +4481,7 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="a020-dd1b-744d-f2c5" name="Krak Grenade" hidden="false" collective="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
+        <entryLink id="a020-dd1b-744d-f2c5" name="Krak Grenade" hidden="false" collective="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry" sortIndex="2">
           <modifiers>
             <modifier type="set" field="name" value="Krak Grenades for squad"/>
           </modifiers>
@@ -3881,40 +4492,33 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </entryLink>
-        <entryLink id="9395-6e38-c7be-72ef" name="Heavy Weapons" hidden="false" collective="false" import="true" targetId="b82f-8f32-5c16-a84b" type="selectionEntryGroup">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a4e-59f7-14ab-858b" type="max"/>
-          </constraints>
-        </entryLink>
-        <entryLink id="20c4-f62a-44fb-c31a" name="Special Weapons" hidden="false" collective="false" import="true" targetId="717e-c382-eaca-bd29" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="390"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="1ac0-7c05-7f9f-853d" name="Legion of the Damned Sergeant" publicationId="4590-6ba9-5482-a1fa" page="67" hidden="false" collective="false" import="true" type="model">
       <infoLinks>
         <infoLink id="7971-93fc-46b7-55fa" name="Legion of the Damned" hidden="false" targetId="7336-eef6-8c3c-0ed3" type="profile"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="efb6-fc7c-a598-c858" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="4f48-23c0-01dd-8cb4">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="28f7-a9da-5e4b-f79e" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="776c-ee0a-02d5-8b33" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="4f48-23c0-01dd-8cb4" name="Power Armour" hidden="false" collective="false" import="true" targetId="223b-6b82-1907-d976" type="selectionEntry">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a75-8436-fdcf-035f" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="6e64-64b0-5d06-500e" name="Frag Grenade" hidden="false" targetId="122b-b17a-4e87-5994" type="profile"/>
-                <infoLink id="89a9-5496-b1f0-1ca8" name="Bolt Pistol" hidden="false" targetId="3741-3592-b694-79b4" type="profile"/>
-                <infoLink id="5af4-7ad9-7d90-9d14" name="Boltgun" hidden="false" targetId="58d4-7a23-0618-b39b" type="profile"/>
-              </infoLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
         <selectionEntryGroup id="27e9-f6c2-a43a-8173" name="Weapons" hidden="false" collective="false" import="true">
           <entryLinks>
             <entryLink id="02e7-e28f-fa5c-0ef0" name="Assault Weapons" hidden="false" collective="false" import="true" targetId="cd0a-6a8d-1f46-a6db" type="selectionEntryGroup"/>
@@ -3924,6 +4528,32 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Power Armour" hidden="false" id="76b6-3a63-27c5-8b75" collective="false" targetId="223b-6b82-1907-d976" type="selectionEntry">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1979-4f9a-a574-7203" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2942-02e1-4a33-e129" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Bolt Pistol" hidden="false" id="5079-0cd9-cceb-a8dc" collective="false" targetId="b5bb-7853-53cb-bec4" type="selectionEntry">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6d8c-2c06-5b5f-b195" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="eb35-5867-cd73-40c1" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Frag Grenade" hidden="false" id="9430-8ffa-2d3c-4e41" collective="false" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d8e4-cac8-5104-e0ff" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d164-95e6-aac9-d123" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Boltgun" hidden="false" id="3581-d9ab-5c1f-ab74" collective="false" targetId="0e81-7914-e52a-0a8d" type="selectionEntry">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2caa-fe0a-7f33-532d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5fca-4a66-9ed3-d5a0" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry id="97a9-4dcb-80bd-df51" name="The Animus Malorum" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
@@ -3944,31 +4574,6 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
         <categoryLink id="8fc3-c996-9e8a-2e65" name="Ultramarines" hidden="false" targetId="6186-0c50-3540-dc37" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="ad7d-1e69-d1cf-3bed" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="5d0c-5450-5105-ff69">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7bc0-0127-5034-68b3" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4cd4-2eed-72c9-c5d4" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="5d0c-5450-5105-ff69" name="Power Armour" hidden="false" collective="false" import="true" targetId="223b-6b82-1907-d976" type="selectionEntry">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="46c0-01e0-e844-c030" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="b295-6c54-95bd-d740" name="Frag Grenade" hidden="false" targetId="122b-b17a-4e87-5994" type="profile"/>
-                <infoLink id="9c98-d954-6076-7198" name="Bolt Pistol" hidden="false" targetId="3741-3592-b694-79b4" type="profile"/>
-              </infoLinks>
-              <entryLinks>
-                <entryLink id="48f6-8e4d-7164-d983" name="Chainsword" hidden="false" collective="false" import="true" targetId="0bf9-3a64-2700-ff30" type="selectionEntry">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6a6-bfa1-4951-4ecb" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6bde-ee98-94da-33fd" type="min"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
         <selectionEntryGroup id="2407-6b9b-3ba6-54af" name="Weapons" hidden="false" collective="false" import="true">
           <entryLinks>
             <entryLink id="1f74-72fb-5b46-e9f7" name="Assault Weapons" hidden="false" collective="false" import="true" targetId="cd0a-6a8d-1f46-a6db" type="selectionEntryGroup"/>
@@ -3981,6 +4586,24 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fffd-eca2-7265-628c" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dbfb-04f1-6714-03fd" type="min"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Power Armour" hidden="false" id="e6f0-732e-1d62-407c" collective="false" targetId="223b-6b82-1907-d976" type="selectionEntry">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5b9f-d53d-2af3-3eaa" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ffef-d72c-e68d-9aeb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Chainsword" hidden="false" id="3b00-0006-96c7-1cc3" collective="false" targetId="0bf9-3a64-2700-ff30" type="selectionEntry">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="37d6-b491-9ced-3b16" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fe91-1085-5b60-529d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Frag Grenade" hidden="false" id="981d-2fa5-e073-e1c1" collective="false" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5af7-d92f-4fce-d61e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5de8-59f1-5bd1-037d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -4236,13 +4859,6 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ce74-541b-2597-6f42" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
-      <modifiers>
-        <modifier type="set-primary" value="6741-c4c6-274e-36cf" field="category">
-          <conditions>
-            <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="96"/>
       </costs>
@@ -4250,6 +4866,23 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
         <categoryLink targetId="8be3-6d17-d7d3-faa0" id="dedb-2f40-8b34-d00f" primary="true" name="Characters"/>
         <categoryLink targetId="6186-0c50-3540-dc37" id="4d1d-d484-bb77-c7dc" primary="false" name="Ultramarines"/>
       </categoryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Legion of the Damned - Centurius &amp; Bodyguard" hidden="false" id="8c27-6929-df67-91fe">
       <selectionEntries>
@@ -4331,15 +4964,25 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
         <infoLink name="Fear" id="9bf1-6c5c-776c-af7e" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
         <infoLink name="Legion of the Damned" id="b179-2c8f-0cc3-a59f" hidden="false" targetId="49eb-985e-678f-f554" type="rule"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Combat Squad - Tactical" hidden="false" id="1b31-679b-6095-9712" publicationId="4590-6ba9-5482-a1fa" page="67" collective="false">
-      <modifiers>
-        <modifier type="set-primary" value="6741-c4c6-274e-36cf" field="category">
-          <conditions>
-            <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <categoryLinks>
         <categoryLink name="Squads" hidden="false" id="33e5-2f38-860a-16a1" targetId="3017-162b-c153-6519" primary="true"/>
         <categoryLink name="Ultramarines" hidden="false" id="ed3e-da46-c34f-a60d" targetId="6186-0c50-3540-dc37" primary="false"/>
@@ -4466,15 +5109,25 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Combat Squad - Devastator" hidden="false" id="326b-b8b9-14df-bffb" publicationId="4590-6ba9-5482-a1fa" page="67" collective="false">
-      <modifiers>
-        <modifier type="set-primary" value="6741-c4c6-274e-36cf" field="category">
-          <conditions>
-            <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <categoryLinks>
         <categoryLink name="Squads" hidden="false" id="58cc-8de7-5e55-1e8a" targetId="3017-162b-c153-6519" primary="true"/>
         <categoryLink name="Ultramarines" hidden="false" id="511d-8223-e0c6-8994" targetId="6186-0c50-3540-dc37" primary="false"/>
@@ -4596,15 +5249,25 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Combat Squad - Assault" hidden="false" id="a2a8-5962-db60-11cc" publicationId="4590-6ba9-5482-a1fa" page="67" collective="false">
-      <modifiers>
-        <modifier type="set-primary" value="6741-c4c6-274e-36cf" field="category">
-          <conditions>
-            <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <categoryLinks>
         <categoryLink name="Squads" hidden="false" id="f153-3417-9450-b2ca" targetId="3017-162b-c153-6519" primary="true"/>
         <categoryLink name="Ultramarines" hidden="false" id="4451-180e-5fa9-68b5" targetId="6186-0c50-3540-dc37" primary="false"/>
@@ -4758,15 +5421,25 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Veteran Space Marine Squad" hidden="false" id="c5f0-4ff4-f1d2-147d" publicationId="4590-6ba9-5482-a1fa" page="67" collective="false">
-      <modifiers>
-        <modifier type="set-primary" value="6741-c4c6-274e-36cf" field="category">
-          <conditions>
-            <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <categoryLinks>
         <categoryLink name="Squads" hidden="false" id="0f0c-6436-f83e-1081" targetId="3017-162b-c153-6519" primary="true"/>
         <categoryLink name="Ultramarines" hidden="false" id="b80d-2579-2087-f225" targetId="6186-0c50-3540-dc37" primary="false"/>
@@ -4955,14 +5628,26 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
       <costs>
         <cost name="pts" typeId="points" value="330"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Terminator Squad" hidden="false" id="6eec-4c68-c276-da5f" collective="false">
       <modifiers>
-        <modifier type="set-primary" value="6741-c4c6-274e-36cf" field="category">
-          <conditions>
-            <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-          </conditions>
-        </modifier>
         <modifier type="multiply" value="1.5" field="points" affects="self.entries">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="parent" childId="51cb-c041-9d9b-1bba" shared="true" includeChildSelections="true"/>
@@ -5301,6 +5986,185 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
           </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="2ce9-bd7e-1b19-0211" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="remove" value="6186-0c50-3540-dc37" field="category">
+              <conditions>
+                <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>For Ally lists</comment>
+        </modifierGroup>
+      </modifierGroups>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Space Marine Attack Bike Upgrade" hidden="false" id="e47e-d1c1-775c-bc4d" page="Datafax" collective="false">
+      <modifiers>
+        <modifier type="set-primary" value="6741-c4c6-274e-36cf" field="category">
+          <conditions>
+            <condition type="instanceOf" value="1" field="forces" scope="force" childId="bb80-dc7e-117d-28d5" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <infoLinks>
+        <infoLink name="Attack Bike" id="a5b5-d060-f412-2826" hidden="false" targetId="abe8-03b6-bb86-633b" type="profile"/>
+        <infoLink name="Space Marine Attack Bike Damage Table" id="cd4d-2b39-df75-18f9" hidden="false" targetId="8b6d-4077-d124-cbd2" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink name="Ultramarines" hidden="false" id="39f9-8973-3f66-9cc9" targetId="6186-0c50-3540-dc37" primary="false"/>
+        <categoryLink name="Attack Bike" hidden="false" id="e091-53d9-08ed-a360" targetId="2ea7-ced8-d2ec-2939" primary="false"/>
+        <categoryLink targetId="3017-162b-c153-6519" id="01fa-c3cb-af92-2906" primary="true" name="Squads"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Marine Bikers" hidden="false" id="beb0-433c-09e7-ad34" collective="false" defaultAmount="">
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="c5fb-0416-71bc-cf63" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="4003-504a-9527-46b5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Space Marine" id="6920-f352-9cff-7bc5" hidden="false" targetId="23c0-aa55-825b-534e" type="profile"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Bolt Pistol" hidden="false" id="6f37-0a85-aafe-a854" collective="false" targetId="b5bb-7853-53cb-bec4" type="selectionEntry">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2087-c4f8-4541-d1ad" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f700-d1a8-3f7d-db82" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Power Armour" hidden="false" id="3116-c52b-a017-592a" collective="false" targetId="223b-6b82-1907-d976" type="selectionEntry">
+              <constraints>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="8453-87aa-80d4-9f39" includeChildSelections="false"/>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="8eed-e3de-bb48-afbc" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Heavy Weapon Choice" id="dd72-df02-f9ab-1d9f" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c9f6-13bd-a252-0403" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="48d4-eb00-f4e4-8db0" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Multi-Melta" hidden="false" id="0137-9075-e9b6-6715" collective="false" targetId="4429-f97a-006f-4632" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="65"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Heavy Bolter" hidden="false" id="cb4c-e2a9-d2e4-6610" type="selectionEntry" targetId="4c82-0e56-d20a-6b1c">
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Max 2 special weapons" id="f195-e073-c86d-a438" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink import="true" name="Special Weapons" hidden="false" id="8747-df71-7abf-9355" collective="false" targetId="717e-c382-eaca-bd29" type="selectionEntryGroup">
+              <modifiers>
+                <modifier type="set" value="2" field="43f4-7d87-21e2-f623"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Assault Weapons for bikers" id="ced9-70d3-1a62-a4b3" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink import="true" name="Assault Weapons" hidden="false" id="4d27-0697-db7f-95f5" collective="false" targetId="cd0a-6a8d-1f46-a6db" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Auto-Launcher" hidden="false" id="1446-5929-1316-611b" collective="false" targetId="222b-075f-d34c-7093" type="selectionEntry">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5191-bbb9-a101-0009" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Frag Grenade" hidden="false" id="5244-31b7-a22a-f514" collective="false" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="7ac5-935d-8ecf-59c0" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2b61-11b8-1851-ca03" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Krak Grenade" hidden="false" id="c180-aa7e-d8b3-b094" collective="false" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="cc7b-eac9-7cc5-a156" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a50f-2378-c348-186c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
+          </costs>
+        </entryLink>
+        <entryLink import="true" name="Targeter" hidden="false" id="be2e-686d-2313-6b85" collective="false" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3ea0-af60-5e55-841f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7819-1ce5-67ac-1320" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Twin Linked Bolters" hidden="false" id="9020-62dc-0c9d-e818" collective="false" targetId="dd32-5d68-e4bc-9dff" type="selectionEntry">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5f2f-5070-3c36-14b3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a9b8-96a9-48e7-bb20" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Vehicle Wargear Cards" hidden="false" id="c6eb-1290-d187-859e" collective="false" targetId="fcf7-39a4-11f3-7097" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="45"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Space Marine Vehicle Crew" hidden="false" id="78be-f19b-ef3f-ba0a" collective="false">
+      <infoLinks>
+        <infoLink name="Space Marine" id="1f79-e1db-83ed-25b4" hidden="false" targetId="23c0-aa55-825b-534e" type="profile"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Bolt Pistol" hidden="false" id="f469-6877-82d5-b961" collective="false" targetId="b5bb-7853-53cb-bec4" type="selectionEntry">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="97f4-24ea-7d55-49ab" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c852-7454-2f5c-1ba8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Power Armour" hidden="false" id="1ecd-634c-e927-9f6d" collective="false" targetId="223b-6b82-1907-d976" type="selectionEntry">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8035-b2c5-5ffd-d351" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1683-a71a-0a69-189d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -5456,9 +6320,14 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
           </constraints>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="0f2d-f5ce-6608-d90c" shared="true" childName="Terminator Sergeant" includeChildSelections="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="0f2d-f5ce-6608-d90c" shared="true" childName="Terminator Sergeant" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="381f-f866-3d8a-4e03" shared="true" childName="Terminator Captain" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </entryLink>
@@ -5903,6 +6772,7 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
     <selectionEntryGroup id="4376-9815-c1dc-d321" name="Dreadnought Weapons" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="833e-2d9f-bec2-7584" type="max"/>
+        <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="4e27-61a3-5831-ae2c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <entryLinks>
         <entryLink id="c29c-f431-2dc8-3e20" name="Multi-Melta" hidden="false" collective="false" import="true" targetId="4429-f97a-006f-4632" type="selectionEntry">
@@ -5913,7 +6783,7 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
             <cost name="pts" typeId="points" value="65"/>
           </costs>
         </entryLink>
-        <entryLink id="932a-b7e9-e21e-6fad" name="Assault Cannon" hidden="false" collective="false" import="true" targetId="8953-2383-fa02-9003" type="selectionEntry">
+        <entryLink id="932a-b7e9-e21e-6fad" name="Assault Cannon" hidden="false" collective="false" import="true" targetId="8953-2383-fa02-9003" type="selectionEntry" sortIndex="">
           <infoLinks>
             <infoLink id="1fa2-4a32-75b5-22c4" name="Dreadnought Sustained Fire" hidden="false" targetId="06eb-1513-fe34-fbe2" type="rule"/>
           </infoLinks>
@@ -5962,7 +6832,7 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </entryLink>
-        <entryLink id="949b-5550-2d94-06a4" name="Power Fist With Built-in Storm Bolter" hidden="false" collective="false" import="true" targetId="507a-86d1-3d5b-a291" type="selectionEntry">
+        <entryLink id="949b-5550-2d94-06a4" name="Power Fist With Built-in Storm Bolter" hidden="false" collective="false" import="true" targetId="507a-86d1-3d5b-a291" type="selectionEntry" sortIndex="">
           <infoLinks>
             <infoLink id="5407-6b23-f834-656f" name="Dreadnought Power Fist" hidden="false" targetId="fa73-d960-2c88-5ea5" type="rule"/>
             <infoLink id="e2d0-e742-ee4c-00d2" name="Dreadnought Sustained Fire" hidden="false" targetId="06eb-1513-fe34-fbe2" type="rule"/>
@@ -6023,16 +6893,61 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
               <costs>
                 <cost name="pts" typeId="points" value="90"/>
               </costs>
+              <profiles>
+                <profile name="Lascannon" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="5009-0341-3b36-2504">
+                  <characteristics>
+                    <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">20</characteristic>
+                    <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">60</characteristic>
+                    <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+                    <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                    <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">9</characteristic>
+                    <characteristic name="Damage" typeId="8978-f9c3-8957-1481">2D6</characteristic>
+                    <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-6</characteristic>
+                    <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">3D6+9</characteristic>
+                    <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Move or Fire</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
             </entryLink>
             <entryLink id="aea4-2a15-558f-e100" name="Heavy Bolter" hidden="false" collective="false" import="true" targetId="4c82-0e56-d20a-6b1c" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
+              <profiles>
+                <profile name="Heavy Bolter" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="eb84-1f87-4463-5002" publicationId="06e5-8e36-e8c8-aec3" page="35">
+                  <characteristics>
+                    <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">20</characteristic>
+                    <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">40</characteristic>
+                    <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+                    <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                    <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">5</characteristic>
+                    <characteristic name="Damage" typeId="8978-f9c3-8957-1481">D4</characteristic>
+                    <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-2</characteristic>
+                    <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+D4+5</characteristic>
+                    <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Move or fire, Sustained fire - 2 dice</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
             </entryLink>
             <entryLink id="2035-5852-e837-0f58" name="Heavy Flamer" hidden="false" collective="false" import="true" targetId="4da3-a884-c204-2800" type="selectionEntry">
               <costs>
                 <cost name="pts" typeId="points" value="50"/>
               </costs>
+              <profiles>
+                <profile name="Heavy Flamer" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="3da6-571e-f7c6-8fbf" publicationId="06e5-8e36-e8c8-aec3" page="36">
+                  <characteristics>
+                    <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">Flame Template</characteristic>
+                    <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">Flame Template</characteristic>
+                    <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328"/>
+                    <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c"/>
+                    <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">5</characteristic>
+                    <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
+                    <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-3</characteristic>
+                    <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+5</characteristic>
+                    <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Flamer</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>

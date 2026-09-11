@@ -1809,6 +1809,9 @@ If the pod goes off the table any troops it contains can be brought on and make 
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <infoLinks>
+        <infoLink name="Bolt Pistol" id="01d5-44f4-1dec-b951" hidden="false" targetId="3741-3592-b694-79b4" type="profile"/>
+      </infoLinks>
       <rules>
         <rule name="Close Combat" id="5e95-877d-63a8-cca8" hidden="false" page="40" publicationId="06e5-8e36-e8c8-aec3">
           <description>May be used in close combat</description>
@@ -1819,6 +1822,9 @@ If the pod goes off the table any troops it contains can be brought on and make 
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <infoLinks>
+        <infoLink name="Power Armour" id="d3e4-425d-ff15-6831" hidden="false" targetId="3f80-695d-2a45-93e8" type="profile"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry name="Chainsword" id="0bf9-3a64-2700-ff30" collective="false" hidden="false" import="true" page="7" publicationId="06e5-8e36-e8c8-aec3" type="upgrade">
       <costs>

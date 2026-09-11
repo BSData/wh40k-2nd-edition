@@ -164,7 +164,7 @@
         <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Close Combat, Ignore penalty for fighting with an improvised attack (-1)</characteristic>
       </characteristics>
     </profile>
-    <profile name="Army Commander" id="742e-aa63-7b0f-8b56" hidden="false" typeId="4a47-f6d8-5780-3394" typeName="Army Commander">
+    <profile name="Army Commander Strategy Rating" id="742e-aa63-7b0f-8b56" hidden="false" typeId="4a47-f6d8-5780-3394" typeName="Army Commander">
       <characteristics>
         <characteristic name="Strategy Rating" typeId="d0c8-e08c-1828-77b4"/>
       </characteristics>
@@ -1809,21 +1809,6 @@ If the pod goes off the table any troops it contains can be brought on and make 
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
-      <profiles>
-        <profile name="Bolt Pistol" id="89b5-e23c-79b9-b4c9" hidden="false" page="14" publicationId="06e5-8e36-e8c8-aec3" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
-          <characteristics>
-            <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">8</characteristic>
-            <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">16</characteristic>
-            <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">+2</characteristic>
-            <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
-            <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">4</characteristic>
-            <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
-            <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-1</characteristic>
-            <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+4</characteristic>
-            <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Close combat</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <rules>
         <rule name="Close Combat" id="5e95-877d-63a8-cca8" hidden="false" page="40" publicationId="06e5-8e36-e8c8-aec3">
           <description>May be used in close combat</description>

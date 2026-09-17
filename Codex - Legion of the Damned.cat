@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Legion of the Damned" id="8d30-f85a-223d-697c" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff89" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="31" library="false" revision="2" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Legion of the Damned" id="8d30-f85a-223d-697c" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff89" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="31" library="false" revision="3" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="Characters" id="9278-65a2-4632-a8ff" hidden="false"/>
     <categoryEntry name="Squads" id="7706-40f6-7f42-15b6" hidden="false"/>
@@ -702,14 +702,14 @@ See datafax for damage table</description>
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
-              <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
             <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
               <conditions>
                 <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
+              <conditions>
+                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -858,7 +858,7 @@ See datafax for damage table</description>
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
               <conditions>
                 <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
@@ -928,7 +928,7 @@ See datafax for damage table</description>
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
               <conditions>
                 <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
@@ -1032,12 +1032,12 @@ See datafax for damage table</description>
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
               <conditions>
                 <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
-            <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
+            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
               <conditions>
                 <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
@@ -1099,12 +1099,12 @@ See datafax for damage table</description>
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
               <conditions>
                 <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
-            <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
+            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
               <conditions>
                 <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
@@ -1141,7 +1141,7 @@ See datafax for damage table</description>
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
               <conditions>
                 <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
@@ -1319,12 +1319,12 @@ See datafax for damage table</description>
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
               <conditions>
                 <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
-            <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
+            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
               <conditions>
                 <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
@@ -1526,7 +1526,7 @@ See datafax for damage table</description>
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
               <conditions>
                 <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
@@ -1675,7 +1675,7 @@ See datafax for damage table</description>
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
               <conditions>
                 <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
@@ -1874,7 +1874,7 @@ See datafax for damage table</description>
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
               <conditions>
                 <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
@@ -1992,12 +1992,12 @@ See datafax for damage table</description>
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
               <conditions>
                 <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
-            <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
+            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
               <conditions>
                 <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
@@ -2109,12 +2109,12 @@ See datafax for damage table</description>
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
               <conditions>
                 <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
-            <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
+            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
               <conditions>
                 <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
@@ -2214,12 +2214,12 @@ See datafax for damage table</description>
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
               <conditions>
                 <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
-            <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
+            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
               <conditions>
                 <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
@@ -2284,7 +2284,7 @@ See datafax for damage table</description>
         </entryLink>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Veteran Sergeant Centurius" id="b2e6-6aa1-b65e-3800" hidden="false" targetId="4070-0f26-9c7d-f4ed" type="profile"/>
+        <infoLink name="Sergeant Centurius" id="b2e6-6aa1-b65e-3800" hidden="false" targetId="4070-0f26-9c7d-f4ed" type="profile"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry name="The Animus Malorum" id="85d9-0ea0-862b-efa7" hidden="false" import="true" type="upgrade">

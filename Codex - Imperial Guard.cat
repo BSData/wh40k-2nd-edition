@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Imperial Guard" id="82fc-8ad4-7b4b-dd4a" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="11" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Imperial Guard" id="82fc-8ad4-7b4b-dd4a" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="12" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>I haven&apos;t put restrictions for the Regimental style to build a list, such as 1 Command HQ, 3 Guard/Heavy Weapons teams, 3 additional unit. Doing so would be rather messy and complicated with all the possible choices, and frankly isn&apos;t really a huge deal.
 
 Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct units.</readme>
@@ -1256,11 +1256,14 @@ See datafax for damage table results</description>
             <constraint id="ff05-811f-fe92-e2b6" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
           </constraints>
         </entryLink>
-        <entryLink name="Army Commander" id="be0c-fc71-90d3-eb7d" collective="false" hidden="false" import="true" targetId="b4bf-c937-68f2-7b10" type="selectionEntry">
-          <constraints>
-            <constraint id="d9e7-5550-0c7f-a0e4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-            <constraint id="e123-0438-59c6-93b4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-          </constraints>
+        <entryLink name="Army Commander" id="79a9-f58f-f1e8-9f76" hidden="false" import="true" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
+          <infoLinks>
+            <infoLink name="Army Commander Strategy Rating" id="c108-cbe5-3275-0a3d" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
+              <modifiers>
+                <modifier field="d0c8-e08c-1828-77b4" type="set" value="2"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </entryLink>
       </entryLinks>
       <modifiers>
@@ -1752,11 +1755,8 @@ See datafax for damage table results</description>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
-      <entryLinks>
-        <entryLink name="Army Commander" id="e201-9cf3-37e0-9b61" collective="false" hidden="false" import="true" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry"/>
-      </entryLinks>
       <infoLinks>
-        <infoLink name="Army Commander" id="4986-f873-3e3f-31d2" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
+        <infoLink name="Army Commander Strategy Rating" id="4986-f873-3e3f-31d2" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
           <modifiers>
             <modifier field="d0c8-e08c-1828-77b4" type="set" value="2"/>
           </modifiers>
@@ -3638,6 +3638,19 @@ Re-roll any failed Break test</characteristic>
             <constraint id="5b10-dd4c-a454-454c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="4"/>
           </constraints>
         </entryLink>
+        <entryLink name="Army Commander" id="8a07-c543-4b83-fbdd" hidden="false" import="true" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
+          <constraints>
+            <constraint id="05b1-8ab1-9ab7-8096" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="e7f6-c412-d517-3031" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Army Commander Strategy Rating" id="8e61-e278-54b5-c607" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
+              <modifiers>
+                <modifier field="d0c8-e08c-1828-77b4" type="set" value="Special - See Strategy rule"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Lord Commander" id="acf4-956e-4a4d-49d1" hidden="false" targetId="7d08-57f0-3565-db75" type="rule"/>
@@ -3681,30 +3694,21 @@ Re-roll any failed Break test</characteristic>
             <constraint id="ade1-a391-5e88-f8c7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="4"/>
           </constraints>
         </entryLink>
+        <entryLink name="Army Commander" id="3337-4c82-94f8-0889" hidden="false" import="true" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
+          <infoLinks>
+            <infoLink name="Army Commander Strategy Rating" id="d472-121e-b1c5-df88" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
+              <modifiers>
+                <modifier field="d0c8-e08c-1828-77b4" type="set" value="2"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Yarrick" id="e9c5-9ad2-5968-a95b" hidden="false" targetId="13b7-748b-e3c3-cc2c" type="rule"/>
         <infoLink name="Iron Will" id="3634-9ed1-6a21-1a21" hidden="false" targetId="cf5c-f09d-d0c9-9607" type="rule"/>
         <infoLink name="Commissar Yarrick" id="b70b-73c1-0dbc-380d" hidden="false" targetId="5b7f-5630-be6e-535d" type="profile"/>
       </infoLinks>
-      <selectionEntries>
-        <selectionEntry name="Army Commander" id="587a-4053-88bc-34eb" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="bec4-8490-4601-87fd" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
-            <constraint id="1b1b-5149-1380-8f25" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Army Commander" id="ae62-728b-7029-b403" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
-              <modifiers>
-                <modifier field="d0c8-e08c-1828-77b4" type="set" value="2"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-        </selectionEntry>
-      </selectionEntries>
     </selectionEntry>
     <selectionEntry name="Nork Deddog, Ogryn Bodyguard" id="b3d6-2ab9-069c-e50c" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>

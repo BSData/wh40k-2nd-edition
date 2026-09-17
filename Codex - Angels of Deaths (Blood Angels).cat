@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Angels of Death (Blood Angels)" id="12fb-bbf1-3d12-aef9" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="15" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Angels of Death (Blood Angels)" id="12fb-bbf1-3d12-aef9" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="16" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="Support" id="d667-1478-0ee6-6183" hidden="false"/>
     <categoryEntry name="Squads" id="ea97-27b5-39c7-4630" hidden="false"/>
@@ -188,36 +188,78 @@
     </forceEntry>
     <forceEntry name="Blood Angels - Ally List" id="1682-3edb-34f4-dc45" hidden="false">
       <categoryLinks>
-        <categoryLink name="Allies" id="22b6-7c8f-4281-5100" hidden="false" primary="false" targetId="6741-c4c6-274e-36cf">
+        <categoryLink name="Support" id="e7b0-3914-7efb-3945" hidden="false" primary="false" targetId="d667-1478-0ee6-6183">
           <constraints>
-            <constraint id="6f34-ec46-7615-10df" field="points" includeChildForces="false" includeChildSelections="false" percentValue="true" scope="roster" shared="true" type="max" value="0"/>
+            <constraint id="add5-30c3-d67b-14ae" field="limit::points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="max" value="0"/>
+            <constraint id="1afc-fdc9-c9a5-a069" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="0"/>
           </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <comment>When having a points limit and 50% forces</comment>
+              <modifiers>
+                <modifier field="1afc-fdc9-c9a5-a069" type="increment" value="1">
+                  <comment>For 50% armies</comment>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition childId="6186-0c50-3540-dc37" childName="Ultramarines" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                            <condition childId="261d-dcfd-16cf-3caf" childName="Eldar" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                            <condition childId="9fec-6f81-5e76-3592" childName="Blood Angels" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                            <condition childId="e206-c273-bb7e-6132" childName="Squats" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                            <condition childId="65bb-c554-1585-91d9" childName="Dark Angels" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                      <conditions>
+                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <repeats>
+                    <repeat childId="any" childName="any" field="limit::points" includeChildForces="true" includeChildSelections="true" percentValue="false" repeats="0.5" roundUp="false" scope="roster" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="add5-30c3-d67b-14ae" type="set" value="-1"/>
+              </modifiers>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <comment>When having a points limit and 25% forces</comment>
+              <modifiers>
+                <modifier field="1afc-fdc9-c9a5-a069" type="increment" value="1">
+                  <comment>For 25% armies</comment>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition childId="a949-140a-176f-6700" childName="Sisters of Battle" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                            <condition childId="ef00-5e3b-a59a-902f" childName="Imperial Guard" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                      <conditions>
+                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <repeats>
+                    <repeat childId="any" childName="any" field="limit::points" includeChildForces="true" includeChildSelections="true" percentValue="false" repeats="0.25" roundUp="false" scope="roster" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="add5-30c3-d67b-14ae" type="set" value="-1"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
           <modifiers>
-            <modifier field="6f34-ec46-7615-10df" type="set" value="50">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="b686-76f8-6874-e3e9" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1"/>
-                    <condition childId="6186-0c50-3540-dc37" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1"/>
-                    <condition childId="65bb-c554-1585-91d9" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1"/>
-                    <condition childId="261d-dcfd-16cf-3caf" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="6f34-ec46-7615-10df" type="set" value="25">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="ef00-5e3b-a59a-902f" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1"/>
-                    <condition childId="a949-140a-176f-6700" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
+            <modifier field="name" type="set" value="Support - Allies"/>
           </modifiers>
         </categoryLink>
       </categoryLinks>
+      <modifiers>
+        <modifier field="info" type="add" value="{this} Points are shared from your Support % of the main army"/>
+      </modifiers>
     </forceEntry>
   </forceEntries>
   <rules>
@@ -1027,7 +1069,15 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
       </costs>
       <entryLinks>
         <entryLink name="Space Marine Bike" id="4a6a-2ba5-e485-a412" collective="false" hidden="false" import="true" targetId="1b22-fc76-8ed0-5765" type="selectionEntry"/>
-        <entryLink name="Army Commander" id="27ad-e18b-ce3c-34c1" collective="false" hidden="false" import="true" targetId="4a27-f4c3-792f-0d8a" type="selectionEntry"/>
+        <entryLink name="Army Commander" id="27ad-e18b-ce3c-34c1" collective="false" hidden="false" import="true" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
+          <infoLinks>
+            <infoLink name="Army Commander Strategy Rating" id="e974-0c4d-d3a3-1f28" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
+              <modifiers>
+                <modifier field="d0c8-e08c-1828-77b4" type="set" value="5"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </entryLink>
         <entryLink name="Wargear Cards" id="7ab1-75fa-4f34-8403" collective="false" hidden="false" import="true" targetId="578d-7254-ab21-8b13" type="selectionEntryGroup">
           <constraints>
             <constraint id="87e1-3760-0162-9e1f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="4"/>
@@ -1490,22 +1540,6 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry name="Army Commander" id="4a27-f4c3-792f-0d8a" collective="false" hidden="false" import="true" type="upgrade">
-      <constraints>
-        <constraint id="19d8-c54d-e91d-25ed" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
-        <constraint id="57f7-0f1a-8ab2-bbfd" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-      <infoLinks>
-        <infoLink name="Army Commander" id="8544-c7ec-8855-0527" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
-          <modifiers>
-            <modifier field="d0c8-e08c-1828-77b4" type="set" value="5"/>
-          </modifiers>
-        </infoLink>
-      </infoLinks>
-    </selectionEntry>
     <selectionEntry name="Terminator Captain" id="381f-f866-3d8a-4e03" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="Characters" id="f67e-6263-3728-c9ac" hidden="false" primary="true" targetId="c261-a633-c015-f943"/>
@@ -1518,7 +1552,15 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         <cost name="pts" typeId="points" value="125"/>
       </costs>
       <entryLinks>
-        <entryLink name="Army Commander" id="60f7-9706-91fe-9134" collective="false" hidden="false" import="true" targetId="4a27-f4c3-792f-0d8a" type="selectionEntry"/>
+        <entryLink name="Army Commander" id="60f7-9706-91fe-9134" collective="false" hidden="false" import="true" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
+          <infoLinks>
+            <infoLink name="Army Commander Strategy Rating" id="e91e-7714-e88c-0aee" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
+              <modifiers>
+                <modifier field="d0c8-e08c-1828-77b4" type="set" value="5"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </entryLink>
         <entryLink name="Wargear Cards" id="003d-eded-835a-6fe8" collective="false" hidden="false" import="true" targetId="578d-7254-ab21-8b13" type="selectionEntryGroup">
           <constraints>
             <constraint id="15f9-beb5-ed88-8a83" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="4"/>
@@ -2118,13 +2160,23 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
       <infoLinks>
         <infoLink name="Apothecary" id="ca69-c1eb-6cbd-f5a7" hidden="false" targetId="f627-428f-620b-4d6a" type="profile"/>
       </infoLinks>
-      <modifiers>
-        <modifier field="category" type="set-primary" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition childId="1682-3edb-34f4-dc45" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="d667-1478-0ee6-6183">
+              <conditions>
+                <condition childId="1682-3edb-34f4-dc45" childName="Blood Angels - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="remove" value="9fec-6f81-5e76-3592">
+              <conditions>
+                <condition childId="1682-3edb-34f4-dc45" childName="Blood Angels - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <selectionEntryGroups>
         <selectionEntryGroup name="Armour" id="c21b-421b-29fd-d6e8" collective="false" defaultSelectionEntryId="348d-0e10-e064-361e" hidden="false" import="true">
           <constraints>
@@ -3431,9 +3483,9 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
     </selectionEntry>
     <selectionEntry name="Space Marine Dreadnought" id="beec-c8b6-3175-e050" collective="false" hidden="false" import="true" page="68" publicationId="4590-6ba9-5482-a1fa" type="upgrade">
       <categoryLinks>
-        <categoryLink name="Support" id="0de9-bc3a-a327-b1ae" hidden="false" primary="true" targetId="d667-1478-0ee6-6183"/>
         <categoryLink name="Blood Angels" id="e8bf-e2a5-9084-1b1c" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="Walkers" id="71e5-2af1-9840-e552" hidden="false" primary="false" targetId="bcf7-c063-7aca-a066"/>
+        <categoryLink name="Support" id="486a-b7da-adb0-8b73" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <constraints>
         <constraint id="b9d9-ad93-e73a-4277" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0">
@@ -3506,11 +3558,6 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-        <modifier field="category" type="set-primary" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition childId="1682-3edb-34f4-dc45" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-          </conditions>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -3849,6 +3896,23 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         <infoLink name="Land Raider Damage Table" id="cc29-c2b2-1055-ff5a" hidden="false" targetId="8b9c-3e26-72f7-82e7" type="rule"/>
         <infoLink name="Land Raider Transport" id="99f4-f5d4-d277-3299" hidden="false" targetId="a880-3975-6e64-4c44" type="profile"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="d667-1478-0ee6-6183">
+              <conditions>
+                <condition childId="1682-3edb-34f4-dc45" childName="Blood Angels - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="remove" value="9fec-6f81-5e76-3592">
+              <conditions>
+                <condition childId="1682-3edb-34f4-dc45" childName="Blood Angels - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <modifiers>
         <modifier field="d159-d592-d686-838c" type="set" value="20">
           <comment>Need at least 1 Techmarine</comment>
@@ -3861,11 +3925,6 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-        <modifier field="category" type="set-primary" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition childId="1682-3edb-34f4-dc45" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-          </conditions>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -4451,7 +4510,15 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
             <constraint id="c379-4c4f-4d23-ff72" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="4"/>
           </constraints>
         </entryLink>
-        <entryLink name="Army Commander" id="fc87-bc70-3422-2448" collective="false" hidden="false" import="true" targetId="4a27-f4c3-792f-0d8a" type="selectionEntry"/>
+        <entryLink name="Army Commander" id="fc87-bc70-3422-2448" collective="false" hidden="false" import="true" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
+          <infoLinks>
+            <infoLink name="Army Commander Strategy Rating" id="91c8-1924-a6c8-4a9d" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
+              <modifiers>
+                <modifier field="d0c8-e08c-1828-77b4" type="set" value="5"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Captain Tycho" id="ef8d-c863-2f51-8ef6" hidden="false" targetId="7007-f1cf-511b-6e44" type="profile"/>
@@ -4630,6 +4697,18 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
           </constraints>
         </entryLink>
         <entryLink name="Add Bodyguard" id="b516-45cd-a901-8756" collective="false" hidden="false" import="true" targetId="6193-b6d9-9bc9-4ca3" type="selectionEntry"/>
+        <entryLink name="Army Commander" id="618c-0670-5406-90af" hidden="false" import="true" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
+          <constraints>
+            <constraint id="d5f7-a424-c796-5e01" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Army Commander Strategy Rating" id="043f-0565-bd3f-b0d1" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
+              <modifiers>
+                <modifier field="d0c8-e08c-1828-77b4" type="set" value="5"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Commander Dante" id="2f67-d044-5c50-bb97" hidden="false" targetId="0a56-ad7e-71f4-8fb4" type="profile"/>
@@ -4641,24 +4720,6 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
           </conditions>
         </modifier>
       </modifiers>
-      <selectionEntries>
-        <selectionEntry name="Army Commander" id="bb1d-e644-6619-7edc" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="09bb-8373-4ccc-e62a" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
-            <constraint id="a8e7-93b2-e724-e93b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Army Commander" id="043f-0565-bd3f-b0d1" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
-              <modifiers>
-                <modifier field="d0c8-e08c-1828-77b4" type="set" value="5"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup name="Armour" id="5ea5-46a1-51f3-e0f5" collective="false" defaultSelectionEntryId="6664-c28c-54bd-6014" hidden="false" import="true">
           <constraints>
@@ -5322,7 +5383,15 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         <cost name="pts" typeId="points" value="96"/>
       </costs>
       <entryLinks>
-        <entryLink name="Army Commander" id="9209-dcf5-8fa2-c505" collective="false" hidden="false" import="true" targetId="4a27-f4c3-792f-0d8a" type="selectionEntry"/>
+        <entryLink name="Army Commander" id="9209-dcf5-8fa2-c505" collective="false" hidden="false" import="true" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
+          <infoLinks>
+            <infoLink name="Army Commander Strategy Rating" id="804c-7ab7-cd18-eb9f" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
+              <modifiers>
+                <modifier field="d0c8-e08c-1828-77b4" type="set" value="5"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </entryLink>
         <entryLink name="Space Marine Bike" id="4f5d-d81b-d0a5-b4c3" collective="false" hidden="false" import="true" targetId="1b22-fc76-8ed0-5765" type="selectionEntry"/>
         <entryLink name="Wargear Cards" id="9e0c-a4c3-69a4-fd4f" collective="false" hidden="false" import="true" targetId="578d-7254-ab21-8b13" type="selectionEntryGroup">
           <constraints>

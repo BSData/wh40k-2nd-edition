@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Ultramarines" id="138e-c671-3180-f615" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="24" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Ultramarines" id="138e-c671-3180-f615" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="26" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>Ultramarines Codex</readme>
   <categoryEntries>
     <categoryEntry name="Characters" id="8be3-6d17-d7d3-faa0" hidden="false"/>
     <categoryEntry name="Squads" id="3017-162b-c153-6519" hidden="false"/>
-    <categoryEntry name="Support" id="2ce9-bd7e-1b19-0211" hidden="false"/>
+    <categoryEntry name="Supporttest" id="2ce9-bd7e-1b19-0211" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink name="Space Marine Captain" id="e1eb-4981-2689-1fc2" collective="false" hidden="false" import="true" targetId="e664-c21f-4492-a7dc" type="selectionEntry"/>
@@ -146,7 +146,7 @@
             </modifierGroup>
           </modifierGroups>
         </categoryLink>
-        <categoryLink name="Support" id="a60d-fdae-5420-41b9" hidden="false" targetId="2ce9-bd7e-1b19-0211">
+        <categoryLink name="Supporttest" id="a60d-fdae-5420-41b9" hidden="false" targetId="2ce9-bd7e-1b19-0211">
           <constraints>
             <constraint id="05be-a933-5fc3-3604" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="0"/>
             <constraint id="6aa8-0918-106a-276a" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="max" value="50"/>
@@ -197,7 +197,7 @@
     </forceEntry>
     <forceEntry name="Ultramarines - Ally List" id="bb80-dc7e-117d-28d5" hidden="false">
       <categoryLinks>
-        <categoryLink name="Support" id="54b8-24c0-1103-3ca8" hidden="false" primary="false" targetId="2ce9-bd7e-1b19-0211">
+        <categoryLink name="Supporttest" id="54b8-24c0-1103-3ca8" hidden="false" primary="false" targetId="2ce9-bd7e-1b19-0211">
           <constraints>
             <constraint id="8e87-fb76-aaab-6a90" field="limit::points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="max" value="0"/>
             <constraint id="5f36-ab6f-0064-dcb5" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="0"/>
@@ -214,7 +214,6 @@
                         <conditionGroup type="or">
                           <conditions>
                             <condition childId="65bb-c554-1585-91d9" childName="Dark Angels" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                            <condition childId="6186-0c50-3540-dc37" childName="Ultramarines" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
                             <condition childId="261d-dcfd-16cf-3caf" childName="Eldar" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
                             <condition childId="9fec-6f81-5e76-3592" childName="Blood Angels" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
                             <condition childId="e206-c273-bb7e-6132" childName="Squats" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
@@ -1133,7 +1132,15 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
       </costs>
       <entryLinks>
         <entryLink name="Space Marine Bike" id="4a6a-2ba5-e485-a412" collective="false" hidden="false" import="true" targetId="1b22-fc76-8ed0-5765" type="selectionEntry"/>
-        <entryLink name="Army Commander" id="27ad-e18b-ce3c-34c1" collective="false" hidden="false" import="true" targetId="4a27-f4c3-792f-0d8a" type="selectionEntry"/>
+        <entryLink name="Army Commander" id="27ad-e18b-ce3c-34c1" collective="false" hidden="false" import="true" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
+          <infoLinks>
+            <infoLink name="Army Commander Strategy Rating" id="db62-b53f-6779-c609" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
+              <modifiers>
+                <modifier field="d0c8-e08c-1828-77b4" type="set" value="5"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </entryLink>
         <entryLink name="Wargear Cards" id="7ab1-75fa-4f34-8403" collective="false" hidden="false" import="true" targetId="578d-7254-ab21-8b13" type="selectionEntryGroup">
           <constraints>
             <constraint id="87e1-3760-0162-9e1f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
@@ -1604,27 +1611,6 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry name="Army Commander" id="4a27-f4c3-792f-0d8a" collective="false" hidden="false" import="true" type="upgrade">
-      <constraints>
-        <constraint id="19d8-c54d-e91d-25ed" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
-        <constraint id="57f7-0f1a-8ab2-bbfd" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-      <infoLinks>
-        <infoLink name="Army Commander" id="8544-c7ec-8855-0527" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
-          <modifiers>
-            <modifier field="d0c8-e08c-1828-77b4" type="increment" value="1">
-              <conditions>
-                <condition childId="7717-f970-8090-911e" field="selections" includeChildSelections="true" scope="5c0d-f1e5-52f5-8d7f" shared="true" type="atLeast" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="d0c8-e08c-1828-77b4" type="set" value="5"/>
-          </modifiers>
-        </infoLink>
-      </infoLinks>
-    </selectionEntry>
     <selectionEntry name="Terminator Captain" id="381f-f866-3d8a-4e03" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Characters" id="a06b-ec94-ded9-1ba8" hidden="false" primary="true" targetId="8be3-6d17-d7d3-faa0"/>
@@ -1637,7 +1623,15 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <cost name="pts" typeId="points" value="125"/>
       </costs>
       <entryLinks>
-        <entryLink name="Army Commander" id="60f7-9706-91fe-9134" collective="false" hidden="false" import="true" targetId="4a27-f4c3-792f-0d8a" type="selectionEntry"/>
+        <entryLink name="Army Commander" id="60f7-9706-91fe-9134" collective="false" hidden="false" import="true" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
+          <infoLinks>
+            <infoLink name="Army Commander Strategy Rating" id="e519-4832-4e6c-440a" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
+              <modifiers>
+                <modifier field="d0c8-e08c-1828-77b4" type="set" value="5"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </entryLink>
         <entryLink name="Wargear Cards" id="003d-eded-835a-6fe8" collective="false" hidden="false" import="true" targetId="578d-7254-ab21-8b13" type="selectionEntryGroup">
           <constraints>
             <constraint id="15f9-beb5-ed88-8a83" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
@@ -3716,9 +3710,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Space Marine Dreadnought" id="beec-c8b6-3175-e050" collective="false" hidden="false" import="true" page="68" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
-        <categoryLink name="Support" id="747c-0b26-9089-4e73" hidden="false" primary="true" targetId="2ce9-bd7e-1b19-0211"/>
         <categoryLink name="Ultramarines" id="02f4-af72-295b-754c" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
         <categoryLink name="Walkers" id="656a-ae1a-a934-7248" hidden="false" primary="false" targetId="bcf7-c063-7aca-a066"/>
+        <categoryLink name="Support" id="912a-0c5d-98cd-3481" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <constraints>
         <constraint id="78d2-2093-b338-d40a" field="selections" scope="parent" shared="true" type="max" value="0"/>
@@ -3781,9 +3775,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="06ba-f656-4e76-25d1">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
             <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
@@ -4845,6 +4839,15 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
             <constraint id="80a9-4385-f0fd-6afe" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
           </constraints>
         </entryLink>
+        <entryLink name="Army Commander" id="1944-bb54-a49c-4e76" hidden="false" import="true" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
+          <infoLinks>
+            <infoLink name="Army Commander Strategy Rating" id="df1b-1f8f-4ad3-310c" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
+              <modifiers>
+                <modifier field="d0c8-e08c-1828-77b4" type="set" value="6"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Marneus Calgar" id="6f19-977a-5479-9289" hidden="false" targetId="a41a-b77b-f7a5-2e5d" type="profile">
@@ -4874,24 +4877,6 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
           </modifiers>
         </modifierGroup>
       </modifierGroups>
-      <selectionEntries>
-        <selectionEntry name="Army Commander" id="4ac2-4b32-56e3-63ba" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="4757-34a6-b167-d1e4" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
-            <constraint id="757c-28fd-3619-1afe" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Army Commander" id="df1b-1f8f-4ad3-310c" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
-              <modifiers>
-                <modifier field="d0c8-e08c-1828-77b4" type="set" value="6"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup name="Armour" id="9adb-4382-bd3a-e6e9" collective="false" hidden="false" import="true">
           <constraints>
@@ -5103,7 +5088,15 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <cost name="pts" typeId="points" value="125"/>
       </costs>
       <entryLinks>
-        <entryLink name="Army Commander" id="4d39-348b-c43f-d28a" collective="false" hidden="false" import="true" targetId="4a27-f4c3-792f-0d8a" type="selectionEntry"/>
+        <entryLink name="Army Commander" id="4d39-348b-c43f-d28a" collective="false" hidden="false" import="true" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
+          <infoLinks>
+            <infoLink name="Army Commander Strategy Rating" id="9fda-65b2-7184-b5ab" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
+              <modifiers>
+                <modifier field="d0c8-e08c-1828-77b4" type="set" value="5"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </entryLink>
         <entryLink name="Power Fist" id="39a1-0f50-2533-30ca" collective="false" hidden="false" import="true" targetId="d6c8-382a-4d74-36af" type="selectionEntry">
           <constraints>
             <constraint id="522e-b3a3-d986-4ba0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
@@ -5497,7 +5490,16 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <cost name="pts" typeId="points" value="96"/>
       </costs>
       <entryLinks>
-        <entryLink name="Army Commander" id="0d44-254f-1aa4-7b0c" collective="false" hidden="false" import="true" targetId="4a27-f4c3-792f-0d8a" type="selectionEntry"/>
+        <entryLink name="Army Commander" id="0d44-254f-1aa4-7b0c" collective="false" hidden="false" import="true" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
+          <modifiers>
+            <modifier field="d0c8-e08c-1828-77b4" type="set" value="5"/>
+            <modifier field="d0c8-e08c-1828-77b4" type="increment" value="1">
+              <conditions>
+                <condition childId="7717-f970-8090-911e" field="selections" includeChildSelections="true" scope="5c0d-f1e5-52f5-8d7f" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
         <entryLink name="Space Marine Bike" id="925a-ff91-355f-4314" collective="false" hidden="false" import="true" targetId="1b22-fc76-8ed0-5765" type="selectionEntry"/>
         <entryLink name="Wargear Cards" id="5f23-adbf-44c1-602a" collective="false" hidden="false" import="true" targetId="578d-7254-ab21-8b13" type="selectionEntryGroup">
           <constraints>
@@ -5858,7 +5860,6 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
           <constraints>
             <constraint id="49bb-ed2c-fb54-c412" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="4"/>
             <constraint id="b397-30ab-b8db-eb3f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="4"/>
-            <constraint id="fc06-8e64-474a-3661" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="4"/>
           </constraints>
           <entryLinks>
             <entryLink name="Boltgun" id="1776-e498-2c7b-b879" hidden="false" import="true" targetId="0e81-7914-e52a-0a8d" type="selectionEntry">
@@ -6108,6 +6109,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
+      <entryLinks>
+        <entryLink name="Assault Weapons" id="f9df-4bea-a4f4-4485" collective="false" hidden="false" import="true" targetId="cd0a-6a8d-1f46-a6db" type="selectionEntryGroup"/>
+      </entryLinks>
       <modifierGroups>
         <modifierGroup type="and">
           <comment>For Ally lists</comment>

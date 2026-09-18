@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Legion of the Damned" id="8d30-f85a-223d-697c" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff89" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="31" library="false" revision="3" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
-  <categoryEntries>
-    <categoryEntry name="Characters" id="9278-65a2-4632-a8ff" hidden="false"/>
-    <categoryEntry name="Squads" id="7706-40f6-7f42-15b6" hidden="false"/>
-    <categoryEntry name="Support" id="e940-7b6c-c021-a006" hidden="false"/>
-    <categoryEntry name="Legion of the Damned" id="be36-88b5-78cb-1705" hidden="false"/>
-  </categoryEntries>
+<catalogue name="Codex - Legion of the Damned" id="8d30-f85a-223d-697c" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff89" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="31" library="false" revision="4" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink name="Legion of the Damned Commander" id="c6d3-4f59-bb7b-cb64" hidden="false" import="true" targetId="b3bf-f27d-4c9a-ba36" type="selectionEntry"/>
     <entryLink name="Chaplain" id="10d7-a6ab-2164-9a8c" hidden="false" import="true" targetId="19be-b66b-0dae-a781" type="selectionEntry"/>
@@ -21,228 +15,6 @@
     <entryLink name="Space Marine Land Speeder" id="eb40-76b1-a476-67af" hidden="false" import="true" targetId="cffd-3942-739c-4f9a" type="selectionEntry"/>
     <entryLink name="Space Marine Attack Bike" id="6a2b-6664-9875-e6d2" hidden="false" import="true" targetId="2f5c-fdcb-0dbc-67c0" type="selectionEntry"/>
   </entryLinks>
-  <forceEntries>
-    <forceEntry name="Legion of the Damned" id="bff9-64e9-2c4f-67e6" hidden="false">
-      <categoryLinks>
-        <categoryLink name="Characters" id="6769-a1bb-1405-2b35" hidden="false" primary="false" targetId="9278-65a2-4632-a8ff">
-          <constraints>
-            <constraint id="c24b-a127-8ffb-46d9" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="0"/>
-            <constraint id="a76c-9c6e-cd29-0927" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="max" value="50"/>
-          </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <comment>When you have no points limit</comment>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-              <modifiers>
-                <modifier field="c24b-a127-8ffb-46d9" type="set" value="-1"/>
-              </modifiers>
-            </modifierGroup>
-            <modifierGroup type="and">
-              <comment>When having a points limit</comment>
-              <modifiers>
-                <modifier field="c24b-a127-8ffb-46d9" type="increment" value="1">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <repeats>
-                    <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="0.5" roundUp="false" scope="roster" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-                <modifier field="a76c-9c6e-cd29-0927" type="set" value="-1">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-        </categoryLink>
-        <categoryLink name="Squads" id="10bb-e919-c46d-2275" hidden="false" primary="false" targetId="7706-40f6-7f42-15b6">
-          <constraints>
-            <constraint id="877a-9f4d-379f-ae77" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="min" value="0"/>
-            <constraint id="5495-03e7-b022-dd2c" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="min" value="25"/>
-          </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <comment>When you have no points limit</comment>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-              <modifiers>
-                <modifier field="877a-9f4d-379f-ae77" type="set" value="-1"/>
-              </modifiers>
-            </modifierGroup>
-            <modifierGroup type="and">
-              <comment>When having a points limit</comment>
-              <modifiers>
-                <modifier field="877a-9f4d-379f-ae77" type="increment" value="1">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <repeats>
-                    <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="0.25" roundUp="false" scope="roster" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-                <modifier field="5495-03e7-b022-dd2c" type="set" value="-1">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-        </categoryLink>
-        <categoryLink name="Support" id="c32d-fa91-b623-92a7" hidden="false" targetId="e940-7b6c-c021-a006">
-          <constraints>
-            <constraint id="dd45-78f6-e4ad-2bde" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="0"/>
-            <constraint id="10a9-039f-d0e9-26c4" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="max" value="50"/>
-          </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <comment>When you have no points limit</comment>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-              <modifiers>
-                <modifier field="dd45-78f6-e4ad-2bde" type="set" value="-1"/>
-              </modifiers>
-            </modifierGroup>
-            <modifierGroup type="and">
-              <comment>When having a points limit</comment>
-              <modifiers>
-                <modifier field="dd45-78f6-e4ad-2bde" type="increment" value="1">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <repeats>
-                    <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="0.5" roundUp="false" scope="roster" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-                <modifier field="10a9-039f-d0e9-26c4" type="set" value="-1">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-        </categoryLink>
-      </categoryLinks>
-    </forceEntry>
-    <forceEntry name="Legion of the Damned - Ally List" id="d482-b4b0-33d1-bfb5" hidden="false">
-      <categoryLinks>
-        <categoryLink name="Support" id="bdb8-2a07-855c-0e6c" hidden="false" primary="false" targetId="e940-7b6c-c021-a006">
-          <constraints>
-            <constraint id="e94c-f6fa-d046-67b6" field="limit::points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="max" value="0"/>
-            <constraint id="90af-5cf2-e50c-27a4" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="0"/>
-          </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <comment>When having a points limit and 50% forces</comment>
-              <modifiers>
-                <modifier field="90af-5cf2-e50c-27a4" type="increment" value="1">
-                  <comment>For 50% armies</comment>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition childId="65bb-c554-1585-91d9" childName="Dark Angels" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                            <condition childId="6186-0c50-3540-dc37" childName="Ultramarines" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                            <condition childId="261d-dcfd-16cf-3caf" childName="Eldar" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                            <condition childId="9fec-6f81-5e76-3592" childName="Blood Angels" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                            <condition childId="e206-c273-bb7e-6132" childName="Squats" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <repeats>
-                    <repeat childId="any" childName="any" field="limit::points" includeChildForces="true" includeChildSelections="true" percentValue="false" repeats="0.5" roundUp="false" scope="roster" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-                <modifier field="e94c-f6fa-d046-67b6" type="set" value="-1"/>
-              </modifiers>
-            </modifierGroup>
-            <modifierGroup type="and">
-              <comment>When having a points limit and 25% forces</comment>
-              <modifiers>
-                <modifier field="90af-5cf2-e50c-27a4" type="increment" value="1">
-                  <comment>For 50% armies</comment>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition childId="a949-140a-176f-6700" childName="Sisters of Battle" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                            <condition childId="ef00-5e3b-a59a-902f" childName="Imperial Guard" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <repeats>
-                    <repeat childId="any" childName="any" field="limit::points" includeChildForces="true" includeChildSelections="true" percentValue="false" repeats="0.25" roundUp="false" scope="roster" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-                <modifier field="e94c-f6fa-d046-67b6" type="set" value="-1"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <modifiers>
-            <modifier field="name" type="set" value="Support - Allies"/>
-          </modifiers>
-        </categoryLink>
-      </categoryLinks>
-      <modifiers>
-        <modifier field="info" type="add" value="{this} Points are shared from your Support % of the main army"/>
-      </modifiers>
-    </forceEntry>
-  </forceEntries>
   <infoLinks>
     <infoLink name="Fear" id="ca88-8780-e3aa-5ad2" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
   </infoLinks>
@@ -647,8 +419,8 @@ See datafax for damage table</description>
     </selectionEntry>
     <selectionEntry name="Legion of the Damned Commander" id="b3bf-f27d-4c9a-ba36" collective="false" hidden="false" import="true" page="Issue 224" publicationId="8eed-45fd-d4be-9a1b" type="model">
       <categoryLinks>
-        <categoryLink name="Legion of the Damned" id="4c1f-8003-5650-e65b" hidden="false" primary="false" targetId="be36-88b5-78cb-1705"/>
-        <categoryLink name="Characters" id="c140-da82-cc58-cfea" hidden="false" primary="true" targetId="9278-65a2-4632-a8ff"/>
+        <categoryLink name="Legion of the Damned" id="f59e-ebfd-da33-43be" hidden="false" primary="false" targetId="f7f4-2733-743a-8971"/>
+        <categoryLink name="1Characters" id="cffe-f834-4b35-adc6" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="e794-bdbc-72fd-f785" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -702,14 +474,9 @@ See datafax for damage table</description>
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
-              <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -720,7 +487,7 @@ See datafax for damage table</description>
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="a60b-92d0-a03f-6c77" shared="true" type="atLeast" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -742,8 +509,7 @@ See datafax for damage table</description>
     </selectionEntry>
     <selectionEntry name="Space Marine Bike" id="2376-8b71-fc77-2321" collective="false" hidden="false" import="true" page="63" publicationId="4590-6ba9-5482-a1fa" type="upgrade">
       <categoryLinks>
-        <categoryLink name="Skimmer/Bike" id="88ab-8ddd-623a-85f5" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
-        <categoryLink name="Legion of the Damned" id="7c28-9281-db28-19a4" hidden="false" primary="false" targetId="be36-88b5-78cb-1705"/>
+        <categoryLink name="Legion of the Damned" id="6535-53e1-68c0-9a4f" hidden="false" primary="false" targetId="f7f4-2733-743a-8971"/>
       </categoryLinks>
       <constraints>
         <constraint id="d9df-3974-aa91-2bca" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
@@ -815,8 +581,8 @@ See datafax for damage table</description>
     </selectionEntry>
     <selectionEntry name="Company Icon" id="8fc1-1f5e-f6a1-a822" collective="false" hidden="false" import="true" page="Issue 224" publicationId="8eed-45fd-d4be-9a1b" type="unit">
       <categoryLinks>
-        <categoryLink name="Characters" id="bc42-6cc4-22cd-5ce9" hidden="false" primary="true" targetId="9278-65a2-4632-a8ff"/>
-        <categoryLink name="Legion of the Damned" id="dd98-bae9-27c2-32e5" hidden="false" primary="false" targetId="be36-88b5-78cb-1705"/>
+        <categoryLink name="Legion of the Damned" id="5c05-549b-1e23-1a8e" hidden="false" primary="false" targetId="f7f4-2733-743a-8971"/>
+        <categoryLink name="1Characters" id="5fa4-6f4f-33ee-f9ad" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="adfc-5aa7-32e9-83f0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -858,14 +624,9 @@ See datafax for damage table</description>
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
-              <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -887,8 +648,8 @@ See datafax for damage table</description>
     </selectionEntry>
     <selectionEntry name="Chaplain" id="19be-b66b-0dae-a781" collective="false" hidden="false" import="true" page="Issue 224" publicationId="8eed-45fd-d4be-9a1b" type="model">
       <categoryLinks>
-        <categoryLink name="Legion of the Damned" id="b096-25af-130f-6104" hidden="false" primary="false" targetId="be36-88b5-78cb-1705"/>
-        <categoryLink name="Characters" id="cfd2-448f-eedd-cdec" hidden="false" primary="true" targetId="9278-65a2-4632-a8ff"/>
+        <categoryLink name="Legion of the Damned" id="9600-698d-fea5-065c" hidden="false" primary="false" targetId="f7f4-2733-743a-8971"/>
+        <categoryLink name="1Characters" id="7665-62d2-a5c4-6326" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="30b5-de87-7b00-ebb8" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="1"/>
@@ -927,15 +688,11 @@ See datafax for damage table</description>
       </infoLinks>
       <modifierGroups>
         <modifierGroup type="and">
+          <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
-              <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -982,8 +739,8 @@ See datafax for damage table</description>
     </selectionEntry>
     <selectionEntry name="Librarian" id="5d8e-4205-8046-3068" collective="false" hidden="false" import="true" page="Issue 224" publicationId="8eed-45fd-d4be-9a1b" type="model">
       <categoryLinks>
-        <categoryLink name="Legion of the Damned" id="e634-45b7-cb08-f7cb" hidden="false" primary="false" targetId="be36-88b5-78cb-1705"/>
-        <categoryLink name="Characters" id="d8b3-a7a9-b369-eb97" hidden="false" primary="true" targetId="9278-65a2-4632-a8ff"/>
+        <categoryLink name="Legion of the Damned" id="1f0b-01db-9862-f7b8" hidden="false" primary="false" targetId="f7f4-2733-743a-8971"/>
+        <categoryLink name="1Characters" id="0f00-cbd5-fb19-3b70" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="9189-dbe3-1dcd-ae38" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="1"/>
@@ -1019,7 +776,6 @@ See datafax for damage table</description>
         <entryLink name="Psyker" id="f96e-1dcf-1da5-fe24" hidden="false" import="true" targetId="56e9-7608-b945-ac81" type="selectionEntry">
           <constraints>
             <constraint id="fc81-8ee8-181e-57b6" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="5637-bf20-8488-976f" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
           <infoLinks>
             <infoLink name="Psychic Level 4" id="aa0d-0041-881b-0aea" hidden="false" targetId="f988-2251-b863-a538" type="profile"/>
@@ -1031,15 +787,11 @@ See datafax for damage table</description>
       </infoLinks>
       <modifierGroups>
         <modifierGroup type="and">
+          <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
-              <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1061,8 +813,9 @@ See datafax for damage table</description>
     </selectionEntry>
     <selectionEntry name="Techmarine" id="624a-9bfe-8850-e3bc" collective="false" hidden="false" import="true" page="Issue 224" publicationId="8eed-45fd-d4be-9a1b" type="model">
       <categoryLinks>
-        <categoryLink name="Legion of the Damned" id="df2b-fdcb-84b6-08de" hidden="false" primary="false" targetId="be36-88b5-78cb-1705"/>
-        <categoryLink name="Characters" id="fa23-428b-97f2-e0c2" hidden="false" primary="true" targetId="9278-65a2-4632-a8ff"/>
+        <categoryLink name="Legion of the Damned" id="f666-d1d7-5104-6a4b" hidden="false" primary="false" targetId="f7f4-2733-743a-8971"/>
+        <categoryLink name="1Characters" id="5708-36e0-ce2d-79d9" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Techmarine" id="a8c8-7825-3700-3729" hidden="false" primary="false" targetId="a21c-767f-7ecf-94eb"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="50"/>
@@ -1098,15 +851,11 @@ See datafax for damage table</description>
       </infoLinks>
       <modifierGroups>
         <modifierGroup type="and">
+          <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
-              <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1128,8 +877,8 @@ See datafax for damage table</description>
     </selectionEntry>
     <selectionEntry name="Assault Squad" id="ff86-6a68-1cb8-40f8" collective="false" hidden="false" import="true" page="67" publicationId="4590-6ba9-5482-a1fa" type="unit">
       <categoryLinks>
-        <categoryLink name="Legion of the Damned" id="e65d-dd36-9475-e094" hidden="false" primary="false" targetId="be36-88b5-78cb-1705"/>
-        <categoryLink name="Squads" id="ae39-06f5-e29d-1288" hidden="false" primary="true" targetId="7706-40f6-7f42-15b6"/>
+        <categoryLink name="Legion of the Damned" id="20b9-fc01-4f2c-4bee" hidden="false" primary="false" targetId="f7f4-2733-743a-8971"/>
+        <categoryLink name="2Squads" id="7ee0-24bc-cf48-f3d1" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="390"/>
@@ -1141,14 +890,9 @@ See datafax for damage table</description>
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
-              <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1309,8 +1053,8 @@ See datafax for damage table</description>
     </selectionEntry>
     <selectionEntry name="Tactical Squad" id="0969-6db4-0f04-59ed" collective="false" hidden="false" import="true" page="Issue 224" publicationId="8eed-45fd-d4be-9a1b" type="unit">
       <categoryLinks>
-        <categoryLink name="Legion of the Damned" id="26c9-45ee-10ad-1f56" hidden="false" primary="false" targetId="be36-88b5-78cb-1705"/>
-        <categoryLink name="Squads" id="1128-447f-777e-eaeb" hidden="false" primary="true" targetId="7706-40f6-7f42-15b6"/>
+        <categoryLink name="Legion of the Damned" id="7ff0-cd55-fdbf-9d36" hidden="false" primary="false" targetId="f7f4-2733-743a-8971"/>
+        <categoryLink name="2Squads" id="ef42-d54d-1e36-c921" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="390"/>
@@ -1319,14 +1063,9 @@ See datafax for damage table</description>
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
-              <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1516,8 +1255,8 @@ See datafax for damage table</description>
     </selectionEntry>
     <selectionEntry name="Devastator Squad" id="a08d-afe2-30bb-8398" collective="false" hidden="false" import="true" page="Issue 224" publicationId="8eed-45fd-d4be-9a1b" type="unit">
       <categoryLinks>
-        <categoryLink name="Legion of the Damned" id="4fab-8784-acba-7175" hidden="false" primary="false" targetId="be36-88b5-78cb-1705"/>
-        <categoryLink name="Squads" id="648e-6e34-9126-bf43" hidden="false" primary="true" targetId="7706-40f6-7f42-15b6"/>
+        <categoryLink name="Legion of the Damned" id="5aa7-4dd7-3291-c485" hidden="false" primary="false" targetId="f7f4-2733-743a-8971"/>
+        <categoryLink name="2Squads" id="3d72-d52b-fd24-f15c" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="390"/>
@@ -1526,14 +1265,9 @@ See datafax for damage table</description>
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
-              <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1668,21 +1402,16 @@ See datafax for damage table</description>
     </selectionEntry>
     <selectionEntry name="Bike Squadron" id="09a6-054e-d694-45f7" collective="false" hidden="false" import="true" page="Issue 224" publicationId="8eed-45fd-d4be-9a1b" type="unit">
       <categoryLinks>
-        <categoryLink name="Legion of the Damned" id="0e1a-6f59-99dd-19af" hidden="false" primary="false" targetId="be36-88b5-78cb-1705"/>
-        <categoryLink name="Squads" id="36e1-f432-3b0e-472a" hidden="false" primary="true" targetId="7706-40f6-7f42-15b6"/>
+        <categoryLink name="Legion of the Damned" id="8583-62aa-1824-97cb" hidden="false" primary="false" targetId="f7f4-2733-743a-8971"/>
+        <categoryLink name="2Squads" id="f105-3091-5f0b-948b" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <modifierGroups>
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
-              <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1832,8 +1561,8 @@ See datafax for damage table</description>
     </selectionEntry>
     <selectionEntry name="Dreadnought" id="e28d-aebf-0be0-f82a" hidden="false" import="true" type="upgrade">
       <categoryLinks>
-        <categoryLink name="Support" id="8217-998a-7371-55ce" hidden="false" primary="true" targetId="e940-7b6c-c021-a006"/>
-        <categoryLink name="Legion of the Damned" id="5675-e290-e97c-fd21" hidden="false" primary="false" targetId="be36-88b5-78cb-1705"/>
+        <categoryLink name="Legion of the Damned" id="73bb-c95b-4ab6-0f66" hidden="false" primary="false" targetId="f7f4-2733-743a-8971"/>
+        <categoryLink name="3Support" id="61f7-785b-1b1e-f9aa" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <constraints>
         <constraint id="6bca-2158-c3fd-b0d0" field="selections" scope="parent" shared="true" type="max" value="0"/>
@@ -1873,32 +1602,35 @@ See datafax for damage table</description>
       </infoLinks>
       <modifierGroups>
         <modifierGroup type="and">
+          <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
-              <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
       <modifiers>
-        <modifier field="6bca-2158-c3fd-b0d0" type="set" value="-1">
-          <conditions>
-            <condition childId="624a-9bfe-8850-e3bc" childName="Techmarine" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-          </conditions>
-        </modifier>
         <modifier field="error" type="add" value="{this} must have at least 1 Techmarine the list">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="624a-9bfe-8850-e3bc" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
+                </condition>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier field="6bca-2158-c3fd-b0d0" type="set" value="-1">
+          <comment>Have 1 techmarine</comment>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
+                  <comment>Have 1 techmarine</comment>
                 </condition>
               </conditions>
             </conditionGroup>
@@ -1908,8 +1640,8 @@ See datafax for damage table</description>
     </selectionEntry>
     <selectionEntry name="Space Marine Rhino" id="0af1-5938-255d-7135" collective="false" hidden="false" import="true" page="issue 224" publicationId="8eed-45fd-d4be-9a1b" type="model">
       <categoryLinks>
-        <categoryLink name="Support" id="1903-e187-df3a-c4ff" hidden="false" primary="true" targetId="e940-7b6c-c021-a006"/>
-        <categoryLink name="Legion of the Damned" id="ec70-16ed-4920-80b8" hidden="false" primary="false" targetId="be36-88b5-78cb-1705"/>
+        <categoryLink name="Legion of the Damned" id="c5d5-c3b2-d5b7-1eb1" hidden="false" primary="false" targetId="f7f4-2733-743a-8971"/>
+        <categoryLink name="3Support" id="699b-a6d2-e58a-c00a" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <constraints>
         <constraint id="5c49-09e0-0692-0c58" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0">
@@ -1991,15 +1723,11 @@ See datafax for damage table</description>
       </infoLinks>
       <modifierGroups>
         <modifierGroup type="and">
+          <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
-              <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2010,7 +1738,7 @@ See datafax for damage table</description>
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="624a-9bfe-8850-e3bc" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
@@ -2049,8 +1777,8 @@ See datafax for damage table</description>
     <selectionEntry name="Space Marine Land Speeder" id="cffd-3942-739c-4f9a" collective="false" hidden="false" import="true" page="70" publicationId="4590-6ba9-5482-a1fa" type="unit">
       <categoryLinks>
         <categoryLink name="Skimmer/Bike" id="bda7-d3e0-0083-1525" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
-        <categoryLink name="Support" id="61e8-09ea-069b-f13d" hidden="false" primary="true" targetId="e940-7b6c-c021-a006"/>
-        <categoryLink name="Legion of the Damned" id="e74f-16d4-8b3c-a8f1" hidden="false" primary="false" targetId="be36-88b5-78cb-1705"/>
+        <categoryLink name="3Support" id="9409-13c4-725c-1b7c" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
+        <categoryLink name="Legion of the Damned" id="4f05-e5bf-0194-ce5d" hidden="false" primary="false" targetId="f7f4-2733-743a-8971"/>
       </categoryLinks>
       <constraints>
         <constraint id="5361-1dde-eff5-e158" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0">
@@ -2108,15 +1836,11 @@ See datafax for damage table</description>
       </infoLinks>
       <modifierGroups>
         <modifierGroup type="and">
+          <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
-              <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2128,7 +1852,7 @@ See datafax for damage table</description>
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="624a-9bfe-8850-e3bc" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
@@ -2139,7 +1863,7 @@ See datafax for damage table</description>
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="624a-9bfe-8850-e3bc" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
@@ -2151,8 +1875,8 @@ See datafax for damage table</description>
     <selectionEntry name="Space Marine Attack Bike" id="2f5c-fdcb-0dbc-67c0" collective="false" hidden="false" import="true" page="Datafax" type="model">
       <categoryLinks>
         <categoryLink name="Attack Bike" id="a76d-b66b-e4f2-f88a" hidden="false" primary="false" targetId="2ea7-ced8-d2ec-2939"/>
-        <categoryLink name="Support" id="efbd-6da6-88d3-e729" hidden="false" primary="true" targetId="e940-7b6c-c021-a006"/>
-        <categoryLink name="Legion of the Damned" id="bd68-9978-5c01-0ebd" hidden="false" primary="false" targetId="be36-88b5-78cb-1705"/>
+        <categoryLink name="Legion of the Damned" id="f6ec-e077-e01f-2324" hidden="false" primary="false" targetId="f7f4-2733-743a-8971"/>
+        <categoryLink name="3Support" id="7058-6a2e-4e46-856c" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <constraints>
         <constraint id="e438-cb41-efd1-4a28" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0">
@@ -2213,15 +1937,11 @@ See datafax for damage table</description>
       </infoLinks>
       <modifierGroups>
         <modifierGroup type="and">
+          <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="remove" value="be36-88b5-78cb-1705">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="set-primary" value="e940-7b6c-c021-a006">
-              <conditions>
-                <condition childId="d482-b4b0-33d1-bfb5" childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2233,7 +1953,7 @@ See datafax for damage table</description>
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="624a-9bfe-8850-e3bc" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
@@ -2244,7 +1964,7 @@ See datafax for damage table</description>
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="624a-9bfe-8850-e3bc" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
@@ -2254,6 +1974,9 @@ See datafax for damage table</description>
       </modifiers>
     </selectionEntry>
     <selectionEntry name="Sergeant Centurius" id="4218-68ac-8538-b03f" collective="false" hidden="false" import="true" type="model">
+      <categoryLinks>
+        <categoryLink name="Legion of the Damned" id="c8f7-1d03-c890-e263" hidden="false" primary="false" targetId="f7f4-2733-743a-8971"/>
+      </categoryLinks>
       <constraints>
         <constraint id="5d05-cf2e-ea25-855b" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
       </constraints>

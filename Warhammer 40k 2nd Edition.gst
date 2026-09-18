@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="32" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="33" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <comment>Warhammer 2nd Edition 40k</comment>
   <readme>Added more wargear cards</readme>
   <categoryEntries>
@@ -22,9 +22,11 @@
     <categoryEntry name="Necrons" id="722d-8a5c-d442-498a" hidden="false"/>
     <categoryEntry name="Imperial Agents" id="7b75-aa9e-1b94-f4a5" hidden="false"/>
     <categoryEntry name="Squats" id="e206-c273-bb7e-6132" hidden="false"/>
-    <categoryEntry name="Support" id="b6e4-2c66-e404-b10a" hidden="false"/>
-    <categoryEntry name="Characters" id="7576-d91f-083c-38a7" hidden="false"/>
-    <categoryEntry name="Squads" id="bc01-5ece-b97e-96de" hidden="false"/>
+    <categoryEntry name="3Support" id="b6e4-2c66-e404-b10a" hidden="false"/>
+    <categoryEntry name="1Characters" id="7576-d91f-083c-38a7" hidden="false"/>
+    <categoryEntry name="2Squads" id="bc01-5ece-b97e-96de" hidden="false"/>
+    <categoryEntry name="Legion of the Damned" id="f7f4-2733-743a-8971" hidden="false"/>
+    <categoryEntry name="Techmarine" id="a21c-767f-7ecf-94eb" hidden="false"/>
   </categoryEntries>
   <costTypes>
     <costType name="pts" id="points" defaultCostLimit="-1" hidden="false"/>
@@ -87,8 +89,8 @@
         </categoryLink>
         <categoryLink name="Squads" id="becc-cf75-2085-335d" hidden="false" targetId="bc01-5ece-b97e-96de">
           <constraints>
-            <constraint id="73f8-df2c-94fb-0483" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="0"/>
-            <constraint id="9140-48cc-65c2-744e" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="max" value="0"/>
+            <constraint id="73f8-df2c-94fb-0483" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="min" value="0"/>
+            <constraint id="9140-48cc-65c2-744e" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="min" value="0"/>
           </constraints>
           <modifierGroups>
             <modifierGroup type="and">
@@ -146,6 +148,19 @@
           <modifierGroups>
             <modifierGroup type="and">
               <comment>Marines/Eldar/Orks/Squats</comment>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="138e-c671-3180-f615" childName="Codex - Ultramarines" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="12fb-bbf1-3d12-aef9" childName="Codex - Angels of Death (Blood Angels)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="7c0f-1fc4-d5a5-dc73" childName="Codex - Angels of Death (Dark Angels)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="8d0e-9c4e-17af-ed93" childName="Codex - Space Wolves" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="3da1-2b23-4a40-323e" childName="Codex - Eldar" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="82c6-3e15-54c5-a35f" childName="Codex - Orks" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="6583-5ff7-59cc-1fc9" childName="Codex - Squats" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
               <modifierGroups>
                 <modifierGroup type="and">
                   <comment>When you have no points limit</comment>
@@ -202,20 +217,51 @@
           </constraints>
           <modifierGroups>
             <modifierGroup type="and">
-              <comment>Marines/Orks/Eldar/Squats</comment>
               <modifierGroups>
                 <modifierGroup type="and">
                   <comment>When you have no points limit</comment>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
                   <modifiers>
-                    <modifier field="618f-8174-c4e1-c6d2" type="set" value="-1"/>
-                    <modifier field="5284-b624-e08e-4dcd" type="set" value="50"/>
+                    <modifier field="618f-8174-c4e1-c6d2" type="set" value="-1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier field="5284-b624-e08e-4dcd" type="set" value="50">
+                      <comment>For 50% armies - marines, eldar, orks, squats</comment>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition childId="6583-5ff7-59cc-1fc9" childName="Codex - Squats" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="138e-c671-3180-f615" childName="Codex - Ultramarines" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="12fb-bbf1-3d12-aef9" childName="Codex - Angels of Death (Blood Angels)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="7c0f-1fc4-d5a5-dc73" childName="Codex - Angels of Death (Dark Angels)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="8d0e-9c4e-17af-ed93" childName="Codex - Space Wolves" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="3da1-2b23-4a40-323e" childName="Codex - Eldar" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="82c6-3e15-54c5-a35f" childName="Codex - Orks" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier field="5284-b624-e08e-4dcd" type="set" value="25">
+                      <comment>For 25% armies - sisters, GSC, chaos, guard</comment>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition childId="6583-5ff7-59cc-1fc9" childName="Codex - Squats" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="138e-c671-3180-f615" childName="Codex - Ultramarines" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="12fb-bbf1-3d12-aef9" childName="Codex - Angels of Death (Blood Angels)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="7c0f-1fc4-d5a5-dc73" childName="Codex - Angels of Death (Dark Angels)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="8d0e-9c4e-17af-ed93" childName="Codex - Space Wolves" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="3da1-2b23-4a40-323e" childName="Codex - Eldar" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="82c6-3e15-54c5-a35f" childName="Codex - Orks" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
                   </modifiers>
                 </modifierGroup>
                 <modifierGroup type="and">
@@ -231,15 +277,48 @@
                       </conditionGroups>
                     </modifier>
                     <modifier field="618f-8174-c4e1-c6d2" type="increment" value="1">
+                      <comment>For 50% armies - marines, eldar, orks, squats</comment>
                       <conditionGroups>
                         <conditionGroup type="and">
                           <conditions>
                             <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
                           </conditions>
                         </conditionGroup>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition childId="6583-5ff7-59cc-1fc9" childName="Codex - Squats" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="138e-c671-3180-f615" childName="Codex - Ultramarines" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="12fb-bbf1-3d12-aef9" childName="Codex - Angels of Death (Blood Angels)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="7c0f-1fc4-d5a5-dc73" childName="Codex - Angels of Death (Dark Angels)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="8d0e-9c4e-17af-ed93" childName="Codex - Space Wolves" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="3da1-2b23-4a40-323e" childName="Codex - Eldar" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="82c6-3e15-54c5-a35f" childName="Codex - Orks" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                          </conditions>
+                        </conditionGroup>
                       </conditionGroups>
                       <repeats>
                         <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="0.5" roundUp="false" scope="roster" shared="true" value="1"/>
+                      </repeats>
+                    </modifier>
+                    <modifier field="618f-8174-c4e1-c6d2" type="increment" value="1">
+                      <comment>For 25% armies - sisters, GSC, chaos, guard</comment>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition childId="82fc-8ad4-7b4b-dd4a" childName="Codex - Imperial Guard" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="5bd8-0ec7-a752-694d" childName="Codex - Chaos" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="b567-fa24-d74f-65ee" childName="Codex - Genestealer Cults" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="b7a0-f77c-22d5-5989" childName="Codex - Sisters of Battle" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                      <repeats>
+                        <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="0.25" roundUp="false" scope="roster" shared="true" value="1"/>
                       </repeats>
                     </modifier>
                   </modifiers>
@@ -1113,7 +1192,8 @@
     </profile>
     <profile name="Psychic Level 2" id="76f1-a9ec-f1f7-0162" hidden="false" page="72" publicationId="2bb8-b6de-8b70-7f41" typeId="dcc9-06b3-a75f-6b62" typeName="Unit Psychic Level">
       <characteristics>
-        <characteristic name="Psychic Level" typeId="9ff5-b223-af73-69a8">2</characteristic>
+        <characteristic name="Psychic Level" typeId="9ff5-b223-af73-69a8">
+</characteristic>
       </characteristics>
     </profile>
     <profile name="Photon Beam Searchlight" id="e2d6-0575-c357-2018" hidden="false" page="47" publicationId="06e5-8e36-e8c8-aec3" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
@@ -1123,17 +1203,20 @@
     </profile>
     <profile name="Psychic Level 1" id="2653-20e1-0ea7-dcc5" hidden="false" page="72" publicationId="2bb8-b6de-8b70-7f41" typeId="dcc9-06b3-a75f-6b62" typeName="Unit Psychic Level">
       <characteristics>
-        <characteristic name="Psychic Level" typeId="9ff5-b223-af73-69a8">1</characteristic>
+        <characteristic name="Psychic Level" typeId="9ff5-b223-af73-69a8">
+</characteristic>
       </characteristics>
     </profile>
     <profile name="Psychic Level 3" id="6c73-5778-e524-130d" hidden="false" page="72" publicationId="2bb8-b6de-8b70-7f41" typeId="dcc9-06b3-a75f-6b62" typeName="Unit Psychic Level">
       <characteristics>
-        <characteristic name="Psychic Level" typeId="9ff5-b223-af73-69a8">3</characteristic>
+        <characteristic name="Psychic Level" typeId="9ff5-b223-af73-69a8">
+</characteristic>
       </characteristics>
     </profile>
     <profile name="Psychic Level 4" id="f988-2251-b863-a538" hidden="false" page="72" publicationId="2bb8-b6de-8b70-7f41" typeId="dcc9-06b3-a75f-6b62" typeName="Unit Psychic Level">
       <characteristics>
-        <characteristic name="Psychic Level" typeId="9ff5-b223-af73-69a8">4</characteristic>
+        <characteristic name="Psychic Level" typeId="9ff5-b223-af73-69a8">
+</characteristic>
       </characteristics>
     </profile>
     <profile name="Psychic Shield" id="2534-d7ad-5692-4e16" hidden="false" page="73" publicationId="2bb8-b6de-8b70-7f41" typeId="11a6-8e13-a1ad-7e34" typeName="Unit Psychic Powers">
@@ -1968,13 +2051,7 @@ Troops in close combat who hate their enemy must always use their 2&quot; follow
 If already in hand-to-hand combat, roll a D6 for each stupid creature in HtH; on a roll of 1-3, it rolls no attack dice and makes no parries. If not in HtH, roll D6 for each stupid unit. On a 1-3, move each stupid creature its normal move in a random direction (roll scatter die); any enemies encountered are automatically engaged in HtH (you must still roll to determine whether the stupid creatures will actually fight as above). On a 4-6, the creatures do nothing for the remainder of the turn. Creatures cannot shoot weapons or use psychic abilities while suffering from stupidity. While overcome by stupidity, they ignore all further psychology tests; Broken troops are not affected byStupidity until they have rallied.</description>
     </rule>
     <rule name="Teleport" id="36dd-ed3a-7f67-5028" hidden="false">
-      <description>To teleport a squad, place one model from the squad on the table where you wish it to be teleported. Roll a Scatter Die and 2D10. A double 1 means the whole squad has been lost in the warp. Otherwise, the model is moved in the direction of the arrow the number of inches rolled on the 2D10. If the model is moved off the edge of the table by this scatter, the attempt has failed and
-the squad must try again next turn. If the model ends up in a building or other solid matter, roll for deviation again
-from that point. Once the first model has been deviated, the rest of the squad can be placed anywhere within 2” of it.
-Teleported models can shoot and fight in on the turn they arrive, but do not count as charging if they
-teleport directly into base-to-base contact with enemy models. Troops that have paid the points cost to teleport into a
-battle may teleport out again during the owning player‘s turn. The squad is simply removed from the table during
-the player‘s movement phase and may not return later in the game.</description>
+      <description>To teleport a squad, place one model from the squad on the table where you wish it to be teleported. Roll a Scatter Die and 2D10. A double 1 means the whole squad has been lost in the warp. Otherwise, the model is moved in the direction of the arrow the number of inches rolled on the 2D10. If the model is moved off the edge of the table by this scatter, the attempt has failed and the squad must try again next turn. If the model ends up in a building or other solid matter, roll for deviation again from that point. Once the first model has been deviated, the rest of the squad can be placed anywhere within 2” of it. Teleported models can shoot and fight in on the turn they arrive, but do not count as charging if they teleport directly into base-to-base contact with enemy models. Troops that have paid the points cost to teleport into a battle may teleport out again during the owning player‘s turn. The squad is simply removed from the table during the player‘s movement phase and may not return later in the game.</description>
     </rule>
     <rule name="Drop Pods" id="03c8-f609-5fb4-8e24" hidden="false">
       <description>Drop pods are deployed first during the movement phase after charges are declared, place a 2&quot; radius blast marker for each pod to be landed on a clear area anywhere in the battlezone. You must mark each blast marker or note down what the contents of each pod are. Do not tell the opposition! This is because pods that fail to open and become jammed can be opened if they are fired at, this may bring jammed Deathwind pods into play.

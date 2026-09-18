@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Ultramarines" id="138e-c671-3180-f615" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="26" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Ultramarines" id="138e-c671-3180-f615" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="27" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>Ultramarines Codex</readme>
-  <categoryEntries>
-    <categoryEntry name="Characters" id="8be3-6d17-d7d3-faa0" hidden="false"/>
-    <categoryEntry name="Squads" id="3017-162b-c153-6519" hidden="false"/>
-    <categoryEntry name="Supporttest" id="2ce9-bd7e-1b19-0211" hidden="false"/>
-  </categoryEntries>
   <entryLinks>
     <entryLink name="Space Marine Captain" id="e1eb-4981-2689-1fc2" collective="false" hidden="false" import="true" targetId="e664-c21f-4492-a7dc" type="selectionEntry"/>
     <entryLink name="Terminator Captain" id="cc3a-a216-fc10-2c17" collective="false" hidden="false" import="true" targetId="381f-f866-3d8a-4e03" type="selectionEntry"/>
@@ -37,239 +32,13 @@
     <entryLink name="Captain Invictus of the Ultramarines First Company" id="4590-992c-ef24-1fe7" collective="false" hidden="false" import="true" targetId="ef78-2d4e-0226-4956" type="selectionEntry"/>
     <entryLink name="Legion of the Damned" id="770b-0f6c-3fc5-36e7" collective="false" hidden="false" import="true" targetId="f319-a6b6-5a68-93de" type="selectionEntry"/>
     <entryLink name="Chapter Master" id="214d-15af-30a8-b6a6" hidden="false" import="true" targetId="5c0d-f1e5-52f5-8d7f" type="selectionEntry"/>
-    <entryLink name="Legion of the Damned - Centurius &amp; Bodyguard" id="799f-1f82-421c-6d31" hidden="false" import="true" targetId="8c27-6929-df67-91fe" type="selectionEntry">
-      <categoryLinks>
-        <categoryLink name="Squads" id="b6ae-c2ca-c342-9713" primary="true" targetId="3017-162b-c153-6519"/>
-        <categoryLink name="Ultramarines" id="cae6-4262-a484-b02d" primary="false" targetId="6186-0c50-3540-dc37"/>
-      </categoryLinks>
-    </entryLink>
+    <entryLink name="Legion of the Damned - Centurius &amp; Bodyguard" id="799f-1f82-421c-6d31" hidden="false" import="true" targetId="8c27-6929-df67-91fe" type="selectionEntry"/>
     <entryLink name="Combat Squad - Tactical" id="7905-21b9-ce38-643c" hidden="false" import="true" targetId="1b31-679b-6095-9712" type="selectionEntry"/>
     <entryLink name="Combat Squad - Devastator" id="d841-eacd-07d9-19c1" hidden="false" import="true" targetId="326b-b8b9-14df-bffb" type="selectionEntry"/>
     <entryLink name="Combat Squad - Assault" id="d781-497f-633d-093b" hidden="false" import="true" targetId="a2a8-5962-db60-11cc" type="selectionEntry"/>
     <entryLink name="Veteran Space Marine Squad" id="7d7a-54d7-2b78-814d" hidden="false" import="true" targetId="c5f0-4ff4-f1d2-147d" type="selectionEntry"/>
     <entryLink name="Combat Squad - Veterans" id="2f9c-07e5-caab-5903" hidden="false" import="true" targetId="fdfe-accc-6eb3-a649" type="selectionEntry"/>
   </entryLinks>
-  <forceEntries>
-    <forceEntry name="Ultramarines" id="4e7e-9512-b2cc-1777" hidden="false">
-      <categoryLinks>
-        <categoryLink name="Characters" id="948f-6044-e360-f134" hidden="false" primary="false" targetId="8be3-6d17-d7d3-faa0">
-          <constraints>
-            <constraint id="51cb-62a1-f73e-f535" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="0"/>
-            <constraint id="5211-2754-ca90-227f" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="max" value="50"/>
-          </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <comment>When you have no points limit</comment>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-              <modifiers>
-                <modifier field="51cb-62a1-f73e-f535" type="set" value="-1"/>
-              </modifiers>
-            </modifierGroup>
-            <modifierGroup type="and">
-              <comment>When having a points limit</comment>
-              <modifiers>
-                <modifier field="51cb-62a1-f73e-f535" type="increment" value="1">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <repeats>
-                    <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="0.5" roundUp="false" scope="roster" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-                <modifier field="5211-2754-ca90-227f" type="set" value="-1">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-        </categoryLink>
-        <categoryLink name="Squads" id="dc6a-3970-ecfa-ef07" hidden="false" primary="false" targetId="3017-162b-c153-6519">
-          <constraints>
-            <constraint id="e52a-976e-c1d7-3f03" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="min" value="0"/>
-            <constraint id="1e6a-6bf9-4e62-e1ad" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="min" value="25"/>
-          </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <comment>When you have no points limit</comment>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-              <modifiers>
-                <modifier field="e52a-976e-c1d7-3f03" type="set" value="-1"/>
-              </modifiers>
-            </modifierGroup>
-            <modifierGroup type="and">
-              <comment>When having a points limit</comment>
-              <modifiers>
-                <modifier field="e52a-976e-c1d7-3f03" type="increment" value="1">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <repeats>
-                    <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="0.25" roundUp="false" scope="roster" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-                <modifier field="1e6a-6bf9-4e62-e1ad" type="set" value="-1">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-        </categoryLink>
-        <categoryLink name="Supporttest" id="a60d-fdae-5420-41b9" hidden="false" targetId="2ce9-bd7e-1b19-0211">
-          <constraints>
-            <constraint id="05be-a933-5fc3-3604" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="0"/>
-            <constraint id="6aa8-0918-106a-276a" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="max" value="50"/>
-          </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <comment>When you have no points limit</comment>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-              <modifiers>
-                <modifier field="05be-a933-5fc3-3604" type="set" value="-1"/>
-              </modifiers>
-            </modifierGroup>
-            <modifierGroup type="and">
-              <comment>When having a points limit</comment>
-              <modifiers>
-                <modifier field="05be-a933-5fc3-3604" type="increment" value="1">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <repeats>
-                    <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="0.5" roundUp="false" scope="roster" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-                <modifier field="6aa8-0918-106a-276a" type="set" value="-1">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-        </categoryLink>
-      </categoryLinks>
-    </forceEntry>
-    <forceEntry name="Ultramarines - Ally List" id="bb80-dc7e-117d-28d5" hidden="false">
-      <categoryLinks>
-        <categoryLink name="Supporttest" id="54b8-24c0-1103-3ca8" hidden="false" primary="false" targetId="2ce9-bd7e-1b19-0211">
-          <constraints>
-            <constraint id="8e87-fb76-aaab-6a90" field="limit::points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="max" value="0"/>
-            <constraint id="5f36-ab6f-0064-dcb5" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="0"/>
-          </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <comment>When having a points limit and 50% forces</comment>
-              <modifiers>
-                <modifier field="5f36-ab6f-0064-dcb5" type="increment" value="1">
-                  <comment>For 50% armies</comment>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition childId="65bb-c554-1585-91d9" childName="Dark Angels" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                            <condition childId="261d-dcfd-16cf-3caf" childName="Eldar" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                            <condition childId="9fec-6f81-5e76-3592" childName="Blood Angels" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                            <condition childId="e206-c273-bb7e-6132" childName="Squats" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <repeats>
-                    <repeat childId="any" childName="any" field="limit::points" includeChildForces="true" includeChildSelections="true" percentValue="false" repeats="0.5" roundUp="false" scope="roster" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-                <modifier field="8e87-fb76-aaab-6a90" type="set" value="-1"/>
-              </modifiers>
-            </modifierGroup>
-            <modifierGroup type="and">
-              <comment>When having a points limit and 25% forces</comment>
-              <modifiers>
-                <modifier field="5f36-ab6f-0064-dcb5" type="increment" value="1">
-                  <comment>For 50% armies</comment>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition childId="a949-140a-176f-6700" childName="Sisters of Battle" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                            <condition childId="ef00-5e3b-a59a-902f" childName="Imperial Guard" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <repeats>
-                    <repeat childId="any" childName="any" field="limit::points" includeChildForces="true" includeChildSelections="true" percentValue="false" repeats="0.25" roundUp="false" scope="roster" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-                <modifier field="8e87-fb76-aaab-6a90" type="set" value="-1"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <modifiers>
-            <modifier field="name" type="set" value="Support - Allies"/>
-          </modifiers>
-        </categoryLink>
-      </categoryLinks>
-      <modifiers>
-        <modifier field="info" type="add" value="{this} Points are shared from your Support % of the main army"/>
-      </modifiers>
-    </forceEntry>
-  </forceEntries>
   <rules>
     <rule name="Break Tests" id="957a-483e-3a28-6e67" hidden="false" page="49" publicationId="4590-6ba9-5482-a1fa">
       <description>To  reflect their strong morale and determination Space Marines are not subject to the normal rules for  broken  troops. Instead  the  following  rules apply:
@@ -1121,8 +890,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
   <sharedSelectionEntries>
     <selectionEntry name="Space Marine Captain" id="e664-c21f-4492-a7dc" collective="false" hidden="false" import="true" page="63" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
-        <categoryLink name="Characters" id="b906-fc4b-6ca2-c186" hidden="false" primary="true" targetId="8be3-6d17-d7d3-faa0"/>
         <categoryLink name="Ultramarines" id="7baa-fafc-9bc1-eee0" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="1Characters" id="c979-5111-3525-4b4e" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="5721-3574-fdd2-92dc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -1163,14 +932,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1249,9 +1013,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Space Marine Bike" id="1b22-fc76-8ed0-5765" collective="false" hidden="false" import="true" page="63" publicationId="4590-6ba9-5482-a1fa" type="upgrade">
       <categoryLinks>
-        <categoryLink name="Squads" id="a260-187a-4e5a-3118" hidden="false" primary="true" targetId="3017-162b-c153-6519"/>
         <categoryLink name="Ultramarines" id="406a-9654-7e88-f22e" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
         <categoryLink name="Skimmer/Bike" id="e47c-e309-2e07-0ebf" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
+        <categoryLink name="2Squads" id="164e-7143-9734-be99" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <constraints>
         <constraint id="89e3-d901-e580-7006" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
@@ -1613,8 +1377,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Terminator Captain" id="381f-f866-3d8a-4e03" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
-        <categoryLink name="Characters" id="a06b-ec94-ded9-1ba8" hidden="false" primary="true" targetId="8be3-6d17-d7d3-faa0"/>
         <categoryLink name="Ultramarines" id="f309-a572-181b-e5d8" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="1Characters" id="3a7a-0104-d676-6113" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="6986-c5af-d5a6-4800" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
@@ -1654,14 +1418,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1750,8 +1509,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Company Standard" id="dd11-eede-074e-7b62" collective="false" hidden="false" import="true" page="63" publicationId="4590-6ba9-5482-a1fa" type="unit">
       <categoryLinks>
-        <categoryLink name="Characters" id="1ee6-ec59-8f5b-fe1e" hidden="false" primary="true" targetId="8be3-6d17-d7d3-faa0"/>
         <categoryLink name="Ultramarines" id="1210-cff0-57fc-c37b" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="1Characters" id="dc23-1180-3267-5894" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="f392-4fa0-fdc9-c023" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -1783,14 +1542,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1873,8 +1627,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Chaplain" id="54de-be57-4ec3-3913" collective="false" hidden="false" import="true" page="64" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
-        <categoryLink name="Characters" id="d842-1b6b-4937-7932" hidden="false" primary="true" targetId="8be3-6d17-d7d3-faa0"/>
         <categoryLink name="Ultramarines" id="4756-62bf-2539-ea62" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="1Characters" id="dbae-0da9-f2ae-e405" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
@@ -1892,15 +1646,11 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
       </infoLinks>
       <modifierGroups>
         <modifierGroup type="and">
+          <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2143,8 +1893,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Librarian" id="4f11-67fa-3adf-e0e1" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
-        <categoryLink name="Characters" id="4f4b-ea60-e6ec-0a0e" hidden="false" primary="true" targetId="8be3-6d17-d7d3-faa0"/>
         <categoryLink name="Ultramarines" id="c2e7-1943-e214-e647" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="1Characters" id="9174-2a63-dc09-fb6d" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
@@ -2201,7 +1951,6 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <entryLink name="Psyker" id="2d37-f911-39c6-f10e" collective="false" hidden="false" import="true" targetId="56e9-7608-b945-ac81" type="selectionEntry">
           <constraints>
             <constraint id="864d-e166-b685-d846" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="4cad-2308-40ac-3f2a" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -2209,14 +1958,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2323,8 +2067,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Apothecary" id="d503-8428-85ee-d4d6" collective="false" hidden="false" import="true" page="65" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
-        <categoryLink name="Characters" id="a078-12fe-fed3-4e2a" hidden="false" primary="true" targetId="8be3-6d17-d7d3-faa0"/>
         <categoryLink name="Ultramarines" id="29a1-50aa-ed1b-db2d" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="Characters" id="f925-2ca9-0025-a88d" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="40"/>
@@ -2358,14 +2102,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2444,8 +2183,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Techmarine" id="ee10-1b3b-ecac-e1e7" collective="false" hidden="false" import="true" page="65" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
-        <categoryLink name="Characters" id="7715-9ee2-73a2-b922" hidden="false" primary="true" targetId="8be3-6d17-d7d3-faa0"/>
         <categoryLink name="Ultramarines" id="45a3-3559-a3c6-2eba" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="1Characters" id="62a6-b6a4-c172-246f" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Techmarine" id="0bf7-fa35-2772-e738" hidden="false" primary="false" targetId="a21c-767f-7ecf-94eb"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="33"/>
@@ -2480,14 +2220,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2566,8 +2301,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Veteran Sergeant" id="99e2-e911-aba3-1722" collective="false" hidden="false" import="true" page="65" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
-        <categoryLink name="Characters" id="5990-52b9-761a-4a77" hidden="false" primary="true" targetId="8be3-6d17-d7d3-faa0"/>
         <categoryLink name="Ultramarines" id="03fc-b480-2f77-1133" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="1Characters" id="b60c-037a-6418-62f9" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="5"/>
@@ -2671,8 +2406,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Tactical Squad" id="e300-75bb-3598-67fd" collective="false" hidden="false" import="true" page="67" publicationId="4590-6ba9-5482-a1fa" type="unit">
       <categoryLinks>
-        <categoryLink name="Squads" id="169e-37d8-c15f-f615" hidden="false" primary="true" targetId="3017-162b-c153-6519"/>
         <categoryLink name="Ultramarines" id="0d1e-25b3-0e05-ae29" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="2Squads" id="1614-ea82-e9fe-a201" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="300"/>
@@ -2694,14 +2429,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2888,8 +2618,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Assault Squad" id="8d0e-3b8b-18d7-f3d9" collective="false" hidden="false" import="true" page="66" publicationId="4590-6ba9-5482-a1fa" type="unit">
       <categoryLinks>
-        <categoryLink name="Squads" id="fa21-f726-7ce4-d317" hidden="false" primary="true" targetId="3017-162b-c153-6519"/>
         <categoryLink name="Ultramarines" id="4cef-d05f-4376-01b8" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="Squads" id="7a38-28e0-90cc-a1c9" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="300"/>
@@ -2901,14 +2631,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3081,8 +2806,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Scout Squad" id="6e2c-c4c7-fac2-94e8" collective="false" hidden="false" import="true" page="67" publicationId="4590-6ba9-5482-a1fa" type="unit">
       <categoryLinks>
-        <categoryLink name="Squads" id="8465-778d-0537-602e" hidden="false" primary="true" targetId="3017-162b-c153-6519"/>
         <categoryLink name="Ultramarines" id="c24e-b811-feb6-9084" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="2Squads" id="92f9-c8e5-a6d9-f037" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
@@ -3099,14 +2824,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3286,8 +3006,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Devastator Squad" id="65b2-1949-1b47-113e" collective="false" hidden="false" import="true" page="67" publicationId="4590-6ba9-5482-a1fa" type="unit">
       <categoryLinks>
-        <categoryLink name="Squads" id="a439-0a5d-4b57-3ba7" hidden="false" primary="true" targetId="3017-162b-c153-6519"/>
         <categoryLink name="Ultramarines" id="fe15-7493-0e22-395a" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="2Squads" id="f4fa-0d37-9043-8c40" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="300"/>
@@ -3296,14 +3016,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3416,24 +3131,22 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     <selectionEntry name="Bike Squadron" id="ed88-0736-5a4c-2795" collective="false" hidden="false" import="true" page="67" publicationId="4590-6ba9-5482-a1fa" type="unit">
       <categoryLinks>
         <categoryLink name="Ultramarines" id="cae6-d8ec-db07-90d5" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
-        <categoryLink name="Squads" id="cd6e-708a-cc3c-f0ae" hidden="false" primary="true" targetId="3017-162b-c153-6519"/>
         <categoryLink name="Skimmer/Bike" id="b3e1-462b-0890-e2bf" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
+        <categoryLink name="2Squads" id="8562-b670-492e-fc6c" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <entryLinks>
+        <entryLink name="Assault Weapons" id="d3ff-330a-eb81-34ff" collective="false" hidden="false" import="true" sortIndex="2" targetId="cd0a-6a8d-1f46-a6db" type="selectionEntryGroup"/>
+      </entryLinks>
       <modifierGroups>
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3526,18 +3239,13 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Assault Weapons for bikers" id="89c9-dcd1-0195-4d17" collective="false" hidden="false" import="true" sortIndex="2">
-          <entryLinks>
-            <entryLink name="Assault Weapons" id="a617-fbc4-3754-ba54" collective="false" hidden="false" import="true" targetId="cd0a-6a8d-1f46-a6db" type="selectionEntryGroup"/>
-          </entryLinks>
-        </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Space Marine Attack Bike" id="f5af-7608-d010-83e6" collective="false" hidden="false" import="true" page="Datafax" type="model">
       <categoryLinks>
-        <categoryLink name="Support" id="d5fb-6954-ac7f-5d4e" hidden="false" primary="true" targetId="2ce9-bd7e-1b19-0211"/>
         <categoryLink name="Ultramarines" id="50ff-2ca2-6b08-ec78" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
         <categoryLink name="Attack Bike" id="9ed8-5aeb-6357-b997" hidden="false" primary="false" targetId="2ea7-ced8-d2ec-2939"/>
+        <categoryLink name="3Support" id="b913-4b18-3153-e944" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <constraints>
         <constraint id="534d-ae84-5926-58ef" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0">
@@ -3603,6 +3311,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
           </constraints>
         </entryLink>
         <entryLink name="Vehicle Wargear Cards" id="d0c1-738a-4a93-9d7d" collective="false" hidden="false" import="true" targetId="fcf7-39a4-11f3-7097" type="selectionEntryGroup"/>
+        <entryLink name="Assault Weapons" id="4d27-0697-db7f-95f5" collective="false" hidden="false" import="true" targetId="cd0a-6a8d-1f46-a6db" type="selectionEntryGroup"/>
       </entryLinks>
       <infoLinks>
         <infoLink name="Attack Bike" id="9f0c-0022-12a0-d57b" hidden="false" targetId="abe8-03b6-bb86-633b" type="profile"/>
@@ -3612,14 +3321,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3631,7 +3335,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="ee10-1b3b-ecac-e1e7" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
@@ -3642,7 +3346,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="ee10-1b3b-ecac-e1e7" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
@@ -3699,11 +3403,6 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
                 <modifier field="43f4-7d87-21e2-f623" type="set" value="2"/>
               </modifiers>
             </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Assault Weapons for bikers" id="df8b-2fbc-3249-2f68" collective="false" hidden="false" import="true">
-          <entryLinks>
-            <entryLink name="Assault Weapons" id="7bc2-28fa-7a04-4c6e" collective="false" hidden="false" import="true" targetId="cd0a-6a8d-1f46-a6db" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -3775,14 +3474,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="06ba-f656-4e76-25d1">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3798,7 +3492,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="ee10-1b3b-ecac-e1e7" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
@@ -3809,8 +3503,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Tarantula" id="4165-53ae-0eed-f9bd" collective="false" hidden="false" import="true" page="68" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
-        <categoryLink name="Support" id="50d1-696a-0490-adfd" hidden="false" primary="true" targetId="2ce9-bd7e-1b19-0211"/>
         <categoryLink name="Ultramarines" id="b3a5-3697-ae5c-a68f" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="3Support" id="e342-a869-de33-06f7" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <constraints>
         <constraint id="e6eb-0a01-8cae-206b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0">
@@ -3848,14 +3542,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3866,7 +3555,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="ee10-1b3b-ecac-e1e7" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
@@ -3878,7 +3567,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="ee10-1b3b-ecac-e1e7" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
@@ -3889,7 +3578,6 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Servitor" id="6282-6f49-021b-1958" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
-        <categoryLink name="Support" id="be14-3fa1-4b92-e29d" hidden="false" primary="true" targetId="2ce9-bd7e-1b19-0211"/>
         <categoryLink name="Ultramarines" id="d171-3b31-c48a-07de" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
       </categoryLinks>
       <constraints>
@@ -3902,12 +3590,19 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <infoLink name="Servitor" id="90ec-e365-3d5e-fed0" hidden="false" targetId="83da-e1a2-9ae2-346a" type="profile"/>
         <infoLink name="Armoured Body" id="7db7-f45e-6062-566f" hidden="false" targetId="f5b0-386b-546c-378e" type="profile"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <modifiers>
-        <modifier field="category" type="set-primary" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-          </conditions>
-        </modifier>
         <modifier field="d28e-33a7-7cae-adb3" type="increment" value="5">
           <repeats>
             <repeat childId="ee10-1b3b-ecac-e1e7" childName="Techmarine" field="selections" includeChildForces="true" includeChildSelections="true" repeats="1" roundUp="false" scope="roster" shared="true" value="1"/>
@@ -3922,8 +3617,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Rapier Laser Destroyer" id="7cef-91cc-d553-c1af" collective="false" hidden="false" import="true" page="68" publicationId="4590-6ba9-5482-a1fa" type="unit">
       <categoryLinks>
-        <categoryLink name="Support" id="0104-b02b-f6a6-c781" hidden="false" primary="true" targetId="2ce9-bd7e-1b19-0211"/>
         <categoryLink name="Ultramarines" id="c490-6084-a59c-bf92" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="3Support" id="21a5-659e-819b-f80c" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <constraints>
         <constraint id="7858-8391-1a7d-89ab" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0">
@@ -3945,14 +3640,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3963,7 +3653,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="ee10-1b3b-ecac-e1e7" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
@@ -3975,7 +3665,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="ee10-1b3b-ecac-e1e7" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
@@ -4006,8 +3696,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Space Marine Whirlwind" id="9691-6ae2-65f7-ba31" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
-        <categoryLink name="Support" id="a795-2ca9-8f0a-d994" hidden="false" primary="true" targetId="2ce9-bd7e-1b19-0211"/>
         <categoryLink name="Ultramarines" id="3a70-9b2f-38d5-a721" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="3Support" id="8acf-a14b-a853-bcb2" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <constraints>
         <constraint id="90fd-299f-36fa-a8a2" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0">
@@ -4082,14 +3772,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -4101,7 +3786,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="ee10-1b3b-ecac-e1e7" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
@@ -4112,7 +3797,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="ee10-1b3b-ecac-e1e7" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
@@ -4123,8 +3808,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Space Marine Land Raider" id="aeb6-ea8f-40f7-a5ba" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
-        <categoryLink name="Support" id="7b06-3de0-4ec2-8bd8" hidden="false" primary="true" targetId="2ce9-bd7e-1b19-0211"/>
         <categoryLink name="Ultramarines" id="f1ab-13c5-448f-8f35" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="3Support" id="1c66-69bd-4a26-0d31" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <constraints>
         <constraint id="d159-d592-d686-838c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0">
@@ -4230,14 +3915,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -4245,13 +3925,11 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
       </modifierGroups>
       <modifiers>
         <modifier field="d159-d592-d686-838c" type="set" value="-1">
-          <comment>Need at least 1 Techmarine</comment>
+          <comment>When taking a Techmarine</comment>
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="ee10-1b3b-ecac-e1e7" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
-                  <comment>Need at least 1 Techmarine</comment>
-                </condition>
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4260,7 +3938,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="ee10-1b3b-ecac-e1e7" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
@@ -4271,8 +3949,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Space Marine Predator" id="43cb-628a-f96c-84ad" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
-        <categoryLink name="Support" id="0638-a5d9-739e-4b2d" hidden="false" primary="true" targetId="2ce9-bd7e-1b19-0211"/>
         <categoryLink name="Ultramarines" id="5870-b013-cc81-c613" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="3Support" id="bb16-5439-24a0-df74" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <constraints>
         <constraint id="d1bc-eab3-cbd9-e6b2" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0">
@@ -4360,14 +4038,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -4379,7 +4052,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="ee10-1b3b-ecac-e1e7" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
@@ -4390,7 +4063,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="ee10-1b3b-ecac-e1e7" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
@@ -4401,8 +4074,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Space Marine Rhino" id="00cb-45a0-d102-67c7" collective="false" hidden="false" import="true" page="70" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
-        <categoryLink name="Support" id="8433-af73-b494-2019" hidden="false" primary="true" targetId="2ce9-bd7e-1b19-0211"/>
         <categoryLink name="Ultramarines" id="458c-aba4-365f-e5df" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="3Support" id="c7c8-6dc1-e99d-02d1" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <constraints>
         <constraint id="0c94-28e0-b025-3017" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0">
@@ -4486,14 +4159,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -4505,7 +4173,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="ee10-1b3b-ecac-e1e7" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
@@ -4516,7 +4184,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="ee10-1b3b-ecac-e1e7" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
@@ -4527,8 +4195,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Space Marine Razorback" id="9ecc-e264-2619-a029" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
-        <categoryLink name="Support" id="160c-922b-413d-c080" hidden="false" primary="true" targetId="2ce9-bd7e-1b19-0211"/>
         <categoryLink name="Ultramarines" id="c85a-0ba0-d89f-af1d" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="3Support" id="2a96-9752-33e5-16a6" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <constraints>
         <constraint id="dace-eb4f-6fcc-8e92" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0">
@@ -4604,14 +4272,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -4623,7 +4286,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="ee10-1b3b-ecac-e1e7" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
@@ -4634,7 +4297,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="ee10-1b3b-ecac-e1e7" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
@@ -4645,9 +4308,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Space Marine Land Speeder" id="4769-a098-b8e1-e70b" collective="false" hidden="false" import="true" page="70" publicationId="4590-6ba9-5482-a1fa" type="unit">
       <categoryLinks>
-        <categoryLink name="Support" id="c2ed-c84f-6142-7ff1" hidden="false" primary="true" targetId="2ce9-bd7e-1b19-0211"/>
         <categoryLink name="Ultramarines" id="da6f-2949-4e8b-37c6" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
         <categoryLink name="Skimmer/Bike" id="9b8a-1d2b-be24-313f" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
+        <categoryLink name="3Support" id="74e9-d9ff-1a5c-746f" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <constraints>
         <constraint id="41f6-2fb0-d1a7-bbe5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0">
@@ -4692,14 +4355,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -4711,7 +4369,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="ee10-1b3b-ecac-e1e7" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
@@ -4722,7 +4380,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="ee10-1b3b-ecac-e1e7" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
@@ -4751,8 +4409,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Chief Librarian Tigurius" id="145c-21a0-1469-dae3" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
-        <categoryLink name="Characters" id="5874-154c-505c-b9f6" hidden="false" primary="true" targetId="8be3-6d17-d7d3-faa0"/>
         <categoryLink name="Ultramarines" id="8ca1-384b-d744-0636" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="1Characters" id="a923-23dc-da3d-981d" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="fc2b-f6db-6466-c912" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -4780,14 +4438,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -4824,8 +4477,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Marneus Calgar Master of the Ultramarines" id="a1dd-ee6c-ab43-cd6e" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
-        <categoryLink name="Characters" id="f610-f316-e80a-0bba" hidden="false" primary="true" targetId="8be3-6d17-d7d3-faa0"/>
         <categoryLink name="Ultramarines" id="4fb3-546a-6a2a-71bc" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="1Characters" id="9cfd-d0b5-fc97-c872" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="77f0-4e9b-c6a7-a361" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -4864,14 +4517,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -4907,8 +4555,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Ultramarines Chaplain Cassius" id="4e2b-02c3-08b1-cb32" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
-        <categoryLink name="Characters" id="48e4-0774-c921-1959" hidden="false" primary="true" targetId="8be3-6d17-d7d3-faa0"/>
         <categoryLink name="Ultramarines" id="d992-8671-f9f3-cd1d" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="1Characters" id="affb-a63c-86e4-5722" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="3669-f7e3-b774-5864" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
@@ -4931,14 +4579,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -4975,7 +4618,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     <selectionEntry name="Ancient Helveticus, Bearer of the Battle Standard of Macragge" id="6029-55f6-5155-dcdc" collective="false" hidden="false" import="true" page="63" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Ultramarines" id="95b2-6eda-5d56-dfc8" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
-        <categoryLink name="Characters" id="2a45-a2db-6a60-030a" hidden="false" primary="true" targetId="8be3-6d17-d7d3-faa0"/>
+        <categoryLink name="Characters" id="732c-c2e3-4656-90a3" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="6ad4-11ca-abaf-a35e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="0"/>
@@ -4984,7 +4627,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <cost name="pts" typeId="points" value="61"/>
       </costs>
       <entryLinks>
-        <entryLink name="Wargear Cards" id="43d3-0cca-c1c2-82a9" collective="false" hidden="false" import="true" targetId="578d-7254-ab21-8b13" type="selectionEntryGroup">
+        <entryLink name="Wargear Cards" id="43d3-0cca-c1c2-82a9" collective="false" hidden="false" import="true" sortIndex="3" targetId="578d-7254-ab21-8b13" type="selectionEntryGroup">
           <constraints>
             <constraint id="ec1b-ba93-e250-ddd6" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
           </constraints>
@@ -4997,14 +4640,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5031,7 +4669,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         </modifier>
       </modifiers>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Armour" id="9382-bbf7-141e-caa2" collective="false" defaultSelectionEntryId="3be6-6f75-eaa7-86d7" hidden="false" import="true">
+        <selectionEntryGroup name="Armour" id="9382-bbf7-141e-caa2" collective="false" defaultSelectionEntryId="3be6-6f75-eaa7-86d7" hidden="false" import="true" sortIndex="1">
           <constraints>
             <constraint id="8cc0-9d31-a669-0fbf" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
             <constraint id="92e6-2f81-59a0-9485" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
@@ -5057,7 +4695,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Weapons" id="d4a6-249d-e686-e8e1" collective="false" hidden="false" import="true">
+        <selectionEntryGroup name="Weapons" id="d4a6-249d-e686-e8e1" collective="false" hidden="false" import="true" sortIndex="2">
           <entryLinks>
             <entryLink name="Assault Weapons" id="1f7b-c11e-3d8a-f9ea" collective="false" hidden="false" import="true" targetId="cd0a-6a8d-1f46-a6db" type="selectionEntryGroup"/>
             <entryLink name="Special Weapons" id="18ee-f911-bc82-7a21" collective="false" hidden="false" import="true" targetId="717e-c382-eaca-bd29" type="selectionEntryGroup">
@@ -5078,8 +4716,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Captain Invictus of the Ultramarines First Company" id="ef78-2d4e-0226-4956" collective="false" hidden="false" import="true" page="74" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
-        <categoryLink name="Characters" id="4d69-958d-473a-32a9" hidden="false" primary="true" targetId="8be3-6d17-d7d3-faa0"/>
         <categoryLink name="Ultramarines" id="9ef3-2a3b-999b-f919" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="1Characters" id="fd18-a628-6c67-c0e2" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="7c2f-4044-c7ae-315a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
@@ -5116,14 +4754,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5144,8 +4777,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Captain Invictus Bodyguard" id="98b7-e9e0-3f7b-8642" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>
-        <categoryLink name="Squads" id="f5d3-fb70-11c9-359d" hidden="false" primary="true" targetId="3017-162b-c153-6519"/>
         <categoryLink name="Ultramarines" id="2ed2-8e93-ccb7-61e9" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="2Squads" id="6503-8f73-8b38-912b" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <constraints>
         <constraint id="61b4-2c70-909b-8060" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="max" value="1"/>
@@ -5169,7 +4802,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     <selectionEntry name="Legion of the Damned" id="f319-a6b6-5a68-93de" collective="false" hidden="false" import="true" page="67" publicationId="4590-6ba9-5482-a1fa" type="unit">
       <categoryLinks>
         <categoryLink name="Ultramarines" id="d4b9-f235-992a-5efb" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
-        <categoryLink name="Squads" id="b476-2c81-ce85-92c5" hidden="false" primary="true" targetId="3017-162b-c153-6519"/>
+        <categoryLink name="2Squads" id="30f7-d6c5-83a8-837d" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <constraints>
         <constraint id="ac0f-b378-11e8-010e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -5198,14 +4831,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5391,8 +5019,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Veteran Sergeant Centurius" id="0e4a-f45a-c58e-6800" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
-        <categoryLink name="Characters" id="58ad-c5fc-e420-f55b" hidden="false" primary="true" targetId="8be3-6d17-d7d3-faa0"/>
         <categoryLink name="Ultramarines" id="8fc3-c996-9e8a-2e65" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="1Characters" id="b111-07d2-44b2-7919" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="8d61-cf95-19ac-6589" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
@@ -5480,8 +5108,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Chapter Master" id="5c0d-f1e5-52f5-8d7f" hidden="false" import="true" type="model">
       <categoryLinks>
-        <categoryLink name="Characters" id="dedb-2f40-8b34-d00f" primary="true" targetId="8be3-6d17-d7d3-faa0"/>
         <categoryLink name="Ultramarines" id="4d1d-d484-bb77-c7dc" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="1Characters" id="ca15-2b79-1ad4-04f5" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="ce74-541b-2597-6f42" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -5568,14 +5196,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5719,7 +5342,11 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Legion of the Damned - Centurius &amp; Bodyguard" id="8c27-6929-df67-91fe" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Legion of the Damned - Centurius &amp; Bodyguard" id="8c27-6929-df67-91fe" hidden="false" import="true" publicationId="8eed-45fd-d4be-9a1b" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="2Squads" id="968f-9d55-0720-167f" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
+        <categoryLink name="Ultramarines" id="2e3b-27ca-0285-6f23" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+      </categoryLinks>
       <constraints>
         <constraint id="6dd9-ca9e-d0a7-6e89" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
@@ -5744,14 +5371,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5819,8 +5441,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Combat Squad - Tactical" id="1b31-679b-6095-9712" collective="false" hidden="false" import="true" page="67" publicationId="4590-6ba9-5482-a1fa" type="unit">
       <categoryLinks>
-        <categoryLink name="Squads" id="33e5-2f38-860a-16a1" hidden="false" primary="true" targetId="3017-162b-c153-6519"/>
         <categoryLink name="Ultramarines" id="ed3e-da46-c34f-a60d" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="2Squads" id="aa25-e52e-6d9f-93da" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="150"/>
@@ -5842,14 +5464,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5963,8 +5580,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Combat Squad - Devastator" id="326b-b8b9-14df-bffb" collective="false" hidden="false" import="true" page="67" publicationId="4590-6ba9-5482-a1fa" type="unit">
       <categoryLinks>
-        <categoryLink name="Squads" id="58cc-8de7-5e55-1e8a" hidden="false" primary="true" targetId="3017-162b-c153-6519"/>
         <categoryLink name="Ultramarines" id="511d-8223-e0c6-8994" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="2Squads" id="91b7-c25d-63a4-565f" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="150"/>
@@ -5986,14 +5603,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -6103,8 +5715,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Combat Squad - Assault" id="a2a8-5962-db60-11cc" collective="false" hidden="false" import="true" page="67" publicationId="4590-6ba9-5482-a1fa" type="unit">
       <categoryLinks>
-        <categoryLink name="Squads" id="f153-3417-9450-b2ca" hidden="false" primary="true" targetId="3017-162b-c153-6519"/>
         <categoryLink name="Ultramarines" id="4451-180e-5fa9-68b5" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="2Squads" id="2979-72fc-17af-77c2" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="150"/>
@@ -6116,14 +5728,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -6278,8 +5885,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Veteran Space Marine Squad" id="c5f0-4ff4-f1d2-147d" collective="false" hidden="false" import="true" page="67" publicationId="4590-6ba9-5482-a1fa" type="unit">
       <categoryLinks>
-        <categoryLink name="Squads" id="0f0c-6436-f83e-1081" hidden="false" primary="true" targetId="3017-162b-c153-6519"/>
         <categoryLink name="Ultramarines" id="b80d-2579-2087-f225" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="2Squads" id="0972-84d0-b669-c5c9" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="330"/>
@@ -6311,14 +5918,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -6485,8 +6087,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Terminator Squad" id="6eec-4c68-c276-da5f" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink name="Squads" id="271c-d4f8-71c2-91c5" hidden="false" primary="true" targetId="3017-162b-c153-6519"/>
         <categoryLink name="Ultramarines" id="37d3-b20d-47e7-8ab7" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="2Squads" id="04c8-e44e-53d9-daed" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="315"/>
@@ -6498,14 +6100,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -6845,7 +6442,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
       <categoryLinks>
         <categoryLink name="Ultramarines" id="39f9-8973-3f66-9cc9" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
         <categoryLink name="Attack Bike" id="e091-53d9-08ed-a360" hidden="false" primary="false" targetId="2ea7-ced8-d2ec-2939"/>
-        <categoryLink name="Squads" id="01fa-c3cb-af92-2906" primary="true" targetId="3017-162b-c153-6519"/>
+        <categoryLink name="2Squads" id="7572-59bc-44ef-422b" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="45"/>
@@ -6906,18 +6503,12 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
           </constraints>
         </entryLink>
         <entryLink name="Vehicle Wargear Cards" id="c6eb-1290-d187-859e" collective="false" hidden="false" import="true" targetId="fcf7-39a4-11f3-7097" type="selectionEntryGroup"/>
+        <entryLink name="Assault Weapons" id="da74-0f94-da40-5856" collective="false" hidden="false" import="true" targetId="cd0a-6a8d-1f46-a6db" type="selectionEntryGroup"/>
       </entryLinks>
       <infoLinks>
         <infoLink name="Attack Bike" id="a5b5-d060-f412-2826" hidden="false" targetId="abe8-03b6-bb86-633b" type="profile"/>
         <infoLink name="Space Marine Attack Bike Damage Table" id="cd4d-2b39-df75-18f9" hidden="false" targetId="8b6d-4077-d124-cbd2" type="rule"/>
       </infoLinks>
-      <modifiers>
-        <modifier field="category" type="set-primary" value="6741-c4c6-274e-36cf">
-          <conditions>
-            <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <selectionEntries>
         <selectionEntry name="Marine Bikers" id="beb0-433c-09e7-ad34" collective="false" hidden="false" import="true" type="model">
           <constraints>
@@ -6974,11 +6565,6 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Assault Weapons for bikers" id="ced9-70d3-1a62-a4b3" collective="false" hidden="false" import="true">
-          <entryLinks>
-            <entryLink name="Assault Weapons" id="4d27-0697-db7f-95f5" collective="false" hidden="false" import="true" targetId="cd0a-6a8d-1f46-a6db" type="selectionEntryGroup"/>
-          </entryLinks>
-        </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Space Marine Vehicle Crew" id="78be-f19b-ef3f-ba0a" collective="false" hidden="false" import="true" type="model">
@@ -7005,8 +6591,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </selectionEntry>
     <selectionEntry name="Combat Squad - Veterans" id="fdfe-accc-6eb3-a649" collective="false" hidden="false" import="true" page="67" publicationId="4590-6ba9-5482-a1fa" type="unit">
       <categoryLinks>
-        <categoryLink name="Squads" id="ed9a-e600-2f21-e9a9" hidden="false" primary="true" targetId="3017-162b-c153-6519"/>
         <categoryLink name="Ultramarines" id="3f07-ff08-e974-66e4" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="2Squads" id="a4c8-1181-eeab-841d" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="165"/>
@@ -7037,14 +6623,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
           <modifiers>
-            <modifier field="category" type="set-primary" value="2ce9-bd7e-1b19-0211">
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
               <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="6186-0c50-3540-dc37">
-              <conditions>
-                <condition childId="bb80-dc7e-117d-28d5" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>

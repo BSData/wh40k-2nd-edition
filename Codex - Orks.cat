@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Orks" id="82c6-3e15-54c5-a35f" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="19" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Orks" id="82c6-3e15-54c5-a35f" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="20" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="Characters" id="23ab-e52d-6e65-01d5" hidden="false"/>
     <categoryEntry name="Mobs" id="f72b-82f4-2a38-7d26" hidden="false"/>
@@ -5156,14 +5156,6 @@ May not decrease his speed compared to a previous turn unless he takes and passe
             <modifier field="009f-37e0-b4e9-3a87" type="set" value="99">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition childId="dac2-9fb5-5933-86a3" childName="Zodgrod Wortsnagga, Snakebite Runtmaster" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1"/>
-                        <condition childId="e3c7-9896-d918-9c99" childName="Runtherd" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
                   <conditions>
                     <condition childId="4239-fecc-9d06-d706" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1"/>
                   </conditions>

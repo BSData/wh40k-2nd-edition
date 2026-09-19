@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Space Wolves" id="8d0e-9c4e-17af-ed93" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="12" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Space Wolves" id="8d0e-9c4e-17af-ed93" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="13" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>Terminators cannot add the teleport ability (which you need to increase their points by 50%) due to a limitation in Battlescribe. No way to modify the points in that way. 
 
 If they ever change that I will update. Until then, ye olde calcuator will do!</readme>
@@ -4305,7 +4305,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
       <modifiers>
         <modifier field="category" type="set-primary" value="6741-c4c6-274e-36cf">
           <conditions>
-            <condition childId="1682-3edb-34f4-dc45" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
           </conditions>
         </modifier>
       </modifiers>

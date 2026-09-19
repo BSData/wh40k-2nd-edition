@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="33" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="34" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <comment>Warhammer 2nd Edition 40k</comment>
   <readme>Added more wargear cards</readme>
   <categoryEntries>
@@ -34,7 +34,7 @@
   <forceEntries>
     <forceEntry name="Standard List" id="df62-cecb-1bb6-bf47" hidden="false" sortIndex="1">
       <categoryLinks>
-        <categoryLink name="Characters" id="957d-606e-6da7-3ac2" hidden="false" targetId="7576-d91f-083c-38a7">
+        <categoryLink name="1Characters" id="957d-606e-6da7-3ac2" hidden="false" targetId="7576-d91f-083c-38a7">
           <constraints>
             <constraint id="dab5-ad73-898e-1f58" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="0"/>
             <constraint id="5667-7bfa-669d-d0c8" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="max" value="0"/>
@@ -87,7 +87,7 @@
             </modifierGroup>
           </modifierGroups>
         </categoryLink>
-        <categoryLink name="Squads" id="becc-cf75-2085-335d" hidden="false" targetId="bc01-5ece-b97e-96de">
+        <categoryLink name="2Squads" id="becc-cf75-2085-335d" hidden="false" targetId="bc01-5ece-b97e-96de">
           <constraints>
             <constraint id="73f8-df2c-94fb-0483" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="min" value="0"/>
             <constraint id="9140-48cc-65c2-744e" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="min" value="0"/>
@@ -140,14 +140,14 @@
             </modifierGroup>
           </modifierGroups>
         </categoryLink>
-        <categoryLink name="Support" id="6b31-1e58-1791-4c6b" hidden="false" targetId="b6e4-2c66-e404-b10a">
+        <categoryLink name="3Support" id="6b31-1e58-1791-4c6b" hidden="false" targetId="b6e4-2c66-e404-b10a">
           <constraints>
             <constraint id="d959-0016-d8b2-a714" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="0"/>
             <constraint id="16ab-be3e-f7ec-afea" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="max" value="0"/>
           </constraints>
           <modifierGroups>
             <modifierGroup type="and">
-              <comment>Marines/Eldar/Orks/Squats</comment>
+              <comment>50% Marines/Eldar/Orks/Squats</comment>
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
@@ -207,10 +207,17 @@
           </modifierGroups>
         </categoryLink>
       </categoryLinks>
+      <modifiers>
+        <modifier field="error" type="add" value="Legion of the Damned cannot take any allies">
+          <conditions>
+            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </forceEntry>
     <forceEntry name="Ally List" id="a60b-92d0-a03f-6c77" hidden="false">
       <categoryLinks>
-        <categoryLink name="Support" id="cc34-84da-6638-739d" hidden="false" targetId="b6e4-2c66-e404-b10a">
+        <categoryLink name="3Support" id="cc34-84da-6638-739d" hidden="false" targetId="b6e4-2c66-e404-b10a">
           <constraints>
             <constraint id="618f-8174-c4e1-c6d2" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="0"/>
             <constraint id="5284-b624-e08e-4dcd" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="max" value="0"/>
@@ -1192,8 +1199,7 @@
     </profile>
     <profile name="Psychic Level 2" id="76f1-a9ec-f1f7-0162" hidden="false" page="72" publicationId="2bb8-b6de-8b70-7f41" typeId="dcc9-06b3-a75f-6b62" typeName="Unit Psychic Level">
       <characteristics>
-        <characteristic name="Psychic Level" typeId="9ff5-b223-af73-69a8">
-</characteristic>
+        <characteristic name="Psychic Level" typeId="9ff5-b223-af73-69a8"/>
       </characteristics>
     </profile>
     <profile name="Photon Beam Searchlight" id="e2d6-0575-c357-2018" hidden="false" page="47" publicationId="06e5-8e36-e8c8-aec3" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
@@ -1203,20 +1209,17 @@
     </profile>
     <profile name="Psychic Level 1" id="2653-20e1-0ea7-dcc5" hidden="false" page="72" publicationId="2bb8-b6de-8b70-7f41" typeId="dcc9-06b3-a75f-6b62" typeName="Unit Psychic Level">
       <characteristics>
-        <characteristic name="Psychic Level" typeId="9ff5-b223-af73-69a8">
-</characteristic>
+        <characteristic name="Psychic Level" typeId="9ff5-b223-af73-69a8"/>
       </characteristics>
     </profile>
     <profile name="Psychic Level 3" id="6c73-5778-e524-130d" hidden="false" page="72" publicationId="2bb8-b6de-8b70-7f41" typeId="dcc9-06b3-a75f-6b62" typeName="Unit Psychic Level">
       <characteristics>
-        <characteristic name="Psychic Level" typeId="9ff5-b223-af73-69a8">
-</characteristic>
+        <characteristic name="Psychic Level" typeId="9ff5-b223-af73-69a8"/>
       </characteristics>
     </profile>
     <profile name="Psychic Level 4" id="f988-2251-b863-a538" hidden="false" page="72" publicationId="2bb8-b6de-8b70-7f41" typeId="dcc9-06b3-a75f-6b62" typeName="Unit Psychic Level">
       <characteristics>
-        <characteristic name="Psychic Level" typeId="9ff5-b223-af73-69a8">
-</characteristic>
+        <characteristic name="Psychic Level" typeId="9ff5-b223-af73-69a8"/>
       </characteristics>
     </profile>
     <profile name="Psychic Shield" id="2534-d7ad-5692-4e16" hidden="false" page="73" publicationId="2bb8-b6de-8b70-7f41" typeId="11a6-8e13-a1ad-7e34" typeName="Unit Psychic Powers">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="35" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="37" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <comment>Warhammer 2nd Edition 40k</comment>
   <readme>Added more wargear cards</readme>
   <categoryEntries>
@@ -471,6 +471,7 @@
     <publication name="Codex - Army Lists" id="053a-a071-db83-283c" publicationDate="1993" publisher="40k Box Set" shortName="Army Lists"/>
     <publication name="Codex - Imperialis" id="d829-388d-3717-5aca" publicationDate="1993" shortName="Imperialis"/>
     <publication name="Armorcast - Inquisitor Magazine" id="54a5-765a-b3e8-291b" hidden="false"/>
+    <publication name="Storm of Vengeance" id="fc53-90ff-24b0-a4ee" hidden="false" publicationDate="1997"/>
   </publications>
   <sharedProfiles>
     <profile name="Blades and Saws" id="10fb-c738-8fb6-c7f8" hidden="false" page="6" publicationId="06e5-8e36-e8c8-aec3" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
@@ -1227,7 +1228,8 @@
     </profile>
     <profile name="Psychic Level 4" id="f988-2251-b863-a538" hidden="false" page="72" publicationId="2bb8-b6de-8b70-7f41" typeId="dcc9-06b3-a75f-6b62" typeName="Unit Psychic Level">
       <characteristics>
-        <characteristic name="Psychic Level" typeId="9ff5-b223-af73-69a8"/>
+        <characteristic name="Psychic Level" typeId="9ff5-b223-af73-69a8">
+</characteristic>
       </characteristics>
     </profile>
     <profile name="Psychic Shield" id="2534-d7ad-5692-4e16" hidden="false" page="73" publicationId="2bb8-b6de-8b70-7f41" typeId="11a6-8e13-a1ad-7e34" typeName="Unit Psychic Powers">
@@ -2118,7 +2120,7 @@ Still affected by Break tests like other troops</description>
     </selectionEntry>
     <selectionEntry name="Master-Crafted Bolt Pistol" id="04a2-74da-3458-52d1" collective="false" hidden="false" import="true" page="Card" publicationId="06e5-8e36-e8c8-aec3" type="upgrade">
       <costs>
-        <cost name="pts" typeId="points" value="10"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
       <infoLinks>
         <infoLink name="Close Combat" id="91bc-0890-0e2c-c53a" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
@@ -2143,7 +2145,7 @@ Still affected by Break tests like other troops</description>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <infoLinks>
-        <infoLink name="Power Armour" id="d3e4-425d-ff15-6831" hidden="false" targetId="3f80-695d-2a45-93e8" type="profile"/>
+        <infoLink name="Power Armour" id="49e5-2df2-e637-2385" hidden="false" targetId="3f80-695d-2a45-93e8" type="profile"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry name="Chainsword" id="0bf9-3a64-2700-ff30" collective="false" hidden="false" import="true" page="7" publicationId="06e5-8e36-e8c8-aec3" type="upgrade">
@@ -4363,10 +4365,10 @@ See Wargear Rulebook Pg. 54 for full details on firing the weapon</description>
       <profiles>
         <profile name="Seeking Ammo" id="9225-c991-7d29-ac30" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
           <characteristics>
-            <characteristic name="Special" typeId="f917-8cd8-7592-47dd">May only be used with a single projectile weapon the model is equipped with that you choose before the game
-starts. When the model bearing this card fires a shot with the selected weapon, you may choose to use Seeking
-Ammo. Seeking Ammo always hits its target on a to-hit roll of 2+, and may be fired at targets which are hidden or out of sight as long as the target is detected and lies within weapon range. Seeking ammo may not be used
-in combination with other kinds of ammo. Discarded after use.</characteristic>
+            <characteristic name="Special" typeId="f917-8cd8-7592-47dd">May only be used with a single projectile weapon the model is equipped with that you choose before the game starts.
+When the model bearing this card fires a shot with the selected weapon, you may choose to use Seeking Ammo.
+Seeking Ammo always hits its target on a to-hit roll of 2+, and may be fired at targets which are hidden or out of sight as long as the target is detected and lies within weapon range.
+Seeking ammo may not be used in combination with other kinds of ammo. Discarded after use.</characteristic>
           </characteristics>
         </profile>
       </profiles>

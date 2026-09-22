@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Legion of the Damned" id="8d30-f85a-223d-697c" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff89" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="31" library="false" revision="4" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Legion of the Damned" id="8d30-f85a-223d-697c" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff89" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="31" library="false" revision="5" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink name="Legion of the Damned Commander" id="c6d3-4f59-bb7b-cb64" hidden="false" import="true" targetId="b3bf-f27d-4c9a-ba36" type="selectionEntry"/>
     <entryLink name="Chaplain" id="10d7-a6ab-2164-9a8c" hidden="false" import="true" targetId="19be-b66b-0dae-a781" type="selectionEntry"/>
@@ -423,8 +423,8 @@ See datafax for damage table</description>
         <categoryLink name="1Characters" id="cffe-f834-4b35-adc6" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
-        <constraint id="e794-bdbc-72fd-f785" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
-        <constraint id="6873-7fc7-1cc6-b49d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="min" value="1"/>
+        <constraint id="e794-bdbc-72fd-f785" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="max" value="1"/>
+        <constraint id="6873-7fc7-1cc6-b49d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="min" value="1"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="points" value="200"/>
@@ -484,13 +484,9 @@ See datafax for damage table</description>
       </modifierGroups>
       <modifiers>
         <modifier field="6873-7fc7-1cc6-b49d" type="set" value="0">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition childName="Legion of the Damned - Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="a60b-92d0-a03f-6c77" shared="true" type="atLeast" value="1"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="8d30-f85a-223d-697c" shared="true" type="instanceOf" value="1"/>
+          </conditions>
         </modifier>
       </modifiers>
       <selectionEntryGroups>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Angels of Death (Dark Angels)" id="7c0f-1fc4-d5a5-dc73" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="14" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Angels of Death (Dark Angels)" id="7c0f-1fc4-d5a5-dc73" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="16" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="Characters" id="5ea0-5809-8883-b277" hidden="false"/>
     <categoryEntry name="Squads" id="8887-ca93-cfef-dc21" hidden="false"/>
@@ -242,23 +242,6 @@ and  courage  in  the face of death. Once broken, a Space Marine squad may rally
       <description>If a Space Marine doesn&apos;t move at all and not in close combat, they can use Rapid Fire. Each Space Marine may fire their storm bolter, boltgun, or bolt pistol twice instead of once as normal. Other members in the squad using different weapons may still fire normally.</description>
     </rule>
   </rules>
-  <sharedInfoGroups>
-    <infoGroup name="Chaplain Type" id="42cb-cc51-7ad2-3519" hidden="false" page="64" publicationId="06e5-8e36-e8c8-aec3">
-      <infoLinks>
-        <infoLink name="Interrogator Chaplain" id="e5f3-fabb-4aa9-6ba7" hidden="false" targetId="9cea-5838-2fdb-8516" type="profile"/>
-        <infoLink name="Master Chaplain" id="2f60-2906-e004-81cd" hidden="false" targetId="a219-5475-ffb0-5879" type="profile"/>
-        <infoLink name="Chaplain Champion" id="3062-e5cf-5e4f-0684" hidden="false" targetId="83f2-5241-8821-9221" type="profile"/>
-      </infoLinks>
-    </infoGroup>
-    <infoGroup name="Libarian Type" id="b0e7-1f45-b13b-d5f9" hidden="false">
-      <infoLinks>
-        <infoLink name="Codicier" id="8333-6598-b017-bf85" hidden="false" targetId="2f09-7b90-0835-2283" type="profile"/>
-        <infoLink name="Epistolary" id="4cd4-e571-323e-8c48" hidden="false" targetId="d648-e654-dac5-0145" type="profile"/>
-        <infoLink name="Lexicanium" id="e311-4b93-a6c7-30be" hidden="false" targetId="9a8b-2770-af59-0097" type="profile"/>
-        <infoLink name="Chief Librarian" id="a7ce-d600-d3a6-4700" hidden="false" targetId="a507-a873-8651-729e" type="profile"/>
-      </infoLinks>
-    </infoGroup>
-  </sharedInfoGroups>
   <sharedProfiles>
     <profile name="Dark Angels Master" id="cb12-f2d1-4d04-b663" hidden="false" page="71" publicationId="308f-63b0-ee37-1c6b" typeId="219f-0faa-a2d8-f766" typeName="Unit">
       <characteristics>
@@ -1229,140 +1212,6 @@ No to hit modifiers when they fire from a vehicle that is moving at Fast Speed</
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry name="Terminator Armour: Lightning Claws" id="83c6-0497-f2a5-786c" collective="false" hidden="false" import="true" type="upgrade">
-      <constraints>
-        <constraint id="9ef4-cc7d-984b-fbb5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="points" value="49"/>
-      </costs>
-      <entryLinks>
-        <entryLink name="Terminator Armour" id="5533-77fc-e924-1476" collective="false" hidden="false" import="true" targetId="9d43-a036-5991-2470" type="selectionEntry">
-          <constraints>
-            <constraint id="6579-c3b0-54f9-1860" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="2e3b-f61f-e373-8b07" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-        </entryLink>
-        <entryLink name="Lightning Claws" id="7f4c-afe9-f2f1-cf17" collective="false" hidden="false" import="true" targetId="ff45-72d3-781e-6006" type="selectionEntry">
-          <constraints>
-            <constraint id="1d1a-cfb4-5c72-386d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="e301-2e34-e863-45f7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
-    </selectionEntry>
-    <selectionEntry name="Terminator Armour: Storm Bolter &amp; Chainfist" id="5190-2497-81f6-91ee" collective="false" hidden="false" import="true" type="upgrade">
-      <constraints>
-        <constraint id="cdc4-ee84-b682-77ac" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="points" value="51"/>
-      </costs>
-      <entryLinks>
-        <entryLink name="Terminator Armour" id="1160-8651-9fa4-6775" collective="false" hidden="false" import="true" targetId="9d43-a036-5991-2470" type="selectionEntry">
-          <constraints>
-            <constraint id="d943-a6c4-3263-f59f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="eec3-0f8f-2f28-6a2b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-        </entryLink>
-        <entryLink name="Storm Bolter" id="5354-f96f-36a5-ac14" collective="false" hidden="false" import="true" targetId="8b0c-9093-dc69-c9e8" type="selectionEntry">
-          <constraints>
-            <constraint id="d3f5-21f6-3aad-06f4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="3aa0-deb9-07ee-5df6" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-        </entryLink>
-        <entryLink name="Chainfist" id="f93b-f124-aada-bb1a" collective="false" hidden="false" import="true" targetId="3913-2299-4778-933b" type="selectionEntry">
-          <constraints>
-            <constraint id="a9cb-28c0-269e-d92d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="6501-5ec8-4dbb-c8bc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
-    </selectionEntry>
-    <selectionEntry name="Terminator Armour: Storm Bolter &amp; Power Fist" id="68e7-ac3b-8038-57ae" collective="false" hidden="false" import="true" type="upgrade">
-      <constraints>
-        <constraint id="27fb-7114-e044-97c1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="points" value="49"/>
-      </costs>
-      <entryLinks>
-        <entryLink name="Terminator Armour" id="d324-70aa-f364-1cb9" collective="false" hidden="false" import="true" targetId="9d43-a036-5991-2470" type="selectionEntry">
-          <constraints>
-            <constraint id="2165-d9fa-286f-1f5a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="3d16-0bf5-e190-20d4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-        </entryLink>
-        <entryLink name="Storm Bolter" id="b9bb-9af9-3a18-6b62" collective="false" hidden="false" import="true" targetId="8b0c-9093-dc69-c9e8" type="selectionEntry">
-          <constraints>
-            <constraint id="8df9-f6fe-1985-8a8b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="aca6-ce68-5512-b021" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-        </entryLink>
-        <entryLink name="Power Fist" id="ccc9-399f-be86-c50e" collective="false" hidden="false" import="true" targetId="d6c8-382a-4d74-36af" type="selectionEntry">
-          <constraints>
-            <constraint id="acdf-0488-6720-663d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="f826-45ff-efc5-4117" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
-    </selectionEntry>
-    <selectionEntry name="Terminator Armour: Thunder Hammer &amp; Storm Shield" id="98ab-649c-68da-3e50" collective="false" hidden="false" import="true" type="upgrade">
-      <constraints>
-        <constraint id="7d10-e22a-0b2c-5d2b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="points" value="55"/>
-      </costs>
-      <entryLinks>
-        <entryLink name="Thunder Hammer" id="f941-f81d-1356-6f32" collective="false" hidden="false" import="true" targetId="bc7d-3f6b-9ee5-8e42" type="selectionEntry">
-          <constraints>
-            <constraint id="59be-3974-b6ed-80f3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="42d9-76c9-629a-f325" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-        </entryLink>
-        <entryLink name="Storm Shield" id="32e6-1901-7df7-7870" collective="false" hidden="false" import="true" targetId="5b69-dbfc-8a02-2d96" type="selectionEntry">
-          <constraints>
-            <constraint id="43b4-859f-9761-3066" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="fb6a-93ef-55b9-d2e8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-        </entryLink>
-        <entryLink name="Terminator Armour" id="3d7c-6543-3753-a8f9" collective="false" hidden="false" import="true" targetId="9d43-a036-5991-2470" type="selectionEntry">
-          <constraints>
-            <constraint id="5a68-4dec-3a5a-d466" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="0608-19a2-83f5-d9ac" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
-    </selectionEntry>
-    <selectionEntry name="Terminator Armour: Storm Bolter &amp; Power Sword" id="7343-d9df-b4cc-2667" collective="false" hidden="false" import="true" type="upgrade">
-      <constraints>
-        <constraint id="ae92-b096-1348-45dc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="points" value="45"/>
-      </costs>
-      <entryLinks>
-        <entryLink name="Terminator Armour" id="69e7-1af9-129d-ebbe" collective="false" hidden="false" import="true" targetId="9d43-a036-5991-2470" type="selectionEntry">
-          <constraints>
-            <constraint id="0188-1fb9-092b-f6a2" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="75b6-47f9-6da3-feeb" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-        </entryLink>
-        <entryLink name="Storm Bolter" id="2d90-5ab2-80d4-1f5b" collective="false" hidden="false" import="true" targetId="8b0c-9093-dc69-c9e8" type="selectionEntry">
-          <constraints>
-            <constraint id="7fb1-ad8c-7600-017f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="8278-549c-8ded-2cb8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-        </entryLink>
-        <entryLink name="Power Sword" id="7ac9-3211-0d2f-6a4b" collective="false" hidden="false" import="true" targetId="4e44-58a0-2af5-519c" type="selectionEntry">
-          <constraints>
-            <constraint id="3b15-985f-dd2d-3ead" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="df7c-ea32-250f-ef66" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
-    </selectionEntry>
     <selectionEntry name="Power Armour" id="ccac-ef01-d557-349f" collective="false" hidden="false" import="true" publicationId="4590-6ba9-5482-a1fa" type="upgrade">
       <costs>
         <cost name="pts" typeId="points" value="0"/>
@@ -1374,150 +1223,6 @@ No to hit modifiers when they fire from a vehicle that is moving at Fast Speed</
           </constraints>
         </entryLink>
       </entryLinks>
-    </selectionEntry>
-    <selectionEntry name="Terminator Armour Loadouts" id="73a1-a777-19f9-1951" collective="false" hidden="false" import="true" type="upgrade">
-      <constraints>
-        <constraint id="f355-53c4-2666-c20e" field="selections" includeChildForces="true" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-      <selectionEntries>
-        <selectionEntry name="Terminator Armour: Lightning Claws" id="512c-ebb0-4b52-c41a" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="c7d7-9628-f5ab-4e1b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="49"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Terminator Armour" id="f178-f6a4-7b01-3bbf" collective="false" hidden="false" import="true" targetId="9d43-a036-5991-2470" type="selectionEntry">
-              <constraints>
-                <constraint id="cfd9-78f8-7b50-1ab0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                <constraint id="8640-848a-48bd-574b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-            </entryLink>
-            <entryLink name="Lightning Claws" id="e89a-3bee-e757-dddd" collective="false" hidden="false" import="true" targetId="ff45-72d3-781e-6006" type="selectionEntry">
-              <constraints>
-                <constraint id="8477-b586-1fb9-24b2" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                <constraint id="6164-8d85-ee90-aec5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </selectionEntry>
-        <selectionEntry name="Terminator Armour: Storm Bolter &amp; Chainfist" id="a0d2-cae5-0b9a-434b" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="d230-d2bb-296f-854c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="51"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Terminator Armour" id="b0ae-e278-e496-00b9" collective="false" hidden="false" import="true" targetId="9d43-a036-5991-2470" type="selectionEntry">
-              <constraints>
-                <constraint id="ad05-6b1f-f476-f7a7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                <constraint id="5581-b5b1-e931-1ba2" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-            </entryLink>
-            <entryLink name="Storm Bolter" id="1749-47c8-3acd-6031" collective="false" hidden="false" import="true" targetId="8b0c-9093-dc69-c9e8" type="selectionEntry">
-              <constraints>
-                <constraint id="85b8-e85f-b6d8-4ce3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                <constraint id="5295-0fdb-a474-3942" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-            </entryLink>
-            <entryLink name="Chainfist" id="a0d7-a6d1-8483-266b" collective="false" hidden="false" import="true" targetId="3913-2299-4778-933b" type="selectionEntry">
-              <constraints>
-                <constraint id="c5ed-2102-55e7-30e0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                <constraint id="b54c-42ec-77f2-8165" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </selectionEntry>
-        <selectionEntry name="Terminator Armour: Storm Bolter &amp; Power Fist" id="eddd-5120-e7ff-0f99" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="aacd-76e6-aed5-c4d5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="49"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Terminator Armour" id="8f85-de69-e6d5-9c12" collective="false" hidden="false" import="true" targetId="9d43-a036-5991-2470" type="selectionEntry">
-              <constraints>
-                <constraint id="eb91-1570-2222-33e6" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                <constraint id="cd09-d73a-eefd-1524" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-            </entryLink>
-            <entryLink name="Storm Bolter" id="510c-6c44-5df9-528e" collective="false" hidden="false" import="true" targetId="8b0c-9093-dc69-c9e8" type="selectionEntry">
-              <constraints>
-                <constraint id="4838-544b-58a6-6fc8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                <constraint id="4b17-8353-24d3-f630" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-            </entryLink>
-            <entryLink name="Power Fist" id="9654-d915-0075-4120" collective="false" hidden="false" import="true" targetId="d6c8-382a-4d74-36af" type="selectionEntry">
-              <constraints>
-                <constraint id="7297-b004-78ed-c75f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                <constraint id="e658-0f84-2629-2061" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </selectionEntry>
-        <selectionEntry name="Terminator Armour: Storm Bolter &amp; Power Sword" id="fb14-a951-3318-d105" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="e128-dd4c-895c-5777" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="45"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Terminator Armour" id="c0db-66a5-4275-3876" collective="false" hidden="false" import="true" targetId="9d43-a036-5991-2470" type="selectionEntry">
-              <constraints>
-                <constraint id="7977-828c-e4f4-ec97" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                <constraint id="0388-98c7-ecaf-6131" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-            </entryLink>
-            <entryLink name="Storm Bolter" id="9764-0a7d-aa19-6a20" collective="false" hidden="false" import="true" targetId="8b0c-9093-dc69-c9e8" type="selectionEntry">
-              <constraints>
-                <constraint id="3728-7944-eac5-8e71" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                <constraint id="4a16-d85f-63b4-4d80" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-            </entryLink>
-            <entryLink name="Power Sword" id="b845-0213-0a83-8bbe" collective="false" hidden="false" import="true" targetId="4e44-58a0-2af5-519c" type="selectionEntry">
-              <constraints>
-                <constraint id="6fc4-83f8-7bdc-b0f6" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                <constraint id="9988-5c6c-1122-0515" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </selectionEntry>
-        <selectionEntry name="Terminator Armour: Thunder Hammer &amp; Storm Shield" id="9308-8a33-34b7-9776" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="33d5-7b0d-f7bd-fe70" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="55"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Thunder Hammer" id="126b-8fc8-86a6-3cf9" collective="false" hidden="false" import="true" targetId="bc7d-3f6b-9ee5-8e42" type="selectionEntry">
-              <constraints>
-                <constraint id="9bf9-616f-3e95-49b7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                <constraint id="856b-1504-3dc7-f0fc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-            </entryLink>
-            <entryLink name="Storm Shield" id="a352-8e8f-004b-f164" collective="false" hidden="false" import="true" targetId="5b69-dbfc-8a02-2d96" type="selectionEntry">
-              <constraints>
-                <constraint id="b894-8302-2129-4c0e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                <constraint id="9315-5f60-a292-4d60" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-            </entryLink>
-            <entryLink name="Terminator Armour" id="884a-6bfa-263f-0492" collective="false" hidden="false" import="true" targetId="9d43-a036-5991-2470" type="selectionEntry">
-              <constraints>
-                <constraint id="6411-0210-7df3-deee" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                <constraint id="5868-b176-b35e-422e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </selectionEntry>
-      </selectionEntries>
     </selectionEntry>
     <selectionEntry name="Master of the Deathwing" id="381f-f866-3d8a-4e03" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
@@ -2255,7 +1960,7 @@ No to hit modifiers when they fire from a vehicle that is moving at Fast Speed</
       </costs>
       <entryLinks>
         <entryLink name="Space Marine Bike" id="5ffe-1332-0b36-2374" collective="false" hidden="false" import="true" targetId="1b22-fc76-8ed0-5765" type="selectionEntry"/>
-        <entryLink name="ServoCapable" id="b78f-a9fe-f164-0661" collective="false" hidden="false" import="true" targetId="a800-8c47-b465-29bc" type="selectionEntry">
+        <entryLink name="ServoCapableWargear" id="b78f-a9fe-f164-0661" collective="false" hidden="false" import="true" targetId="a800-8c47-b465-29bc" type="selectionEntry">
           <constraints>
             <constraint id="97a2-c47f-b5a2-e96a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
             <constraint id="bcd4-c610-15d3-bcd1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
@@ -2859,11 +2564,6 @@ No to hit modifiers when they fire from a vehicle that is moving at Fast Speed</
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
-    </selectionEntry>
-    <selectionEntry name="Terminator Sergeant" id="a9c2-db98-1732-541e" collective="false" hidden="false" import="true" type="upgrade">
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
     </selectionEntry>
     <selectionEntry name="Assault Squad" id="8d0e-3b8b-18d7-f3d9" collective="false" hidden="false" import="true" page="66" publicationId="4590-6ba9-5482-a1fa" type="unit">
       <categoryLinks>
@@ -4192,14 +3892,6 @@ No to hit modifiers when they fire from a vehicle that is moving at Fast Speed</
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
-    </selectionEntry>
-    <selectionEntry name="Add Bodyguard" id="6193-b6d9-9bc9-4ca3" collective="false" hidden="false" import="true" type="upgrade">
-      <constraints>
-        <constraint id="890f-4d53-0ffd-4eb4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
     </selectionEntry>
     <selectionEntry name="Assault Veteran Sergeant" id="c8d3-f6d5-c2fb-3512" collective="false" hidden="false" import="true" page="65" publicationId="4590-6ba9-5482-a1fa" type="upgrade">
       <categoryLinks>

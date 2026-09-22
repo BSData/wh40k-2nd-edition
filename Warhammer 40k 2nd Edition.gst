@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="34" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="35" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <comment>Warhammer 2nd Edition 40k</comment>
   <readme>Added more wargear cards</readme>
   <categoryEntries>
@@ -158,6 +158,7 @@
                     <condition childId="3da1-2b23-4a40-323e" childName="Codex - Eldar" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                     <condition childId="82c6-3e15-54c5-a35f" childName="Codex - Orks" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                     <condition childId="6583-5ff7-59cc-1fc9" childName="Codex - Squats" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="8d30-f85a-223d-697c" childName="Codex - Legion of the Damned" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -207,13 +208,6 @@
           </modifierGroups>
         </categoryLink>
       </categoryLinks>
-      <modifiers>
-        <modifier field="error" type="add" value="Legion of the Damned cannot take any allies">
-          <conditions>
-            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-          </conditions>
-        </modifier>
-      </modifiers>
     </forceEntry>
     <forceEntry name="Ally List" id="a60b-92d0-a03f-6c77" hidden="false">
       <categoryLinks>
@@ -249,6 +243,7 @@
                             <condition childId="8d0e-9c4e-17af-ed93" childName="Codex - Space Wolves" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                             <condition childId="3da1-2b23-4a40-323e" childName="Codex - Eldar" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                             <condition childId="82c6-3e15-54c5-a35f" childName="Codex - Orks" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="8d30-f85a-223d-697c" childName="Codex - Legion of the Damned" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -300,6 +295,7 @@
                             <condition childId="8d0e-9c4e-17af-ed93" childName="Codex - Space Wolves" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                             <condition childId="3da1-2b23-4a40-323e" childName="Codex - Eldar" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                             <condition childId="82c6-3e15-54c5-a35f" childName="Codex - Orks" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="8d30-f85a-223d-697c" childName="Codex - Legion of the Damned" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -338,6 +334,18 @@
           </modifiers>
         </categoryLink>
       </categoryLinks>
+      <modifiers>
+        <modifier field="error" type="add" value="Legion of the Damned cannot take any allies">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildForces="true" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="8d30-f85a-223d-697c" childName="Codex - Legion of the Damned" field="selections" includeChildForces="true" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </forceEntry>
   </forceEntries>
   <profileTypes>
@@ -1970,10 +1978,10 @@ Further rules in Wargear book</description>
       <description>Can deploy on the table after the enemy has finished delpoying their models. Can be placed anywhere on the board that is not in enemy line of sight. If both players have infilitrators, roll off to determine who goes first.</description>
     </rule>
     <rule name="Tarantula Turret" id="22ec-a383-2542-cd18" hidden="false" page="53" publicationId="06e5-8e36-e8c8-aec3">
-      <description>Crewman can control from 4&quot; away
-Can move 4&quot; per turn, but not through difficult terrain or obstacles. 
-May move and fire in the same turn
-In short range distance, enemy can choose to shoot the Tarantula turret or the crewman. At long range, it is random. If the crewman dies, the weapon is useless until someone else takes over. Armour value of Tarantula is 10 and if penetrated it is automatically destroyed.
+      <description>Crewman can control from 4&quot; away.
+Can move 4&quot; per turn, but not through difficult terrain or obstacles.
+May move and fire in the same turn.
+If in short range distance, the enemy can choose to shoot the Tarantula turret or the crewman. At long range, it is random. If the crewman dies, the weapon is useless until someone else takes over. Armour value of Tarantula is 10 and if penetrated it is automatically destroyed.
 Weapons attached are twin linked and fired as a pair.</description>
     </rule>
     <rule name="Rapier Laser Destroyer" id="1f71-5395-c068-2ccd" hidden="false" page="51" publicationId="06e5-8e36-e8c8-aec3">
@@ -2076,6 +2084,10 @@ If the pod goes off the table any troops it contains can be brought on and make 
     </rule>
     <rule name="Psycannon" id="1cf0-61f5-271e-01a7" hidden="false">
       <description>Against daemons and psykers, the Psycannon wounds automatically. Counts as a Force Weapon. Each time a psyker or daemon is wounded by a Psycannon, it will lose the use of one randomly-determined psychic power for the rest of the battle.</description>
+    </rule>
+    <rule name="Immune to Psychology" id="d8b2-410d-01df-0ce8" hidden="false" publicationId="4740-6730-10c0-9b25">
+      <description>Immune to all psychology. Cannot be affected by fear, terror, or any of the psychological factors in the Warhammer rulebook. 
+Still affected by Break tests like other troops</description>
     </rule>
   </sharedRules>
   <sharedSelectionEntries>
@@ -3701,7 +3713,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <infoLink name="Sustained Fire" id="9221-67f3-a639-5ff3" hidden="false" targetId="0b67-c911-308c-4960" type="rule"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="ServoCapable" id="a800-8c47-b465-29bc" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="ServoCapableWargear" id="a800-8c47-b465-29bc" collective="false" hidden="false" import="true" type="upgrade">
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
@@ -4710,6 +4722,11 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
           </characteristics>
         </profile>
       </profiles>
+    </selectionEntry>
+    <selectionEntry name="Armoured Body" id="da25-6f6e-dc88-b050" hidden="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink name="Armoured Body" id="e183-5649-da41-034c" hidden="false" targetId="f5b0-386b-546c-378e" type="profile"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>

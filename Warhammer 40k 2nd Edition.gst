@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="37" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="38" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <comment>Warhammer 2nd Edition 40k</comment>
   <readme>Added more wargear cards</readme>
   <categoryEntries>
@@ -208,6 +208,18 @@
           </modifierGroups>
         </categoryLink>
       </categoryLinks>
+      <modifiers>
+        <modifier field="warning" type="add" value="Legion of the Damned cannot take allies">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                <condition childId="8d30-f85a-223d-697c" childName="Codex - Legion of the Damned" field="selections" includeChildForces="true" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </forceEntry>
     <forceEntry name="Ally List" id="a60b-92d0-a03f-6c77" hidden="false">
       <categoryLinks>
@@ -334,18 +346,6 @@
           </modifiers>
         </categoryLink>
       </categoryLinks>
-      <modifiers>
-        <modifier field="error" type="add" value="Legion of the Damned cannot take any allies">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildForces="true" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
-                <condition childId="8d30-f85a-223d-697c" childName="Codex - Legion of the Damned" field="selections" includeChildForces="true" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
     </forceEntry>
   </forceEntries>
   <profileTypes>
@@ -1228,8 +1228,7 @@
     </profile>
     <profile name="Psychic Level 4" id="f988-2251-b863-a538" hidden="false" page="72" publicationId="2bb8-b6de-8b70-7f41" typeId="dcc9-06b3-a75f-6b62" typeName="Unit Psychic Level">
       <characteristics>
-        <characteristic name="Psychic Level" typeId="9ff5-b223-af73-69a8">
-</characteristic>
+        <characteristic name="Psychic Level" typeId="9ff5-b223-af73-69a8"/>
       </characteristics>
     </profile>
     <profile name="Psychic Shield" id="2534-d7ad-5692-4e16" hidden="false" page="73" publicationId="2bb8-b6de-8b70-7f41" typeId="11a6-8e13-a1ad-7e34" typeName="Unit Psychic Powers">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Ultramarines" id="138e-c671-3180-f615" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="33" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Ultramarines" id="138e-c671-3180-f615" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="34" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>Ultramarines Codex</readme>
   <entryLinks>
     <entryLink name="Space Marine Captain" id="e1eb-4981-2689-1fc2" collective="false" hidden="false" import="true" targetId="e664-c21f-4492-a7dc" type="selectionEntry"/>
@@ -38,6 +38,7 @@
     <entryLink name="Combat Squad - Assault" id="d781-497f-633d-093b" hidden="false" import="true" targetId="a2a8-5962-db60-11cc" type="selectionEntry"/>
     <entryLink name="Veteran Space Marine Squad" id="7d7a-54d7-2b78-814d" hidden="false" import="true" targetId="c5f0-4ff4-f1d2-147d" type="selectionEntry"/>
     <entryLink name="Combat Squad - Veterans" id="2f9c-07e5-caab-5903" hidden="false" import="true" targetId="fdfe-accc-6eb3-a649" type="selectionEntry"/>
+    <entryLink name="Space Marine Vindicator" id="df71-00bc-d957-94bd" hidden="false" import="true" targetId="53e9-c3d4-e1a2-de17" type="selectionEntry"/>
   </entryLinks>
   <rules>
     <rule name="Break Tests" id="957a-483e-3a28-6e67" hidden="false" page="49" publicationId="4590-6ba9-5482-a1fa">
@@ -740,6 +741,40 @@ Turret</characteristic>
         <characteristic name="LD" typeId="c751-ec1f-edb8-fd83"/>
       </characteristics>
     </profile>
+    <profile name="Space Marine Vindicator" id="4e31-aa1f-2da6-0faa" hidden="false" page="epicast datafax" publicationId="54a5-765a-b3e8-291b" typeId="371a-1ec9-2157-1eb6" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Slow Speed" typeId="7c52-da5f-7f1a-95fd">6</characteristic>
+        <characteristic name="Combat Speed" typeId="87a6-dd16-ba8f-ff71">12</characteristic>
+        <characteristic name="Fast Speed" typeId="92f6-98b4-3770-d8d9">18</characteristic>
+        <characteristic name="Type" typeId="8567-afc3-f137-4d64">Tracked</characteristic>
+        <characteristic name="Crew" typeId="7ee3-c2ef-4b92-55e1">2 Space Marine</characteristic>
+        <characteristic name="Ram Strength" typeId="13de-7be1-9f05-c48a">8</characteristic>
+        <characteristic name="Ram Damage" typeId="2ddf-d6d1-359f-bc9d">D12</characteristic>
+        <characteristic name="Ram Save Modfier" typeId="40ae-53ec-dee8-af1f">-5</characteristic>
+        <characteristic name="Armour Location" typeId="30da-ce76-ecb6-61ab">Tracks
+Hull
+Thunderer Cannon</characteristic>
+        <characteristic name="Front Armour" typeId="fafe-592c-1a65-1376">15
+23
+20</characteristic>
+        <characteristic name="Side/Rear Armour" typeId="fbc3-8073-078a-ac79">15
+18
+20</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Thunderer Cannon" id="feac-db43-fd3e-7a28" hidden="false" page="epicast datafax" publicationId="54a5-765a-b3e8-291b" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">18</characteristic>
+        <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">36</characteristic>
+        <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+        <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+        <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">10</characteristic>
+        <characteristic name="Damage" typeId="8978-f9c3-8957-1481">2D8</characteristic>
+        <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-3</characteristic>
+        <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">2D8+D6+D10</characteristic>
+        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">2&quot; Blast, Limited Ammo</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
   <sharedRules>
     <rule name="Space Marine Captain" id="a062-3411-7dbb-6498" hidden="false" page="63" publicationId="4590-6ba9-5482-a1fa">
@@ -868,6 +903,9 @@ Any squad led by Cassius are immune to fear from Tyranids and their weapons</des
       <description>May not be joined by any other characters. May not benefit from any re-rolls or special bonus due to army comander, standards, etc. 
 
 The Legion of the Damned will always ignore any Leadership test it is called upon to make. They cannot be broken, and are not affected by the psychology rules in any way.</description>
+    </rule>
+    <rule name="Limited Ammo" id="5ea0-0e01-6884-0d50" hidden="false">
+      <description>The Vindicator has limited storage, and may only fire 6 shots during the game</description>
     </rule>
   </sharedRules>
   <sharedSelectionEntries>
@@ -2760,11 +2798,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <selectionEntryGroup name="Weapons" id="5403-3938-72c9-1d72" collective="false" hidden="false" import="true">
           <entryLinks>
             <entryLink name="Assault Weapons" id="095d-1e60-8681-6325" collective="false" hidden="false" import="true" targetId="cd0a-6a8d-1f46-a6db" type="selectionEntryGroup"/>
-            <entryLink name="Scout Weapons" id="6547-4798-f894-d599" collective="false" hidden="false" import="true" targetId="e933-2bc4-7e49-d5e1" type="selectionEntryGroup">
-              <constraints>
-                <constraint id="85d9-6378-e98c-186b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-            </entryLink>
+            <entryLink name="Scout Weapons" id="6547-4798-f894-d599" collective="false" hidden="false" import="true" targetId="e933-2bc4-7e49-d5e1" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -2903,7 +2937,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <entryLinks>
-        <entryLink name="Assault Weapons" id="d3ff-330a-eb81-34ff" collective="false" hidden="false" import="true" sortIndex="2" targetId="cd0a-6a8d-1f46-a6db" type="selectionEntryGroup"/>
+        <entryLink name="Assault Weapons" id="d3ff-330a-eb81-34ff" collective="false" hidden="false" import="true" sortIndex="3" targetId="cd0a-6a8d-1f46-a6db" type="selectionEntryGroup"/>
       </entryLinks>
       <modifierGroups>
         <modifierGroup type="and">
@@ -2960,19 +2994,55 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
           </infoLinks>
           <modifiers>
             <modifier field="info" type="add" value="Wargear Cards will apply to all bikers in the group. If you want separate loadouts - click the + sign and add separate bikers for their own loadout"/>
+            <modifier field="322b-8fbd-5354-df3c" type="decrement" value="1">
+              <repeats>
+                <repeat childId="8636-01fe-0a89-df80" childName="Marine Biker w/ Special Weapon" field="selections" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+            <modifier field="f3ac-b17b-712f-3ee1" type="decrement" value="1">
+              <repeats>
+                <repeat childId="8636-01fe-0a89-df80" childName="Marine Biker w/ Special Weapon" field="selections" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+              </repeats>
+            </modifier>
           </modifiers>
+        </selectionEntry>
+        <selectionEntry name="Marine Biker w/ Special Weapon" id="8636-01fe-0a89-df80" hidden="false" import="true" sortIndex="2" type="upgrade">
+          <constraints>
+            <constraint id="e5ab-d002-d90f-6437" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="2"/>
+          </constraints>
+          <entryLinks>
+            <entryLink name="Bolt Pistol" id="4d4c-c798-48a2-24ff" collective="false" hidden="false" import="true" targetId="b5bb-7853-53cb-bec4" type="selectionEntry">
+              <constraints>
+                <constraint id="2240-4da9-8a93-2291" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="a646-e4f6-1751-f214" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </entryLink>
+            <entryLink name="Frag Grenade" id="027a-5c22-fdd7-0efa" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+              <constraints>
+                <constraint id="df70-7214-9b5a-7a3b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="621c-c701-aacb-61bb" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </entryLink>
+            <entryLink name="Power Armour" id="8d9e-9111-f001-bf15" collective="false" hidden="false" import="true" targetId="223b-6b82-1907-d976" type="selectionEntry">
+              <constraints>
+                <constraint id="4a5d-ca69-e263-87a0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="05fe-aca1-cf9b-b6ce" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+            <entryLink name="Space Marine Bike" id="110f-9115-bc2c-88c7" collective="false" hidden="false" import="true" targetId="1b22-fc76-8ed0-5765" type="selectionEntry">
+              <constraints>
+                <constraint id="1843-22e2-7b60-a675" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="95a8-68f7-15c7-9592" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+              <modifiers>
+                <modifier field="points" type="set" value="0"/>
+              </modifiers>
+            </entryLink>
+            <entryLink name="Special Weapons" id="ef37-1585-5f76-8ea8" collective="false" hidden="false" import="true" targetId="717e-c382-eaca-bd29" type="selectionEntryGroup"/>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Max 2 special weapons" id="13e8-0e6b-d20d-20f8" collective="false" hidden="false" import="true" sortIndex="3">
-          <entryLinks>
-            <entryLink name="Special Weapons" id="e1b4-811b-4a91-cec2" collective="false" hidden="false" import="true" targetId="717e-c382-eaca-bd29" type="selectionEntryGroup">
-              <modifiers>
-                <modifier field="43f4-7d87-21e2-f623" type="set" value="2"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
         <selectionEntryGroup name="Grenades" id="81c9-f424-8ca5-f0d4" collective="false" hidden="false" import="true" sortIndex="4">
           <entryLinks>
             <entryLink name="Blind Grenade" id="5a11-e3e8-3034-9c91" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
@@ -3364,8 +3434,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier field="e6eb-0a01-8cae-206b" type="set" value="-1">
-          <comment>Need at least 1 Techmarine</comment>
+        <modifier field="e6eb-0a01-8cae-206b" type="increment" value="3">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
@@ -3375,6 +3444,21 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
               </conditions>
             </conditionGroup>
           </conditionGroups>
+          <repeats>
+            <repeat childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="roster" shared="true" value="1"/>
+          </repeats>
+        </modifier>
+        <modifier field="e6eb-0a01-8cae-206b" type="decrement" value="1">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="bfff-4619-ce95-3303" childName="Rapier Laser Destroyer" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <repeats>
+            <repeat childId="4165-53ae-0eed-f9bd" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="roster" shared="true" value="1"/>
+          </repeats>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -3463,8 +3547,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier field="7858-8391-1a7d-89ab" type="set" value="-1">
-          <comment>Need at least 1 Techmarine</comment>
+        <modifier field="7858-8391-1a7d-89ab" type="increment" value="3">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
@@ -3474,6 +3557,21 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
               </conditions>
             </conditionGroup>
           </conditionGroups>
+          <repeats>
+            <repeat childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="roster" shared="true" value="1"/>
+          </repeats>
+        </modifier>
+        <modifier field="7858-8391-1a7d-89ab" type="decrement" value="1">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="4165-53ae-0eed-f9bd" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <repeats>
+            <repeat childId="4165-53ae-0eed-f9bd" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="roster" shared="true" value="1"/>
+          </repeats>
         </modifier>
       </modifiers>
       <selectionEntries>
@@ -3625,8 +3723,8 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
       <entryLinks>
         <entryLink name="Twin Lascannons" id="75d2-abd0-1597-399d" collective="false" hidden="false" import="true" targetId="3450-9415-d591-d15c" type="selectionEntry">
           <constraints>
-            <constraint id="2f70-ef88-489d-9fc5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-            <constraint id="9ba9-2e50-697c-0d4d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="2f70-ef88-489d-9fc5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
+            <constraint id="9ba9-2e50-697c-0d4d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="2"/>
           </constraints>
           <entryLinks>
             <entryLink name="Targeter" id="05cb-ec66-dbc5-f235" collective="false" hidden="false" import="true" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
@@ -6426,6 +6524,116 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
+    <selectionEntry name="Space Marine Vindicator" id="53e9-c3d4-e1a2-de17" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="3Support" id="9742-1e78-4a9d-e47b" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
+        <categoryLink name="Ultramarines" id="9d80-85ae-c6ee-9115" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="d9a1-357b-a73e-9f4b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0">
+          <comment>Need at least 1 Techmarine</comment>
+        </constraint>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="145"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Vehicle Wargear Cards" id="7d52-acc8-b058-ddc0" collective="false" hidden="false" import="true" targetId="fcf7-39a4-11f3-7097" type="selectionEntryGroup"/>
+        <entryLink name="Auto-Launcher" id="c270-14d7-cdf8-ea2d" collective="false" hidden="false" import="true" targetId="222b-075f-d34c-7093" type="selectionEntry">
+          <constraints>
+            <constraint id="db92-fab0-746e-903f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Frag Grenade" id="c279-9130-a4d5-4a1e" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+              <constraints>
+                <constraint id="e4e2-b6c6-335e-c88b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="09e8-4dd1-0d92-ecde" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink name="Blind Grenade" id="1e72-acca-4e41-a37d" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
+              <constraints>
+                <constraint id="06fe-6cf9-6fbe-c1bd" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+        <entryLink name="Space Marine Vehicle Crew" id="e2db-e9af-bcc4-f638" hidden="false" import="true" targetId="78be-f19b-ef3f-ba0a" type="selectionEntry">
+          <constraints>
+            <constraint id="f069-af4a-2a01-6332" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="2"/>
+            <constraint id="1087-b05d-681d-3192" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="2"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Space Marine Vindicator" id="dc20-e718-b70d-9264" hidden="false" targetId="4e31-aa1f-2da6-0faa" type="profile"/>
+        <infoLink name="Limited Ammo" id="49c7-aa73-d824-7eeb" hidden="false" targetId="5ea0-0e01-6884-0d50" type="rule"/>
+      </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <modifiers>
+        <modifier field="d9a1-357b-a73e-9f4b" type="set" value="-1">
+          <conditions>
+            <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="error" type="add" value="{this} must have at least 1 Techmarine the list">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
+                  <comment>Need at least 1 Techmarine</comment>
+                </condition>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry name="Thunderer Cannon" id="f551-b5c4-f5b0-f344" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="2435-c58a-d79e-0fd9" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="5268-e6fd-81f3-62a2" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Thunderer Cannon" id="6422-9f87-a61d-c344" hidden="false" targetId="feac-db43-fd3e-7a28" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Heavy Weapons" id="b82f-8f32-5c16-a84b" collective="false" hidden="false" import="true" page="61" publicationId="4590-6ba9-5482-a1fa">
@@ -7161,6 +7369,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
               <costs>
                 <cost name="pts" typeId="points" value="90"/>
               </costs>
+              <modifiers>
+                <modifier field="name" type="set" value="Lascannons"/>
+              </modifiers>
               <profiles>
                 <profile name="Lascannon" id="5009-0341-3b36-2504" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
                   <characteristics>
@@ -7181,6 +7392,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
+              <modifiers>
+                <modifier field="name" type="set" value="Heavy Bolters"/>
+              </modifiers>
               <profiles>
                 <profile name="Heavy Bolter" id="eb84-1f87-4463-5002" hidden="false" page="35" publicationId="06e5-8e36-e8c8-aec3" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
                   <characteristics>
@@ -7201,6 +7415,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
               <costs>
                 <cost name="pts" typeId="points" value="50"/>
               </costs>
+              <modifiers>
+                <modifier field="name" type="set" value="Heavy Flamers"/>
+              </modifiers>
               <profiles>
                 <profile name="Heavy Flamer" id="3da6-571e-f7c6-8fbf" hidden="false" page="36" publicationId="06e5-8e36-e8c8-aec3" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
                   <characteristics>

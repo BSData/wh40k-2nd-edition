@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Angels of Death (Blood Angels)" id="12fb-bbf1-3d12-aef9" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="24" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Angels of Death (Blood Angels)" id="12fb-bbf1-3d12-aef9" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="25" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink name="Space Marine Captain" id="e1eb-4981-2689-1fc2" collective="false" hidden="false" import="true" targetId="e664-c21f-4492-a7dc" type="selectionEntry"/>
     <entryLink name="Terminator Captain" id="cc3a-a216-fc10-2c17" collective="false" hidden="false" import="true" targetId="381f-f866-3d8a-4e03" type="selectionEntry"/>
@@ -1919,7 +1919,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
             <constraint id="bcd4-c610-15d3-bcd1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
           </constraints>
         </entryLink>
-        <entryLink name="Wargear Cards" id="9f58-7c2c-220b-1961" collective="false" hidden="false" import="true" targetId="578d-7254-ab21-8b13" type="selectionEntryGroup">
+        <entryLink name="Wargear Cards" id="9f58-7c2c-220b-1961" collective="false" hidden="false" import="true" sortIndex="4" targetId="578d-7254-ab21-8b13" type="selectionEntryGroup">
           <constraints>
             <constraint id="32fd-ed6f-5982-4e53" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
           </constraints>
@@ -5004,7 +5004,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         <cost name="pts" typeId="points" value="96"/>
       </costs>
       <entryLinks>
-        <entryLink name="Army Commander" id="9209-dcf5-8fa2-c505" collective="false" hidden="false" import="true" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
+        <entryLink name="Army Commander" id="9209-dcf5-8fa2-c505" collective="false" hidden="false" import="true" sortIndex="1" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
           <infoLinks>
             <infoLink name="Army Commander Strategy Rating" id="804c-7ab7-cd18-eb9f" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
               <modifiers>
@@ -5018,7 +5018,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
             </infoLink>
           </infoLinks>
         </entryLink>
-        <entryLink name="Space Marine Bike" id="4f5d-d81b-d0a5-b4c3" collective="false" hidden="false" import="true" targetId="1b22-fc76-8ed0-5765" type="selectionEntry"/>
+        <entryLink name="Space Marine Bike" id="4f5d-d81b-d0a5-b4c3" collective="false" hidden="false" import="true" sortIndex="4" targetId="1b22-fc76-8ed0-5765" type="selectionEntry"/>
         <entryLink name="Wargear Cards" id="9e0c-a4c3-69a4-fd4f" collective="false" hidden="false" import="true" targetId="578d-7254-ab21-8b13" type="selectionEntryGroup">
           <constraints>
             <constraint id="ad14-9678-edf2-1fb7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="4"/>
@@ -5109,7 +5109,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Armour" id="4128-a30b-ac1e-b696" collective="false" defaultSelectionEntryId="01cf-ec23-2c32-b090" hidden="false" import="true">
+        <selectionEntryGroup name="Armour" id="4128-a30b-ac1e-b696" collective="false" defaultSelectionEntryId="01cf-ec23-2c32-b090" hidden="false" import="true" sortIndex="2">
           <constraints>
             <constraint id="7dc4-896a-4d4c-6a0d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
             <constraint id="5757-09d5-0fca-9458" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
@@ -5141,7 +5141,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Weapons" id="8899-0efd-5093-b766" collective="false" hidden="false" import="true">
+        <selectionEntryGroup name="Weapons" id="8899-0efd-5093-b766" collective="false" hidden="false" import="true" sortIndex="5">
           <entryLinks>
             <entryLink name="Assault Weapons" id="bb36-6864-232f-46d7" collective="false" hidden="false" import="true" targetId="cd0a-6a8d-1f46-a6db" type="selectionEntryGroup">
               <modifiers>
@@ -5187,7 +5187,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Characteristic Upgrade" id="530d-69aa-bf86-e1cf" hidden="false">
+        <selectionEntryGroup name="Characteristic Upgrade" id="530d-69aa-bf86-e1cf" hidden="false" sortIndex="3">
           <constraints>
             <constraint id="979e-3637-ef31-ce78" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
@@ -7300,6 +7300,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <conditionGroup type="and">
                   <conditions>
                     <condition childId="9ff8-010a-4673-af0a" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="notInstanceOf" value="1"/>
+                    <condition childId="b6ca-03b2-9301-c1c9" childName="Army Commander" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="lessThan" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>

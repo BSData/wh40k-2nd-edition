@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="38" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="39" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <comment>Warhammer 2nd Edition 40k</comment>
   <readme>Added more wargear cards</readme>
   <categoryEntries>
@@ -4169,6 +4169,7 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
     <selectionEntry name="Army Commander" id="b6ca-03b2-9301-c1c9" collective="false" hidden="false" import="true" type="upgrade">
       <constraints>
         <constraint id="cea5-73de-8004-f126" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+        <constraint id="7961-f2a0-0f85-73dd" field="selections" includeChildSelections="true" scope="roster" shared="true" type="min" value="1"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="points" value="0"/>

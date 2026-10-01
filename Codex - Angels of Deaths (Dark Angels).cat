@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Angels of Death (Dark Angels)" id="7c0f-1fc4-d5a5-dc73" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="20" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Angels of Death (Dark Angels)" id="7c0f-1fc4-d5a5-dc73" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="21" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink name="Dark Angels Master" id="e1eb-4981-2689-1fc2" collective="false" hidden="false" import="true" targetId="e664-c21f-4492-a7dc" type="selectionEntry"/>
     <entryLink name="Master of the Deathwing" id="cc3a-a216-fc10-2c17" collective="false" hidden="false" import="true" targetId="381f-f866-3d8a-4e03" type="selectionEntry"/>
@@ -1982,14 +1982,14 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         <cost name="pts" typeId="points" value="33"/>
       </costs>
       <entryLinks>
-        <entryLink name="Space Marine Bike" id="5ffe-1332-0b36-2374" collective="false" hidden="false" import="true" targetId="1b22-fc76-8ed0-5765" type="selectionEntry"/>
+        <entryLink name="Space Marine Bike" id="5ffe-1332-0b36-2374" collective="false" hidden="false" import="true" sortIndex="2" targetId="1b22-fc76-8ed0-5765" type="selectionEntry"/>
         <entryLink name="ServoCapableWargear" id="b78f-a9fe-f164-0661" collective="false" hidden="false" import="true" targetId="a800-8c47-b465-29bc" type="selectionEntry">
           <constraints>
             <constraint id="97a2-c47f-b5a2-e96a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
             <constraint id="bcd4-c610-15d3-bcd1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
           </constraints>
         </entryLink>
-        <entryLink name="Wargear Cards" id="9f58-7c2c-220b-1961" collective="false" hidden="false" import="true" targetId="578d-7254-ab21-8b13" type="selectionEntryGroup">
+        <entryLink name="Wargear Cards" id="9f58-7c2c-220b-1961" collective="false" hidden="false" import="true" sortIndex="4" targetId="578d-7254-ab21-8b13" type="selectionEntryGroup">
           <constraints>
             <constraint id="32fd-ed6f-5982-4e53" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
           </constraints>
@@ -2012,7 +2012,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         </modifierGroup>
       </modifierGroups>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Armour" id="9387-1f5d-2432-b014" collective="false" defaultSelectionEntryId="ae54-ecd0-6a14-13e4" hidden="false" import="true">
+        <selectionEntryGroup name="Armour" id="9387-1f5d-2432-b014" collective="false" defaultSelectionEntryId="ae54-ecd0-6a14-13e4" hidden="false" import="true" sortIndex="1">
           <constraints>
             <constraint id="3aaf-3ccb-3c3c-6aea" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
             <constraint id="5e01-2e48-e8fc-638e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
@@ -2034,7 +2034,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Weapons" id="1b1b-4b1f-c990-1f85" collective="false" hidden="false" import="true">
+        <selectionEntryGroup name="Weapons" id="1b1b-4b1f-c990-1f85" collective="false" hidden="false" import="true" sortIndex="3">
           <entryLinks>
             <entryLink name="Assault Weapons" id="d351-891b-1795-93b8" collective="false" hidden="false" import="true" targetId="cd0a-6a8d-1f46-a6db" type="selectionEntryGroup">
               <modifiers>
@@ -5273,7 +5273,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         </entryLink>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Veteran Sergeants" id="ce45-2648-cded-c97f" hidden="false" targetId="df15-6524-e608-c3b9" type="profile"/>
+        <infoLink name="Veteran Sergeant" id="ce45-2648-cded-c97f" hidden="false" targetId="df15-6524-e608-c3b9" type="profile"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Weapons" id="1f06-9cbc-1320-ce79" collective="false" hidden="false" import="true">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="39" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="40" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <comment>Warhammer 2nd Edition 40k</comment>
   <readme>Added more wargear cards</readme>
   <categoryEntries>
@@ -4732,7 +4732,6 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup name="Vehicle Wargear Cards (Generic)" id="3a8b-4669-b2f5-b7f1" collective="false" hidden="false" import="true"/>
     <selectionEntryGroup name="Psychic Powers" id="37d9-59fe-03d7-4fcc" collective="false" hidden="false" import="true" page="73" publicationId="2bb8-b6de-8b70-7f41">
       <selectionEntries>
         <selectionEntry name="Destory Mind" id="7e9e-c9c4-1f4f-2534" collective="false" hidden="false" import="true" type="upgrade">
@@ -5199,7 +5198,6 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Wargear Cards (Eldar)" id="7536-f993-73e8-d438" collective="false" hidden="false" import="true"/>
     <selectionEntryGroup name="Wargear (Imperium)" id="2ac0-240e-25fe-564b" collective="false" hidden="false" import="true">
       <entryLinks>
         <entryLink name="Servo Arm" id="9534-b0e7-f10e-04d4" collective="false" hidden="false" import="true" targetId="2311-7072-654a-5c8f" type="selectionEntry">
@@ -5386,23 +5384,6 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="50"/>
-          </costs>
-        </entryLink>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup name="Wargear Cards (Vehicle - Chaos)" id="1637-aae0-2764-e44b" collective="false" hidden="false" import="true">
-      <entryLinks>
-        <entryLink name="Destroyer" id="3025-2cfb-258b-6a98" collective="false" hidden="false" import="true" targetId="22d8-8c7c-b04b-9156" type="selectionEntry"/>
-        <entryLink name="Combi-Bolter" id="7fe1-91eb-e4d8-98c2" collective="false" hidden="false" import="true" targetId="11c2-dae7-3e31-e10a" type="selectionEntry">
-          <rules>
-            <rule name="Vehicle Combi-Bolter" id="499c-602b-c7d4-b7e3" hidden="false">
-              <description>Space Marines can rapid fire with the combi-bolters if the vehicle is stationary or moving at Slow Speed</description>
-            </rule>
-          </rules>
-        </entryLink>
-        <entryLink name="Coruscating Warp Flame" id="3999-ceda-197c-1c91" collective="false" hidden="false" import="true" targetId="21e9-f397-7329-a32f" type="selectionEntry">
-          <costs>
-            <cost name="pts" typeId="points" value="45"/>
           </costs>
         </entryLink>
       </entryLinks>

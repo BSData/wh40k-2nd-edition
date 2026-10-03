@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="40" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="41" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <comment>Warhammer 2nd Edition 40k</comment>
   <readme>Added more wargear cards</readme>
   <categoryEntries>
@@ -213,11 +213,14 @@
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                <condition childId="8d30-f85a-223d-697c" childName="Codex - Legion of the Damned" field="selections" includeChildForces="true" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                <condition childId="8d30-f85a-223d-697c" childName="Codex - Legion of the Damned" field="selections" includeChildForces="false" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="selections" includeChildForces="true" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+          <conditions>
+            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+          </conditions>
         </modifier>
       </modifiers>
     </forceEntry>
@@ -4729,6 +4732,17 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
       <infoLinks>
         <infoLink name="Armoured Body" id="e183-5649-da41-034c" hidden="false" targetId="f5b0-386b-546c-378e" type="profile"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Legion of the Damned - no allies" id="74cd-18ab-96bb-f81c" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="c1d9-95b7-5564-6fab" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="6f89-d819-5c86-0be5" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <rules>
+        <rule name="No Allies" id="9736-5da6-146c-ac11" hidden="false">
+          <description>The Legion of the Damned cannot take any allies</description>
+        </rule>
+      </rules>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>

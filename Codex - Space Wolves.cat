@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Space Wolves" id="8d0e-9c4e-17af-ed93" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="17" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Space Wolves" id="8d0e-9c4e-17af-ed93" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="18" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>Terminators cannot add the teleport ability (which you need to increase their points by 50%) due to a limitation in Battlescribe. No way to modify the points in that way. 
 
 If they ever change that I will update. Until then, ye olde calcuator will do!</readme>
@@ -9,7 +9,7 @@ If they ever change that I will update. Until then, ye olde calcuator will do!</
     <entryLink name="Rune Priest" id="caa2-825b-c930-880d" collective="false" hidden="false" import="true" targetId="4f11-67fa-3adf-e0e1" type="selectionEntry"/>
     <entryLink name="Iron Priest" id="37e9-66a3-96b3-80ed" collective="false" hidden="false" import="true" targetId="ee10-1b3b-ecac-e1e7" type="selectionEntry"/>
     <entryLink name="Grey Hunter Pack" id="bce2-9dc4-98dc-b27b" collective="false" hidden="false" import="true" targetId="e300-75bb-3598-67fd" type="selectionEntry"/>
-    <entryLink name="Wolf Guard (Terminators)" id="fad1-8ce2-00ac-a5ac" collective="false" hidden="false" import="true" targetId="cddd-3cb1-aeb7-7edb" type="selectionEntry"/>
+    <entryLink name="Wolf Guard" id="fad1-8ce2-00ac-a5ac" collective="false" hidden="false" import="true" targetId="cddd-3cb1-aeb7-7edb" type="selectionEntry"/>
     <entryLink name="Blood Claw Pack" id="7f79-e45e-796f-bd65" collective="false" hidden="false" import="true" targetId="8d0e-3b8b-18d7-f3d9" type="selectionEntry"/>
     <entryLink name="Wolf Scouts" id="7049-3c96-bb90-ffb2" collective="false" hidden="false" import="true" targetId="6e2c-c4c7-fac2-94e8" type="selectionEntry"/>
     <entryLink name="Long Fang Pack" id="1f58-136a-d4c3-417a" collective="false" hidden="false" import="true" targetId="65b2-1949-1b47-113e" type="selectionEntry"/>
@@ -1199,6 +1199,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
               <conditions>
                 <condition childId="a1dd-ee6c-ab43-cd6e" childName="Great Wolf Logan Grimnar" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
                 <condition childId="64fa-ece9-bf27-ecf6" childName="Wolf Lord Ragnar Blackmane" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" scope="8d0e-9c4e-17af-ed93" shared="true" type="atLeast" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -5227,7 +5228,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
       <categoryLinks>
         <categoryLink name="Space Wolves" id="498c-58a1-7162-4e1a" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
         <categoryLink name="Walkers" id="c57a-9022-d576-b8ac" hidden="false" primary="false" targetId="bcf7-c063-7aca-a066"/>
-        <categoryLink name="1Characters" id="e376-c970-9bc9-7807" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="3Support" id="7d6c-31e5-ee0f-82b3" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <constraints>
         <constraint id="f349-3b81-29c9-a268" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1">

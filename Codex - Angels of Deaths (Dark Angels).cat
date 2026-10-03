@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Angels of Death (Dark Angels)" id="7c0f-1fc4-d5a5-dc73" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="21" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Angels of Death (Dark Angels)" id="7c0f-1fc4-d5a5-dc73" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="22" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink name="Dark Angels Master" id="e1eb-4981-2689-1fc2" collective="false" hidden="false" import="true" targetId="e664-c21f-4492-a7dc" type="selectionEntry"/>
     <entryLink name="Master of the Deathwing" id="cc3a-a216-fc10-2c17" collective="false" hidden="false" import="true" targetId="381f-f866-3d8a-4e03" type="selectionEntry"/>
@@ -1038,7 +1038,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Space Marine Bike" id="1b22-fc76-8ed0-5765" collective="false" hidden="false" import="true" page="63" publicationId="4590-6ba9-5482-a1fa" type="upgrade">
+    <selectionEntry name="Space Marine Bike" id="1b22-fc76-8ed0-5765" collective="false" hidden="false" import="true" page="63" publicationId="4590-6ba9-5482-a1fa" subType="mount" type="model">
       <categoryLinks>
         <categoryLink name="Skimmer/Bike" id="6b12-bc51-182e-43fe" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
       </categoryLinks>
@@ -2873,7 +2873,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry name="Servitor" id="6282-6f49-021b-1958" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Servitor" id="6282-6f49-021b-1958" collective="false" hidden="false" import="true" subType="crew" type="model">
       <categoryLinks>
         <categoryLink name="Dark Angels" id="114e-3cdf-c178-bbca" hidden="false" primary="false" targetId="65bb-c554-1585-91d9"/>
         <categoryLink name="3Support" id="190e-442a-40f6-4c6d" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
@@ -4989,7 +4989,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Space Marine Vehicle Crew" id="e7ec-7320-2d83-f77f" collective="false" hidden="false" import="true" type="model">
+    <selectionEntry name="Space Marine Vehicle Crew" id="e7ec-7320-2d83-f77f" collective="false" hidden="false" import="true" subType="crew" type="model">
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>

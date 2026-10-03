@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Angels of Death (Blood Angels)" id="12fb-bbf1-3d12-aef9" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="25" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Angels of Death (Blood Angels)" id="12fb-bbf1-3d12-aef9" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="26" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink name="Space Marine Captain" id="e1eb-4981-2689-1fc2" collective="false" hidden="false" import="true" targetId="e664-c21f-4492-a7dc" type="selectionEntry"/>
     <entryLink name="Terminator Captain" id="cc3a-a216-fc10-2c17" collective="false" hidden="false" import="true" targetId="381f-f866-3d8a-4e03" type="selectionEntry"/>
@@ -998,7 +998,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Space Marine Bike" id="1b22-fc76-8ed0-5765" collective="false" hidden="false" import="true" page="63" publicationId="4590-6ba9-5482-a1fa" type="upgrade">
+    <selectionEntry name="Space Marine Bike" id="1b22-fc76-8ed0-5765" collective="false" hidden="false" import="true" page="63" publicationId="308f-63b0-ee37-1c6b" subType="mount" type="model">
       <categoryLinks>
         <categoryLink name="Skimmer/Bike" id="49e6-f159-3324-64bf" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
       </categoryLinks>
@@ -3304,7 +3304,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry name="Servitor" id="6282-6f49-021b-1958" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Servitor" id="6282-6f49-021b-1958" collective="false" hidden="false" import="true" subType="crew" type="model">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="14c2-9b5b-adc5-17d0" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="3Support" id="0e7f-0af4-892a-27b4" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
@@ -6257,7 +6257,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Space Marine Vehicle Crew" id="7013-45c3-2a67-1921" collective="false" hidden="false" import="true" type="model">
+    <selectionEntry name="Space Marine Vehicle Crew" id="7013-45c3-2a67-1921" collective="false" hidden="false" import="true" subType="crew" type="model">
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>

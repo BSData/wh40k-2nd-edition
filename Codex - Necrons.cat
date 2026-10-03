@@ -1,164 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Necrons" id="f649-eb44-08cb-0ba3" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="2" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Necrons" id="f649-eb44-08cb-0ba3" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="3" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>V1 is just the White Dwarf units. May add the fan rules in later if people want</readme>
-  <categoryEntries>
-    <categoryEntry name="Characters" id="2ea9-09f2-fdbd-4ae7" hidden="false"/>
-    <categoryEntry name="Squads" id="a674-4bce-893e-4a31" hidden="false"/>
-    <categoryEntry name="Support" id="d343-afc5-46fd-9c02" hidden="false"/>
-  </categoryEntries>
   <entryLinks>
     <entryLink name="Necron Lord" id="5e18-36c7-0d37-4cfb" collective="false" hidden="false" import="true" targetId="8a1f-c19a-1e19-d04f" type="selectionEntry"/>
     <entryLink name="Necron Warrior Squad" id="0500-a1ef-ab98-518d" collective="false" hidden="false" import="true" targetId="e075-3b44-b3c3-8834" type="selectionEntry"/>
     <entryLink name="Scarab" id="b88c-0fbc-4853-95dd" collective="false" hidden="false" import="true" targetId="16d1-76ae-1849-9e8b" type="selectionEntry"/>
     <entryLink name="Necron Destroyer" id="39f4-cf2e-bcf9-c96d" collective="false" hidden="false" import="true" targetId="2d33-f5d2-342c-bac6" type="selectionEntry"/>
   </entryLinks>
-  <forceEntries>
-    <forceEntry name="Necrons" id="871d-0043-0042-8883" hidden="false">
-      <categoryLinks>
-        <categoryLink name="Squads" id="556a-c638-8fc6-78ad" hidden="false" primary="false" targetId="a674-4bce-893e-4a31">
-          <constraints>
-            <constraint id="be89-6742-67af-e160" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="min" value="0"/>
-            <constraint id="3d4b-392b-e830-1b87" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="min" value="25"/>
-          </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <comment>When you have no points limit</comment>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-              <modifiers>
-                <modifier field="be89-6742-67af-e160" type="set" value="-1"/>
-              </modifiers>
-            </modifierGroup>
-            <modifierGroup type="and">
-              <comment>When having a points limit</comment>
-              <modifiers>
-                <modifier field="be89-6742-67af-e160" type="increment" value="1">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <repeats>
-                    <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="0.25" roundUp="false" scope="roster" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-                <modifier field="3d4b-392b-e830-1b87" type="set" value="-1">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-        </categoryLink>
-        <categoryLink name="Characters" id="234a-8ea2-6f88-06c4" hidden="false" primary="false" targetId="2ea9-09f2-fdbd-4ae7">
-          <constraints>
-            <constraint id="e19c-2a75-ff17-9224" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="0"/>
-            <constraint id="e071-d005-2b5b-308d" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="max" value="50"/>
-          </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <comment>When you have no points limit</comment>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-              <modifiers>
-                <modifier field="e19c-2a75-ff17-9224" type="set" value="-1"/>
-              </modifiers>
-            </modifierGroup>
-            <modifierGroup type="and">
-              <comment>When having a points limit</comment>
-              <modifiers>
-                <modifier field="e19c-2a75-ff17-9224" type="increment" value="1">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <repeats>
-                    <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="0.5" roundUp="false" scope="roster" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-                <modifier field="e071-d005-2b5b-308d" type="set" value="-1">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-        </categoryLink>
-        <categoryLink name="Support" id="01df-f85b-aaab-2846" hidden="false" targetId="d343-afc5-46fd-9c02">
-          <constraints>
-            <constraint id="a958-5c30-cb38-162f" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="0"/>
-            <constraint id="9c0a-f12c-7567-f265" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="max" value="50"/>
-          </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <comment>When you have no points limit</comment>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-              <modifiers>
-                <modifier field="a958-5c30-cb38-162f" type="set" value="-1"/>
-              </modifiers>
-            </modifierGroup>
-            <modifierGroup type="and">
-              <comment>When having a points limit</comment>
-              <modifiers>
-                <modifier field="a958-5c30-cb38-162f" type="increment" value="1">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <repeats>
-                    <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="0.5" roundUp="false" scope="roster" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-                <modifier field="9c0a-f12c-7567-f265" type="set" value="-1">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-        </categoryLink>
-      </categoryLinks>
-    </forceEntry>
-  </forceEntries>
   <rules>
     <rule name="Repair: &quot;I&apos;ll Be Back&quot;" id="3b4d-8974-ac46-9492" hidden="false" publicationId="8eed-45fd-d4be-9a1b">
       <description>Slain Necrons are not removed as casualties but are placed on their sides in a manner similar to that of a slain Tyranid with the Regeneration Biomorph. The Necron takes no part in the game while in this condition and cannot be further harmed. At the start of each of its controller‘s turns, roll a D6: 
@@ -329,10 +177,10 @@ control of the vehicle</description>
         <infoLink name="Close Combat" id="1f32-7bd2-0607-f5b7" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="Necron Lord" id="8a1f-c19a-1e19-d04f" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Necron Lord" id="8a1f-c19a-1e19-d04f" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink name="Characters" id="4348-ec97-6515-dc7a" hidden="false" primary="true" targetId="2ea9-09f2-fdbd-4ae7"/>
         <categoryLink name="Necrons" id="3e43-fde6-3902-95e3" hidden="false" primary="false" targetId="722d-8a5c-d442-498a"/>
+        <categoryLink name="1Characters" id="296e-8d81-e2d7-e5dd" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="84"/>
@@ -368,22 +216,13 @@ control of the vehicle</description>
         <infoLink name="Armoured Body" id="4e76-fc09-4f49-bbc0" hidden="false" targetId="a851-11cb-78f5-a9b4" type="profile"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="Necron Warrior Squad" id="e075-3b44-b3c3-8834" collective="false" hidden="false" import="true" publicationId="8eed-45fd-d4be-9a1b" type="upgrade">
+    <selectionEntry name="Necron Warrior Squad" id="e075-3b44-b3c3-8834" collective="false" hidden="false" import="true" publicationId="8eed-45fd-d4be-9a1b" type="unit">
       <categoryLinks>
-        <categoryLink name="Squads" id="c7a5-7de4-4b08-3fa0" hidden="false" primary="true" targetId="a674-4bce-893e-4a31"/>
         <categoryLink name="Necrons" id="f7d4-0a05-2b60-f365" hidden="false" primary="false" targetId="722d-8a5c-d442-498a"/>
+        <categoryLink name="2Squads" id="523d-7f17-0b2b-bfd7" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
-      <entryLinks>
-        <entryLink name="Armoured Body" id="48fa-f867-e3b8-d1fe" collective="false" hidden="false" import="true" targetId="19c2-4ca5-46a6-ad63" type="selectionEntry"/>
-        <entryLink name="Gauss-Flayer Gun" id="9623-44f1-36c6-fb27" collective="false" hidden="false" import="true" targetId="4e51-e456-76f2-ef94" type="selectionEntry">
-          <constraints>
-            <constraint id="3689-459e-f4b5-f156" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-            <constraint id="4d7d-71e9-4a81-0deb" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
       <selectionEntries>
-        <selectionEntry name="Necron Warriors" id="a77a-781a-4db8-b21a" collective="false" hidden="false" import="true" type="upgrade">
+        <selectionEntry name="Necron Warriors" id="a77a-781a-4db8-b21a" collective="false" hidden="false" import="true" type="model">
           <constraints>
             <constraint id="e939-a6a2-c04d-0d2f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
             <constraint id="e32e-a24e-3365-de63" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="10"/>
@@ -391,6 +230,15 @@ control of the vehicle</description>
           <costs>
             <cost name="pts" typeId="points" value="44"/>
           </costs>
+          <entryLinks>
+            <entryLink name="Armoured Body" id="c169-8f1b-ad08-f418" collective="false" hidden="false" import="true" targetId="19c2-4ca5-46a6-ad63" type="selectionEntry"/>
+            <entryLink name="Gauss-Flayer Gun" id="9ea3-fb7d-dcf3-a624" collective="false" hidden="false" import="true" targetId="4e51-e456-76f2-ef94" type="selectionEntry">
+              <constraints>
+                <constraint id="6bd7-232f-3577-8049" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="936d-424c-445b-a980" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
           <infoLinks>
             <infoLink name="Necron Warrior" id="35c6-a13f-571c-6d79" hidden="false" targetId="e17a-064b-0b34-f7a8" type="profile"/>
           </infoLinks>
@@ -403,10 +251,10 @@ control of the vehicle</description>
         <infoLink name="Metal Flayer" id="98ce-085a-cdcf-2f83" hidden="false" targetId="01b4-1353-5ffc-a871" type="rule"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="Scarab" id="16d1-76ae-1849-9e8b" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Scarab" id="16d1-76ae-1849-9e8b" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink name="Squads" id="558d-c20c-147d-42d2" hidden="false" primary="true" targetId="a674-4bce-893e-4a31"/>
         <categoryLink name="Necrons" id="510d-5c0e-4974-1acd" hidden="false" primary="false" targetId="722d-8a5c-d442-498a"/>
+        <categoryLink name="2Squads" id="5e7a-0217-f0b1-4a67" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <constraints>
         <constraint id="b55f-8785-8f4b-984e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0"/>
@@ -431,10 +279,10 @@ control of the vehicle</description>
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry name="Necron Destroyer" id="2d33-f5d2-342c-bac6" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Necron Destroyer" id="2d33-f5d2-342c-bac6" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink name="Support" id="83f5-5010-12e6-f8a2" hidden="false" primary="true" targetId="d343-afc5-46fd-9c02"/>
         <categoryLink name="Necrons" id="8def-db50-6a5f-4a49" hidden="false" primary="false" targetId="722d-8a5c-d442-498a"/>
+        <categoryLink name="3Support" id="5422-f8ef-efb1-ab22" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="75"/>

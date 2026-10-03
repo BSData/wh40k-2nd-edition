@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="41" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="42" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <comment>Warhammer 2nd Edition 40k</comment>
   <readme>Added more wargear cards</readme>
   <categoryEntries>
@@ -27,6 +27,7 @@
     <categoryEntry name="2Squads" id="bc01-5ece-b97e-96de" hidden="false"/>
     <categoryEntry name="Legion of the Damned" id="f7f4-2733-743a-8971" hidden="false"/>
     <categoryEntry name="Techmarine" id="a21c-767f-7ecf-94eb" hidden="false"/>
+    <categoryEntry name="Harlequins" id="c1bb-1205-a4da-35c6" hidden="false"/>
   </categoryEntries>
   <costTypes>
     <costType name="pts" id="points" defaultCostLimit="-1" hidden="false"/>
@@ -159,6 +160,7 @@
                     <condition childId="82c6-3e15-54c5-a35f" childName="Codex - Orks" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                     <condition childId="6583-5ff7-59cc-1fc9" childName="Codex - Squats" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                     <condition childId="8d30-f85a-223d-697c" childName="Codex - Legion of the Damned" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="f649-eb44-08cb-0ba3" childName="Codex - Necrons" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -207,7 +209,34 @@
             </modifierGroup>
           </modifierGroups>
         </categoryLink>
+        <categoryLink name="Harlequins" id="8460-917c-e401-7a5e" hidden="false" targetId="c1bb-1205-a4da-35c6">
+          <constraints>
+            <constraint id="be11-93f8-8506-2852" field="points" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="0"/>
+          </constraints>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="3da1-2b23-4a40-323e" childName="Codex - Eldar" field="selections" includeChildSelections="true" scope="primary-catalogue" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="be11-93f8-8506-2852" type="increment" value="1">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <repeats>
+                <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="0.5" roundUp="false" scope="roster" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </categoryLink>
       </categoryLinks>
+      <constraints>
+        <constraint id="522c-c513-203d-f358" field="forces" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
+      </constraints>
       <modifiers>
         <modifier field="warning" type="add" value="Legion of the Damned cannot take allies">
           <conditionGroups>
@@ -220,6 +249,11 @@
           </conditionGroups>
           <conditions>
             <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="7bb5-646e-ec66-1cdd" childName="Codex - Assassins" field="selections" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -259,6 +293,7 @@
                             <condition childId="3da1-2b23-4a40-323e" childName="Codex - Eldar" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                             <condition childId="82c6-3e15-54c5-a35f" childName="Codex - Orks" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                             <condition childId="8d30-f85a-223d-697c" childName="Codex - Legion of the Damned" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="7bb5-646e-ec66-1cdd" childName="Codex - Assassins" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -268,13 +303,10 @@
                       <conditionGroups>
                         <conditionGroup type="or">
                           <conditions>
-                            <condition childId="6583-5ff7-59cc-1fc9" childName="Codex - Squats" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
-                            <condition childId="138e-c671-3180-f615" childName="Codex - Ultramarines" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
-                            <condition childId="12fb-bbf1-3d12-aef9" childName="Codex - Angels of Death (Blood Angels)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
-                            <condition childId="7c0f-1fc4-d5a5-dc73" childName="Codex - Angels of Death (Dark Angels)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
-                            <condition childId="8d0e-9c4e-17af-ed93" childName="Codex - Space Wolves" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
-                            <condition childId="3da1-2b23-4a40-323e" childName="Codex - Eldar" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
-                            <condition childId="82c6-3e15-54c5-a35f" childName="Codex - Orks" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="82fc-8ad4-7b4b-dd4a" childName="Codex - Imperial Guard" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="5bd8-0ec7-a752-694d" childName="Codex - Chaos" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="b567-fa24-d74f-65ee" childName="Codex - Genestealer Cults" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="b7a0-f77c-22d5-5989" childName="Codex - Sisters of Battle" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -311,6 +343,7 @@
                             <condition childId="3da1-2b23-4a40-323e" childName="Codex - Eldar" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                             <condition childId="82c6-3e15-54c5-a35f" childName="Codex - Orks" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                             <condition childId="8d30-f85a-223d-697c" childName="Codex - Legion of the Damned" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="7bb5-646e-ec66-1cdd" childName="Codex - Assassins" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -2003,7 +2036,7 @@ See Datafax or Codex: Ultramarines for full rules on firing weapon and misfire t
       <description>Weapon does not need to be recharged like normal plasma</description>
     </rule>
     <rule name="Force Weapons" id="2f39-2846-5e0b-fed5" hidden="false" page="75" publicationId="2bb8-b6de-8b70-7f41">
-      <description>Add the psyker&apos;s mastery level to your Strength when wounding to roll.
+      <description>Add the psyker&apos;s mastery level to your Strength when wounding to roll and to the saving throw modifier
 Automatically wounds Daemons when they are hit in close combat. Negates the unmodified daemonic saving throw</description>
     </rule>
     <rule name="Frenzy" id="0e86-209c-fe59-fe87" hidden="false" page="67" publicationId="2bb8-b6de-8b70-7f41">
@@ -2544,12 +2577,12 @@ A  target  which  is  not  made of  living flesh, such as a robot or vehicle, ca
           <characteristics>
             <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">20</characteristic>
             <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">72</characteristic>
-            <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328"/>
-            <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c"/>
-            <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6"/>
+            <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+            <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+            <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">-</characteristic>
             <characteristic name="Damage" typeId="8978-f9c3-8957-1481">As Missile</characteristic>
-            <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d"/>
-            <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67"/>
+            <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-</characteristic>
+            <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">-</characteristic>
             <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Move or Fire</characteristic>
           </characteristics>
         </profile>

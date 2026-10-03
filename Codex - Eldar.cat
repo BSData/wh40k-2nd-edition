@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Eldar" id="3da1-2b23-4a40-323e" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="16" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Eldar" id="3da1-2b23-4a40-323e" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="17" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="Characters" id="f27a-c384-b8b9-6c8d" hidden="false"/>
     <categoryEntry name="Squads" id="2b85-5dce-be87-156f" hidden="false"/>
@@ -1532,13 +1532,13 @@ See datafax for full damage table</description>
         <infoLink name="Dark Reaper Range Finder" id="03ad-0a1e-c3e9-2383" hidden="false" targetId="33a2-8461-e81d-36b4" type="profile"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="Avatar of Khaine" id="6b71-72c9-9b6b-c5b4" collective="false" hidden="false" import="true" publicationId="71ba-82e2-d83c-d33d" type="upgrade">
+    <selectionEntry name="Avatar of Khaine" id="6b71-72c9-9b6b-c5b4" collective="false" hidden="false" import="true" publicationId="71ba-82e2-d83c-d33d" type="unit">
       <categoryLinks>
-        <categoryLink name="Characters" id="c89d-9af1-4008-828b" hidden="false" primary="true" targetId="f27a-c384-b8b9-6c8d"/>
         <categoryLink name="Eldar" id="7d1b-1784-5f12-19ca" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
+        <categoryLink name="1Characters" id="2e72-0847-b630-89f4" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
-        <constraint id="eae1-5fef-9154-4205" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+        <constraint id="eae1-5fef-9154-4205" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="points" value="300"/>
@@ -1546,7 +1546,8 @@ See datafax for full damage table</description>
       <entryLinks>
         <entryLink name="Army Commander" id="ae6f-c157-af65-318e" collective="false" hidden="false" import="true" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
           <constraints>
-            <constraint id="3002-e9c1-dda2-af38" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="d2f8-6424-c66e-6c73" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="8061-f2ed-1faa-e01e" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
           <infoLinks>
             <infoLink name="Army Commander Strategy Rating" id="a512-57e3-909b-60ad" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
@@ -1569,6 +1570,31 @@ See datafax for full damage table</description>
         <infoLink name="Iron Body" id="838b-f702-5f0d-4ab4" hidden="false" targetId="4069-3176-ac27-8a68" type="profile"/>
         <infoLink name="Terror" id="b871-33d5-9e18-3d04" hidden="false" targetId="05e0-cd40-2d9e-a9f9" type="rule"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <comment>Cannot be an ally</comment>
+          <conditions>
+            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <rules>
+        <rule name="Psychology and Leadership" id="c32b-a47c-d11f-3602" hidden="false" page="22" publicationId="71ba-82e2-d83c-d33d">
+          <description>Cannot be affected by psychology and will pass any leadership test required to take. Can never be broken and never needs to take a break test. </description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry name="Exarchs" id="0e43-fd2c-3016-2375" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>
@@ -1599,7 +1625,7 @@ See datafax for full damage table</description>
         </entryLink>
         <entryLink name="Wargear Cards" id="deba-f631-1861-ee56" collective="false" hidden="false" import="true" targetId="5cb8-a11f-ec3f-a011" type="selectionEntryGroup">
           <constraints>
-            <constraint id="fde9-f79d-8d58-9a81" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
+            <constraint id="fde9-f79d-8d58-9a81" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -1725,7 +1751,7 @@ See datafax for full damage table</description>
         </entryLink>
         <entryLink name="Wargear Cards" id="5bd9-2c48-ea28-ee46" collective="false" hidden="false" import="true" targetId="5cb8-a11f-ec3f-a011" type="selectionEntryGroup">
           <constraints>
-            <constraint id="9d6c-58fd-6fec-cdd9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="4"/>
+            <constraint id="9d6c-58fd-6fec-cdd9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
           </constraints>
         </entryLink>
         <entryLink name="Assault Weapons" id="39ac-a977-63eb-3245" collective="false" hidden="false" import="true" targetId="b18d-cd92-629f-c211" type="selectionEntryGroup"/>
@@ -1848,7 +1874,7 @@ See datafax for full damage table</description>
         </entryLink>
         <entryLink name="Wargear Cards" id="b95f-9d74-e29c-e043" collective="false" hidden="false" import="true" targetId="5cb8-a11f-ec3f-a011" type="selectionEntryGroup">
           <constraints>
-            <constraint id="6634-9672-a343-0681" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
+            <constraint id="6634-9672-a343-0681" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
         </entryLink>
         <entryLink name="Special Weapons" id="b8e8-367c-1a35-d02c" collective="false" hidden="false" import="true" targetId="551d-f5e3-60d1-85af" type="selectionEntryGroup"/>
@@ -1940,7 +1966,7 @@ See datafax for full damage table</description>
         </entryLink>
         <entryLink name="Wargear Cards" id="4ba8-1de4-26be-5a2d" collective="false" hidden="false" import="true" targetId="5cb8-a11f-ec3f-a011" type="selectionEntryGroup">
           <constraints>
-            <constraint id="299b-fc76-865e-9049" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
+            <constraint id="299b-fc76-865e-9049" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
           </constraints>
         </entryLink>
         <entryLink name="Armour" id="68c3-17e3-b6ab-faf0" collective="false" hidden="false" import="true" targetId="8dca-6bf4-a173-e4bd" type="selectionEntryGroup"/>
@@ -2089,10 +2115,10 @@ See datafax for full damage table</description>
         <entryLink name="Grenades" id="afb7-92e0-c34a-59c0" collective="false" hidden="false" import="true" targetId="cd80-d89e-ac11-6a9d" type="selectionEntryGroup"/>
         <entryLink name="Wargear Cards" id="dc21-1a86-3666-9fbb" collective="false" hidden="false" import="true" targetId="5cb8-a11f-ec3f-a011" type="selectionEntryGroup">
           <constraints>
-            <constraint id="a243-73cb-4c7f-391c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
+            <constraint id="a243-73cb-4c7f-391c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
           </constraints>
           <modifiers>
-            <modifier field="a243-73cb-4c7f-391c" type="set" value="4">
+            <modifier field="a243-73cb-4c7f-391c" type="set" value="3">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
@@ -2101,7 +2127,7 @@ See datafax for full damage table</description>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier field="a243-73cb-4c7f-391c" type="set" value="5">
+            <modifier field="a243-73cb-4c7f-391c" type="set" value="4">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
@@ -2784,6 +2810,7 @@ When the vehicle is penetrated on a section with the web roll on the Crystalline
       </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Dire Avenger Squad" id="3b5f-7de4-5c95-850a" collective="false" hidden="false" import="true" publicationId="71ba-82e2-d83c-d33d" type="upgrade">
+      <comment>LEFT OFF HERE</comment>
       <categoryLinks>
         <categoryLink name="Squads" id="663e-5854-f6a3-aaa5" hidden="false" primary="true" targetId="2b85-5dce-be87-156f"/>
         <categoryLink name="Eldar" id="7963-610f-3cb4-393f" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
@@ -2859,16 +2886,28 @@ When the vehicle is penetrated on a section with the web roll on the Crystalline
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry name="Dark Reaper Squad" id="d53b-39ea-4d77-a16b" collective="false" hidden="false" import="true" publicationId="71ba-82e2-d83c-d33d" type="upgrade">
+    <selectionEntry name="Dark Reaper Squad" id="d53b-39ea-4d77-a16b" collective="false" hidden="false" import="true" publicationId="71ba-82e2-d83c-d33d" type="unit">
       <categoryLinks>
-        <categoryLink name="Squads" id="23b1-e138-4972-59e5" hidden="false" primary="true" targetId="2b85-5dce-be87-156f"/>
         <categoryLink name="Eldar" id="ba5d-037d-3bc3-f182" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
+        <categoryLink name="2Squads" id="aea5-7659-1025-b832" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <selectionEntries>
-        <selectionEntry name="Dark Reaper" id="baec-4295-95dc-c405" collective="false" hidden="false" import="true" type="upgrade">
+        <selectionEntry name="Dark Reaper" id="baec-4295-95dc-c405" collective="false" hidden="false" import="true" subType="unit-group" type="unit">
           <constraints>
             <constraint id="3360-e9dd-5279-db1d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
             <constraint id="e010-2053-1940-9925" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="7"/>
@@ -2889,10 +2928,15 @@ When the vehicle is penetrated on a section with the web roll on the Crystalline
                 <constraint id="5e03-c4d8-1736-9477" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
             </entryLink>
+            <entryLink name="Dark Reaper Aspect Armour" id="c0d8-ac64-29eb-ace5" hidden="false" import="true" targetId="1c6c-7bb2-c656-66c5" type="selectionEntry">
+              <constraints>
+                <constraint id="6863-ae50-ff6a-abf2" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="ed6c-adb5-bb6f-f57c" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
           <infoLinks>
             <infoLink name="Dark Reaper" id="9720-d604-f543-937b" hidden="false" targetId="47fa-690e-8eaa-3883" type="profile"/>
-            <infoLink name="Dark Reaper Aspect Armour" id="3f8a-829d-48e6-13f4" hidden="false" targetId="f1e6-75a1-4f86-a56d" type="profile"/>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
@@ -3631,10 +3675,10 @@ When the vehicle is penetrated on a section with the web roll on the Crystalline
             <entryLink name="Grenades" id="a8f1-6ba7-f618-ca4d" collective="false" hidden="false" import="true" targetId="cd80-d89e-ac11-6a9d" type="selectionEntryGroup"/>
             <entryLink name="Wargear Cards" id="78e2-3892-bfc8-7163" collective="false" hidden="false" import="true" targetId="5cb8-a11f-ec3f-a011" type="selectionEntryGroup">
               <constraints>
-                <constraint id="4cf5-3cfa-deb7-de26" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
+                <constraint id="4cf5-3cfa-deb7-de26" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
               </constraints>
               <modifiers>
-                <modifier field="4cf5-3cfa-deb7-de26" type="set" value="4">
+                <modifier field="4cf5-3cfa-deb7-de26" type="set" value="3">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
@@ -3643,7 +3687,7 @@ When the vehicle is penetrated on a section with the web roll on the Crystalline
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier field="4cf5-3cfa-deb7-de26" type="set" value="5">
+                <modifier field="4cf5-3cfa-deb7-de26" type="set" value="4">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
@@ -4225,13 +4269,13 @@ When the vehicle is penetrated on a section with the web roll on the Crystalline
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Death Jester" id="cd52-0408-730a-b4e5" collective="false" hidden="false" import="true" publicationId="71ba-82e2-d83c-d33d" type="upgrade">
+    <selectionEntry name="Death Jester" id="cd52-0408-730a-b4e5" collective="false" hidden="false" import="true" publicationId="71ba-82e2-d83c-d33d" type="unit">
       <categoryLinks>
-        <categoryLink name="Harlequins" id="4a8e-1bd4-d34c-64bc" hidden="false" primary="true" targetId="cebc-d3dc-2ed1-a34c"/>
         <categoryLink name="Eldar" id="7cce-49ce-125a-3840" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
+        <categoryLink name="Harlequins" id="cdf9-e79b-8551-eeb0" hidden="false" primary="true" targetId="c1bb-1205-a4da-35c6"/>
       </categoryLinks>
       <constraints>
-        <constraint id="37bb-e832-f0af-4690" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0"/>
+        <constraint id="37bb-e832-f0af-4690" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="0"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="points" value="125"/>
@@ -4243,12 +4287,12 @@ When the vehicle is penetrated on a section with the web roll on the Crystalline
             <constraint id="4b42-22c7-d813-5812" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
         </entryLink>
-        <entryLink name="Armour" id="a6fc-80cf-0acd-a07d" collective="false" hidden="false" import="true" targetId="8dca-6bf4-a173-e4bd" type="selectionEntryGroup"/>
+        <entryLink name="Armour" id="a6fc-80cf-0acd-a07d" collective="false" hidden="false" import="true" sortIndex="1" targetId="8dca-6bf4-a173-e4bd" type="selectionEntryGroup"/>
         <entryLink name="Assault Weapons" id="87cb-bc23-73af-4b79" collective="false" hidden="false" import="true" targetId="b18d-cd92-629f-c211" type="selectionEntryGroup"/>
         <entryLink name="Grenades" id="a11f-aec3-a023-dcbd" collective="false" hidden="false" import="true" targetId="cd80-d89e-ac11-6a9d" type="selectionEntryGroup"/>
         <entryLink name="Wargear Cards" id="4fad-0cdd-43b6-80b4" collective="false" hidden="false" import="true" targetId="5cb8-a11f-ec3f-a011" type="selectionEntryGroup">
           <constraints>
-            <constraint id="b192-a76d-b8d5-637b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="4"/>
+            <constraint id="b192-a76d-b8d5-637b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -4283,7 +4327,7 @@ When the vehicle is penetrated on a section with the web roll on the Crystalline
         <entryLink name="Grenades" id="a29b-1687-cd40-e8f7" collective="false" hidden="false" import="true" targetId="cd80-d89e-ac11-6a9d" type="selectionEntryGroup"/>
         <entryLink name="Wargear Cards" id="87d3-a09c-caef-702d" collective="false" hidden="false" import="true" targetId="5cb8-a11f-ec3f-a011" type="selectionEntryGroup">
           <constraints>
-            <constraint id="fad1-4c07-ebd4-5569" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="4"/>
+            <constraint id="fad1-4c07-ebd4-5569" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
           </constraints>
         </entryLink>
         <entryLink name="Special Weapons" id="3334-ce39-7b6b-60a4" collective="false" hidden="false" import="true" targetId="551d-f5e3-60d1-85af" type="selectionEntryGroup"/>
@@ -4325,7 +4369,7 @@ Psychology: The Solitaire is immune to psychology. He is not affected by terror,
         <entryLink name="Grenades" id="6e9a-b41d-9fd5-7125" collective="false" hidden="false" import="true" targetId="cd80-d89e-ac11-6a9d" type="selectionEntryGroup"/>
         <entryLink name="Wargear Cards" id="dd5f-6d53-4e13-7d2f" collective="false" hidden="false" import="true" targetId="5cb8-a11f-ec3f-a011" type="selectionEntryGroup">
           <constraints>
-            <constraint id="f9e4-5b31-268e-1492" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="4"/>
+            <constraint id="f9e4-5b31-268e-1492" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
           </constraints>
         </entryLink>
         <entryLink name="Army Commander" id="5d8c-1035-5a79-0536" collective="false" hidden="false" import="true" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
@@ -4376,7 +4420,7 @@ Psychology: The Solitaire is immune to psychology. He is not affected by terror,
         <entryLink name="Grenades" id="b8ba-9eb9-5e9c-e3d8" collective="false" hidden="false" import="true" targetId="cd80-d89e-ac11-6a9d" type="selectionEntryGroup"/>
         <entryLink name="Wargear Cards" id="5568-c319-ab2f-0f47" collective="false" hidden="false" import="true" targetId="5cb8-a11f-ec3f-a011" type="selectionEntryGroup">
           <constraints>
-            <constraint id="4c70-a814-0326-3bbf" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="4"/>
+            <constraint id="4c70-a814-0326-3bbf" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
           </constraints>
         </entryLink>
         <entryLink name="Special Weapons" id="661d-c53b-d546-b0e2" collective="false" hidden="false" import="true" targetId="551d-f5e3-60d1-85af" type="selectionEntryGroup"/>
@@ -4460,10 +4504,10 @@ Psychology: The Solitaire is immune to psychology. He is not affected by terror,
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry name="Harlequin Squad" id="e5b5-36e8-8494-8733" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Harlequin Squad" id="e5b5-36e8-8494-8733" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink name="Harlequins" id="a888-af50-ca62-69c2" hidden="false" primary="true" targetId="cebc-d3dc-2ed1-a34c"/>
         <categoryLink name="Eldar" id="550c-270a-c02c-e6c0" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
+        <categoryLink name="Harlequins" id="b21d-7098-a61e-8d0a" hidden="false" primary="true" targetId="c1bb-1205-a4da-35c6"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
@@ -5067,13 +5111,13 @@ When the vehicle is penetrated on a section with the web roll on the Crystalline
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Asurmen" id="b1e8-432c-c703-8aca" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Asurmen" id="b1e8-432c-c703-8aca" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink name="Characters" id="46c2-bee6-1ef3-93a5" hidden="false" primary="true" targetId="f27a-c384-b8b9-6c8d"/>
         <categoryLink name="Eldar" id="57d5-0b75-c95b-e69d" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
+        <categoryLink name="1Characters" id="3db2-20fb-202e-3b2c" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
-        <constraint id="7fb8-f0f4-ecf5-c7ef" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+        <constraint id="7fb8-f0f4-ecf5-c7ef" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="points" value="155"/>
@@ -5081,9 +5125,15 @@ When the vehicle is penetrated on a section with the web roll on the Crystalline
       <entryLinks>
         <entryLink name="Shuriken Pistol" id="4fee-aa1e-36f4-1bb6" collective="false" hidden="false" import="true" targetId="4d5e-38d7-72a7-c462" type="selectionEntry">
           <constraints>
-            <constraint id="4694-6f13-ec11-6398" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="2"/>
-            <constraint id="db3d-5f67-0005-1bd0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
+            <constraint id="4694-6f13-ec11-6398" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="db3d-5f67-0005-1bd0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
+          <infoLinks>
+            <infoLink name="Shuriken Pistol" id="42bf-3aad-7721-d06c" hidden="false" targetId="121e-186d-7d24-89a5" type="profile"/>
+          </infoLinks>
+          <modifiers>
+            <modifier field="name" type="set" value="2 Shuriken Pistols"/>
+          </modifiers>
         </entryLink>
         <entryLink name="Shuriken Catapult" id="25bf-013e-d3ab-ba89" collective="false" hidden="false" import="true" targetId="76e3-9fb7-a0b0-91cd" type="selectionEntry">
           <constraints>
@@ -5093,74 +5143,47 @@ When the vehicle is penetrated on a section with the web roll on the Crystalline
         </entryLink>
         <entryLink name="Wargear Cards" id="766b-adea-4fd2-1ee7" collective="false" hidden="false" import="true" targetId="5cb8-a11f-ec3f-a011" type="selectionEntryGroup">
           <constraints>
-            <constraint id="89c5-90da-2c24-0783" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
+            <constraint id="89c5-90da-2c24-0783" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Exarch Armour" id="7ce6-1cc5-edc1-8772" hidden="false" import="true" targetId="458c-a084-d9f1-2881" type="selectionEntry">
+          <constraints>
+            <constraint id="4da9-efc1-aca4-b6f3" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="2feb-1c0b-7a71-50d0" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
           </constraints>
         </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Phoenix Lord" id="5a67-41aa-3fdf-ebe6" hidden="false" targetId="7d92-d8a7-fe10-346f" type="rule"/>
-        <infoLink name="Asurman" id="566a-87c0-10f5-df09" hidden="false" targetId="e9fe-a2bf-2bcb-9773" type="profile"/>
+        <infoLink name="Asurman" id="566a-87c0-10f5-df09" hidden="false" targetId="e9fe-a2bf-2bcb-9773" type="profile">
+          <modifiers>
+            <modifier field="e39a-b0ee-e6d1-e661" type="increment" value="1">
+              <conditions>
+                <condition childId="e70b-a947-4030-6955" childName="Fighting Fury " field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
-      <profiles>
-        <profile name="Exarch Armour" id="68c3-a9e5-bb66-e0aa" hidden="false" publicationId="71ba-82e2-d83c-d33d" typeId="4657-2671-1065-d493" typeName="Armour">
-          <characteristics>
-            <characteristic name="Saving Throw" typeId="b439-323a-9cfe-6340">3+</characteristic>
-            <characteristic name="Special" typeId="b7f1-73cd-d19d-26a6"/>
-          </characteristics>
-        </profile>
-      </profiles>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <selectionEntryGroups>
         <selectionEntryGroup name="Exarch Powers" id="929b-2fbc-4e50-ed89" collective="false" hidden="false" import="true">
-          <selectionEntries>
-            <selectionEntry name="Battle Fortune" id="1a99-3482-002f-8dba" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="d3c3-bc35-13cc-3917" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                <constraint id="217d-93ca-7af3-b6de" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <profiles>
-                <profile name="Battle Fortune" id="31df-a6da-c7f9-a51a" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
-                  <characteristics>
-                    <characteristic name="Special" typeId="f917-8cd8-7592-47dd">May re-roll any failed saving throw for Exarch armour. Does not apply for any other save types</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry name="Fighting Fury " id="d1b9-ecae-c95a-292d" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="d737-151b-a6ea-9aa5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                <constraint id="d405-4ff6-456e-965c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <profiles>
-                <profile name="Fighting Fury " id="bbb3-92ee-3001-15dc" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
-                  <characteristics>
-                    <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">+1 to the Exarch&apos;s Attack characteristic</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry name="Fast Shot" id="1438-b7e0-3872-430b" collective="false" hidden="false" import="true" page="50" publicationId="71ba-82e2-d83c-d33d" type="upgrade">
-              <constraints>
-                <constraint id="350b-2c12-fd75-af4d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                <constraint id="5232-42f8-45e5-3def" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <profiles>
-                <profile name="Fast Shot" id="95fe-2480-2945-7b02" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
-                  <characteristics>
-                    <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">May shoot twice in the shooting phase. May fire at the same target or two separate targets</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
+          <entryLinks>
+            <entryLink name="Battle Fortune" id="cde2-4be1-51f7-777b" hidden="false" import="true" targetId="1c23-2cd8-2d31-9764" type="selectionEntry"/>
+            <entryLink name="Fast Shot" id="13a0-21b6-30a8-a3e7" hidden="false" import="true" targetId="60db-92af-d4c0-5414" type="selectionEntry"/>
+            <entryLink name="Fighting Fury " id="f1e2-aaef-aea6-19a6" hidden="false" import="true" targetId="e70b-a947-4030-6955" type="selectionEntry"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -5184,7 +5207,7 @@ When the vehicle is penetrated on a section with the web roll on the Crystalline
         </entryLink>
         <entryLink name="Wargear Cards" id="dc4b-a4b5-6994-f7b3" collective="false" hidden="false" import="true" targetId="5cb8-a11f-ec3f-a011" type="selectionEntryGroup">
           <constraints>
-            <constraint id="a97e-9916-345c-64c3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
+            <constraint id="a97e-9916-345c-64c3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -5292,7 +5315,7 @@ When doing so the same to hit for long range shots apply and the +1 for Crack Sh
         </entryLink>
         <entryLink name="Wargear Cards" id="0812-da7c-2766-c273" collective="false" hidden="false" import="true" targetId="5cb8-a11f-ec3f-a011" type="selectionEntryGroup">
           <constraints>
-            <constraint id="6ae0-f7df-3436-251c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
+            <constraint id="6ae0-f7df-3436-251c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -5377,7 +5400,7 @@ When doing so the same to hit for long range shots apply and the +1 for Crack Sh
       <entryLinks>
         <entryLink name="Wargear Cards" id="1396-5533-2182-3d7b" collective="false" hidden="false" import="true" targetId="5cb8-a11f-ec3f-a011" type="selectionEntryGroup">
           <constraints>
-            <constraint id="2c71-c3cd-c89d-732e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
+            <constraint id="2c71-c3cd-c89d-732e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -5451,11 +5474,14 @@ When doing so the same to hit for long range shots apply and the +1 for Crack Sh
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Baharroth - The Cry of the Wind" id="adc1-1d63-0300-329f" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Baharroth - The Cry of the Wind" id="adc1-1d63-0300-329f" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink name="Characters" id="d7d9-57eb-3695-8158" hidden="false" primary="true" targetId="f27a-c384-b8b9-6c8d"/>
         <categoryLink name="Eldar" id="ee89-e3de-3a87-ab55" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
+        <categoryLink name="1Characters" id="90c4-ee99-340a-fd76" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
+      <constraints>
+        <constraint id="15f6-3454-a548-9f0a" field="selections" includeChildSelections="false" scope="roster" shared="true" type="max" value="1"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="points" value="161"/>
       </costs>
@@ -5478,7 +5504,7 @@ When doing so the same to hit for long range shots apply and the +1 for Crack Sh
             <constraint id="106d-b3e2-a9d7-b813" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
         </entryLink>
-        <entryLink name="Swooping Hawk Grenade Pack" id="07f4-a4bf-0f9d-b54e" collective="false" hidden="false" import="true" targetId="983c-3048-57db-38d2" type="selectionEntry">
+        <entryLink name="Swooping Hawk Grenade Pack" id="07f4-a4bf-0f9d-b54e" collective="false" hidden="false" import="true" sortIndex="1" targetId="983c-3048-57db-38d2" type="selectionEntry">
           <constraints>
             <constraint id="70dc-92eb-dfdf-5549" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
             <constraint id="3b5a-dafc-10da-f632" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
@@ -5486,7 +5512,13 @@ When doing so the same to hit for long range shots apply and the +1 for Crack Sh
         </entryLink>
         <entryLink name="Wargear Cards" id="b406-73b9-521d-d788" collective="false" hidden="false" import="true" targetId="5cb8-a11f-ec3f-a011" type="selectionEntryGroup">
           <constraints>
-            <constraint id="d4c3-11a6-9787-c886" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
+            <constraint id="d4c3-11a6-9787-c886" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Exarch Armour" id="f891-477a-5c84-a09f" hidden="false" import="true" targetId="458c-a084-d9f1-2881" type="selectionEntry">
+          <constraints>
+            <constraint id="a0e1-659b-1fb6-7616" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="1eff-21fa-eaad-1ccc" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -5494,66 +5526,25 @@ When doing so the same to hit for long range shots apply and the +1 for Crack Sh
         <infoLink name="Baharroth" id="ff8a-8d9f-551e-4376" hidden="false" targetId="1965-b904-2ea6-af43" type="profile"/>
         <infoLink name="Phoenix Lord" id="04c2-1f86-8441-73bd" hidden="false" targetId="7d92-d8a7-fe10-346f" type="rule"/>
       </infoLinks>
-      <profiles>
-        <profile name="Exarch Armour" id="7222-da92-31e8-e991" hidden="false" publicationId="71ba-82e2-d83c-d33d" typeId="4657-2671-1065-d493" typeName="Armour">
-          <characteristics>
-            <characteristic name="Saving Throw" typeId="b439-323a-9cfe-6340">3+</characteristic>
-            <characteristic name="Special" typeId="b7f1-73cd-d19d-26a6"/>
-          </characteristics>
-        </profile>
-      </profiles>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <selectionEntryGroups>
         <selectionEntryGroup name="Exarch Powers" id="d3aa-eb99-4d47-4277" collective="false" hidden="false" import="true">
-          <selectionEntries>
-            <selectionEntry name="Battle Fortune" id="b636-452c-456d-b8ef" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="beee-6dea-33f9-dfe6" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                <constraint id="1946-e622-81ff-fbfa" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <profiles>
-                <profile name="Battle Fortune" id="d6db-59c0-9cdb-ae9e" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
-                  <characteristics>
-                    <characteristic name="Special" typeId="f917-8cd8-7592-47dd">May re-roll any failed saving throw for Exarch armour. Does not apply for any other save types</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry name="Stealth" id="0b4b-e165-9063-04b3" collective="false" hidden="false" import="true" page="50" publicationId="71ba-82e2-d83c-d33d" type="upgrade">
-              <constraints>
-                <constraint id="0c96-c47d-91d0-a957" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                <constraint id="d991-f595-4bda-0e42" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <profiles>
-                <profile name="Stealth" id="fef3-ddf8-4cec-aa21" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
-                  <characteristics>
-                    <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">Any enemy shooting at short range suffer -1 to hit, and -2 at long range</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry name="Disarm" id="0143-6be9-1eb4-1f4b" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="15e0-2556-e005-63ca" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                <constraint id="0267-e1c4-db1b-e1e7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <profiles>
-                <profile name="Disarm" id="bc78-dad9-76f9-a3c8" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
-                  <characteristics>
-                    <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">If an Exarch wins close combat, then he may disarm his enemy rather than strike any hits that turn. The Exarch cauases no hits but the enemy automatically loses one weapon of the Exarch&apos;s choice. That weapon counts as being destroyed.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
+          <entryLinks>
+            <entryLink name="Battle Fortune" id="7e58-0f55-d85f-85e9" hidden="false" import="true" targetId="1c23-2cd8-2d31-9764" type="selectionEntry"/>
+            <entryLink name="Disarm" id="2821-990a-2baa-7bba" hidden="false" import="true" targetId="dcef-7bf0-ea20-234d" type="selectionEntry"/>
+            <entryLink name="Stealth" id="01d8-89b8-b7f2-7d37" hidden="false" import="true" targetId="33cb-bfe7-020f-8551" type="selectionEntry"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -5571,7 +5562,7 @@ When doing so the same to hit for long range shots apply and the +1 for Crack Sh
       <entryLinks>
         <entryLink name="Wargear Cards" id="eced-0c51-b98e-7e2e" collective="false" hidden="false" import="true" targetId="5cb8-a11f-ec3f-a011" type="selectionEntryGroup">
           <constraints>
-            <constraint id="80a9-eed2-39e6-8324" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="4"/>
+            <constraint id="80a9-eed2-39e6-8324" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -5664,7 +5655,7 @@ Can leap out of close combat at the end of any close combat phase without suffer
         </entryLink>
         <entryLink name="Wargear Cards" id="5b51-6c09-7019-4c95" collective="false" hidden="false" import="true" targetId="5cb8-a11f-ec3f-a011" type="selectionEntryGroup">
           <constraints>
-            <constraint id="18c2-f8f3-21a4-0ef5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="4"/>
+            <constraint id="18c2-f8f3-21a4-0ef5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
           </constraints>
         </entryLink>
         <entryLink name="Rune Armour" id="78c4-2f54-b8b2-2e26" collective="false" hidden="false" import="true" targetId="0e0a-6fc8-f1d5-455b" type="selectionEntry">
@@ -6017,6 +6008,212 @@ Can leap out of close combat at the end of any close combat phase without suffer
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
+    <selectionEntry name="Exarch Armour" id="458c-a084-d9f1-2881" hidden="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink name="Exarch Armour" id="f9f6-28ed-810f-3e56" hidden="false" targetId="6997-b4fb-a131-694c" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="War Shout" id="150c-1204-b051-f4c7" collective="false" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="0891-854b-dbc6-6078" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Fear" id="dc9e-db17-48a0-8329" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
+      </infoLinks>
+      <profiles>
+        <profile name="War Shout" id="93e9-f9d1-8f42-b1da" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
+          <characteristics>
+            <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">Causes Fear on a turn when the Exarch is charging</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Battle Fortune" id="1c23-2cd8-2d31-9764" collective="false" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="28f5-3ec6-ce3d-a183" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <profiles>
+        <profile name="Battle Fortune" id="08a1-c3a5-595a-4c77" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
+          <characteristics>
+            <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">May re-roll any failed saving throw for Exarch armour. Does not apply for any other save types</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Bounding Leap" id="9436-d18b-1d7d-81f4" collective="false" hidden="false" import="true" publicationId="71ba-82e2-d83c-d33d" type="upgrade">
+      <constraints>
+        <constraint id="62d1-3656-de78-8bc8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <profiles>
+        <profile name="Bounding Leap" id="2423-9176-8c08-f90b" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
+          <characteristics>
+            <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">May leap 4&quot; in addition to regular movement during the move phase. Can be used when charging as well. Can only leap once during the turn.
+Can use the leap to jump over any model-high obstacle without penalty, including enemy models.
+Can leap out of close combat at the end of any close combat phase without suffering any penalty</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Crack Shot" id="9a4a-fed0-1ccd-be6b" collective="false" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="6b58-a297-c0da-3499" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <profiles>
+        <profile name="Crack Shot" id="4b88-a621-82ed-4d64" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
+          <characteristics>
+            <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">+1 to hit when shooting
+May fire at Extreme range, adding half the weapons range onto the usual maximum range. 
+When doing so the same to hit for long range shots apply and the +1 for Crack Shot does not get added</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Crushing Blow" id="b883-01af-d964-e596" collective="false" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="67f3-7265-3022-cce3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <profiles>
+        <profile name="Crushing Blow" id="ed6e-a284-e6ee-1efc" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
+          <characteristics>
+            <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">+1 Strength bonus in close combat. This applies to the Exarch&apos;s own Strength and also any Strength value of the close combat weapon they are using</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Disarm" id="dcef-7bf0-ea20-234d" collective="false" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="3a77-2a4c-5d8b-b592" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <profiles>
+        <profile name="Disarm" id="e367-d0c6-bd5a-57b5" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
+          <characteristics>
+            <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">If an Exarch wins close combat, then he may disarm his enemy rather than strike any hits that turn. The Exarch cauases no hits but the enemy automatically loses one weapon of the Exarch&apos;s choice. That weapon counts as being destroyed.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Distract" id="3377-1cfc-ee1c-891e" collective="false" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="fd70-7eea-59c6-05c5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <profiles>
+        <profile name="Distract" id="c2c6-ef53-6966-f040" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
+          <characteristics>
+            <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">All the Exarch&apos;s foes count double the value of any fumbles. When they roll a 1 on the attack dice this adds +2 to the Exarch&apos;s combat score rather than the usual +1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Fast Shot" id="60db-92af-d4c0-5414" collective="false" hidden="false" import="true" page="50" publicationId="71ba-82e2-d83c-d33d" type="upgrade">
+      <constraints>
+        <constraint id="52ff-1608-8ef0-f41a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <profiles>
+        <profile name="Fast Shot" id="45d9-99a9-f2ec-6a1e" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
+          <characteristics>
+            <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">May shoot twice in the shooting phase. May fire at the same target or two separate targets</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Fighting Fury " id="e70b-a947-4030-6955" collective="false" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="db08-afba-4de0-2c80" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <profiles>
+        <profile name="Fighting Fury " id="32d3-fc86-0410-a05f" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
+          <characteristics>
+            <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">+1 to the Exarch&apos;s Attack characteristic</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Mighty Strike" id="4f61-9d78-4b0d-0844" collective="false" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="ebaf-c6c8-4b86-a13d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <profiles>
+        <profile name="Mighty Strike" id="d67f-f2df-8dd2-7036" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
+          <characteristics>
+            <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">If the Exarch inflicts 2 or more hits then he may choose to exchange all hits for a single hit with a Strength bonus. The bonus equals +1 for each extra hit scored, so you could excahnge 2 S4 hits for a single S5 hit, or 3 S4 hits for a single S6 hit, and so on</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Resolve" id="00f3-996f-7275-4257" collective="false" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="a6ab-edd8-2339-dfdd" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="10"/>
+      </costs>
+      <profiles>
+        <profile name="Resolve" id="bb5e-e357-4eb4-8b7e" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
+          <characteristics>
+            <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">Immune to all psychology and need never take a Break test</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Stealth" id="33cb-bfe7-020f-8551" collective="false" hidden="false" import="true" page="50" publicationId="71ba-82e2-d83c-d33d" type="upgrade">
+      <constraints>
+        <constraint id="6e8a-f67f-5198-b7e6" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <profiles>
+        <profile name="Stealth" id="19c2-46f0-9b29-97a4" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
+          <characteristics>
+            <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">Any enemy shooting at short range suffer -1 to hit, and -2 at long range</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Sustain Attack" id="522c-3447-5da9-fb9b" collective="false" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="90ca-d0d6-2b9e-a7ea" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <profiles>
+        <profile name="Sustain Attack" id="0060-b8d6-60ea-d207" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
+          <characteristics>
+            <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">Increase the range of follow-up attacks to 4&quot;</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Tough" id="42b2-ecb0-d8fc-d470" collective="false" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="5289-76bd-608e-41d2" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <profiles>
+        <profile name="Tough" id="e431-15e7-4056-1b50" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
+          <characteristics>
+            <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">+1 to the Exarch&apos;s Toughness</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Turn Aside Blow" id="0312-5922-935c-b3de" collective="false" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="76d5-b115-6d2a-5f3c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Parry" id="05e4-979d-6234-9444" hidden="false" targetId="049d-3ed2-a1bf-86b0" type="rule"/>
+      </infoLinks>
+      <profiles>
+        <profile name="Turn Aside Blow" id="4baa-0d7a-67ed-2be5" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
+          <characteristics>
+            <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">Can parry melee attacks even if not using a weapon with parry. May force the enemy to re-roll up to two attack dice when parrying rather than just one.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Dark Reaper Aspect Armour" id="1c6c-7bb2-c656-66c5" hidden="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink name="Dark Reaper Aspect Armour" id="7424-d011-f048-9cdc" hidden="false" targetId="f1e6-75a1-4f86-a56d" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Assault Weapons" id="b18d-cd92-629f-c211" collective="false" hidden="false" import="true" page="61" publicationId="4590-6ba9-5482-a1fa">
@@ -6278,269 +6475,91 @@ Can leap out of close combat at the end of any close combat phase without suffer
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup name="Exarch Warrior Powers" id="73d1-83d1-d400-8237" collective="false" hidden="false" import="true">
-      <selectionEntries>
-        <selectionEntry name="Crack Shot" id="6164-1cca-d065-789b" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="9c1a-65ca-36d5-4194" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
+      <entryLinks>
+        <entryLink name="Crack Shot" id="c71e-2385-4e05-7f04" hidden="false" import="true" targetId="9a4a-fed0-1ccd-be6b" type="selectionEntry">
           <costs>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
-          <profiles>
-            <profile name="Crack Shot" id="8385-5771-6af7-35cf" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
-              <characteristics>
-                <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">+1 to hit when shooting
-May fire at Extreme range, adding half the weapons range onto the usual maximum range. 
-When doing so the same to hit for long range shots apply and the +1 for Crack Shot does not get added</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry name="Turn Aside Blow" id="4a4a-b631-69b0-ed1b" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="0fb9-52a2-8ccc-5439" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
+        </entryLink>
+        <entryLink name="Mighty Strike" id="20fe-d9fe-4071-8813" hidden="false" import="true" targetId="4f61-9d78-4b0d-0844" type="selectionEntry">
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <infoLinks>
-            <infoLink name="Parry" id="ecff-4d52-7ec1-b024" hidden="false" targetId="049d-3ed2-a1bf-86b0" type="rule"/>
-          </infoLinks>
-          <profiles>
-            <profile name="Turn Aside Blow" id="0728-d49a-ef31-e42d" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
-              <characteristics>
-                <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">Can parry melee attacks even if not using a weapon with parry. May force the enemy to re-roll up to two attack dice when parrying rather than just one.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry name="Disarm" id="b82c-ef32-cf42-68fe" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="5696-4a76-cb08-d373" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
+        </entryLink>
+        <entryLink name="Sustain Attack" id="391a-f801-36f8-37c3" hidden="false" import="true" targetId="522c-3447-5da9-fb9b" type="selectionEntry">
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <profiles>
-            <profile name="Disarm" id="d4d2-f649-bc49-1d7f" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
-              <characteristics>
-                <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">If an Exarch wins close combat, then he may disarm his enemy rather than strike any hits that turn. The Exarch cauases no hits but the enemy automatically loses one weapon of the Exarch&apos;s choice. That weapon counts as being destroyed.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry name="Crushing Blow" id="1670-e9f3-0c65-da69" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="b538-24f0-ed19-8c7b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
+        </entryLink>
+        <entryLink name="Turn Aside Blow" id="725b-a6ca-c9ef-425e" hidden="false" import="true" targetId="0312-5922-935c-b3de" type="selectionEntry">
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <profiles>
-            <profile name="Crushing Blow" id="4f92-b8a0-dcfd-115d" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
-              <characteristics>
-                <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">+1 Strength bonus in close combat. This applies to the Exarch&apos;s own Strength and also any Strength value of the close combat weapon they are using</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry name="Bounding Leap" id="2607-d6ec-9bcb-9b15" collective="false" hidden="false" import="true" publicationId="71ba-82e2-d83c-d33d" type="upgrade">
-          <constraints>
-            <constraint id="d3d5-e10d-0e51-196d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
+        </entryLink>
+        <entryLink name="Disarm" id="1ce2-137a-0bb4-82d8" hidden="false" import="true" targetId="dcef-7bf0-ea20-234d" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Bounding Leap" id="9f08-818c-0677-4184" hidden="false" import="true" targetId="9436-d18b-1d7d-81f4" type="selectionEntry">
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
-          <profiles>
-            <profile name="Bounding Leap" id="19de-587f-7068-a5db" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
-              <characteristics>
-                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">May leap 4&quot; in addition to regular movement during the move phase. Can be used when charging as well. Can only leap once during the turn.
-Can use the leap to jump over any model-high obstacle without penalty, including enemy models. 
-Can leap out of close combat at the end of any close combat phase without suffering any penalty</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry name="Battle Fortune" id="f998-8e3a-bde4-fea9" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="722a-3114-7da2-8311" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
+        </entryLink>
+        <entryLink name="War Shout" id="9c00-5738-651b-9301" hidden="false" import="true" targetId="150c-1204-b051-f4c7" type="selectionEntry">
           <costs>
-            <cost name="pts" typeId="points" value="10"/>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <profiles>
-            <profile name="Battle Fortune" id="aec6-e455-211c-a11d" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
-              <characteristics>
-                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">May re-roll any failed saving throw for Exarch armour. Does not apply for any other save types</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry name="Resolve" id="1210-cd0d-b4b4-e345" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="05b8-f4a0-f7ad-71dc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
+        </entryLink>
+        <entryLink name="Crushing Blow" id="020e-f4b4-9eaa-25ee" hidden="false" import="true" targetId="b883-01af-d964-e596" type="selectionEntry">
           <costs>
-            <cost name="pts" typeId="points" value="10"/>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <profiles>
-            <profile name="Resolve" id="4787-52a9-27c6-e00b" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
-              <characteristics>
-                <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">Immune to all psychology and need never take a Break test</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry name="Stealth" id="217c-e3e8-744e-1cd9" collective="false" hidden="false" import="true" page="50" publicationId="71ba-82e2-d83c-d33d" type="upgrade">
-          <constraints>
-            <constraint id="d398-306a-6bf1-31d6" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
+        </entryLink>
+        <entryLink name="Fighting Fury " id="29c7-97fc-26ee-6949" hidden="false" import="true" targetId="e70b-a947-4030-6955" type="selectionEntry">
           <costs>
-            <cost name="pts" typeId="points" value="10"/>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <profiles>
-            <profile name="Stealth" id="e541-2a2c-0493-c433" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
-              <characteristics>
-                <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">Any enemy shooting at short range suffer -1 to hit, and -2 at long range</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry name="Tough" id="19b7-2e9b-cc80-663c" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="38b4-809a-32a2-ee99" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
+        </entryLink>
+        <entryLink name="Distract" id="07d1-5e9d-4713-bffe" hidden="false" import="true" targetId="3377-1cfc-ee1c-891e" type="selectionEntry">
           <costs>
-            <cost name="pts" typeId="points" value="10"/>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <profiles>
-            <profile name="Tough" id="211b-913b-f26b-6547" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
-              <characteristics>
-                <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">+1 to the Exarch&apos;s Toughness</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry name="Fast Shot" id="11c4-c741-c7e8-0690" collective="false" hidden="false" import="true" page="50" publicationId="71ba-82e2-d83c-d33d" type="upgrade">
-          <constraints>
-            <constraint id="4e55-272a-2d64-5f1b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
+        </entryLink>
+        <entryLink name="Fast Shot" id="8f2f-fc93-ab33-8e65" hidden="false" import="true" targetId="60db-92af-d4c0-5414" type="selectionEntry">
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
-          <profiles>
-            <profile name="Fast Shot" id="1ce9-14ee-8132-267a" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
-              <characteristics>
-                <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">May shoot twice in the shooting phase. May fire at the same target or two separate targets</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry name="Sustain Attack" id="2917-3f44-01dc-f976" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="69f5-3ffd-0fcb-9fb6" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
+        </entryLink>
+        <entryLink name="Tough" id="a01e-b72f-b657-45d0" hidden="false" import="true" targetId="42b2-ecb0-d8fc-d470" type="selectionEntry">
           <costs>
-            <cost name="pts" typeId="points" value="5"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
-          <profiles>
-            <profile name="Sustain Attack" id="2e71-8f97-1284-3644" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
-              <characteristics>
-                <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">Increase the range of follow-up attacks to 4&quot;</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry name="Distract" id="4ab9-115a-12da-c8f0" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="4346-8876-63fc-aa63" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
+        </entryLink>
+        <entryLink name="Battle Fortune" id="9230-22b0-4ffc-b3ba" hidden="false" import="true" targetId="1c23-2cd8-2d31-9764" type="selectionEntry">
           <costs>
-            <cost name="pts" typeId="points" value="5"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
-          <profiles>
-            <profile name="Distract" id="4129-ab36-1d13-3aa1" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
-              <characteristics>
-                <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">All the Exarch&apos;s foes count double the value of any fumbles. When they roll a 1 on the attack dice this adds +2 to the Exarch&apos;s combat score rather than the usual +1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry name="Mighty Strike" id="2817-e41e-b8b5-4096" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="9c6a-17bd-d5e8-4cef" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
+        </entryLink>
+        <entryLink name="Stealth" id="20ee-7a53-5c87-639b" hidden="false" import="true" targetId="33cb-bfe7-020f-8551" type="selectionEntry">
           <costs>
-            <cost name="pts" typeId="points" value="5"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
-          <profiles>
-            <profile name="Mighty Strike" id="c2d2-6dc7-d250-07af" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
-              <characteristics>
-                <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">If the Exarch inflicts 2 or more hits then he may choose to exchange all hits for a single hit with a Strength bonus. The bonus equals +1 for each extra hit scored, so you could excahnge 2 S4 hits for a single S5 hit, or 3 S4 hits for a single S6 hit, and so on</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry name="Fighting Fury " id="733c-63f9-20b1-68ad" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="5468-353d-c0ff-1620" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
+        </entryLink>
+        <entryLink name="Resolve" id="d2b1-1004-3f7e-8414" hidden="false" import="true" targetId="00f3-996f-7275-4257" type="selectionEntry">
           <costs>
-            <cost name="pts" typeId="points" value="5"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
-          <profiles>
-            <profile name="Fighting Fury " id="b295-1da8-5eb2-0787" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
-              <characteristics>
-                <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">+1 to the Exarch&apos;s Attack characteristic</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry name="War Shout" id="a613-4e5e-7ef5-b4b0" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="7811-dcf1-a0f8-f0b8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Fear" id="5ff8-fa8b-9696-aa44" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
-          </infoLinks>
-          <profiles>
-            <profile name="War Shout" id="1849-7dce-f52a-2d7f" hidden="false" page="50" publicationId="71ba-82e2-d83c-d33d" typeId="acfa-400e-e0d9-a9fb" typeName="Exarch Powers">
-              <characteristics>
-                <characteristic name="Exarch Power" typeId="c400-873f-536b-90d7">Causes Fear on a turn when the Exarch is charging</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup name="Wargear Cards" id="5cb8-a11f-ec3f-a011" collective="false" hidden="false" import="true">
-      <entryLinks>
-        <entryLink name="Show Wargear Cards" id="eae3-cff6-70ff-f1b0" collective="false" hidden="false" import="true" targetId="0316-f054-534a-d96b" type="selectionEntry">
-          <constraints>
-            <constraint id="c1af-cdc9-a271-b13c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
         </entryLink>
       </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Wargear Cards" id="5cb8-a11f-ec3f-a011" collective="false" hidden="false" import="true">
       <selectionEntryGroups>
         <selectionEntryGroup name="Cards" id="9d43-49fc-f486-a467" collective="false" hidden="false" import="true">
           <entryLinks>
             <entryLink name="Wargear (Eldar)" id="da15-562f-b5ca-4054" collective="false" hidden="false" import="true" targetId="4cf5-b25b-9991-4e0b" type="selectionEntryGroup"/>
             <entryLink name="Wargear Cards (Generic)" id="cf1e-cfa8-5dd8-9512" collective="false" hidden="false" import="true" targetId="b5be-2d0f-67e2-6260" type="selectionEntryGroup"/>
           </entryLinks>
-          <modifiers>
-            <modifier field="hidden" type="set" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="0316-f054-534a-d96b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notEqualTo" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>

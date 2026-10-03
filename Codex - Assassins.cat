@@ -1,457 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7bb5-646e-ec66-1cdd" name="Codex - Assassins" revision="6" battleScribeVersion="2.03" authorName="Boff" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
-  <categoryEntries>
-    <categoryEntry id="9778-1163-ce67-b2e4" name="Assassins Ally" hidden="false"/>
-  </categoryEntries>
-  <forceEntries>
-    <forceEntry id="5a6c-a998-431c-94ae" name="Assassins - 50% support armies" hidden="false">
-      <categoryLinks>
-        <categoryLink name="Assassins" hidden="false" id="0114-8d60-4f1f-f191" targetId="06ba-f656-4e76-25d1">
-          <constraints>
-            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="bf6b-8325-e6a5-193d" includeChildSelections="true" includeChildForces="true"/>
-            <constraint type="max" value="50" field="points" scope="roster" shared="true" id="0c33-5590-e270-abdb" percentValue="true" includeChildSelections="true" includeChildForces="true"/>
-          </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <modifiers>
-                <modifier type="set" value="-1" field="bf6b-8325-e6a5-193d"/>
-              </modifiers>
-              <comment>When you have no points limit</comment>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifierGroup>
-            <modifierGroup type="and">
-              <modifiers>
-                <modifier type="increment" value="1" field="bf6b-8325-e6a5-193d">
-                  <repeats>
-                    <repeat value="1" repeats="0.5" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-                  </repeats>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" value="-1" field="0c33-5590-e270-abdb">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <comment>When having a points limit</comment>
-            </modifierGroup>
-          </modifierGroups>
-        </categoryLink>
-      </categoryLinks>
-    </forceEntry>
-    <forceEntry name="Assassins - 25% support armies (Sisters &amp; Guard)" id="9f98-c43a-e99f-bebd" hidden="false">
-      <categoryLinks>
-        <categoryLink name="Assassins" hidden="false" id="0639-500a-648d-e044" targetId="06ba-f656-4e76-25d1">
-          <constraints>
-            <constraint type="max" value="0" field="points" scope="roster" shared="true" id="d211-3370-493c-27c6" includeChildSelections="true" includeChildForces="true"/>
-            <constraint type="max" value="25" field="points" scope="roster" shared="true" id="88ad-0053-e8f1-e9a0" percentValue="true" includeChildSelections="true" includeChildForces="true"/>
-          </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <modifiers>
-                <modifier type="set" value="-1" field="d211-3370-493c-27c6"/>
-              </modifiers>
-              <comment>When you have no points limit</comment>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifierGroup>
-            <modifierGroup type="and">
-              <modifiers>
-                <modifier type="increment" value="1" field="d211-3370-493c-27c6">
-                  <repeats>
-                    <repeat value="1" repeats="0.25" field="limit::points" scope="roster" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true" percentValue="false"/>
-                  </repeats>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" value="-1" field="88ad-0053-e8f1-e9a0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <comment>When having a points limit</comment>
-            </modifierGroup>
-          </modifierGroups>
-        </categoryLink>
-      </categoryLinks>
-    </forceEntry>
-  </forceEntries>
+<catalogue name="Codex - Assassins" id="7bb5-646e-ec66-1cdd" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="7" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
-    <entryLink id="3077-ac5a-883a-989b" name="Assassin" hidden="false" collective="false" import="true" targetId="6d6a-c81b-bb34-7d18" type="selectionEntry">
-      <categoryLinks>
-        <categoryLink targetId="06ba-f656-4e76-25d1" id="99fd-6d8e-3e02-5660" primary="true" name="Assassins"/>
-      </categoryLinks>
-    </entryLink>
+    <entryLink name="Assassin" id="3077-ac5a-883a-989b" collective="false" hidden="false" import="true" targetId="6d6a-c81b-bb34-7d18" type="selectionEntry"/>
   </entryLinks>
-  <rules>
-    <rule id="15e9-3d40-e9ed-b81d" name="Vision" publicationId="4e3f-569f-151e-9c5c" page="8" hidden="false">
-      <description>Not affected by gas or smoke weapons that normally obscure vision, although still affected by Blind grenades and missiles as normal.</description>
-    </rule>
-    <rule id="d152-a606-bf95-467f" name="Psycholoy" publicationId="4e3f-569f-151e-9c5c" page="8" hidden="false">
-      <description>Assassins are unaffected by the Psycholoy rules in the main Rulebook regardless of the source</description>
-    </rule>
-    <rule id="4523-3951-ef3e-70da" name="Leadership" publicationId="4e3f-569f-151e-9c5c" page="8" hidden="false">
-      <description>Can never be broken, automatically pass any Break test.
-May never lead another unit and their Leadership can never be used by other units.
-If attacked by a psychic power that calls for the Assassin to pass a Leadership test, then they must still do that test.</description>
-    </rule>
-    <rule id="707c-6c9a-6b17-3ba1" name="Infiltration" publicationId="4e3f-569f-151e-9c5c" page="8" hidden="false">
-      <description>As per the rules on Pg.11 of the Warhammer Rulebook</description>
-    </rule>
-    <rule id="75f9-7c67-e490-3632" name="Gas Weapons" publicationId="4e3f-569f-151e-9c5c" page="8" hidden="false">
-      <description>Cannot be harmed in any way by weapons that use the Choke, Scare, Hallucinogen, Toxin, or Virus effects. This does not include Tyranid poisons and venoms.</description>
-    </rule>
-    <rule id="f482-1130-caa6-d0cb" name="Dodge" publicationId="4e3f-569f-151e-9c5c" page="8" hidden="false">
-      <description>4+ unmodified save from any attacks including psychic. 
-If successfully dodged a blast template, place the model to the outside area of the template.</description>
-    </rule>
-  </rules>
-  <sharedSelectionEntries>
-    <selectionEntry id="397f-95ea-bc04-6e70" name="Vindicare Assassin" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8223-8d99-a4f7-60c8" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="7fdc-a0bf-8e18-c9e3" name="Marksman" hidden="false" targetId="c8f4-f8db-9e69-b7ec" type="rule"/>
-        <infoLink id="3e61-939f-2742-9dbc" name="Rapid Fire - Exitus Longrifle" hidden="false" targetId="6dc2-86e7-f3ec-9876" type="rule"/>
-        <infoLink id="e057-c206-1715-c7b2" name="Hipshooting - Exitus Pistol" hidden="false" targetId="35e3-69b3-8a86-d7d1" type="rule"/>
-        <infoLink id="0ae1-9619-0c78-c45c" name="Assassin" hidden="false" targetId="4486-a0ab-0905-2f8c" type="profile"/>
-        <infoLink id="5ad8-9940-a08c-fbdf" name="Spy Mask" hidden="false" targetId="b63e-59c7-a2b1-0e29" type="profile"/>
-        <infoLink id="fc9a-1922-d272-c5ad" name="Stealth Suit" hidden="false" targetId="493e-0ab9-6a9e-136b" type="profile"/>
-        <infoLink id="dc92-6160-f14b-8b51" name="Exitus Ammo" hidden="false" targetId="07df-ffa2-10d3-4c54" type="profile"/>
-        <infoLink id="1cc8-7526-3265-2e8d" name="Exitus Longrifle" hidden="false" targetId="024a-e954-4c8c-dccd" type="profile"/>
-        <infoLink id="ebf0-2a76-782c-2b2c" name="Exitus Pistol" hidden="false" targetId="a25e-52ea-7d71-db70" type="profile"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink id="cc69-2ad0-f5ff-3682" name="Assassins" hidden="false" targetId="06ba-f656-4e76-25d1" primary="false"/>
-        <categoryLink id="be8d-552e-cb53-039d" name="Assassins Ally" hidden="false" targetId="9778-1163-ce67-b2e4" primary="true"/>
-      </categoryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="215"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="6ec9-0cc7-800a-a8d5" name="Callidus Assassin" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe48-0bd3-efa7-30a2" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="c886-649b-8c47-fe97" name="Assassin" hidden="false" targetId="4486-a0ab-0905-2f8c" type="profile"/>
-        <infoLink id="cb03-d7ae-c4d4-506d" name="Evade" hidden="false" targetId="3cdc-8693-ff2c-3d0f" type="rule"/>
-        <infoLink id="24ff-4320-1b59-3641" name="Jump Back" hidden="false" targetId="4d72-bad7-4497-480d" type="rule"/>
-        <infoLink id="059b-6553-bf82-ba89" name="Reign of Confusion" hidden="false" targetId="0446-d05b-1f0b-f7ee" type="rule"/>
-        <infoLink id="885a-7679-1e8d-9daa" name="Neural Shredder" hidden="false" targetId="b10e-c034-8a88-7fb1" type="profile"/>
-        <infoLink id="0416-ccac-987c-1919" name="Polymorphine" hidden="false" targetId="abc7-81e3-4339-6551" type="profile"/>
-        <infoLink id="d888-e3e5-f878-289e" name="Poison Blades" hidden="false" targetId="086b-e140-ca50-e7ea" type="profile"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink id="2584-7f25-ba2a-f4e5" name="Assassins" hidden="false" targetId="06ba-f656-4e76-25d1" primary="false"/>
-        <categoryLink id="de53-1f89-32e6-e46d" name="Assassins Ally" hidden="false" targetId="9778-1163-ce67-b2e4" primary="true"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="1b0d-5611-9239-9bed" name="C&apos;Tan Phase Sword" hidden="false" collective="false" import="true" targetId="2565-d020-50ca-6e7b" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="62a9-18d1-2238-3894" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d9f1-4a2a-3aea-d894" type="max"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="237"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="464f-a68d-1393-8e1f" name="Eversor Assassin" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a965-0d69-eb69-1d3c" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="662a-0fc4-48d8-536b" name="Assassin" hidden="false" targetId="4486-a0ab-0905-2f8c" type="profile"/>
-        <infoLink id="d388-f328-bafb-cea8" name="Combat Master" hidden="false" targetId="6833-ee62-fa11-1df0" type="rule"/>
-        <infoLink id="b3f8-c6aa-17ac-686f" name="Fear" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
-        <infoLink id="703a-0255-e601-bc19" name="Fast Shot" hidden="false" targetId="9378-da0b-ee57-7cfb" type="rule"/>
-        <infoLink id="c82b-0807-3563-c34d" name="Wounding the Eversor" hidden="false" targetId="047f-8f29-6c11-86f1" type="rule"/>
-        <infoLink id="effb-b252-90d8-a3eb" name="Killing the Eversor" hidden="false" targetId="24c2-2b9b-12b9-6c91" type="rule"/>
-        <infoLink id="072a-1e81-58ba-ae20" name="Sentinel Array" hidden="false" targetId="71d6-7358-eaf0-528c" type="profile"/>
-        <infoLink id="0efb-66b9-762a-d622" name="Eversor Combat Drugs" hidden="false" targetId="9ae0-42fd-ba70-8c0f" type="profile"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink id="fac7-2cd9-4153-3bdb" name="Assassins" hidden="false" targetId="06ba-f656-4e76-25d1" primary="false"/>
-        <categoryLink id="3e2a-fd46-6245-4d57" name="Assassins Ally" hidden="false" targetId="9778-1163-ce67-b2e4" primary="true"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="28d3-3d4c-81ba-6b08" name="Neuro-Gauntlet" publicationId="4e3f-569f-151e-9c5c" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f872-3b2f-21cf-1cf0" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="63ca-9921-4f0f-2552" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="0a4b-dec5-71d8-bc4b" name="Neuro-Gauntlet" hidden="false" targetId="d444-0af9-806a-7cc9" type="rule"/>
-            <infoLink id="e023-2847-879a-197e" name="Neuro-Gauntlet" hidden="false" targetId="32ad-2f3b-f93f-528d" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink id="4595-2634-68cb-74bc" name="Plasma Grenade" hidden="false" collective="false" import="true" targetId="9277-633c-d567-56be" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4879-e2c0-7e4f-cfc4" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b57-bdf8-640a-472d" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="aff1-31e5-b5f9-9a16" name="Plasma Grenade - Just for example when Eversor dies - Cannot use" hidden="false"/>
-          </rules>
-        </entryLink>
-        <entryLink id="eaae-e0e4-32c0-e59e" name="Power Sword" hidden="false" collective="false" import="true" targetId="4e44-58a0-2af5-519c" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f1fa-22bc-1620-796a" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="59ae-6ad9-d499-e7a0" type="min"/>
-          </constraints>
-        </entryLink>
-        <entryLink id="6d8a-f016-15fe-7b61" name="Melta Bomb" hidden="false" collective="false" import="true" targetId="101f-9872-9b6f-cfc7" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="12de-1b6b-6b17-b439" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a45f-549f-d8e1-632d" type="min"/>
-          </constraints>
-        </entryLink>
-        <entryLink id="e7cf-17b1-4fd9-ef4c" name="Executor Pistol" hidden="false" collective="false" import="true" targetId="e60b-5b50-1274-7153" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="03db-3f77-7bcc-59d8" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="125f-415e-1e46-6b17" type="max"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="240"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="978e-8574-f094-a0cb" name="Culexus Assassin" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5bb8-e499-441c-0a9b" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="2701-0402-3f65-e819" name="Assassin" hidden="false" targetId="4486-a0ab-0905-2f8c" type="profile"/>
-        <infoLink id="126e-ad19-acc0-1476" name="Etherium" hidden="false" targetId="2b06-8fdd-e694-deba" type="profile"/>
-        <infoLink id="763c-5291-74cc-1fb9" name="Force Matrix" hidden="false" targetId="70c1-0144-9557-f4ff" type="profile"/>
-        <infoLink id="2564-a778-e912-1664" name="Anti-Psyker" hidden="false" targetId="22f3-20e3-1f5f-eeb7" type="rule"/>
-        <infoLink id="b650-b849-a71a-aea1" name="Psychic Abomination" hidden="false" targetId="7857-6527-d649-ddb8" type="rule"/>
-        <infoLink id="639a-9c4c-61f6-deca" name="Warp Disturbance" hidden="false" targetId="9c93-ced0-7c94-ef5b" type="rule"/>
-        <infoLink id="b0cc-4ebd-b4aa-3517" name="Life Drain" hidden="false" targetId="bad8-a3a2-551c-402f" type="rule"/>
-        <infoLink id="4548-b388-2466-8328" name="Note on Daemons" hidden="false" targetId="bd67-df69-fea5-be94" type="rule"/>
-        <infoLink id="45af-5b7e-6136-24a0" name="Soulless" hidden="false" targetId="da1d-55c3-27b3-8e81" type="rule"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink id="6e04-5986-3014-5e47" name="Assassins" hidden="false" targetId="06ba-f656-4e76-25d1" primary="false"/>
-        <categoryLink id="95c0-554a-31ef-d4bb" name="Assassins Ally" hidden="false" targetId="9778-1163-ce67-b2e4" primary="true"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="9939-3f8c-950d-c1d8" name="The Animus Speculum" hidden="false" collective="false" import="true" targetId="39e4-5a29-1aba-76ea" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="01d3-b536-a216-1e0b" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="21d3-965e-54b4-25f3" type="max"/>
-          </constraints>
-        </entryLink>
-        <entryLink id="3190-e8ad-3cd1-aaf7" name="Psyk-Out Grenades" hidden="false" collective="false" import="true" targetId="99bb-3a97-cbae-1fb5" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="900a-9587-264a-eacf" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="22c5-920d-9609-f2cd" type="max"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="210"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="2565-d020-50ca-6e7b" name="C&apos;Tan Phase Sword" hidden="false" collective="false" import="true" type="upgrade">
-      <infoLinks>
-        <infoLink id="2711-7eac-09aa-a720" name="Parry" hidden="false" targetId="049d-3ed2-a1bf-86b0" type="rule"/>
-        <infoLink id="a855-5d27-3b14-f3b0" name="C&apos;tan Phase Sword" hidden="false" targetId="83c1-8b9d-5b2b-5807" type="profile"/>
-        <infoLink id="d1d2-77a2-3f22-d838" name="Close Combat" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
-        <infoLink id="5f61-365d-0add-fdc4" name="C&apos;tan Phase Weapon" hidden="false" targetId="b018-9226-1ab2-e85a" type="rule"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="e60b-5b50-1274-7153" name="Executor Pistol" hidden="false" collective="false" import="true" type="upgrade">
-      <infoLinks>
-        <infoLink id="016d-92da-bb42-10c8" name="Close Combat" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
-      </infoLinks>
-      <entryLinks>
-        <entryLink id="651c-c53d-c6df-eabe" name="Needle Pistol" hidden="false" collective="false" import="true" targetId="dec7-82c8-a97f-f2d1" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c03-4d38-0187-ed89" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b03-57cc-c636-d297" type="min"/>
-          </constraints>
-        </entryLink>
-        <entryLink id="25d0-5346-958e-8457" name="Master-Crafted Bolt Pistol" hidden="false" collective="false" import="true" targetId="04a2-74da-3458-52d1" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d41b-e725-a028-45d4" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="95cc-8902-291e-7a21" type="max"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="39e4-5a29-1aba-76ea" name="The Animus Speculum" hidden="false" collective="false" import="true" type="upgrade">
-      <infoLinks>
-        <infoLink id="5ff2-cac8-d49d-1520" name="Animus Speculum" hidden="false" targetId="e25f-5507-fb95-a403" type="rule"/>
-        <infoLink id="2bda-8dd3-1941-6b1b" name="Animus Speculum" hidden="false" targetId="c1b5-e5fe-b008-b9c5" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="99bb-3a97-cbae-1fb5" name="Psyk-Out Grenades" hidden="false" collective="false" import="true" type="upgrade">
-      <infoLinks>
-        <infoLink id="fa78-7c86-6d3e-a3b8" name="Psyk-out Grenades" hidden="false" targetId="425d-2f0c-af11-3a63" type="rule"/>
-        <infoLink id="fcf0-8657-22a6-87e9" name="Psyk-Out Grenades" hidden="false" targetId="a4ec-d297-beaa-41a6" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="6d6a-c81b-bb34-7d18" name="Assassin" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9125-8152-44ce-c3d3" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="aa03-ac85-21b7-78d9" name="Assassins" hidden="false" targetId="06ba-f656-4e76-25d1" primary="false"/>
-        <categoryLink id="3205-6d5a-f35b-be70" name="Assassins Ally" hidden="false" targetId="9778-1163-ce67-b2e4" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="05d4-8d08-eb6e-9e79" name="Assassin Type" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7bf7-371f-1f90-5ee8" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="f53a-b773-7686-4bf9" name="Callidus Assassin" hidden="false" collective="false" import="true" targetId="6ec9-0cc7-800a-a8d5" type="selectionEntry"/>
-            <entryLink id="6c09-ed1b-2aa8-1051" name="Culexus Assassin" hidden="false" collective="false" import="true" targetId="978e-8574-f094-a0cb" type="selectionEntry"/>
-            <entryLink id="5db9-609a-5565-680e" name="Eversor Assassin" hidden="false" collective="false" import="true" targetId="464f-a68d-1393-8e1f" type="selectionEntry"/>
-            <entryLink id="970d-d2cf-6dfa-43b0" name="Vindicare Assassin" hidden="false" collective="false" import="true" targetId="397f-95ea-bc04-6e70" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-  </sharedSelectionEntries>
-  <sharedRules>
-    <rule id="c8f4-f8db-9e69-b7ec" name="Marksman" publicationId="4e3f-569f-151e-9c5c" page="10" hidden="false">
-      <description>Ignore all restrictions on choosing a target and may fire at any model he can see, including models in a squad. Can choose hit location when firing against targets with a hit location table.
-Increase long range of his weapons by 50%.</description>
-    </rule>
-    <rule id="6dc2-86e7-f3ec-9876" name="Rapid Fire - Exitus Longrifle" publicationId="4e3f-569f-151e-9c5c" page="10" hidden="false">
-      <description>As long as he remaints stationary, may fire twice in the shooting phase with the Exitus Longrifle. May not be used in Overwatch, or combined with Hipshooting.</description>
-    </rule>
-    <rule id="35e3-69b3-8a86-d7d1" name="Hipshooting - Exitus Pistol" publicationId="4e3f-569f-151e-9c5c" page="10" hidden="false">
-      <description>May make a run move and fire his Exitus Pistol in the same turn.</description>
-    </rule>
-    <rule id="3cdc-8693-ff2c-3d0f" name="Evade" publicationId="4e3f-569f-151e-9c5c" page="13" hidden="false">
-      <description>Any enemy shooting at the Callidus Assassin from short range suffers a -2 to hit penalty, and at long range -1. This only applies when the assassin is out in the open.</description>
-    </rule>
-    <rule id="4d72-bad7-4497-480d" name="Jump Back" publicationId="4e3f-569f-151e-9c5c" page="13" hidden="false">
-      <description>At the start of the close combat phase, the Callidus Assassin may disengage from combat. The Assassin may do this automatically and the opponent gains no free strike. Move the Callidus Assassin 2&quot; out of close combat. May not be used to enter another close combat.</description>
-    </rule>
-    <rule id="0446-d05b-1f0b-f7ee" name="Reign of Confusion" publicationId="4e3f-569f-151e-9c5c" page="13" hidden="false">
-      <description>May force the opponent to discard one of their Strategy cards chosen at random and without using it at the start of the game.</description>
-    </rule>
-    <rule id="6833-ee62-fa11-1df0" name="Combat Master" publicationId="4e3f-569f-151e-9c5c" page="18" hidden="false">
-      <description>Add +1 to the WS for each opponent after the first in close combat with the Assassin.</description>
-    </rule>
-    <rule id="9378-da0b-ee57-7cfb" name="Fast Shot" publicationId="4e3f-569f-151e-9c5c" page="18" hidden="false">
-      <description>The Assassin may fire his Executor Pistol a number of times equal to his Attack characteristic. May use this skill while on Overwatch</description>
-    </rule>
-    <rule id="047f-8f29-6c11-86f1" name="Wounding the Eversor" publicationId="4e3f-569f-151e-9c5c" page="18" hidden="false">
-      <description>If the Eversor is wounded in Close Combat he will spray acid on his attackers. The model who made the attack takes a Strength 4 hit causing 1 wound with a -1 modifier</description>
-    </rule>
-    <rule id="24c2-2b9b-12b9-6c91" name="Killing the Eversor" publicationId="4e3f-569f-151e-9c5c" page="18" hidden="false">
-      <description>If the Eversor is ever reduced to 0 wounds he will explode with the same effect as a Plasma Grenade (included in profile for reference).</description>
-    </rule>
-    <rule id="d444-0af9-806a-7cc9" name="Neuro-Gauntlet" publicationId="4e3f-569f-151e-9c5c" page="19" hidden="false">
-      <description>Any squad which takes a casualty from the Beuro-Gauntlet must make an immediate Break test. If a model is wounded by the Neuro-Gauntlet but isn&apos;t killed, then the enemy must halve all of its characteristics (rounding up) including Wounds for the rest of the battle.
-Does not affect daemons.</description>
-    </rule>
-    <rule id="e25f-5507-fb95-a403" name="Animus Speculum" hidden="false">
-      <description>May fire in the psychic phase using stored force points from the Force Matrix. May not fire more than 3 blasts. Roll to hit for each blast separetely. Each may target a different enemy. May fire while in close combat as well at targets in base contact.
-If the blast wounds a psyker both players roll a D6 in secret and add as many cards as they want. The Culexus can use force points from his Force Matrix. Both players then reveal their score. If the psyker gets the higher score or is a tie, then he defended himself. If the Assassin gets the higher score then the psyker must randomly discard one of their powers.
-The warp cards Reflection, Daemonic Attack, and Destroy Power may not be used to stop the blasts and have no effect. A psyker may only attempt to nullify a blast that was fired directly at him. Each blast counts as being the same mastery level as the psyker.</description>
-    </rule>
-    <rule id="425d-2f0c-af11-3a63" name="Psyk-out Grenades" publicationId="4e3f-569f-151e-9c5c" page="23" hidden="false">
-      <description>Roll damage as normal. Any Psykers partially or fuly under the template cannot use any psychic powers for the rest of the turn. Any powers that psyker had in play at that moment are nullified and any force cards stored in weapons or similar item must be discarded.
-
-Any time the Assassin uses a Psyk-out grenade roll a D6. On a 1 or 2 the grenades run out.</description>
-    </rule>
-    <rule id="22f3-20e3-1f5f-eeb7" name="Anti-Psyker" publicationId="4e3f-569f-151e-9c5c" page="23" hidden="false">
-      <description>May not use any  of the warp cards dealt to the Imperial player in the psychic phase. Only gains force powers from his Force Matrix</description>
-    </rule>
-    <rule id="7857-6527-d649-ddb8" name="Psychic Abomination" publicationId="4e3f-569f-151e-9c5c" page="23" hidden="false">
-      <description>Causes Terror in all Psykers. Even Psykers that are immune to psychology, cause terror themselves, or are assumed to automatically pass any Leadership based test must pass a Terror test. Must take the test if within 8&quot; of a Culexus Assassin at the start of turn, is charged by, or wishes to charge the Assassin.</description>
-    </rule>
-    <rule id="9c93-ced0-7c94-ef5b" name="Warp Disturbance" publicationId="4e3f-569f-151e-9c5c" page="24" hidden="false">
-      <description>Any psyker, including friendly psykers, withint 24&quot; of the Culexus Assassin that attempts to use a power must roll a D6. If the roll is less than or equal to the number of force cards he played wit hthe psychic power, then the power is immediately nullified and the psyker suffers a wound with no armour saved allowed. 
-If a power is played using the Ultimate Force warp card, the power counts as being powered by three force cards and cannot be nullified. However, the psyker must still roll a dice, if he rolls a 3 or less he takes a wound.</description>
-    </rule>
-    <rule id="bad8-a3a2-551c-402f" name="Life Drain" publicationId="4e3f-569f-151e-9c5c" page="24" hidden="false">
-      <description>May only be used when in base contact with an enemy psyker. Before fighting each round of close combat the psyker should roll 2D6 and add his Leadership characteristic to the score. The Culexus Assassin should roll 3D6, choose the two highest dice and add his Leadership score. If the scores are drawn or the Culexus Assassin loses, the attack has no effect and close combat continues as normal.
-
-For each point that the Culexus Assassin beats the psyker&apos;s score by, he can drain 1 point from any one of the victim&apos;s WS, BS, S, T, or LD. If any of the psyker&apos;s characteristics are reduced to 0, then the psyker is killed and removed as a casualty. Drained characteristics are lost for the rest of the of the battle. 
-
-If in close combat with multiple psykers, test for each one.</description>
-    </rule>
-    <rule id="bd67-df69-fea5-be94" name="Note on Daemons" publicationId="4e3f-569f-151e-9c5c" page="24" hidden="false">
-      <description>The Culexus&apos; special attacks do affect daemons that are psykers. This includes units of daemons. Blasts from the Animus Speculum, the effects of the Life Drain ability and any blows struck by the Culexus Assassin in close combat count as psychic attacks and daemons receive no saving throw on behalf of their daemonic aura.
-
-Daemons of Khorne are not affected as they are not psykers.</description>
-    </rule>
-    <rule id="da1d-55c3-27b3-8e81" name="Soulless" publicationId="4e3f-569f-151e-9c5c" page="22" hidden="false">
-      <description>If an enemy character, squad, vehicle, vehicle squadron, or support weapon battery wishes to shoot or charge at the Culexus ASsassin then you must roll a D6. On a roll of a 2 or more the Culexus Assassin has distracted the unit and they may not fire. Instead the unit must choose another target to shoot at. If the unit fails to charge it may charge another enemy model or it may continue with its move as if a charge had never been declared.
-On the roll of a 1 they may shoot as normal or charge the Assassin. 
-
-If there is a psyker within charge range of the Culexus Assassin then the Assassin may choose to charge the psyker in favour of other models. The Assassin can simply slip by the enemy squads and his bodyguards.
-
-If the Assassin is wounded, then he cannot use this ability for the rest of the game.</description>
-    </rule>
-    <rule id="b018-9226-1ab2-e85a" name="C&apos;tan Phase Weapon" hidden="false">
-      <description>A model wounded by a C&apos;tan weapon does not recieve an armour save, even for armour fields</description>
-    </rule>
-  </sharedRules>
   <sharedProfiles>
-    <profile id="4486-a0ab-0905-2f8c" name="Assassin" publicationId="4e3f-569f-151e-9c5c" page="8" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+    <profile name="Assassin" id="4486-a0ab-0905-2f8c" hidden="false" page="8" publicationId="4e3f-569f-151e-9c5c" typeId="219f-0faa-a2d8-f766" typeName="Unit">
       <characteristics>
         <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Assassin</characteristic>
         <characteristic name="M" typeId="4934-7872-3dd7-a8b6">6</characteristic>
@@ -465,7 +18,7 @@ If the Assassin is wounded, then he cannot use this ability for the rest of the 
         <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
       </characteristics>
     </profile>
-    <profile id="024a-e954-4c8c-dccd" name="Exitus Longrifle" publicationId="4e3f-569f-151e-9c5c" page="11" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+    <profile name="Exitus Longrifle" id="024a-e954-4c8c-dccd" hidden="false" page="11" publicationId="4e3f-569f-151e-9c5c" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
       <characteristics>
         <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">18</characteristic>
         <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">36</characteristic>
@@ -478,7 +31,7 @@ If the Assassin is wounded, then he cannot use this ability for the rest of the 
         <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d"/>
       </characteristics>
     </profile>
-    <profile id="a25e-52ea-7d71-db70" name="Exitus Pistol" publicationId="4e3f-569f-151e-9c5c" page="11" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+    <profile name="Exitus Pistol" id="a25e-52ea-7d71-db70" hidden="false" page="11" publicationId="4e3f-569f-151e-9c5c" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
       <characteristics>
         <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">6</characteristic>
         <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">12</characteristic>
@@ -491,7 +44,7 @@ If the Assassin is wounded, then he cannot use this ability for the rest of the 
         <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Close Combat</characteristic>
       </characteristics>
     </profile>
-    <profile id="07df-ffa2-10d3-4c54" name="Exitus Ammo" publicationId="4e3f-569f-151e-9c5c" page="11" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+    <profile name="Exitus Ammo" id="07df-ffa2-10d3-4c54" hidden="false" page="11" publicationId="4e3f-569f-151e-9c5c" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
       <characteristics>
         <characteristic name="Special" typeId="f917-8cd8-7592-47dd">May be used with pistol or rifle. Only 1 of each round may be used max per battle.
 Shield-Breaker: If the target is protected by a force field the field is automatically destroyed and may not be used for the rest of the battle. If the target has no force field it takes normal damage.
@@ -499,17 +52,17 @@ Turbo-Penetrator: Has a -6 saving throw modifier and inflicts double damage. Whe
 Hellfire: Always wounds on a 2+ against living targets and causes D6 wounds. Does not affect daemonic creatures and does not splash like the Heavy Bolter shell</characteristic>
       </characteristics>
     </profile>
-    <profile id="493e-0ab9-6a9e-136b" name="Stealth Suit" publicationId="4e3f-569f-151e-9c5c" page="11" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+    <profile name="Stealth Suit" id="493e-0ab9-6a9e-136b" hidden="false" page="11" publicationId="4e3f-569f-151e-9c5c" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
       <characteristics>
         <characteristic name="Special" typeId="f917-8cd8-7592-47dd">If fired while in hiding, will not be spotted. Instead flip over the Hidden counter to show that he is only Detected. Does not stop visual detection.</characteristic>
       </characteristics>
     </profile>
-    <profile id="b63e-59c7-a2b1-0e29" name="Spy Mask" publicationId="4e3f-569f-151e-9c5c" page="11" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+    <profile name="Spy Mask" id="b63e-59c7-a2b1-0e29" hidden="false" page="11" publicationId="4e3f-569f-151e-9c5c" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
       <characteristics>
         <characteristic name="Special" typeId="f917-8cd8-7592-47dd">This enables the Assassin to fire at Hidden models with a -6 to  hit  modifier or detected models  with  a  -3 to hit modifier. These to hit modifiers are in addition to any other for cover. movement. etc.</characteristic>
       </characteristics>
     </profile>
-    <profile id="83c1-8b9d-5b2b-5807" name="C&apos;tan Phase Sword" publicationId="4e3f-569f-151e-9c5c" page="14" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+    <profile name="C&apos;tan Phase Sword" id="83c1-8b9d-5b2b-5807" hidden="false" page="14" publicationId="4e3f-569f-151e-9c5c" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
       <characteristics>
         <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">CC Only</characteristic>
         <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">CC Only</characteristic>
@@ -522,22 +75,22 @@ Hellfire: Always wounds on a 2+ against living targets and causes D6 wounds. Doe
         <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Parry, C&apos;tan Phase Weapon</characteristic>
       </characteristics>
     </profile>
-    <profile id="b10e-c034-8a88-7fb1" name="Neural Shredder" publicationId="4e3f-569f-151e-9c5c" page="14" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+    <profile name="Neural Shredder" id="b10e-c034-8a88-7fb1" hidden="false" page="14" publicationId="4e3f-569f-151e-9c5c" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
       <characteristics>
         <characteristic name="Special" typeId="f917-8cd8-7592-47dd">If at the end of the Imperial player&apos;s close combat phase, the Callidus Assassin is not in base-to-base contact with any enemy models then she may fire the Neaural Shredder. Place a flamer template coming from the assassin, any models wholly under are automatically hit. Any partially, are hit on a 4+. All models hit must pass a Leadership test with a -2 modifier. If they fail, the model suffers 1 wound with a -3 saving throw. Armour fields cannot be used.</characteristic>
       </characteristics>
     </profile>
-    <profile id="abc7-81e3-4339-6551" name="Polymorphine" publicationId="4e3f-569f-151e-9c5c" page="14" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+    <profile name="Polymorphine" id="abc7-81e3-4339-6551" hidden="false" page="14" publicationId="4e3f-569f-151e-9c5c" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
       <characteristics>
         <characteristic name="Special" typeId="f917-8cd8-7592-47dd">The Assassin is not deployed at the start of the game, instead can be revealed at any time that they were disguised as one of the enemy. Can select either an Ork, Squat, Human, Genestealer Hybrid, or ELdar and substitute the Callidus Assassin for that model. The model must be a basic trooper model and not a character, vehicle view, or have a heavy weapon. The model cannot have a better save than 3+ on 1D6. The Assassin discards any captured wargear as she casts off her disguise.</characteristic>
       </characteristics>
     </profile>
-    <profile id="086b-e140-ca50-e7ea" name="Poison Blades" publicationId="4e3f-569f-151e-9c5c" page="14" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+    <profile name="Poison Blades" id="086b-e140-ca50-e7ea" hidden="false" page="14" publicationId="4e3f-569f-151e-9c5c" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
       <characteristics>
         <characteristic name="Special" typeId="f917-8cd8-7592-47dd">If there still enemy models in base-to-base contact with the Assassin at the end of the close combat phase, she may attack one with a Poison Blade. The blade hits on a 3+, inflicts a S4 hit that causes 1 wound with no armour save allowed. Armour fields may save as normal.</characteristic>
       </characteristics>
     </profile>
-    <profile id="c1b5-e5fe-b008-b9c5" name="Animus Speculum" publicationId="4e3f-569f-151e-9c5c" page="22" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+    <profile name="Animus Speculum" id="c1b5-e5fe-b008-b9c5" hidden="false" page="22" publicationId="4e3f-569f-151e-9c5c" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
       <characteristics>
         <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">12</characteristic>
         <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">24</characteristic>
@@ -550,12 +103,12 @@ Hellfire: Always wounds on a 2+ against living targets and causes D6 wounds. Doe
         <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Animus Speculum</characteristic>
       </characteristics>
     </profile>
-    <profile id="71d6-7358-eaf0-528c" name="Sentinel Array" publicationId="4e3f-569f-151e-9c5c" page="19" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+    <profile name="Sentinel Array" id="71d6-7358-eaf0-528c" hidden="false" page="19" publicationId="4e3f-569f-151e-9c5c" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
       <characteristics>
         <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Can spot enemy troops at double its Initiative distance. In addition, can fire in a 360° arc.</characteristic>
       </characteristics>
     </profile>
-    <profile id="32ad-2f3b-f93f-528d" name="Neuro-Gauntlet" publicationId="4e3f-569f-151e-9c5c" page="19" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+    <profile name="Neuro-Gauntlet" id="32ad-2f3b-f93f-528d" hidden="false" page="19" publicationId="4e3f-569f-151e-9c5c" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
       <characteristics>
         <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">CC Only</characteristic>
         <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">CC Only</characteristic>
@@ -568,7 +121,7 @@ Hellfire: Always wounds on a 2+ against living targets and causes D6 wounds. Doe
         <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Neuro-Gauntlet</characteristic>
       </characteristics>
     </profile>
-    <profile id="9ae0-42fd-ba70-8c0f" name="Eversor Combat Drugs" publicationId="4e3f-569f-151e-9c5c" page="19" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+    <profile name="Eversor Combat Drugs" id="9ae0-42fd-ba70-8c0f" hidden="false" page="19" publicationId="4e3f-569f-151e-9c5c" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
       <characteristics>
         <characteristic name="Special" typeId="f917-8cd8-7592-47dd">May take one dose at the beginning of his turn. 
 
@@ -579,17 +132,17 @@ Terminus: Until the end of your opponent&apos;s next turn, the Assassin may carr
 Destroyer: During his turn, if the Assassin kills his opponent and uses his follow-up move to enter another close combat, he may attack again immediately. After each follow-up move roll a D6. 1-3 the Assassin gets no more attacks this turn. 4-6 he may fight another round of combat immediately.</characteristic>
       </characteristics>
     </profile>
-    <profile id="2b06-8fdd-e694-deba" name="Etherium" publicationId="4e3f-569f-151e-9c5c" page="22" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+    <profile name="Etherium" id="2b06-8fdd-e694-deba" hidden="false" page="22" publicationId="4e3f-569f-151e-9c5c" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
       <characteristics>
         <characteristic name="Special" typeId="f917-8cd8-7592-47dd">If attacked by a Warp weapon such as force swords, Witch Blades, Vortex grenades, D-cannons, or psychic powers then roll a D6. On a 2+ the attack has no effect on the Assassin, though the attack is not nullified. Force weapons may still wound the Assassin. However the Psyker may not add his mastery level to the strength or use extra force cards to enhance the attack. A blast can still hit other models under it.</characteristic>
       </characteristics>
     </profile>
-    <profile id="70c1-0144-9557-f4ff" name="Force Matrix" publicationId="4e3f-569f-151e-9c5c" page="22" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+    <profile name="Force Matrix" id="70c1-0144-9557-f4ff" hidden="false" page="22" publicationId="4e3f-569f-151e-9c5c" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
       <characteristics>
         <characteristic name="Special" typeId="f917-8cd8-7592-47dd">At the beginning of the psychic phase roll a D3 to determine the number of force points that the Force Matrix absorbs. For each psyker within 12&quot; you may add +1 to the score. Can spend the force points to fire blasts from the Animus Speculum. Any force points left at the end of the psychic phase are lost.</characteristic>
       </characteristics>
     </profile>
-    <profile id="a4ec-d297-beaa-41a6" name="Psyk-Out Grenades" publicationId="4e3f-569f-151e-9c5c" page="23" hidden="false" typeId="4fd7-adb4-cddd-0136" typeName="Weapon - Missile / Grenade">
+    <profile name="Psyk-Out Grenades" id="a4ec-d297-beaa-41a6" hidden="false" page="23" publicationId="4e3f-569f-151e-9c5c" typeId="4fd7-adb4-cddd-0136" typeName="Weapon - Missile / Grenade">
       <characteristics>
         <characteristic name="Strength" typeId="51dd-04c1-d98c-138d">3</characteristic>
         <characteristic name="Damage" typeId="1028-07d4-bd9d-15d3">1</characteristic>
@@ -599,4 +152,339 @@ Destroyer: During his turn, if the Assassin kills his opponent and uses his foll
       </characteristics>
     </profile>
   </sharedProfiles>
+  <sharedRules>
+    <rule name="Marksman" id="c8f4-f8db-9e69-b7ec" hidden="false" page="10" publicationId="4e3f-569f-151e-9c5c">
+      <description>Ignore all restrictions on choosing a target and may fire at any model he can see, including models in a squad. Can choose hit location when firing against targets with a hit location table.
+Increase long range of his weapons by 50%.</description>
+    </rule>
+    <rule name="Rapid Fire - Exitus Longrifle" id="6dc2-86e7-f3ec-9876" hidden="false" page="10" publicationId="4e3f-569f-151e-9c5c">
+      <description>As long as he remaints stationary, may fire twice in the shooting phase with the Exitus Longrifle. May not be used in Overwatch, or combined with Hipshooting.</description>
+    </rule>
+    <rule name="Hipshooting - Exitus Pistol" id="35e3-69b3-8a86-d7d1" hidden="false" page="10" publicationId="4e3f-569f-151e-9c5c">
+      <description>May make a run move and fire his Exitus Pistol in the same turn.</description>
+    </rule>
+    <rule name="Evade" id="3cdc-8693-ff2c-3d0f" hidden="false" page="13" publicationId="4e3f-569f-151e-9c5c">
+      <description>Any enemy shooting at the Callidus Assassin from short range suffers a -2 to hit penalty, and at long range -1. This only applies when the assassin is out in the open.</description>
+    </rule>
+    <rule name="Jump Back" id="4d72-bad7-4497-480d" hidden="false" page="13" publicationId="4e3f-569f-151e-9c5c">
+      <description>At the start of the close combat phase, the Callidus Assassin may disengage from combat. The Assassin may do this automatically and the opponent gains no free strike. Move the Callidus Assassin 2&quot; out of close combat. May not be used to enter another close combat.</description>
+    </rule>
+    <rule name="Reign of Confusion" id="0446-d05b-1f0b-f7ee" hidden="false" page="13" publicationId="4e3f-569f-151e-9c5c">
+      <description>May force the opponent to discard one of their Strategy cards chosen at random and without using it at the start of the game.</description>
+    </rule>
+    <rule name="Combat Master" id="6833-ee62-fa11-1df0" hidden="false" page="18" publicationId="4e3f-569f-151e-9c5c">
+      <description>Add +1 to the WS for each opponent after the first in close combat with the Assassin.</description>
+    </rule>
+    <rule name="Fast Shot" id="9378-da0b-ee57-7cfb" hidden="false" page="18" publicationId="4e3f-569f-151e-9c5c">
+      <description>The Assassin may fire his Executor Pistol a number of times equal to his Attack characteristic. May use this skill while on Overwatch</description>
+    </rule>
+    <rule name="Wounding the Eversor" id="047f-8f29-6c11-86f1" hidden="false" page="18" publicationId="4e3f-569f-151e-9c5c">
+      <description>If the Eversor is wounded in Close Combat he will spray acid on his attackers. The model who made the attack takes a Strength 4 hit causing 1 wound with a -1 modifier</description>
+    </rule>
+    <rule name="Killing the Eversor" id="24c2-2b9b-12b9-6c91" hidden="false" page="18" publicationId="4e3f-569f-151e-9c5c">
+      <description>If the Eversor is ever reduced to 0 wounds he will explode with the same effect as a Plasma Grenade (included in profile for reference).</description>
+    </rule>
+    <rule name="Neuro-Gauntlet" id="d444-0af9-806a-7cc9" hidden="false" page="19" publicationId="4e3f-569f-151e-9c5c">
+      <description>Any squad which takes a casualty from the Beuro-Gauntlet must make an immediate Break test. If a model is wounded by the Neuro-Gauntlet but isn&apos;t killed, then the enemy must halve all of its characteristics (rounding up) including Wounds for the rest of the battle.
+Does not affect daemons.</description>
+    </rule>
+    <rule name="Animus Speculum" id="e25f-5507-fb95-a403" hidden="false">
+      <description>May fire in the psychic phase using stored force points from the Force Matrix. May not fire more than 3 blasts. Roll to hit for each blast separetely. Each may target a different enemy. May fire while in close combat as well at targets in base contact.
+If the blast wounds a psyker both players roll a D6 in secret and add as many cards as they want. The Culexus can use force points from his Force Matrix. Both players then reveal their score. If the psyker gets the higher score or is a tie, then he defended himself. If the Assassin gets the higher score then the psyker must randomly discard one of their powers.
+The warp cards Reflection, Daemonic Attack, and Destroy Power may not be used to stop the blasts and have no effect. A psyker may only attempt to nullify a blast that was fired directly at him. Each blast counts as being the same mastery level as the psyker.</description>
+    </rule>
+    <rule name="Psyk-out Grenades" id="425d-2f0c-af11-3a63" hidden="false" page="23" publicationId="4e3f-569f-151e-9c5c">
+      <description>Roll damage as normal. Any Psykers partially or fuly under the template cannot use any psychic powers for the rest of the turn. Any powers that psyker had in play at that moment are nullified and any force cards stored in weapons or similar item must be discarded.
+
+Any time the Assassin uses a Psyk-out grenade roll a D6. On a 1 or 2 the grenades run out.</description>
+    </rule>
+    <rule name="Anti-Psyker" id="22f3-20e3-1f5f-eeb7" hidden="false" page="23" publicationId="4e3f-569f-151e-9c5c">
+      <description>May not use any  of the warp cards dealt to the Imperial player in the psychic phase. Only gains force powers from his Force Matrix</description>
+    </rule>
+    <rule name="Psychic Abomination" id="7857-6527-d649-ddb8" hidden="false" page="23" publicationId="4e3f-569f-151e-9c5c">
+      <description>Causes Terror in all Psykers. Even Psykers that are immune to psychology, cause terror themselves, or are assumed to automatically pass any Leadership based test must pass a Terror test. Must take the test if within 8&quot; of a Culexus Assassin at the start of turn, is charged by, or wishes to charge the Assassin.</description>
+    </rule>
+    <rule name="Warp Disturbance" id="9c93-ced0-7c94-ef5b" hidden="false" page="24" publicationId="4e3f-569f-151e-9c5c">
+      <description>Any psyker, including friendly psykers, withint 24&quot; of the Culexus Assassin that attempts to use a power must roll a D6. If the roll is less than or equal to the number of force cards he played wit hthe psychic power, then the power is immediately nullified and the psyker suffers a wound with no armour saved allowed. 
+If a power is played using the Ultimate Force warp card, the power counts as being powered by three force cards and cannot be nullified. However, the psyker must still roll a dice, if he rolls a 3 or less he takes a wound.</description>
+    </rule>
+    <rule name="Life Drain" id="bad8-a3a2-551c-402f" hidden="false" page="24" publicationId="4e3f-569f-151e-9c5c">
+      <description>May only be used when in base contact with an enemy psyker. Before fighting each round of close combat the psyker should roll 2D6 and add his Leadership characteristic to the score. The Culexus Assassin should roll 3D6, choose the two highest dice and add his Leadership score. If the scores are drawn or the Culexus Assassin loses, the attack has no effect and close combat continues as normal.
+
+For each point that the Culexus Assassin beats the psyker&apos;s score by, he can drain 1 point from any one of the victim&apos;s WS, BS, S, T, or LD. If any of the psyker&apos;s characteristics are reduced to 0, then the psyker is killed and removed as a casualty. Drained characteristics are lost for the rest of the of the battle. 
+
+If in close combat with multiple psykers, test for each one.</description>
+    </rule>
+    <rule name="Note on Daemons" id="bd67-df69-fea5-be94" hidden="false" page="24" publicationId="4e3f-569f-151e-9c5c">
+      <description>The Culexus&apos; special attacks do affect daemons that are psykers. This includes units of daemons. Blasts from the Animus Speculum, the effects of the Life Drain ability and any blows struck by the Culexus Assassin in close combat count as psychic attacks and daemons receive no saving throw on behalf of their daemonic aura.
+
+Daemons of Khorne are not affected as they are not psykers.</description>
+    </rule>
+    <rule name="Soulless" id="da1d-55c3-27b3-8e81" hidden="false" page="22" publicationId="4e3f-569f-151e-9c5c">
+      <description>If an enemy character, squad, vehicle, vehicle squadron, or support weapon battery wishes to shoot or charge at the Culexus ASsassin then you must roll a D6. On a roll of a 2 or more the Culexus Assassin has distracted the unit and they may not fire. Instead the unit must choose another target to shoot at. If the unit fails to charge it may charge another enemy model or it may continue with its move as if a charge had never been declared.
+On the roll of a 1 they may shoot as normal or charge the Assassin. 
+
+If there is a psyker within charge range of the Culexus Assassin then the Assassin may choose to charge the psyker in favour of other models. The Assassin can simply slip by the enemy squads and his bodyguards.
+
+If the Assassin is wounded, then he cannot use this ability for the rest of the game.</description>
+    </rule>
+    <rule name="C&apos;tan Phase Weapon" id="b018-9226-1ab2-e85a" hidden="false">
+      <description>A model wounded by a C&apos;tan weapon does not recieve an armour save, even for armour fields</description>
+    </rule>
+    <rule name="Dodge" id="99b0-7cb4-88db-af81" hidden="false" page="8" publicationId="4e3f-569f-151e-9c5c">
+      <description>Assassins can avoid any damaging hits (including psychic powers) on a roll of a 4+. This effectively works the same as a 4+ armour save that cannot be modified. 
+If a template or blast weapon is dodged, move the assassin to the edge of the template. This cannot be used to move the assassin into close combat.</description>
+    </rule>
+  </sharedRules>
+  <sharedSelectionEntries>
+    <selectionEntry name="Vindicare Assassin" id="397f-95ea-bc04-6e70" collective="false" hidden="false" import="true" type="model">
+      <categoryLinks>
+        <categoryLink name="Assassins" id="cc69-2ad0-f5ff-3682" hidden="false" primary="false" targetId="06ba-f656-4e76-25d1"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="8223-8d99-a4f7-60c8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="215"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Marksman" id="7fdc-a0bf-8e18-c9e3" hidden="false" targetId="c8f4-f8db-9e69-b7ec" type="rule"/>
+        <infoLink name="Rapid Fire - Exitus Longrifle" id="3e61-939f-2742-9dbc" hidden="false" targetId="6dc2-86e7-f3ec-9876" type="rule"/>
+        <infoLink name="Hipshooting - Exitus Pistol" id="e057-c206-1715-c7b2" hidden="false" targetId="35e3-69b3-8a86-d7d1" type="rule"/>
+        <infoLink name="Assassin" id="0ae1-9619-0c78-c45c" hidden="false" targetId="4486-a0ab-0905-2f8c" type="profile"/>
+        <infoLink name="Spy Mask" id="5ad8-9940-a08c-fbdf" hidden="false" targetId="b63e-59c7-a2b1-0e29" type="profile"/>
+        <infoLink name="Stealth Suit" id="fc9a-1922-d272-c5ad" hidden="false" targetId="493e-0ab9-6a9e-136b" type="profile"/>
+        <infoLink name="Exitus Ammo" id="dc92-6160-f14b-8b51" hidden="false" targetId="07df-ffa2-10d3-4c54" type="profile"/>
+        <infoLink name="Exitus Longrifle" id="1cc8-7526-3265-2e8d" hidden="false" targetId="024a-e954-4c8c-dccd" type="profile"/>
+        <infoLink name="Exitus Pistol" id="ebf0-2a76-782c-2b2c" hidden="false" targetId="a25e-52ea-7d71-db70" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Callidus Assassin" id="6ec9-0cc7-800a-a8d5" collective="false" hidden="false" import="true" type="model">
+      <categoryLinks>
+        <categoryLink name="Assassins" id="2584-7f25-ba2a-f4e5" hidden="false" primary="false" targetId="06ba-f656-4e76-25d1"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="fe48-0bd3-efa7-30a2" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="237"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="C&apos;Tan Phase Sword" id="1b0d-5611-9239-9bed" collective="false" hidden="false" import="true" targetId="2565-d020-50ca-6e7b" type="selectionEntry">
+          <constraints>
+            <constraint id="62a9-18d1-2238-3894" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="d9f1-4a2a-3aea-d894" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Assassin" id="c886-649b-8c47-fe97" hidden="false" targetId="4486-a0ab-0905-2f8c" type="profile"/>
+        <infoLink name="Evade" id="cb03-d7ae-c4d4-506d" hidden="false" targetId="3cdc-8693-ff2c-3d0f" type="rule"/>
+        <infoLink name="Jump Back" id="24ff-4320-1b59-3641" hidden="false" targetId="4d72-bad7-4497-480d" type="rule"/>
+        <infoLink name="Reign of Confusion" id="059b-6553-bf82-ba89" hidden="false" targetId="0446-d05b-1f0b-f7ee" type="rule"/>
+        <infoLink name="Neural Shredder" id="885a-7679-1e8d-9daa" hidden="false" targetId="b10e-c034-8a88-7fb1" type="profile"/>
+        <infoLink name="Polymorphine" id="0416-ccac-987c-1919" hidden="false" targetId="abc7-81e3-4339-6551" type="profile"/>
+        <infoLink name="Poison Blades" id="d888-e3e5-f878-289e" hidden="false" targetId="086b-e140-ca50-e7ea" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Eversor Assassin" id="464f-a68d-1393-8e1f" collective="false" hidden="false" import="true" type="model">
+      <categoryLinks>
+        <categoryLink name="Assassins" id="fac7-2cd9-4153-3bdb" hidden="false" primary="false" targetId="06ba-f656-4e76-25d1"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="a965-0d69-eb69-1d3c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="240"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Plasma Grenade" id="4595-2634-68cb-74bc" collective="false" hidden="false" import="true" targetId="9277-633c-d567-56be" type="selectionEntry">
+          <constraints>
+            <constraint id="4879-e2c0-7e4f-cfc4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="9b57-bdf8-640a-472d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <rules>
+            <rule name="Plasma Grenade - Just for example when Eversor dies - Cannot use" id="aff1-31e5-b5f9-9a16" hidden="false"/>
+          </rules>
+        </entryLink>
+        <entryLink name="Power Sword" id="eaae-e0e4-32c0-e59e" collective="false" hidden="false" import="true" targetId="4e44-58a0-2af5-519c" type="selectionEntry">
+          <constraints>
+            <constraint id="f1fa-22bc-1620-796a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="59ae-6ad9-d499-e7a0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Melta Bomb" id="6d8a-f016-15fe-7b61" collective="false" hidden="false" import="true" targetId="101f-9872-9b6f-cfc7" type="selectionEntry">
+          <constraints>
+            <constraint id="12de-1b6b-6b17-b439" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="a45f-549f-d8e1-632d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Executor Pistol" id="e7cf-17b1-4fd9-ef4c" collective="false" hidden="false" import="true" targetId="e60b-5b50-1274-7153" type="selectionEntry">
+          <constraints>
+            <constraint id="03db-3f77-7bcc-59d8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="125f-415e-1e46-6b17" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Assassin" id="662a-0fc4-48d8-536b" hidden="false" targetId="4486-a0ab-0905-2f8c" type="profile"/>
+        <infoLink name="Combat Master" id="d388-f328-bafb-cea8" hidden="false" targetId="6833-ee62-fa11-1df0" type="rule"/>
+        <infoLink name="Fear" id="b3f8-c6aa-17ac-686f" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
+        <infoLink name="Fast Shot" id="703a-0255-e601-bc19" hidden="false" targetId="9378-da0b-ee57-7cfb" type="rule"/>
+        <infoLink name="Wounding the Eversor" id="c82b-0807-3563-c34d" hidden="false" targetId="047f-8f29-6c11-86f1" type="rule"/>
+        <infoLink name="Killing the Eversor" id="effb-b252-90d8-a3eb" hidden="false" targetId="24c2-2b9b-12b9-6c91" type="rule"/>
+        <infoLink name="Sentinel Array" id="072a-1e81-58ba-ae20" hidden="false" targetId="71d6-7358-eaf0-528c" type="profile"/>
+        <infoLink name="Eversor Combat Drugs" id="0efb-66b9-762a-d622" hidden="false" targetId="9ae0-42fd-ba70-8c0f" type="profile"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry name="Neuro-Gauntlet" id="28d3-3d4c-81ba-6b08" collective="false" hidden="false" import="true" publicationId="4e3f-569f-151e-9c5c" type="upgrade">
+          <constraints>
+            <constraint id="f872-3b2f-21cf-1cf0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="63ca-9921-4f0f-2552" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Neuro-Gauntlet" id="0a4b-dec5-71d8-bc4b" hidden="false" targetId="d444-0af9-806a-7cc9" type="rule"/>
+            <infoLink name="Neuro-Gauntlet" id="e023-2847-879a-197e" hidden="false" targetId="32ad-2f3b-f93f-528d" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Culexus Assassin" id="978e-8574-f094-a0cb" collective="false" hidden="false" import="true" type="model">
+      <categoryLinks>
+        <categoryLink name="Assassins" id="6e04-5986-3014-5e47" hidden="false" primary="false" targetId="06ba-f656-4e76-25d1"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="5bb8-e499-441c-0a9b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="210"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="The Animus Speculum" id="9939-3f8c-950d-c1d8" collective="false" hidden="false" import="true" targetId="39e4-5a29-1aba-76ea" type="selectionEntry">
+          <constraints>
+            <constraint id="01d3-b536-a216-1e0b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="21d3-965e-54b4-25f3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Psyk-Out Grenades" id="3190-e8ad-3cd1-aaf7" collective="false" hidden="false" import="true" targetId="99bb-3a97-cbae-1fb5" type="selectionEntry">
+          <constraints>
+            <constraint id="900a-9587-264a-eacf" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="22c5-920d-9609-f2cd" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Assassin" id="2701-0402-3f65-e819" hidden="false" targetId="4486-a0ab-0905-2f8c" type="profile"/>
+        <infoLink name="Etherium" id="126e-ad19-acc0-1476" hidden="false" targetId="2b06-8fdd-e694-deba" type="profile"/>
+        <infoLink name="Force Matrix" id="763c-5291-74cc-1fb9" hidden="false" targetId="70c1-0144-9557-f4ff" type="profile"/>
+        <infoLink name="Anti-Psyker" id="2564-a778-e912-1664" hidden="false" targetId="22f3-20e3-1f5f-eeb7" type="rule"/>
+        <infoLink name="Psychic Abomination" id="b650-b849-a71a-aea1" hidden="false" targetId="7857-6527-d649-ddb8" type="rule"/>
+        <infoLink name="Warp Disturbance" id="639a-9c4c-61f6-deca" hidden="false" targetId="9c93-ced0-7c94-ef5b" type="rule"/>
+        <infoLink name="Life Drain" id="b0cc-4ebd-b4aa-3517" hidden="false" targetId="bad8-a3a2-551c-402f" type="rule"/>
+        <infoLink name="Note on Daemons" id="4548-b388-2466-8328" hidden="false" targetId="bd67-df69-fea5-be94" type="rule"/>
+        <infoLink name="Soulless" id="45af-5b7e-6136-24a0" hidden="false" targetId="da1d-55c3-27b3-8e81" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="C&apos;Tan Phase Sword" id="2565-d020-50ca-6e7b" collective="false" hidden="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Parry" id="2711-7eac-09aa-a720" hidden="false" targetId="049d-3ed2-a1bf-86b0" type="rule"/>
+        <infoLink name="C&apos;tan Phase Sword" id="a855-5d27-3b14-f3b0" hidden="false" targetId="83c1-8b9d-5b2b-5807" type="profile"/>
+        <infoLink name="Close Combat" id="d1d2-77a2-3f22-d838" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
+        <infoLink name="C&apos;tan Phase Weapon" id="5f61-365d-0add-fdc4" hidden="false" targetId="b018-9226-1ab2-e85a" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Executor Pistol" id="e60b-5b50-1274-7153" collective="false" hidden="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Needle Pistol" id="651c-c53d-c6df-eabe" collective="false" hidden="false" import="true" targetId="dec7-82c8-a97f-f2d1" type="selectionEntry">
+          <constraints>
+            <constraint id="3c03-4d38-0187-ed89" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="8b03-57cc-c636-d297" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Master-Crafted Bolt Pistol" id="25d0-5346-958e-8457" collective="false" hidden="false" import="true" targetId="04a2-74da-3458-52d1" type="selectionEntry">
+          <constraints>
+            <constraint id="d41b-e725-a028-45d4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="95cc-8902-291e-7a21" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Close Combat" id="016d-92da-bb42-10c8" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="The Animus Speculum" id="39e4-5a29-1aba-76ea" collective="false" hidden="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Animus Speculum" id="5ff2-cac8-d49d-1520" hidden="false" targetId="e25f-5507-fb95-a403" type="rule"/>
+        <infoLink name="Animus Speculum" id="2bda-8dd3-1941-6b1b" hidden="false" targetId="c1b5-e5fe-b008-b9c5" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Psyk-Out Grenades" id="99bb-3a97-cbae-1fb5" collective="false" hidden="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Psyk-out Grenades" id="fa78-7c86-6d3e-a3b8" hidden="false" targetId="425d-2f0c-af11-3a63" type="rule"/>
+        <infoLink name="Psyk-Out Grenades" id="fcf0-8657-22a6-87e9" hidden="false" targetId="a4ec-d297-beaa-41a6" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Assassin" id="6d6a-c81b-bb34-7d18" collective="false" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="3Support" id="1f9e-5466-35da-95e1" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="9125-8152-44ce-c3d3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <rules>
+        <rule name="Dodge" id="4be6-cbbc-974f-b573" hidden="false" page="8" publicationId="4e3f-569f-151e-9c5c">
+          <description>4+ unmodified save from any attacks including psychic. 
+If successfully dodged a blast template, place the model to the outside area of the template.</description>
+        </rule>
+        <rule name="Gas Weapons" id="2986-abb8-cfb1-e4ac" hidden="false" page="8" publicationId="4e3f-569f-151e-9c5c">
+          <description>Cannot be harmed in any way by weapons that use the Choke, Scare, Hallucinogen, Toxin, or Virus effects. This does not include Tyranid poisons and venoms.</description>
+        </rule>
+        <rule name="Infiltration" id="f5dc-f370-bb1f-c0da" hidden="false" page="8" publicationId="4e3f-569f-151e-9c5c">
+          <description>As per the rules on Pg.11 of the Warhammer Rulebook</description>
+        </rule>
+        <rule name="Leadership" id="2e5e-f64d-d620-300a" hidden="false" page="8" publicationId="4e3f-569f-151e-9c5c">
+          <description>Can never be broken, automatically pass any Break test.
+May never lead another unit and their Leadership can never be used by other units.
+If attacked by a psychic power that calls for the Assassin to pass a Leadership test, then they must still do that test.</description>
+        </rule>
+        <rule name="Psycholoy" id="7a61-bdc8-7db5-74b2" hidden="false" page="8" publicationId="4e3f-569f-151e-9c5c">
+          <description>Assassins are unaffected by the Psycholoy rules in the main Rulebook regardless of the source</description>
+        </rule>
+        <rule name="Vision" id="69d7-261e-5c41-e371" hidden="false" page="8" publicationId="4e3f-569f-151e-9c5c">
+          <description>Not affected by gas or smoke weapons that normally obscure vision, although still affected by Blind grenades and missiles as normal.</description>
+        </rule>
+      </rules>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Assassin Type" id="05d4-8d08-eb6e-9e79" collective="false" hidden="false" import="true">
+          <constraints>
+            <constraint id="7bf7-371f-1f90-5ee8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <entryLinks>
+            <entryLink name="Callidus Assassin" id="f53a-b773-7686-4bf9" collective="false" hidden="false" import="true" targetId="6ec9-0cc7-800a-a8d5" type="selectionEntry"/>
+            <entryLink name="Culexus Assassin" id="6c09-ed1b-2aa8-1051" collective="false" hidden="false" import="true" targetId="978e-8574-f094-a0cb" type="selectionEntry"/>
+            <entryLink name="Eversor Assassin" id="5db9-609a-5565-680e" collective="false" hidden="false" import="true" targetId="464f-a68d-1393-8e1f" type="selectionEntry"/>
+            <entryLink name="Vindicare Assassin" id="970d-d2cf-6dfa-43b0" collective="false" hidden="false" import="true" targetId="397f-95ea-bc04-6e70" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+  </sharedSelectionEntries>
 </catalogue>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="42" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="43" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <comment>Warhammer 2nd Edition 40k</comment>
   <readme>Added more wargear cards</readme>
   <categoryEntries>
@@ -476,7 +476,9 @@
         <characteristicType name="I" id="76cb-4fd1-7571-e697"/>
         <characteristicType name="A" id="6d89-52f1-9c48-ac8c"/>
         <characteristicType name="LD" id="dfcc-1070-ddf7-ad7d"/>
-        <characteristicType name="Ram Value" id="5911-75e9-1f4f-87d0"/>
+        <characteristicType name="Ram Strength" id="a025-016a-2152-7b47"/>
+        <characteristicType name="Ram Damage" id="84ee-e518-c9ac-7b7e"/>
+        <characteristicType name="Ram Save Modifier" id="e929-6e42-f2a7-c76d"/>
         <characteristicType name="Armour Location" id="8376-0954-7923-aeb7"/>
         <characteristicType name="Front Armour" id="1987-9b10-fba2-d45f"/>
         <characteristicType name="Side/Rear Armour" id="7504-90c0-b957-d29c"/>
@@ -1832,7 +1834,7 @@ Place a 2&quot; blast marker anywhere within Line of Sight of the vehicle using 
         <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
         <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-2</characteristic>
         <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+4</characteristic>
-        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Sustained Fire - 1 dice</characteristic>
+        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Sustained Fire - 1 dice, Twin Linked</characteristic>
       </characteristics>
     </profile>
     <profile name="Displacer Field" id="0539-adb2-7abc-6b2e" hidden="false" page="68" publicationId="06e5-8e36-e8c8-aec3" typeId="4657-2671-1065-d493" typeName="Armour">
@@ -4776,6 +4778,16 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
           <description>The Legion of the Damned cannot take any allies</description>
         </rule>
       </rules>
+    </selectionEntry>
+    <selectionEntry name="Twin Linked Shuriken Catapult" id="7c33-d1ea-f352-1152" collective="false" hidden="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Shuriken Catapult" id="acc3-cd70-0ef4-290f" hidden="false" targetId="d833-dedf-69c7-29e5" type="profile"/>
+        <infoLink name="Sustained Fire" id="fc86-583f-e4e6-cab4" hidden="false" targetId="0b67-c911-308c-4960" type="rule"/>
+        <infoLink name="Twin Linked" id="647b-b52c-19ae-6acb" hidden="false" targetId="1ec9-01dd-59c6-d1d5" type="rule"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>

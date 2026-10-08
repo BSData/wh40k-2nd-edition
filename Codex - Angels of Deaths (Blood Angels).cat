@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Angels of Death (Blood Angels)" id="12fb-bbf1-3d12-aef9" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="26" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Angels of Death (Blood Angels)" id="12fb-bbf1-3d12-aef9" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="27" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink name="Space Marine Captain" id="e1eb-4981-2689-1fc2" collective="false" hidden="false" import="true" targetId="e664-c21f-4492-a7dc" type="selectionEntry"/>
     <entryLink name="Terminator Captain" id="cc3a-a216-fc10-2c17" collective="false" hidden="false" import="true" targetId="381f-f866-3d8a-4e03" type="selectionEntry"/>
@@ -371,9 +371,10 @@ and  courage  in  the face of death. Once broken, a Space Marine squad may rally
         <characteristic name="I" typeId="76cb-4fd1-7571-e697">5</characteristic>
         <characteristic name="A" typeId="6d89-52f1-9c48-ac8c">3</characteristic>
         <characteristic name="LD" typeId="dfcc-1070-ddf7-ad7d">10</characteristic>
-        <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0">Strength 7
-D10 Damage
--4 Save</characteristic>
+        <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0"/>
+        <characteristic name="Ram Strength" typeId="a025-016a-2152-7b47">7</characteristic>
+        <characteristic name="Ram Damage" typeId="84ee-e518-c9ac-7b7e">D10</characteristic>
+        <characteristic name="Ram Save Modifier" typeId="e929-6e42-f2a7-c76d">-4</characteristic>
         <characteristic name="Armour Location" typeId="8376-0954-7923-aeb7">Legs
 Left Arm
 Right ARm
@@ -873,7 +874,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
     </rule>
   </sharedRules>
   <sharedSelectionEntries>
-    <selectionEntry name="Space Marine Captain" id="e664-c21f-4492-a7dc" collective="false" hidden="false" import="true" page="63" publicationId="4590-6ba9-5482-a1fa" type="unit">
+    <selectionEntry name="Space Marine Captain" id="e664-c21f-4492-a7dc" collective="false" hidden="false" import="true" page="63" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="4a59-ae5a-0cb7-c2d3" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="1Characters" id="8395-2b96-0a16-94df" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -1082,7 +1083,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry name="Terminator Captain" id="381f-f866-3d8a-4e03" collective="false" hidden="false" import="true" type="unit">
+    <selectionEntry name="Terminator Captain" id="381f-f866-3d8a-4e03" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="f80b-2b36-50af-8c93" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="1Characters" id="18ce-d597-7b7a-f965" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -1194,7 +1195,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Company Standard" id="dd11-eede-074e-7b62" collective="false" hidden="false" import="true" page="63" publicationId="4590-6ba9-5482-a1fa" type="unit">
+    <selectionEntry name="Company Standard" id="dd11-eede-074e-7b62" collective="false" hidden="false" import="true" page="63" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="5dbb-76fe-e64b-61d9" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="1Characters" id="d35e-ed1a-ede4-3c1d" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -1318,7 +1319,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Chaplain" id="54de-be57-4ec3-3913" collective="false" hidden="false" import="true" page="64" publicationId="4590-6ba9-5482-a1fa" type="unit">
+    <selectionEntry name="Chaplain" id="54de-be57-4ec3-3913" collective="false" hidden="false" import="true" page="64" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="8de8-04e9-cb5b-7c45" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="1Characters" id="fac4-6084-f828-3f81" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -1594,7 +1595,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         <infoLink name="Psychic Level 1" id="f35f-e489-6e41-4506" hidden="false" targetId="2653-20e1-0ea7-dcc5" type="profile"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="Librarian" id="4f11-67fa-3adf-e0e1" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Librarian" id="4f11-67fa-3adf-e0e1" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="cb28-f182-397a-1a89" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="1Characters" id="31db-d00f-79a3-bb7b" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -1779,7 +1780,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Apothecary" id="d503-8428-85ee-d4d6" collective="false" hidden="false" import="true" page="65" publicationId="4590-6ba9-5482-a1fa" type="unit">
+    <selectionEntry name="Apothecary" id="d503-8428-85ee-d4d6" collective="false" hidden="false" import="true" page="65" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="6df4-3e18-43e2-2537" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="1Characters" id="405e-bfa4-96df-7cf8" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -1902,7 +1903,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Techmarine" id="ee10-1b3b-ecac-e1e7" collective="false" hidden="false" import="true" page="65" publicationId="4590-6ba9-5482-a1fa" type="unit">
+    <selectionEntry name="Techmarine" id="ee10-1b3b-ecac-e1e7" collective="false" hidden="false" import="true" page="65" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="6bf9-37a9-dde7-a7d4" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="1Characters" id="10b1-8208-9654-a974" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -2413,7 +2414,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Veteran Space Marine Assault Squad" id="c3f2-31fd-d3f0-c0f3" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Veteran Space Marine Assault Squad" id="c3f2-31fd-d3f0-c0f3" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="f616-c0f4-7b7c-48ad" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="2Squads" id="6a9c-598d-336f-93fb" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
@@ -2766,7 +2767,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Bike Squadron" id="ed88-0736-5a4c-2795" collective="false" hidden="false" import="true" page="67" publicationId="4590-6ba9-5482-a1fa" type="upgrade">
+    <selectionEntry name="Bike Squadron" id="ed88-0736-5a4c-2795" collective="false" hidden="false" import="true" page="67" publicationId="4590-6ba9-5482-a1fa" type="unit">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="f2ce-2fad-2b71-816d" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="2Squads" id="40b1-efe4-ecce-c2df" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
@@ -2844,10 +2845,13 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry name="Marine Biker w/ Special Weapon" id="94c0-73da-a9f1-f66b" hidden="false" import="true" sortIndex="2" type="upgrade">
+        <selectionEntry name="Marine Biker w/ Special Weapon" id="94c0-73da-a9f1-f66b" hidden="false" import="true" sortIndex="2" type="model">
           <constraints>
             <constraint id="7b9a-6cbf-562b-2357" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="2"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="47"/>
+          </costs>
           <entryLinks>
             <entryLink name="Bolt Pistol" id="07a6-32d3-c6d0-69fe" collective="false" hidden="false" import="true" targetId="b5bb-7853-53cb-bec4" type="selectionEntry">
               <constraints>
@@ -3121,7 +3125,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Space Marine Dreadnought" id="beec-c8b6-3175-e050" collective="false" hidden="false" import="true" page="68" publicationId="4590-6ba9-5482-a1fa" type="upgrade">
+    <selectionEntry name="Space Marine Dreadnought" id="beec-c8b6-3175-e050" collective="false" hidden="false" import="true" page="68" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="e8bf-e2a5-9084-1b1c" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="Walkers" id="71e5-2af1-9840-e552" hidden="false" primary="false" targetId="bcf7-c063-7aca-a066"/>
@@ -3215,7 +3219,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry name="Tarantula" id="4165-53ae-0eed-f9bd" collective="false" hidden="false" import="true" page="68" publicationId="4590-6ba9-5482-a1fa" type="upgrade">
+    <selectionEntry name="Tarantula" id="4165-53ae-0eed-f9bd" collective="false" hidden="false" import="true" page="68" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="7172-c025-f636-743d" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="3Support" id="e10b-3c8a-d27c-9c71" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
@@ -3325,7 +3329,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         <infoLink name="Immune to Psychology" id="7ea4-04c5-1fc2-9d43" hidden="false" targetId="d8b2-410d-01df-0ce8" type="rule"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="Rapier Laser Destroyer" id="7cef-91cc-d553-c1af" collective="false" hidden="false" import="true" page="68" publicationId="4590-6ba9-5482-a1fa" type="upgrade">
+    <selectionEntry name="Rapier Laser Destroyer" id="7cef-91cc-d553-c1af" collective="false" hidden="false" import="true" page="68" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="1bd3-182e-1630-3235" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="3Support" id="2c4b-23a7-5320-7bac" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
@@ -3408,7 +3412,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry name="Space Marine Whirlwind" id="9691-6ae2-65f7-ba31" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Space Marine Whirlwind" id="9691-6ae2-65f7-ba31" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="3200-a8cc-d1e2-7f60" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="3Support" id="31c5-1ea4-037d-9c0e" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
@@ -3511,7 +3515,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry name="Space Marine Land Raider" id="aeb6-ea8f-40f7-a5ba" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Space Marine Land Raider" id="aeb6-ea8f-40f7-a5ba" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="4e60-c61f-aec7-2bb8" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="3Support" id="ecd7-619b-a401-3c30" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
@@ -3639,7 +3643,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry name="Space Marine Predator" id="43cb-628a-f96c-84ad" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Space Marine Predator" id="43cb-628a-f96c-84ad" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="9afb-d741-24dc-fe4c" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="3Support" id="3716-8296-464c-0716" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
@@ -3757,7 +3761,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry name="Space Marine Rhino" id="00cb-45a0-d102-67c7" collective="false" hidden="false" import="true" page="70" publicationId="4590-6ba9-5482-a1fa" type="upgrade">
+    <selectionEntry name="Space Marine Rhino" id="00cb-45a0-d102-67c7" collective="false" hidden="false" import="true" page="70" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="a007-ba9c-eb22-5c43" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="3Support" id="c506-7fe7-f8ec-e4ee" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
@@ -3869,7 +3873,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry name="Space Marine Razorback" id="9ecc-e264-2619-a029" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Space Marine Razorback" id="9ecc-e264-2619-a029" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="b389-1187-9d3b-7f84" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="3Support" id="1b73-aa56-c1ba-9939" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
@@ -3975,7 +3979,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry name="Space Marine Land Speeder" id="4769-a098-b8e1-e70b" collective="false" hidden="false" import="true" page="70" publicationId="4590-6ba9-5482-a1fa" type="upgrade">
+    <selectionEntry name="Space Marine Land Speeder" id="4769-a098-b8e1-e70b" collective="false" hidden="false" import="true" page="70" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="8b27-1c6b-d920-2394" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="Skimmer/Bike" id="fea8-9279-6fc2-a6fd" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
@@ -4069,7 +4073,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Veteran Sergeant Cleutin, Guardian of the Shroud of Sanguinius" id="3f82-ba19-fd6a-db18" collective="false" hidden="false" import="true" page="93" publicationId="308f-63b0-ee37-1c6b" type="upgrade">
+    <selectionEntry name="Veteran Sergeant Cleutin, Guardian of the Shroud of Sanguinius" id="3f82-ba19-fd6a-db18" collective="false" hidden="false" import="true" page="93" publicationId="308f-63b0-ee37-1c6b" type="model">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="d7ab-69f4-36f3-667b" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="1Characters" id="7c01-2ed7-0353-1559" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -4330,7 +4334,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Brother-Captain Tycho, Commander of the 3rd Company" id="8184-45f1-4b8f-f24e" collective="false" hidden="false" import="true" page="98" publicationId="308f-63b0-ee37-1c6b" type="unit">
+    <selectionEntry name="Brother-Captain Tycho, Commander of the 3rd Company" id="8184-45f1-4b8f-f24e" collective="false" hidden="false" import="true" page="98" publicationId="308f-63b0-ee37-1c6b" type="model">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="e8a9-3bea-0ff4-7457" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="1Characters" id="2b9e-efd8-7466-4cb5" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -4398,7 +4402,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
-    <selectionEntry name="Apothecary Corbulo, Sanguinary Priest of the Blood Angels" id="61a8-83a6-8492-8633" collective="false" hidden="false" import="true" page="97" publicationId="308f-63b0-ee37-1c6b" type="upgrade">
+    <selectionEntry name="Apothecary Corbulo, Sanguinary Priest of the Blood Angels" id="61a8-83a6-8492-8633" collective="false" hidden="false" import="true" page="97" publicationId="308f-63b0-ee37-1c6b" type="model">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="52cf-01a0-4f1c-e4e5" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="1Characters" id="77fd-ae4d-0916-cd3a" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -4462,7 +4466,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
-    <selectionEntry name="Chief Librarian Mephiston, Lord of Death" id="8789-531d-de06-2cbe" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Chief Librarian Mephiston, Lord of Death" id="8789-531d-de06-2cbe" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="bff0-c50c-08e4-82e5" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="1Characters" id="4928-73b9-a3ae-0651" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -4526,7 +4530,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
-    <selectionEntry name="Commander Dante, Lord of the Blood Angels" id="9ff8-010a-4673-af0a" collective="false" hidden="false" import="true" page="93" publicationId="308f-63b0-ee37-1c6b" type="upgrade">
+    <selectionEntry name="Commander Dante, Lord of the Blood Angels" id="9ff8-010a-4673-af0a" collective="false" hidden="false" import="true" page="93" publicationId="308f-63b0-ee37-1c6b" type="model">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="f0b4-b56e-6143-4439" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="1Characters" id="01dd-ce38-6b37-60c3" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -4604,7 +4608,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
-    <selectionEntry name="Dante&apos;s Veteran Bodyguard" id="0342-f3dc-79fe-b8d7" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Dante&apos;s Veteran Bodyguard" id="0342-f3dc-79fe-b8d7" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="15a5-7fb6-ab8a-b04f" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="2Squads" id="8ffe-cc25-3484-6fe9" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
@@ -4655,7 +4659,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </modifier>
       </modifiers>
       <selectionEntries>
-        <selectionEntry name="Veterans" id="0790-e40e-9c0f-1aa0" collective="false" hidden="false" import="true" type="upgrade">
+        <selectionEntry name="Veterans" id="0790-e40e-9c0f-1aa0" collective="false" hidden="false" import="true" type="model">
           <constraints>
             <constraint id="d4ec-6c19-69cb-981f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="4"/>
             <constraint id="d61a-e58a-1a5b-fc91" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="4"/>
@@ -4992,7 +4996,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Chapter Master" id="f52a-7286-642f-1f01" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Chapter Master" id="f52a-7286-642f-1f01" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Blood Angels" id="0e25-335b-0d0c-3d98" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="1Characters" id="4705-82cd-687a-e622" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -6445,7 +6449,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Space Marine Vindicator" id="aa9c-56b2-9661-3b66" hidden="false" import="true" type="unit">
+    <selectionEntry name="Space Marine Vindicator" id="aa9c-56b2-9661-3b66" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="3Support" id="3ab4-dfe5-901d-43d4" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
         <categoryLink name="Blood Angels" id="c736-b76f-4ba7-6aca" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>

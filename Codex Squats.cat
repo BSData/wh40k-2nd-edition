@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Squats" id="6583-5ff7-59cc-1fc9" authorName="Boff89" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="25" library="false" revision="4" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Squats" id="6583-5ff7-59cc-1fc9" authorName="Boff89" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="25" library="false" revision="5" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink name="Warlord" id="9bba-059c-3dac-8db1" hidden="false" import="true" targetId="a79b-360c-aabd-7a3b" type="selectionEntry"/>
     <entryLink name="Battle Standard" id="e073-b19b-c3fe-d84f" hidden="false" import="true" targetId="1896-5068-526c-657f" type="selectionEntry"/>
@@ -275,7 +275,7 @@ See datafax for damage table</description>
     </rule>
   </sharedRules>
   <sharedSelectionEntries>
-    <selectionEntry name="Warlord" id="a79b-360c-aabd-7a3b" hidden="false" import="true" type="unit">
+    <selectionEntry name="Warlord" id="a79b-360c-aabd-7a3b" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Squats" id="b5cc-9449-314c-15e7" primary="false" targetId="e206-c273-bb7e-6132"/>
         <categoryLink name="1Characters" id="ece1-20aa-9cd4-c562" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -405,7 +405,7 @@ See datafax for damage table</description>
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry name="Battle Standard" id="1896-5068-526c-657f" hidden="false" import="true" type="unit">
+    <selectionEntry name="Battle Standard" id="1896-5068-526c-657f" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Squats" id="7a4b-e5f6-ed76-a443" primary="false" targetId="e206-c273-bb7e-6132"/>
         <categoryLink name="1Characters" id="abce-a9e1-16f9-ab51" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -489,7 +489,7 @@ See datafax for damage table</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Hearthguard" id="45cf-ec53-ab52-b8a4" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Hearthguard" id="45cf-ec53-ab52-b8a4" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Squats" id="95d3-312e-6ca4-5046" primary="false" targetId="e206-c273-bb7e-6132"/>
         <categoryLink name="1Characters" id="419f-0035-9993-dd46" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -569,7 +569,7 @@ See datafax for damage table</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Engineer Guildmaster" id="240f-67e6-cede-e2cc" hidden="false" import="true" type="unit">
+    <selectionEntry name="Engineer Guildmaster" id="240f-67e6-cede-e2cc" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Squats" id="b7b8-a170-b60a-9f3f" primary="false" targetId="e206-c273-bb7e-6132"/>
         <categoryLink name="1Characters" id="6553-bee1-df5b-c97b" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -672,7 +672,7 @@ Roll a D6 at the end of the turn:
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Ancestor Lord" id="643c-0f77-aca9-a901" hidden="false" import="true" type="unit">
+    <selectionEntry name="Ancestor Lord" id="643c-0f77-aca9-a901" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Squats" id="6747-45ab-7ae2-3f2e" primary="false" targetId="e206-c273-bb7e-6132"/>
         <categoryLink name="1Characters" id="20e3-e67c-01be-dd14" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -943,7 +943,7 @@ Roll a D6 at the end of the turn:
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
-    <selectionEntry name="Thunderer Squad" id="0c82-f247-3748-d44a" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Thunderer Squad" id="0c82-f247-3748-d44a" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="Squats" id="107c-2251-7024-00a0" primary="false" targetId="e206-c273-bb7e-6132"/>
         <categoryLink name="2Squads" id="30cc-b3f9-6add-73cc" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
@@ -1149,7 +1149,7 @@ Roll a D6 at the end of the turn:
         <infoLink name="Squat Bike Damage Table" id="a38d-b36d-96f9-0904" hidden="false" targetId="3c7a-84be-6349-7dc9" type="rule"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="Heavy Weapons Bike" id="6d58-aa4a-e0e0-d9e2" hidden="false" import="true" type="unit">
+    <selectionEntry name="Heavy Weapons Bike" id="6d58-aa4a-e0e0-d9e2" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Squats" id="45d7-cbe5-2027-6eb5" primary="false" targetId="e206-c273-bb7e-6132"/>
         <categoryLink name="3Support" id="9b1b-d3be-6cda-3639" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
@@ -1211,7 +1211,7 @@ Roll a D6 at the end of the turn:
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
-    <selectionEntry name="Rhino" id="ff73-3b73-86b2-537e" collective="false" hidden="false" import="true" page="70" publicationId="4590-6ba9-5482-a1fa" type="unit">
+    <selectionEntry name="Rhino" id="ff73-3b73-86b2-537e" collective="false" hidden="false" import="true" page="70" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Squats" id="b022-632b-acaf-4bf0" primary="false" targetId="e206-c273-bb7e-6132"/>
         <categoryLink name="3Support" id="0e90-14dd-59df-412f" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
@@ -1302,7 +1302,7 @@ Roll a D6 at the end of the turn:
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
-    <selectionEntry name="Land Raider" id="a8f2-dc80-00a8-00e1" collective="false" hidden="false" import="true" type="unit">
+    <selectionEntry name="Land Raider" id="a8f2-dc80-00a8-00e1" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Squats" id="3417-6056-aea3-4130" primary="false" targetId="e206-c273-bb7e-6132"/>
         <categoryLink name="3Support" id="a286-0c14-5127-6b85" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
@@ -1415,7 +1415,7 @@ Roll a D6 at the end of the turn:
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
-    <selectionEntry name="Hearthguard Bodyguard" id="425c-bec0-18e5-977f" hidden="false" import="true" subType="unit-group" type="unit">
+    <selectionEntry name="Hearthguard Bodyguard" id="425c-bec0-18e5-977f" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="1Characters" id="5d91-0e55-b880-b1ab" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
         <categoryLink name="Squats" id="c5d2-0837-2286-e74a" hidden="false" primary="false" targetId="e206-c273-bb7e-6132"/>

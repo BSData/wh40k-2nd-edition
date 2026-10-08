@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Legion of the Damned" id="8d30-f85a-223d-697c" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff89" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="31" library="false" revision="7" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Legion of the Damned" id="8d30-f85a-223d-697c" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff89" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="31" library="false" revision="8" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink name="Legion of the Damned Commander" id="c6d3-4f59-bb7b-cb64" hidden="false" import="true" targetId="b3bf-f27d-4c9a-ba36" type="selectionEntry"/>
     <entryLink name="Chaplain" id="10d7-a6ab-2164-9a8c" hidden="false" import="true" targetId="19be-b66b-0dae-a781" type="selectionEntry"/>
@@ -177,9 +177,10 @@ Bike</characteristic>
         <characteristic name="I" typeId="76cb-4fd1-7571-e697">5</characteristic>
         <characteristic name="A" typeId="6d89-52f1-9c48-ac8c">3</characteristic>
         <characteristic name="LD" typeId="dfcc-1070-ddf7-ad7d">10</characteristic>
-        <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0">Strength 7
-D10 Damage
--4 Save</characteristic>
+        <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0"/>
+        <characteristic name="Ram Strength" typeId="a025-016a-2152-7b47">7</characteristic>
+        <characteristic name="Ram Damage" typeId="84ee-e518-c9ac-7b7e">D10</characteristic>
+        <characteristic name="Ram Save Modifier" typeId="e929-6e42-f2a7-c76d">-4</characteristic>
         <characteristic name="Armour Location" typeId="8376-0954-7923-aeb7">Legs
 Left Arm
 Right ARm
@@ -575,7 +576,7 @@ See datafax for damage table</description>
         <infoLink name="Space Marine Bike" id="3b5a-a21d-8b4f-2671" hidden="false" targetId="7d03-4a39-e533-e425" type="profile"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="Company Icon" id="8fc1-1f5e-f6a1-a822" collective="false" hidden="false" import="true" page="Issue 224" publicationId="8eed-45fd-d4be-9a1b" type="unit">
+    <selectionEntry name="Company Icon" id="8fc1-1f5e-f6a1-a822" collective="false" hidden="false" import="true" page="Issue 224" publicationId="8eed-45fd-d4be-9a1b" type="model">
       <categoryLinks>
         <categoryLink name="Legion of the Damned" id="5c05-549b-1e23-1a8e" hidden="false" primary="false" targetId="f7f4-2733-743a-8971"/>
         <categoryLink name="1Characters" id="5fa4-6f4f-33ee-f9ad" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -1417,7 +1418,7 @@ See datafax for damage table</description>
         <modifier field="info" type="add" value="Vehicle Wargear Cards will apply the same wargear to each model in the group - If you want different wargear per biker, add a new Biker Legionnaire with the + for each unique loadout"/>
       </modifiers>
       <selectionEntries>
-        <selectionEntry name="Biker Legionnaires" id="289c-7c18-56ff-6be0" collective="false" hidden="false" import="true" sortIndex="4" type="model">
+        <selectionEntry name="Biker Legionnaires" id="289c-7c18-56ff-6be0" collective="false" hidden="false" import="true" sortIndex="1" type="model">
           <constraints>
             <constraint id="50e6-af72-fdf5-123f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="5"/>
             <constraint id="02be-1157-153c-86f2" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
@@ -1555,7 +1556,7 @@ See datafax for damage table</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Dreadnought" id="e28d-aebf-0be0-f82a" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Dreadnought" id="e28d-aebf-0be0-f82a" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Legion of the Damned" id="73bb-c95b-4ab6-0f66" hidden="false" primary="false" targetId="f7f4-2733-743a-8971"/>
         <categoryLink name="3Support" id="61f7-785b-1b1e-f9aa" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
@@ -1770,7 +1771,7 @@ See datafax for damage table</description>
         <infoLink name="Legionnaire" id="f397-ce0c-42dd-c1ed" hidden="false" targetId="5b65-bfeb-2313-cb8a" type="profile"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="Space Marine Land Speeder" id="cffd-3942-739c-4f9a" collective="false" hidden="false" import="true" page="70" publicationId="4590-6ba9-5482-a1fa" type="unit">
+    <selectionEntry name="Space Marine Land Speeder" id="cffd-3942-739c-4f9a" collective="false" hidden="false" import="true" page="70" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Skimmer/Bike" id="bda7-d3e0-0083-1525" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
         <categoryLink name="3Support" id="9409-13c4-725c-1b7c" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Imperial Guard" id="82fc-8ad4-7b4b-dd4a" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="12" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Imperial Guard" id="82fc-8ad4-7b4b-dd4a" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="13" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>I haven&apos;t put restrictions for the Regimental style to build a list, such as 1 Command HQ, 3 Guard/Heavy Weapons teams, 3 additional unit. Doing so would be rather messy and complicated with all the possible choices, and frankly isn&apos;t really a huge deal.
 
 Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct units.</readme>
@@ -498,9 +498,11 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
         <characteristic name="I" typeId="76cb-4fd1-7571-e697">3</characteristic>
         <characteristic name="A" typeId="6d89-52f1-9c48-ac8c">2</characteristic>
         <characteristic name="LD" typeId="dfcc-1070-ddf7-ad7d">7</characteristic>
-        <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0">Strength 6
-D6 Damage
--3 Save</characteristic>
+        <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0">
+</characteristic>
+        <characteristic name="Ram Strength" typeId="a025-016a-2152-7b47">6</characteristic>
+        <characteristic name="Ram Damage" typeId="84ee-e518-c9ac-7b7e">D6</characteristic>
+        <characteristic name="Ram Save Modifier" typeId="e929-6e42-f2a7-c76d">-3</characteristic>
         <characteristic name="Armour Location" typeId="8376-0954-7923-aeb7">Legs
 Assault Cannon
 Body

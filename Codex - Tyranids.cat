@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Tyranids" id="4026-2a6f-5a07-ce65" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="2" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Tyranids" id="4026-2a6f-5a07-ce65" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="3" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="Individuals" id="1439-f160-c1a8-1061" hidden="false"/>
     <categoryEntry name="Broods" id="0de2-91d6-86dc-d0bc" hidden="false"/>
@@ -675,9 +675,9 @@ Fast 15</characteristic>
         <characteristic name="I" typeId="76cb-4fd1-7571-e697">5</characteristic>
         <characteristic name="A" typeId="6d89-52f1-9c48-ac8c">5</characteristic>
         <characteristic name="LD" typeId="dfcc-1070-ddf7-ad7d">10</characteristic>
-        <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0">Strength 8
-D12 Damage
--5 Save</characteristic>
+        <characteristic name="Ram Strength" typeId="a025-016a-2152-7b47">8</characteristic>
+        <characteristic name="Ram Damage" typeId="84ee-e518-c9ac-7b7e">D12</characteristic>
+        <characteristic name="Ram Save Modifier" typeId="e929-6e42-f2a7-c76d">-5</characteristic>
         <characteristic name="Armour Location" typeId="8376-0954-7923-aeb7">Foot
 Body
 Arms</characteristic>
@@ -701,9 +701,9 @@ Fast 20</characteristic>
         <characteristic name="I" typeId="76cb-4fd1-7571-e697">4</characteristic>
         <characteristic name="A" typeId="6d89-52f1-9c48-ac8c">3</characteristic>
         <characteristic name="LD" typeId="dfcc-1070-ddf7-ad7d">10</characteristic>
-        <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0">Strenght 8
-D12 Damage
--5 Save</characteristic>
+        <characteristic name="Ram Strength" typeId="a025-016a-2152-7b47">8</characteristic>
+        <characteristic name="Ram Damage" typeId="84ee-e518-c9ac-7b7e">D12</characteristic>
+        <characteristic name="Ram Save Modifier" typeId="e929-6e42-f2a7-c76d">-5</characteristic>
         <characteristic name="Armour Location" typeId="8376-0954-7923-aeb7">Foot
 Body
 Frag Spine Arms</characteristic>
@@ -733,9 +733,9 @@ Fast 15</characteristic>
         <characteristic name="I" typeId="76cb-4fd1-7571-e697">4</characteristic>
         <characteristic name="A" typeId="6d89-52f1-9c48-ac8c">2</characteristic>
         <characteristic name="LD" typeId="dfcc-1070-ddf7-ad7d">10</characteristic>
-        <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0">Strength 8
--5 Save
-D12 Damage</characteristic>
+        <characteristic name="Ram Strength" typeId="a025-016a-2152-7b47">8</characteristic>
+        <characteristic name="Ram Damage" typeId="84ee-e518-c9ac-7b7e">D12</characteristic>
+        <characteristic name="Ram Save Modifier" typeId="e929-6e42-f2a7-c76d">-5</characteristic>
         <characteristic name="Armour Location" typeId="8376-0954-7923-aeb7">Foot
 Body
 Bio-Cannon</characteristic>
@@ -772,9 +772,9 @@ Fast 15</characteristic>
         <characteristic name="I" typeId="76cb-4fd1-7571-e697">4</characteristic>
         <characteristic name="A" typeId="6d89-52f1-9c48-ac8c">2</characteristic>
         <characteristic name="LD" typeId="dfcc-1070-ddf7-ad7d">10</characteristic>
-        <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0">Strenght 8
-D12 Damage
--5 Save</characteristic>
+        <characteristic name="Ram Strength" typeId="a025-016a-2152-7b47">8</characteristic>
+        <characteristic name="Ram Damage" typeId="84ee-e518-c9ac-7b7e">D12</characteristic>
+        <characteristic name="Ram Save Modifier" typeId="e929-6e42-f2a7-c76d">-5</characteristic>
         <characteristic name="Armour Location" typeId="8376-0954-7923-aeb7">Foot
 Body
 Arms*</characteristic>

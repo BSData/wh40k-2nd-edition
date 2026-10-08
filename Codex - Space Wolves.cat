@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Space Wolves" id="8d0e-9c4e-17af-ed93" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="19" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Space Wolves" id="8d0e-9c4e-17af-ed93" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="20" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>Terminators cannot add the teleport ability (which you need to increase their points by 50%) due to a limitation in Battlescribe. No way to modify the points in that way. 
 
 If they ever change that I will update. Until then, ye olde calcuator will do!</readme>
@@ -359,9 +359,10 @@ and  courage  in  the face of death. Once broken, a Space Marine squad may rally
         <characteristic name="I" typeId="76cb-4fd1-7571-e697">5</characteristic>
         <characteristic name="A" typeId="6d89-52f1-9c48-ac8c">3</characteristic>
         <characteristic name="LD" typeId="dfcc-1070-ddf7-ad7d">10</characteristic>
-        <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0">Strength 7
-D10 Damage
--4 Save</characteristic>
+        <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0"/>
+        <characteristic name="Ram Strength" typeId="a025-016a-2152-7b47">7</characteristic>
+        <characteristic name="Ram Damage" typeId="84ee-e518-c9ac-7b7e">D10</characteristic>
+        <characteristic name="Ram Save Modifier" typeId="e929-6e42-f2a7-c76d">-4</characteristic>
         <characteristic name="Armour Location" typeId="8376-0954-7923-aeb7">Legs
 Left Arm
 Right ARm
@@ -917,9 +918,10 @@ Stormcaller also adds +1 to the wielder&apos;s A and I, and adds a Strength bonu
         <characteristic name="I" typeId="76cb-4fd1-7571-e697">5</characteristic>
         <characteristic name="A" typeId="6d89-52f1-9c48-ac8c">4</characteristic>
         <characteristic name="LD" typeId="dfcc-1070-ddf7-ad7d">10</characteristic>
-        <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0">7
-D10 Damage
--4 Save</characteristic>
+        <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0"/>
+        <characteristic name="Ram Strength" typeId="a025-016a-2152-7b47">7</characteristic>
+        <characteristic name="Ram Damage" typeId="84ee-e518-c9ac-7b7e">D10</characteristic>
+        <characteristic name="Ram Save Modifier" typeId="e929-6e42-f2a7-c76d">-4</characteristic>
         <characteristic name="Armour Location" typeId="8376-0954-7923-aeb7">Legs
 Left Arm
 Right Arm
@@ -1136,7 +1138,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
     </rule>
   </sharedRules>
   <sharedSelectionEntries>
-    <selectionEntry name="Wolf Lord" id="e664-c21f-4492-a7dc" collective="false" hidden="false" import="true" page="56" publicationId="0f8d-af97-3972-324c" type="unit">
+    <selectionEntry name="Wolf Lord" id="e664-c21f-4492-a7dc" collective="false" hidden="false" import="true" page="56" publicationId="0f8d-af97-3972-324c" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="0583-b97d-4085-5a26" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
         <categoryLink name="1Characters" id="cfe0-a287-6473-1c3f" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -1396,7 +1398,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
         </entryLink>
       </entryLinks>
     </selectionEntry>
-    <selectionEntry name="Wolf Priest" id="54de-be57-4ec3-3913" collective="false" hidden="false" import="true" page="56" publicationId="0f8d-af97-3972-324c" type="unit">
+    <selectionEntry name="Wolf Priest" id="54de-be57-4ec3-3913" collective="false" hidden="false" import="true" page="56" publicationId="0f8d-af97-3972-324c" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="42e4-49c7-68d7-ae36" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
         <categoryLink name="1Characters" id="414a-af03-8d10-d2a7" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -1623,7 +1625,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
         <infoLink name="Psychic Level 1" id="f35f-e489-6e41-4506" hidden="false" targetId="2653-20e1-0ea7-dcc5" type="profile"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="Rune Priest" id="4f11-67fa-3adf-e0e1" collective="false" hidden="false" import="true" type="unit">
+    <selectionEntry name="Rune Priest" id="4f11-67fa-3adf-e0e1" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="8c89-cc03-4c72-7ec3" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
         <categoryLink name="1Characters" id="ac8e-f8ad-50b5-37c7" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -1837,7 +1839,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Iron Priest" id="ee10-1b3b-ecac-e1e7" collective="false" hidden="false" import="true" page="57" publicationId="0f8d-af97-3972-324c" type="unit">
+    <selectionEntry name="Iron Priest" id="ee10-1b3b-ecac-e1e7" collective="false" hidden="false" import="true" page="57" publicationId="0f8d-af97-3972-324c" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="ebb9-4a0a-ce17-3414" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
         <categoryLink name="1Characters" id="7d6a-280f-b0e6-9c64" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -1994,7 +1996,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Wolf Guard Champion" id="99e2-e911-aba3-1722" collective="false" hidden="false" import="true" page="57" publicationId="0f8d-af97-3972-324c" type="upgrade">
+    <selectionEntry name="Wolf Guard Champion" id="99e2-e911-aba3-1722" collective="false" hidden="false" import="true" page="57" publicationId="0f8d-af97-3972-324c" type="model">
       <categoryLinks>
         <categoryLink name="1Characters" id="c25f-8014-59e8-9f15" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
         <categoryLink name="Space Wolves" id="ed9e-eeb8-773d-72b7" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
@@ -2715,7 +2717,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                 </entryLink>
               </entryLinks>
               <selectionEntries>
-                <selectionEntry name="Blood Claws" id="647c-78b3-05e2-28cd" hidden="false" import="true" type="upgrade">
+                <selectionEntry name="Blood Claws" id="647c-78b3-05e2-28cd" hidden="false" import="true" type="model">
                   <constraints>
                     <constraint id="5a4a-aba7-1c8f-43af" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="9"/>
                     <constraint id="4c52-1350-7505-cbbe" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="9"/>
@@ -3116,7 +3118,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                     </entryLink>
                   </entryLinks>
                   <selectionEntries>
-                    <selectionEntry name="Blood Claws" id="f169-c1fd-7999-0eb9" hidden="false" import="true" type="upgrade">
+                    <selectionEntry name="Blood Claws" id="f169-c1fd-7999-0eb9" hidden="false" import="true" type="model">
                       <constraints>
                         <constraint id="f46d-0d7d-91e5-2a6f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="4"/>
                         <constraint id="9495-576d-3865-14e0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="4"/>
@@ -3365,7 +3367,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                     <constraint id="98b8-3647-9851-9d3d" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
                   </constraints>
                   <selectionEntries>
-                    <selectionEntry name="Blood Claws" id="ee51-69b6-4b79-ea0f" hidden="false" import="true" type="upgrade">
+                    <selectionEntry name="Blood Claws" id="ee51-69b6-4b79-ea0f" hidden="false" import="true" type="model">
                       <constraints>
                         <constraint id="90ae-3a06-cb70-d7ce" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="5"/>
                         <constraint id="3263-07fb-b18a-77a5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="5"/>
@@ -3720,7 +3722,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
         </selectionEntryGroup>
         <selectionEntryGroup name="Scout w/ Special or Heavy Weapon" id="bcf2-5ecd-75f3-2807" hidden="false">
           <selectionEntries>
-            <selectionEntry name="Scout w/ Special or Heavy Weapon" id="184d-d009-6e7d-76a8" hidden="false" import="true" type="upgrade">
+            <selectionEntry name="Scout w/ Special or Heavy Weapon" id="184d-d009-6e7d-76a8" hidden="false" import="true" type="model">
               <constraints>
                 <constraint id="da1c-ec8f-3c87-be6d" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
@@ -3864,7 +3866,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry name="Space Marine Dreadnought" id="beec-c8b6-3175-e050" collective="false" hidden="false" import="true" page="68" publicationId="4590-6ba9-5482-a1fa" type="unit">
+    <selectionEntry name="Space Marine Dreadnought" id="beec-c8b6-3175-e050" collective="false" hidden="false" import="true" page="68" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="aab2-78d3-a7a0-e5ab" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
         <categoryLink name="Walkers" id="af1c-94c1-a1cc-82f9" hidden="false" primary="false" targetId="bcf7-c063-7aca-a066"/>
@@ -3967,7 +3969,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry name="Tarantula" id="4165-53ae-0eed-f9bd" collective="false" hidden="false" import="true" page="61" publicationId="0f8d-af97-3972-324c" type="unit">
+    <selectionEntry name="Tarantula" id="4165-53ae-0eed-f9bd" collective="false" hidden="false" import="true" page="61" publicationId="0f8d-af97-3972-324c" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="efea-bcd2-d2a1-0ec9" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
         <categoryLink name="3Support" id="4899-9f2a-2411-c4a8" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
@@ -4075,7 +4077,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
         <infoLink name="Servitor" id="90ec-e365-3d5e-fed0" hidden="false" targetId="83da-e1a2-9ae2-346a" type="profile"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="Rapier Laser Destroyer" id="7cef-91cc-d553-c1af" collective="false" hidden="false" import="true" page="68" publicationId="4590-6ba9-5482-a1fa" type="unit">
+    <selectionEntry name="Rapier Laser Destroyer" id="7cef-91cc-d553-c1af" collective="false" hidden="false" import="true" page="68" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="5b4c-c1d6-b39f-be41" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
         <categoryLink name="3Support" id="5d68-f6ca-4ac4-2a85" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
@@ -4144,7 +4146,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry name="Space Marine Land Raider" id="aeb6-ea8f-40f7-a5ba" collective="false" hidden="false" import="true" type="unit">
+    <selectionEntry name="Space Marine Land Raider" id="aeb6-ea8f-40f7-a5ba" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="8f7e-4722-946f-3440" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
         <categoryLink name="3Support" id="286f-37e4-f46c-57dd" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
@@ -4279,7 +4281,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry name="Space Marine Predator" id="43cb-628a-f96c-84ad" collective="false" hidden="false" import="true" type="unit">
+    <selectionEntry name="Space Marine Predator" id="43cb-628a-f96c-84ad" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="4fd2-a62d-4c24-7c8d" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
         <categoryLink name="3Support" id="c65a-7374-b67c-3571" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
@@ -4404,7 +4406,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry name="Space Marine Rhino" id="00cb-45a0-d102-67c7" collective="false" hidden="false" import="true" page="70" publicationId="4590-6ba9-5482-a1fa" type="unit">
+    <selectionEntry name="Space Marine Rhino" id="00cb-45a0-d102-67c7" collective="false" hidden="false" import="true" page="70" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="295e-37e0-6659-d1b9" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
         <categoryLink name="3Support" id="d561-175b-8c77-1388" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
@@ -4525,7 +4527,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry name="Space Marine Land Speeder" id="4769-a098-b8e1-e70b" collective="false" hidden="false" import="true" page="70" publicationId="4590-6ba9-5482-a1fa" type="unit">
+    <selectionEntry name="Space Marine Land Speeder" id="4769-a098-b8e1-e70b" collective="false" hidden="false" import="true" page="70" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="29cb-aa8c-87b1-f77a" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
         <categoryLink name="Skimmer/Bike" id="7505-d995-5330-ac73" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
@@ -4626,7 +4628,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Njal Stormcaller" id="145c-21a0-1469-dae3" collective="false" hidden="false" import="true" type="unit">
+    <selectionEntry name="Njal Stormcaller" id="145c-21a0-1469-dae3" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="d860-24d5-9bec-03a9" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
         <categoryLink name="1Characters" id="7c1d-e898-3ae0-547d" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -4707,7 +4709,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
-    <selectionEntry name="Great Wolf Logan Grimnar" id="a1dd-ee6c-ab43-cd6e" collective="false" hidden="false" import="true" type="unit">
+    <selectionEntry name="Great Wolf Logan Grimnar" id="a1dd-ee6c-ab43-cd6e" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="a660-1597-7199-3561" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
         <categoryLink name="1Characters" id="959a-3553-611b-203e" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -4770,7 +4772,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
-    <selectionEntry name="Wolf Guard Ranulf" id="6029-55f6-5155-dcdc" collective="false" hidden="false" import="true" type="unit">
+    <selectionEntry name="Wolf Guard Ranulf" id="6029-55f6-5155-dcdc" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="e98d-c7e6-2eb4-be4b" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
         <categoryLink name="1Characters" id="00ef-2a2a-743a-9c10" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -4846,7 +4848,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Wolf Guard Durfast of Mordrak" id="ef78-2d4e-0226-4956" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Wolf Guard Durfast of Mordrak" id="ef78-2d4e-0226-4956" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="5918-312c-eee6-05f2" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
         <categoryLink name="1Characters" id="2a1d-6100-7201-1889" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -5050,7 +5052,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Servitor Bodyguard" id="f7a9-f6c8-7eb7-011d" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Servitor Bodyguard" id="f7a9-f6c8-7eb7-011d" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="5b26-a08c-783a-318a" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
         <categoryLink name="3Support" id="22d3-6640-dec4-cc47" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
@@ -5071,7 +5073,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
         </modifierGroup>
       </modifierGroups>
       <selectionEntries>
-        <selectionEntry name="Servitor" id="ffbd-eac7-e908-26c0" collective="false" hidden="false" import="true" subType="unit-group" type="unit">
+        <selectionEntry name="Servitor" id="ffbd-eac7-e908-26c0" collective="false" hidden="false" import="true" type="model">
           <constraints>
             <constraint id="9ff0-9ffb-3c8c-3ff1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="5"/>
             <constraint id="6d42-eec9-c348-2571" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
@@ -5113,7 +5115,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry name="Wolf Priest Ulrik the Slayer" id="ceb0-ca0d-ad06-5a2b" collective="false" hidden="false" import="true" type="unit">
+    <selectionEntry name="Wolf Priest Ulrik the Slayer" id="ceb0-ca0d-ad06-5a2b" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="5e8a-9b27-3724-3c5b" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
         <categoryLink name="1Characters" id="5191-f3f1-98bb-38c4" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -5172,7 +5174,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
-    <selectionEntry name="Wolf Lord Ragnar Blackmane" id="64fa-ece9-bf27-ecf6" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Wolf Lord Ragnar Blackmane" id="64fa-ece9-bf27-ecf6" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="1a76-85f3-3c19-b792" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
         <categoryLink name="1Characters" id="d5a5-6f36-24c0-be55" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -5236,7 +5238,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
-    <selectionEntry name="Bjorn the Fell-Handed" id="87f0-f4da-7f87-a1e2" collective="false" hidden="false" import="true" type="unit">
+    <selectionEntry name="Bjorn the Fell-Handed" id="87f0-f4da-7f87-a1e2" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="498c-58a1-7162-4e1a" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
         <categoryLink name="Walkers" id="c57a-9022-d576-b8ac" hidden="false" primary="false" targetId="bcf7-c063-7aca-a066"/>
@@ -5353,7 +5355,7 @@ You cannot reduce the damage result below 1 and cannot modify any further once y
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry name="Wolf Lord Kyrl Grimblood" id="6059-468c-d757-ec09" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Wolf Lord Kyrl Grimblood" id="6059-468c-d757-ec09" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="37fa-f960-af31-6708" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
         <categoryLink name="1Characters" id="96c8-b455-540f-089f" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -5484,7 +5486,7 @@ You cannot reduce the damage result below 1 and cannot modify any further once y
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Chapter Master" id="0885-b3aa-198a-320b" hidden="false" import="true" type="unit">
+    <selectionEntry name="Chapter Master" id="0885-b3aa-198a-320b" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="082b-eb04-1fec-c10b" primary="false" targetId="b686-76f8-6874-e3e9"/>
         <categoryLink name="1Characters" id="d883-db86-6e7f-57c2" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>

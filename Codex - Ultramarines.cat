@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Ultramarines" id="138e-c671-3180-f615" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="37" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Ultramarines" id="138e-c671-3180-f615" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="38" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>Ultramarines Codex</readme>
   <entryLinks>
     <entryLink name="Space Marine Captain" id="e1eb-4981-2689-1fc2" collective="false" hidden="false" import="true" targetId="e664-c21f-4492-a7dc" type="selectionEntry"/>
@@ -380,9 +380,10 @@ Bike</characteristic>
         <characteristic name="I" typeId="76cb-4fd1-7571-e697">5</characteristic>
         <characteristic name="A" typeId="6d89-52f1-9c48-ac8c">3</characteristic>
         <characteristic name="LD" typeId="dfcc-1070-ddf7-ad7d">10</characteristic>
-        <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0">Strength 7
-D10 Damage
--4 Save</characteristic>
+        <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0"/>
+        <characteristic name="Ram Strength" typeId="a025-016a-2152-7b47">7</characteristic>
+        <characteristic name="Ram Damage" typeId="84ee-e518-c9ac-7b7e">D10</characteristic>
+        <characteristic name="Ram Save Modifier" typeId="e929-6e42-f2a7-c76d">-4</characteristic>
         <characteristic name="Armour Location" typeId="8376-0954-7923-aeb7">Legs
 Left Arm
 Right ARm
@@ -1256,7 +1257,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Company Standard" id="dd11-eede-074e-7b62" collective="false" hidden="false" import="true" page="63" publicationId="4590-6ba9-5482-a1fa" type="unit">
+    <selectionEntry name="Company Standard" id="dd11-eede-074e-7b62" collective="false" hidden="false" import="true" page="63" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Ultramarines" id="1210-cff0-57fc-c37b" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
         <categoryLink name="1Characters" id="dc23-1180-3267-5894" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -3006,10 +3007,13 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry name="Marine Biker w/ Special Weapon" id="8636-01fe-0a89-df80" hidden="false" import="true" sortIndex="2" type="upgrade">
+        <selectionEntry name="Marine Biker w/ Special Weapon" id="8636-01fe-0a89-df80" hidden="false" import="true" sortIndex="2" type="model">
           <constraints>
             <constraint id="e5ab-d002-d90f-6437" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="2"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="47"/>
+          </costs>
           <entryLinks>
             <entryLink name="Bolt Pistol" id="4d4c-c798-48a2-24ff" collective="false" hidden="false" import="true" targetId="b5bb-7853-53cb-bec4" type="selectionEntry">
               <constraints>
@@ -3502,7 +3506,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry name="Rapier Laser Destroyer" id="7cef-91cc-d553-c1af" collective="false" hidden="false" import="true" page="68" publicationId="4590-6ba9-5482-a1fa" type="unit">
+    <selectionEntry name="Rapier Laser Destroyer" id="7cef-91cc-d553-c1af" collective="false" hidden="false" import="true" page="68" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Ultramarines" id="c490-6084-a59c-bf92" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
         <categoryLink name="3Support" id="21a5-659e-819b-f80c" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
@@ -4207,7 +4211,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry name="Space Marine Land Speeder" id="4769-a098-b8e1-e70b" collective="false" hidden="false" import="true" page="70" publicationId="4590-6ba9-5482-a1fa" type="unit">
+    <selectionEntry name="Space Marine Land Speeder" id="4769-a098-b8e1-e70b" collective="false" hidden="false" import="true" page="70" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Ultramarines" id="da6f-2949-4e8b-37c6" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
         <categoryLink name="Skimmer/Bike" id="9b8a-1d2b-be24-313f" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
@@ -5318,7 +5322,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         </modifierGroup>
       </modifierGroups>
       <selectionEntries>
-        <selectionEntry name="Legionnaires" id="2bd2-d490-5dc0-61f8" collective="false" hidden="false" import="true" type="upgrade">
+        <selectionEntry name="Legionnaires" id="2bd2-d490-5dc0-61f8" collective="false" hidden="false" import="true" type="model">
           <constraints>
             <constraint id="c892-c24e-be7e-3611" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="4"/>
             <constraint id="3d47-3717-73f7-1096" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="4"/>
@@ -6530,7 +6534,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry name="Space Marine Vindicator" id="53e9-c3d4-e1a2-de17" hidden="false" import="true" type="unit">
+    <selectionEntry name="Space Marine Vindicator" id="53e9-c3d4-e1a2-de17" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="3Support" id="9742-1e78-4a9d-e47b" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
         <categoryLink name="Ultramarines" id="9d80-85ae-c6ee-9115" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>

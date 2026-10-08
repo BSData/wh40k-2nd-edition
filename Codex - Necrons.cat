@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Necrons" id="f649-eb44-08cb-0ba3" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="3" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Necrons" id="f649-eb44-08cb-0ba3" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="4" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>V1 is just the White Dwarf units. May add the fan rules in later if people want</readme>
   <entryLinks>
     <entryLink name="Necron Lord" id="5e18-36c7-0d37-4cfb" collective="false" hidden="false" import="true" targetId="8a1f-c19a-1e19-d04f" type="selectionEntry"/>
@@ -177,7 +177,7 @@ control of the vehicle</description>
         <infoLink name="Close Combat" id="1f32-7bd2-0607-f5b7" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="Necron Lord" id="8a1f-c19a-1e19-d04f" collective="false" hidden="false" import="true" type="unit">
+    <selectionEntry name="Necron Lord" id="8a1f-c19a-1e19-d04f" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Necrons" id="3e43-fde6-3902-95e3" hidden="false" primary="false" targetId="722d-8a5c-d442-498a"/>
         <categoryLink name="1Characters" id="296e-8d81-e2d7-e5dd" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -251,7 +251,7 @@ control of the vehicle</description>
         <infoLink name="Metal Flayer" id="98ce-085a-cdcf-2f83" hidden="false" targetId="01b4-1353-5ffc-a871" type="rule"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="Scarab" id="16d1-76ae-1849-9e8b" collective="false" hidden="false" import="true" type="unit">
+    <selectionEntry name="Scarab" id="16d1-76ae-1849-9e8b" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Necrons" id="510d-5c0e-4974-1acd" hidden="false" primary="false" targetId="722d-8a5c-d442-498a"/>
         <categoryLink name="2Squads" id="5e7a-0217-f0b1-4a67" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
@@ -279,7 +279,7 @@ control of the vehicle</description>
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry name="Necron Destroyer" id="2d33-f5d2-342c-bac6" collective="false" hidden="false" import="true" type="unit">
+    <selectionEntry name="Necron Destroyer" id="2d33-f5d2-342c-bac6" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Necrons" id="8def-db50-6a5f-4a49" hidden="false" primary="false" targetId="722d-8a5c-d442-498a"/>
         <categoryLink name="3Support" id="5422-f8ef-efb1-ab22" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>

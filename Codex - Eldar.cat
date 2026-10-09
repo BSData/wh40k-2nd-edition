@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Eldar" id="3da1-2b23-4a40-323e" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="18" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Eldar" id="3da1-2b23-4a40-323e" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="19" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="sup" id="c9ee-e42d-077e-bfcd" hidden="false"/>
   </categoryEntries>
@@ -1957,7 +1957,7 @@ See datafax for full damage table</description>
             <infoLink name="Guardian" id="884e-f330-1edc-f11c" hidden="false" targetId="924a-8e45-c703-0d8f" type="profile"/>
           </infoLinks>
         </entryLink>
-        <entryLink name="Lasgun" id="a9d9-72ee-2d4e-06ab" hidden="false" import="true" targetId="0568-5866-b015-7be9" type="selectionEntry">
+        <entryLink name="Laspistol" id="a9d9-72ee-2d4e-06ab" hidden="false" import="true" targetId="6e11-978c-f2f0-8477" type="selectionEntry">
           <constraints>
             <constraint id="c7de-526c-781d-defc" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
             <constraint id="3e6c-ce3e-e924-c1db" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
@@ -1978,7 +1978,7 @@ See datafax for full damage table</description>
       </costs>
       <entryLinks>
         <entryLink name="Assault Weapons" id="f329-540c-5f64-ec7f" collective="false" hidden="false" import="true" targetId="b18d-cd92-629f-c211" type="selectionEntryGroup"/>
-        <entryLink name="Up to 2 Special Weapons" id="f874-25b9-7b61-447f" hidden="false" import="true" targetId="551d-f5e3-60d1-85af" type="selectionEntryGroup">
+        <entryLink name="Special Weapons" id="f874-25b9-7b61-447f" hidden="false" import="true" targetId="551d-f5e3-60d1-85af" type="selectionEntryGroup">
           <modifiers>
             <modifier field="4764-9fe8-44b7-34c3" type="set" value="2"/>
           </modifiers>
@@ -2023,12 +2023,12 @@ See datafax for full damage table</description>
               <modifiers>
                 <modifier field="3f56-e807-d90a-0ff6" type="set" value="1">
                   <conditions>
-                    <condition childId="4428-ab8c-e28b-38b9" childName="Mount on Jetbikes" field="selections" scope="5a56-49b6-efbf-a4da" shared="true" type="atLeast" value="1"/>
+                    <condition childId="435d-fc10-2d26-a076" childName="Mount on Jetbikes" field="selections" scope="5a56-49b6-efbf-a4da" shared="true" type="atLeast" value="1"/>
                   </conditions>
                 </modifier>
                 <modifier field="hidden" type="set" value="true">
                   <conditions>
-                    <condition childId="4428-ab8c-e28b-38b9" childName="Mount on Jetbikes" field="selections" includeChildSelections="true" scope="5a56-49b6-efbf-a4da" shared="true" type="lessThan" value="1"/>
+                    <condition childId="435d-fc10-2d26-a076" childName="Mount on Jetbikes" field="selections" includeChildSelections="true" scope="5a56-49b6-efbf-a4da" shared="true" type="lessThan" value="1"/>
                   </conditions>
                 </modifier>
                 <modifier field="info" type="add" value="All jetbikes will have the same wargear cards applied if selected while in a group. To add individual loadouts, click the + above to add a separate pirate on bike with unique gear."/>
@@ -2110,7 +2110,7 @@ See datafax for full damage table</description>
             </modifier>
             <modifier field="hidden" type="set" value="true">
               <conditions>
-                <condition childId="4428-ab8c-e28b-38b9" childName="Mount on Jetbikes" field="selections" scope="5a56-49b6-efbf-a4da" shared="true" type="lessThan" value="1"/>
+                <condition childId="435d-fc10-2d26-a076" childName="Mount on Jetbikes" field="selections" scope="5a56-49b6-efbf-a4da" shared="true" type="lessThan" value="1"/>
               </conditions>
             </modifier>
             <modifier field="info" type="add" value="All jetbikes will have the same wargear cards applied if selected while in a group. To add individual loadouts, click the + above to add a separate pirate on bike with unique gear."/>
@@ -2145,11 +2145,6 @@ See datafax for full damage table</description>
             </selectionEntryGroup>
           </selectionEntryGroups>
         </selectionEntry>
-        <selectionEntry name="Mount on Jetbikes" id="4428-ab8c-e28b-38b9" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="dc48-5253-7fe0-7a39" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup name="Grenades for Squad" id="8e68-8944-f11c-0a04" collective="false" hidden="false" import="true">
@@ -2180,13 +2175,21 @@ See datafax for full damage table</description>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Mount Squad on Jetbikes" id="45e2-fb69-5183-ed4c" hidden="false">
+          <selectionEntries>
+            <selectionEntry name="Mount on Jetbikes" id="435d-fc10-2d26-a076" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="f455-7add-0d43-b983" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Eldar Jetbike" id="00a1-97a9-511c-bc62" collective="false" hidden="false" import="true" publicationId="71ba-82e2-d83c-d33d" subType="mount" type="model">
       <categoryLinks>
         <categoryLink name="Eldar" id="3ded-e5e9-48ed-4985" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
         <categoryLink name="Skimmer/Bike" id="91f0-dbf8-d765-acb8" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
-        <categoryLink name="3Support" id="8fe7-2256-2439-6fe8" hidden="false" primary="false" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <entryLinks>
         <entryLink name="Targeter" id="76e9-d0cc-415d-f5e5" collective="false" hidden="false" import="true" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
@@ -2579,6 +2582,9 @@ See datafax for full damage table</description>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
+      <modifiers>
+        <modifier field="info" type="add" value="All jetbikes will have the same wargear cards applied if selected while in a group. To add individual loadouts, click the + above to add a separate Shining Spear on bike with unique gear."/>
+      </modifiers>
       <selectionEntries>
         <selectionEntry name="Shining Spear" id="30b1-1e6c-cec8-7e17" collective="false" hidden="false" import="true" type="model">
           <constraints>
@@ -2606,10 +2612,6 @@ See datafax for full damage table</description>
                 <constraint id="13c1-448b-f459-5b2b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
                 <constraint id="22f1-f931-f049-9f41" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
               </constraints>
-              <modifiers>
-                <modifier field="category" type="remove" value="b6e4-2c66-e404-b10a"/>
-                <modifier field="category" type="add" value="bc01-5ece-b97e-96de"/>
-              </modifiers>
             </entryLink>
           </entryLinks>
           <infoLinks>
@@ -2824,6 +2826,7 @@ See datafax for full damage table</description>
                   </conditions>
                 </modifier>
                 <modifier field="info" type="add" value="All jetbikes will have the same wargear cards applied if selected while in a group. To add individual loadouts, click the + above to add a separate scout on bike with unique gear."/>
+                <modifier field="category" type="add" value="b6e4-2c66-e404-b10a"/>
               </modifiers>
             </entryLink>
           </entryLinks>
@@ -2883,6 +2886,9 @@ See datafax for full damage table</description>
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
+              <modifiers>
+                <modifier field="category" type="add" value="b6e4-2c66-e404-b10a"/>
+              </modifiers>
             </entryLink>
             <entryLink name="Needle Sniper Rifle" id="5566-875f-f51b-fef8" collective="false" hidden="false" import="true" targetId="6476-3281-0e1c-d0a6" type="selectionEntry">
               <constraints>
@@ -3718,7 +3724,7 @@ See datafax for full damage table</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Anti-Grav Platform Weapon" id="9e56-6d7a-2546-d7a5" collective="false" hidden="false" import="true" page="77" publicationId="71ba-82e2-d83c-d33d" type="upgrade">
+    <selectionEntry name="Anti-Grav Platform Weapon" id="9e56-6d7a-2546-d7a5" collective="false" hidden="false" import="true" page="77" publicationId="71ba-82e2-d83c-d33d" type="model">
       <categoryLinks>
         <categoryLink name="Eldar" id="892e-6447-990b-bceb" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
         <categoryLink name="3Support" id="e521-0064-fc65-d9e8" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
@@ -3730,21 +3736,11 @@ See datafax for full damage table</description>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <entryLinks>
-        <entryLink name="Guardian" id="8b4c-9740-3220-be8c" collective="false" hidden="false" import="true" targetId="665c-116d-4579-7ec9" type="selectionEntry">
+        <entryLink name="Guardian Crew" id="8b4c-9740-3220-be8c" collective="false" hidden="false" import="true" targetId="665c-116d-4579-7ec9" type="selectionEntry">
           <constraints>
             <constraint id="68d6-4f0b-61fa-c82c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
             <constraint id="8d25-f654-d4c0-e93e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="2"/>
           </constraints>
-          <entryLinks>
-            <entryLink name="Laspistol" id="f9e9-3969-35d8-1628" collective="false" hidden="false" import="true" targetId="6e11-978c-f2f0-8477" type="selectionEntry">
-              <constraints>
-                <constraint id="b6c1-319d-b113-5610" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                <constraint id="760e-d885-9174-943e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-            </entryLink>
-            <entryLink name="Assault Weapons" id="5d37-02a7-1a36-ec84" collective="false" hidden="false" import="true" targetId="b18d-cd92-629f-c211" type="selectionEntryGroup"/>
-            <entryLink name="Special Weapons" id="4e4f-690a-d8c4-61e5" collective="false" hidden="false" import="true" targetId="551d-f5e3-60d1-85af" type="selectionEntryGroup"/>
-          </entryLinks>
         </entryLink>
       </entryLinks>
       <infoLinks>
@@ -3820,6 +3816,16 @@ See datafax for full damage table</description>
                   </constraints>
                 </entryLink>
               </entryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Crew Weapon Options" id="4281-ff6d-f8b1-7711" hidden="false">
+          <entryLinks>
+            <entryLink name="Assault Weapons" id="5d37-02a7-1a36-ec84" collective="false" hidden="false" import="true" targetId="b18d-cd92-629f-c211" type="selectionEntryGroup"/>
+            <entryLink name="Special Weapons" id="4e4f-690a-d8c4-61e5" collective="false" hidden="false" import="true" targetId="551d-f5e3-60d1-85af" type="selectionEntryGroup">
+              <modifiers>
+                <modifier field="4764-9fe8-44b7-34c3" type="set" value="2"/>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -5854,7 +5860,6 @@ When doing so the same to hit for long range shots apply and the +1 for Crack Sh
       <categoryLinks>
         <categoryLink name="Eldar" id="e051-ded7-e1b3-bee1" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
         <categoryLink name="Skimmer/Bike" id="7355-2bf6-10c9-a7e2" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
-        <categoryLink name="3Support" id="651d-6763-2b10-9d7c" hidden="false" primary="false" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <entryLinks>
         <entryLink name="Targeter" id="d687-6cbc-235f-e46c" collective="false" hidden="false" import="true" targetId="a17e-632e-5e7d-1882" type="selectionEntry">

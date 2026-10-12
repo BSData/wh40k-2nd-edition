@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Ultramarines" id="138e-c671-3180-f615" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="38" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Ultramarines" id="138e-c671-3180-f615" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="39" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>Ultramarines Codex</readme>
   <entryLinks>
     <entryLink name="Space Marine Captain" id="e1eb-4981-2689-1fc2" collective="false" hidden="false" import="true" targetId="e664-c21f-4492-a7dc" type="selectionEntry"/>
@@ -1047,7 +1047,6 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
       <categoryLinks>
         <categoryLink name="Ultramarines" id="406a-9654-7e88-f22e" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
         <categoryLink name="Skimmer/Bike" id="e47c-e309-2e07-0ebf" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
-        <categoryLink name="2Squads" id="164e-7143-9734-be99" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <constraints>
         <constraint id="89e3-d901-e580-7006" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
@@ -3080,11 +3079,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
             <constraint id="d700-a83d-6935-a0da" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
           <entryLinks>
-            <entryLink name="Space Marine Attack Bike" id="962a-8fe9-ce44-cb1f" collective="false" hidden="false" import="true" page="Datafax" targetId="f5af-7608-d010-83e6" type="selectionEntry">
-              <modifiers>
-                <modifier field="534d-ae84-5926-58ef" type="set" value="1"/>
-              </modifiers>
-            </entryLink>
+            <entryLink name="Space Marine Attack Bike" id="962a-8fe9-ce44-cb1f" collective="false" hidden="false" import="true" page="Datafax" targetId="f5af-7608-d010-83e6" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -3169,21 +3164,6 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
             </modifier>
           </modifiers>
         </modifierGroup>
-        <modifierGroup type="and">
-          <comment>Change Support to Squads for bike upgrade</comment>
-          <modifiers>
-            <modifier field="category" type="remove" value="b6e4-2c66-e404-b10a">
-              <conditions>
-                <condition childId="ed88-0736-5a4c-2795" childName="Bike Squadron" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="add" value="bc01-5ece-b97e-96de">
-              <conditions>
-                <condition childId="ed88-0736-5a4c-2795" childName="Bike Squadron" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
       </modifierGroups>
       <modifiers>
         <modifier field="534d-ae84-5926-58ef" type="set" value="-1">
@@ -3203,6 +3183,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
             <conditionGroup type="and">
               <conditions>
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
+                  <comment>Need at least 1 Techmarine</comment>
+                </condition>
+                <condition childId="f5af-7608-d010-83e6" childName="Space Marine Attack Bike" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
@@ -3263,7 +3246,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
             </selectionEntryGroup>
           </selectionEntryGroups>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Mounted Heavy Weapon" id="13f5-2043-31ed-facf" collective="false" hidden="false" import="true" sortIndex="4">
+        <selectionEntryGroup name="Mounted Heavy Weapon" id="13f5-2043-31ed-facf" collective="false" defaultSelectionEntryId="4f66-eeba-73f7-5559" hidden="false" import="true" sortIndex="4">
           <constraints>
             <constraint id="2ba7-6c39-e8dd-6ab2" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
             <constraint id="83e6-5e6c-f128-6b62" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>

@@ -1,0 +1,2134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue name="Codex - Eldar (Harlequins)" id="547a-80cd-7988-a39f" authorName="Boff89" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="43" library="false" revision="1" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <entryLinks>
+    <entryLink name="Death Jester" id="a85a-c278-01eb-b033" collective="false" hidden="false" import="true" targetId="ada2-b2be-61f2-fd4b" type="selectionEntry"/>
+    <entryLink name="Solitaire" id="529f-f129-c409-2ffe" collective="false" hidden="false" import="true" targetId="0f22-b374-390a-f10d" type="selectionEntry"/>
+    <entryLink name="Harlequin Squad" id="9d26-088b-357b-ca00" collective="false" hidden="false" import="true" targetId="0b09-0a21-d742-d801" type="selectionEntry"/>
+    <entryLink name="Shadow Seer" id="5ec1-3a9e-2d2c-1572" collective="false" hidden="false" import="true" targetId="62a7-d922-0e40-2e50" type="selectionEntry"/>
+    <entryLink name="Great Harlequin" id="7e6f-d7f0-5587-9488" collective="false" hidden="false" import="true" targetId="b17b-2fe5-a93f-b4b3" type="selectionEntry"/>
+  </entryLinks>
+  <sharedProfiles>
+    <profile name="Death Jester" id="3cb1-2cfa-6590-3f85" hidden="false" page="80" publicationId="71ba-82e2-d83c-d33d" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Death Jester</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">6</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">6</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">6</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">4</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">4</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">2</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">9</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">2</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Great Harlequin" id="4999-4104-cc5e-d1f2" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Great Harlequin</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">6</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">7</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">7</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">4</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">4</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">3</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">9</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">3</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Harlequin" id="9c8f-434d-9227-11e2" hidden="false" page="81" publicationId="71ba-82e2-d83c-d33d" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Harlequin</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">6</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">5</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">5</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">3</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">3</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">7</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Shadow Seer" id="c6d4-1683-39bf-3ab4" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Shadow Seer</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">6</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">7</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">7</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">4</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">5</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">4</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">9</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">3</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Solitaire" id="7228-d953-29b6-5e87" hidden="false" page="29" publicationId="71ba-82e2-d83c-d33d" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Solitaire</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">6</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">8</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">8</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">4</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">4</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">3</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">9</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">3</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Holo-suits" id="b3c0-6921-4c36-b3cd" hidden="false" page="51" publicationId="71ba-82e2-d83c-d33d" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+      <characteristics>
+        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">All shots fired at the model suffer -1 to hit in addition to any other modifiers. If the model hides they can only be Detected. Troops moving within their Initiative distance or into a position to see the hiding model will only detect him rather than spot him, though the model will be detected by scanners etc as normal.
+In close combat opponents must roll 2D6 and score equal to or less than their Leadership or suffer -1 WS</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Eldar Vyper" id="e2b2-3b7c-7fee-d372" hidden="false" page="datafax" publicationId="71ba-82e2-d83c-d33d" typeId="371a-1ec9-2157-1eb6" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Slow Speed" typeId="7c52-da5f-7f1a-95fd">10</characteristic>
+        <characteristic name="Combat Speed" typeId="87a6-dd16-ba8f-ff71">18</characteristic>
+        <characteristic name="Fast Speed" typeId="92f6-98b4-3770-d8d9">35</characteristic>
+        <characteristic name="Type" typeId="8567-afc3-f137-4d64">Skimmer</characteristic>
+        <characteristic name="Crew" typeId="7ee3-c2ef-4b92-55e1">2 Eldar</characteristic>
+        <characteristic name="Ram Strength" typeId="13de-7be1-9f05-c48a">6</characteristic>
+        <characteristic name="Ram Damage" typeId="2ddf-d6d1-359f-bc9d">D6</characteristic>
+        <characteristic name="Ram Save Modfier" typeId="40ae-53ec-dee8-af1f">-3</characteristic>
+        <characteristic name="Armour Location" typeId="30da-ce76-ecb6-61ab">Vyper</characteristic>
+        <characteristic name="Front Armour" typeId="fafe-592c-1a65-1376">12</characteristic>
+        <characteristic name="Side/Rear Armour" typeId="fbc3-8073-078a-ac79">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Eldar Jetbike" id="6c71-da8e-9b02-b9f4" hidden="false" page="datafax" publicationId="71ba-82e2-d83c-d33d" typeId="371a-1ec9-2157-1eb6" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Slow Speed" typeId="7c52-da5f-7f1a-95fd">10</characteristic>
+        <characteristic name="Combat Speed" typeId="87a6-dd16-ba8f-ff71">18</characteristic>
+        <characteristic name="Fast Speed" typeId="92f6-98b4-3770-d8d9">35</characteristic>
+        <characteristic name="Type" typeId="8567-afc3-f137-4d64">Skimmer / Bike</characteristic>
+        <characteristic name="Crew" typeId="7ee3-c2ef-4b92-55e1">1 Eldar Rider</characteristic>
+        <characteristic name="Ram Strength" typeId="13de-7be1-9f05-c48a">5</characteristic>
+        <characteristic name="Ram Damage" typeId="2ddf-d6d1-359f-bc9d">D4</characteristic>
+        <characteristic name="Ram Save Modfier" typeId="40ae-53ec-dee8-af1f">-2</characteristic>
+        <characteristic name="Armour Location" typeId="30da-ce76-ecb6-61ab">Jetbike</characteristic>
+        <characteristic name="Front Armour" typeId="fafe-592c-1a65-1376">12</characteristic>
+        <characteristic name="Side/Rear Armour" typeId="fbc3-8073-078a-ac79">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Harlequin&apos;s Kiss" id="bdf2-dd08-9bbd-0765" hidden="false" page="54" publicationId="71ba-82e2-d83c-d33d" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">CC Only</characteristic>
+        <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">CC Only</characteristic>
+        <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+        <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+        <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">-</characteristic>
+        <characteristic name="Damage" typeId="8978-f9c3-8957-1481">-</characteristic>
+        <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-</characteristic>
+        <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">Special</characteristic>
+        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Close Combat, Harlequin&apos;s Kiss</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Pack Grenade Launcher" id="47c3-7b2f-4a33-1f62" hidden="false" page="59" publicationId="71ba-82e2-d83c-d33d" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">8</characteristic>
+        <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">16</characteristic>
+        <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+        <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-1</characteristic>
+        <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">-</characteristic>
+        <characteristic name="Damage" typeId="8978-f9c3-8957-1481">-</characteristic>
+        <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d"/>
+        <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">-</characteristic>
+        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Pack Grenade Launcher</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Guardian" id="ea62-63f2-cf6f-32de" hidden="false" page="74" publicationId="71ba-82e2-d83c-d33d" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Guardian</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">5</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">3</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">3</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">3</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">3</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">4</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">8</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Shuriken Shrieker Cannon" id="a34f-b16b-5e9b-6a2c" hidden="false" page="61" publicationId="71ba-82e2-d83c-d33d" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">20</characteristic>
+        <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">40</characteristic>
+        <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">+1</characteristic>
+        <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+        <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">5</characteristic>
+        <characteristic name="Damage" typeId="8978-f9c3-8957-1481">D4</characteristic>
+        <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-3</characteristic>
+        <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+D4+5</characteristic>
+        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Sustained fire - 2 dice, Special Shrieker Ammo</characteristic>
+      </characteristics>
+    </profile>
+  </sharedProfiles>
+  <sharedRules>
+    <rule name="Eldar Jetbike Damage Table" id="36f9-b439-8410-abd3" hidden="false" page="datafax" publicationId="71ba-82e2-d83c-d33d">
+      <description>1-2: Eldar Rider
+3-6: Jetbike
+See datafax for damage table</description>
+    </rule>
+    <rule name="Flip" id="6f4a-532e-8106-ad9b" hidden="false" page="28" publicationId="71ba-82e2-d83c-d33d">
+      <description>Harlequin models which are already engaged in close combat at the start of their turn may &quot;flip out&quot; of combat during their movement phase. This allows models to remove themselves from the combat engagement without breaking or suffering blows from their enemy. May move their full normal move away from the opponent and may be placed facing in any direction ready to shoot as normal. May not flip from one engagement to another</description>
+    </rule>
+    <rule name="Harlequin&apos;s Kiss" id="a49c-e589-a2ad-e443" hidden="false" page="54" publicationId="71ba-82e2-d83c-d33d">
+      <description>Determine close combat hits as normal. If a hit is scored the target makes an immediate armour saving throw. If the save is failed the model is automatically killed
+
+Against vehicles, roll a D6. On a 1-5, that is the amout of armour penetrated. On a 6, roll another D6 and add that score to the first. You can keep rolling additional D6 if you roll a 6. 
+If you penetrate the armour roll a D6:
+1: One random crewmember is killed
+2-4: Roll a D6 for each crew, 1-3 nothing happens, 4-6 they are killed
+5: Roll a D6 for each crew, 1 nothing happens, 2-6 they are killed
+6: All crew are killed</description>
+    </rule>
+    <rule name="Mandiblaster" id="f177-65c0-79be-39af" hidden="false" page="55" publicationId="71ba-82e2-d83c-d33d">
+      <description>The Mandiblaster automatically shoots before the combat proper is worked out in the exact same way shooting is done. If a hit is scored, roll a D6. If the score is equal to or more than the target&apos;s Toughness 1 wound is sustained if their armour save is failed.</description>
+    </rule>
+    <rule name="Pack Grenade Launcher" id="93b9-7732-515a-99b6" hidden="false" page="59" publicationId="71ba-82e2-d83c-d33d">
+      <description>Can be fired in addition to a hand-held weapon, allowing the model to fire twice in the same turn. May not load with grenades during the battle.</description>
+    </rule>
+    <rule name="Special Shrieker Ammo" id="4182-c3a3-b0ea-c85f" hidden="false" page="61" publicationId="71ba-82e2-d83c-d33d">
+      <description>Decide if using standard ammo or special shrieker ammo before firing.
+Shrieker ammo can only affect living creatures and has no effect on vehicles. If a target is hit make any saving throw with a -3 modifier.
+If the save is failed the target is affected by the ammo. Roll 2D6 during the targets movement phase, this is how far the victim moves in a random direction even if it would cause it to leave coherency. If the 2D6 roll is a 7 or any double number, the victim explodes. 
+Place a 1&quot; radius area effect marker over the explodiung victim: any target within the area automatically takes a single Strength 3 hit with 1 damage.
+If the victim does not explode during his first turn of random movement, roll the 2D6 again on their next movement phase until they either leave the board or explode. They may do nothing else.
+Any squad which has one or more of its members within 2&quot; of a shrieker victim at the start of their movement phase must take a Break test. This applies to troops on either side.</description>
+    </rule>
+  </sharedRules>
+  <sharedSelectionEntries>
+    <selectionEntry name="Harlequin&apos;s Kiss" id="843b-938c-699c-9754" collective="false" hidden="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Harlequin&apos;s Kiss" id="48f2-629d-83cc-257f" hidden="false" targetId="a49c-e589-a2ad-e443" type="rule"/>
+        <infoLink name="Close Combat" id="f16a-6874-5cbb-b01f" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
+        <infoLink name="Harlequin&apos;s Kiss" id="b45b-79c7-cbc2-91c9" hidden="false" targetId="bdf2-dd08-9bbd-0765" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Shuriken Shrieker Cannon" id="3e79-0da4-0659-a590" collective="false" hidden="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Special Shrieker Ammo" id="e48b-2881-dfe0-f225" hidden="false" targetId="4182-c3a3-b0ea-c85f" type="rule"/>
+        <infoLink name="Shuriken Shrieker Cannon" id="a169-de1e-f503-a62a" hidden="false" targetId="a34f-b16b-5e9b-6a2c" type="profile"/>
+        <infoLink name="Sustained Fire" id="ddf8-8404-d427-3ec3" hidden="false" targetId="0b67-c911-308c-4960" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Eldar Jetbike w/ Shuriken Cannon" id="641c-fd1b-91f4-9620" collective="false" hidden="false" import="true" publicationId="71ba-82e2-d83c-d33d" subType="mount" type="model">
+      <categoryLinks>
+        <categoryLink name="Eldar" id="1f32-5c41-0808-c201" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
+        <categoryLink name="Skimmer/Bike" id="51d7-2164-39f6-b210" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink name="Targeter" id="33de-ac7d-39b3-359a" collective="false" hidden="false" import="true" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
+          <constraints>
+            <constraint id="7f74-d2ab-e933-9134" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="af7f-0c6e-b295-d2a2" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Vehicle Wargear Cards" id="56be-9287-a5b4-f177" collective="false" hidden="false" import="true" targetId="6526-cf18-5345-1050" type="selectionEntryGroup"/>
+        <entryLink name="Shuriken Shrieker Cannon" id="6dab-0a8a-f68a-3d34" collective="false" hidden="false" import="true" targetId="3e79-0da4-0659-a590" type="selectionEntry">
+          <constraints>
+            <constraint id="e53c-8421-3bff-ae65" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="17d6-ada4-842a-3d74" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Eldar Jetibke Damage Table" id="6fd8-ceed-5f6e-80b7" hidden="false" targetId="36f9-b439-8410-abd3" type="rule"/>
+        <infoLink name="Eldar Jetbike" id="4dd0-2a12-4cff-9d2b" hidden="false" targetId="6c71-da8e-9b02-b9f4" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Eldar Jetbike" id="2f6e-7eb3-7e82-5333" collective="false" hidden="false" import="true" publicationId="71ba-82e2-d83c-d33d" subType="mount" type="model">
+      <categoryLinks>
+        <categoryLink name="Eldar" id="0900-25fe-875b-e9ac" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
+        <categoryLink name="Skimmer/Bike" id="ef21-f7b0-c9fa-0d04" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink name="Targeter" id="ff98-2c47-6334-59e5" collective="false" hidden="false" import="true" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
+          <constraints>
+            <constraint id="b618-b35b-f51c-7826" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="efef-01f0-3309-a0c8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Vehicle Wargear Cards" id="8de3-ceb2-d219-66c3" collective="false" hidden="false" import="true" targetId="6526-cf18-5345-1050" type="selectionEntryGroup"/>
+        <entryLink name="Twin Linked Shuriken Catapult" id="e788-ff8a-eaa5-1bf1" collective="false" hidden="false" import="true" targetId="7c33-d1ea-f352-1152" type="selectionEntry">
+          <constraints>
+            <constraint id="9de1-5654-95ff-96fc" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="f478-0bdd-283d-f35a" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Twin Linked" id="d8fa-d1c4-d02a-4d5a" hidden="false" targetId="1ec9-01dd-59c6-d1d5" type="rule"/>
+          </infoLinks>
+          <modifiers>
+            <modifier field="name" type="set" value="Twin Linked Shuriken Catapults"/>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Eldar Jetibke Damage Table" id="03f3-c57b-ab79-8ad2" hidden="false" targetId="36f9-b439-8410-abd3" type="rule"/>
+        <infoLink name="Eldar Jetbike" id="20af-59fd-c02a-b4ca" hidden="false" targetId="6c71-da8e-9b02-b9f4" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Solitaire" id="0f22-b374-390a-f10d" collective="false" hidden="false" import="true" publicationId="71ba-82e2-d83c-d33d" type="model">
+      <categoryLinks>
+        <categoryLink name="Eldar" id="36e7-2797-cece-e7af" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
+        <categoryLink name="Harlequins" id="f260-bbb8-ff98-2dab" hidden="false" primary="true" targetId="c1bb-1205-a4da-35c6"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="1d81-d5ac-c848-8dfd" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="93"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Armour" id="6774-6200-2c4e-d32c" collective="false" hidden="false" import="true" sortIndex="1" targetId="db8e-570a-b563-9fa1" type="selectionEntryGroup"/>
+        <entryLink name="Assault Weapons" id="6601-888c-e8d4-1820" collective="false" hidden="false" import="true" sortIndex="2" targetId="842b-6299-7c49-4c36" type="selectionEntryGroup"/>
+        <entryLink name="Grenades" id="4af7-f7d4-95af-501e" collective="false" hidden="false" import="true" sortIndex="3" targetId="462c-8777-9db2-b894" type="selectionEntryGroup"/>
+        <entryLink name="Wargear Cards" id="a144-df2f-5751-35f8" collective="false" hidden="false" import="true" targetId="e7f5-e742-9538-15ed" type="selectionEntryGroup">
+          <constraints>
+            <constraint id="1754-fd19-2152-4f0e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Special Weapons" id="e42d-d34e-8550-7e37" collective="false" hidden="false" import="true" sortIndex="4" targetId="af7a-c7b2-c22e-e239" type="selectionEntryGroup"/>
+        <entryLink name="Holo-suit" id="369f-760e-2173-7a66" hidden="false" import="true" targetId="1bd5-be36-2ff7-febd" type="selectionEntry">
+          <constraints>
+            <constraint id="b237-c0e1-6047-c58b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="de99-c109-3ab8-f5ed" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Flip" id="bea3-d3dd-eb28-2017" hidden="false" targetId="6f4a-532e-8106-ad9b" type="rule"/>
+        <infoLink name="Fear" id="ae32-cf79-761e-779d" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
+        <infoLink name="Solitaire" id="6b26-4f6e-3028-342c" hidden="false" targetId="7228-d953-29b6-5e87" type="profile"/>
+      </infoLinks>
+      <modifiers>
+        <modifier field="1d81-d5ac-c848-8dfd" type="increment" value="1">
+          <repeats>
+            <repeat childId="0b09-0a21-d742-d801" childName="Harlequin Squad" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="roster" shared="true" value="1"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <rules>
+        <rule name="Solitaire Rules" id="114b-1a8f-edcc-8bbf" hidden="false" page="29" publicationId="71ba-82e2-d83c-d33d">
+          <description>Fights Alone: The Solitaire always fights alone. Cannot join a Harlequin squad
+Psychology: The Solitaire is immune to psychology. He is not affected by terror, etc, no matter how it is cauased</description>
+        </rule>
+      </rules>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Mount on Jetbike" id="4e0f-e728-6a4d-013d" collective="false" hidden="false" import="true" sortIndex="5">
+          <constraints>
+            <constraint id="79a6-3371-fa3a-363b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <entryLinks>
+            <entryLink name="Eldar Jetbike" id="cb5f-4cf4-a496-9c67" collective="false" hidden="false" import="true" targetId="103e-84fe-73f0-19f9" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry name="Holo-suit" id="1bd5-be36-2ff7-febd" hidden="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink name="Holo-suits" id="b2f5-1b1e-2a4a-2ada" hidden="false" targetId="b3c0-6921-4c36-b3cd" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Harlequin Squad" id="0b09-0a21-d742-d801" collective="false" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Eldar" id="52ff-09c2-07a1-19ed" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
+        <categoryLink name="Harlequins" id="e171-ba46-9d0b-5b2e" hidden="false" primary="true" targetId="c1bb-1205-a4da-35c6"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="490b-2845-120f-9213" field="selections" includeChildSelections="false" scope="force" shared="true" type="min" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Type of Harlequin Squad" id="6da4-9418-6877-f479" defaultSelectionEntryId="d9db-0d76-3c1e-57bf" hidden="false" sortIndex="1">
+          <constraints>
+            <constraint id="9e78-f24b-a777-8710" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="ae00-cb84-08a7-0f17" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry name="Harlequins on Foot" id="d9db-0d76-3c1e-57bf" hidden="false" import="true" sortIndex="1" type="upgrade">
+              <entryLinks>
+                <entryLink name="Assault Weapons" id="84d1-b5a5-d159-9bea" collective="false" hidden="false" import="true" targetId="842b-6299-7c49-4c36" type="selectionEntryGroup"/>
+              </entryLinks>
+              <selectionEntries>
+                <selectionEntry name="Harlequin" id="361c-850f-aa35-c0f2" collective="false" hidden="false" import="true" type="model">
+                  <constraints>
+                    <constraint id="c146-2680-9d58-6c44" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="9"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="25"/>
+                  </costs>
+                  <entryLinks>
+                    <entryLink name="Holo-suit" id="1e60-794f-e5c5-bada" hidden="false" import="true" targetId="1bd5-be36-2ff7-febd" type="selectionEntry">
+                      <constraints>
+                        <constraint id="ffbd-25fc-23e2-6cd5" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                        <constraint id="d7e2-452a-484e-466a" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink name="Refractor Field" id="ad6a-29d7-0ba6-d823" collective="false" hidden="false" import="true" targetId="48c5-f522-8ba5-94e6" type="selectionEntry">
+                      <constraints>
+                        <constraint id="6832-218c-3399-6a98" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                        <constraint id="81da-2080-043c-e5aa" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="5595-7956-6054-baf7" childName="Refractor Field" field="selections" includeChildSelections="true" scope="0b09-0a21-d742-d801" shared="true" type="lessThan" value="1"/>
+                          </conditions>
+                        </modifier>
+                        <modifier field="6832-218c-3399-6a98" type="set" value="1">
+                          <conditions>
+                            <condition childId="5595-7956-6054-baf7" childName="Refractor Field" field="selections" includeChildSelections="true" scope="0b09-0a21-d742-d801" shared="true" type="atLeast" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                  <infoLinks>
+                    <infoLink name="Harlequin" id="d125-c1d8-a599-e89f" hidden="false" targetId="9c8f-434d-9227-11e2" type="profile"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry name="Harlequin Squad Leader" id="6e04-c834-718c-9ce7" hidden="false" import="true" type="model">
+                  <constraints>
+                    <constraint id="9012-cece-e4aa-6cd1" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="4118-cfbe-e3ad-e94b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="25"/>
+                  </costs>
+                  <entryLinks>
+                    <entryLink name="Holo-suit" id="ec86-b90f-0213-6120" hidden="false" import="true" targetId="1bd5-be36-2ff7-febd" type="selectionEntry">
+                      <constraints>
+                        <constraint id="0678-794a-326f-bf5b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                        <constraint id="a096-373a-52d7-1fac" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink name="Special Weapons" id="7fe1-0557-3779-4ee2" hidden="false" import="true" targetId="af7a-c7b2-c22e-e239" type="selectionEntryGroup"/>
+                    <entryLink name="Refractor Field" id="3670-3df8-a80f-bdda" collective="false" hidden="false" import="true" targetId="48c5-f522-8ba5-94e6" type="selectionEntry">
+                      <constraints>
+                        <constraint id="bf0d-1cf7-0949-dc83" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                        <constraint id="99e9-89b0-aa1b-ab17" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="5595-7956-6054-baf7" childName="Refractor Field" field="selections" includeChildSelections="true" scope="0b09-0a21-d742-d801" shared="true" type="lessThan" value="1"/>
+                          </conditions>
+                        </modifier>
+                        <modifier field="bf0d-1cf7-0949-dc83" type="set" value="1">
+                          <conditions>
+                            <condition childId="5595-7956-6054-baf7" childName="Refractor Field" field="selections" includeChildSelections="true" scope="0b09-0a21-d742-d801" shared="true" type="atLeast" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                  <infoLinks>
+                    <infoLink name="Harlequin" id="c8cb-4076-4d9d-188c" hidden="false" targetId="9c8f-434d-9227-11e2" type="profile"/>
+                  </infoLinks>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Pack Grenade Launcher for Leader" id="ef35-7c1e-b8c9-44b1" collective="false" hidden="false" import="true">
+                      <selectionEntries>
+                        <selectionEntry name="Pack Grenade Launcher" id="4741-7aa4-9c4d-c02e" collective="false" hidden="false" import="true" type="upgrade">
+                          <constraints>
+                            <constraint id="62b9-e09c-61b7-d3b0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                          </constraints>
+                          <costs>
+                            <cost name="pts" typeId="points" value="10"/>
+                          </costs>
+                          <entryLinks>
+                            <entryLink name="Frag Grenade" id="d5ab-0aa1-df98-3ed9" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+                              <constraints>
+                                <constraint id="efa1-a2b1-435c-a09a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                                <constraint id="c058-1c2e-c031-f0a8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                              </constraints>
+                            </entryLink>
+                            <entryLink name="Krak Grenade" id="ef23-4a3b-7c95-7b37" collective="false" hidden="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
+                              <constraints>
+                                <constraint id="e959-2e3d-7bb3-d14b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                                <constraint id="4a3a-e5e4-2240-8ae5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                          <infoLinks>
+                            <infoLink name="Pack Grenade Launcher" id="1dbe-404e-8f94-b1e3" hidden="false" targetId="93b9-7732-515a-99b6" type="rule"/>
+                            <infoLink name="Pack Grenade Launcher" id="2a6b-e92f-1bd6-8e0d" hidden="false" targetId="47c3-7b2f-4a33-1f62" type="profile"/>
+                          </infoLinks>
+                        </selectionEntry>
+                      </selectionEntries>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
+                </selectionEntry>
+              </selectionEntries>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Grenades for Squad" id="6525-6f5b-bbca-a836" collective="false" hidden="false" import="true">
+                  <entryLinks>
+                    <entryLink name="Photon Flash Flare" id="752f-14c5-0d12-d640" collective="false" hidden="false" import="true" targetId="89f8-b27c-1632-e96a" type="selectionEntry">
+                      <constraints>
+                        <constraint id="875b-3475-98cf-c4a0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier field="points" type="increment" value="2">
+                          <repeats>
+                            <repeat childId="361c-850f-aa35-c0f2" childName="Harlequin" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                            <repeat childId="6e04-c834-718c-9ce7" childName="Harlequin Squad Leader" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                          </repeats>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink name="Krak Grenade" id="a6e8-a5c3-a360-4a00" collective="false" hidden="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
+                      <constraints>
+                        <constraint id="6847-e7a2-f3bb-f1d5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier field="points" type="increment" value="3">
+                          <repeats>
+                            <repeat childId="361c-850f-aa35-c0f2" childName="Harlequin" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                            <repeat childId="6e04-c834-718c-9ce7" childName="Harlequin Squad Leader" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                          </repeats>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink name="Melta Bomb" id="6178-3449-b4b9-7564" collective="false" hidden="false" import="true" targetId="101f-9872-9b6f-cfc7" type="selectionEntry">
+                      <constraints>
+                        <constraint id="0ffd-06c9-ea46-15b9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier field="points" type="increment" value="5">
+                          <repeats>
+                            <repeat childId="361c-850f-aa35-c0f2" childName="Harlequin" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                            <repeat childId="6e04-c834-718c-9ce7" childName="Harlequin Squad Leader" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                          </repeats>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink name="Blind Grenade" id="89ff-b3a7-e454-5d20" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
+                      <constraints>
+                        <constraint id="78f5-a62c-3b40-af35" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier field="points" type="increment" value="2">
+                          <repeats>
+                            <repeat childId="361c-850f-aa35-c0f2" childName="Harlequin" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                            <repeat childId="6e04-c834-718c-9ce7" childName="Harlequin Squad Leader" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                          </repeats>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink name="Frag Grenade" id="e03b-4bda-88a3-b1e5" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+                      <constraints>
+                        <constraint id="4931-7f93-c64a-2b5a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier field="points" type="increment" value="2">
+                          <repeats>
+                            <repeat childId="361c-850f-aa35-c0f2" childName="Harlequin" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                            <repeat childId="6e04-c834-718c-9ce7" childName="Harlequin Squad Leader" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                          </repeats>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup name="Armour for Squad" id="2646-c272-f417-5a7a" collective="false" hidden="false" import="true">
+                  <constraints>
+                    <constraint id="df6c-544a-80a4-3200" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry name="Refractor Field" id="5595-7956-6054-baf7" hidden="false" import="true" type="upgrade">
+                      <comment>upgrade</comment>
+                      <modifiers>
+                        <modifier field="points" type="increment" value="6">
+                          <repeats>
+                            <repeat childId="361c-850f-aa35-c0f2" childName="Harlequin" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                            <repeat childId="6e04-c834-718c-9ce7" childName="Harlequin Squad Leader" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                          </repeats>
+                        </modifier>
+                      </modifiers>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+            <selectionEntry name="Harlequins on Jetbikes" id="25e6-e553-0d17-c97c" hidden="false" import="true" sortIndex="2" type="upgrade">
+              <entryLinks>
+                <entryLink name="Assault Weapons" id="3622-b9fd-2f8f-830e" collective="false" hidden="false" import="true" targetId="842b-6299-7c49-4c36" type="selectionEntryGroup"/>
+              </entryLinks>
+              <selectionEntries>
+                <selectionEntry name="Harlequin on Jetbike" id="690c-b913-4353-f46c" collective="false" hidden="false" import="true" sortIndex="1" type="model">
+                  <constraints>
+                    <constraint id="22e4-d44b-afec-f0dc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="4"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="25"/>
+                  </costs>
+                  <entryLinks>
+                    <entryLink name="Holo-suit" id="cdb1-2a72-c932-8c97" hidden="false" import="true" targetId="1bd5-be36-2ff7-febd" type="selectionEntry">
+                      <constraints>
+                        <constraint id="73b5-6bc0-c469-651c" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                        <constraint id="620c-3c49-49e6-765f" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink name="Refractor Field" id="6783-7951-3fb9-0ef1" collective="false" hidden="false" import="true" targetId="48c5-f522-8ba5-94e6" type="selectionEntry">
+                      <constraints>
+                        <constraint id="47ed-17f0-3448-e44a" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                        <constraint id="4089-2c86-016c-a51c" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="3fed-ceb0-9878-6971" childName="Refractor Field" field="selections" includeChildSelections="true" scope="0b09-0a21-d742-d801" shared="true" type="lessThan" value="1"/>
+                          </conditions>
+                        </modifier>
+                        <modifier field="47ed-17f0-3448-e44a" type="set" value="1">
+                          <conditions>
+                            <condition childId="3fed-ceb0-9878-6971" childName="Refractor Field" field="selections" includeChildSelections="true" scope="0b09-0a21-d742-d801" shared="true" type="atLeast" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink name="Eldar Jetbike" id="ebf0-de8e-fcce-5340" hidden="false" import="true" targetId="2f6e-7eb3-7e82-5333" type="selectionEntry">
+                      <constraints>
+                        <constraint id="f150-782f-0404-07ca" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                        <constraint id="1f07-de63-1e91-576e" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                      </constraints>
+                      <costs>
+                        <cost name="pts" typeId="points" value="20"/>
+                      </costs>
+                    </entryLink>
+                  </entryLinks>
+                  <infoLinks>
+                    <infoLink name="Harlequin" id="e18b-630f-096e-632c" hidden="false" targetId="9c8f-434d-9227-11e2" type="profile"/>
+                  </infoLinks>
+                  <modifiers>
+                    <modifier field="22e4-d44b-afec-f0dc" type="decrement" value="1">
+                      <repeats>
+                        <repeat childId="1692-fbfa-c44b-e2d6" childName="Harlequin Jetbike w/ Shuriken Cannon" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="0b09-0a21-d742-d801" shared="true" value="1"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                </selectionEntry>
+                <selectionEntry name="Harlequin Squad Leader" id="4f86-6bf0-815a-932b" hidden="false" import="true" sortIndex="2" type="model">
+                  <constraints>
+                    <constraint id="ec6b-54bf-0eb8-7183" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="e74c-9f5f-08a0-82a9" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="25"/>
+                  </costs>
+                  <entryLinks>
+                    <entryLink name="Holo-suit" id="2549-4ef8-5e3b-58fd" hidden="false" import="true" targetId="1bd5-be36-2ff7-febd" type="selectionEntry">
+                      <constraints>
+                        <constraint id="d7ef-b559-c935-1d48" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                        <constraint id="0a2b-3ca1-0b3b-6e88" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink name="Special Weapons" id="83de-fc62-9876-ccb9" hidden="false" import="true" targetId="af7a-c7b2-c22e-e239" type="selectionEntryGroup"/>
+                    <entryLink name="Refractor Field" id="0e72-9ade-084d-9863" collective="false" hidden="false" import="true" targetId="48c5-f522-8ba5-94e6" type="selectionEntry">
+                      <constraints>
+                        <constraint id="5f96-90db-e484-ce3b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                        <constraint id="9c22-d182-fd20-7b7a" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="3fed-ceb0-9878-6971" childName="Refractor Field" field="selections" includeChildSelections="true" scope="0b09-0a21-d742-d801" shared="true" type="lessThan" value="1"/>
+                          </conditions>
+                        </modifier>
+                        <modifier field="5f96-90db-e484-ce3b" type="set" value="1">
+                          <conditions>
+                            <condition childId="3fed-ceb0-9878-6971" childName="Refractor Field" field="selections" includeChildSelections="true" scope="0b09-0a21-d742-d801" shared="true" type="atLeast" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink name="Eldar Jetbike" id="5f69-4e4a-3efe-8b24" hidden="false" import="true" targetId="2f6e-7eb3-7e82-5333" type="selectionEntry">
+                      <constraints>
+                        <constraint id="9b59-eac4-3c79-0711" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                        <constraint id="b8f8-0766-48ab-48e2" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                      </constraints>
+                      <costs>
+                        <cost name="pts" typeId="points" value="20"/>
+                      </costs>
+                    </entryLink>
+                  </entryLinks>
+                  <infoLinks>
+                    <infoLink name="Harlequin" id="6ee4-bdcf-6896-b790" hidden="false" targetId="9c8f-434d-9227-11e2" type="profile"/>
+                  </infoLinks>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Pack Grenade Launcher for Leader" id="26c6-adb3-8ab1-8eb6" collective="false" hidden="false" import="true">
+                      <selectionEntries>
+                        <selectionEntry name="Pack Grenade Launcher" id="9641-d34e-082e-fb36" collective="false" hidden="false" import="true" type="upgrade">
+                          <constraints>
+                            <constraint id="f178-1d8b-5da4-b06d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                          </constraints>
+                          <costs>
+                            <cost name="pts" typeId="points" value="10"/>
+                          </costs>
+                          <entryLinks>
+                            <entryLink name="Frag Grenade" id="305e-ce63-1329-5841" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+                              <constraints>
+                                <constraint id="0867-15f1-6dc2-11b2" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                                <constraint id="5cca-e3f4-0c91-3fa2" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                              </constraints>
+                            </entryLink>
+                            <entryLink name="Krak Grenade" id="b9c8-6113-2a00-2be7" collective="false" hidden="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
+                              <constraints>
+                                <constraint id="b612-ae43-6723-d585" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                                <constraint id="12f0-04fe-59e9-001c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                          <infoLinks>
+                            <infoLink name="Pack Grenade Launcher" id="9778-d520-f7aa-fb4f" hidden="false" targetId="93b9-7732-515a-99b6" type="rule"/>
+                            <infoLink name="Pack Grenade Launcher" id="ba4f-f342-eaff-f975" hidden="false" targetId="47c3-7b2f-4a33-1f62" type="profile"/>
+                          </infoLinks>
+                        </selectionEntry>
+                      </selectionEntries>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
+                </selectionEntry>
+                <selectionEntry name="Harlequin Jetbike w/ Shuriken Cannon" id="1692-fbfa-c44b-e2d6" hidden="false" import="true" sortIndex="3" type="model">
+                  <constraints>
+                    <constraint id="be64-b022-bfd4-b112" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="25"/>
+                  </costs>
+                  <entryLinks>
+                    <entryLink name="Holo-suit" id="2ada-e9d8-fe96-3c2d" hidden="false" import="true" targetId="1bd5-be36-2ff7-febd" type="selectionEntry">
+                      <constraints>
+                        <constraint id="4b27-1aab-0b01-1e69" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                        <constraint id="741e-b185-922d-059e" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink name="Refractor Field" id="00f4-5773-2e7c-d69b" collective="false" hidden="false" import="true" targetId="48c5-f522-8ba5-94e6" type="selectionEntry">
+                      <constraints>
+                        <constraint id="4e2e-c3fb-d167-dc04" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                        <constraint id="2b04-f054-cd76-883f" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="3fed-ceb0-9878-6971" childName="Refractor Field" field="selections" includeChildSelections="true" scope="0b09-0a21-d742-d801" shared="true" type="lessThan" value="1"/>
+                          </conditions>
+                        </modifier>
+                        <modifier field="4e2e-c3fb-d167-dc04" type="set" value="1">
+                          <conditions>
+                            <condition childId="3fed-ceb0-9878-6971" childName="Refractor Field" field="selections" includeChildSelections="true" scope="0b09-0a21-d742-d801" shared="true" type="atLeast" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink name="Eldar Jetbike w/ Shuriken Cannon" id="93d7-84bc-7dc3-6c7e" hidden="false" import="true" targetId="641c-fd1b-91f4-9620" type="selectionEntry">
+                      <constraints>
+                        <constraint id="9a8c-9836-d50f-8200" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                        <constraint id="4796-5096-3ab9-8f96" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                      </constraints>
+                      <costs>
+                        <cost name="pts" typeId="points" value="25"/>
+                      </costs>
+                    </entryLink>
+                  </entryLinks>
+                  <infoLinks>
+                    <infoLink name="Harlequin" id="a10e-4f5d-e4f0-5763" hidden="false" targetId="9c8f-434d-9227-11e2" type="profile"/>
+                  </infoLinks>
+                  <modifiers>
+                    <modifier field="be64-b022-bfd4-b112" type="increment" value="1">
+                      <repeats>
+                        <repeat childId="690c-b913-4353-f46c" childName="Harlequin on Jetbike" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="0b09-0a21-d742-d801" shared="true" value="3"/>
+                      </repeats>
+                    </modifier>
+                    <modifier field="be64-b022-bfd4-b112" type="decrement" value="1">
+                      <conditions>
+                        <condition childId="690c-b913-4353-f46c" childName="Harlequin on Jetbike" field="selections" includeChildSelections="true" scope="0b09-0a21-d742-d801" shared="true" type="lessThan" value="3"/>
+                      </conditions>
+                    </modifier>
+                    <modifier field="be64-b022-bfd4-b112" type="increment" value="1">
+                      <repeats>
+                        <repeat childId="1692-fbfa-c44b-e2d6" childName="Harlequin Jetbike w/ Shuriken Cannon" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="0b09-0a21-d742-d801" shared="true" value="3"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                </selectionEntry>
+              </selectionEntries>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Armour for Squad" id="4152-9b1c-2fd5-dbd3" collective="false" hidden="false" import="true">
+                  <constraints>
+                    <constraint id="35c9-bf63-dd99-3542" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry name="Refractor Field" id="3fed-ceb0-9878-6971" hidden="false" import="true" type="upgrade">
+                      <comment>upgrade</comment>
+                      <modifiers>
+                        <modifier field="points" type="increment" value="6">
+                          <repeats>
+                            <repeat childId="690c-b913-4353-f46c" childName="Harlequin" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                            <repeat childId="4f86-6bf0-815a-932b" childName="Harlequin Squad Leader" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                          </repeats>
+                        </modifier>
+                      </modifiers>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+                <selectionEntryGroup name="Grenades for Squad" id="3022-2ba3-6592-3653" collective="false" hidden="false" import="true">
+                  <entryLinks>
+                    <entryLink name="Photon Flash Flare" id="e0f2-9c8e-bec4-4a34" collective="false" hidden="false" import="true" targetId="89f8-b27c-1632-e96a" type="selectionEntry">
+                      <constraints>
+                        <constraint id="094d-5deb-4070-e64b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier field="points" type="increment" value="2">
+                          <repeats>
+                            <repeat childId="690c-b913-4353-f46c" childName="Harlequin" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                            <repeat childId="4f86-6bf0-815a-932b" childName="Harlequin Squad Leader" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                          </repeats>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink name="Krak Grenade" id="66c7-28e2-e0ee-71bb" collective="false" hidden="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
+                      <constraints>
+                        <constraint id="8293-f61b-edc3-4872" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier field="points" type="increment" value="3">
+                          <repeats>
+                            <repeat childId="690c-b913-4353-f46c" childName="Harlequin" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                            <repeat childId="4f86-6bf0-815a-932b" childName="Harlequin Squad Leader" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                          </repeats>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink name="Melta Bomb" id="6e47-eef0-3115-6854" collective="false" hidden="false" import="true" targetId="101f-9872-9b6f-cfc7" type="selectionEntry">
+                      <constraints>
+                        <constraint id="e144-4eb9-57df-4e04" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier field="points" type="increment" value="5">
+                          <repeats>
+                            <repeat childId="690c-b913-4353-f46c" childName="Harlequin" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                            <repeat childId="4f86-6bf0-815a-932b" childName="Harlequin Squad Leader" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                          </repeats>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink name="Blind Grenade" id="8e5c-71b3-0900-34bc" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
+                      <constraints>
+                        <constraint id="c1b6-a564-b40b-1164" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier field="points" type="increment" value="2">
+                          <repeats>
+                            <repeat childId="690c-b913-4353-f46c" childName="Harlequin" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                            <repeat childId="4f86-6bf0-815a-932b" childName="Harlequin Squad Leader" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                          </repeats>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink name="Frag Grenade" id="77b8-d396-7d39-39d5" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+                      <constraints>
+                        <constraint id="cfce-ee35-32c8-7dba" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier field="points" type="increment" value="2">
+                          <repeats>
+                            <repeat childId="690c-b913-4353-f46c" childName="Harlequin" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                            <repeat childId="4f86-6bf0-815a-932b" childName="Harlequin Squad Leader" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                          </repeats>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry name="Great Harlequin" id="b17b-2fe5-a93f-b4b3" collective="false" hidden="false" import="true" publicationId="71ba-82e2-d83c-d33d" type="model">
+      <categoryLinks>
+        <categoryLink name="Eldar" id="f33f-872c-d338-1fbb" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
+        <categoryLink name="Harlequins" id="f754-7b64-ccf3-79c7" hidden="false" primary="true" targetId="c1bb-1205-a4da-35c6"/>
+        <categoryLink name="Harlequin-PrimaryList" id="351f-f4ba-cb44-88a6" hidden="false" primary="false" targetId="6dc4-8bb9-688d-1e49"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="cc46-fb47-2f21-2d46" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="max" value="0"/>
+        <constraint id="07c6-2f8b-a91a-17b4" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="93"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Armour" id="27c2-a7c7-6701-1e7c" collective="false" hidden="false" import="true" sortIndex="1" targetId="db8e-570a-b563-9fa1" type="selectionEntryGroup"/>
+        <entryLink name="Assault Weapons" id="1b10-b4d7-8f5e-01ac" collective="false" hidden="false" import="true" sortIndex="2" targetId="842b-6299-7c49-4c36" type="selectionEntryGroup"/>
+        <entryLink name="Grenades" id="2bd1-92b8-0f6d-0752" collective="false" hidden="false" import="true" sortIndex="3" targetId="462c-8777-9db2-b894" type="selectionEntryGroup"/>
+        <entryLink name="Wargear Cards" id="1e32-3fdb-dd0f-d85b" collective="false" hidden="false" import="true" targetId="e7f5-e742-9538-15ed" type="selectionEntryGroup">
+          <constraints>
+            <constraint id="bf63-8ab3-f9de-a211" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Special Weapons" id="9c4d-f81a-e646-9f2b" collective="false" hidden="false" import="true" sortIndex="4" targetId="af7a-c7b2-c22e-e239" type="selectionEntryGroup"/>
+        <entryLink name="Holo-suit" id="a1c8-6584-8540-d763" hidden="false" import="true" targetId="1bd5-be36-2ff7-febd" type="selectionEntry">
+          <constraints>
+            <constraint id="d260-b6b2-f9a6-76ae" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="ad70-658d-1bd6-6916" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Army Commander" id="57a9-56a6-5899-8ee2" hidden="false" import="true" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
+          <constraints>
+            <constraint id="80da-34d4-8a54-d1d1" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="84f1-39b4-c584-6768" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Army Commander Strategy Rating" id="a8ad-d641-d863-a83e" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
+              <modifiers>
+                <modifier field="d0c8-e08c-1828-77b4" type="set" value="4"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Flip" id="9ef9-7ef1-6751-39fc" hidden="false" targetId="6f4a-532e-8106-ad9b" type="rule"/>
+        <infoLink name="Fear" id="492e-575a-6cf2-a833" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
+        <infoLink name="Great Harlequin" id="2681-dfcf-6910-fe5c" hidden="false" targetId="4999-4104-cc5e-d1f2" type="profile"/>
+      </infoLinks>
+      <modifiers>
+        <modifier field="cc46-fb47-2f21-2d46" type="increment" value="1">
+          <repeats>
+            <repeat childId="0b09-0a21-d742-d801" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <rules>
+        <rule name="Solitaire Rules" id="0d95-39e4-6568-42b4" hidden="false" page="29" publicationId="71ba-82e2-d83c-d33d">
+          <description>Fights Alone: The Solitaire always fights alone. Cannot join a Harlequin squad
+Psychology: The Solitaire is immune to psychology. He is not affected by terror, etc, no matter how it is cauased</description>
+        </rule>
+      </rules>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Mount on Jetbike" id="e904-a1e1-9181-37fb" collective="false" hidden="false" import="true" sortIndex="5">
+          <constraints>
+            <constraint id="40ea-e6a6-a0c6-1b74" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <entryLinks>
+            <entryLink name="Eldar Jetbike" id="46eb-a4ff-0c3c-e56b" collective="false" hidden="false" import="true" targetId="103e-84fe-73f0-19f9" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry name="Death Jester" id="ada2-b2be-61f2-fd4b" collective="false" hidden="false" import="true" publicationId="71ba-82e2-d83c-d33d" type="model">
+      <categoryLinks>
+        <categoryLink name="Eldar" id="a051-05c6-2cd4-0778" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
+        <categoryLink name="Harlequins" id="1177-b3e0-bd2d-cd01" hidden="false" primary="true" targetId="c1bb-1205-a4da-35c6"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="aa00-82c3-0bde-5948" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="0"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="125"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Shuriken Shrieker Cannon" id="a299-39f1-6ce3-a3ad" collective="false" hidden="false" import="true" targetId="3e79-0da4-0659-a590" type="selectionEntry">
+          <constraints>
+            <constraint id="48fe-228a-4acd-7f7e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="9607-fff4-d2fa-d04e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Armour" id="b005-baa7-a6a7-8a56" collective="false" hidden="false" import="true" sortIndex="1" targetId="db8e-570a-b563-9fa1" type="selectionEntryGroup"/>
+        <entryLink name="Assault Weapons" id="e370-714b-c2d2-6ffe" collective="false" hidden="false" import="true" sortIndex="2" targetId="842b-6299-7c49-4c36" type="selectionEntryGroup"/>
+        <entryLink name="Grenades" id="055b-7a7b-1470-9b1f" collective="false" hidden="false" import="true" sortIndex="3" targetId="462c-8777-9db2-b894" type="selectionEntryGroup"/>
+        <entryLink name="Wargear Cards" id="fd0c-35bc-47bc-628d" collective="false" hidden="false" import="true" sortIndex="5" targetId="e7f5-e742-9538-15ed" type="selectionEntryGroup">
+          <constraints>
+            <constraint id="4706-0da0-e42e-1420" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Holo-suit" id="7ee2-82ea-13e0-5ae1" hidden="false" import="true" targetId="1bd5-be36-2ff7-febd" type="selectionEntry">
+          <constraints>
+            <constraint id="aa13-132c-4642-5303" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="3ba1-a34d-c789-48f7" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Flip" id="1764-dda4-64ef-4e4f" hidden="false" targetId="6f4a-532e-8106-ad9b" type="rule"/>
+        <infoLink name="Fear" id="1dd5-b3ae-cb76-e442" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
+        <infoLink name="Death Jester" id="e7eb-9e7f-50a7-55bd" hidden="false" targetId="3cb1-2cfa-6590-3f85" type="profile"/>
+      </infoLinks>
+      <modifiers>
+        <modifier field="aa00-82c3-0bde-5948" type="increment" value="1">
+          <repeats>
+            <repeat childId="0b09-0a21-d742-d801" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="roster" shared="true" value="1"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Mount on Jetbike" id="6c84-d5f5-6cda-cf3a" collective="false" hidden="false" import="true" sortIndex="4">
+          <constraints>
+            <constraint id="f4e7-e556-448a-cb31" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <entryLinks>
+            <entryLink name="Eldar Jetbike" id="683b-a7c7-1023-c71b" collective="false" hidden="false" import="true" targetId="103e-84fe-73f0-19f9" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry name="Shadow Seer" id="62a7-d922-0e40-2e50" collective="false" hidden="false" import="true" publicationId="71ba-82e2-d83c-d33d" type="model">
+      <categoryLinks>
+        <categoryLink name="Eldar" id="5106-d9d3-cacc-d513" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
+        <categoryLink name="Harlequins" id="c1c1-f6d1-40c6-4f9e" hidden="false" primary="true" targetId="c1bb-1205-a4da-35c6"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="2d8e-dca9-8c76-0aba" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="max" value="0"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="193"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Armour" id="4241-8bec-a9fc-da8d" collective="false" hidden="false" import="true" sortIndex="1" targetId="db8e-570a-b563-9fa1" type="selectionEntryGroup"/>
+        <entryLink name="Assault Weapons" id="68c5-b4f6-e9da-a9a9" collective="false" hidden="false" import="true" sortIndex="2" targetId="842b-6299-7c49-4c36" type="selectionEntryGroup"/>
+        <entryLink name="Grenades" id="fb7b-716b-3560-21f8" collective="false" hidden="false" import="true" sortIndex="4" targetId="462c-8777-9db2-b894" type="selectionEntryGroup"/>
+        <entryLink name="Wargear Cards" id="0684-a5bf-4da9-bcd8" collective="false" hidden="false" import="true" targetId="e7f5-e742-9538-15ed" type="selectionEntryGroup">
+          <constraints>
+            <constraint id="b6ef-f57c-66c0-ce18" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Special Weapons" id="879c-c90d-3d25-e85f" collective="false" hidden="false" import="true" sortIndex="5" targetId="af7a-c7b2-c22e-e239" type="selectionEntryGroup"/>
+        <entryLink name="Psyker" id="992d-e564-a8a6-0ad8" collective="false" hidden="false" import="true" targetId="56e9-7608-b945-ac81" type="selectionEntry">
+          <constraints>
+            <constraint id="1f4b-6755-f19f-8fcb" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Psychic Level 4" id="fa7e-85ca-aa3f-2406" hidden="false" targetId="f988-2251-b863-a538" type="profile"/>
+          </infoLinks>
+        </entryLink>
+        <entryLink name="Holo-suit" id="ed59-9655-5829-da52" hidden="false" import="true" targetId="1bd5-be36-2ff7-febd" type="selectionEntry">
+          <constraints>
+            <constraint id="d6bd-4005-92b1-328f" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="d04c-9412-fd39-973b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Flip" id="199b-04c3-c273-1d64" hidden="false" targetId="6f4a-532e-8106-ad9b" type="rule"/>
+        <infoLink name="Fear" id="1857-2a91-0ee3-ebbb" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
+        <infoLink name="Shadow Seer" id="48dd-6657-89b4-1171" hidden="false" targetId="c6d4-1683-39bf-3ab4" type="profile"/>
+      </infoLinks>
+      <modifiers>
+        <modifier field="2d8e-dca9-8c76-0aba" type="increment" value="1">
+          <repeats>
+            <repeat childId="0b09-0a21-d742-d801" childName="Harlequin Squad" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="roster" shared="true" value="1"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry name="Pack Grenade Launcher" id="a48b-24e7-d4de-bd44" collective="false" hidden="false" import="true" sortIndex="3" type="upgrade">
+          <constraints>
+            <constraint id="f6ec-d2e2-9e8f-0757" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Frag Grenade" id="68f8-c610-222b-3676" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+              <constraints>
+                <constraint id="3f9e-f33c-ecb6-7943" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="35ab-534d-e9c6-73ef" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+            <entryLink name="Krak Grenade" id="272e-439e-cdcc-4627" collective="false" hidden="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
+              <constraints>
+                <constraint id="fee8-4a7c-9ac2-e137" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="5fc0-ccac-3536-46a1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Pack Grenade Launcher" id="c757-df07-1669-02c6" hidden="false" targetId="93b9-7732-515a-99b6" type="rule"/>
+            <infoLink name="Pack Grenade Launcher" id="a0f9-dc4e-15d3-dcf1" hidden="false" targetId="47c3-7b2f-4a33-1f62" type="profile"/>
+          </infoLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Exra Grenades" id="74bb-dcf6-9819-f0e6" collective="false" hidden="false" import="true">
+              <entryLinks>
+                <entryLink name="Blind Grenade" id="3f6e-221b-8378-ba21" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
+                  <constraints>
+                    <constraint id="72aa-c76c-235b-40ed" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="2"/>
+                  </costs>
+                </entryLink>
+                <entryLink name="Photon Flash Flare" id="acd3-b359-7326-1668" collective="false" hidden="false" import="true" targetId="89f8-b27c-1632-e96a" type="selectionEntry">
+                  <constraints>
+                    <constraint id="43a4-3e63-2fe8-7794" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="2"/>
+                  </costs>
+                </entryLink>
+                <entryLink name="Hallucinogen Grenade" id="4d19-891d-3843-e83f" collective="false" hidden="false" import="true" targetId="e685-3188-3939-60f9" type="selectionEntry">
+                  <constraints>
+                    <constraint id="f27f-ccc8-4691-fe3f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="2"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Mount on Jetbike" id="5a3f-12ba-12d5-94a4" collective="false" hidden="false" import="true" sortIndex="6">
+          <constraints>
+            <constraint id="d4bc-4fed-66dc-8be0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <entryLinks>
+            <entryLink name="Eldar Jetbike" id="79a3-058f-3704-8d90" collective="false" hidden="false" import="true" targetId="103e-84fe-73f0-19f9" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry name="Eldar Jetbike" id="103e-84fe-73f0-19f9" collective="false" hidden="false" import="true" publicationId="71ba-82e2-d83c-d33d" subType="mount" type="model">
+      <comment>For characters</comment>
+      <categoryLinks>
+        <categoryLink name="Eldar" id="552e-0318-90e6-deef" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
+        <categoryLink name="Skimmer/Bike" id="424f-9772-6f33-0088" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink name="Targeter" id="603d-20a7-5d92-d382" collective="false" hidden="false" import="true" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
+          <constraints>
+            <constraint id="fa58-2796-1c7f-ff37" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="be99-d420-4916-46a0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Vehicle Wargear Cards" id="ff66-12b2-f50d-c934" collective="false" hidden="false" import="true" targetId="6526-cf18-5345-1050" type="selectionEntryGroup"/>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Eldar Jetibke Damage Table" id="e3fa-e1eb-7857-90fc" hidden="false" targetId="36f9-b439-8410-abd3" type="rule"/>
+        <infoLink name="Eldar Jetbike" id="dd0a-3264-cb1e-2d29" hidden="false" targetId="6c71-da8e-9b02-b9f4" type="profile"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Weapon Options" id="0808-caa8-ccb5-61ee" collective="false" defaultSelectionEntryId="60d2-158c-19ed-b6ba" hidden="false" import="true" sortIndex="1">
+          <constraints>
+            <constraint id="46a0-eec2-80b5-4141" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="bb44-3fd3-b11e-4cae" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+          <entryLinks>
+            <entryLink name="Twin Linked Shuriken Catapult" id="60d2-158c-19ed-b6ba" collective="false" hidden="false" import="true" sortIndex="1" targetId="7c33-d1ea-f352-1152" type="selectionEntry"/>
+            <entryLink name="Shuriken Shrieker Cannon" id="9fd6-3e35-49a7-1188" collective="false" hidden="false" import="true" targetId="3e79-0da4-0659-a590" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+  </sharedSelectionEntries>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup name="Armour" id="db8e-570a-b563-9fa1" collective="false" hidden="false" import="true">
+      <constraints>
+        <constraint id="d7f3-5505-aab1-6467" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <entryLinks>
+        <entryLink name="Refractor Field" id="050a-5e90-2b48-bab4" collective="false" hidden="false" import="true" targetId="48c5-f522-8ba5-94e6" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="6"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Conversion Field" id="79e1-b227-2d46-cbb2" collective="false" hidden="false" import="true" targetId="bb5e-09f7-72d9-a377" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="14"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Displacer Field" id="391a-f45a-0851-41d3" collective="false" hidden="false" import="true" targetId="9051-aabb-b632-2aa7" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="24"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Assault Weapons" id="842b-6299-7c49-4c36" collective="false" hidden="false" import="true" page="61" publicationId="4590-6ba9-5482-a1fa">
+      <entryLinks>
+        <entryLink name="Power Axe" id="025d-8ad4-2473-fd63" collective="false" hidden="false" import="true" targetId="b690-d341-fa77-01b8" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="7"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Power Fist" id="3e93-a1a7-c3eb-f10c" collective="false" hidden="false" import="true" targetId="d6c8-382a-4d74-36af" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Power Sword" id="b24f-8d36-c62c-a9f7" collective="false" hidden="false" import="true" targetId="4e44-58a0-2af5-519c" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="6"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Chainsword" id="4ad7-7b5b-25b2-20f4" collective="false" hidden="false" import="true" targetId="0bf9-3a64-2700-ff30" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="2"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Hand Flamer" id="8488-532b-94ed-1e4a" collective="false" hidden="false" import="true" targetId="2e7d-f34c-b6c8-8d78" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="7"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Laspistol" id="8406-97d4-a4b0-2fa0" collective="false" hidden="false" import="true" targetId="6e11-978c-f2f0-8477" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="1"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Needle Pistol" id="5d7b-03da-f888-bbc7" collective="false" hidden="false" import="true" targetId="dec7-82c8-a97f-f2d1" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Shuriken Pistol" id="41ec-ba92-3b80-dfc4" collective="false" hidden="false" import="true" targetId="4d5e-38d7-72a7-c462" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="3"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Harlequin&apos;s Kiss" id="11c6-a2e1-344a-116d" collective="false" hidden="false" import="true" targetId="843b-938c-699c-9754" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="c1bb-1205-a4da-35c6" childName="Harlequins" field="selections" includeChildSelections="true" scope="parent" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Grenades" id="462c-8777-9db2-b894" collective="false" hidden="false" import="true" page="62" publicationId="4590-6ba9-5482-a1fa">
+      <entryLinks>
+        <entryLink name="Blind Grenade" id="c810-3888-c18a-33fb" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
+          <constraints>
+            <constraint id="04a9-c9a7-46ad-707b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="2"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Frag Grenade" id="1939-8fa7-4e34-ecc5" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+          <constraints>
+            <constraint id="3e32-772d-25d6-d193" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="2"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Krak Grenade" id="c254-d1a4-0157-a29f" collective="false" hidden="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
+          <constraints>
+            <constraint id="e240-e407-84bf-86ce" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="3"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Melta Bomb" id="b31d-55c3-ee30-b9af" collective="false" hidden="false" import="true" targetId="101f-9872-9b6f-cfc7" type="selectionEntry">
+          <constraints>
+            <constraint id="cc74-bd14-4702-b9e1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Plasma Grenade" id="bd97-e945-c93e-df11" collective="false" hidden="false" import="true" targetId="9277-633c-d567-56be" type="selectionEntry">
+          <constraints>
+            <constraint id="6d4b-471b-2974-4c36" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="3"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Photon Flash Flare" id="035c-0fe5-9b69-3dad" collective="false" hidden="false" import="true" targetId="89f8-b27c-1632-e96a" type="selectionEntry">
+          <constraints>
+            <constraint id="002d-bf60-0f8e-2f36" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="2"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Special Weapons" id="af7a-c7b2-c22e-e239" collective="false" hidden="false" import="true" page="61" publicationId="4590-6ba9-5482-a1fa">
+      <constraints>
+        <constraint id="6a6b-b3e9-00cf-7aae" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <entryLinks>
+        <entryLink name="Flamer" id="bf6a-dcc0-7d18-08f1" collective="false" hidden="false" import="true" targetId="a1e4-59e5-1938-5372" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="9"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Lasgun" id="8fda-5cc3-f50c-ef77" collective="false" hidden="false" import="true" targetId="0568-5866-b015-7be9" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="2"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Meltagun" id="a6df-0079-9168-db2c" collective="false" hidden="false" import="true" targetId="9a87-ceb4-676f-1386" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="8"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Shuriken Catapult" id="34de-27f1-6838-2f83" collective="false" hidden="false" import="true" targetId="76e3-9fb7-a0b0-91cd" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Wargear (Eldar)" id="1345-9dcd-964c-e724" collective="false" hidden="false" import="true">
+      <selectionEntries>
+        <selectionEntry name="The Firepike" id="296d-72d4-b9ca-2280" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="6147-f394-180c-7a06" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="827b-238b-3978-c458" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="0"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="25"/>
+          </costs>
+          <modifiers>
+            <modifier field="827b-238b-3978-c458" type="set" value="1">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="6f07-7b68-9d34-b4d8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="The Firepike" id="42a4-b051-fe88-7f8a" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">12</characteristic>
+                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">24</characteristic>
+                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">+1</characteristic>
+                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">8</characteristic>
+                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">D6</characteristic>
+                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-4</characteristic>
+                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">2D6+8</characteristic>
+                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">1&quot; Blast</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry name="Eldar Spirit Stone" id="d7b4-15d5-c853-3e87" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="e20b-e9d8-820b-f786" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="30"/>
+          </costs>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="56e9-7608-b945-ac81" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notEqualTo" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Eldar Spirit Stone" id="723e-40c0-d914-b904" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+              <characteristics>
+                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Once per battle the psyker may draw one extra warp card per mastery level from the warp deck immediately.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry name="Seer Runes" id="8785-f7f3-4407-0f9e" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="d6a2-fee2-1ad9-6ab6" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="56e9-7608-b945-ac81" childName="Psyker" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notEqualTo" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Seer Runes" id="fecf-8984-0fa3-ecfb" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+              <characteristics>
+                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">When an enemy uses a psychic power you may immediately counter its effects by using the seer runes. The power is nullified automatically. Discard card after use</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry name="Lasblaster" id="6b27-262e-4d76-700c" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="5e2b-fc22-7916-86fd" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="79da-f545-49e9-05c7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="0"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="25"/>
+          </costs>
+          <modifiers>
+            <modifier field="79da-f545-49e9-05c7" type="set" value="1">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="adc1-1d63-0300-329f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Lasblaster - Shooting" id="f78f-ddc1-bfc9-4a7e" hidden="false" publicationId="71ba-82e2-d83c-d33d" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">12</characteristic>
+                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">24</characteristic>
+                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">+1</characteristic>
+                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">6</characteristic>
+                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
+                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-1</characteristic>
+                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">6+D6</characteristic>
+                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">3 Shots</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Lasblaster - Melee" id="2998-dbb5-db7b-558e" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">CC Only</characteristic>
+                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">CC Only</characteristic>
+                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c"/>
+                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">5</characteristic>
+                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
+                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-3</characteristic>
+                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">2D6+5</characteristic>
+                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Lasblaster" id="0810-7fd5-15e0-e716" hidden="false">
+              <description>May fire 3 shots per shooting phase in the same way as a Scatter laser. All 3 targets must be within 6&quot; of each other. 
+Weapon may also be used in melee with its own profile</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry name="The Mask of Jain Zar" id="654b-f735-a67b-dd6a" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="fae6-719c-a16d-9b8e" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+            <constraint id="ae31-84a6-ab87-05b5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="dec8-639e-0c2d-2f55" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+          <modifiers>
+            <modifier field="dec8-639e-0c2d-2f55" type="set" value="1">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="f325-4b23-0c2f-824d" childName="Jain Zar - The Storm of Silence" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="The Mask of Jain Zar" id="d25a-474e-50f9-7107" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+              <characteristics>
+                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">An enemy charged by the wearer may not fire on Overwatch. During the first round of close combat, when the Eldar charges, his opponent rolls no Attack Dice. In the second round of combat the enemy must roll a 4+ on D6 to escape the mask‘s effect — failure means that he rolls no dice on that turn, either.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry name="The Silent Death" id="8b2c-b82e-0972-0eb0" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="4d4f-4bd0-ae22-2128" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+            <constraint id="611c-3c95-de32-f857" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="c369-ed4b-14aa-c58f" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="25"/>
+          </costs>
+          <modifiers>
+            <modifier field="c369-ed4b-14aa-c58f" type="set" value="1">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="f325-4b23-0c2f-824d" childName="Jain Zar - The Storm of Silence" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="The Silent Death" id="1395-59bd-bfc8-d5e2" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">12</characteristic>
+                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">24</characteristic>
+                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-1</characteristic>
+                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">5</characteristic>
+                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
+                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-2</characteristic>
+                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+5</characteristic>
+                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="The Silent Death" id="37b0-98b9-31d7-e703" hidden="false">
+              <description>May strike several targets; nominate your first target and roll to hit. If successful, nominate another target within 2&quot;. Continue nominating targets and rolling to hit until you miss or until there are no further targets within the weapon‘s range and/or within 2&quot; of the last target.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry name="The Blade of Destruction" id="b1eb-6026-339b-c344" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="e66a-673e-3d4d-6f6c" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+            <constraint id="9dc2-8a7e-9ab4-6d1c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="1d72-5df9-b9a4-2eb4" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="12"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Parry" id="c2a7-bbc3-861d-38e2" hidden="false" targetId="049d-3ed2-a1bf-86b0" type="rule"/>
+            <infoLink name="Close Combat" id="f579-4db5-8297-810f" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
+          </infoLinks>
+          <modifiers>
+            <modifier field="1d72-5df9-b9a4-2eb4" type="set" value="1">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="f325-4b23-0c2f-824d" childName="Jain Zar - The Storm of Silence" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="The Blade of Destruction" id="1f4a-fe52-350d-0a3f" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">CC Only</characteristic>
+                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">CC Only</characteristic>
+                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">7</characteristic>
+                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
+                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-4</characteristic>
+                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+7+D12</characteristic>
+                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Parry Twice</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Parry Twice" id="1004-6784-c618-3761" hidden="false">
+              <description>May make two parries against opponents in close combat</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry name="The Scorpion&apos;s Bite" id="e70d-cec8-1d76-7f95" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="f755-16a9-4d1e-e814" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+            <constraint id="0120-5637-4618-8add" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="d520-08e7-a689-a952" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="0"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="18"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Mandiblaster" id="b356-c8a3-d870-8097" hidden="false" targetId="f177-65c0-79be-39af" type="rule"/>
+            <infoLink name="Close Combat" id="ed63-5b76-5307-7bd0" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
+          </infoLinks>
+          <modifiers>
+            <modifier field="d520-08e7-a689-a952" type="set" value="1">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="fafc-401b-c5d6-2a48" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="The Scorpion&apos;s Bite" id="8551-da45-c34d-599c" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">CC Only</characteristic>
+                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">CC Only</characteristic>
+                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">Special</characteristic>
+                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">D3</characteristic>
+                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-3</characteristic>
+                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">None</characteristic>
+                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Shooting</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="The Scorpion&apos;s Bite" id="6b54-4d17-53c0-2567" hidden="false">
+              <description>Automatically shoots before close combat is resolved — in the same way as a Mandiblaster. Work out shooting as normal for a Mandiblaster. If the Scorpion‘s Bite hits, roll 2D6 and pick the highest; if the score is equal to or more than the target‘s Toughness, D3 Wounds are sustained.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry name="The Fire Axe" id="9521-1725-b855-1903" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="a81d-8bb7-28ed-7eba" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+            <constraint id="a06c-60f1-3b13-ba42" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="43bb-f91b-3e66-5c4d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="0"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Close Combat" id="35d2-882d-56b7-3ffd" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
+          </infoLinks>
+          <modifiers>
+            <modifier field="43bb-f91b-3e66-5c4d" type="set" value="1">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="6f07-7b68-9d34-b4d8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="The Fire Axe" id="14f0-a10d-3488-7293" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">CC Only</characteristic>
+                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">CC Only</characteristic>
+                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">6</characteristic>
+                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">D3</characteristic>
+                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-3</characteristic>
+                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+6+D3+12</characteristic>
+                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry name="The Maugetar" id="38e3-2a0a-8e26-50f5" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="3346-83b7-d5ba-4382" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+            <constraint id="2246-8b4a-a01b-0f3f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="0"/>
+            <constraint id="2994-3ddc-5f20-9c9a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="45"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Sustained Fire" id="d423-1ef0-8946-21d6" hidden="false" targetId="0b67-c911-308c-4960" type="rule"/>
+            <infoLink name="Special Shrieker Ammo" id="8c79-2fa4-9b03-474d" hidden="false" targetId="4182-c3a3-b0ea-c85f" type="rule"/>
+            <infoLink name="Close Combat" id="7cd5-0b37-21db-2961" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
+          </infoLinks>
+          <modifiers>
+            <modifier field="2246-8b4a-a01b-0f3f" type="set" value="1">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="6a1b-368f-08cf-56e2" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="The Maugetar - Melee" id="46d6-b669-8860-e224" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">CC Only</characteristic>
+                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">CC Only</characteristic>
+                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">8</characteristic>
+                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">D3</characteristic>
+                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-6</characteristic>
+                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+8+D3+D20</characteristic>
+                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">-</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="The Maugetar - Shooting" id="3b2c-19ea-2627-4eb1" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">20</characteristic>
+                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">40</characteristic>
+                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">+1</characteristic>
+                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">6</characteristic>
+                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">D4</characteristic>
+                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-4</characteristic>
+                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+D4+6</characteristic>
+                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Sustained Fire - 2 Dice</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="The Maugetar" id="d2e5-ba34-62ab-53a7" hidden="false">
+              <description>Any Jam results rolled on thie sustained fire dice are ignored. 
+The weapon requires two hands to use and cannot be used to parry in close combat</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry name="The Staff of Ulthamar" id="2194-50b0-222d-63e6" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="3ffc-162b-2571-9718" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+            <constraint id="b634-9350-9708-9b17" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="6e30-801d-3605-6cec" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="0"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="18"/>
+          </costs>
+          <modifiers>
+            <modifier field="6e30-801d-3605-6cec" type="set" value="1">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="bd77-7b4e-33b0-8f2d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="The Staff of Ulthamar" id="458f-725d-b37f-9a0d" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+              <characteristics>
+                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">At the end of the psychic phase, unused Force Cards may be stored in the staff instead of being discarded; there is no limit to the number of cards that may be thus stored. Stored cards enhance the wielder‘s Strength and can be expended in any future psychic phases by adding them back to the player‘s hand. In close combat, the staff may be used as a weapon, and increases the wielder‘s Strength by his Mastery Level plus 1 for each card stored in the staff. In combat against daemons, the wielder Wounds them automatically with no saving throw possible.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry name="The Sword of Asur" id="6e4c-56fa-d61e-9982" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="f47a-978f-0d02-2da6" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+            <constraint id="f137-dd1e-2cc1-a784" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="18ea-86c3-cb0a-b470" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="0"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Parry" id="477e-122e-f279-2cbe" hidden="false" targetId="049d-3ed2-a1bf-86b0" type="rule"/>
+            <infoLink name="Close Combat" id="017a-69db-306d-787f" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
+          </infoLinks>
+          <modifiers>
+            <modifier field="18ea-86c3-cb0a-b470" type="set" value="1">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="b1e8-432c-c703-8aca" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="The Sword of Asur - One Handed" id="4756-afd1-b9b5-3e9e" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">Close Combat Only</characteristic>
+                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">Close Combat Only</characteristic>
+                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">6</characteristic>
+                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
+                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-3</characteristic>
+                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+6+D12</characteristic>
+                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Parry</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="The Sword of Asur - Two Handed" id="77bb-c04e-657f-466b" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">Close Combat Only</characteristic>
+                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">Close Combat Only</characteristic>
+                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">7</characteristic>
+                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
+                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-4</characteristic>
+                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+7+D12</characteristic>
+                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Parry</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="The Sword of Asur" id="7516-9d28-483e-9aaf" hidden="false">
+              <description>Negates daemonic saving throws just like a force weapon</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry name="Singing Spear" id="b80e-fedf-3301-1713" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="5b7a-cfa6-4dfe-b8ab" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="2"/>
+            <constraint id="1fe8-ad0e-58fd-8ee8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="25"/>
+          </costs>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="56e9-7608-b945-ac81" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notEqualTo" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Singing Spear" id="5583-c5d0-dcb6-7a20" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+              <characteristics>
+                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">At the end of the psychic phase, up to 2 unused Force Cards may be stored in the Spear instead of being placed in the discard pile. The stored Force Cards may be retrieved and used in subsequent psychic phases. In hand-to-hand combat or when thrown up to 12&quot;, the Spear increases the wielder‘s Strength by a number equal to his Mastery Level, and wounds Daemons automatically with no save possible. The wielder may also expend a stored Force Card to gain an extra +2 Strength and –2 armour save in hand-to-hand combat or when throwing the Spear</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry name="Web of Skulls" id="8d55-d4ec-c776-dc76" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="f078-631b-e8e0-f582" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="25"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Close Combat" id="cfd7-8e76-43b2-b1a1" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Web of Skulls" id="92ff-c948-689f-3403" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">12</characteristic>
+                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">24</characteristic>
+                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-1</characteristic>
+                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">6</characteristic>
+                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
+                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-2</characteristic>
+                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+6</characteristic>
+                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Web of Skulls</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Web of Skulls" id="767c-42b5-3f65-d22d" hidden="false" publicationId="71ba-82e2-d83c-d33d">
+              <description>The Web of Skulls may be thrown at any 3 targets within 12” of each other, striking each in turn. In close combat, it has S6 and a –2 save modifier.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry name="Executioner" id="5150-71ba-e59a-8a69" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="2108-ee1a-04b7-5316" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="14"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Parry" id="32f2-0ff5-f805-174b" hidden="false" targetId="049d-3ed2-a1bf-86b0" type="rule"/>
+            <infoLink name="Close Combat" id="6668-2ad2-698d-7723" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Executioner" id="35ac-ed4a-9610-5d4f" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">CC Only</characteristic>
+                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">CC Only</characteristic>
+                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">8</characteristic>
+                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">D3</characteristic>
+                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-6</characteristic>
+                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+D20+D3+8</characteristic>
+                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Parry</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry name="Witch Blade" id="923d-d943-89e1-39d7" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="dd95-a00e-664b-9303" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="15"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Close Combat" id="26f0-8fdc-7497-cfb9" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
+          </infoLinks>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="56e9-7608-b945-ac81" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notEqualTo" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Witch Blade" id="406a-624b-ba84-1774" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+              <characteristics>
+                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">At the end of the psychic phase, up to two unused Force Cards may be stored in the Blade instead of being placed in the discard pile. The stored Force Cards may be retrieved and used in subsequent psychic phases. In hand-to-hand combat, the Blade increases the wielder‘s Strength by a number equal to his Mastery Level and wounds Daemons automatically with no save possible. The wielder may also expend a stored Force Card to gain an extra +2 Strength and –2 armour save in hand-to-hand combat. May also be used to parry. See the weapon profile for more information.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry name="Bright Lance" id="febd-ee49-3897-4cc3" hidden="false" import="true" publicationId="71ba-82e2-d83c-d33d" type="upgrade">
+          <constraints>
+            <constraint id="c93a-7ca0-2062-5cd9" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="40"/>
+          </costs>
+          <profiles>
+            <profile name="Bright Lance" id="bbeb-d88b-0384-d423" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">12</characteristic>
+                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">36</characteristic>
+                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">+1</characteristic>
+                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">9</characteristic>
+                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">D8</characteristic>
+                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-6</characteristic>
+                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">8+D6+D8</characteristic>
+                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Wargear Cards" id="e7f5-e742-9538-15ed" collective="false" hidden="false" import="true">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Cards" id="9be6-418b-8377-f25d" collective="false" hidden="false" import="true">
+          <entryLinks>
+            <entryLink name="Wargear (Eldar)" id="c9a4-b1fc-363d-ce9f" collective="false" hidden="false" import="true" targetId="1345-9dcd-964c-e724" type="selectionEntryGroup"/>
+            <entryLink name="Wargear Cards (Generic)" id="b105-cdd3-8ec2-6d9a" collective="false" hidden="false" import="true" targetId="b5be-2d0f-67e2-6260" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Vehicle Wargear Cards" id="6526-cf18-5345-1050" collective="false" hidden="false" import="true">
+      <entryLinks>
+        <entryLink name="Wargear Cards (Vehicle - Generic)" id="85f1-cae1-6f28-60e4" collective="false" hidden="false" import="true" targetId="52d8-9a1c-a258-0ed7" type="selectionEntryGroup"/>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Wargear Cards (Vehicle - Eldar)" id="445e-51d0-e4be-fa65" collective="false" hidden="false" import="true">
+          <selectionEntries>
+            <selectionEntry name="Crystalline Web" id="490f-2cae-cfd6-4454" collective="false" hidden="false" import="true" publicationId="71ba-82e2-d83c-d33d" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+              <profiles>
+                <profile name="Crystalline Web" id="7a6e-de39-18e4-1aeb" hidden="false" publicationId="71ba-82e2-d83c-d33d" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+                  <characteristics>
+                    <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Apply to any location on the vehicle. May purchase multiple times (1x for each vehicle part)
+When the vehicle is penetrated on a section with the web roll on the Crystalline Web table instead of the normal damage for that location</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule name="Crystalline Web Damage Table" id="d9fe-050f-a768-44c7" hidden="false" publicationId="71ba-82e2-d83c-d33d">
+                  <description>1-2: Vehicle is unaffected
+3: Any weapons associated with the penetrated location may not fire during your next turn. No further effects
+4-5: Roll a D3 on the penetrated location&apos;s damage table. The web protecting the location is destroyed
+6: Roll a D6 on the penetrated location&apos;s damage table. The web protecting the location is destroyed</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry name="Psycho-Sonic Screamers" id="953c-3e7f-4bf0-6cce" collective="false" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="c50f-a4dc-47aa-27e7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Terror" id="dfa3-e0d6-3259-82ed" hidden="false" targetId="05e0-cd40-2d9e-a9f9" type="rule"/>
+              </infoLinks>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="9187-ca83-9433-d2c7" childName="Skimmer/Bike" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notInstanceOf" value="0"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Psycho-Sonic Screamers" id="1fdf-7b16-cc6a-4715" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+                  <characteristics>
+                    <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Vehicle causes Terror</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry name="Talons" id="52c7-7633-d791-c062" collective="false" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="f0db-83ce-3f59-521d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="30"/>
+              </costs>
+              <modifiers>
+                <modifier field="points" type="increment" value="30">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition childId="d89d-0f46-9510-3f43" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="12dd-3add-ff88-76a5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Talons" id="c7fe-4c4e-4819-264d" hidden="false" publicationId="71ba-82e2-d83c-d33d" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+                  <characteristics>
+                    <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Talons shoot automatically before close combat attacks against the vehicle are worked out. Roll a D6 for each model in hand to hand combat with the vehicle. On a 4+ the model is hit. If a hit is scored roll a D6. If the score is equal to or more than the target&apos;s Toughness then it suffers 1 Wound with a -2 save modifier.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry name="Crystal Targeting Matrix" id="59fb-5af2-4f37-69d0" collective="false" hidden="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+              <profiles>
+                <profile name="Crystal Targeting Matrix" id="f91c-f262-a709-f7ac" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+                  <characteristics>
+                    <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Ignore all to hit modifiers for firing at fast moving targets</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry name="Holo-Field" id="9636-92c5-d178-8749" collective="false" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="8333-39f1-0991-d0ce" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="35"/>
+              </costs>
+              <profiles>
+                <profile name="Holo-Field" id="597c-6474-7692-c326" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+                  <characteristics>
+                    <characteristic name="Special" typeId="f917-8cd8-7592-47dd">As long as the vehicle is moving, all shots fired at it suffer an additional -1 to hit. If the vehicle comes to a halt or makes a pop up attack then it does not benefit from its holo-field</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry name="Spirit Stone" id="961f-5815-1607-6350" collective="false" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="c12c-661c-b6d7-14cd" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="12dd-3add-ff88-76a5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="0"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Spirit Stone" id="5daa-f591-bf9d-17b8" hidden="false" publicationId="71ba-82e2-d83c-d33d" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+                  <characteristics>
+                    <characteristic name="Special" typeId="f917-8cd8-7592-47dd">If the vehicle is assaulted psychically, then the attack will be nullified on a 6+. In addition, if one of the crew is killed by any means, then the spirit stone takes over with exactly the same profile as an Eldar Guardian. If the dead crew member is hit again, then the spirit stone is hit instead. It has a Toughness of 4 and 1 Wound.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry name="Spectral Shield" id="99cb-50c8-487d-3fbf" collective="false" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="2ce3-0128-6762-9949" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+              <profiles>
+                <profile name="Spectral Shield" id="c03b-4b13-27d0-492f" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+                  <characteristics>
+                    <characteristic name="Special" typeId="f917-8cd8-7592-47dd">If the vehicle is hit by a laser weapon, the Eldar player rolls a D6 and subtracts the score from the armour penetration roll</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry name="Vectored Engines" id="6c13-0591-4829-3451" collective="false" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="afb0-9777-a044-89d2" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition childId="d89d-0f46-9510-3f43" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="12dd-3add-ff88-76a5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Vectored Engines" id="0d0f-b02d-fae8-f6bd" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+                  <characteristics>
+                    <characteristic name="Special" typeId="f917-8cd8-7592-47dd">A vehicle fitting with vectored engines may take double the number of turns it is normally allowed to make</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
+</catalogue>

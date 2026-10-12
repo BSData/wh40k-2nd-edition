@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Eldar" id="3da1-2b23-4a40-323e" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="19" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Eldar" id="3da1-2b23-4a40-323e" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="20" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="sup" id="c9ee-e42d-077e-bfcd" hidden="false"/>
   </categoryEntries>
@@ -1104,7 +1104,7 @@ In close combat the rider of a cavalry mount adds the steeds Attack characterist
 
 See pg. 17 of 40k Rulebook for more clarifications</description>
     </rule>
-    <rule name="Eldar Jetibke Damage Table" id="9daa-fcbb-5d9e-d47d" hidden="false" page="datafax" publicationId="71ba-82e2-d83c-d33d">
+    <rule name="Eldar Jetbike Damage Table" id="9daa-fcbb-5d9e-d47d" hidden="false" page="datafax" publicationId="71ba-82e2-d83c-d33d">
       <description>1-2: Eldar Rider
 3-6: Jetbike
 See datafax for damage table</description>
@@ -2917,6 +2917,7 @@ See datafax for full damage table</description>
                 <condition childId="0cc7-ab68-a919-df8b" childName="Eldar Scout" field="selections" scope="b509-de70-f3fd-b0ec" shared="true" type="lessThan" value="4"/>
               </conditions>
             </modifier>
+            <modifier field="category" type="add" value="b6e4-2c66-e404-b10a"/>
           </modifiers>
           <selectionEntries>
             <selectionEntry name="Cameloline cloak" id="7f8d-5c9e-a64c-095d" collective="false" hidden="false" import="true" type="upgrade">
@@ -3850,16 +3851,21 @@ See datafax for full damage table</description>
           </constraints>
         </entryLink>
         <entryLink name="Armour" id="a6fc-80cf-0acd-a07d" collective="false" hidden="false" import="true" sortIndex="1" targetId="8dca-6bf4-a173-e4bd" type="selectionEntryGroup"/>
-        <entryLink name="Assault Weapons" id="87cb-bc23-73af-4b79" collective="false" hidden="false" import="true" targetId="b18d-cd92-629f-c211" type="selectionEntryGroup"/>
-        <entryLink name="Grenades" id="a11f-aec3-a023-dcbd" collective="false" hidden="false" import="true" targetId="cd80-d89e-ac11-6a9d" type="selectionEntryGroup"/>
-        <entryLink name="Wargear Cards" id="4fad-0cdd-43b6-80b4" collective="false" hidden="false" import="true" targetId="5cb8-a11f-ec3f-a011" type="selectionEntryGroup">
+        <entryLink name="Assault Weapons" id="87cb-bc23-73af-4b79" collective="false" hidden="false" import="true" sortIndex="2" targetId="b18d-cd92-629f-c211" type="selectionEntryGroup"/>
+        <entryLink name="Grenades" id="a11f-aec3-a023-dcbd" collective="false" hidden="false" import="true" sortIndex="3" targetId="cd80-d89e-ac11-6a9d" type="selectionEntryGroup"/>
+        <entryLink name="Wargear Cards" id="4fad-0cdd-43b6-80b4" collective="false" hidden="false" import="true" sortIndex="5" targetId="5cb8-a11f-ec3f-a011" type="selectionEntryGroup">
           <constraints>
             <constraint id="b192-a76d-b8d5-637b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
           </constraints>
         </entryLink>
+        <entryLink name="Holo-suit" id="fc29-8801-bac1-ba4e" hidden="false" import="true" targetId="6033-aaf5-9017-9c1b" type="selectionEntry">
+          <constraints>
+            <constraint id="12c4-e72d-30cf-12ce" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="2dcb-55ef-cd75-43e6" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Holo-suits" id="975b-9e33-e5be-313e" hidden="false" targetId="6f4c-2d58-1f51-712e" type="profile"/>
         <infoLink name="Flip" id="de2e-905e-61f9-e0af" hidden="false" targetId="f55d-ca63-c3cb-ac0f" type="rule"/>
         <infoLink name="Fear" id="19fc-c6b8-83df-c55a" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
         <infoLink name="Death Jester" id="ddb0-4965-c8dc-85cd" hidden="false" targetId="c87d-1960-97c6-8087" type="profile"/>
@@ -3884,7 +3890,7 @@ See datafax for full damage table</description>
         </modifier>
       </modifiers>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Mount on Jetbike or Vyper" id="9131-6105-4b61-7f75" collective="false" hidden="false" import="true">
+        <selectionEntryGroup name="Mount on Jetbike or Vyper" id="9131-6105-4b61-7f75" collective="false" hidden="false" import="true" sortIndex="4">
           <constraints>
             <constraint id="f96c-80a3-96fd-a246" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
@@ -3983,7 +3989,7 @@ Psychology: The Solitaire is immune to psychology. He is not affected by terror,
         <categoryLink name="Harlequins" id="56f0-df10-2e06-e813" hidden="false" primary="true" targetId="c1bb-1205-a4da-35c6"/>
       </categoryLinks>
       <constraints>
-        <constraint id="4d20-b6f7-54ab-9a68" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0"/>
+        <constraint id="4d20-b6f7-54ab-9a68" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="max" value="0"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="points" value="93"/>
@@ -4461,6 +4467,9 @@ Psychology: The Solitaire is immune to psychology. He is not affected by terror,
                       <costs>
                         <cost name="pts" typeId="points" value="20"/>
                       </costs>
+                      <modifiers>
+                        <modifier field="category" type="add" value="b6e4-2c66-e404-b10a"/>
+                      </modifiers>
                     </entryLink>
                   </entryLinks>
                   <infoLinks>
@@ -4516,6 +4525,9 @@ Psychology: The Solitaire is immune to psychology. He is not affected by terror,
                       <costs>
                         <cost name="pts" typeId="points" value="20"/>
                       </costs>
+                      <modifiers>
+                        <modifier field="category" type="add" value="b6e4-2c66-e404-b10a"/>
+                      </modifiers>
                     </entryLink>
                   </entryLinks>
                   <infoLinks>
@@ -4615,6 +4627,7 @@ Psychology: The Solitaire is immune to psychology. He is not affected by terror,
                         <repeat childId="7d75-c495-97e2-cdf6" childName="Harlequin Jetbike w/ Shuriken Cannon" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="e5b5-36e8-8494-8733" shared="true" value="3"/>
                       </repeats>
                     </modifier>
+                    <modifier field="category" type="add" value="b6e4-2c66-e404-b10a"/>
                   </modifiers>
                 </selectionEntry>
               </selectionEntries>

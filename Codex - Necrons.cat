@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Necrons" id="f649-eb44-08cb-0ba3" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="4" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Necrons" id="f649-eb44-08cb-0ba3" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="5" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>V1 is just the White Dwarf units. May add the fan rules in later if people want</readme>
   <entryLinks>
     <entryLink name="Necron Lord" id="5e18-36c7-0d37-4cfb" collective="false" hidden="false" import="true" targetId="8a1f-c19a-1e19-d04f" type="selectionEntry"/>
@@ -201,6 +201,18 @@ control of the vehicle</description>
       <infoLinks>
         <infoLink name="Necron Lord" id="1415-0975-a325-777f" hidden="false" targetId="557c-cb2d-cb45-6cbb" type="profile"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <rules>
         <rule name="Strategy Rating" id="b976-103a-b657-de1f" hidden="false">
           <description>A Necron player always deploys last and always gets the first turn</description>
@@ -221,6 +233,18 @@ control of the vehicle</description>
         <categoryLink name="Necrons" id="f7d4-0a05-2b60-f365" hidden="false" primary="false" targetId="722d-8a5c-d442-498a"/>
         <categoryLink name="2Squads" id="523d-7f17-0b2b-bfd7" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <selectionEntries>
         <selectionEntry name="Necron Warriors" id="a77a-781a-4db8-b21a" collective="false" hidden="false" import="true" type="model">
           <constraints>
@@ -271,6 +295,18 @@ control of the vehicle</description>
         <infoLink name="Scarabs" id="52ca-1487-b13b-21de" hidden="false" targetId="49cc-8456-7ce2-dd4f" type="rule"/>
         <infoLink name="Scarab Movement" id="791d-d5fb-663c-78ad" hidden="false" targetId="c972-1d7e-f0a0-19ce" type="rule"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <modifiers>
         <modifier field="b55f-8785-8f4b-984e" type="increment" value="1">
           <repeats>
@@ -299,6 +335,18 @@ control of the vehicle</description>
         <infoLink name="Necron Destroyer" id="9599-b87c-9154-6171" hidden="false" targetId="e36a-0897-706c-61c1" type="profile"/>
         <infoLink name="Destroyer Damage Table" id="e863-6c8a-4357-a552" hidden="false" targetId="f8b4-3df7-bcce-5673" type="rule"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <selectionEntries>
         <selectionEntry name="Necron Warriors" id="8489-1168-968c-ca3f" collective="false" hidden="false" import="true" type="upgrade">
           <constraints>

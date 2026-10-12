@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Legion of the Damned" id="8d30-f85a-223d-697c" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff89" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="31" library="false" revision="8" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Legion of the Damned" id="8d30-f85a-223d-697c" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff89" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="31" library="false" revision="9" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink name="Legion of the Damned Commander" id="c6d3-4f59-bb7b-cb64" hidden="false" import="true" targetId="b3bf-f27d-4c9a-ba36" type="selectionEntry"/>
     <entryLink name="Chaplain" id="10d7-a6ab-2164-9a8c" hidden="false" import="true" targetId="19be-b66b-0dae-a781" type="selectionEntry"/>
@@ -422,6 +422,7 @@ See datafax for damage table</description>
       <categoryLinks>
         <categoryLink name="Legion of the Damned" id="f59e-ebfd-da33-43be" hidden="false" primary="false" targetId="f7f4-2733-743a-8971"/>
         <categoryLink name="1Characters" id="cffe-f834-4b35-adc6" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="LotD-PrimaryList" id="de50-85eb-ea20-12fe" hidden="false" primary="false" targetId="a864-b85d-f081-a0c8"/>
       </categoryLinks>
       <constraints>
         <constraint id="e794-bdbc-72fd-f785" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -476,6 +477,11 @@ See datafax for damage table</description>
           <comment>For Ally lists</comment>
           <modifiers>
             <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="remove" value="a864-b85d-f081-a0c8">
               <conditions>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
@@ -1421,7 +1427,7 @@ See datafax for damage table</description>
         <selectionEntry name="Biker Legionnaires" id="289c-7c18-56ff-6be0" collective="false" hidden="false" import="true" sortIndex="1" type="model">
           <constraints>
             <constraint id="50e6-af72-fdf5-123f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="5"/>
-            <constraint id="02be-1157-153c-86f2" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="02be-1157-153c-86f2" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="60"/>
@@ -1469,10 +1475,10 @@ See datafax for damage table</description>
                 <repeat childId="43e0-e2f9-ed65-3a70" childName="Biker Legionnaire w/ Special Weapon" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
               </repeats>
             </modifier>
-            <modifier field="02be-1157-153c-86f2" type="set" value="0">
-              <conditions>
-                <condition childId="43e0-e2f9-ed65-3a70" childName="Biker Legionnaire w/ Special Weapon" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
-              </conditions>
+            <modifier field="02be-1157-153c-86f2" type="decrement" value="1">
+              <repeats>
+                <repeat childId="43e0-e2f9-ed65-3a70" childName="Biker Legionnaire w/ Special Weapon" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+              </repeats>
             </modifier>
           </modifiers>
         </selectionEntry>

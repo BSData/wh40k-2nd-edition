@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="43" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="44" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <comment>Warhammer 2nd Edition 40k</comment>
   <readme>Added more wargear cards</readme>
   <categoryEntries>
@@ -28,6 +28,8 @@
     <categoryEntry name="Legion of the Damned" id="f7f4-2733-743a-8971" hidden="false"/>
     <categoryEntry name="Techmarine" id="a21c-767f-7ecf-94eb" hidden="false"/>
     <categoryEntry name="Harlequins" id="c1bb-1205-a4da-35c6" hidden="false"/>
+    <categoryEntry name="LotD-PrimaryList" id="a864-b85d-f081-a0c8" hidden="false"/>
+    <categoryEntry name="Harlequin-PrimaryList" id="6dc4-8bb9-688d-1e49" hidden="false"/>
   </categoryEntries>
   <costTypes>
     <costType name="pts" id="points" defaultCostLimit="-1" hidden="false"/>
@@ -140,6 +142,13 @@
               </modifierGroups>
             </modifierGroup>
           </modifierGroups>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="547a-80cd-7988-a39f" childName="Codex - Eldar (Harlequins)" field="selections" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink name="3Support" id="6b31-1e58-1791-4c6b" hidden="false" targetId="b6e4-2c66-e404-b10a">
           <constraints>
@@ -212,24 +221,120 @@
         <categoryLink name="Harlequins" id="8460-917c-e401-7a5e" hidden="false" targetId="c1bb-1205-a4da-35c6">
           <constraints>
             <constraint id="be11-93f8-8506-2852" field="points" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="0"/>
+            <constraint id="83e3-c40b-2982-43bc" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="max" value="0"/>
           </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <comment>50% Eldar</comment>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="3da1-2b23-4a40-323e" childName="Codex - Eldar" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <comment>When you have no points limit</comment>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier field="be11-93f8-8506-2852" type="set" value="-1"/>
+                    <modifier field="83e3-c40b-2982-43bc" type="set" value="50"/>
+                  </modifiers>
+                </modifierGroup>
+                <modifierGroup type="and">
+                  <comment>When having a points limit</comment>
+                  <modifiers>
+                    <modifier field="83e3-c40b-2982-43bc" type="set" value="-1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier field="be11-93f8-8506-2852" type="increment" value="1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                      <repeats>
+                        <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="0.5" roundUp="false" scope="roster" shared="true" value="1"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <comment>For Harlequins Only</comment>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="547a-80cd-7988-a39f" childName="Codex - Eldar (Harlequins)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <comment>When you have no points limit</comment>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier field="be11-93f8-8506-2852" type="set" value="-1"/>
+                    <modifier field="83e3-c40b-2982-43bc" type="set" value="100"/>
+                  </modifiers>
+                </modifierGroup>
+                <modifierGroup type="and">
+                  <comment>When having a points limit</comment>
+                  <modifiers>
+                    <modifier field="83e3-c40b-2982-43bc" type="set" value="-1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier field="be11-93f8-8506-2852" type="increment" value="1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                      <repeats>
+                        <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="1" roundUp="false" scope="roster" shared="true" value="1"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+            </modifierGroup>
+          </modifierGroups>
           <modifiers>
             <modifier field="hidden" type="set" value="true">
               <conditions>
                 <condition childId="3da1-2b23-4a40-323e" childName="Codex - Eldar" field="selections" includeChildSelections="true" scope="primary-catalogue" shared="true" type="notInstanceOf" value="1"/>
+                <condition childId="547a-80cd-7988-a39f" childName="Codex - Eldar (Harlequins)" field="selections" includeChildSelections="true" scope="primary-catalogue" shared="true" type="notInstanceOf" value="1"/>
               </conditions>
-            </modifier>
-            <modifier field="be11-93f8-8506-2852" type="increment" value="1">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-              <repeats>
-                <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="0.5" roundUp="false" scope="roster" shared="true" value="1"/>
-              </repeats>
             </modifier>
           </modifiers>
         </categoryLink>
@@ -242,19 +347,26 @@
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="8d30-f85a-223d-697c" childName="Codex - Legion of the Damned" field="selections" includeChildForces="false" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
-                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="selections" includeChildForces="true" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                <condition childId="a864-b85d-f081-a0c8" childName="LotD-PrimaryList" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
-          <conditions>
-            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-          </conditions>
         </modifier>
         <modifier field="hidden" type="set" value="true">
           <conditions>
             <condition childId="7bb5-646e-ec66-1cdd" childName="Codex - Assassins" field="selections" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
           </conditions>
+        </modifier>
+        <modifier field="warning" type="add" value="Harlequins cannot take allies">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                <condition childId="6dc4-8bb9-688d-1e49" childName="Harlequin-PrimaryList" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </forceEntry>

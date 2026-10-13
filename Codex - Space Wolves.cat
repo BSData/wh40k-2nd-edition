@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Space Wolves" id="8d0e-9c4e-17af-ed93" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="21" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Space Wolves" id="8d0e-9c4e-17af-ed93" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="22" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>Terminators cannot add the teleport ability (which you need to increase their points by 50%) due to a limitation in Battlescribe. No way to modify the points in that way. 
 
 If they ever change that I will update. Until then, ye olde calcuator will do!</readme>
@@ -31,6 +31,8 @@ If they ever change that I will update. Until then, ye olde calcuator will do!</
     <entryLink name="Wolf Lord Kyrl Grimblood" id="962e-c9ec-b106-61e0" collective="false" hidden="false" import="true" targetId="6059-468c-d757-ec09" type="selectionEntry"/>
     <entryLink name="Chapter Master" id="4451-3a49-8779-9b84" hidden="false" import="true" targetId="0885-b3aa-198a-320b" type="selectionEntry"/>
     <entryLink name="Legion of the Damned" id="62bd-fd1e-0be5-d6b1" hidden="false" import="true" targetId="9be3-9c30-c2d3-6260" type="selectionEntry"/>
+    <entryLink name="Support Points from Squad Upgrade (Bikes)" id="e043-5404-f25a-e25d" hidden="false" import="true" targetId="62ca-39fb-a8b6-f470" type="selectionEntry"/>
+    <entryLink name="Servitor Bodyguard for Iron Priest" id="08f3-277b-1e5e-85cb" hidden="false" import="true" targetId="f7a9-f6c8-7eb7-011d" type="selectionEntry"/>
   </entryLinks>
   <infoLinks>
     <infoLink name="Legion of the Damned" id="5a9c-5b7d-00c2-3d02" hidden="false" targetId="49eb-985e-678f-f554" type="rule"/>
@@ -1309,40 +1311,6 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Frag Grenade" id="a10d-0b8e-135b-146f" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="ffcf-39e1-b65d-f6c2" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="7ac5-935d-8ecf-59c0" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Krak Grenade" id="cac2-4efd-7c8b-c631" collective="false" hidden="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
-              <constraints>
-                <constraint id="abbb-62ad-65b1-6106" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
         <entryLink name="Targeter" id="18e4-9575-01ce-e90f" collective="false" hidden="false" import="true" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
           <constraints>
@@ -1986,15 +1954,6 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Servitor Bodyguard" id="67a9-d1e1-2b6d-e668" hidden="false" sortIndex="4">
-          <entryLinks>
-            <entryLink name="Servitor Bodyguard" id="48c5-4e1a-10c6-5328" hidden="false" import="true" targetId="f7a9-f6c8-7eb7-011d" type="selectionEntry">
-              <constraints>
-                <constraint id="61e8-8b14-dfa6-49f3" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Wolf Guard Champion" id="99e2-e911-aba3-1722" collective="false" hidden="false" import="true" page="57" publicationId="0f8d-af97-3972-324c" type="model">
@@ -2600,8 +2559,18 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                       </modifierGroups>
                       <modifiers>
                         <modifier field="8c04-26d4-7fa6-d999" type="set" value="1">
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition childId="3f57-281a-55e0-e8b7" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="ae0b-f901-df4b-faa4" shared="true" type="atLeast" value="1"/>
+                                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                        <modifier field="hidden" type="set" value="true">
                           <conditions>
-                            <condition childId="3f57-281a-55e0-e8b7" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="ae0b-f901-df4b-faa4" shared="true" type="atLeast" value="1"/>
+                            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
                           </conditions>
                         </modifier>
                       </modifiers>
@@ -2714,6 +2683,42 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                         </modifierGroup>
                       </modifierGroups>
                     </entryLink>
+                    <entryLink name="Space Marine Bike" id="fc5b-5e1c-1e62-a8ed" hidden="false" import="true" targetId="1b22-fc76-8ed0-5765" type="selectionEntry">
+                      <constraints>
+                        <constraint id="97cd-2270-7e00-8c42" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                      </constraints>
+                      <costs>
+                        <cost name="pts" typeId="points" value="20"/>
+                      </costs>
+                      <modifierGroups>
+                        <modifierGroup type="and">
+                          <modifiers>
+                            <modifier field="hidden" type="set" value="true">
+                              <conditions>
+                                <condition childId="3f57-281a-55e0-e8b7" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="ae0b-f901-df4b-faa4" shared="true" type="lessThan" value="1"/>
+                              </conditions>
+                            </modifier>
+                          </modifiers>
+                        </modifierGroup>
+                      </modifierGroups>
+                      <modifiers>
+                        <modifier field="97cd-2270-7e00-8c42" type="set" value="1">
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition childId="3f57-281a-55e0-e8b7" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="ae0b-f901-df4b-faa4" shared="true" type="atLeast" value="1"/>
+                                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
                   </entryLinks>
                 </entryLink>
               </entryLinks>
@@ -2760,8 +2765,18 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                       <modifiers>
                         <modifier field="info" type="add" value="Wargear Cards will apply to all bikers in the group. If you want separate loadouts - click the + sign and add separate bikers for their own loadout"/>
                         <modifier field="6b96-3740-9253-8ba0" type="set" value="1">
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition childId="3f57-281a-55e0-e8b7" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="ae0b-f901-df4b-faa4" shared="true" type="atLeast" value="1"/>
+                                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                        <modifier field="hidden" type="set" value="true">
                           <conditions>
-                            <condition childId="3f57-281a-55e0-e8b7" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="ae0b-f901-df4b-faa4" shared="true" type="atLeast" value="1"/>
+                            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
                           </conditions>
                         </modifier>
                       </modifiers>
@@ -2874,6 +2889,42 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                         </modifierGroup>
                       </modifierGroups>
                     </entryLink>
+                    <entryLink name="Space Marine Bike" id="9962-b64c-b83a-0243" hidden="false" import="true" targetId="1b22-fc76-8ed0-5765" type="selectionEntry">
+                      <constraints>
+                        <constraint id="d277-78ab-43b0-6efb" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                      </constraints>
+                      <costs>
+                        <cost name="pts" typeId="points" value="20"/>
+                      </costs>
+                      <modifierGroups>
+                        <modifierGroup type="and">
+                          <modifiers>
+                            <modifier field="hidden" type="set" value="true">
+                              <conditions>
+                                <condition childId="3f57-281a-55e0-e8b7" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="ae0b-f901-df4b-faa4" shared="true" type="lessThan" value="1"/>
+                              </conditions>
+                            </modifier>
+                          </modifiers>
+                        </modifierGroup>
+                      </modifierGroups>
+                      <modifiers>
+                        <modifier field="d277-78ab-43b0-6efb" type="set" value="1">
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition childId="3f57-281a-55e0-e8b7" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="ae0b-f901-df4b-faa4" shared="true" type="atLeast" value="1"/>
+                                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
                   </entryLinks>
                   <infoLinks>
                     <infoLink name="Blood Claw" id="0466-cbbb-5a3f-2893" hidden="false" targetId="4df8-58b9-ed6a-e4db" type="profile"/>
@@ -2887,6 +2938,9 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                       <constraints>
                         <constraint id="ad8a-d98c-1727-56b2" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
                       </constraints>
+                      <displayCosts>
+                        <displayCost name="pts" typeId="points" value="200"/>
+                      </displayCosts>
                       <modifiers>
                         <modifier field="ad8a-d98c-1727-56b2" type="set" value="0">
                           <conditions>
@@ -2971,7 +3025,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                 <constraint id="7573-5a59-f859-3864" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry name="1st 5 Man Pack w/ Sergeant" id="cbb1-0f8e-0395-418e" hidden="false" import="true" type="upgrade">
+                <selectionEntry name="1st 5 Man Pack w/ Sergeant" id="cbb1-0f8e-0395-418e" collapsible="true" hidden="false" import="true" type="upgrade">
                   <constraints>
                     <constraint id="7b6d-95f3-9fab-b214" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
                     <constraint id="fc51-50b1-6416-e26b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
@@ -3103,14 +3157,62 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                                     <condition childId="1109-8a60-95ed-e894" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cbb1-0f8e-0395-418e" shared="true" type="lessThan" value="1"/>
                                   </conditions>
                                 </modifier>
-                                <modifier field="ffe2-e076-35fb-3904" type="set" value="1">
+                              </modifiers>
+                            </modifierGroup>
+                          </modifierGroups>
+                          <modifiers>
+                            <modifier field="ffe2-e076-35fb-3904" type="set" value="1">
+                              <conditionGroups>
+                                <conditionGroup type="and">
                                   <conditions>
                                     <condition childId="1109-8a60-95ed-e894" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cbb1-0f8e-0395-418e" shared="true" type="atLeast" value="1"/>
+                                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                                  </conditions>
+                                </conditionGroup>
+                              </conditionGroups>
+                            </modifier>
+                            <modifier field="hidden" type="set" value="true">
+                              <conditions>
+                                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                              </conditions>
+                            </modifier>
+                          </modifiers>
+                        </entryLink>
+                        <entryLink name="Space Marine Bike" id="21e4-6a5d-a407-5e2b" hidden="false" import="true" targetId="1b22-fc76-8ed0-5765" type="selectionEntry">
+                          <constraints>
+                            <constraint id="a6f1-0cd1-ecb6-d6b7" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                          </constraints>
+                          <costs>
+                            <cost name="pts" typeId="points" value="20"/>
+                          </costs>
+                          <modifierGroups>
+                            <modifierGroup type="and">
+                              <modifiers>
+                                <modifier field="hidden" type="set" value="true">
+                                  <conditions>
+                                    <condition childId="1109-8a60-95ed-e894" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cbb1-0f8e-0395-418e" shared="true" type="lessThan" value="1"/>
                                   </conditions>
                                 </modifier>
                               </modifiers>
                             </modifierGroup>
                           </modifierGroups>
+                          <modifiers>
+                            <modifier field="a6f1-0cd1-ecb6-d6b7" type="set" value="1">
+                              <conditionGroups>
+                                <conditionGroup type="and">
+                                  <conditions>
+                                    <condition childId="1109-8a60-95ed-e894" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="561f-0c2c-4363-8289" shared="true" type="atLeast" value="1"/>
+                                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                                  </conditions>
+                                </conditionGroup>
+                              </conditionGroups>
+                            </modifier>
+                            <modifier field="hidden" type="set" value="true">
+                              <conditions>
+                                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                              </conditions>
+                            </modifier>
+                          </modifiers>
                         </entryLink>
                       </entryLinks>
                     </entryLink>
@@ -3260,16 +3362,62 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                                     <condition childId="1109-8a60-95ed-e894" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cbb1-0f8e-0395-418e" shared="true" type="lessThan" value="1"/>
                                   </conditions>
                                 </modifier>
-                                <modifier field="83e9-3267-cccd-bbf3" type="set" value="1">
+                              </modifiers>
+                            </modifierGroup>
+                          </modifierGroups>
+                          <modifiers>
+                            <modifier field="info" type="add" value="Wargear Cards will apply to all bikers in the group. If you want separate loadouts - click the + sign and add separate bikers for their own loadout"/>
+                            <modifier field="83e9-3267-cccd-bbf3" type="set" value="1">
+                              <conditionGroups>
+                                <conditionGroup type="and">
                                   <conditions>
                                     <condition childId="1109-8a60-95ed-e894" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cbb1-0f8e-0395-418e" shared="true" type="atLeast" value="1"/>
+                                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                                  </conditions>
+                                </conditionGroup>
+                              </conditionGroups>
+                            </modifier>
+                            <modifier field="hidden" type="set" value="true">
+                              <conditions>
+                                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                              </conditions>
+                            </modifier>
+                          </modifiers>
+                        </entryLink>
+                        <entryLink name="Space Marine Bike" id="1bfd-c691-2e16-bd3d" hidden="false" import="true" targetId="1b22-fc76-8ed0-5765" type="selectionEntry">
+                          <constraints>
+                            <constraint id="93e0-3230-2dc5-a1c6" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                          </constraints>
+                          <costs>
+                            <cost name="pts" typeId="points" value="20"/>
+                          </costs>
+                          <modifierGroups>
+                            <modifierGroup type="and">
+                              <modifiers>
+                                <modifier field="hidden" type="set" value="true">
+                                  <conditions>
+                                    <condition childId="1109-8a60-95ed-e894" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cbb1-0f8e-0395-418e" shared="true" type="lessThan" value="1"/>
                                   </conditions>
                                 </modifier>
                               </modifiers>
                             </modifierGroup>
                           </modifierGroups>
                           <modifiers>
-                            <modifier field="info" type="add" value="Wargear Cards will apply to all bikers in the group. If you want separate loadouts - click the + sign and add separate bikers for their own loadout"/>
+                            <modifier field="93e0-3230-2dc5-a1c6" type="set" value="1">
+                              <conditionGroups>
+                                <conditionGroup type="and">
+                                  <conditions>
+                                    <condition childId="1109-8a60-95ed-e894" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cbb1-0f8e-0395-418e" shared="true" type="atLeast" value="1"/>
+                                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                                  </conditions>
+                                </conditionGroup>
+                              </conditionGroups>
+                            </modifier>
+                            <modifier field="hidden" type="set" value="true">
+                              <conditions>
+                                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                              </conditions>
+                            </modifier>
                           </modifiers>
                         </entryLink>
                       </entryLinks>
@@ -3285,9 +3433,9 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                           <constraints>
                             <constraint id="426a-20cc-efcd-ef10" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
                           </constraints>
-                          <costs>
-                            <cost name="pts" typeId="points" value="100"/>
-                          </costs>
+                          <displayCosts>
+                            <displayCost name="pts" typeId="points" value="100"/>
+                          </displayCosts>
                           <modifiers>
                             <modifier field="426a-20cc-efcd-ef10" type="set" value="0">
                               <conditions>
@@ -3359,7 +3507,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                 </selectionEntry>
-                <selectionEntry name="2nd 5 Man Pack" id="f8fa-7b0a-15d5-984c" hidden="false" import="true" type="upgrade">
+                <selectionEntry name="2nd 5 Man Pack" id="f8fa-7b0a-15d5-984c" collapsible="true" hidden="false" import="true" type="upgrade">
                   <constraints>
                     <constraint id="0f19-178e-1dc1-9693" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
                     <constraint id="98b8-3647-9851-9d3d" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
@@ -3497,7 +3645,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                             </modifierGroup>
                           </modifierGroups>
                         </entryLink>
-                        <entryLink name="Space Marine Bike" id="b240-a286-5908-bf29" hidden="false" import="true" targetId="1b22-fc76-8ed0-5765" type="selectionEntry">
+                        <entryLink name="Space Marine Bike" id="b240-a286-5908-bf29" hidden="false" import="true" targetId="e655-233b-ed95-0f94" type="selectionEntry">
                           <constraints>
                             <constraint id="4518-15c8-a0be-ec3c" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
                           </constraints>
@@ -3509,16 +3657,62 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                                     <condition childId="d3f0-54df-ea02-cdfc" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="f8fa-7b0a-15d5-984c" shared="true" type="lessThan" value="1"/>
                                   </conditions>
                                 </modifier>
-                                <modifier field="4518-15c8-a0be-ec3c" type="set" value="1">
+                              </modifiers>
+                            </modifierGroup>
+                          </modifierGroups>
+                          <modifiers>
+                            <modifier field="info" type="add" value="Wargear Cards will apply to all bikers in the group. If you want separate loadouts - click the + sign and add separate bikers for their own loadout"/>
+                            <modifier field="hidden" type="set" value="true">
+                              <conditions>
+                                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                              </conditions>
+                            </modifier>
+                            <modifier field="4518-15c8-a0be-ec3c" type="set" value="1">
+                              <conditionGroups>
+                                <conditionGroup type="and">
                                   <conditions>
                                     <condition childId="d3f0-54df-ea02-cdfc" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="f8fa-7b0a-15d5-984c" shared="true" type="atLeast" value="1"/>
+                                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                                  </conditions>
+                                </conditionGroup>
+                              </conditionGroups>
+                            </modifier>
+                          </modifiers>
+                        </entryLink>
+                        <entryLink name="Space Marine Bike" id="2c95-1548-dbf8-ccaf" hidden="false" import="true" targetId="1b22-fc76-8ed0-5765" type="selectionEntry">
+                          <constraints>
+                            <constraint id="cf9e-1cb3-5f2c-b94d" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                          </constraints>
+                          <costs>
+                            <cost name="pts" typeId="points" value="20"/>
+                          </costs>
+                          <modifierGroups>
+                            <modifierGroup type="and">
+                              <modifiers>
+                                <modifier field="hidden" type="set" value="true">
+                                  <conditions>
+                                    <condition childId="d3f0-54df-ea02-cdfc" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="f8fa-7b0a-15d5-984c" shared="true" type="lessThan" value="1"/>
                                   </conditions>
                                 </modifier>
                               </modifiers>
                             </modifierGroup>
                           </modifierGroups>
                           <modifiers>
-                            <modifier field="info" type="add" value="Wargear Cards will apply to all bikers in the group. If you want separate loadouts - click the + sign and add separate bikers for their own loadout"/>
+                            <modifier field="cf9e-1cb3-5f2c-b94d" type="set" value="1">
+                              <conditionGroups>
+                                <conditionGroup type="and">
+                                  <conditions>
+                                    <condition childId="d3f0-54df-ea02-cdfc" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="f8fa-7b0a-15d5-984c" shared="true" type="atLeast" value="1"/>
+                                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                                  </conditions>
+                                </conditionGroup>
+                              </conditionGroups>
+                            </modifier>
+                            <modifier field="hidden" type="set" value="true">
+                              <conditions>
+                                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                              </conditions>
+                            </modifier>
                           </modifiers>
                         </entryLink>
                       </entryLinks>
@@ -3534,9 +3728,9 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                           <constraints>
                             <constraint id="72d5-13de-58c0-7a06" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
                           </constraints>
-                          <costs>
-                            <cost name="pts" typeId="points" value="100"/>
-                          </costs>
+                          <displayCosts>
+                            <displayCost name="pts" typeId="points" value="100"/>
+                          </displayCosts>
                           <modifiers>
                             <modifier field="72d5-13de-58c0-7a06" type="set" value="0">
                               <conditions>
@@ -3887,40 +4081,6 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Frag Grenade" id="b208-90c9-96cc-95ca" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="64fb-fa49-d181-86eb" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="09e8-4dd1-0d92-ecde" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Blind Grenade" id="e9e7-a18f-0ac8-3d98" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
-              <constraints>
-                <constraint id="3ceb-a8ab-539f-0140" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
         <entryLink name="Vehicle Wargear Cards" id="432d-3be8-abee-8fae" collective="false" hidden="false" import="true" targetId="79ff-a71a-fe7d-aca3" type="selectionEntryGroup"/>
       </entryLinks>
@@ -4193,40 +4353,6 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Frag Grenade" id="a816-b10c-47ea-36be" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="3d19-35a9-2413-5c55" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="09e8-4dd1-0d92-ecde" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Blind Grenade" id="0729-2ff2-4700-07fe" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
-              <constraints>
-                <constraint id="f9a1-faff-3b68-245e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
         <entryLink name="Vehicle Wargear Cards" id="70eb-f1d2-f91d-e203" collective="false" hidden="false" import="true" targetId="79ff-a71a-fe7d-aca3" type="selectionEntryGroup"/>
         <entryLink name="Grey Hunter Vehicle Crew" id="79c2-4eba-13d4-a133" hidden="false" import="true" targetId="90e9-c569-be7f-88a7" type="selectionEntry">
@@ -4301,40 +4427,6 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Frag Grenade" id="2b67-0a23-645a-c8a5" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="8359-52c4-ee0b-3dae" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="09e8-4dd1-0d92-ecde" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Blind Grenade" id="20a5-490d-b921-1636" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
-              <constraints>
-                <constraint id="64fa-5462-3af7-8490" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
         <entryLink name="Vehicle Wargear Cards" id="840e-4f1b-7355-e852" collective="false" hidden="false" import="true" targetId="79ff-a71a-fe7d-aca3" type="selectionEntryGroup"/>
         <entryLink name="Grey Hunter Vehicle Crew" id="1cfa-e29e-de5e-f748" hidden="false" import="true" targetId="90e9-c569-be7f-88a7" type="selectionEntry">
@@ -4425,40 +4517,6 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Frag Grenade" id="023f-25fb-8bfd-f248" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="572d-f9af-4b01-1d2f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="09e8-4dd1-0d92-ecde" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Blind Grenade" id="64e1-7c7d-16c1-847e" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
-              <constraints>
-                <constraint id="5f8f-ca8f-dfd7-fc5c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
         <entryLink name="Twin Linked Bolters" id="938b-700f-3d1a-2a78" collective="false" hidden="false" import="true" targetId="dd32-5d68-e4bc-9dff" type="selectionEntry">
           <constraints>
@@ -5050,7 +5108,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Servitor Bodyguard" id="f7a9-f6c8-7eb7-011d" collective="false" hidden="false" import="true" type="unit">
+    <selectionEntry name="Servitor Bodyguard for Iron Priest" id="f7a9-f6c8-7eb7-011d" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="5b26-a08c-783a-318a" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
         <categoryLink name="3Support" id="22d3-6640-dec4-cc47" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
@@ -5261,40 +5319,6 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Frag Grenade" id="5d44-3e2e-4307-d7d9" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="56c6-eb24-0a18-d048" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="09e8-4dd1-0d92-ecde" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Blind Grenade" id="d47c-c742-0e06-5855" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
-              <constraints>
-                <constraint id="fada-6969-f2c8-9b8d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
         <entryLink name="Assault Cannon" id="c032-9bd6-275a-6bcb" collective="false" hidden="false" import="true" targetId="8953-2383-fa02-9003" type="selectionEntry">
           <constraints>
@@ -6047,51 +6071,17 @@ You cannot reduce the damage result below 1 and cannot modify any further once y
       <constraints>
         <constraint id="5af0-c4ed-fd12-cc6d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-      <costs>
-        <cost name="pts" typeId="points" value="20"/>
-      </costs>
+      <displayCosts>
+        <displayCost name="pts" typeId="points" value="20"/>
+      </displayCosts>
       <entryLinks>
         <entryLink name="Auto-Launcher" id="f447-1b48-e46d-0c9b" collective="false" hidden="false" import="true" targetId="222b-075f-d34c-7093" type="selectionEntry">
           <constraints>
             <constraint id="f834-866c-e06d-f3d9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Frag Grenade" id="1f53-8701-048c-cc9a" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="f10d-81b0-ae06-03e4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="7ac5-935d-8ecf-59c0" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Krak Grenade" id="63ff-6815-59af-15df" collective="false" hidden="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
-              <constraints>
-                <constraint id="a25c-c70f-c9b7-4218" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
+          <displayCosts>
+            <displayCost name="pts" typeId="points" value="5"/>
+          </displayCosts>
         </entryLink>
         <entryLink name="Targeter" id="47a2-9af2-f562-25d4" collective="false" hidden="false" import="true" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
           <constraints>
@@ -6105,7 +6095,6 @@ You cannot reduce the damage result below 1 and cannot modify any further once y
             <constraint id="8f26-b735-c2f1-de1f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
           </constraints>
         </entryLink>
-        <entryLink name="Vehicle Wargear Cards" id="fab5-c1cc-e558-6216" collective="false" hidden="false" import="true" targetId="79ff-a71a-fe7d-aca3" type="selectionEntryGroup"/>
       </entryLinks>
       <infoLinks>
         <infoLink name="Space Marine Bike Damage Table" id="caeb-a00c-bbf1-a521" hidden="false" targetId="94d9-fb22-095a-edae" type="rule"/>
@@ -6122,6 +6111,255 @@ You cannot reduce the damage result below 1 and cannot modify any further once y
           </conditionGroups>
         </modifier>
       </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Vehicle Wargear Cards" id="4f8e-9b4f-a125-fe1e" hidden="false">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Space Marines" id="e31d-ac9c-95ff-6bfb" collapsible="true" hidden="false">
+              <entryLinks>
+                <entryLink name="Ammo Feed" id="17eb-1bd1-43e4-cc2e" hidden="false" import="true" targetId="2181-142d-2b90-b300" type="selectionEntry">
+                  <displayCosts>
+                    <displayCost name="pts" id="ca8b-fd92-140d-0fd8" hidden="false" typeId="points" value="5"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Command Comm-Link" id="4830-a374-db3f-c656" hidden="false" import="true" targetId="9237-33fb-31e6-e155" type="selectionEntry">
+                  <displayCosts>
+                    <displayCost name="pts" id="b800-f89a-b100-41d8" hidden="false" typeId="points" value="30"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Recon Pack" id="cd38-81a4-fe88-94f6" hidden="false" import="true" targetId="0d12-5294-4a25-ccd6" type="selectionEntry">
+                  <displayCosts>
+                    <displayCost name="pts" id="30f9-5170-083e-209a" hidden="false" typeId="points" value="20"/>
+                  </displayCosts>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Imperial" id="9b59-52da-acf3-6c51" collapsible="true" hidden="false">
+              <entryLinks>
+                <entryLink name="Auxiliary Storm Bolters" id="ec14-5f05-1a7c-bb9a" hidden="false" import="true" targetId="3da2-98c9-eec7-dbb9" type="selectionEntry">
+                  <displayCosts>
+                    <displayCost name="pts" id="a256-a79b-6691-44f7" hidden="false" typeId="points" value="5"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Heavy Flamer Upgrade" id="104a-70a1-a47c-7312" hidden="false" import="true" targetId="d422-325f-86db-afd0" type="selectionEntry">
+                  <displayCosts>
+                    <displayCost name="pts" id="50ed-388e-122d-f324" hidden="false" typeId="points" value="10"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Hunter-Killer Missile" id="d3df-48d7-4f42-dd7e" hidden="false" import="true" targetId="77a1-6f05-d955-1b39" type="selectionEntry">
+                  <constraints>
+                    <constraint id="b1f9-4f99-b0b6-ba91" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="df39-1e94-66ba-2bba" hidden="false" typeId="points" value="30"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Bulldozer Blade" id="7cb4-a92e-178e-0d95" hidden="false" import="true" targetId="f713-cde8-c737-30b5" type="selectionEntry">
+                  <displayCosts>
+                    <displayCost name="pts" id="2015-fdd7-02b1-1e15" hidden="false" typeId="points" value="15"/>
+                  </displayCosts>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Generic" id="e680-dabf-a610-cfd0" collapsible="true" hidden="false">
+              <entryLinks>
+                <entryLink name="Ablative Armour" id="cf49-87ef-16d4-a894" hidden="false" import="true" targetId="26e2-4a44-2602-a3fd" type="selectionEntry">
+                  <constraints>
+                    <constraint id="616d-2091-e9ea-cc27" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="1518-8611-ff76-02b5" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="2d20-c059-2a10-7308" hidden="false" typeId="points" value="15"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Auto-Launcher" id="453f-007e-e1b6-2e0c" hidden="false" import="true" targetId="222b-075f-d34c-7093" type="selectionEntry">
+                  <constraints>
+                    <constraint id="19c9-4962-1832-731d" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="7b12-feab-5986-79d2" hidden="false" typeId="points" value="5"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Ceramite Armour" id="8811-a7c0-d65f-f501" hidden="false" import="true" targetId="f74f-9e64-38c1-9503" type="selectionEntry">
+                  <constraints>
+                    <constraint id="a6b5-1954-0f71-d720" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="7601-7217-23c1-f4a1" hidden="false" typeId="points" value="50"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Null-Shield" id="df11-4289-3974-12df" hidden="false" import="true" targetId="47cb-e484-5d6a-3911" type="selectionEntry">
+                  <constraints>
+                    <constraint id="24b8-e9b2-5b9f-2682" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="a7f1-5abe-be5e-2dac" hidden="false" typeId="points" value="35"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Electro-Hull" id="1388-a523-4bdf-575d" hidden="false" import="true" targetId="f927-24ed-15ca-0c96" type="selectionEntry">
+                  <constraints>
+                    <constraint id="7c4c-828f-c571-52ef" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="4a07-f72f-38b8-07a9" hidden="false" typeId="points" value="10"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Reinforced Armour" id="d134-038b-ba4c-474c" hidden="false" import="true" targetId="fa44-ccaf-6c06-bed4" type="selectionEntry">
+                  <constraints>
+                    <constraint id="75e3-7803-c045-c566" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="b3c0-48e3-a99a-ebe6" hidden="false" typeId="points" value="10"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Searchlight" id="02fb-e293-0cae-2ed4" hidden="false" import="true" targetId="64e7-1568-72da-bd59" type="selectionEntry">
+                  <constraints>
+                    <constraint id="8186-c403-de0e-45f9" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="0c90-02eb-9fb2-1e62" hidden="false" typeId="points" value="5"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Supercharged Engine" id="be8f-b1bb-22e0-c0b5" hidden="false" import="true" targetId="4635-9876-cb56-4aab" type="selectionEntry">
+                  <constraints>
+                    <constraint id="6243-6b59-c655-e51b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="c203-5e7c-1abb-b3c0" hidden="false" typeId="points" value="5"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Vortex Detonator" id="411f-6749-afe0-e900" hidden="false" import="true" targetId="2976-4443-5709-a1a6" type="selectionEntry">
+                  <constraints>
+                    <constraint id="04fa-355e-43b1-af79" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="1242-73c6-8a4f-3e4a" hidden="false" typeId="points" value="50"/>
+                  </displayCosts>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry name="Support Points from Squad Upgrade (Bikes)" id="62ca-39fb-a8b6-f470" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="3Support" id="ab34-07a8-197a-9974" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="d65e-9e09-7a22-b644" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="1"/>
+        <constraint id="68b3-671a-3fed-26fc" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="1"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>Bike</comment>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <comment>Wargear Cards</comment>
+              <modifiers>
+                <modifier field="points" type="increment" value="5">
+                  <comment>Ammo Feed</comment>
+                  <repeats>
+                    <repeat childId="17eb-1bd1-43e4-cc2e" childName="Ammo Feed" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="5">
+                  <comment>aux stormbolter</comment>
+                  <repeats>
+                    <repeat childId="ec14-5f05-1a7c-bb9a" childName="Auxiliary Storm Bolters" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="15">
+                  <comment>abalative armour</comment>
+                  <repeats>
+                    <repeat childId="cf49-87ef-16d4-a894" childName="Ablative Armour" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="5">
+                  <comment>auto launcher</comment>
+                  <repeats>
+                    <repeat childId="453f-007e-e1b6-2e0c" childName="Auto-Launcher" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="50">
+                  <comment>ceramite armour</comment>
+                  <repeats>
+                    <repeat childId="8811-a7c0-d65f-f501" childName="Ceramite Armour" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="10">
+                  <comment>electro hull</comment>
+                  <repeats>
+                    <repeat childId="1388-a523-4bdf-575d" childName="Electro-Hull" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="35">
+                  <comment>null shield</comment>
+                  <repeats>
+                    <repeat childId="df11-4289-3974-12df" childName="Null-Shield" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="10">
+                  <comment>reinforced armour</comment>
+                  <repeats>
+                    <repeat childId="d134-038b-ba4c-474c" childName="Reinforced Armour" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="5">
+                  <comment>searchlight</comment>
+                  <repeats>
+                    <repeat childId="02fb-e293-0cae-2ed4" childName="Searchlight" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="5">
+                  <comment>supercharge engine</comment>
+                  <repeats>
+                    <repeat childId="be8f-b1bb-22e0-c0b5" childName="Supercharged Engine" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="50">
+                  <comment>vortex det</comment>
+                  <repeats>
+                    <repeat childId="411f-6749-afe0-e900" childName="Vortex Detonator" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <modifiers>
+            <modifier field="points" type="increment" value="5">
+              <comment>Autolauncher</comment>
+              <repeats>
+                <repeat childId="f447-1b48-e46d-0c9b" childName="Auto-Launcher" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+            <modifier field="points" type="increment" value="20">
+              <comment>Bike itself</comment>
+              <repeats>
+                <repeat childId="e655-233b-ed95-0f94" childName="Space Marine Bike" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <modifiers>
+        <modifier field="68b3-671a-3fed-26fc" type="set" value="0">
+          <conditions>
+            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile name="Support Upgrade Points Counter" id="3696-47be-fba5-c808" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+          <characteristics>
+            <characteristic name="Special" typeId="f917-8cd8-7592-47dd">This adds the points from any Support upgrades in a unit from Squads (IE Attack Bikes)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>

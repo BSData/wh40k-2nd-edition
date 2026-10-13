@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="44" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="45" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <comment>Warhammer 2nd Edition 40k</comment>
   <readme>Added more wargear cards</readme>
   <categoryEntries>
@@ -30,6 +30,8 @@
     <categoryEntry name="Harlequins" id="c1bb-1205-a4da-35c6" hidden="false"/>
     <categoryEntry name="LotD-PrimaryList" id="a864-b85d-f081-a0c8" hidden="false"/>
     <categoryEntry name="Harlequin-PrimaryList" id="6dc4-8bb9-688d-1e49" hidden="false"/>
+    <categoryEntry name="1Command" id="a38d-36bf-d4fc-bea5" hidden="false"/>
+    <categoryEntry name="2Battle Line" id="bd53-987e-fa4e-a2c8" hidden="false"/>
   </categoryEntries>
   <costTypes>
     <costType name="pts" id="points" defaultCostLimit="-1" hidden="false"/>
@@ -44,7 +46,7 @@
           </constraints>
           <modifierGroups>
             <modifierGroup type="and">
-              <comment>Marines</comment>
+              <comment>50% max</comment>
               <modifierGroups>
                 <modifierGroup type="and">
                   <comment>When you have no points limit</comment>
@@ -144,9 +146,14 @@
           </modifierGroups>
           <modifiers>
             <modifier field="hidden" type="set" value="true">
-              <conditions>
-                <condition childId="547a-80cd-7988-a39f" childName="Codex - Eldar (Harlequins)" field="selections" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="82fc-8ad4-7b4b-dd4a" childName="Codex - Imperial Guard" field="selections" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="547a-80cd-7988-a39f" childName="Codex - Eldar (Harlequins)" field="selections" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </categoryLink>
@@ -215,6 +222,45 @@
                   </modifiers>
                 </modifierGroup>
               </modifierGroups>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <comment>25% Guard/Chaos/Sisters/GSC</comment>
+              <modifiers>
+                <modifier field="d959-0016-d8b2-a714" type="increment" value="1">
+                  <comment>For 25% armies - sisters, GSC, chaos, guard</comment>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition childId="82fc-8ad4-7b4b-dd4a" childName="Codex - Imperial Guard" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="5bd8-0ec7-a752-694d" childName="Codex - Chaos" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="b567-fa24-d74f-65ee" childName="Codex - Genestealer Cults" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="b7a0-f77c-22d5-5989" childName="Codex - Sisters of Battle" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <repeats>
+                    <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="0.25" roundUp="false" scope="roster" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="16ab-be3e-f7ec-afea" type="set" value="25">
+                  <comment>For 25% armies - sisters, GSC, chaos, guard</comment>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition childId="82fc-8ad4-7b4b-dd4a" childName="Codex - Imperial Guard" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="5bd8-0ec7-a752-694d" childName="Codex - Chaos" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="b567-fa24-d74f-65ee" childName="Codex - Genestealer Cults" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="b7a0-f77c-22d5-5989" childName="Codex - Sisters of Battle" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </modifierGroup>
           </modifierGroups>
         </categoryLink>
@@ -334,6 +380,118 @@
               <conditions>
                 <condition childId="3da1-2b23-4a40-323e" childName="Codex - Eldar" field="selections" includeChildSelections="true" scope="primary-catalogue" shared="true" type="notInstanceOf" value="1"/>
                 <condition childId="547a-80cd-7988-a39f" childName="Codex - Eldar (Harlequins)" field="selections" includeChildSelections="true" scope="primary-catalogue" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink name="1Command" id="33fb-2973-cf13-4446" hidden="false" targetId="a38d-36bf-d4fc-bea5">
+          <constraints>
+            <constraint id="aa81-5e4e-7b71-1e17" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="0"/>
+            <constraint id="9333-85b9-498a-a43d" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="max" value="0"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <comment>50% max</comment>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <comment>When you have no points limit</comment>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier field="aa81-5e4e-7b71-1e17" type="set" value="-1"/>
+                    <modifier field="9333-85b9-498a-a43d" type="set" value="50"/>
+                  </modifiers>
+                </modifierGroup>
+                <modifierGroup type="and">
+                  <comment>When having a points limit</comment>
+                  <modifiers>
+                    <modifier field="9333-85b9-498a-a43d" type="set" value="-1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier field="aa81-5e4e-7b71-1e17" type="increment" value="1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                      <repeats>
+                        <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="0.5" roundUp="false" scope="roster" shared="true" value="1"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+            </modifierGroup>
+          </modifierGroups>
+        </categoryLink>
+        <categoryLink name="2Battle Line" id="1b8b-4c1a-a2ac-0888" hidden="false" targetId="bd53-987e-fa4e-a2c8">
+          <constraints>
+            <constraint id="1cde-e6c2-d463-2468" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="min" value="0"/>
+            <constraint id="da47-14c5-5dd8-0493" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="min" value="0"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <comment>When you have no points limit</comment>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier field="1cde-e6c2-d463-2468" type="set" value="-1"/>
+                    <modifier field="da47-14c5-5dd8-0493" type="set" value="25"/>
+                  </modifiers>
+                </modifierGroup>
+                <modifierGroup type="and">
+                  <comment>When having a points limit</comment>
+                  <modifiers>
+                    <modifier field="da47-14c5-5dd8-0493" type="set" value="-1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier field="1cde-e6c2-d463-2468" type="increment" value="1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                      <repeats>
+                        <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="0.25" roundUp="false" scope="roster" shared="true" value="1"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+            </modifierGroup>
+          </modifierGroups>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="82fc-8ad4-7b4b-dd4a" childName="Codex - Imperial Guard" field="selections" scope="primary-catalogue" shared="true" type="notInstanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3300,10 +3458,22 @@ destroyed. The grenade cannot affect other models.</description>
       </profiles>
       <rules>
         <rule name="Auto-Launcher" id="9323-6f94-080d-1fed" hidden="false" page="20" publicationId="06e5-8e36-e8c8-aec3">
-          <description>The auto-launcher carries six grenade all of the same type, which are fired off in two salvoes of three. Once the auto­ launcher is out of ammunition it may not fire again for the remainder of the battle.
+          <description>The auto-launcher carries six grenade all of the same type, which are fired off in two salvoes of three. Once the auto­ launcher is out of ammunition it may not fire again for the remainder of the battle. This means you can fire a total of 2 times per game.
 The auto-launcher can be triggered in the shooting phase of the vehicle&apos;s turn in addition to normal firing. The first grenade in the spread automatically hits a point exactly 6&quot; away in the auto-launcher&apos;s forward 90° fire arc. The other two grenades deviate D3&quot; away from the target point of the first grenade. An auto-launcher may be pre-loaded with a single type of grenade, the choice being either frag, krak or blind.</description>
         </rule>
       </rules>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Grenade Type" id="7505-336f-ddf8-2257" hidden="false">
+          <constraints>
+            <constraint id="1f5d-d457-90da-3826" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="c019-05f5-1668-a1e3" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+          <entryLinks>
+            <entryLink name="Frag Grenade" id="8c44-1d50-20cb-b183" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry"/>
+            <entryLink name="Blind Grenade" id="9ce8-8a33-96b7-f7ee" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Terminator Armour" id="9d43-a036-5991-2470" collective="false" hidden="false" import="true" type="upgrade">
       <costs>
@@ -4405,9 +4575,6 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
       </infoLinks>
     </selectionEntry>
     <selectionEntry name="Vortex Detonator" id="2976-4443-5709-a1a6" collective="false" hidden="false" import="true" type="upgrade">
-      <costs>
-        <cost name="pts" typeId="points" value="50"/>
-      </costs>
       <infoLinks>
         <infoLink name="Vortex Detonator" id="415b-d8d2-e22f-1952" hidden="false" targetId="9ceb-7407-a2ee-0c34" type="profile"/>
       </infoLinks>
@@ -4901,6 +5068,188 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         <infoLink name="Twin Linked" id="647b-b52c-19ae-6acb" hidden="false" targetId="1ec9-01dd-59c6-d1d5" type="rule"/>
       </infoLinks>
     </selectionEntry>
+    <selectionEntry name="Hunter-Killer Missile" id="77a1-6f05-d955-1b39" collective="false" hidden="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="9187-ca83-9433-d2c7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                <condition childId="bcf7-c063-7aca-a066" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                <condition childId="2ea7-ced8-d2ec-2939" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="0"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile name="Hunter-Killer Missile" id="c164-8ae3-60b6-99ee" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">Special</characteristic>
+            <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">Special</characteristic>
+            <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+            <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+            <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">8</characteristic>
+            <characteristic name="Damage" typeId="8978-f9c3-8957-1481">2D10</characteristic>
+            <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-6</characteristic>
+            <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">2D10+D6+8</characteristic>
+            <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Hunter Killer Missile</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule name="Hunter-Killer Missile" id="e627-5217-fbc4-5a0d" hidden="false">
+          <description>One Use Only
+May only targe vehicles, walkers, or buildings
+Always hits on a 3+ regardless of range and hit modifiers for target size, speed, cover, etc.</description>
+        </rule>
+      </rules>
+    </selectionEntry>
+    <selectionEntry name="Auxiliary Storm Bolters" id="3da2-98c9-eec7-dbb9" collective="false" hidden="false" import="true" type="upgrade">
+      <entryLinks>
+        <entryLink name="Storm Bolter" id="16a8-02eb-9843-7ca5" collective="false" hidden="false" import="true" targetId="8b0c-9093-dc69-c9e8" type="selectionEntry">
+          <constraints>
+            <constraint id="987d-418e-e433-4140" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="e2d5-c33b-d0eb-eb3f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <rules>
+        <rule name="Auxiliary Storm Bolters" id="f830-7e35-dd0a-ecc2" hidden="false">
+          <description>Any jams rolled on the sustained fire dice can be rerolled
+Any crew or passengers can fire the auxiliary storm bolter instead of their own weapon.</description>
+        </rule>
+      </rules>
+    </selectionEntry>
+    <selectionEntry name="Bulldozer Blade" id="f713-cde8-c737-30b5" collective="false" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="3061-08f3-612c-d90b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="bcf7-c063-7aca-a066" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                <condition childId="9187-ca83-9433-d2c7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                <condition childId="2ea7-ced8-d2ec-2939" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="0"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile name="Bulldozer Blade" id="9ef8-7408-62ab-7599" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+          <characteristics>
+            <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Increases the Strength of the vehicle&apos;s ram value by +1 and adds +1D6 to the ram damage it inflicts. This is in addition to the +D6 ram bonus against buildings received by vehicles with a ram bar noted in the rulebook. 
+Any shots that hit the front of the vehicle&apos;s hull will hit the dozerblade on a 4+. If it is hit, the dozer adds +D6 to the vehicle&apos;s front hull armour value for that shot only. If the vehicle suffers a penetrating hit from the front the blade is automatically wrekced and hte card discarded.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Heavy Flamer Upgrade" id="d422-325f-86db-afd0" collective="false" hidden="true" import="true" type="upgrade">
+      <entryLinks>
+        <entryLink name="Heavy Flamer" id="4b63-9ff3-6369-6992" collective="false" hidden="false" import="true" targetId="4da3-a884-c204-2800" type="selectionEntry">
+          <constraints>
+            <constraint id="b84d-3327-81c6-b05e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="3fbb-abc0-b73f-3ce9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <modifiers>
+        <modifier field="points" type="set" value="0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="aac3-4788-82a3-a9ad" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier field="hidden" type="set" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="4c82-0e56-d20a-6b1c" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="atLeast" value="1"/>
+                <condition childId="aac3-4788-82a3-a9ad" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <rules>
+        <rule name="Heavy Flamer Upgrade" id="88b7-9b30-a94d-d9f3" hidden="false">
+          <description>Must purchase the wargear card for each Heavy Bolter you upgrade
+Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</description>
+        </rule>
+      </rules>
+    </selectionEntry>
+    <selectionEntry name="Ammo Feed" id="2181-142d-2b90-b300" collective="false" hidden="true" import="true" type="upgrade">
+      <modifiers>
+        <modifier field="hidden" type="set" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="4c82-0e56-d20a-6b1c" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="atLeast" value="1"/>
+                <condition childId="aac3-4788-82a3-a9ad" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile name="Ammo Feed" id="0854-499d-313d-ccd1" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+          <characteristics>
+            <characteristic name="Special" typeId="f917-8cd8-7592-47dd">May ignore first jam rolled on the sustained fire dice each turn. 
+A twin-linked heavy bolter may only have a single ammo feed. 
+Must purchase for each Heavy Bolter</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Command Comm-Link" id="9237-33fb-31e6-e155" collective="false" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="901d-1d7f-348e-0a7f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="7576-d91f-083c-38a7" childName="1Characters" field="selections" includeChildSelections="true" scope="ancestor" shared="true" type="notInstanceOf" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile name="Command Comm-Link" id="5639-2ad4-8c00-9715" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+          <characteristics>
+            <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Must have a character in or on the vehicle.
+When rolling to see which side goes first, a Space Marine force that includes this vehicle may roll two D6 and add their strategy rating to the best result.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Recon Pack" id="0d12-5294-4a25-ccd6" collective="false" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="246f-01aa-f498-4404" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="2ea7-ced8-d2ec-2939" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notInstanceOf" value="0"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile name="Recon Pack" id="2c3c-2d9b-8d61-e5ba" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+          <characteristics>
+            <characteristic name="Special" typeId="f917-8cd8-7592-47dd">A force that includes this vehicle may add 1 to their strategy rating. In addition, on a D6 roll of a 4+ you may force your opponent to discard one of his Strategy cards.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Psychic Powers" id="37d9-59fe-03d7-4fcc" collective="false" hidden="false" import="true" page="73" publicationId="2bb8-b6de-8b70-7f41">
@@ -4962,7 +5311,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Wargear Cards (Space Marine)" id="de88-dfe6-326a-7196" collective="false" hidden="false" import="true">
+    <selectionEntryGroup name="Wargear Cards (Space Marine)" id="de88-dfe6-326a-7196" collapsible="true" collective="false" hidden="false" import="true">
       <entryLinks>
         <entryLink name="Terminator Auto-Launchers" id="bf7e-777a-3d82-611f" collective="false" hidden="false" import="true" targetId="0131-5861-194b-e8dc" type="selectionEntry">
           <constraints>
@@ -5023,7 +5372,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Wargear Cards (Generic)" id="b5be-2d0f-67e2-6260" collective="false" hidden="false" import="true" publicationId="06e5-8e36-e8c8-aec3">
+    <selectionEntryGroup name="Wargear Cards (Generic)" id="b5be-2d0f-67e2-6260" collapsible="true" collective="false" hidden="false" import="true" publicationId="06e5-8e36-e8c8-aec3">
       <entryLinks>
         <entryLink name="Master-Crafted Bolt Pistol" id="b4b5-aee4-bf88-98b8" collective="false" hidden="false" import="true" targetId="04a2-74da-3458-52d1" type="selectionEntry">
           <constraints>
@@ -5369,7 +5718,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Wargear (Imperium)" id="2ac0-240e-25fe-564b" collective="false" hidden="false" import="true">
+    <selectionEntryGroup name="Wargear (Imperium)" id="2ac0-240e-25fe-564b" collapsible="true" collective="false" hidden="false" import="true">
       <entryLinks>
         <entryLink name="Servo Arm" id="9534-b0e7-f10e-04d4" collective="false" hidden="false" import="true" targetId="2311-7072-654a-5c8f" type="selectionEntry">
           <constraints>
@@ -5472,7 +5821,7 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Wargear Cards (Vehicle - Generic)" id="52d8-9a1c-a258-0ed7" collective="false" hidden="false" import="true">
+    <selectionEntryGroup name="Wargear Cards (Vehicle - Generic)" id="52d8-9a1c-a258-0ed7" collapsible="true" collective="false" hidden="false" import="true">
       <entryLinks>
         <entryLink name="Ablative Armour" id="0cbf-a68b-b9b6-056b" collective="false" hidden="false" import="true" targetId="26e2-4a44-2602-a3fd" type="selectionEntry">
           <constraints>
@@ -5559,209 +5908,48 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Wargear Cards (Vehicle - Imperial)" id="82c3-269d-da81-2d2a" collective="false" hidden="false" import="true">
-      <selectionEntries>
-        <selectionEntry name="Auxiliary Storm Bolters" id="422d-601f-bd0a-a77d" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntryGroup name="Wargear Cards (Vehicle - Imperial)" id="82c3-269d-da81-2d2a" collapsible="true" collective="false" hidden="false" import="true">
+      <entryLinks>
+        <entryLink name="Auxiliary Storm Bolters" id="6efd-bd0d-cf0a-4bb1" hidden="false" import="true" targetId="3da2-98c9-eec7-dbb9" type="selectionEntry">
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Storm Bolter" id="8804-bf52-21a6-031e" collective="false" hidden="false" import="true" targetId="8b0c-9093-dc69-c9e8" type="selectionEntry">
-              <constraints>
-                <constraint id="d8b6-7b32-e7fd-9034" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                <constraint id="c33d-fc4a-07d9-fb8e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-          <rules>
-            <rule name="Auxiliary Storm Bolters" id="f8e8-c21a-5bf4-cc30" hidden="false">
-              <description>Any jams rolled on the sustained fire dice can be rerolled
-Any crew or passengers can fire the auxiliary storm bolter instead of their own weapon.</description>
-            </rule>
-          </rules>
-        </selectionEntry>
-        <selectionEntry name="Bulldozer Blade" id="d346-35ce-be3b-1cda" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="25eb-600f-7242-37a1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
+        </entryLink>
+        <entryLink name="Bulldozer Blade" id="2459-a710-95fe-73ea" hidden="false" import="true" targetId="f713-cde8-c737-30b5" type="selectionEntry">
           <costs>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
-          <modifiers>
-            <modifier field="hidden" type="set" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="bcf7-c063-7aca-a066" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="9187-ca83-9433-d2c7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="2ea7-ced8-d2ec-2939" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="0"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile name="Bulldozer Blade" id="c304-b9eb-3281-36dc" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
-              <characteristics>
-                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Increases the Strength of the vehicle&apos;s ram value by +1 and adds +1D6 to the ram damage it inflicts. This is in addition to the +D6 ram bonus against buildings received by vehicles with a ram bar noted in the rulebook. 
-Any shots that hit the front of the vehicle&apos;s hull will hit the dozerblade on a 4+. If it is hit, the dozer adds +D6 to the vehicle&apos;s front hull armour value for that shot only. If the vehicle suffers a penetrating hit from the front the blade is automatically wrekced and hte card discarded.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry name="Hunter-Killer Missile" id="b84d-f421-bf2b-5619" collective="false" hidden="false" import="true" type="upgrade">
-          <costs>
-            <cost name="pts" typeId="points" value="30"/>
-          </costs>
-          <modifiers>
-            <modifier field="hidden" type="set" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="9187-ca83-9433-d2c7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="bcf7-c063-7aca-a066" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="2ea7-ced8-d2ec-2939" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="0"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile name="Hunter-Killer Missile" id="731f-5bb9-41f1-fe3a" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">Special</characteristic>
-                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">Special</characteristic>
-                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
-                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
-                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">8</characteristic>
-                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">2D10</characteristic>
-                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-6</characteristic>
-                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">2D10+D6+8</characteristic>
-                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Hunter Killer Missile</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <rules>
-            <rule name="Hunter-Killer Missile" id="d8f6-c1ec-914a-80c3" hidden="false">
-              <description>One Use Only
-May only targe vehicles, walkers, or buildings
-Always hits on a 3+ regardless of range and hit modifiers for target size, speed, cover, etc.</description>
-            </rule>
-          </rules>
-        </selectionEntry>
-        <selectionEntry name="Heavy Flamer Upgrade" id="8c12-6657-ce25-f615" collective="false" hidden="true" import="true" type="upgrade">
+        </entryLink>
+        <entryLink name="Heavy Flamer Upgrade" id="d2a4-154e-460e-de19" hidden="false" import="true" targetId="d422-325f-86db-afd0" type="selectionEntry">
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Heavy Flamer" id="8ce2-b6f0-0c49-727e" collective="false" hidden="false" import="true" targetId="4da3-a884-c204-2800" type="selectionEntry">
-              <constraints>
-                <constraint id="c960-b8f6-9561-ff12" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                <constraint id="aa61-8fef-c39f-372f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-          <modifiers>
-            <modifier field="points" type="set" value="0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="aac3-4788-82a3-a9ad" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="atLeast" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="hidden" type="set" value="false">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="4c82-0e56-d20a-6b1c" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="atLeast" value="1"/>
-                    <condition childId="aac3-4788-82a3-a9ad" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="atLeast" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <rules>
-            <rule name="Heavy Flamer Upgrade" id="2d2b-565e-5cd2-34d1" hidden="false">
-              <description>Must purchase the wargear card for each Heavy Bolter you upgrade
-Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</description>
-            </rule>
-          </rules>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup name="Wargear Cards (Vehicle - Space Marines)" id="59c4-82a9-5921-bdef" collective="false" hidden="false" import="true">
-      <selectionEntries>
-        <selectionEntry name="Command Comm-Link" id="f0cd-2b6f-1cdf-67d6" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="f6a2-34e8-fad8-1d06" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
+        </entryLink>
+        <entryLink name="Hunter-Killer Missile" id="13a0-6a00-1323-6816" hidden="false" import="true" targetId="77a1-6f05-d955-1b39" type="selectionEntry">
           <costs>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
-          <profiles>
-            <profile name="Command Comm-Link" id="a57f-500a-75a7-4cb2" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
-              <characteristics>
-                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Must have a character in or on the vehicle
-When rolling to see which side goes first, a Space Marine force that includes this vehicle may roll two D6 and add their strategy rating to the best result.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry name="Recon Pack" id="25cb-654c-8541-a4d1" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="9b67-823e-7856-b5ee" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-          <modifiers>
-            <modifier field="hidden" type="set" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="2ea7-ced8-d2ec-2939" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notInstanceOf" value="0"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile name="Recon Pack" id="4f68-3904-5daa-6f49" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
-              <characteristics>
-                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">A force that includes this vehicle may add 1 to their strategy rating. In addition, on a D6 roll of a 4+ you may force your opponent to discard one of his Strategy cards.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry name="Ammo Feed" id="72e9-41f5-6038-5ec4" collective="false" hidden="true" import="true" type="upgrade">
+        </entryLink>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Wargear Cards (Vehicle - Space Marines)" id="59c4-82a9-5921-bdef" collapsible="true" collective="false" hidden="false" import="true">
+      <entryLinks>
+        <entryLink name="Ammo Feed" id="47b7-f7f2-04f6-0f07" hidden="false" import="true" targetId="2181-142d-2b90-b300" type="selectionEntry">
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <modifiers>
-            <modifier field="hidden" type="set" value="false">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="4c82-0e56-d20a-6b1c" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="atLeast" value="1"/>
-                    <condition childId="aac3-4788-82a3-a9ad" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="atLeast" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <profiles>
-            <profile name="Ammo Feed" id="b9c7-c14d-84e6-419c" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
-              <characteristics>
-                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">May ignore first jam rolled on the sustained fire dice each turn. 
-A twin-linked heavy bolter may only have a single ammo feed. 
-Must purchase for each Heavy Bolter</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-      </selectionEntries>
+        </entryLink>
+        <entryLink name="Command Comm-Link" id="b0db-42bc-d738-843a" hidden="false" import="true" targetId="9237-33fb-31e6-e155" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="30"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Recon Pack" id="b733-ae11-6c5d-1ce6" hidden="false" import="true" targetId="0d12-5294-4a25-ccd6" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
 </gameSystem>

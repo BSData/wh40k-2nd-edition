@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Chaos" id="5bd8-0ec7-a752-694d" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="14" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Chaos" id="5bd8-0ec7-a752-694d" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="15" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>Chaos Rewards note - You cannot give any 2 models the exact same combo of rewards. However, attempting to bulid that into this would cause unending pain. Just be mindful when gifting your little warriors</readme>
   <categoryEntries>
     <categoryEntry name="Characters" id="9497-ff1f-dffc-011f" hidden="false"/>
@@ -1398,8 +1398,7 @@ Allows the Bloodletter to Parry</characteristic>
         <characteristic name="I" typeId="76cb-4fd1-7571-e697">5</characteristic>
         <characteristic name="A" typeId="6d89-52f1-9c48-ac8c">3</characteristic>
         <characteristic name="LD" typeId="dfcc-1070-ddf7-ad7d">10</characteristic>
-        <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0">
-</characteristic>
+        <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0"/>
         <characteristic name="Ram Strength" typeId="a025-016a-2152-7b47">7</characteristic>
         <characteristic name="Ram Damage" typeId="84ee-e518-c9ac-7b7e">D10</characteristic>
         <characteristic name="Ram Save Modifier" typeId="e929-6e42-f2a7-c76d">-4</characteristic>
@@ -6452,26 +6451,6 @@ May move in all directions without turning. May turn like a regular Walker if it
             <constraint id="1574-73f0-179c-bf4c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
             <constraint id="620f-a74e-67ff-0b16" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Grenade Choice" id="cc50-7029-1ad3-cfc9" collective="false" hidden="false" import="true">
-              <constraints>
-                <constraint id="b19b-4561-48bf-8a0f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                <constraint id="a36d-1e17-30e0-b57b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <entryLinks>
-                <entryLink name="Frag Grenade" id="d1f5-8606-f96c-05ca" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-                  <constraints>
-                    <constraint id="0ed0-f33e-ca18-d0d1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                  </constraints>
-                </entryLink>
-                <entryLink name="Blind Grenade" id="1ac1-59b0-a645-4d63" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
-                  <constraints>
-                    <constraint id="ccfd-fdef-92e9-001f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
         </entryLink>
       </entryLinks>
       <infoLinks>

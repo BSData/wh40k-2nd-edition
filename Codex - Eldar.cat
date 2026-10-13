@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Eldar" id="3da1-2b23-4a40-323e" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="20" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
-  <categoryEntries>
-    <categoryEntry name="sup" id="c9ee-e42d-077e-bfcd" hidden="false"/>
-  </categoryEntries>
+<catalogue name="Codex - Eldar" id="3da1-2b23-4a40-323e" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="21" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink name="Avatar of Khaine" id="c4c8-2b7c-889a-02dc" collective="false" hidden="false" import="true" targetId="6b71-72c9-9b6b-c5b4" type="selectionEntry"/>
     <entryLink name="Exarch" id="3f04-4845-ead6-1d29" collective="false" hidden="false" import="true" targetId="0e43-fd2c-3016-2375" type="selectionEntry"/>
@@ -42,6 +39,7 @@
     <entryLink name="Fire Prism Grav Tank" id="897a-2d26-054f-2a23" collective="false" hidden="false" import="true" targetId="053e-619a-0489-6b17" type="selectionEntry"/>
     <entryLink name="Eldar Tempest" id="e0da-f267-4d79-29d7" collective="false" hidden="false" import="true" targetId="f9d0-c8f8-865c-1760" type="selectionEntry"/>
     <entryLink name="Pirate Captain" id="e502-65a1-b479-ef76" hidden="false" import="true" targetId="7050-98b1-ba8f-d0b6" type="selectionEntry"/>
+    <entryLink name="Support Points from Squad Upgrade (Jet Bikes)" id="153d-c580-f805-aa7e" hidden="false" import="true" targetId="2653-92dd-98fd-7475" type="selectionEntry"/>
   </entryLinks>
   <profileTypes>
     <profileType name="Exarch Powers" id="acfa-400e-e0d9-a9fb">
@@ -1997,7 +1995,7 @@ See datafax for full damage table</description>
         </modifierGroup>
       </modifierGroups>
       <selectionEntries>
-        <selectionEntry name="Guardians" id="f35c-de9b-bfbe-a58c" hidden="false" import="true" sortIndex="1" type="model">
+        <selectionEntry name="Guardians" id="f35c-de9b-bfbe-a58c" hidden="false" import="true" sortIndex="2" type="model">
           <constraints>
             <constraint id="26e1-3517-9ab8-fb53" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="5"/>
             <constraint id="2961-09ad-38cb-3acf" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="10"/>
@@ -2175,7 +2173,7 @@ See datafax for full damage table</description>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Mount Squad on Jetbikes" id="45e2-fb69-5183-ed4c" hidden="false">
+        <selectionEntryGroup name="Mount Squad on Jetbikes" id="45e2-fb69-5183-ed4c" hidden="false" sortIndex="1">
           <selectionEntries>
             <selectionEntry name="Mount on Jetbikes" id="435d-fc10-2d26-a076" hidden="false" import="true" type="upgrade">
               <constraints>
@@ -2213,7 +2211,7 @@ See datafax for full damage table</description>
         </entryLink>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Eldar Jetibke Damage Table" id="e221-6273-eb45-34b0" hidden="false" targetId="9daa-fcbb-5d9e-d47d" type="rule"/>
+        <infoLink name="Eldar Jetbike Damage Table" id="e221-6273-eb45-34b0" hidden="false" targetId="9daa-fcbb-5d9e-d47d" type="rule"/>
         <infoLink name="Eldar Jetbike" id="32cd-8412-00c7-dfb9" hidden="false" targetId="d64a-86b5-40fa-080a" type="profile"/>
       </infoLinks>
     </selectionEntry>
@@ -2785,7 +2783,7 @@ See datafax for full damage table</description>
         </modifierGroup>
       </modifierGroups>
       <selectionEntries>
-        <selectionEntry name="Eldar Scout" id="0cc7-ab68-a919-df8b" collective="false" hidden="false" import="true" sortIndex="1" type="model">
+        <selectionEntry name="Eldar Scout" id="0cc7-ab68-a919-df8b" collective="false" hidden="false" import="true" sortIndex="2" type="model">
           <constraints>
             <constraint id="52ae-175e-1884-aa67" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="5"/>
             <constraint id="0961-05ff-b4c7-61f4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="10"/>
@@ -2807,6 +2805,7 @@ See datafax for full damage table</description>
               </constraints>
             </entryLink>
             <entryLink name="Eldar Jetbike" id="1aa6-fce2-dbdf-a6a8" hidden="false" import="true" targetId="00a1-97a9-511c-bc62" type="selectionEntry">
+              <comment>in ally list</comment>
               <constraints>
                 <constraint id="c001-2ce9-9202-39f9" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
                 <constraint id="eabb-954a-353b-f258" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
@@ -2816,17 +2815,62 @@ See datafax for full damage table</description>
               </costs>
               <modifiers>
                 <modifier field="c001-2ce9-9202-39f9" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="504c-7608-c487-5a06" childName="Mount on Jetbikes" field="selections" includeChildSelections="false" scope="b509-de70-f3fd-b0ec" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
                   <conditions>
-                    <condition childId="504c-7608-c487-5a06" childName="Mount on Jetbikes" field="selections" includeChildSelections="true" scope="b509-de70-f3fd-b0ec" shared="true" type="atLeast" value="1"/>
+                    <condition childId="504c-7608-c487-5a06" childName="Mount on Jetbikes" field="selections" includeChildSelections="false" scope="b509-de70-f3fd-b0ec" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+                <modifier field="info" type="add" value="All jetbikes will have the same wargear cards applied if selected while in a group. To add individual loadouts, click the + above to add a separate scout on bike with unique gear."/>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink name="Eldar Jetbike" id="c4ba-b77b-2463-93ab" hidden="false" import="true" targetId="8741-de9c-3df6-14f4" type="selectionEntry">
+              <comment>for support counter</comment>
+              <constraints>
+                <constraint id="41b7-4170-bffa-9738" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                <constraint id="0c88-d7a7-d24a-bd1b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <displayCosts>
+                <displayCost name="pts" typeId="points" value="20"/>
+              </displayCosts>
+              <modifiers>
+                <modifier field="41b7-4170-bffa-9738" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                        <condition childId="504c-7608-c487-5a06" childName="Mount on Jetbikes" field="selections" includeChildSelections="false" scope="b509-de70-f3fd-b0ec" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="info" type="add" value="All jetbikes will have the same wargear cards applied if selected while in a group. To add individual loadouts, click the + above to add a separate pirate on bike with unique gear."/>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
                   </conditions>
                 </modifier>
                 <modifier field="hidden" type="set" value="true">
                   <conditions>
-                    <condition childId="504c-7608-c487-5a06" childName="Mount on Jetbikes" field="selections" includeChildSelections="true" scope="b509-de70-f3fd-b0ec" shared="true" type="lessThan" value="1"/>
+                    <condition childId="504c-7608-c487-5a06" childName="Mount on Jetbikes" field="selections" includeChildSelections="false" scope="b509-de70-f3fd-b0ec" shared="true" type="lessThan" value="1"/>
                   </conditions>
                 </modifier>
-                <modifier field="info" type="add" value="All jetbikes will have the same wargear cards applied if selected while in a group. To add individual loadouts, click the + above to add a separate scout on bike with unique gear."/>
-                <modifier field="category" type="add" value="b6e4-2c66-e404-b10a"/>
               </modifiers>
             </entryLink>
           </entryLinks>
@@ -2880,14 +2924,33 @@ See datafax for full damage table</description>
             </entryLink>
             <entryLink name="Eldar Jetbike w/ Shuriken Cannon" id="90b5-6f70-8ad1-bca7" hidden="false" import="true" targetId="af61-e792-6751-c893" type="selectionEntry">
               <constraints>
-                <constraint id="2ba9-98d1-6800-9559" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="2ba9-98d1-6800-9559" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
                 <constraint id="5562-a398-f53e-99de" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
               <modifiers>
-                <modifier field="category" type="add" value="b6e4-2c66-e404-b10a"/>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="504c-7608-c487-5a06" childName="Mount on Jetbikes" field="selections" includeChildSelections="true" scope="b509-de70-f3fd-b0ec" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+                <modifier field="2ba9-98d1-6800-9559" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="504c-7608-c487-5a06" childName="Mount on Jetbikes" field="selections" includeChildSelections="true" scope="b509-de70-f3fd-b0ec" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </modifier>
               </modifiers>
             </entryLink>
             <entryLink name="Needle Sniper Rifle" id="5566-875f-f51b-fef8" collective="false" hidden="false" import="true" targetId="6476-3281-0e1c-d0a6" type="selectionEntry">
@@ -2895,6 +2958,40 @@ See datafax for full damage table</description>
                 <constraint id="d7f4-e1f5-aa90-d3d8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
                 <constraint id="ed6f-fe87-359f-2997" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
+            </entryLink>
+            <entryLink name="Eldar Jetbike w/ Shuriken Cannon" id="50a0-8b64-7b0e-4959" hidden="false" import="true" targetId="ada1-6d26-5d21-3ab0" type="selectionEntry">
+              <constraints>
+                <constraint id="7b8c-fb84-2876-d527" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                <constraint id="a09e-b654-9d58-43ee" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <displayCosts>
+                <displayCost name="pts" typeId="points" value="25"/>
+              </displayCosts>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="504c-7608-c487-5a06" childName="Mount on Jetbikes" field="selections" includeChildSelections="true" scope="b509-de70-f3fd-b0ec" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+                <modifier field="7b8c-fb84-2876-d527" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                        <condition childId="504c-7608-c487-5a06" childName="Mount on Jetbikes" field="selections" includeChildSelections="true" scope="b509-de70-f3fd-b0ec" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
           <infoLinks>
@@ -2917,7 +3014,6 @@ See datafax for full damage table</description>
                 <condition childId="0cc7-ab68-a919-df8b" childName="Eldar Scout" field="selections" scope="b509-de70-f3fd-b0ec" shared="true" type="lessThan" value="4"/>
               </conditions>
             </modifier>
-            <modifier field="category" type="add" value="b6e4-2c66-e404-b10a"/>
           </modifiers>
           <selectionEntries>
             <selectionEntry name="Cameloline cloak" id="7f8d-5c9e-a64c-095d" collective="false" hidden="false" import="true" type="upgrade">
@@ -2938,7 +3034,7 @@ See datafax for full damage table</description>
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
-        <selectionEntry name="Mount on Jetbikes" id="504c-7608-c487-5a06" hidden="false" import="true" sortIndex="5" type="upgrade">
+        <selectionEntry name="Mount on Jetbikes" id="504c-7608-c487-5a06" hidden="false" import="true" sortIndex="1" type="upgrade">
           <constraints>
             <constraint id="2d2f-22fd-482b-c636" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
@@ -3144,19 +3240,24 @@ See datafax for full damage table</description>
                 <constraint id="6ed1-b2e2-145e-68c3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
             </entryLink>
-            <entryLink name="Eldar Jetbike" id="5470-15a3-0ea6-b9ae" hidden="false" import="true" targetId="00a1-97a9-511c-bc62" type="selectionEntry">
+            <entryLink name="Eldar Jetbike" id="5470-15a3-0ea6-b9ae" hidden="false" import="true" targetId="8741-de9c-3df6-14f4" type="selectionEntry">
               <constraints>
                 <constraint id="5b61-bb2b-bafd-cc9c" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
                 <constraint id="3d83-7131-6e5c-649c" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="points" value="20"/>
+                <cost name="pts" typeId="points" value="0"/>
               </costs>
               <modifiers>
                 <modifier field="5b61-bb2b-bafd-cc9c" type="set" value="1">
-                  <conditions>
-                    <condition childId="957a-c2ca-6380-aa5c" childName="Mount on Jetbikes" field="selections" scope="5060-3a5b-d44a-b13e" shared="true" type="atLeast" value="1"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="957a-c2ca-6380-aa5c" childName="Mount on Jetbikes" field="selections" scope="5060-3a5b-d44a-b13e" shared="true" type="atLeast" value="1"/>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
                 <modifier field="hidden" type="set" value="true">
                   <conditions>
@@ -3164,6 +3265,42 @@ See datafax for full damage table</description>
                   </conditions>
                 </modifier>
                 <modifier field="info" type="add" value="All jetbikes will have the same wargear cards applied if selected while in a group. To add individual loadouts, click the + above to add a separate pirate on bike with unique gear."/>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink name="Eldar Jetbike" id="28fa-3ba8-7c4d-9654" hidden="false" import="true" targetId="00a1-97a9-511c-bc62" type="selectionEntry">
+              <constraints>
+                <constraint id="1535-dab4-d23a-8552" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                <constraint id="f48b-f9a9-d4da-4b6b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="957a-c2ca-6380-aa5c" childName="Mount on Jetbikes" field="selections" scope="5060-3a5b-d44a-b13e" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+                <modifier field="1535-dab4-d23a-8552" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="957a-c2ca-6380-aa5c" childName="Mount on Jetbikes" field="selections" scope="5060-3a5b-d44a-b13e" shared="true" type="atLeast" value="1"/>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </modifier>
               </modifiers>
             </entryLink>
           </entryLinks>
@@ -3183,7 +3320,7 @@ See datafax for full damage table</description>
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry name="Mount on Jetbikes" id="957a-c2ca-6380-aa5c" hidden="false" import="true" type="upgrade">
+        <selectionEntry name="Mount on Jetbikes" id="957a-c2ca-6380-aa5c" hidden="false" import="true" sortIndex="1" type="upgrade">
           <constraints>
             <constraint id="edc6-1004-d580-a40e" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
@@ -3202,14 +3339,70 @@ See datafax for full damage table</description>
                 <constraint id="64a4-ee0d-9eb3-f0ab" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
             </entryLink>
-            <entryLink name="Eldar Jetbike w/ Shuriken Cannon" id="9279-4ede-62ab-e23d" hidden="false" import="true" targetId="af61-e792-6751-c893" type="selectionEntry">
+            <entryLink name="Eldar Jetbike w/ Shuriken Cannon" id="9279-4ede-62ab-e23d" hidden="false" import="true" targetId="ada1-6d26-5d21-3ab0" type="selectionEntry">
               <constraints>
-                <constraint id="205c-8c1d-22c5-3051" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="205c-8c1d-22c5-3051" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
                 <constraint id="e9d3-f791-b87f-905b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <displayCosts>
+                <displayCost name="pts" typeId="points" value="25"/>
+              </displayCosts>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="957a-c2ca-6380-aa5c" childName="Mount on Jetbikes" field="selections" scope="5060-3a5b-d44a-b13e" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+                <modifier field="205c-8c1d-22c5-3051" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="957a-c2ca-6380-aa5c" childName="Mount on Jetbikes" field="selections" scope="5060-3a5b-d44a-b13e" shared="true" type="atLeast" value="1"/>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink name="Eldar Jetbike w/ Shuriken Cannon" id="75e7-5c88-153d-4f07" hidden="false" import="true" targetId="af61-e792-6751-c893" type="selectionEntry">
+              <constraints>
+                <constraint id="25f7-b458-c6f0-ee12" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                <constraint id="36d7-11cc-2937-71fe" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="957a-c2ca-6380-aa5c" childName="Mount on Jetbikes" field="selections" scope="5060-3a5b-d44a-b13e" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+                <modifier field="25f7-b458-c6f0-ee12" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="957a-c2ca-6380-aa5c" childName="Mount on Jetbikes" field="selections" scope="5060-3a5b-d44a-b13e" shared="true" type="atLeast" value="1"/>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
           <infoLinks>
@@ -4423,9 +4616,19 @@ Psychology: The Solitaire is immune to psychology. He is not affected by terror,
               </selectionEntryGroups>
             </selectionEntry>
             <selectionEntry name="Harlequins on Jetbikes" id="f019-8390-fc69-6703" hidden="false" import="true" sortIndex="2" type="upgrade">
+              <displayCosts>
+                <displayCost name="pts" typeId="points" value="100"/>
+              </displayCosts>
               <entryLinks>
                 <entryLink name="Assault Weapons" id="424f-8e16-514d-339f" collective="false" hidden="false" import="true" targetId="b18d-cd92-629f-c211" type="selectionEntryGroup"/>
               </entryLinks>
+              <modifiers>
+                <modifier field="display::points" type="set" value="0">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <selectionEntries>
                 <selectionEntry name="Harlequin on Jetbike" id="284b-b131-7d38-4750" collective="false" hidden="false" import="true" sortIndex="1" type="model">
                   <constraints>
@@ -4459,16 +4662,46 @@ Psychology: The Solitaire is immune to psychology. He is not affected by terror,
                         </modifier>
                       </modifiers>
                     </entryLink>
-                    <entryLink name="Eldar Jetbike" id="5512-e820-72a2-6998" hidden="false" import="true" targetId="00a1-97a9-511c-bc62" type="selectionEntry">
+                    <entryLink name="Eldar Jetbike" id="5512-e820-72a2-6998" hidden="false" import="true" targetId="8741-de9c-3df6-14f4" type="selectionEntry">
                       <constraints>
                         <constraint id="b202-6aba-a433-5b33" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-                        <constraint id="7863-d788-d8bb-ec16" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                        <constraint id="7863-d788-d8bb-ec16" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                      </constraints>
+                      <displayCosts>
+                        <displayCost name="pts" typeId="points" value="20"/>
+                      </displayCosts>
+                      <modifiers>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                          </conditions>
+                        </modifier>
+                        <modifier field="7863-d788-d8bb-ec16" type="set" value="1">
+                          <conditions>
+                            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink name="Eldar Jetbike" id="fdd8-6918-07ca-3d71" hidden="false" import="true" targetId="00a1-97a9-511c-bc62" type="selectionEntry">
+                      <constraints>
+                        <constraint id="1b57-bd36-c970-045a" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                        <constraint id="d285-be4d-5622-d9db" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
                       </constraints>
                       <costs>
                         <cost name="pts" typeId="points" value="20"/>
                       </costs>
                       <modifiers>
-                        <modifier field="category" type="add" value="b6e4-2c66-e404-b10a"/>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                          </conditions>
+                        </modifier>
+                        <modifier field="1b57-bd36-c970-045a" type="set" value="1">
+                          <conditions>
+                            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                          </conditions>
+                        </modifier>
                       </modifiers>
                     </entryLink>
                   </entryLinks>
@@ -4517,16 +4750,46 @@ Psychology: The Solitaire is immune to psychology. He is not affected by terror,
                         </modifier>
                       </modifiers>
                     </entryLink>
-                    <entryLink name="Eldar Jetbike" id="9955-88cf-0bfc-3df8" hidden="false" import="true" targetId="00a1-97a9-511c-bc62" type="selectionEntry">
+                    <entryLink name="Eldar Jetbike" id="9955-88cf-0bfc-3df8" hidden="false" import="true" targetId="8741-de9c-3df6-14f4" type="selectionEntry">
                       <constraints>
                         <constraint id="715c-388c-4fd8-430d" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-                        <constraint id="fb44-aa90-f907-b268" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                        <constraint id="fb44-aa90-f907-b268" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                      </constraints>
+                      <displayCosts>
+                        <displayCost name="pts" typeId="points" value="20"/>
+                      </displayCosts>
+                      <modifiers>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                          </conditions>
+                        </modifier>
+                        <modifier field="fb44-aa90-f907-b268" type="set" value="1">
+                          <conditions>
+                            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink name="Eldar Jetbike" id="bd97-a5f8-c37b-1244" hidden="false" import="true" targetId="00a1-97a9-511c-bc62" type="selectionEntry">
+                      <constraints>
+                        <constraint id="1259-a231-eff3-30dd" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                        <constraint id="5fa1-f8ba-ba33-d93e" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
                       </constraints>
                       <costs>
                         <cost name="pts" typeId="points" value="20"/>
                       </costs>
                       <modifiers>
-                        <modifier field="category" type="add" value="b6e4-2c66-e404-b10a"/>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                          </conditions>
+                        </modifier>
+                        <modifier field="1259-a231-eff3-30dd" type="set" value="1">
+                          <conditions>
+                            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                          </conditions>
+                        </modifier>
                       </modifiers>
                     </entryLink>
                   </entryLinks>
@@ -4598,14 +4861,47 @@ Psychology: The Solitaire is immune to psychology. He is not affected by terror,
                         </modifier>
                       </modifiers>
                     </entryLink>
-                    <entryLink name="Eldar Jetbike w/ Shuriken Cannon" id="b035-7d68-2dcd-155d" hidden="false" import="true" targetId="af61-e792-6751-c893" type="selectionEntry">
+                    <entryLink name="Eldar Jetbike w/ Shuriken Cannon" id="b035-7d68-2dcd-155d" hidden="false" import="true" targetId="ada1-6d26-5d21-3ab0" type="selectionEntry">
                       <constraints>
                         <constraint id="86ef-7544-db9c-a45c" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-                        <constraint id="40fb-c0e9-7e9f-7368" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                        <constraint id="40fb-c0e9-7e9f-7368" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                      </constraints>
+                      <displayCosts>
+                        <displayCost name="pts" typeId="points" value="25"/>
+                      </displayCosts>
+                      <modifiers>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                          </conditions>
+                        </modifier>
+                        <modifier field="40fb-c0e9-7e9f-7368" type="set" value="1">
+                          <conditions>
+                            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink name="Eldar Jetbike w/ Shuriken Cannon" id="b72c-224f-07b0-c5d5" hidden="false" import="true" targetId="af61-e792-6751-c893" type="selectionEntry">
+                      <constraints>
+                        <constraint id="1a22-dd9c-da5d-b7ca" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                        <constraint id="06ea-6bc5-23bd-3deb" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
                       </constraints>
                       <costs>
                         <cost name="pts" typeId="points" value="25"/>
                       </costs>
+                      <modifiers>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                          </conditions>
+                        </modifier>
+                        <modifier field="1a22-dd9c-da5d-b7ca" type="set" value="1">
+                          <conditions>
+                            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                     </entryLink>
                   </entryLinks>
                   <infoLinks>
@@ -4627,7 +4923,6 @@ Psychology: The Solitaire is immune to psychology. He is not affected by terror,
                         <repeat childId="7d75-c495-97e2-cdf6" childName="Harlequin Jetbike w/ Shuriken Cannon" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="e5b5-36e8-8494-8733" shared="true" value="3"/>
                       </repeats>
                     </modifier>
-                    <modifier field="category" type="add" value="b6e4-2c66-e404-b10a"/>
                   </modifiers>
                 </selectionEntry>
               </selectionEntries>
@@ -5849,7 +6144,7 @@ When doing so the same to hit for long range shots apply and the +1 for Crack Sh
         <entryLink name="Vehicle Wargear Cards" id="fa8c-cc96-5307-d5fb" collective="false" hidden="false" import="true" targetId="571e-75d5-7836-487d" type="selectionEntryGroup"/>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Eldar Jetibke Damage Table" id="5078-86c8-cb79-14ca" hidden="false" targetId="9daa-fcbb-5d9e-d47d" type="rule"/>
+        <infoLink name="Eldar Jetbike Damage Table" id="5078-86c8-cb79-14ca" hidden="false" targetId="9daa-fcbb-5d9e-d47d" type="rule"/>
         <infoLink name="Eldar Jetbike" id="e1fe-7159-7c8b-4016" hidden="false" targetId="d64a-86b5-40fa-080a" type="profile"/>
       </infoLinks>
       <selectionEntryGroups>
@@ -5870,6 +6165,7 @@ When doing so the same to hit for long range shots apply and the +1 for Crack Sh
       </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Eldar Jetbike w/ Shuriken Cannon" id="af61-e792-6751-c893" collective="false" hidden="false" import="true" publicationId="71ba-82e2-d83c-d33d" subType="mount" type="model">
+      <comment>characters</comment>
       <categoryLinks>
         <categoryLink name="Eldar" id="e051-ded7-e1b3-bee1" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
         <categoryLink name="Skimmer/Bike" id="7355-2bf6-10c9-a7e2" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
@@ -5890,7 +6186,7 @@ When doing so the same to hit for long range shots apply and the +1 for Crack Sh
         </entryLink>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Eldar Jetibke Damage Table" id="1400-9e75-e2c5-59ce" hidden="false" targetId="9daa-fcbb-5d9e-d47d" type="rule"/>
+        <infoLink name="Eldar Jetbike Damage Table" id="1400-9e75-e2c5-59ce" hidden="false" targetId="9daa-fcbb-5d9e-d47d" type="rule"/>
         <infoLink name="Eldar Jetbike" id="35bd-91ab-e586-6e3e" hidden="false" targetId="d64a-86b5-40fa-080a" type="profile"/>
       </infoLinks>
     </selectionEntry>
@@ -5986,6 +6282,455 @@ When doing so the same to hit for long range shots apply and the +1 for Crack Sh
       <infoLinks>
         <infoLink name="Holo-suits" id="007e-4ace-f597-bbad" hidden="false" targetId="6f4c-2d58-1f51-712e" type="profile"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Support Points from Squad Upgrade (Jet Bikes)" id="2653-92dd-98fd-7475" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="3Support" id="d593-75d1-3788-348d" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="c400-09c7-6858-fd6b" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="1"/>
+        <constraint id="f0cf-9c0a-33ee-9f14" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="1"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>Jetbikes</comment>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <comment>Wargear Cards - cannon upgrade ver</comment>
+              <modifiers>
+                <modifier field="points" type="increment" value="15">
+                  <comment>abalative armour</comment>
+                  <repeats>
+                    <repeat childId="8706-48a2-c3f2-0ec4" childName="Ablative Armour" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="5">
+                  <comment>auto launcher</comment>
+                  <repeats>
+                    <repeat childId="bb39-6d58-49f9-bb94" childName="Auto-Launcher" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="50">
+                  <comment>ceramite armour</comment>
+                  <repeats>
+                    <repeat childId="36d7-84c9-d30a-b729" childName="Ceramite Armour" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="10">
+                  <comment>electro hull</comment>
+                  <repeats>
+                    <repeat childId="f927-24ed-15ca-0c96" childName="Electro-Hull" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="35">
+                  <comment>null shield</comment>
+                  <repeats>
+                    <repeat childId="47cb-e484-5d6a-3911" childName="Null-Shield" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="10">
+                  <comment>reinforced armour</comment>
+                  <repeats>
+                    <repeat childId="fa44-ccaf-6c06-bed4" childName="Reinforced Armour" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="5">
+                  <comment>searchlight</comment>
+                  <repeats>
+                    <repeat childId="64e7-1568-72da-bd59" childName="Searchlight" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="5">
+                  <comment>supercharge engine</comment>
+                  <repeats>
+                    <repeat childId="4635-9876-cb56-4aab" childName="Supercharged Engine" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="50">
+                  <comment>vortex det</comment>
+                  <repeats>
+                    <repeat childId="2976-4443-5709-a1a6" childName="Vortex Detonator" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <comment>Eldar wargear</comment>
+              <modifiers>
+                <modifier field="points" type="increment" value="5">
+                  <comment>crystal targetin</comment>
+                  <repeats>
+                    <repeat childId="d407-766a-6649-8bd5" childName="Crystal Targeting Matrix" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="25">
+                  <comment>crystal web</comment>
+                  <repeats>
+                    <repeat childId="a38f-8ded-d8ad-76bf" childName="Crystalline Web" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="35">
+                  <comment>holfield</comment>
+                  <repeats>
+                    <repeat childId="4807-8d16-6ef0-8483" childName="Holo-Field" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="20">
+                  <comment>psycho screamers</comment>
+                  <repeats>
+                    <repeat childId="09c1-c541-c1eb-5c61" childName="Psycho-Sonic Screamers" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="15">
+                  <comment>Spectral shield</comment>
+                  <repeats>
+                    <repeat childId="9e2e-f23a-f7ef-fc1f" childName="Spectral Shield" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="15">
+                  <comment>spirit stone</comment>
+                  <repeats>
+                    <repeat childId="40ac-6175-1c8e-10d4" childName="Spirit Stone" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="30">
+                  <comment>talosn</comment>
+                  <repeats>
+                    <repeat childId="ef1e-bef3-4335-2003" childName="Talons" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="25">
+                  <comment>vector engine</comment>
+                  <repeats>
+                    <repeat childId="7fa6-5217-fb92-9ccc" childName="Vectored Engines" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <comment>Wargear Cards - jetbike</comment>
+              <modifiers>
+                <modifier field="points" type="increment" value="15">
+                  <comment>abalative armour</comment>
+                  <repeats>
+                    <repeat childId="dcf8-2967-08d9-405b" childName="Ablative Armour" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="5">
+                  <comment>auto launcher</comment>
+                  <repeats>
+                    <repeat childId="e643-7cef-4842-72e8" childName="Auto-Launcher" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="50">
+                  <comment>ceramite armour</comment>
+                  <repeats>
+                    <repeat childId="87a9-7906-aae5-2165" childName="Ceramite Armour" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="10">
+                  <comment>electro hull</comment>
+                  <repeats>
+                    <repeat childId="67c1-2d49-cab1-7331" childName="Electro-Hull" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="35">
+                  <comment>null shield</comment>
+                  <repeats>
+                    <repeat childId="6415-fc5a-26d6-2039" childName="Null-Shield" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="10">
+                  <comment>reinforced armour</comment>
+                  <repeats>
+                    <repeat childId="4b7b-c090-e363-c77b" childName="Reinforced Armour" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="5">
+                  <comment>searchlight</comment>
+                  <repeats>
+                    <repeat childId="123f-ad0a-d1db-3a4b" childName="Searchlight" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="5">
+                  <comment>supercharge engine</comment>
+                  <repeats>
+                    <repeat childId="9027-7620-c589-bfa8" childName="Supercharged Engine" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="50">
+                  <comment>vortex det</comment>
+                  <repeats>
+                    <repeat childId="8e88-3584-c264-1d86" childName="Vortex Detonator" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <modifiers>
+            <modifier field="points" type="increment" value="5">
+              <comment>shrieker cannon</comment>
+              <repeats>
+                <repeat childId="d85c-5bb1-558b-ddee" childName="Shuriken Shrieker Cannon" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+            <modifier field="points" type="increment" value="20">
+              <comment>Bike itself</comment>
+              <repeats>
+                <repeat childId="ada1-6d26-5d21-3ab0" childName="Eldar Jetbike w/ Shuriken Cannon" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                <repeat childId="8741-de9c-3df6-14f4" childName="Eldar Jetbike" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="c400-09c7-6858-fd6b" type="set" value="0">
+          <conditions>
+            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile name="Support Upgrade Points Counter" id="1a92-2270-e7aa-33ea" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+          <characteristics>
+            <characteristic name="Special" typeId="f917-8cd8-7592-47dd">This adds the points from any Support upgrades in a unit from Squads (IE mounting on Jet Bikes). Guardian Jet bikes are part of the Squad cost so will not reflect here as per GW FAQ</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Eldar Jetbike" id="8741-de9c-3df6-14f4" collective="false" hidden="false" import="true" publicationId="71ba-82e2-d83c-d33d" subType="mount" type="model">
+      <comment>for Support upgrade</comment>
+      <categoryLinks>
+        <categoryLink name="Eldar" id="8c75-4b86-0405-0ee2" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
+        <categoryLink name="Skimmer/Bike" id="a1dd-f156-d88a-1a8d" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink name="Targeter" id="7c96-6723-03d8-94bb" collective="false" hidden="false" import="true" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
+          <constraints>
+            <constraint id="4374-76c7-3982-13fe" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="8571-b87f-fc94-7642" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Twin Linked Shuriken Catapult" id="1c4d-ae0e-c5be-f7cc" collective="false" hidden="false" import="true" targetId="7c33-d1ea-f352-1152" type="selectionEntry">
+          <constraints>
+            <constraint id="59d5-4247-dea1-ad74" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="6696-4416-304c-079a" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Twin Linked" id="0daf-bb74-6286-24a4" hidden="false" targetId="1ec9-01dd-59c6-d1d5" type="rule"/>
+          </infoLinks>
+          <modifiers>
+            <modifier field="name" type="set" value="Twin Linked Shuriken Catapults"/>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Eldar Jetbike Damage Table" id="1396-ef4f-9fa7-f7c9" hidden="false" targetId="9daa-fcbb-5d9e-d47d" type="rule"/>
+        <infoLink name="Eldar Jetbike" id="cacb-11de-708b-fe33" hidden="false" targetId="d64a-86b5-40fa-080a" type="profile"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Vehicle Wargear Cards" id="a0f9-0d2b-3d43-b00a" hidden="false">
+          <entryLinks>
+            <entryLink name="Wargear Cards (Vehicle - Eldar)" id="5126-5131-22c8-dca7" collapsible="true" hidden="false" import="true" targetId="eeca-b9e8-909e-8de2" type="selectionEntryGroup"/>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Generic" id="9a77-c22f-d782-89d2" collapsible="true" hidden="false">
+              <entryLinks>
+                <entryLink name="Ablative Armour" id="dcf8-2967-08d9-405b" hidden="false" import="true" targetId="26e2-4a44-2602-a3fd" type="selectionEntry">
+                  <constraints>
+                    <constraint id="0e46-c4ae-c891-427c" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="6e6a-753a-071a-3ba1" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="0ce6-0de8-4a5c-afd6" hidden="false" typeId="points" value="15"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Auto-Launcher" id="e643-7cef-4842-72e8" hidden="false" import="true" targetId="222b-075f-d34c-7093" type="selectionEntry">
+                  <constraints>
+                    <constraint id="f20e-dac1-fa1b-921a" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="4adc-0bfd-207f-dc05" hidden="false" typeId="points" value="5"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Ceramite Armour" id="87a9-7906-aae5-2165" hidden="false" import="true" targetId="f74f-9e64-38c1-9503" type="selectionEntry">
+                  <constraints>
+                    <constraint id="9be7-57d2-5a34-b269" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="2f86-4c05-7126-f621" hidden="false" typeId="points" value="50"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Electro-Hull" id="67c1-2d49-cab1-7331" hidden="false" import="true" targetId="f927-24ed-15ca-0c96" type="selectionEntry">
+                  <constraints>
+                    <constraint id="1d01-2895-5c40-6376" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="4797-1e87-777c-010a" hidden="false" typeId="points" value="10"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Null-Shield" id="6415-fc5a-26d6-2039" hidden="false" import="true" targetId="47cb-e484-5d6a-3911" type="selectionEntry">
+                  <constraints>
+                    <constraint id="882f-cc8e-0fdf-8527" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="552b-3747-d044-9a0a" hidden="false" typeId="points" value="35"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Reinforced Armour" id="4b7b-c090-e363-c77b" hidden="false" import="true" targetId="fa44-ccaf-6c06-bed4" type="selectionEntry">
+                  <constraints>
+                    <constraint id="e0a2-f58e-c95a-69e2" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="a7e9-c85a-341f-82aa" hidden="false" typeId="points" value="10"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Searchlight" id="123f-ad0a-d1db-3a4b" hidden="false" import="true" targetId="64e7-1568-72da-bd59" type="selectionEntry">
+                  <constraints>
+                    <constraint id="8106-657a-5558-468a" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="2682-d71c-fc48-935e" hidden="false" typeId="points" value="5"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Supercharged Engine" id="9027-7620-c589-bfa8" hidden="false" import="true" targetId="4635-9876-cb56-4aab" type="selectionEntry">
+                  <constraints>
+                    <constraint id="332b-b1cd-26ad-b517" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="682f-a228-0eba-6ec2" hidden="false" typeId="points" value="5"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Vortex Detonator" id="8e88-3584-c264-1d86" hidden="false" import="true" targetId="2976-4443-5709-a1a6" type="selectionEntry">
+                  <constraints>
+                    <constraint id="6c46-af89-b6b5-993f" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="c974-d4be-d4f3-3336" hidden="false" typeId="points" value="50"/>
+                  </displayCosts>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry name="Eldar Jetbike w/ Shuriken Cannon" id="ada1-6d26-5d21-3ab0" collective="false" hidden="false" import="true" publicationId="71ba-82e2-d83c-d33d" subType="mount" type="model">
+      <comment>For Support Upgrade</comment>
+      <categoryLinks>
+        <categoryLink name="Eldar" id="217b-4dc8-c2f5-ec57" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
+        <categoryLink name="Skimmer/Bike" id="ccae-fa92-85e4-4506" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink name="Targeter" id="dd03-c246-5e99-1876" collective="false" hidden="false" import="true" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
+          <constraints>
+            <constraint id="0e45-57cd-b16b-bfb2" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="1ee7-2856-8c26-b48a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Shuriken Shrieker Cannon" id="d85c-5bb1-558b-ddee" collective="false" hidden="false" import="true" targetId="5d9a-3eb3-1a81-3266" type="selectionEntry">
+          <constraints>
+            <constraint id="dcc5-f416-00d5-f4b1" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="61ac-0da9-9d4a-916c" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Eldar Jetbike Damage Table" id="7698-859b-83e6-7128" hidden="false" targetId="9daa-fcbb-5d9e-d47d" type="rule"/>
+        <infoLink name="Eldar Jetbike" id="ccfb-ae5d-2f72-79e4" hidden="false" targetId="d64a-86b5-40fa-080a" type="profile"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Vehicle Wargear Cards" id="64c1-df7a-f0c0-3ec0" hidden="false">
+          <entryLinks>
+            <entryLink name="Eldar" id="b58c-28fe-82e6-add4" collapsible="true" hidden="false" import="true" targetId="eeca-b9e8-909e-8de2" type="selectionEntryGroup"/>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Generic" id="d514-bf51-54ba-b504" collapsible="true" hidden="false">
+              <entryLinks>
+                <entryLink name="Ablative Armour" id="8706-48a2-c3f2-0ec4" hidden="false" import="true" targetId="26e2-4a44-2602-a3fd" type="selectionEntry">
+                  <constraints>
+                    <constraint id="b9c6-3e60-1f2a-6384" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="d2e3-07b4-dc60-030e" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="0b1f-ee87-f8e4-c1fb" hidden="false" typeId="points" value="15"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Auto-Launcher" id="bb39-6d58-49f9-bb94" hidden="false" import="true" targetId="222b-075f-d34c-7093" type="selectionEntry">
+                  <constraints>
+                    <constraint id="4852-f0f1-0366-2cad" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="f531-f7c4-1342-c124" hidden="false" typeId="points" value="5"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Ceramite Armour" id="36d7-84c9-d30a-b729" hidden="false" import="true" targetId="f74f-9e64-38c1-9503" type="selectionEntry">
+                  <constraints>
+                    <constraint id="cead-12b6-0430-b0e3" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="a894-84c5-d80d-ceb5" hidden="false" typeId="points" value="50"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Electro-Hull" id="580e-bd18-6baa-d941" hidden="false" import="true" targetId="f927-24ed-15ca-0c96" type="selectionEntry">
+                  <constraints>
+                    <constraint id="d23f-2340-e439-7b6e" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="888b-52d3-08fb-e097" hidden="false" typeId="points" value="10"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Null-Shield" id="ac9f-3381-5340-3406" hidden="false" import="true" targetId="47cb-e484-5d6a-3911" type="selectionEntry">
+                  <constraints>
+                    <constraint id="20ba-a5e8-362d-a438" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="d7a9-1a51-d126-7690" hidden="false" typeId="points" value="35"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Reinforced Armour" id="b5a1-7a61-5df6-a553" hidden="false" import="true" targetId="fa44-ccaf-6c06-bed4" type="selectionEntry">
+                  <constraints>
+                    <constraint id="6f59-3dce-22c8-a282" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="8b77-9521-b1b7-3328" hidden="false" typeId="points" value="10"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Searchlight" id="d284-2f4c-1d11-5d33" hidden="false" import="true" targetId="64e7-1568-72da-bd59" type="selectionEntry">
+                  <constraints>
+                    <constraint id="1024-6f32-82c9-a8f1" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="97d3-d2d3-81a7-296b" hidden="false" typeId="points" value="5"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Supercharged Engine" id="f96a-7a6f-8eb7-2e79" hidden="false" import="true" targetId="4635-9876-cb56-4aab" type="selectionEntry">
+                  <constraints>
+                    <constraint id="dd86-889d-5c1f-51f3" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="e84c-3e65-d187-6185" hidden="false" typeId="points" value="5"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Vortex Detonator" id="c254-07c7-db57-cd4d" hidden="false" import="true" targetId="2976-4443-5709-a1a6" type="selectionEntry">
+                  <constraints>
+                    <constraint id="1ee4-6636-a617-f330" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="44b7-e5b1-5cdd-101a" hidden="false" typeId="points" value="50"/>
+                  </displayCosts>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -7147,6 +7892,179 @@ When the vehicle is penetrated on a section with the web roll on the Crystalline
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Eldar" id="eeca-b9e8-909e-8de2" collective="false" hidden="false" import="true">
+      <comment>for Support costed</comment>
+      <selectionEntries>
+        <selectionEntry name="Crystalline Web" id="a38f-8ded-d8ad-76bf" collective="false" hidden="false" import="true" publicationId="71ba-82e2-d83c-d33d" type="upgrade">
+          <displayCosts>
+            <displayCost name="pts" typeId="points" value="25"/>
+          </displayCosts>
+          <profiles>
+            <profile name="Crystalline Web" id="8ae2-7fb7-b576-22f0" hidden="false" publicationId="71ba-82e2-d83c-d33d" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+              <characteristics>
+                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Apply to any location on the vehicle. May purchase multiple times (1x for each vehicle part)
+When the vehicle is penetrated on a section with the web roll on the Crystalline Web table instead of the normal damage for that location</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Crystalline Web Damage Table" id="ff9c-a43d-081b-15cb" hidden="false" publicationId="71ba-82e2-d83c-d33d">
+              <description>1-2: Vehicle is unaffected
+3: Any weapons associated with the penetrated location may not fire during your next turn. No further effects
+4-5: Roll a D3 on the penetrated location&apos;s damage table. The web protecting the location is destroyed
+6: Roll a D6 on the penetrated location&apos;s damage table. The web protecting the location is destroyed</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry name="Psycho-Sonic Screamers" id="09c1-c541-c1eb-5c61" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="abd2-44c8-9fd7-343f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <displayCosts>
+            <displayCost name="pts" typeId="points" value="20"/>
+          </displayCosts>
+          <infoLinks>
+            <infoLink name="Terror" id="bde0-08be-f711-46ce" hidden="false" targetId="05e0-cd40-2d9e-a9f9" type="rule"/>
+          </infoLinks>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="9187-ca83-9433-d2c7" childName="Skimmer/Bike" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notInstanceOf" value="0"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Psycho-Sonic Screamers" id="374a-eeba-1635-7699" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+              <characteristics>
+                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Vehicle causes Terror</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry name="Talons" id="ef1e-bef3-4335-2003" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="0fa2-3c86-e946-0348" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <displayCosts>
+            <displayCost name="pts" typeId="points" value="30"/>
+          </displayCosts>
+          <modifiers>
+            <modifier field="points" type="increment" value="30">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="d89d-0f46-9510-3f43" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="12dd-3add-ff88-76a5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Talons" id="260b-9200-b9bc-584c" hidden="false" publicationId="71ba-82e2-d83c-d33d" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+              <characteristics>
+                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Talons shoot automatically before close combat attacks against the vehicle are worked out. Roll a D6 for each model in hand to hand combat with the vehicle. On a 4+ the model is hit. If a hit is scored roll a D6. If the score is equal to or more than the target&apos;s Toughness then it suffers 1 Wound with a -2 save modifier.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry name="Crystal Targeting Matrix" id="d407-766a-6649-8bd5" collective="false" hidden="false" import="true" type="upgrade">
+          <displayCosts>
+            <displayCost name="pts" typeId="points" value="5"/>
+          </displayCosts>
+          <profiles>
+            <profile name="Crystal Targeting Matrix" id="b16b-2889-6f53-47e5" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+              <characteristics>
+                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Ignore all to hit modifiers for firing at fast moving targets</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry name="Holo-Field" id="4807-8d16-6ef0-8483" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="4bfa-3981-d7c6-9efa" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <displayCosts>
+            <displayCost name="pts" typeId="points" value="35"/>
+          </displayCosts>
+          <profiles>
+            <profile name="Holo-Field" id="f4b6-11b0-f53b-c217" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+              <characteristics>
+                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">As long as the vehicle is moving, all shots fired at it suffer an additional -1 to hit. If the vehicle comes to a halt or makes a pop up attack then it does not benefit from its holo-field</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry name="Spirit Stone" id="40ac-6175-1c8e-10d4" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="98f8-f300-14ec-9603" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <displayCosts>
+            <displayCost name="pts" typeId="points" value="15"/>
+          </displayCosts>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="12dd-3add-ff88-76a5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="0"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Spirit Stone" id="6b95-2988-366c-df9a" hidden="false" publicationId="71ba-82e2-d83c-d33d" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+              <characteristics>
+                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">If the vehicle is assaulted psychically, then the attack will be nullified on a 6+. In addition, if one of the crew is killed by any means, then the spirit stone takes over with exactly the same profile as an Eldar Guardian. If the dead crew member is hit again, then the spirit stone is hit instead. It has a Toughness of 4 and 1 Wound.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry name="Spectral Shield" id="9e2e-f23a-f7ef-fc1f" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="28bb-5aa6-0735-c27c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <displayCosts>
+            <displayCost name="pts" typeId="points" value="15"/>
+          </displayCosts>
+          <profiles>
+            <profile name="Spectral Shield" id="375e-c477-f238-4daa" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+              <characteristics>
+                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">If the vehicle is hit by a laser weapon, the Eldar player rolls a D6 and subtracts the score from the armour penetration roll</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry name="Vectored Engines" id="7fa6-5217-fb92-9ccc" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="2daf-38de-004a-6c73" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <displayCosts>
+            <displayCost name="pts" typeId="points" value="25"/>
+          </displayCosts>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="d89d-0f46-9510-3f43" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="12dd-3add-ff88-76a5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Vectored Engines" id="4fad-5915-13a2-e283" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+              <characteristics>
+                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">A vehicle fitting with vectored engines may take double the number of turns it is normally allowed to make</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
 </catalogue>

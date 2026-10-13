@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Legion of the Damned" id="8d30-f85a-223d-697c" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff89" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="31" library="false" revision="9" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Legion of the Damned" id="8d30-f85a-223d-697c" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff89" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="31" library="false" revision="10" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink name="Legion of the Damned Commander" id="c6d3-4f59-bb7b-cb64" hidden="false" import="true" targetId="b3bf-f27d-4c9a-ba36" type="selectionEntry"/>
     <entryLink name="Chaplain" id="10d7-a6ab-2164-9a8c" hidden="false" import="true" targetId="19be-b66b-0dae-a781" type="selectionEntry"/>
@@ -528,40 +528,6 @@ See datafax for damage table</description>
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Frag Grenade" id="e555-0c1b-f9a1-0efd" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="c7f4-5d82-2cd1-3694" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="7ac5-935d-8ecf-59c0" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Krak Grenade" id="2319-a9d9-bb96-622b" collective="false" hidden="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
-              <constraints>
-                <constraint id="7999-bdf5-9913-3f2c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
         <entryLink name="Targeter" id="2d7d-c0b6-cb65-6d7c" collective="false" hidden="false" import="true" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
           <constraints>
@@ -1583,20 +1549,6 @@ See datafax for damage table</description>
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Frag Grenade" id="ccc2-288c-dab1-ea6d" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="18ae-02ff-4aec-3a86" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-                <constraint id="7389-2aa8-ffd3-938f" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
-              </constraints>
-            </entryLink>
-            <entryLink name="Blind Grenade" id="5f33-42f1-04be-71da" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
-              <constraints>
-                <constraint id="a5ea-3674-abe0-b338" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
-                <constraint id="9051-7edb-c259-5942" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
         </entryLink>
       </entryLinks>
       <infoLinks>
@@ -1662,40 +1614,6 @@ See datafax for damage table</description>
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Frag Grenade" id="7c67-0502-4c49-d1c2" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="7acd-c713-4f93-3151" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="09e8-4dd1-0d92-ecde" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Blind Grenade" id="8a43-f27a-f32d-0299" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
-              <constraints>
-                <constraint id="8d03-ae95-6eb2-cd47" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
         <entryLink name="Twin Linked Bolters" id="8b8e-9484-e973-c9b3" collective="false" hidden="false" import="true" targetId="dd32-5d68-e4bc-9dff" type="selectionEntry">
           <constraints>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Imperial Guard" id="82fc-8ad4-7b4b-dd4a" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="13" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Imperial Guard" id="82fc-8ad4-7b4b-dd4a" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="14" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>I haven&apos;t put restrictions for the Regimental style to build a list, such as 1 Command HQ, 3 Guard/Heavy Weapons teams, 3 additional unit. Doing so would be rather messy and complicated with all the possible choices, and frankly isn&apos;t really a huge deal.
 
 Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct units.</readme>
@@ -11,9 +11,6 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
     <categoryEntry name="Mandatory Squad (Add Another Command Platoon)" id="41ed-6110-b458-67f9" hidden="false"/>
     <categoryEntry name="Only 6 Units Per HQ/Command" id="2c51-43b2-2f6a-f890" hidden="false"/>
     <categoryEntry name="Characters" id="ec40-5e3e-4081-759b" hidden="false"/>
-    <categoryEntry name="Squads" id="376e-c53a-791c-7152" hidden="false"/>
-    <categoryEntry name="Auxillia" id="d40e-3c26-0b22-f1e7" hidden="false"/>
-    <categoryEntry name="Support" id="83ea-1728-3ebe-3a71" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink name="Command HQ" id="76c3-d098-063a-8c71" collective="false" hidden="false" import="true" targetId="b98e-cfb8-cd7f-d988" type="selectionEntry"/>
@@ -51,22 +48,6 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
     <entryLink name="Tactical Squad" id="a4f4-9c8a-0bc6-c66e" hidden="false" import="true" targetId="57ab-0762-d52f-4446" type="selectionEntry"/>
   </entryLinks>
   <forceEntries>
-    <forceEntry name="Ally - Imperial Guard" id="01ac-e96d-07d6-3e58" hidden="false" sortIndex="3">
-      <categoryLinks>
-        <categoryLink name="Battle Line" id="9c1e-ace8-94db-e356" hidden="false" primary="false" targetId="e69e-43d8-7b4a-0119"/>
-        <categoryLink name="Command" id="3ec7-3a4f-1e14-a41b" hidden="false" primary="false" targetId="a565-5175-f3dd-77bd"/>
-      </categoryLinks>
-      <constraints>
-        <constraint id="0b0c-97e6-84da-ea93" field="points" includeChildForces="false" includeChildSelections="false" percentValue="true" scope="roster" shared="true" type="max" value="0"/>
-      </constraints>
-      <modifiers>
-        <modifier field="0b0c-97e6-84da-ea93" type="set" value="25">
-          <conditions>
-            <condition childId="a949-140a-176f-6700" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </forceEntry>
     <forceEntry name="Imperial Guard" id="f93f-7f7f-eeea-f271" hidden="false" publicationId="cad3-a694-b720-6309" sortIndex="1">
       <categoryLinks>
         <categoryLink name="Additional Unit (1 Per 1 Regimental)" id="faa9-a53b-70c9-4c79" hidden="false" primary="false" targetId="070f-0182-955b-1543">
@@ -203,30 +184,6 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
               </modifiers>
             </modifierGroup>
           </modifierGroups>
-        </categoryLink>
-      </categoryLinks>
-    </forceEntry>
-    <forceEntry name="Black Codex - Imperial Guard: WIP" id="7c54-276f-406e-0548" hidden="false" sortIndex="2">
-      <categoryLinks>
-        <categoryLink name="Characters" id="9364-92eb-1c3a-9864" hidden="false" targetId="ec40-5e3e-4081-759b">
-          <constraints>
-            <constraint id="3799-b0b5-0546-7e0c" field="limit::points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="max" value="50"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Squads" id="f32c-5f3e-35a8-7103" hidden="false" targetId="376e-c53a-791c-7152">
-          <constraints>
-            <constraint id="e0cb-9276-7069-aee8" field="limit::points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="min" value="25"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Support" id="c754-c92b-89d4-e7e2" hidden="false" targetId="83ea-1728-3ebe-3a71">
-          <constraints>
-            <constraint id="e157-12a9-ec9c-14b9" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="50"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Auxillia" id="e7c5-1a14-2e48-77e8" hidden="false" targetId="d40e-3c26-0b22-f1e7">
-          <constraints>
-            <constraint id="f86c-61fa-1c23-e014" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="50"/>
-          </constraints>
         </categoryLink>
       </categoryLinks>
     </forceEntry>
@@ -498,8 +455,7 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
         <characteristic name="I" typeId="76cb-4fd1-7571-e697">3</characteristic>
         <characteristic name="A" typeId="6d89-52f1-9c48-ac8c">2</characteristic>
         <characteristic name="LD" typeId="dfcc-1070-ddf7-ad7d">7</characteristic>
-        <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0">
-</characteristic>
+        <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0"/>
         <characteristic name="Ram Strength" typeId="a025-016a-2152-7b47">6</characteristic>
         <characteristic name="Ram Damage" typeId="84ee-e518-c9ac-7b7e">D6</characteristic>
         <characteristic name="Ram Save Modifier" typeId="e929-6e42-f2a7-c76d">-3</characteristic>
@@ -1205,8 +1161,8 @@ See datafax for damage table results</description>
     <selectionEntry name="Command HQ" id="b98e-cfb8-cd7f-d988" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink name="Imperial Guard" id="4cd9-5fae-fbb5-936f" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
-        <categoryLink name="Command" id="d86b-6ea2-f5ea-ae81" hidden="false" primary="true" targetId="a565-5175-f3dd-77bd"/>
         <categoryLink name="Command Platoon" id="698f-14bf-35d4-eecb" primary="false" targetId="c768-daf7-78be-4415"/>
+        <categoryLink name="1Command" id="10e8-f16d-0cf5-8b99" hidden="false" primary="true" targetId="a38d-36bf-d4fc-bea5"/>
       </categoryLinks>
       <constraints>
         <constraint id="2656-cf14-5ae6-6c00" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="min" value="1"/>
@@ -1274,15 +1230,6 @@ See datafax for damage table results</description>
             <conditionGroup type="and">
               <conditions>
                 <condition childId="bcca-6d93-a4b2-a23f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="equalTo" value="1"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier field="2656-cf14-5ae6-6c00" type="set" value="0">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition childId="01ac-e96d-07d6-3e58" field="forces" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1641,7 +1588,7 @@ See datafax for damage table results</description>
     <selectionEntry name="Imperial Chimera Dedicated Transport" id="46c2-51ca-c775-2a41" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink name="Imperial Guard" id="13be-7cb8-fa45-e417" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
-        <categoryLink name="Battle Line" id="aa52-f99c-2e8f-8ad5" hidden="false" primary="true" targetId="e69e-43d8-7b4a-0119"/>
+        <categoryLink name="2Battle Line" id="9fad-2544-41f3-81e5" hidden="false" primary="true" targetId="bd53-987e-fa4e-a2c8"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="140"/>
@@ -1699,40 +1646,6 @@ See datafax for damage table results</description>
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Blind Grenade" id="ebd9-e3f6-6c02-8654" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
-              <constraints>
-                <constraint id="5d71-006e-cfef-1913" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Frag Grenade" id="8e90-668e-03f3-b27e" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="984f-27cc-1b20-294f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="09e8-4dd1-0d92-ecde" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
       </entryLinks>
       <infoLinks>
@@ -1768,8 +1681,8 @@ See datafax for damage table results</description>
     <selectionEntry name="Command Squad" id="f191-7fe1-43a5-f633" collective="false" hidden="false" import="true" page="77" publicationId="a1e3-886b-e509-d15a" type="upgrade">
       <categoryLinks>
         <categoryLink name="Imperial Guard" id="ff40-1427-0ee6-4d21" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
-        <categoryLink name="Command" id="f7c2-0bb1-493d-79f2" hidden="false" primary="true" targetId="a565-5175-f3dd-77bd"/>
         <categoryLink name="Command Platoon" id="701b-ad66-a3dd-ddc4" primary="false" targetId="c768-daf7-78be-4415"/>
+        <categoryLink name="1Command" id="aa59-3384-a5fd-8bf3" hidden="false" primary="true" targetId="a38d-36bf-d4fc-bea5"/>
       </categoryLinks>
       <constraints>
         <constraint id="b811-b9c5-033b-c58f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="0"/>
@@ -1953,8 +1866,8 @@ See datafax for damage table results</description>
     <selectionEntry name="Rough Rider Command Squad" id="6fea-e8b9-e396-70b8" collective="false" hidden="false" import="true" page="77" publicationId="a1e3-886b-e509-d15a" type="upgrade">
       <categoryLinks>
         <categoryLink name="Imperial Guard" id="73ac-bc55-d9fb-68bc" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
-        <categoryLink name="Command" id="709b-e497-af90-ee3b" hidden="false" primary="true" targetId="a565-5175-f3dd-77bd"/>
         <categoryLink name="Command Platoon" id="2613-eb7f-313f-0844" primary="false" targetId="c768-daf7-78be-4415"/>
+        <categoryLink name="1Command" id="0f07-7a3c-150f-9b7b" hidden="false" primary="true" targetId="a38d-36bf-d4fc-bea5"/>
       </categoryLinks>
       <constraints>
         <constraint id="07c3-5fff-5cfe-4322" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="0"/>
@@ -2128,7 +2041,7 @@ Re-roll any failed Break test</characteristic>
     <selectionEntry name="Commissar" id="bc29-ae78-1cc8-63c5" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink name="Imperial Guard" id="4872-1db2-8593-f691" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
-        <categoryLink name="Command" id="436c-8bcd-de69-db69" hidden="false" primary="true" targetId="a565-5175-f3dd-77bd"/>
+        <categoryLink name="1Command" id="1acb-42a1-1c27-bfa8" hidden="false" primary="true" targetId="a38d-36bf-d4fc-bea5"/>
       </categoryLinks>
       <constraints>
         <constraint id="d4b0-df6c-032f-0392" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0"/>
@@ -2179,8 +2092,7 @@ Re-roll any failed Break test</characteristic>
     </selectionEntry>
     <selectionEntry name="Primaris Psyker" id="2efb-66fb-4140-ec72" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>
-        <categoryLink name="Battle Line" id="c787-9a5e-e987-5b51" hidden="false" primary="true" targetId="e69e-43d8-7b4a-0119"/>
-        <categoryLink name="Command" id="df52-7778-eeb6-0e1e" hidden="false" primary="false" targetId="a565-5175-f3dd-77bd"/>
+        <categoryLink name="1Command" id="5117-4a69-4019-1eb2" hidden="false" primary="true" targetId="a38d-36bf-d4fc-bea5"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
@@ -2316,8 +2228,8 @@ Re-roll any failed Break test</characteristic>
     <selectionEntry name="Imperial Guard Squad" id="0f57-fb47-4232-47f1" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink name="Imperial Guard" id="9884-bdb3-8461-a658" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
-        <categoryLink name="Battle Line" id="b1d7-b79a-c9c1-4783" hidden="false" primary="true" targetId="e69e-43d8-7b4a-0119"/>
         <categoryLink name="Mandatory Squad (Add Another Command Platoon)" id="414c-4149-6430-c3d6" primary="false" targetId="41ed-6110-b458-67f9"/>
+        <categoryLink name="2Battle Line" id="7d28-5ce8-97b2-02b0" hidden="false" primary="true" targetId="bd53-987e-fa4e-a2c8"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
@@ -2478,8 +2390,8 @@ Re-roll any failed Break test</characteristic>
     <selectionEntry name="Imperial Guard Heavy Weapons Squad" id="e8c2-2f16-7502-3e1d" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink name="Imperial Guard" id="14ba-ecb2-32eb-7ccb" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
-        <categoryLink name="Battle Line" id="fb54-750b-9330-8068" hidden="false" primary="true" targetId="e69e-43d8-7b4a-0119"/>
         <categoryLink name="Mandatory Squad (Add Another Command Platoon)" id="0abc-2021-dd52-b391" primary="false" targetId="41ed-6110-b458-67f9"/>
+        <categoryLink name="2Battle Line" id="6e7d-3282-b0d9-13c5" hidden="false" primary="true" targetId="bd53-987e-fa4e-a2c8"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="60"/>
@@ -2512,9 +2424,9 @@ Re-roll any failed Break test</characteristic>
     <selectionEntry name="Rough Rider Squad" id="19a5-e8c6-d71f-5800" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink name="Imperial Guard" id="462e-cc9a-23af-66a0" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
-        <categoryLink name="Battle Line" id="0442-8761-49ab-a0b6" hidden="false" primary="true" targetId="e69e-43d8-7b4a-0119"/>
         <categoryLink name="Additional Unit (1 Per 1 Regimental)" id="f2f9-8cdf-dd33-9ee0" primary="false" targetId="070f-0182-955b-1543"/>
         <categoryLink name="Only 6 Units Per HQ/Command" id="8007-01be-ae49-f127" primary="false" targetId="2c51-43b2-2f6a-f890"/>
+        <categoryLink name="2Battle Line" id="51dc-125a-1233-abac" hidden="false" primary="true" targetId="bd53-987e-fa4e-a2c8"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
@@ -2630,9 +2542,9 @@ Re-roll any failed Break test</characteristic>
     <selectionEntry name="Ogryns" id="4d8b-06db-e312-c297" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink name="Imperial Guard" id="16e2-67ea-41fb-3e6b" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
-        <categoryLink name="Battle Line" id="8835-989a-d506-28e8" hidden="false" primary="true" targetId="e69e-43d8-7b4a-0119"/>
         <categoryLink name="Additional Unit (1 Per 1 Regimental)" id="cca5-81cd-f45c-31c3" hidden="false" primary="false" targetId="070f-0182-955b-1543"/>
         <categoryLink name="Only 6 Units Per HQ/Command" id="90b4-ff79-2237-8db1" primary="false" targetId="2c51-43b2-2f6a-f890"/>
+        <categoryLink name="2Battle Line" id="5fed-0d8c-23c0-3249" hidden="false" primary="true" targetId="bd53-987e-fa4e-a2c8"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="235"/>
@@ -2698,10 +2610,10 @@ Re-roll any failed Break test</characteristic>
     </selectionEntry>
     <selectionEntry name="Ratling Snipers" id="9e10-1a9e-ad76-95d6" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>
-        <categoryLink name="Battle Line" id="5294-f6d2-eaab-4440" hidden="false" primary="true" targetId="e69e-43d8-7b4a-0119"/>
         <categoryLink name="Imperial Guard" id="d7f2-0170-083f-0c57" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
         <categoryLink name="Additional Unit (1 Per 1 Regimental)" id="5141-3cae-d019-b598" hidden="false" primary="false" targetId="070f-0182-955b-1543"/>
         <categoryLink name="Only 6 Units Per HQ/Command" id="5dc9-bb96-adf5-9e17" primary="false" targetId="2c51-43b2-2f6a-f890"/>
+        <categoryLink name="2Battle Line" id="3313-0349-66ff-c496" hidden="false" primary="true" targetId="bd53-987e-fa4e-a2c8"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="80"/>
@@ -2753,9 +2665,9 @@ Re-roll any failed Break test</characteristic>
     <selectionEntry name="Storm Troopers" id="5a60-00ab-4faf-3853" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink name="Imperial Guard" id="1932-a8b1-b32a-31c6" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
-        <categoryLink name="Battle Line" id="e519-3794-c523-3bf8" hidden="false" primary="true" targetId="e69e-43d8-7b4a-0119"/>
         <categoryLink name="Additional Unit (1 Per 1 Regimental)" id="abd7-e082-499f-a824" hidden="false" primary="false" targetId="070f-0182-955b-1543"/>
         <categoryLink name="Only 6 Units Per HQ/Command" id="ebdb-7a1f-d622-ab38" primary="false" targetId="2c51-43b2-2f6a-f890"/>
+        <categoryLink name="2Battle Line" id="2e93-18c0-853c-daeb" hidden="false" primary="true" targetId="bd53-987e-fa4e-a2c8"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="130"/>
@@ -2977,9 +2889,9 @@ Re-roll any failed Break test</characteristic>
     <selectionEntry name="Imperial Griffon" id="0ab5-4c11-74e6-ad75" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink name="Imperial Guard" id="066a-7395-07d4-31b1" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
-        <categoryLink name="Battle Line" id="043a-ae1c-1024-8ce4" hidden="false" primary="true" targetId="e69e-43d8-7b4a-0119"/>
         <categoryLink name="Additional Unit (1 Per 1 Regimental)" id="24c9-6696-6430-95fb" hidden="false" primary="false" targetId="070f-0182-955b-1543"/>
         <categoryLink name="Only 6 Units Per HQ/Command" id="003d-0f21-6a4b-2f0e" primary="false" targetId="2c51-43b2-2f6a-f890"/>
+        <categoryLink name="2Battle Line" id="4e7f-fdb7-fd8e-b310" hidden="false" primary="true" targetId="bd53-987e-fa4e-a2c8"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="140"/>
@@ -3008,40 +2920,6 @@ Re-roll any failed Break test</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Blind Grenade" id="0b60-d8b8-296a-9684" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
-              <constraints>
-                <constraint id="e3db-8dbc-e81c-5b16" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Frag Grenade" id="5ed3-e8c8-3a23-0b43" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="415e-2693-db85-9e2f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="09e8-4dd1-0d92-ecde" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
       </entryLinks>
       <infoLinks>
@@ -3070,9 +2948,9 @@ Re-roll any failed Break test</characteristic>
     <selectionEntry name="Imperial Basilisk" id="e379-467c-2beb-b7fe" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink name="Imperial Guard" id="98f6-d135-4546-09c6" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
-        <categoryLink name="Battle Line" id="b01e-cc2c-b364-ae89" hidden="false" primary="true" targetId="e69e-43d8-7b4a-0119"/>
         <categoryLink name="Additional Unit (1 Per 1 Regimental)" id="ba01-2778-0ef2-ba0a" hidden="false" primary="false" targetId="070f-0182-955b-1543"/>
         <categoryLink name="Only 6 Units Per HQ/Command" id="1c0d-2f4d-96c9-600d" primary="false" targetId="2c51-43b2-2f6a-f890"/>
+        <categoryLink name="2Battle Line" id="c42e-65c2-a137-afdf" hidden="false" primary="true" targetId="bd53-987e-fa4e-a2c8"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="175"/>
@@ -3101,40 +2979,6 @@ Re-roll any failed Break test</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Blind Grenade" id="2c4f-3268-aefa-160e" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
-              <constraints>
-                <constraint id="7d69-311c-6678-8ba9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Frag Grenade" id="f374-cad1-9e91-fedb" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="5610-9f3e-fa8b-9dbc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="09e8-4dd1-0d92-ecde" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
       </entryLinks>
       <infoLinks>
@@ -3168,9 +3012,9 @@ Re-roll any failed Break test</characteristic>
     <selectionEntry name="Leman Russ Battle Tank" id="5381-0e61-023c-25b8" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink name="Imperial Guard" id="d8ba-8c5e-f169-098b" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
-        <categoryLink name="Battle Line" id="0195-857b-3ddf-763e" hidden="false" primary="true" targetId="e69e-43d8-7b4a-0119"/>
         <categoryLink name="Additional Unit (1 Per 1 Regimental)" id="66e2-b759-0a4a-f459" hidden="false" primary="false" targetId="070f-0182-955b-1543"/>
         <categoryLink name="Only 6 Units Per HQ/Command" id="bfb8-995e-43a1-3675" primary="false" targetId="2c51-43b2-2f6a-f890"/>
+        <categoryLink name="2Battle Line" id="0daa-7c45-75a2-66c3" hidden="false" primary="true" targetId="bd53-987e-fa4e-a2c8"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="205"/>
@@ -3207,40 +3051,6 @@ Re-roll any failed Break test</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Blind Grenade" id="4c19-26a3-82ad-d87f" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
-              <constraints>
-                <constraint id="adb2-4bef-3afd-ea1a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Frag Grenade" id="bebc-d2e2-543e-182f" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="abdb-8e9d-ad73-bc58" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="09e8-4dd1-0d92-ecde" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
       </entryLinks>
       <infoLinks>
@@ -3296,9 +3106,9 @@ Re-roll any failed Break test</characteristic>
     <selectionEntry name="Leman Russ Demolisher" id="eccf-3274-9f21-915d" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink name="Imperial Guard" id="cd33-9b79-f575-3be2" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
-        <categoryLink name="Battle Line" id="be5d-0cbc-c201-b36d" hidden="false" primary="true" targetId="e69e-43d8-7b4a-0119"/>
         <categoryLink name="Additional Unit (1 Per 1 Regimental)" id="9462-695d-ab1e-eff2" hidden="false" primary="false" targetId="070f-0182-955b-1543"/>
         <categoryLink name="Only 6 Units Per HQ/Command" id="386c-a97e-f05d-3761" primary="false" targetId="2c51-43b2-2f6a-f890"/>
+        <categoryLink name="2Battle Line" id="3d37-f5e8-2903-dc63" hidden="false" primary="true" targetId="bd53-987e-fa4e-a2c8"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="190"/>
@@ -3326,40 +3136,6 @@ Re-roll any failed Break test</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Blind Grenade" id="5e02-2126-729d-68d4" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
-              <constraints>
-                <constraint id="b33d-86e9-c1a2-4552" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Frag Grenade" id="1207-0ad3-17cd-4cf5" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="4f79-ce97-f2e9-afc7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="09e8-4dd1-0d92-ecde" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
         <entryLink name="Frag Defender" id="7912-194e-cf94-ce1f" collective="false" hidden="false" import="true" targetId="5c91-d7c8-553c-8e40" type="selectionEntry">
           <constraints>
@@ -3468,9 +3244,9 @@ Re-roll any failed Break test</characteristic>
     <selectionEntry name="Imperial Hellhound" id="9d78-8d6d-f25a-ee00" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink name="Imperial Guard" id="1f19-4702-2b9d-2d0c" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
-        <categoryLink name="Battle Line" id="83d1-d248-6d65-de3b" hidden="false" primary="true" targetId="e69e-43d8-7b4a-0119"/>
         <categoryLink name="Additional Unit (1 Per 1 Regimental)" id="a886-9761-d27c-4b13" hidden="false" primary="false" targetId="070f-0182-955b-1543"/>
         <categoryLink name="Only 6 Units Per HQ/Command" id="ba28-6242-db7e-0041" primary="false" targetId="2c51-43b2-2f6a-f890"/>
+        <categoryLink name="2Battle Line" id="e205-27e7-4539-0eb2" hidden="false" primary="true" targetId="bd53-987e-fa4e-a2c8"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="165"/>
@@ -3510,40 +3286,6 @@ Re-roll any failed Break test</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Blind Grenade" id="3434-4800-df5c-d474" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
-              <constraints>
-                <constraint id="6949-8328-8d2a-0c3c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Frag Grenade" id="cd9a-16fe-4e88-59d0" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="e750-4840-e6a2-0a59" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="09e8-4dd1-0d92-ecde" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
       </entryLinks>
       <infoLinks>
@@ -3564,10 +3306,10 @@ Re-roll any failed Break test</characteristic>
     <selectionEntry name="Imperial Guard Sentinel" id="c257-1f8e-b265-34bf" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink name="Imperial Guard" id="f9fe-96cb-3b30-9be0" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
-        <categoryLink name="Battle Line" id="03a5-84e2-c3e8-2a8e" hidden="false" primary="true" targetId="e69e-43d8-7b4a-0119"/>
         <categoryLink name="Walkers" id="5d72-76f5-25e5-c3ff" hidden="false" primary="false" targetId="bcf7-c063-7aca-a066"/>
         <categoryLink name="Additional Unit (1 Per 1 Regimental)" id="cf57-5412-c6f2-e09b" hidden="false" primary="false" targetId="070f-0182-955b-1543"/>
         <categoryLink name="Only 6 Units Per HQ/Command" id="1957-9482-4cb1-061c" primary="false" targetId="2c51-43b2-2f6a-f890"/>
+        <categoryLink name="2Battle Line" id="39f5-9cb5-979f-bdb8" hidden="false" primary="true" targetId="bd53-987e-fa4e-a2c8"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
@@ -3608,7 +3350,7 @@ Re-roll any failed Break test</characteristic>
     <selectionEntry name="Lord Commander Solar Macharius" id="1764-c068-d2f2-64ce" collective="false" hidden="false" import="true" publicationId="a1e3-886b-e509-d15a" type="upgrade">
       <categoryLinks>
         <categoryLink name="Imperial Guard" id="52b3-8b2e-afdc-4a01" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
-        <categoryLink name="Command" id="cbbe-99af-0183-ead9" hidden="false" primary="true" targetId="a565-5175-f3dd-77bd"/>
+        <categoryLink name="1Command" id="fc99-cc2c-be11-9ba4" hidden="false" primary="true" targetId="a38d-36bf-d4fc-bea5"/>
       </categoryLinks>
       <constraints>
         <constraint id="c622-e76c-069e-6f37" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -3664,7 +3406,7 @@ Re-roll any failed Break test</characteristic>
     <selectionEntry name="Commissar Yarrick" id="1dcc-d81f-faea-ba46" collective="false" hidden="false" import="true" publicationId="a1e3-886b-e509-d15a" type="upgrade">
       <categoryLinks>
         <categoryLink name="Imperial Guard" id="b10a-a27e-03dd-0915" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
-        <categoryLink name="Command" id="47f8-2bbf-1355-23b8" hidden="false" primary="true" targetId="a565-5175-f3dd-77bd"/>
+        <categoryLink name="1Command" id="d054-34c3-e23f-4be2" hidden="false" primary="true" targetId="a38d-36bf-d4fc-bea5"/>
       </categoryLinks>
       <constraints>
         <constraint id="bf43-c7f6-abc1-3c53" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -3860,8 +3602,8 @@ Re-roll any failed Break test</characteristic>
     <selectionEntry name="Penal Squad" id="16d9-1df3-82c0-3280" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink name="Imperial Guard" id="760f-bf09-8b68-7214" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
-        <categoryLink name="Battle Line" id="ffb1-0b72-8f7c-bd83" hidden="false" primary="true" targetId="e69e-43d8-7b4a-0119"/>
         <categoryLink name="Mandatory Squad (Add Another Command Platoon)" id="06dd-c8a5-4079-561f" primary="false" targetId="41ed-6110-b458-67f9"/>
+        <categoryLink name="2Battle Line" id="2b4c-6727-fca1-9834" hidden="false" primary="true" targetId="bd53-987e-fa4e-a2c8"/>
       </categoryLinks>
       <constraints>
         <constraint id="2165-5457-6d45-0fc9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="min" value="0"/>
@@ -4151,8 +3893,8 @@ Re-roll any failed Break test</characteristic>
     <selectionEntry name="Rough Rider Command HQ" id="bcca-6d93-a4b2-a23f" collective="false" hidden="false" import="true" page="90" publicationId="a1e3-886b-e509-d15a" type="upgrade">
       <categoryLinks>
         <categoryLink name="Imperial Guard" id="eab6-785d-262f-78bb" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
-        <categoryLink name="Command" id="5d35-ddba-cca5-8f2a" hidden="false" primary="true" targetId="a565-5175-f3dd-77bd"/>
         <categoryLink name="Command Platoon" id="3c92-b68c-55c6-b783" primary="false" targetId="c768-daf7-78be-4415"/>
+        <categoryLink name="1Command" id="5679-47a9-8671-c97c" hidden="false" primary="true" targetId="a38d-36bf-d4fc-bea5"/>
       </categoryLinks>
       <constraints>
         <constraint id="a82a-ba44-8591-6ca3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -4219,11 +3961,11 @@ Re-roll any failed Break test</characteristic>
     </selectionEntry>
     <selectionEntry name="Imperial Guard Land Speeder" id="ab20-9663-bf06-da14" collective="false" hidden="false" import="true" page="datafax" publicationId="a1e3-886b-e509-d15a" type="upgrade">
       <categoryLinks>
-        <categoryLink name="Battle Line" id="c4ed-1d23-b890-bc3e" hidden="false" primary="true" targetId="e69e-43d8-7b4a-0119"/>
         <categoryLink name="Imperial Guard" id="a0bd-19d5-2b51-d17b" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
         <categoryLink name="Skimmer/Bike" id="3632-9528-5d6e-95ec" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
         <categoryLink name="Additional Unit (1 Per 1 Regimental)" id="6e03-67d8-c47d-3d99" hidden="false" primary="false" targetId="070f-0182-955b-1543"/>
         <categoryLink name="Only 6 Units Per HQ/Command" id="f19b-07c3-dc83-2f45" primary="false" targetId="2c51-43b2-2f6a-f890"/>
+        <categoryLink name="2Battle Line" id="4491-833d-af1f-324f" hidden="false" primary="true" targetId="bd53-987e-fa4e-a2c8"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="90"/>
@@ -4299,7 +4041,7 @@ Re-roll any failed Break test</characteristic>
     <selectionEntry name="Fallen Angels" id="3ae1-b517-afb7-2a38" collective="false" hidden="false" import="true" publicationId="02e1-3f69-7ae7-f5c5" type="upgrade">
       <categoryLinks>
         <categoryLink name="Chaos" id="f6aa-17e6-ed34-6d03" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
-        <categoryLink name="Battle Line" id="9cdc-287d-7ace-6754" hidden="false" primary="true" targetId="e69e-43d8-7b4a-0119"/>
+        <categoryLink name="2Battle Line" id="861e-c802-ce7a-d09a" hidden="false" primary="true" targetId="bd53-987e-fa4e-a2c8"/>
       </categoryLinks>
       <constraints>
         <constraint id="9c52-039a-3811-2bc7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -5196,7 +4938,7 @@ Saving throws for shields or fields do not apply against hits from a misfiring p
     <selectionEntry name="Cypher, Fallen Dark Angel Champion" id="9670-cbf6-92b2-96fe" collective="false" hidden="false" import="true" page="143" publicationId="02e1-3f69-7ae7-f5c5" type="upgrade">
       <categoryLinks>
         <categoryLink name="Chaos" id="bb57-1b04-ddfe-b3ec" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
-        <categoryLink name="Command" id="3e85-c1e1-b936-8fc9" hidden="false" primary="true" targetId="a565-5175-f3dd-77bd"/>
+        <categoryLink name="1Command" id="6dc3-f76f-0760-68e0" hidden="false" primary="true" targetId="a38d-36bf-d4fc-bea5"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="147"/>
@@ -5305,9 +5047,9 @@ Members of the Deathwing must charge him if he is within charge range, or move s
     </selectionEntry>
     <selectionEntry name="Imperial Guard Baneblade" id="8a8b-ac83-762f-8ef3" collective="false" hidden="false" import="true" publicationId="54a5-765a-b3e8-291b" type="upgrade">
       <categoryLinks>
-        <categoryLink name="Battle Line" id="1da1-c164-58e7-a660" hidden="false" primary="true" targetId="e69e-43d8-7b4a-0119"/>
         <categoryLink name="Additional Unit (1 Per 1 Regimental)" id="803a-e7a4-1d3e-214c" hidden="false" primary="false" targetId="070f-0182-955b-1543"/>
         <categoryLink name="Only 6 Units Per HQ/Command" id="befd-867d-9481-e944" primary="false" targetId="2c51-43b2-2f6a-f890"/>
+        <categoryLink name="2Battle Line" id="9a55-b500-384f-41a3" hidden="false" primary="true" targetId="bd53-987e-fa4e-a2c8"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="400"/>
@@ -5357,40 +5099,6 @@ Members of the Deathwing must charge him if he is within charge range, or move s
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Blind Grenade" id="f23e-21b1-8eb9-0358" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
-              <constraints>
-                <constraint id="a780-1c2a-f226-11f5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Frag Grenade" id="5fcc-78e7-653c-91dd" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="7b77-a1ba-4a4c-6dda" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="09e8-4dd1-0d92-ecde" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
       </entryLinks>
       <infoLinks>
@@ -5650,8 +5358,8 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
     <selectionEntry name="Imperial Chimera" id="ec47-0a44-3b8e-df3b" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink name="Imperial Guard" id="db5d-b178-09db-45a7" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
-        <categoryLink name="Battle Line" id="369d-7ccf-93c7-2121" hidden="false" primary="true" targetId="e69e-43d8-7b4a-0119"/>
         <categoryLink name="Additional Unit (1 Per 1 Regimental)" id="5ffb-4d92-9d87-1ef0" hidden="false" primary="false" targetId="070f-0182-955b-1543"/>
+        <categoryLink name="2Battle Line" id="d5c5-2b01-da3f-5200" hidden="false" primary="true" targetId="bd53-987e-fa4e-a2c8"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="140"/>
@@ -5709,40 +5417,6 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Blind Grenade" id="7959-a522-ce98-8424" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
-              <constraints>
-                <constraint id="cfde-d2ce-1413-91ef" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Frag Grenade" id="4814-c958-00f7-4324" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="4ed3-31ac-dbb4-6f73" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="09e8-4dd1-0d92-ecde" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
       </entryLinks>
       <infoLinks>
@@ -5753,9 +5427,9 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
     </selectionEntry>
     <selectionEntry name="Imperial Guard Shadowsword " id="3c26-6d97-a3a0-d677" collective="false" hidden="false" import="true" publicationId="54a5-765a-b3e8-291b" type="upgrade">
       <categoryLinks>
-        <categoryLink name="Battle Line" id="5b6e-6f30-9474-b28d" hidden="false" primary="true" targetId="e69e-43d8-7b4a-0119"/>
         <categoryLink name="Additional Unit (1 Per 1 Regimental)" id="8403-b074-4123-0431" hidden="false" primary="false" targetId="070f-0182-955b-1543"/>
         <categoryLink name="Only 6 Units Per HQ/Command" id="d502-2f6d-e6e3-66be" hidden="false" primary="false" targetId="2c51-43b2-2f6a-f890"/>
+        <categoryLink name="2Battle Line" id="fb02-7718-af3e-4450" hidden="false" primary="true" targetId="bd53-987e-fa4e-a2c8"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="350"/>
@@ -5805,40 +5479,6 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Blind Grenade" id="68fb-d3da-f88a-320e" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
-              <constraints>
-                <constraint id="2df3-4137-85b5-9512" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Frag Grenade" id="a1d0-3a12-34ba-3059" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="32d5-8009-11d4-a4b0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="09e8-4dd1-0d92-ecde" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
       </entryLinks>
       <infoLinks>
@@ -6154,13 +5794,6 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
       <infoLinks>
         <infoLink name="Colonel" id="eaa7-e9c5-cb37-e5e6" hidden="false" targetId="e2a1-5115-4bca-3318" type="profile"/>
       </infoLinks>
-      <modifiers>
-        <modifier field="138e-45cf-dc45-ec1a" type="set" value="1">
-          <conditions>
-            <condition childId="any" field="forces" scope="7c54-276f-406e-0548" shared="true" type="atLeast" value="1"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <selectionEntryGroups>
         <selectionEntryGroup name="Weapons" id="2047-5a96-a1ab-61f5" collective="false" hidden="false" import="true">
           <entryLinks>
@@ -6359,8 +5992,8 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
     <selectionEntry name="Command Section" id="9b31-a693-f11e-352f" hidden="false" import="true" type="upgrade">
       <comment>Black Codex</comment>
       <categoryLinks>
-        <categoryLink name="Characters" id="4f6c-a882-87a9-c62b" primary="true" targetId="ec40-5e3e-4081-759b"/>
         <categoryLink name="Imperial Guard" id="4d97-1824-fa92-3e75" primary="false" targetId="ef00-5e3b-a59a-902f"/>
+        <categoryLink name="1Characters" id="6dd2-fd8a-e03e-2e6c" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="75"/>
@@ -6674,7 +6307,7 @@ Twin Linked Heavy Bolters may be upgraded to a single heavy flamer for free</des
     <selectionEntry name="Tactical Squad" id="57ab-0762-d52f-4446" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink name="Imperial Guard" id="7691-0ccf-4dbe-52b1" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
-        <categoryLink name="Squads" id="daba-060a-84ed-15c3" primary="true" targetId="376e-c53a-791c-7152"/>
+        <categoryLink name="2Squads" id="061b-43f1-da49-0b73" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="100"/>

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Angels of Death (Blood Angels)" id="12fb-bbf1-3d12-aef9" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="28" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Angels of Death (Blood Angels)" id="12fb-bbf1-3d12-aef9" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="29" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <categoryEntries>
+    <categoryEntry name="attackBikeUpgrade" id="67c7-5c42-3021-441f" hidden="false"/>
+  </categoryEntries>
   <entryLinks>
     <entryLink name="Space Marine Captain" id="e1eb-4981-2689-1fc2" collective="false" hidden="false" import="true" targetId="e664-c21f-4492-a7dc" type="selectionEntry"/>
     <entryLink name="Terminator Captain" id="cc3a-a216-fc10-2c17" collective="false" hidden="false" import="true" targetId="381f-f866-3d8a-4e03" type="selectionEntry"/>
@@ -39,6 +42,7 @@
     <entryLink name="Combat Squad - Devastator" id="89ac-da22-5354-b8a7" hidden="false" import="true" targetId="6b44-9391-ce2f-4454" type="selectionEntry"/>
     <entryLink name="Combat Squad - Veteran Assault Squad" id="e9ef-cfd9-2550-611a" hidden="false" import="true" targetId="0edf-3c27-d2fa-4261" type="selectionEntry"/>
     <entryLink name="Space Marine Vindicator" id="0acf-4521-d1d4-98a4" hidden="false" import="true" targetId="aa9c-56b2-9661-3b66" type="selectionEntry"/>
+    <entryLink name="Support Upgrade Points Counter" id="5853-47a3-7348-fa29" hidden="false" import="true" targetId="57e4-b5ee-3d27-65ae" type="selectionEntry"/>
   </entryLinks>
   <rules>
     <rule name="Break Tests" id="957a-483e-3a28-6e67" hidden="false" page="49" publicationId="4590-6ba9-5482-a1fa">
@@ -1017,40 +1021,6 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Frag Grenade" id="a10d-0b8e-135b-146f" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="ffcf-39e1-b65d-f6c2" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="7ac5-935d-8ecf-59c0" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Krak Grenade" id="cac2-4efd-7c8b-c631" collective="false" hidden="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
-              <constraints>
-                <constraint id="abbb-62ad-65b1-6106" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
         <entryLink name="Targeter" id="18e4-9575-01ce-e90f" collective="false" hidden="false" import="true" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
           <constraints>
@@ -2918,9 +2888,22 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
             <constraint id="d700-a83d-6935-a0da" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
           <entryLinks>
-            <entryLink name="Space Marine Attack Bike" id="962a-8fe9-ce44-cb1f" collective="false" hidden="false" import="true" page="Datafax" targetId="f5af-7608-d010-83e6" type="selectionEntry">
+            <entryLink name="Space Marine Attack Bike" id="962a-8fe9-ce44-cb1f" collective="false" hidden="false" import="true" page="Datafax" targetId="5191-dde9-7525-27b8" type="selectionEntry">
               <modifiers>
-                <modifier field="534d-ae84-5926-58ef" type="set" value="1"/>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink name="Space Marine Attack Bike" id="4497-c7b2-fb79-f9ad" hidden="false" import="true" targetId="f5af-7608-d010-83e6" type="selectionEntry">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </modifier>
               </modifiers>
             </entryLink>
           </entryLinks>
@@ -2949,40 +2932,6 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Frag Grenade" id="d361-2399-ba97-db65" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="487a-136b-8ca4-2a32" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="7ac5-935d-8ecf-59c0" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Krak Grenade" id="0b7e-6fa5-f47d-3380" collective="false" hidden="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
-              <constraints>
-                <constraint id="2ded-fedc-ac9a-89a8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
         <entryLink name="Twin Linked Bolters" id="6adb-b91f-7ccb-9e4b" collective="false" hidden="false" import="true" targetId="dd32-5d68-e4bc-9dff" type="selectionEntry">
           <constraints>
@@ -3025,6 +2974,9 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
             <conditionGroup type="and">
               <conditions>
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
+                  <comment>Need at least 1 Techmarine</comment>
+                </condition>
+                <condition childId="f5af-7608-d010-83e6" childName="Space Marine Attack Bike" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
               </conditions>
@@ -3126,40 +3078,6 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Frag Grenade" id="b208-90c9-96cc-95ca" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="64fb-fa49-d181-86eb" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="09e8-4dd1-0d92-ecde" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Blind Grenade" id="e9e7-a18f-0ac8-3d98" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
-              <constraints>
-                <constraint id="3ceb-a8ab-539f-0140" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
         <entryLink name="Vehicle Wargear Cards" id="5063-e29b-1635-c4ee" collective="false" hidden="false" import="true" targetId="ce49-153f-9d61-e31a" type="selectionEntryGroup"/>
       </entryLinks>
@@ -3417,40 +3335,6 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Frag Grenade" id="2e1f-24e4-1dbf-8043" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="533a-2aae-d04b-0533" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="09e8-4dd1-0d92-ecde" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Blind Grenade" id="dc3c-a131-713b-a52e" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
-              <constraints>
-                <constraint id="662c-071a-2568-c040" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
         <entryLink name="Vehicle Wargear Cards" id="2d55-a888-6336-d600" collective="false" hidden="false" import="true" targetId="ce49-153f-9d61-e31a" type="selectionEntryGroup"/>
         <entryLink name="Space Marine Vehicle Crew" id="a6cd-f85c-2d71-8d42" hidden="false" import="true" targetId="7013-45c3-2a67-1921" type="selectionEntry">
@@ -3544,40 +3428,6 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Frag Grenade" id="a816-b10c-47ea-36be" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="3d19-35a9-2413-5c55" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="09e8-4dd1-0d92-ecde" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Blind Grenade" id="0729-2ff2-4700-07fe" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
-              <constraints>
-                <constraint id="f9a1-faff-3b68-245e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
         <entryLink name="Vehicle Wargear Cards" id="d07f-1235-b577-19c7" collective="false" hidden="false" import="true" targetId="ce49-153f-9d61-e31a" type="selectionEntryGroup"/>
         <entryLink name="Space Marine Vehicle Crew" id="b67d-9da1-2eb5-948a" hidden="false" import="true" targetId="7013-45c3-2a67-1921" type="selectionEntry">
@@ -3645,40 +3495,6 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Frag Grenade" id="2b67-0a23-645a-c8a5" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="8359-52c4-ee0b-3dae" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="09e8-4dd1-0d92-ecde" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Blind Grenade" id="20a5-490d-b921-1636" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
-              <constraints>
-                <constraint id="64fa-5462-3af7-8490" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
         <entryLink name="Vehicle Wargear Cards" id="086a-b06c-35aa-59ae" collective="false" hidden="false" import="true" targetId="ce49-153f-9d61-e31a" type="selectionEntryGroup"/>
         <entryLink name="Space Marine Vehicle Crew" id="6dad-2e93-3675-d7ab" hidden="false" import="true" targetId="7013-45c3-2a67-1921" type="selectionEntry">
@@ -3760,40 +3576,6 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Frag Grenade" id="023f-25fb-8bfd-f248" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="572d-f9af-4b01-1d2f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="09e8-4dd1-0d92-ecde" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Blind Grenade" id="64e1-7c7d-16c1-847e" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
-              <constraints>
-                <constraint id="5f8f-ca8f-dfd7-fc5c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
         <entryLink name="Twin Linked Bolters" id="938b-700f-3d1a-2a78" collective="false" hidden="false" import="true" targetId="dd32-5d68-e4bc-9dff" type="selectionEntry">
           <constraints>
@@ -3874,40 +3656,6 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Frag Grenade" id="b044-42ac-4de4-c059" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="c81b-e252-9ea9-2aba" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="09e8-4dd1-0d92-ecde" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Blind Grenade" id="114a-3dab-700c-fe78" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
-              <constraints>
-                <constraint id="bf75-623a-dbb2-734e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
         <entryLink name="Razorback Turret" id="32ed-f117-19ff-48fd" collective="false" hidden="false" import="true" targetId="aba7-5058-89a0-b56a" type="selectionEntry">
           <constraints>
@@ -6451,40 +6199,6 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Frag Grenade" id="7e89-73fd-4693-f03a" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-              <constraints>
-                <constraint id="0d00-fd8e-20bf-af49" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="09e8-4dd1-0d92-ecde" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Blind Grenade" id="1e4b-ba29-254f-cb37" collective="false" hidden="false" import="true" targetId="09e8-4dd1-0d92-ecde" type="selectionEntry">
-              <constraints>
-                <constraint id="9fb6-0f88-e22f-acc4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
         </entryLink>
         <entryLink name="Space Marine Vehicle Crew" id="f3f1-e26a-64fa-485b" hidden="false" import="true" targetId="7013-45c3-2a67-1921" type="selectionEntry">
           <constraints>
@@ -6538,6 +6252,607 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Space Marine Attack Bike" id="5191-dde9-7525-27b8" collective="false" hidden="false" import="true" page="Datafax" type="model">
+      <comment>for Bike squad</comment>
+      <categoryLinks>
+        <categoryLink name="Attack Bike" id="79cc-d7c3-a144-13eb" hidden="false" primary="false" targetId="2ea7-ced8-d2ec-2939"/>
+        <categoryLink name="Blood Angels" id="d925-3704-7b82-bb62" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
+        <categoryLink name="attackBikeUpgrade" id="029a-106e-030a-88fe" hidden="false" primary="false" targetId="67c7-5c42-3021-441f"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="1e53-895e-201d-98de" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0">
+          <comment>Need at least 1 Techmarine</comment>
+        </constraint>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Twin Linked Bolters" id="38eb-4fb4-62b1-34ba" collective="false" hidden="false" import="true" targetId="dd32-5d68-e4bc-9dff" type="selectionEntry">
+          <constraints>
+            <constraint id="7306-f1d9-832a-645f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="a38e-a099-51fd-1ba3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Auto-Launcher" id="4673-1b28-4182-6920" collective="false" hidden="false" import="true" sortIndex="3" targetId="222b-075f-d34c-7093" type="selectionEntry">
+          <constraints>
+            <constraint id="9cf9-d11b-0b5f-5006" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+          <displayCosts>
+            <displayCost name="pts" id="1b4a-ec3d-b8c8-c21d" hidden="false" typeId="points" value="5"/>
+          </displayCosts>
+          <entryLinks>
+            <entryLink name="Frag Grenade" id="5fba-515e-8a11-1214" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+              <constraints>
+                <constraint id="fe90-b60c-d1ce-34e5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="7ac5-935d-8ecf-59c0" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink name="Krak Grenade" id="5a05-c402-30f8-7659" collective="false" hidden="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
+              <constraints>
+                <constraint id="3e1d-003e-b3f2-0b43" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="cc7b-eac9-7cc5-a156" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Attack Bike" id="8dee-2c89-1136-e1ec" hidden="false" targetId="abe8-03b6-bb86-633b" type="profile"/>
+        <infoLink name="Space Marine Attack Bike Damage Table" id="f949-c9b9-d31f-d96b" hidden="false" targetId="8b6d-4077-d124-cbd2" type="rule"/>
+      </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <modifiers>
+        <modifier field="1e53-895e-201d-98de" type="set" value="-1">
+          <comment>Need at least 1 Techmarine</comment>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
+                  <comment>Need at least 1 Techmarine</comment>
+                </condition>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier field="error" type="add" value="{this} must have at least 1 Techmarine the list">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
+                  <comment>Need at least 1 Techmarine</comment>
+                </condition>
+                <condition childId="5191-dde9-7525-27b8" childName="Space Marine Attack Bike" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
+                  <comment>Need at least 1 Techmarine</comment>
+                </condition>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry name="Marine Bikers" id="c4a3-d336-f3f8-47e8" collective="false" hidden="false" import="true" sortIndex="1" type="model">
+          <constraints>
+            <constraint id="b696-f42a-e623-83d0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
+            <constraint id="fbf7-3dc8-63cd-152e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="2"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Bolt Pistol" id="a0ef-1674-b9b5-2bcb" collective="false" hidden="false" import="true" targetId="b5bb-7853-53cb-bec4" type="selectionEntry">
+              <constraints>
+                <constraint id="2a92-6ca3-1168-e23d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="abf9-e780-c05d-69bd" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </entryLink>
+            <entryLink name="Power Armour" id="6398-bf94-ae71-277e" collective="false" hidden="false" import="true" targetId="223b-6b82-1907-d976" type="selectionEntry">
+              <constraints>
+                <constraint id="24d7-2e16-26c7-fb98" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="df5d-2d07-3f90-0554" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </entryLink>
+            <entryLink name="Frag Grenade" id="d988-8c48-5c70-e860" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+              <constraints>
+                <constraint id="cf7f-b879-368e-f021" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="fed2-99a3-07e6-8f96" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Space Marine" id="4d2d-4568-20f2-0661" hidden="false" targetId="23c0-aa55-825b-534e" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Weapons for Bikers" id="a143-f102-9294-0893" hidden="false" sortIndex="2">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Special Weapons" id="b5b1-ad6b-1c63-13cb" collective="false" hidden="false" import="true">
+              <constraints>
+                <constraint id="7544-658d-9948-31bd" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="2"/>
+              </constraints>
+              <entryLinks>
+                <entryLink name="Boltgun" id="7b0e-fbe5-4f2b-baa6" collective="false" hidden="false" import="true" targetId="0e81-7914-e52a-0a8d" type="selectionEntry">
+                  <displayCosts>
+                    <displayCost name="pts" id="279e-4334-6ea3-5298" hidden="false" typeId="points" value="3"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Flamer" id="fae9-bfa0-c064-7614" collective="false" hidden="false" import="true" targetId="a1e4-59e5-1938-5372" type="selectionEntry">
+                  <displayCosts>
+                    <displayCost name="pts" id="16cd-7e22-7018-08c9" hidden="false" typeId="points" value="9"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Meltagun" id="d375-e1ff-7a7f-b125" collective="false" hidden="false" import="true" targetId="9a87-ceb4-676f-1386" type="selectionEntry">
+                  <displayCosts>
+                    <displayCost name="pts" id="ed71-38ff-815b-0272" hidden="false" typeId="points" value="8"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Plasma Gun" id="df20-d3a5-a622-0b38" collective="false" hidden="false" import="true" targetId="1d2f-532f-87ed-3d6b" type="selectionEntry">
+                  <displayCosts>
+                    <displayCost name="pts" id="4009-9bba-5190-293b" hidden="false" typeId="points" value="8"/>
+                  </displayCosts>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Assault Weapons" id="69bf-4f0c-5109-2b6d" collective="false" hidden="false" import="true">
+              <entryLinks>
+                <entryLink name="Bolt Pistol" id="c8cc-1657-fe62-89eb" collective="false" hidden="false" import="true" targetId="b5bb-7853-53cb-bec4" type="selectionEntry">
+                  <displayCosts>
+                    <displayCost name="pts" id="2f36-bda9-19d4-4ce2" hidden="false" typeId="points" value="2"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Chainsword" id="1098-e377-9d26-28da" collective="false" hidden="false" import="true" targetId="0bf9-3a64-2700-ff30" type="selectionEntry">
+                  <displayCosts>
+                    <displayCost name="pts" id="1406-ccf3-2522-4dd3" hidden="false" typeId="points" value="2"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Hand Flamer" id="4438-3d5c-754b-8804" collective="false" hidden="false" import="true" targetId="2e7d-f34c-b6c8-8d78" type="selectionEntry">
+                  <displayCosts>
+                    <displayCost name="pts" id="ef45-54d9-1ce2-42ab" hidden="false" typeId="points" value="7"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Plasma Pistol" id="99d6-36f7-1021-4d2a" collective="false" hidden="false" import="true" targetId="87cb-d8fc-1889-18a9" type="selectionEntry">
+                  <displayCosts>
+                    <displayCost name="pts" id="9518-d23e-95d3-a5f6" hidden="false" typeId="points" value="5"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Power Axe" id="dde2-adb7-2b6f-d976" collective="false" hidden="false" import="true" targetId="b690-d341-fa77-01b8" type="selectionEntry">
+                  <displayCosts>
+                    <displayCost name="pts" id="f66a-186a-feee-f052" hidden="false" typeId="points" value="7"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Power Fist" id="1d91-1190-cdcb-e3e9" collective="false" hidden="false" import="true" targetId="d6c8-382a-4d74-36af" type="selectionEntry">
+                  <displayCosts>
+                    <displayCost name="pts" id="5bcb-6463-b7a1-5108" hidden="false" typeId="points" value="10"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Power Maul" id="6530-15a9-4c25-6d61" collective="false" hidden="false" import="true" targetId="f721-a663-b7be-011f" type="selectionEntry">
+                  <displayCosts>
+                    <displayCost name="pts" id="0578-9c3a-5f66-bfed" hidden="false" typeId="points" value="6"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Power Sword" id="2b98-89b6-6d94-9e34" collective="false" hidden="false" import="true" targetId="4e44-58a0-2af5-519c" type="selectionEntry">
+                  <displayCosts>
+                    <displayCost name="pts" id="8702-e1a4-1a1a-fdff" hidden="false" typeId="points" value="6"/>
+                  </displayCosts>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Mounted Heavy Weapon" id="85a2-8fd3-75a9-4a66" collective="false" defaultSelectionEntryId="4f66-eeba-73f7-5559" hidden="false" import="true" sortIndex="4">
+          <constraints>
+            <constraint id="c4ed-de24-57d5-9839" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="fbee-6fb8-6dfa-440a" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+          <entryLinks>
+            <entryLink name="Multi-Melta" id="8a38-2711-f8bc-2da0" collective="false" hidden="false" import="true" targetId="4429-f97a-006f-4632" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <displayCosts>
+                <displayCost name="pts" id="b4c3-f4b4-aaf8-650e" hidden="false" typeId="points" value="65"/>
+              </displayCosts>
+            </entryLink>
+            <entryLink name="Heavy Bolter" id="5601-58c1-3b13-7092" hidden="false" import="true" targetId="4c82-0e56-d20a-6b1c" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <displayCosts>
+                <displayCost name="pts" id="6f4e-30ee-3637-d270" hidden="false" typeId="points" value="15"/>
+              </displayCosts>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Vehicle Wargear Cards" id="31bb-43c6-bc49-3ab2" hidden="false">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Space Marines" id="f5cc-413b-a920-273e" collapsible="true" hidden="false">
+              <entryLinks>
+                <entryLink name="Ammo Feed" id="cf02-c334-2cec-e4dc" hidden="false" import="true" targetId="2181-142d-2b90-b300" type="selectionEntry">
+                  <displayCosts>
+                    <displayCost name="pts" id="84e3-d22b-4ee5-c6fd" hidden="false" typeId="points" value="5"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Command Comm-Link" id="8706-042a-daf3-8090" hidden="false" import="true" targetId="9237-33fb-31e6-e155" type="selectionEntry">
+                  <displayCosts>
+                    <displayCost name="pts" id="4a0f-4f43-58cb-ce07" hidden="false" typeId="points" value="30"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Recon Pack" id="9578-ea64-4742-40bf" hidden="false" import="true" targetId="0d12-5294-4a25-ccd6" type="selectionEntry">
+                  <displayCosts>
+                    <displayCost name="pts" id="cd88-7651-8562-78ac" hidden="false" typeId="points" value="20"/>
+                  </displayCosts>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Imperial" id="1611-de74-7a57-e1d0" collapsible="true" hidden="false">
+              <entryLinks>
+                <entryLink name="Auxiliary Storm Bolters" id="84d6-43ed-f34d-228e" hidden="false" import="true" targetId="3da2-98c9-eec7-dbb9" type="selectionEntry">
+                  <displayCosts>
+                    <displayCost name="pts" id="d588-7766-5232-060e" hidden="false" typeId="points" value="5"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Heavy Flamer Upgrade" id="fe40-0e43-6612-3a3a" hidden="false" import="true" targetId="d422-325f-86db-afd0" type="selectionEntry">
+                  <displayCosts>
+                    <displayCost name="pts" id="fbc6-7f63-051f-a845" hidden="false" typeId="points" value="10"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Hunter-Killer Missile" id="57f9-67a6-5ab5-c3b1" hidden="false" import="true" targetId="77a1-6f05-d955-1b39" type="selectionEntry">
+                  <constraints>
+                    <constraint id="1e11-c1cc-630f-dadd" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="4608-4256-bd37-9e7a" hidden="false" typeId="points" value="30"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Bulldozer Blade" id="de27-ea98-aca3-e365" hidden="false" import="true" targetId="f713-cde8-c737-30b5" type="selectionEntry">
+                  <displayCosts>
+                    <displayCost name="pts" id="0616-aa02-de93-5728" hidden="false" typeId="points" value="15"/>
+                  </displayCosts>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Generic" id="3215-d0b8-74ed-e6b8" collapsible="true" hidden="false">
+              <entryLinks>
+                <entryLink name="Ablative Armour" id="0d0d-4bc5-baa2-e60a" hidden="false" import="true" targetId="26e2-4a44-2602-a3fd" type="selectionEntry">
+                  <constraints>
+                    <constraint id="1020-0f54-cdfc-caa0" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="b634-923e-cfe0-8981" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="5a1a-cabd-9889-688b" hidden="false" typeId="points" value="15"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Auto-Launcher" id="16e1-2d1c-9a1b-da42" hidden="false" import="true" targetId="222b-075f-d34c-7093" type="selectionEntry">
+                  <constraints>
+                    <constraint id="9f9a-9806-295f-dfb4" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="ec9a-f7d4-94f9-7c28" hidden="false" typeId="points" value="5"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Ceramite Armour" id="a9cc-0425-efe0-ac13" hidden="false" import="true" targetId="f74f-9e64-38c1-9503" type="selectionEntry">
+                  <constraints>
+                    <constraint id="427f-e41f-944c-9f96" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="ef02-11da-c2e0-9e27" hidden="false" typeId="points" value="50"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Null-Shield" id="304d-2bac-7a0c-9122" hidden="false" import="true" targetId="47cb-e484-5d6a-3911" type="selectionEntry">
+                  <constraints>
+                    <constraint id="bf0f-e652-a3fb-598a" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="0dd8-63da-f965-785a" hidden="false" typeId="points" value="35"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Electro-Hull" id="02ec-609f-c2c7-4ff4" hidden="false" import="true" targetId="f927-24ed-15ca-0c96" type="selectionEntry">
+                  <constraints>
+                    <constraint id="c8bd-aceb-c958-c07b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="492e-3ea7-d680-3588" hidden="false" typeId="points" value="10"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Reinforced Armour" id="2d7a-e719-6df6-327c" hidden="false" import="true" targetId="fa44-ccaf-6c06-bed4" type="selectionEntry">
+                  <constraints>
+                    <constraint id="10d0-f23f-f642-0984" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="83a5-2e52-1150-df79" hidden="false" typeId="points" value="10"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Searchlight" id="f8cf-b5fb-e5ba-96e8" hidden="false" import="true" targetId="64e7-1568-72da-bd59" type="selectionEntry">
+                  <constraints>
+                    <constraint id="6725-9c10-6cce-a0a0" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="aa9d-9287-f0e0-5d60" hidden="false" typeId="points" value="5"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Supercharged Engine" id="d27e-4303-ae44-927c" hidden="false" import="true" targetId="4635-9876-cb56-4aab" type="selectionEntry">
+                  <constraints>
+                    <constraint id="debf-d384-293f-0edd" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="7e07-6356-0700-d9d1" hidden="false" typeId="points" value="5"/>
+                  </displayCosts>
+                </entryLink>
+                <entryLink name="Vortex Detonator" id="9169-be05-1c85-a557" hidden="false" import="true" targetId="2976-4443-5709-a1a6" type="selectionEntry">
+                  <constraints>
+                    <constraint id="0be5-79f8-39b5-51e6" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <displayCosts>
+                    <displayCost name="pts" id="1572-a0ba-253f-312d" hidden="false" typeId="points" value="50"/>
+                  </displayCosts>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry name="Support Points from Squad Upgrade (Attack Bike)" id="57e4-b5ee-3d27-65ae" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="3Support" id="579f-23e2-48b5-745f" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="4bef-8530-80fa-31df" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="1"/>
+        <constraint id="77f5-1c65-642b-bfac" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="1"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>Attack Bike</comment>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <comment>Spec Weapons for Riders</comment>
+              <modifiers>
+                <modifier field="points" type="increment" value="3">
+                  <comment>Bolter</comment>
+                  <repeats>
+                    <repeat childId="7b0e-fbe5-4f2b-baa6" childName="Boltgun" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="9">
+                  <comment>Flamer</comment>
+                  <repeats>
+                    <repeat childId="fae9-bfa0-c064-7614" childName="Flamer" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="8">
+                  <comment>Meltagun</comment>
+                  <repeats>
+                    <repeat childId="d375-e1ff-7a7f-b125" childName="Meltagun" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="8">
+                  <comment>Plasmagun</comment>
+                  <repeats>
+                    <repeat childId="df20-d3a5-a622-0b38" childName="Plasma Gun" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <comment>Assault WEapons for Riders</comment>
+              <modifiers>
+                <modifier field="points" type="increment" value="2">
+                  <comment>Boltpistol</comment>
+                  <repeats>
+                    <repeat childId="c8cc-1657-fe62-89eb" childName="Bolt Pistol" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="2">
+                  <comment>Chainsword</comment>
+                  <repeats>
+                    <repeat childId="1098-e377-9d26-28da" childName="Chainsword" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="7">
+                  <comment>Handflamer</comment>
+                  <repeats>
+                    <repeat childId="4438-3d5c-754b-8804" childName="Hand Flamer" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="7">
+                  <comment>poweraxe</comment>
+                  <repeats>
+                    <repeat childId="dde2-adb7-2b6f-d976" childName="Power Axe" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="5">
+                  <comment>plaspistol</comment>
+                  <repeats>
+                    <repeat childId="99d6-36f7-1021-4d2a" childName="Plasma Pistol" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="10">
+                  <comment>powerfist</comment>
+                  <repeats>
+                    <repeat childId="1d91-1190-cdcb-e3e9" childName="Power Fist" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="6">
+                  <comment>power maul</comment>
+                  <repeats>
+                    <repeat childId="6530-15a9-4c25-6d61" childName="Power Maul" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="6">
+                  <comment>power sword</comment>
+                  <repeats>
+                    <repeat childId="2b98-89b6-6d94-9e34" childName="Power Sword" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <comment>Wargear Cards</comment>
+              <modifiers>
+                <modifier field="points" type="increment" value="5">
+                  <comment>Ammo Feed</comment>
+                  <repeats>
+                    <repeat childId="cf02-c334-2cec-e4dc" childName="Ammo Feed" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="20">
+                  <comment>REcon pack</comment>
+                  <repeats>
+                    <repeat childId="9578-ea64-4742-40bf" childName="Recon Pack" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="10">
+                  <comment>Heavy Flamer</comment>
+                  <repeats>
+                    <repeat childId="fe40-0e43-6612-3a3a" childName="Heavy Flamer Upgrade" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="5">
+                  <comment>aux stormbolter</comment>
+                  <repeats>
+                    <repeat childId="3da2-98c9-eec7-dbb9" childName="Auxiliary Storm Bolters" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="15">
+                  <comment>abalative armour</comment>
+                  <repeats>
+                    <repeat childId="0d0d-4bc5-baa2-e60a" childName="Ablative Armour" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="5">
+                  <comment>auto launcher</comment>
+                  <repeats>
+                    <repeat childId="16e1-2d1c-9a1b-da42" childName="Auto-Launcher" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="50">
+                  <comment>ceramite armour</comment>
+                  <repeats>
+                    <repeat childId="a9cc-0425-efe0-ac13" childName="Ceramite Armour" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="10">
+                  <comment>electro hull</comment>
+                  <repeats>
+                    <repeat childId="02ec-609f-c2c7-4ff4" childName="Electro-Hull" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="35">
+                  <comment>null shield</comment>
+                  <repeats>
+                    <repeat childId="304d-2bac-7a0c-9122" childName="Null-Shield" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="10">
+                  <comment>reinforced armour</comment>
+                  <repeats>
+                    <repeat childId="2d7a-e719-6df6-327c" childName="Reinforced Armour" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="5">
+                  <comment>searchlight</comment>
+                  <repeats>
+                    <repeat childId="f8cf-b5fb-e5ba-96e8" childName="Searchlight" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="5">
+                  <comment>supercharge engine</comment>
+                  <repeats>
+                    <repeat childId="d27e-4303-ae44-927c" childName="Supercharged Engine" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="50">
+                  <comment>vortex det</comment>
+                  <repeats>
+                    <repeat childId="2976-4443-5709-a1a6" childName="Vortex Detonator" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <modifiers>
+            <modifier field="points" type="increment" value="15">
+              <comment>HB</comment>
+              <repeats>
+                <repeat childId="5601-58c1-3b13-7092" childName="Heavy Bolter" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+            <modifier field="points" type="increment" value="5">
+              <comment>Autolauncher</comment>
+              <repeats>
+                <repeat childId="4673-1b28-4182-6920" childName="Auto-Launcher" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+            <modifier field="points" type="increment" value="45">
+              <comment>Bike itself</comment>
+              <repeats>
+                <repeat childId="5191-dde9-7525-27b8" childName="Space Marine Attack Bike" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+            <modifier field="points" type="increment" value="65">
+              <comment>multimelta</comment>
+              <repeats>
+                <repeat childId="8a38-2711-f8bc-2da0" childName="Multi-Melta" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <modifiers>
+        <modifier field="77f5-1c65-642b-bfac" type="set" value="0">
+          <conditions>
+            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile name="Support Upgrade Points Counter" id="9d53-ba07-328d-eb46" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+          <characteristics>
+            <characteristic name="Special" typeId="f917-8cd8-7592-47dd">This adds the points from any Support upgrades in a unit from Squads (IE Attack Bikes) </characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>

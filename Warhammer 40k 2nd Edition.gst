@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="45" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="46" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <comment>Warhammer 2nd Edition 40k</comment>
   <readme>Added more wargear cards</readme>
   <categoryEntries>
@@ -3459,7 +3459,7 @@ destroyed. The grenade cannot affect other models.</description>
       <rules>
         <rule name="Auto-Launcher" id="9323-6f94-080d-1fed" hidden="false" page="20" publicationId="06e5-8e36-e8c8-aec3">
           <description>The auto-launcher carries six grenade all of the same type, which are fired off in two salvoes of three. Once the auto­ launcher is out of ammunition it may not fire again for the remainder of the battle. This means you can fire a total of 2 times per game.
-The auto-launcher can be triggered in the shooting phase of the vehicle&apos;s turn in addition to normal firing. The first grenade in the spread automatically hits a point exactly 6&quot; away in the auto-launcher&apos;s forward 90° fire arc. The other two grenades deviate D3&quot; away from the target point of the first grenade. An auto-launcher may be pre-loaded with a single type of grenade, the choice being either frag, krak or blind.</description>
+The auto-launcher can be triggered in the shooting phase of the vehicle&apos;s turn in addition to normal firing. The first grenade in the spread automatically hits a point exactly 6&quot; away in the auto-launcher&apos;s forward 90° fire arc. The other two grenades deviate D3&quot; away from the target point of the first grenade. An auto-launcher may be pre-loaded with a single type of grenade, the choice being either frag or blind.</description>
         </rule>
       </rules>
       <selectionEntryGroups>

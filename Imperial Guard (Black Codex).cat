@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Imperial Guard (Black Codex)" id="852c-a02d-2907-ce3f" authorContact="Boff89" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="46" library="false" revision="1" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Imperial Guard (Black Codex)" id="852c-a02d-2907-ce3f" authorContact="Boff89" authorName="Boff89" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="46" library="false" publicationId="053a-a071-db83-283c" revision="1" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedProfiles>
     <profile name="Bale Eye" id="3e0e-c990-fa10-ef3d" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
       <characteristics>
@@ -1331,31 +1331,31 @@ See datafax for damage table</description>
             <infoLink name="Lieutenant" id="76b8-4576-28c2-1ae2" hidden="false" targetId="14c3-f0ff-e68b-fe9b" type="profile"/>
           </infoLinks>
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="d780-bf36-e313-c6af" collective="false" defaultSelectionEntryId="957f-7fb6-e1f9-121d" hidden="false" import="true">
+            <selectionEntryGroup name="Additional Weapons" id="f7fd-c731-08d7-a4a4" collective="false" hidden="false" import="true">
               <entryLinks>
-                <entryLink name="Carapace Armour" id="8d4f-4c0f-c864-976a" collective="false" hidden="false" import="true" targetId="38a3-999a-3611-033a" type="selectionEntry">
-                  <constraints>
-                    <constraint id="6617-1bcb-5154-b316" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                    <constraint id="2d1f-1444-8b00-bd55" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                  </constraints>
-                </entryLink>
+                <entryLink name="Assault Weapons" id="3bd0-40d4-7518-ca4e" collective="false" hidden="false" import="true" targetId="58b5-f8c2-1f0e-113c" type="selectionEntryGroup"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Weapons" id="f7fd-c731-08d7-a4a4" collective="false" hidden="false" import="true">
+            <selectionEntryGroup name="Wargear" id="bd9c-611a-ece1-8ba8" hidden="false" sortIndex="1">
               <entryLinks>
-                <entryLink name="Laspistol" id="e0bb-8b5f-eb3d-7dc4" collective="false" hidden="false" import="true" page="las" targetId="6e11-978c-f2f0-8477" type="selectionEntry">
+                <entryLink name="Carapace Armour" id="9a07-b786-141b-12fb" collective="false" hidden="false" import="true" targetId="38a3-999a-3611-033a" type="selectionEntry">
                   <constraints>
-                    <constraint id="dcf0-5dd8-45cf-d06b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                    <constraint id="2123-ea5c-5499-084f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                    <constraint id="a507-fa64-bd49-6ac9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="a113-b40f-4a96-f8e9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
                   </constraints>
                 </entryLink>
-                <entryLink name="Frag Grenade" id="235a-7b9c-dd61-7946" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+                <entryLink name="Frag Grenade" id="6698-d030-ee6c-e8f1" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
                   <constraints>
-                    <constraint id="4a89-9463-2700-f438" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                    <constraint id="7221-b3c7-94db-98f9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="7fe0-b78b-b0f8-5618" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                    <constraint id="5e25-1e6f-2b18-c5e4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
                   </constraints>
                 </entryLink>
-                <entryLink name="Assault Weapons" id="3bd0-40d4-7518-ca4e" collective="false" hidden="false" import="true" targetId="58b5-f8c2-1f0e-113c" type="selectionEntryGroup"/>
+                <entryLink name="Laspistol" id="fd8a-3a92-a945-2845" collective="false" hidden="false" import="true" page="las" targetId="6e11-978c-f2f0-8477" type="selectionEntry">
+                  <constraints>
+                    <constraint id="dd77-0247-ef27-e737" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="14e1-b188-39bc-a252" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -1371,43 +1371,41 @@ See datafax for damage table</description>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
-          <entryLinks>
-            <entryLink name="Medi-pack" id="e16a-254c-b1ec-a2bb" hidden="false" import="true" targetId="a076-1d1f-a718-8cdd" type="selectionEntry">
-              <constraints>
-                <constraint id="c59c-acc0-2aa7-19a6" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
-                <constraint id="185a-03f3-658e-c751" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
           <infoLinks>
             <infoLink name="Guardsman" id="e322-7cd7-6b2d-2133" hidden="false" targetId="f2c5-6b37-aac8-cece" type="profile"/>
           </infoLinks>
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="b181-a5df-3e9c-79c4" collective="false" defaultSelectionEntryId="957f-7fb6-e1f9-121d" hidden="false" import="true">
+            <selectionEntryGroup name="Additional Weapons" id="c8b0-382c-fa33-846b" collective="false" hidden="false" import="true">
               <entryLinks>
-                <entryLink name="Carapace Armour" id="d8e3-ee4d-a5a3-49dd" collective="false" hidden="false" import="true" targetId="38a3-999a-3611-033a" type="selectionEntry">
-                  <constraints>
-                    <constraint id="7bf5-b461-354b-5b60" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                    <constraint id="1979-c25d-5cb8-5dc9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                  </constraints>
-                </entryLink>
+                <entryLink name="Assault Weapons" id="6b37-1a88-d073-626e" collective="false" hidden="false" import="true" targetId="58b5-f8c2-1f0e-113c" type="selectionEntryGroup"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Weapons" id="c8b0-382c-fa33-846b" collective="false" hidden="false" import="true">
+            <selectionEntryGroup name="Wargear" id="1094-9d79-7ea0-c662" hidden="false" sortIndex="1">
               <entryLinks>
-                <entryLink name="Laspistol" id="ac8f-d53d-1902-36da" collective="false" hidden="false" import="true" page="las" targetId="6e11-978c-f2f0-8477" type="selectionEntry">
+                <entryLink name="Carapace Armour" id="d9e6-45c8-d0a8-ff18" collective="false" hidden="false" import="true" targetId="38a3-999a-3611-033a" type="selectionEntry">
                   <constraints>
-                    <constraint id="eaf1-f0ef-8cec-8041" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                    <constraint id="3712-6dfd-38ce-16bd" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                    <constraint id="20d7-8c11-45ca-c177" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="d46a-b3b8-1cc3-9a34" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
                   </constraints>
                 </entryLink>
-                <entryLink name="Frag Grenade" id="509c-d0b9-d731-cebd" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+                <entryLink name="Frag Grenade" id="6643-b73c-6813-c64f" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
                   <constraints>
-                    <constraint id="13bf-05c1-fd7d-270f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                    <constraint id="fd25-bcfa-60b4-7153" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="64ce-6754-ca10-d23e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                    <constraint id="d460-e0ee-a16a-c454" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
                   </constraints>
                 </entryLink>
-                <entryLink name="Assault Weapons" id="6b37-1a88-d073-626e" collective="false" hidden="false" import="true" targetId="58b5-f8c2-1f0e-113c" type="selectionEntryGroup"/>
+                <entryLink name="Laspistol" id="f52b-b381-db67-05ce" collective="false" hidden="false" import="true" page="las" targetId="6e11-978c-f2f0-8477" type="selectionEntry">
+                  <constraints>
+                    <constraint id="2b56-f6d2-67bf-58be" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="9caf-2f2b-df44-5c52" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                </entryLink>
+                <entryLink name="Medi-pack" id="59c7-10c9-5b58-760b" hidden="false" import="true" targetId="a076-1d1f-a718-8cdd" type="selectionEntry">
+                  <constraints>
+                    <constraint id="82a3-5e21-97ba-19bc" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                    <constraint id="da89-2e2e-9dbb-b0b7" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -1427,30 +1425,8 @@ See datafax for damage table</description>
             <infoLink name="Guardsman" id="afa3-4d47-5f6d-16ed" hidden="false" targetId="f2c5-6b37-aac8-cece" type="profile"/>
           </infoLinks>
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="c36b-5f3f-9b25-399f" collective="false" hidden="false" import="true">
+            <selectionEntryGroup name="Additional Weapons" id="79ac-7b0d-c74b-86bb" collective="false" hidden="false" import="true">
               <entryLinks>
-                <entryLink name="Carapace Armour" id="cb71-2f6d-c5de-e51f" collective="false" hidden="false" import="true" targetId="38a3-999a-3611-033a" type="selectionEntry">
-                  <constraints>
-                    <constraint id="ff63-6fc2-d3d9-95aa" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                    <constraint id="f3f0-9e94-cc29-9f46" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntryGroup>
-            <selectionEntryGroup name="Weapons" id="79ac-7b0d-c74b-86bb" collective="false" hidden="false" import="true">
-              <entryLinks>
-                <entryLink name="Laspistol" id="d239-8b19-3156-644b" collective="false" hidden="false" import="true" page="las" targetId="6e11-978c-f2f0-8477" type="selectionEntry">
-                  <constraints>
-                    <constraint id="83db-6684-b2f7-e9db" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                    <constraint id="f3f8-b573-c26c-8d51" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                  </constraints>
-                </entryLink>
-                <entryLink name="Frag Grenade" id="8d20-0a78-3dce-d854" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-                  <constraints>
-                    <constraint id="1249-d8f6-9ee0-b851" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                    <constraint id="dd76-3b52-7c3d-d963" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                  </constraints>
-                </entryLink>
                 <entryLink name="Assault Weapons" id="da52-a238-ee2c-dfd8" hidden="false" import="true" targetId="58b5-f8c2-1f0e-113c" type="selectionEntryGroup"/>
               </entryLinks>
               <selectionEntryGroups>
@@ -1474,6 +1450,28 @@ See datafax for damage table</description>
                 </selectionEntryGroup>
               </selectionEntryGroups>
             </selectionEntryGroup>
+            <selectionEntryGroup name="Wargear" id="0653-de30-af8a-fe97" hidden="false" sortIndex="1">
+              <entryLinks>
+                <entryLink name="Carapace Armour" id="e17d-f881-c311-578e" collective="false" hidden="false" import="true" targetId="38a3-999a-3611-033a" type="selectionEntry">
+                  <constraints>
+                    <constraint id="e895-0c18-edb6-7af5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="535e-dd21-2152-7ec8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                </entryLink>
+                <entryLink name="Frag Grenade" id="7c68-24d3-6ae0-5457" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+                  <constraints>
+                    <constraint id="1a72-9520-1b43-570e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                    <constraint id="7b38-8a9b-64a5-e34e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                </entryLink>
+                <entryLink name="Laspistol" id="c428-e42d-e848-0841" collective="false" hidden="false" import="true" page="las" targetId="6e11-978c-f2f0-8477" type="selectionEntry">
+                  <constraints>
+                    <constraint id="83d9-af5d-03bc-066e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="78f4-9f4e-931e-a912" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
           </selectionEntryGroups>
         </selectionEntry>
         <selectionEntry name="Colour-Sergeant" id="ef7f-0cda-7cde-eb20" collective="false" hidden="false" import="true" type="model">
@@ -1488,40 +1486,18 @@ See datafax for damage table</description>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="21bb-e5c4-e95b-cb86" collective="false" defaultSelectionEntryId="957f-7fb6-e1f9-121d" hidden="false" import="true">
+            <selectionEntryGroup name="Additional Weapons" id="62e5-b447-d0f6-11fe" collective="false" hidden="false" import="true">
               <entryLinks>
-                <entryLink name="Carapace Armour" id="bec5-7d63-6804-4473" collective="false" hidden="false" import="true" targetId="38a3-999a-3611-033a" type="selectionEntry">
-                  <constraints>
-                    <constraint id="d7e5-0bfe-5733-f75e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                    <constraint id="9c2d-af17-13ac-1318" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntryGroup>
-            <selectionEntryGroup name="Weapons" id="62e5-b447-d0f6-11fe" collective="false" hidden="false" import="true">
-              <entryLinks>
-                <entryLink name="Laspistol" id="1c20-444f-2e76-9841" collective="false" hidden="false" import="true" page="las" targetId="6e11-978c-f2f0-8477" type="selectionEntry">
-                  <constraints>
-                    <constraint id="0517-5de3-bbe4-622a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                    <constraint id="4a5d-e45d-3840-300c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                  </constraints>
-                </entryLink>
-                <entryLink name="Frag Grenade" id="f56c-78b8-e6f9-6e29" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
-                  <constraints>
-                    <constraint id="2354-2d6c-445d-6729" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                    <constraint id="7431-faa5-7fd3-6e4f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                  </constraints>
-                </entryLink>
                 <entryLink name="Assault Weapons" id="60bb-94f0-2282-28f7" collective="false" hidden="false" import="true" targetId="58b5-f8c2-1f0e-113c" type="selectionEntryGroup"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Sergeant Type" id="0783-1b10-6708-e10c" defaultSelectionEntryId="8981-5203-60a9-de9f" hidden="false">
+            <selectionEntryGroup name="Sergeant Type" id="0783-1b10-6708-e10c" defaultSelectionEntryId="fa0a-2be7-420b-5ba8" hidden="false" sortIndex="2">
               <constraints>
                 <constraint id="0774-4875-5a15-a93e" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
                 <constraint id="29d2-6e56-e259-4324" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry name="Colour-Sergeant" id="fa0a-2be7-420b-5ba8" hidden="false" import="true" type="upgrade">
+                <selectionEntry name="Colour-Sergeant" id="fa0a-2be7-420b-5ba8" hidden="false" import="true" sortIndex="1" type="upgrade">
                   <infoLinks>
                     <infoLink name="Guardsman" id="4f7f-4b5f-3848-a815" hidden="false" targetId="f2c5-6b37-aac8-cece" type="profile"/>
                   </infoLinks>
@@ -1548,6 +1524,28 @@ See datafax for damage table</description>
                   </profiles>
                 </selectionEntry>
               </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Wargear" id="6fa5-cfa1-4fbc-43b6" hidden="false" sortIndex="1">
+              <entryLinks>
+                <entryLink name="Carapace Armour" id="95a5-e81b-95a5-e577" collective="false" hidden="false" import="true" targetId="38a3-999a-3611-033a" type="selectionEntry">
+                  <constraints>
+                    <constraint id="61be-bc58-c9c9-af9d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="43ae-b8d8-7c78-b386" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                </entryLink>
+                <entryLink name="Frag Grenade" id="46c7-166c-d6b2-59e4" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+                  <constraints>
+                    <constraint id="e0cc-2df3-1c17-03a3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                    <constraint id="4ea8-280e-11c5-f6a1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                </entryLink>
+                <entryLink name="Laspistol" id="7686-e5f6-a67b-55dc" collective="false" hidden="false" import="true" page="las" targetId="6e11-978c-f2f0-8477" type="selectionEntry">
+                  <constraints>
+                    <constraint id="b9d4-d67d-a26d-b990" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="f966-c33b-a150-9254" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
         </selectionEntry>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="46" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="47" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <comment>Warhammer 2nd Edition 40k</comment>
   <readme>Added more wargear cards</readme>
   <categoryEntries>
@@ -32,6 +32,7 @@
     <categoryEntry name="Harlequin-PrimaryList" id="6dc4-8bb9-688d-1e49" hidden="false"/>
     <categoryEntry name="1Command" id="a38d-36bf-d4fc-bea5" hidden="false"/>
     <categoryEntry name="2Battle Line" id="bd53-987e-fa4e-a2c8" hidden="false"/>
+    <categoryEntry name="Auxilia" id="7846-6429-29a8-f3db" hidden="false"/>
   </categoryEntries>
   <costTypes>
     <costType name="pts" id="points" defaultCostLimit="-1" hidden="false"/>
@@ -496,6 +497,73 @@
             </modifier>
           </modifiers>
         </categoryLink>
+        <categoryLink name="Auxilia" id="ad12-9670-ccfd-eadf" hidden="false" targetId="7846-6429-29a8-f3db">
+          <constraints>
+            <constraint id="8a43-bc2d-a287-596a" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="max" value="0"/>
+            <constraint id="695a-7661-12c4-d413" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="0"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <comment>50%</comment>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="852c-a02d-2907-ce3f" childName="Codex - Imperial Guard (Black Codex)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <comment>When you have no points limit</comment>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier field="695a-7661-12c4-d413" type="set" value="-1"/>
+                    <modifier field="8a43-bc2d-a287-596a" type="set" value="50"/>
+                  </modifiers>
+                </modifierGroup>
+                <modifierGroup type="and">
+                  <comment>When having a points limit</comment>
+                  <modifiers>
+                    <modifier field="8a43-bc2d-a287-596a" type="set" value="-1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier field="695a-7661-12c4-d413" type="increment" value="1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                      <repeats>
+                        <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="0.5" roundUp="false" scope="roster" shared="true" value="1"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+            </modifierGroup>
+          </modifierGroups>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="852c-a02d-2907-ce3f" childName="Codex - Imperial Guard (Black Codex)" field="selections" includeChildSelections="true" scope="primary-catalogue" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
       </categoryLinks>
       <constraints>
         <constraint id="522c-c513-203d-f358" field="forces" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
@@ -564,6 +632,7 @@
                             <condition childId="82c6-3e15-54c5-a35f" childName="Codex - Orks" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                             <condition childId="8d30-f85a-223d-697c" childName="Codex - Legion of the Damned" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                             <condition childId="7bb5-646e-ec66-1cdd" childName="Codex - Assassins" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="852c-a02d-2907-ce3f" childName="Codex - Imperial Guard (Black Codex)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -614,6 +683,7 @@
                             <condition childId="82c6-3e15-54c5-a35f" childName="Codex - Orks" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                             <condition childId="8d30-f85a-223d-697c" childName="Codex - Legion of the Damned" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                             <condition childId="7bb5-646e-ec66-1cdd" childName="Codex - Assassins" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                            <condition childId="852c-a02d-2907-ce3f" childName="Codex - Imperial Guard (Black Codex)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>

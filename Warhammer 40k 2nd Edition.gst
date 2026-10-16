@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="47" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="48" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <comment>Warhammer 2nd Edition 40k</comment>
   <readme>Added more wargear cards</readme>
   <categoryEntries>
@@ -178,6 +178,7 @@
                     <condition childId="6583-5ff7-59cc-1fc9" childName="Codex - Squats" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                     <condition childId="8d30-f85a-223d-697c" childName="Codex - Legion of the Damned" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                     <condition childId="f649-eb44-08cb-0ba3" childName="Codex - Necrons" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="852c-a02d-2907-ce3f" childName="Codex - Imperial Guard (Black Codex)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>

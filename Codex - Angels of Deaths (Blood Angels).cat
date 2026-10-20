@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Angels of Death (Blood Angels)" id="12fb-bbf1-3d12-aef9" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="29" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Angels of Death (Blood Angels)" id="12fb-bbf1-3d12-aef9" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="31" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="attackBikeUpgrade" id="67c7-5c42-3021-441f" hidden="false"/>
   </categoryEntries>
@@ -42,7 +42,7 @@
     <entryLink name="Combat Squad - Devastator" id="89ac-da22-5354-b8a7" hidden="false" import="true" targetId="6b44-9391-ce2f-4454" type="selectionEntry"/>
     <entryLink name="Combat Squad - Veteran Assault Squad" id="e9ef-cfd9-2550-611a" hidden="false" import="true" targetId="0edf-3c27-d2fa-4261" type="selectionEntry"/>
     <entryLink name="Space Marine Vindicator" id="0acf-4521-d1d4-98a4" hidden="false" import="true" targetId="aa9c-56b2-9661-3b66" type="selectionEntry"/>
-    <entryLink name="Support Upgrade Points Counter" id="5853-47a3-7348-fa29" hidden="false" import="true" targetId="57e4-b5ee-3d27-65ae" type="selectionEntry"/>
+    <entryLink name="Support Points from Squad Upgrade (Attack Bike)" id="5853-47a3-7348-fa29" hidden="false" import="true" targetId="57e4-b5ee-3d27-65ae" type="selectionEntry"/>
   </entryLinks>
   <rules>
     <rule name="Break Tests" id="957a-483e-3a28-6e67" hidden="false" page="49" publicationId="4590-6ba9-5482-a1fa">
@@ -875,6 +875,9 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
     </rule>
     <rule name="Limited Ammo" id="dae6-9d60-a02d-57a5" hidden="false">
       <description>The Vindicator has limited storage, and may only fire 6 shots during the game</description>
+    </rule>
+    <rule name="Chapter Master" id="b1d1-c953-e0aa-6e63" hidden="false" page="63" publicationId="4590-6ba9-5482-a1fa">
+      <description>If the Chapter Master is taken as the army commander then any Space Marine units within 12&quot; of him may use his Leadership when they take a Leadership test.</description>
     </rule>
   </sharedRules>
   <sharedSelectionEntries>
@@ -2256,6 +2259,14 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
               </modifiers>
             </infoLink>
           </infoLinks>
+          <modifiers>
+            <modifier affects="self.entries" field="points" type="multiply" value="1.5">
+              <comment>Teleport cost increase</comment>
+              <conditions>
+                <condition childId="3e69-0b6d-fe07-999d" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <selectionEntryGroups>
             <selectionEntryGroup name="Melee Weapon" id="981c-6ce3-574d-79fb" collective="false" hidden="false" import="true">
               <constraints>
@@ -2301,6 +2312,14 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
           <infoLinks>
             <infoLink name="Terminator" id="ca1f-3949-fb68-d0b8" hidden="false" targetId="d6e3-d2b8-75de-2f88" type="profile"/>
           </infoLinks>
+          <modifiers>
+            <modifier affects="self.entries" field="points" type="multiply" value="1.5">
+              <comment>Teleport cost increase</comment>
+              <conditions>
+                <condition childId="3e69-0b6d-fe07-999d" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <selectionEntryGroups>
             <selectionEntryGroup name="Ranged Weapon" id="918a-3a24-91c3-6a07" collective="false" defaultSelectionEntryId="5c2c-fde3-7304-8e49" hidden="false" import="true">
               <entryLinks>
@@ -2351,6 +2370,12 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
               </repeats>
             </modifier>
             <modifier field="info" type="add" value="{this} Each terminator will have the same weapon unless you hit the + sign and add a separate terminator for a mix of melee choices"/>
+            <modifier affects="self.entries" field="points" type="multiply" value="1.5">
+              <comment>Teleport cost increase</comment>
+              <conditions>
+                <condition childId="3e69-0b6d-fe07-999d" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
       </selectionEntries>
@@ -3163,6 +3188,11 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="e6eb-0a01-8cae-206b" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -3200,6 +3230,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4758,7 +4789,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         </entryLink>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Space Marine Captain" id="b566-e6cb-3cdd-2e29" hidden="false" targetId="a062-3411-7dbb-6498" type="rule"/>
+        <infoLink name="Chapter Master" id="b566-e6cb-3cdd-2e29" hidden="false" targetId="b1d1-c953-e0aa-6e63" type="rule"/>
       </infoLinks>
       <modifierGroups>
         <modifierGroup type="and">
@@ -6849,7 +6880,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
       <profiles>
         <profile name="Support Upgrade Points Counter" id="9d53-ba07-328d-eb46" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
           <characteristics>
-            <characteristic name="Special" typeId="f917-8cd8-7592-47dd">This adds the points from any Support upgrades in a unit from Squads (IE Attack Bikes) </characteristic>
+            <characteristic name="Special" typeId="f917-8cd8-7592-47dd">This adds the points from any Support upgrades in a unit from Squads (IE Attack Bikes)</characteristic>
           </characteristics>
         </profile>
       </profiles>

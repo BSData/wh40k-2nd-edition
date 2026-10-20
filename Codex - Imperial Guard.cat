@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Imperial Guard" id="82fc-8ad4-7b4b-dd4a" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="18" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Imperial Guard" id="82fc-8ad4-7b4b-dd4a" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="19" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>I haven&apos;t put restrictions for the Regimental style to build a list, such as 1 Command HQ, 3 Guard/Heavy Weapons teams, 3 additional unit. Doing so would be rather messy and complicated with all the possible choices, and frankly isn&apos;t really a huge deal.
 
 Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct units.</readme>
@@ -76,7 +76,6 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
     <entryLink name="Ratling Snipers" id="58d2-4943-9dd2-1bd5" collective="false" hidden="false" import="true" targetId="9e10-1a9e-ad76-95d6" type="selectionEntry"/>
     <entryLink name="Imperial Chimera" id="2b55-61e4-f0f1-ae24" collective="false" hidden="false" import="true" targetId="ec47-0a44-3b8e-df3b" type="selectionEntry"/>
     <entryLink name="Imperial Guard Shadowsword " id="f2bd-6dfb-672f-a071" hidden="false" import="true" targetId="3c26-6d97-a3a0-d677" type="selectionEntry"/>
-    <entryLink name="Tactical Squad" id="a4f4-9c8a-0bc6-c66e" hidden="false" import="true" targetId="57ab-0762-d52f-4446" type="selectionEntry"/>
     <entryLink name="Aspiring Champion" id="4f01-1508-ea15-d142" hidden="false" import="true" targetId="ff6e-9cf7-f75c-4a75" type="selectionEntry"/>
   </entryLinks>
   <sharedProfiles>
@@ -1172,6 +1171,11 @@ See datafax for damage table results</description>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="2656-cf14-5ae6-6c00" type="set" value="0">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -2201,7 +2205,7 @@ See datafax for damage table results</description>
         <categoryLink name="1Command" id="1acb-42a1-1c27-bfa8" hidden="false" primary="true" targetId="a38d-36bf-d4fc-bea5"/>
       </categoryLinks>
       <constraints>
-        <constraint id="d4b0-df6c-032f-0392" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0"/>
+        <constraint id="d4b0-df6c-032f-0392" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="max" value="0"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="points" value="40"/>
@@ -2227,14 +2231,19 @@ See datafax for damage table results</description>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="d4b0-df6c-032f-0392" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
       <modifiers>
         <modifier field="d4b0-df6c-032f-0392" type="increment" value="1">
           <repeats>
-            <repeat childId="f191-7fe1-43a5-f633" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="roster" shared="true" value="1"/>
-            <repeat childId="b98e-cfb8-cd7f-d988" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="roster" shared="true" value="1"/>
+            <repeat childId="b98e-cfb8-cd7f-d988" childName="Command HQ" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+            <repeat childId="f191-7fe1-43a5-f633" childName="Command Squad" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
           </repeats>
         </modifier>
       </modifiers>
@@ -2379,6 +2388,11 @@ See datafax for damage table results</description>
           <comment>For Ally lists</comment>
           <modifiers>
             <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="remove" value="41ed-6110-b458-67f9">
               <conditions>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
@@ -2564,6 +2578,11 @@ See datafax for damage table results</description>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="category" type="remove" value="41ed-6110-b458-67f9">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -2687,6 +2706,16 @@ See datafax for damage table results</description>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="category" type="remove" value="070f-0182-955b-1543">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="remove" value="2c51-43b2-2f6a-f890">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -2748,6 +2777,16 @@ See datafax for damage table results</description>
           <comment>For Ally lists</comment>
           <modifiers>
             <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="remove" value="070f-0182-955b-1543">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="remove" value="2c51-43b2-2f6a-f890">
               <conditions>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
@@ -2831,6 +2870,16 @@ See datafax for damage table results</description>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="category" type="remove" value="070f-0182-955b-1543">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="remove" value="2c51-43b2-2f6a-f890">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -2886,6 +2935,16 @@ See datafax for damage table results</description>
           <comment>For Ally lists</comment>
           <modifiers>
             <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="remove" value="2c51-43b2-2f6a-f890">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="remove" value="070f-0182-955b-1543">
               <conditions>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
@@ -3201,6 +3260,16 @@ See datafax for damage table results</description>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="category" type="remove" value="070f-0182-955b-1543">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="remove" value="2c51-43b2-2f6a-f890">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -3281,6 +3350,16 @@ See datafax for damage table results</description>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="category" type="remove" value="070f-0182-955b-1543">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="remove" value="2c51-43b2-2f6a-f890">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -3347,6 +3426,16 @@ See datafax for damage table results</description>
           <comment>For Ally lists</comment>
           <modifiers>
             <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="remove" value="070f-0182-955b-1543">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="remove" value="2c51-43b2-2f6a-f890">
               <conditions>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
@@ -3479,6 +3568,16 @@ See datafax for damage table results</description>
           <comment>For Ally lists</comment>
           <modifiers>
             <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="remove" value="070f-0182-955b-1543">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="remove" value="2c51-43b2-2f6a-f890">
               <conditions>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
@@ -3704,6 +3803,16 @@ See datafax for damage table results</description>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="category" type="remove" value="070f-0182-955b-1543">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="remove" value="2c51-43b2-2f6a-f890">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -3780,6 +3889,16 @@ See datafax for damage table results</description>
           <comment>For Ally lists</comment>
           <modifiers>
             <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="remove" value="070f-0182-955b-1543">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="remove" value="2c51-43b2-2f6a-f890">
               <conditions>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
@@ -4168,6 +4287,11 @@ See datafax for damage table results</description>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="category" type="remove" value="41ed-6110-b458-67f9">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -4548,7 +4672,7 @@ See datafax for damage table results</description>
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="b98e-cfb8-cd7f-d988" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="equalTo" value="1"/>
+                <condition childId="b98e-cfb8-cd7f-d988" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="equalTo" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4655,6 +4779,16 @@ See datafax for damage table results</description>
           <comment>For Ally lists</comment>
           <modifiers>
             <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="remove" value="070f-0182-955b-1543">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="remove" value="2c51-43b2-2f6a-f890">
               <conditions>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
@@ -5321,6 +5455,16 @@ Members of the Deathwing must charge him if he is within charge range, or move s
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="category" type="remove" value="070f-0182-955b-1543">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="remove" value="2c51-43b2-2f6a-f890">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -5760,6 +5904,16 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="category" type="remove" value="070f-0182-955b-1543">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="remove" value="2c51-43b2-2f6a-f890">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -5820,6 +5974,16 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
           <comment>For Ally lists</comment>
           <modifiers>
             <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="remove" value="070f-0182-955b-1543">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="category" type="remove" value="2c51-43b2-2f6a-f890">
               <conditions>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
@@ -6057,159 +6221,10 @@ If the gunner is killed, the tank commander takes over the main weapon using his
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Veteran Sergeant" id="4bb2-cb36-c51a-ccb1" hidden="false" import="true" type="upgrade">
-      <costs>
-        <cost name="pts" typeId="points" value="10"/>
-      </costs>
-      <entryLinks>
-        <entryLink name="Wargear Cards" id="90b4-8c87-301e-7ba4" collective="false" hidden="false" import="true" targetId="416d-dab7-d000-4c46" type="selectionEntryGroup">
-          <constraints>
-            <constraint id="77ae-fcae-0433-a7ae" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
-      <profiles>
-        <profile name="Veteran Sergeant" id="86c3-1fc1-8d04-ddc8" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
-          <characteristics>
-            <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Veteran Sergeant</characteristic>
-            <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
-            <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">4</characteristic>
-            <characteristic name="BS" typeId="f859-88a3-fdd3-b298">4</characteristic>
-            <characteristic name="S" typeId="5916-04ef-0fd1-6557">3</characteristic>
-            <characteristic name="T" typeId="2e7d-2383-f92f-16f9">3</characteristic>
-            <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
-            <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">4</characteristic>
-            <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
-            <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">8</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Armour" id="cb3f-0610-3f26-c00b" collective="false" defaultSelectionEntryId="3911-494d-913c-456d" hidden="false" import="true">
-          <constraints>
-            <constraint id="f9fb-10e7-8b7c-5156" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-            <constraint id="b810-5a78-43c2-be16" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
-          </constraints>
-          <entryLinks>
-            <entryLink name="Flak Armour" id="3911-494d-913c-456d" hidden="false" import="true" targetId="73c7-e55f-280c-5a3d" type="selectionEntry"/>
-            <entryLink name="Displacer Field" id="cad3-5633-ccde-70ea" hidden="false" import="true" targetId="9051-aabb-b632-2aa7" type="selectionEntry">
-              <costs>
-                <cost name="pts" typeId="points" value="24"/>
-              </costs>
-            </entryLink>
-            <entryLink name="Refractor Field" id="43f2-95fd-4831-4afb" hidden="false" import="true" targetId="48c5-f522-8ba5-94e6" type="selectionEntry">
-              <costs>
-                <cost name="pts" typeId="points" value="6"/>
-              </costs>
-            </entryLink>
-            <entryLink name="Conversion Field" id="f19b-d2b7-c1e8-e800" hidden="false" import="true" targetId="bb5e-09f7-72d9-a377" type="selectionEntry">
-              <costs>
-                <cost name="pts" typeId="points" value="14"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Weapons" id="1928-429a-7afd-f058" collective="false" hidden="false" import="true">
-          <entryLinks>
-            <entryLink name="Assault Weapons" id="75d6-5e7e-a1f1-9726" collective="false" hidden="false" import="true" targetId="09eb-7fa1-b3e9-4c02" type="selectionEntryGroup"/>
-            <entryLink name="Special Weapons" id="cfa4-3e37-3c36-46c4" hidden="false" import="true" targetId="e23a-3808-6313-dec2" type="selectionEntryGroup">
-              <constraints>
-                <constraint id="9d7b-e376-bdde-ce78" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-            </entryLink>
-            <entryLink name="Grenades" id="a26e-3b23-aeb1-90b2" hidden="false" import="true" targetId="f8e4-0952-1ace-d05e" type="selectionEntryGroup"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-    </selectionEntry>
-    <selectionEntry name="Tactical Squad" id="57ab-0762-d52f-4446" collective="false" hidden="false" import="true" type="upgrade">
-      <categoryLinks>
-        <categoryLink name="Imperial Guard" id="7691-0ccf-4dbe-52b1" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
-        <categoryLink name="2Squads" id="061b-43f1-da49-0b73" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
-      </categoryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="100"/>
-      </costs>
-      <selectionEntries>
-        <selectionEntry name="Guardsman" id="23fd-9b2d-2b4f-437e" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="35d9-b2f8-60d3-fb72" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="9"/>
-            <constraint id="7e53-cdcb-9e41-1a68" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="9"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Guardsman" id="5730-c940-8f5f-67f7" hidden="false" targetId="aa43-3a23-092a-cf2a" type="profile"/>
-          </infoLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="b53d-230a-cb4d-2a14" collective="false" hidden="false" import="true">
-              <entryLinks>
-                <entryLink name="Flak Armour" id="2279-f99e-148a-c59d" collective="false" hidden="false" import="true" targetId="4bdc-4529-5bda-a508" type="selectionEntry">
-                  <constraints>
-                    <constraint id="bf63-cd7b-3926-e925" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                    <constraint id="fc4b-f11a-392d-a9aa" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntryGroup>
-            <selectionEntryGroup name="Weapons" id="958f-43c8-2877-c22e" collective="false" hidden="false" import="true">
-              <entryLinks>
-                <entryLink name="Lasgun" id="7f22-97ef-efe9-aa8a" collective="false" hidden="false" import="true" page="las" targetId="6d94-aacf-91cb-a8a2" type="selectionEntry">
-                  <constraints>
-                    <constraint id="53e6-a3ca-9db5-29f4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                    <constraint id="e397-b543-fc04-541b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                  </constraints>
-                </entryLink>
-                <entryLink name="Frag Grenade" id="400c-620b-5fb9-83c3" collective="false" hidden="false" import="true" targetId="c0ea-1829-edfe-c42c" type="selectionEntry">
-                  <constraints>
-                    <constraint id="9e04-a485-4564-3e30" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                    <constraint id="9622-38cf-98aa-b45b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Armour" id="32bd-62dd-5018-6896" collective="false" hidden="false" import="true">
-          <entryLinks>
-            <entryLink name="Flak Armour" id="ab05-2606-ba6b-5346" collective="false" hidden="false" import="true" targetId="73c7-e55f-280c-5a3d" type="selectionEntry">
-              <constraints>
-                <constraint id="1d11-a18f-a403-e50a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                <constraint id="b392-2747-cdf6-a267" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Sergeant" id="7495-563f-c640-04f5" defaultSelectionEntryId="4b6d-e056-71f5-238c" hidden="false" sortIndex="1">
-          <constraints>
-            <constraint id="b2f1-1b87-7380-1546" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-            <constraint id="a26a-6411-56a8-aa1d" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
-          </constraints>
-          <entryLinks>
-            <entryLink name="Sergeant" id="4b6d-e056-71f5-238c" collective="false" hidden="false" import="true" targetId="0d17-26a3-904f-7418" type="selectionEntry"/>
-            <entryLink name="Veteran Sergeant" id="89f8-83b4-5464-b303" hidden="false" import="true" targetId="4bb2-cb36-c51a-ccb1" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Weapon Options" id="09c9-a594-1302-b3b7" hidden="false">
-          <entryLinks>
-            <entryLink name="Heavy Weapons" id="bfd2-24b8-e758-b7f4" hidden="false" import="true" targetId="525b-f97a-8413-ff92" type="selectionEntryGroup">
-              <constraints>
-                <constraint id="4115-f669-b621-d843" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-            </entryLink>
-            <entryLink name="Special Weapons" id="7bf8-c7ee-d08e-c952" hidden="false" import="true" targetId="e23a-3808-6313-dec2" type="selectionEntryGroup">
-              <constraints>
-                <constraint id="5d67-69fe-df96-afcc" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-    </selectionEntry>
     <selectionEntry name="Primaris Psyker" id="58ab-1fc9-3fdc-a009" hidden="false" import="true" type="model">
+      <categoryLinks>
+        <categoryLink name="1Command" id="ad6d-290b-fe4b-5863" hidden="false" primary="false" targetId="a38d-36bf-d4fc-bea5"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink name="Wargear Cards" id="4c9d-a391-eb1f-e895" collective="false" hidden="false" import="true" targetId="416d-dab7-d000-4c46" type="selectionEntryGroup">
           <constraints>

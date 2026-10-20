@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Angels of Death (Dark Angels)" id="7c0f-1fc4-d5a5-dc73" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="24" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Angels of Death (Dark Angels)" id="7c0f-1fc4-d5a5-dc73" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="25" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink name="Dark Angels Master" id="e1eb-4981-2689-1fc2" collective="false" hidden="false" import="true" targetId="e664-c21f-4492-a7dc" type="selectionEntry"/>
     <entryLink name="Master of the Deathwing" id="cc3a-a216-fc10-2c17" collective="false" hidden="false" import="true" targetId="381f-f866-3d8a-4e03" type="selectionEntry"/>
@@ -920,6 +920,12 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     </rule>
     <rule name="Limited Ammo" id="33ab-099e-e4e5-b82b" hidden="false">
       <description>The Vindicator has limited storage, and may only fire 6 shots during the game</description>
+    </rule>
+    <rule name="Chapter Master" id="0012-9866-444b-bc8b" hidden="false" page="63" publicationId="4590-6ba9-5482-a1fa">
+      <description>If the Chapter Master is taken as the army commander then any Space Marine units within 12&quot; of him may use his Leadership when they take a Leadership test.
+
+
+He has the Deathwing Special Rules</description>
     </rule>
   </sharedRules>
   <sharedSelectionEntries>
@@ -4452,7 +4458,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
         </entryLink>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Dark Angel Master" id="d770-ea54-14fd-1daa" hidden="false" targetId="a062-3411-7dbb-6498" type="rule"/>
+        <infoLink name="Chapter Master" id="d770-ea54-14fd-1daa" hidden="false" targetId="0012-9866-444b-bc8b" type="rule"/>
       </infoLinks>
       <modifierGroups>
         <modifierGroup type="and">
@@ -5121,6 +5127,14 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
               </modifiers>
             </infoLink>
           </infoLinks>
+          <modifiers>
+            <modifier affects="self.entries" field="points" type="multiply" value="1.5">
+              <comment>Teleport cost increase</comment>
+              <conditions>
+                <condition childId="c45d-a350-b360-5779" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <selectionEntryGroups>
             <selectionEntryGroup name="Melee Weapon" id="20f4-d278-38f2-e372" collective="false" hidden="false" import="true">
               <constraints>
@@ -5166,6 +5180,14 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
           <infoLinks>
             <infoLink name="Terminator" id="6e6d-bb7b-6b06-7998" hidden="false" targetId="d6e3-d2b8-75de-2f88" type="profile"/>
           </infoLinks>
+          <modifiers>
+            <modifier affects="self.entries" field="points" type="multiply" value="1.5">
+              <comment>Teleport cost increase</comment>
+              <conditions>
+                <condition childId="c45d-a350-b360-5779" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <selectionEntryGroups>
             <selectionEntryGroup name="Ranged Weapon" id="cbde-8c8c-eb45-f832" collective="false" defaultSelectionEntryId="5c2c-fde3-7304-8e49" hidden="false" import="true">
               <entryLinks>
@@ -5216,6 +5238,12 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
               </repeats>
             </modifier>
             <modifier field="info" type="add" value="{this} Each terminator will have the same weapon unless you hit the + sign and add a separate terminator for a mix of melee choices"/>
+            <modifier affects="self.entries" field="points" type="multiply" value="1.5">
+              <comment>Teleport cost increase</comment>
+              <conditions>
+                <condition childId="c45d-a350-b360-5779" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
       </selectionEntries>

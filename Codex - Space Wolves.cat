@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Space Wolves" id="8d0e-9c4e-17af-ed93" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="22" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Space Wolves" id="8d0e-9c4e-17af-ed93" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="23" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>Terminators cannot add the teleport ability (which you need to increase their points by 50%) due to a limitation in Battlescribe. No way to modify the points in that way. 
 
 If they ever change that I will update. Until then, ye olde calcuator will do!</readme>
@@ -999,9 +999,6 @@ If the Terminator Captain is the army commander then any Space Marine units with
 3-6: Bike is hit
 See datafax for damage table</description>
     </rule>
-    <rule name="Company Standard" id="326a-48ad-fa0e-3bf5" hidden="false" page="64" publicationId="4590-6ba9-5482-a1fa">
-      <description>Any Space Marine units belonging to the same Chapter as the Standard Bearer who are within 12&quot; of him may re-roll the dice if they fail a Break test.</description>
-    </rule>
     <rule name="Wolf Priest" id="7301-bdcb-4049-1f7f" hidden="false" page="48" publicationId="0f8d-af97-3972-324c">
       <description>If any Space Wolves unit  within  8&quot; of  a Wolf Priest fails any Leadership-based test (such as a psychology test or a Break test) then it may retake the  test immediately.</description>
     </rule>
@@ -1025,11 +1022,6 @@ See datafax for damage table</description>
 3: Right Arm					
 4-6: Body
 See Datafax for damage results and armour values</description>
-    </rule>
-    <rule name="Space Marine Dreadnought" id="5b0a-0601-a0c4-e28b" hidden="false" page="54" publicationId="4590-6ba9-5482-a1fa">
-      <description>Sustained Fire - For assault cannon or storm bolter, Ignore first jam result rolled each turn. An assault cannon will only jam if you roll 2 or more jams. Rolling 3 jams still causes the weapon to explode, destroying the arm.
-Plasma - If the dread stands still, may fire on maxium without usual penalities (skipping a turn).
-Multi Melta - Can fire using a flamer template or as normal</description>
     </rule>
     <rule name="Dreadnought MultiMelta" id="f918-536b-268f-659a" hidden="false" page="55" publicationId="4590-6ba9-5482-a1fa">
       <description>Can be fired as noraml or using a flame template with the same stats otherwise</description>
@@ -1057,9 +1049,6 @@ The Tear attack nominates a single location on the target. Roll penetration as n
 2-4: Hull
 5-6: Turret
 See datafax for damage table</description>
-    </rule>
-    <rule name="Space Marine Land Raider" id="e91a-5c53-2c2e-e986" hidden="false" page="69" publicationId="4590-6ba9-5482-a1fa">
-      <description>Transport: 10 Space Marines in Power Armour, or 5 Space Marine in Terminator Armour</description>
     </rule>
     <rule name="Space Marine Predator Damage Table" id="14c9-f832-57bb-543f" hidden="false">
       <description>1: Track - Closest track to shooter
@@ -1092,18 +1081,6 @@ See datafax for damage table</description>
 3-6: Land Speeder
 See datafax for damage table</description>
     </rule>
-    <rule name="Gauntlets of Ultramar" id="b2a9-da2a-4134-880c" hidden="false" page="72" publicationId="4590-6ba9-5482-a1fa">
-      <description>+1 attack in CC (Pair of Power Gloves)
-Opponents do not recieve any bonus for multiple combats</description>
-    </rule>
-    <rule name="Chaplain Cassius" id="d9be-27ca-f9dd-e855" hidden="false" page="72" publicationId="4590-6ba9-5482-a1fa">
-      <description>If any Ultramarines within 8&quot; of  a Chaplain fails any Leadership-based test (such as a psychology test or a Break test) then it may retake the  test immediately.
-
-Any squad led by Cassius are immune to fear from Tyranids and their weapons</description>
-    </rule>
-    <rule name="Captain Invictus Bodyguard" id="28c6-c5f1-6a79-90c6" hidden="false" page="74" publicationId="4590-6ba9-5482-a1fa">
-      <description>1 Terminator or Veteran squad may be upgraded to his bodyguard. He must join that squad. Each member of the squad may have up to 1 Wargear card, chosen in the normal way</description>
-    </rule>
     <rule name="Legion of the Damned" id="49eb-985e-678f-f554" hidden="false" page="74/75" publicationId="4590-6ba9-5482-a1fa">
       <description>May not be joined by any other characters. May not benefit from any re-rolls or special bonus due to army comander, standards, etc. 
 
@@ -1135,8 +1112,8 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
     <rule name="Wolf Guard Leader" id="3846-bc68-9c5a-1679" hidden="false" page="67" publicationId="0f8d-af97-3972-324c">
       <description>Ranulf only fights as the leader of the Wolf Guard. If his unit is teleported into battle the usual points bonus must be paid (50% rounding up)</description>
     </rule>
-    <rule name="Bjorn" id="6957-5f42-322b-59bc" hidden="false" page="70" publicationId="0f8d-af97-3972-324c">
-      <description>Roll a D6 at the start of the game to establish Bjorn&apos;s dice pool of modifiers. If Bjorn is hit and suffers damage you may modify any result on the damage table by expending points from the dice pool. You cannot use points to reduce the damage result to below 1. When the pool of points is exhausted you may no longer modify Bjorn&apos;s results.</description>
+    <rule name="Chapter Master" id="0bad-334a-a5a8-ee5c" hidden="false" page="63" publicationId="4590-6ba9-5482-a1fa">
+      <description>If the Chapter Master is taken as the army commander then any Space Marine units within 12&quot; of him may use his Leadership when they take a Leadership test.</description>
     </rule>
   </sharedRules>
   <sharedSelectionEntries>
@@ -2241,13 +2218,6 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
           </constraints>
           <selectionEntries>
             <selectionEntry name="Terminator Wolf Guard" id="fddf-69cf-c2ff-f6cb" hidden="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier affects="self.entries.forces" field="points" type="multiply" value="1.5">
-                  <conditions>
-                    <condition childId="bf5e-bb68-9979-bbc5" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <selectionEntries>
                 <selectionEntry name="Terminator w/ 2 Handed Weapons" id="8c02-6519-d878-7cf7" collective="false" hidden="false" import="true" type="model">
                   <constraints>
@@ -2282,6 +2252,11 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                       </repeats>
                     </modifier>
                     <modifier field="info" type="add" value="Each Terminator will have the same loadout unless you click the + sign to add a single terminator to equip with their own loadout."/>
+                    <modifier affects="self.entries.forces" field="points" type="multiply" value="1.5">
+                      <conditions>
+                        <condition childId="bf5e-bb68-9979-bbc5" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </modifier>
                   </modifiers>
                   <selectionEntryGroups>
                     <selectionEntryGroup name="Weapons" id="dd72-56a1-55af-a866" hidden="false">
@@ -2340,6 +2315,11 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                   </modifierGroups>
                   <modifiers>
                     <modifier field="info" type="add" value="Each Terminator will have the same loadout unless you click the + sign to add a single terminator to equip with their own loadout."/>
+                    <modifier affects="self.entries.forces" field="points" type="multiply" value="1.5">
+                      <conditions>
+                        <condition childId="bf5e-bb68-9979-bbc5" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </modifier>
                   </modifiers>
                   <selectionEntryGroups>
                     <selectionEntryGroup name="Weapons" id="613b-6652-77ab-a588" hidden="false">
@@ -5536,6 +5516,9 @@ You cannot reduce the damage result below 1 and cannot modify any further once y
           </constraints>
         </entryLink>
       </entryLinks>
+      <infoLinks>
+        <infoLink name="Chapter Master" id="308e-3ad3-dd8c-d6b7" hidden="false" targetId="0bad-334a-a5a8-ee5c" type="rule"/>
+      </infoLinks>
       <modifierGroups>
         <modifierGroup type="and">
           <comment>For Ally lists</comment>
@@ -6891,6 +6874,9 @@ You cannot reduce the damage result below 1 and cannot modify any further once y
           <costs>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Axe of Morkai" id="f594-941b-571b-3cd4" hidden="false" targetId="c6a6-3cc1-5e67-9421" type="rule"/>
+          </infoLinks>
           <modifiers>
             <modifier field="hidden" type="set" value="true">
               <conditionGroups>

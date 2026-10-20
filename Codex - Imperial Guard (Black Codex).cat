@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Imperial Guard (Black Codex)" id="852c-a02d-2907-ce3f" authorContact="Boff89" authorName="Boff89" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="46" library="false" publicationId="053a-a071-db83-283c" revision="2" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Imperial Guard (Black Codex)" id="852c-a02d-2907-ce3f" authorContact="Boff89" authorName="Boff89" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="46" library="false" publicationId="053a-a071-db83-283c" revision="4" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <comment>FIX Support 3x Tech-priest (needs category), Fix ally system</comment>
   <categoryEntries>
     <categoryEntry name="Additional Unit (May have 1 per each Command Section)" id="fe77-3d1c-8b63-cec9" hidden="false">
@@ -34,6 +34,7 @@
     <entryLink name="Ratling Scout Squad" id="da46-b9b0-1055-4816" hidden="false" import="true" targetId="0cc3-8d43-cc32-2bf4" type="selectionEntry"/>
     <entryLink name="Veteran Squad" id="1921-c644-9375-81b8" hidden="false" import="true" targetId="cc22-4da0-aeab-8500" type="selectionEntry"/>
     <entryLink name="Support Weapon" id="2028-27eb-cb34-7b5e" hidden="false" import="true" targetId="d823-3859-69a7-ad6a" type="selectionEntry"/>
+    <entryLink name="Support Points from Squad Upgrade (Bikes)" id="ab37-6e73-2cf7-d423" hidden="false" import="true" targetId="99e5-5595-8882-c8ef" type="selectionEntry"/>
   </entryLinks>
   <sharedProfiles>
     <profile name="Battlecannon" id="7a33-7612-f6c6-2ecb" hidden="false" page="datafax" publicationId="a1e3-886b-e509-d15a" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
@@ -474,9 +475,26 @@ See datafax for damage table</description>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Mount" id="7506-4ba0-f117-a691" hidden="false">
+        <selectionEntryGroup name="Mount" id="a26e-6b08-1b86-d4df" hidden="false">
           <entryLinks>
-            <entryLink name="Guardsman Bike" id="39e6-5db8-f818-2832" hidden="false" import="true" targetId="8cce-a27e-8273-e4b7" type="selectionEntry"/>
+            <entryLink name="Guardsman Bike" id="1191-1da1-9663-0e4c" hidden="false" import="true" targetId="8cce-a27e-8273-e4b7" type="selectionEntry">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink name="Guardsman Bike" id="4183-6a09-dd19-df5b" hidden="false" import="true" targetId="7e67-76ae-1bf8-7ec0" type="selectionEntry">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -550,7 +568,24 @@ See datafax for damage table</description>
         </selectionEntryGroup>
         <selectionEntryGroup name="Mount" id="1c30-c926-0704-7c63" hidden="false">
           <entryLinks>
-            <entryLink name="Guardsman Bike" id="02a6-a103-ea1d-518c" hidden="false" import="true" targetId="8cce-a27e-8273-e4b7" type="selectionEntry"/>
+            <entryLink name="Guardsman Bike" id="02a6-a103-ea1d-518c" hidden="false" import="true" targetId="8cce-a27e-8273-e4b7" type="selectionEntry">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink name="Guardsman Bike" id="cfea-e215-5ea6-acc8" hidden="false" import="true" targetId="7e67-76ae-1bf8-7ec0" type="selectionEntry">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -641,9 +676,26 @@ See datafax for damage table</description>
             <entryLink name="Grenades" id="86d2-45bc-c8e3-ae72" hidden="false" import="true" targetId="a92d-3091-7faa-a250" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Mount" id="3a40-53b8-bad2-07d9" hidden="false">
+        <selectionEntryGroup name="Mount" id="581b-3e5d-1eec-663d" hidden="false">
           <entryLinks>
-            <entryLink name="Guardsman Bike" id="8a0f-09fa-a49c-7aa0" hidden="false" import="true" targetId="8cce-a27e-8273-e4b7" type="selectionEntry"/>
+            <entryLink name="Guardsman Bike" id="b365-6c0b-a98d-f654" hidden="false" import="true" targetId="8cce-a27e-8273-e4b7" type="selectionEntry">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink name="Guardsman Bike" id="b661-f5d5-e29b-2a8e" hidden="false" import="true" targetId="7e67-76ae-1bf8-7ec0" type="selectionEntry">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -934,6 +986,23 @@ See datafax for damage table</description>
         <infoLink name="Leman Russ Battle Tank" id="c783-d576-ca16-b551" hidden="false" targetId="0728-8936-ee8a-b36b" type="profile"/>
         <infoLink name="Leman Russ Battle Tank Damage Table" id="fc48-2d97-35cc-3500" hidden="false" targetId="8016-e9b0-00af-6a52" type="rule"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="ba40-beed-e4b5-1d01" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <modifiers>
         <modifier field="error" type="add" value="{this} must have at least 1 Tech-Priest the list">
           <conditionGroups>
@@ -953,15 +1022,9 @@ See datafax for damage table</description>
         </modifier>
         <modifier field="ba40-beed-e4b5-1d01" type="increment" value="3">
           <comment>Need at least 1 Tech-priest</comment>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition childId="2b87-3654-70db-fd42" childName="Tech-Priest Engineer" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
-                  <comment>Need at least 1 Techmarine</comment>
-                </condition>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <repeats>
+            <repeat childId="2b87-3654-70db-fd42" childName="Tech-Priest Engineer" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+          </repeats>
         </modifier>
       </modifiers>
       <selectionEntries>
@@ -1101,15 +1164,9 @@ See datafax for damage table</description>
         </modifier>
         <modifier field="8053-eeca-1f2a-5bbb" type="increment" value="3">
           <comment>Need at least 1 Tech-priest</comment>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition childId="2b87-3654-70db-fd42" childName="Tech-Priest Engineer" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
-                  <comment>Need at least 1 Techmarine</comment>
-                </condition>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <repeats>
+            <repeat childId="2b87-3654-70db-fd42" childName="Tech-Priest Engineer" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+          </repeats>
         </modifier>
       </modifiers>
       <selectionEntries>
@@ -1176,6 +1233,7 @@ See datafax for damage table</description>
       </infoLinks>
     </selectionEntry>
     <selectionEntry name="Guardsman Bike" id="8cce-a27e-8273-e4b7" collective="false" hidden="false" import="true" page="63" publicationId="4590-6ba9-5482-a1fa" subType="mount" type="model">
+      <comment>for characters</comment>
       <categoryLinks>
         <categoryLink name="Ultramarines" id="6c89-c0d8-1534-530e" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
         <categoryLink name="Skimmer/Bike" id="cfe7-6202-b18a-fa57" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
@@ -1183,17 +1241,17 @@ See datafax for damage table</description>
       <constraints>
         <constraint id="02af-b6b4-6765-9de4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
-      <costs>
-        <cost name="pts" typeId="points" value="20"/>
-      </costs>
+      <displayCosts>
+        <displayCost name="pts" typeId="points" value="20"/>
+      </displayCosts>
       <entryLinks>
         <entryLink name="Auto-Launcher" id="95a1-90b2-4fba-41c5" collective="false" hidden="false" import="true" targetId="222b-075f-d34c-7093" type="selectionEntry">
           <constraints>
             <constraint id="7d0d-7852-40fe-c974" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
+          <displayCosts>
+            <displayCost name="pts" typeId="points" value="5"/>
+          </displayCosts>
         </entryLink>
         <entryLink name="Targeter" id="2109-e4c2-c5f9-c879" collective="false" hidden="false" import="true" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
           <constraints>
@@ -1207,7 +1265,7 @@ See datafax for damage table</description>
             <constraint id="1d5b-c005-cdf3-1d47" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
           </constraints>
         </entryLink>
-        <entryLink name="Vehicle Wargear Cards" id="004f-77be-3280-fad4" collective="false" hidden="false" import="true" targetId="adfa-fa13-50be-ca4d" type="selectionEntryGroup"/>
+        <entryLink name="Vehicle Wargear Cards" id="004f-77be-3280-fad4" collective="false" hidden="false" import="true" targetId="ff2a-f619-938b-cd34" type="selectionEntryGroup"/>
       </entryLinks>
       <infoLinks>
         <infoLink name="Guardsman Bike Damage Table" id="8693-e31b-0c4f-4cf2" hidden="false" targetId="b685-99e5-2e09-4baf" type="rule"/>
@@ -1321,15 +1379,9 @@ See datafax for damage table</description>
         </modifier>
         <modifier field="8bb1-3a9a-15a4-de11" type="increment" value="3">
           <comment>Need at least 1 Tech-priest</comment>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition childId="2b87-3654-70db-fd42" childName="Tech-Priest Engineer" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
-                  <comment>Need at least 1 Techmarine</comment>
-                </condition>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <repeats>
+            <repeat childId="2b87-3654-70db-fd42" childName="Tech-Priest Engineer" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+          </repeats>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -1389,6 +1441,11 @@ See datafax for damage table</description>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="9dc5-bd12-e01c-4735" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -1411,15 +1468,9 @@ See datafax for damage table</description>
         </modifier>
         <modifier field="9dc5-bd12-e01c-4735" type="increment" value="3">
           <comment>Need at least 1 Tech-priest</comment>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition childId="2b87-3654-70db-fd42" childName="Tech-Priest Engineer" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
-                  <comment>Need at least 1 Techmarine</comment>
-                </condition>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <repeats>
+            <repeat childId="2b87-3654-70db-fd42" childName="Tech-Priest Engineer" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+          </repeats>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -1485,21 +1536,20 @@ See datafax for damage table</description>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="5fa7-3563-1061-35bb" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
       <modifiers>
         <modifier field="5fa7-3563-1061-35bb" type="increment" value="3">
           <comment>Need at least 1 Tech-priest</comment>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition childId="2b87-3654-70db-fd42" childName="Tech-Priest Engineer" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
-                  <comment>Need at least 1 Techmarine</comment>
-                </condition>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <repeats>
+            <repeat childId="2b87-3654-70db-fd42" childName="Tech-Priest Engineer" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+          </repeats>
         </modifier>
         <modifier field="error" type="add" value="{this} must have at least 1 Tech-Priest the list">
           <conditionGroups>
@@ -1654,6 +1704,75 @@ See datafax for damage table</description>
                 <constraint id="3308-ccf1-6fa2-c6c8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
               </constraints>
             </entryLink>
+            <entryLink name="Guardsman Bike" id="6e18-bdb3-53e2-fc2c" hidden="false" import="true" targetId="91fb-015a-8009-c327" type="selectionEntry">
+              <constraints>
+                <constraint id="c210-03ad-2655-03be" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="a655-199c-744a-1af4" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cb5b-abd3-a7b8-789d" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <modifiers>
+                <modifier field="c210-03ad-2655-03be" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="a655-199c-744a-1af4" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cb5b-abd3-a7b8-789d" shared="true" type="atLeast" value="1"/>
+                        <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink name="Guardsman Bike" id="be28-f5e4-c3d2-3616" hidden="false" import="true" targetId="7e67-76ae-1bf8-7ec0" type="selectionEntry">
+              <constraints>
+                <constraint id="1a0d-4d72-4626-3248" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="a655-199c-744a-1af4" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cb5b-abd3-a7b8-789d" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <modifiers>
+                <modifier field="1a0d-4d72-4626-3248" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="a655-199c-744a-1af4" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cb5b-abd3-a7b8-789d" shared="true" type="atLeast" value="1"/>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
           <infoLinks>
             <infoLink name="Guardsman" id="1e4d-0d14-c9e1-dfbd" hidden="false" targetId="f2c5-6b37-aac8-cece" type="profile"/>
@@ -1691,6 +1810,75 @@ See datafax for damage table</description>
               </constraints>
             </entryLink>
             <entryLink name="Special Weapons" id="db2e-1efd-25f6-b9ff" hidden="false" import="true" targetId="572b-4ebe-caa0-b312" type="selectionEntryGroup"/>
+            <entryLink name="Guardsman Bike" id="c477-84f4-20b0-fbd2" hidden="false" import="true" targetId="91fb-015a-8009-c327" type="selectionEntry">
+              <constraints>
+                <constraint id="3417-8de8-a804-0312" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="a655-199c-744a-1af4" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cb5b-abd3-a7b8-789d" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <modifiers>
+                <modifier field="3417-8de8-a804-0312" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="a655-199c-744a-1af4" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cb5b-abd3-a7b8-789d" shared="true" type="atLeast" value="1"/>
+                        <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink name="Guardsman Bike" id="098f-ecd3-654d-b0fd" hidden="false" import="true" targetId="7e67-76ae-1bf8-7ec0" type="selectionEntry">
+              <constraints>
+                <constraint id="7176-803a-3897-ffdd" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="a655-199c-744a-1af4" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cb5b-abd3-a7b8-789d" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <modifiers>
+                <modifier field="7176-803a-3897-ffdd" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="a655-199c-744a-1af4" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cb5b-abd3-a7b8-789d" shared="true" type="atLeast" value="1"/>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
           <infoLinks>
             <infoLink name="Guardsman" id="ea46-9aee-9810-ef0b" hidden="false" targetId="f2c5-6b37-aac8-cece" type="profile"/>
@@ -1718,6 +1906,75 @@ See datafax for damage table</description>
                 <entryLink name="Heavy Weapons" id="dd2e-c24d-0258-d936" hidden="false" import="true" targetId="d508-e72c-9d64-3cfb" type="selectionEntryGroup"/>
               </entryLinks>
             </entryLink>
+            <entryLink name="Guardsman Bike" id="f007-2e5f-a54e-3b3e" hidden="false" import="true" targetId="91fb-015a-8009-c327" type="selectionEntry">
+              <constraints>
+                <constraint id="c6b9-1a8e-88bf-e2bf" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="a655-199c-744a-1af4" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cb5b-abd3-a7b8-789d" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <modifiers>
+                <modifier field="c6b9-1a8e-88bf-e2bf" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="a655-199c-744a-1af4" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cb5b-abd3-a7b8-789d" shared="true" type="atLeast" value="1"/>
+                        <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink name="Guardsman Bike" id="9497-88a5-df67-eb68" hidden="false" import="true" targetId="7e67-76ae-1bf8-7ec0" type="selectionEntry">
+              <constraints>
+                <constraint id="b626-16f4-38bb-3011" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="a655-199c-744a-1af4" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cb5b-abd3-a7b8-789d" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <modifiers>
+                <modifier field="b626-16f4-38bb-3011" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="a655-199c-744a-1af4" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cb5b-abd3-a7b8-789d" shared="true" type="atLeast" value="1"/>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
           <infoLinks>
             <infoLink name="Guardsman" id="9e3e-14cb-6415-79b3" hidden="false" targetId="f2c5-6b37-aac8-cece" type="profile"/>
@@ -1731,10 +1988,82 @@ See datafax for damage table</description>
             <constraint id="273e-7e31-10b4-57a6" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
           </constraints>
           <entryLinks>
-            <entryLink name="Veteran Sergeant" id="92ea-d216-f10d-e25c" hidden="false" import="true" targetId="49b5-1983-4f00-2b89" type="selectionEntry"/>
+            <entryLink name="Veteran Sergeant" id="92ea-d216-f10d-e25c" hidden="false" import="true" sortIndex="2" targetId="49b5-1983-4f00-2b89" type="selectionEntry">
+              <entryLinks>
+                <entryLink name="Guardsman Bike" id="44d6-370b-9d88-72c6" hidden="false" import="true" targetId="91fb-015a-8009-c327" type="selectionEntry">
+                  <constraints>
+                    <constraint id="3688-ec96-03f2-5be4" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                  </constraints>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="a655-199c-744a-1af4" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cb5b-abd3-a7b8-789d" shared="true" type="lessThan" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                  <modifiers>
+                    <modifier field="3688-ec96-03f2-5be4" type="set" value="1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="a655-199c-744a-1af4" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cb5b-abd3-a7b8-789d" shared="true" type="atLeast" value="1"/>
+                            <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+                <entryLink name="Guardsman Bike" id="6e32-4a15-0c76-c14d" hidden="false" import="true" targetId="7e67-76ae-1bf8-7ec0" type="selectionEntry">
+                  <constraints>
+                    <constraint id="291b-9c55-7c91-45ab" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="20"/>
+                  </costs>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="a655-199c-744a-1af4" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cb5b-abd3-a7b8-789d" shared="true" type="lessThan" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                  <modifiers>
+                    <modifier field="291b-9c55-7c91-45ab" type="set" value="1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="a655-199c-744a-1af4" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cb5b-abd3-a7b8-789d" shared="true" type="atLeast" value="1"/>
+                            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
           </entryLinks>
           <selectionEntries>
-            <selectionEntry name="Sergeant" id="ee93-82f5-6e51-5326" hidden="false" import="true" type="upgrade">
+            <selectionEntry name="Sergeant" id="ee93-82f5-6e51-5326" hidden="false" import="true" sortIndex="1" type="upgrade">
               <entryLinks>
                 <entryLink name="Flak Armour" id="e997-46bf-cfaf-17c7" hidden="false" import="true" targetId="73c7-e55f-280c-5a3d" type="selectionEntry">
                   <constraints>
@@ -1754,6 +2083,75 @@ See datafax for damage table</description>
                     <constraint id="a32b-bc86-27d1-1fd4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
                   </constraints>
                 </entryLink>
+                <entryLink name="Guardsman Bike" id="04ea-97b6-3adc-70ec" hidden="false" import="true" targetId="91fb-015a-8009-c327" type="selectionEntry">
+                  <constraints>
+                    <constraint id="8439-421f-d892-4b05" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                  </constraints>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="a655-199c-744a-1af4" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cb5b-abd3-a7b8-789d" shared="true" type="lessThan" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                  <modifiers>
+                    <modifier field="8439-421f-d892-4b05" type="set" value="1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="a655-199c-744a-1af4" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cb5b-abd3-a7b8-789d" shared="true" type="atLeast" value="1"/>
+                            <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+                <entryLink name="Guardsman Bike" id="4b49-2191-335b-7cfa" hidden="false" import="true" targetId="7e67-76ae-1bf8-7ec0" type="selectionEntry">
+                  <constraints>
+                    <constraint id="3be5-d20b-6a12-4dfd" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="20"/>
+                  </costs>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="a655-199c-744a-1af4" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cb5b-abd3-a7b8-789d" shared="true" type="lessThan" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                  <modifiers>
+                    <modifier field="3be5-d20b-6a12-4dfd" type="set" value="1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="a655-199c-744a-1af4" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cb5b-abd3-a7b8-789d" shared="true" type="atLeast" value="1"/>
+                            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
               </entryLinks>
               <infoLinks>
                 <infoLink name="Guardsman" id="0885-a5e9-e45d-3ae0" hidden="false" targetId="f2c5-6b37-aac8-cece" type="profile"/>
@@ -1765,6 +2163,15 @@ See datafax for damage table</description>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Squad Mounts" id="7471-ba98-be52-f7d0" hidden="false">
+          <selectionEntries>
+            <selectionEntry name="Mounted on Bikes" id="a655-199c-744a-1af4" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="a571-2915-3e93-4fe7" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1818,6 +2225,75 @@ See datafax for damage table</description>
                 <constraint id="cde2-fbbb-5519-b53d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
               </constraints>
             </entryLink>
+            <entryLink name="Guardsman Bike" id="cd39-6092-ec09-cb78" hidden="false" import="true" targetId="91fb-015a-8009-c327" type="selectionEntry">
+              <constraints>
+                <constraint id="d1b5-e7ef-504d-74cf" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="b55e-5a1c-7057-8165" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="ade3-2128-37eb-5602" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <modifiers>
+                <modifier field="d1b5-e7ef-504d-74cf" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="b55e-5a1c-7057-8165" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="ade3-2128-37eb-5602" shared="true" type="atLeast" value="1"/>
+                        <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink name="Guardsman Bike" id="6af4-642f-a261-4361" hidden="false" import="true" targetId="7e67-76ae-1bf8-7ec0" type="selectionEntry">
+              <constraints>
+                <constraint id="7718-8c85-428d-7559" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="b55e-5a1c-7057-8165" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="ade3-2128-37eb-5602" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <modifiers>
+                <modifier field="7718-8c85-428d-7559" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="b55e-5a1c-7057-8165" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="ade3-2128-37eb-5602" shared="true" type="atLeast" value="1"/>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
           <infoLinks>
             <infoLink name="Guardsman" id="b788-a7a5-0edc-ceb8" hidden="false" targetId="f2c5-6b37-aac8-cece" type="profile"/>
@@ -1863,6 +2339,75 @@ See datafax for damage table</description>
                 <modifier field="info" type="add" value="This will give all guardsman in the group the same weapon - if you want each to have different equipment, hit the + sign and add a separate guardsman"/>
               </modifiers>
             </entryLink>
+            <entryLink name="Guardsman Bike" id="f570-e833-cc6e-50f7" hidden="false" import="true" targetId="91fb-015a-8009-c327" type="selectionEntry">
+              <constraints>
+                <constraint id="af55-1556-a3ad-219a" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="b55e-5a1c-7057-8165" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="ade3-2128-37eb-5602" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <modifiers>
+                <modifier field="af55-1556-a3ad-219a" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="b55e-5a1c-7057-8165" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="ade3-2128-37eb-5602" shared="true" type="atLeast" value="1"/>
+                        <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink name="Guardsman Bike" id="1a8a-b774-056f-89a4" hidden="false" import="true" targetId="7e67-76ae-1bf8-7ec0" type="selectionEntry">
+              <constraints>
+                <constraint id="d001-145c-af2c-9fe3" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="b55e-5a1c-7057-8165" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="ade3-2128-37eb-5602" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <modifiers>
+                <modifier field="d001-145c-af2c-9fe3" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="b55e-5a1c-7057-8165" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="ade3-2128-37eb-5602" shared="true" type="atLeast" value="1"/>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
           <infoLinks>
             <infoLink name="Guardsman" id="c9f7-33f1-a1f2-27e0" hidden="false" targetId="f2c5-6b37-aac8-cece" type="profile"/>
@@ -1876,7 +2421,79 @@ See datafax for damage table</description>
             <constraint id="ce29-3485-214b-ab84" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
           </constraints>
           <entryLinks>
-            <entryLink name="Veteran Sergeant" id="2f9b-bc3f-c4bc-ead6" hidden="false" import="true" targetId="49b5-1983-4f00-2b89" type="selectionEntry"/>
+            <entryLink name="Veteran Sergeant" id="2f9b-bc3f-c4bc-ead6" hidden="false" import="true" targetId="49b5-1983-4f00-2b89" type="selectionEntry">
+              <entryLinks>
+                <entryLink name="Guardsman Bike" id="18de-605d-3831-a0f5" hidden="false" import="true" targetId="91fb-015a-8009-c327" type="selectionEntry">
+                  <constraints>
+                    <constraint id="2e56-49a8-903b-54ad" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                  </constraints>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="b55e-5a1c-7057-8165" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="ade3-2128-37eb-5602" shared="true" type="lessThan" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                  <modifiers>
+                    <modifier field="2e56-49a8-903b-54ad" type="set" value="1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="b55e-5a1c-7057-8165" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="ade3-2128-37eb-5602" shared="true" type="atLeast" value="1"/>
+                            <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+                <entryLink name="Guardsman Bike" id="3339-9815-bd5b-f592" hidden="false" import="true" targetId="7e67-76ae-1bf8-7ec0" type="selectionEntry">
+                  <constraints>
+                    <constraint id="fbdf-5211-49ee-f35c" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="20"/>
+                  </costs>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="b55e-5a1c-7057-8165" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="ade3-2128-37eb-5602" shared="true" type="lessThan" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                  <modifiers>
+                    <modifier field="fbdf-5211-49ee-f35c" type="set" value="1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="b55e-5a1c-7057-8165" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="ade3-2128-37eb-5602" shared="true" type="atLeast" value="1"/>
+                            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
           </entryLinks>
           <selectionEntries>
             <selectionEntry name="Sergeant" id="0f0d-20bb-07c4-2339" hidden="false" import="true" type="upgrade">
@@ -1899,6 +2516,75 @@ See datafax for damage table</description>
                     <constraint id="9cdd-9209-69d0-cf4b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
                   </constraints>
                 </entryLink>
+                <entryLink name="Guardsman Bike" id="38bf-27c0-f2c1-2349" hidden="false" import="true" targetId="91fb-015a-8009-c327" type="selectionEntry">
+                  <constraints>
+                    <constraint id="dfb7-d8fe-45f5-815e" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                  </constraints>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="b55e-5a1c-7057-8165" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="ade3-2128-37eb-5602" shared="true" type="lessThan" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                  <modifiers>
+                    <modifier field="dfb7-d8fe-45f5-815e" type="set" value="1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="b55e-5a1c-7057-8165" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="ade3-2128-37eb-5602" shared="true" type="atLeast" value="1"/>
+                            <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+                <entryLink name="Guardsman Bike" id="50e0-c894-5681-6a72" hidden="false" import="true" targetId="7e67-76ae-1bf8-7ec0" type="selectionEntry">
+                  <constraints>
+                    <constraint id="6918-e5eb-1bf5-f8f5" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="20"/>
+                  </costs>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="b55e-5a1c-7057-8165" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="ade3-2128-37eb-5602" shared="true" type="lessThan" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                  <modifiers>
+                    <modifier field="6918-e5eb-1bf5-f8f5" type="set" value="1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="b55e-5a1c-7057-8165" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="ade3-2128-37eb-5602" shared="true" type="atLeast" value="1"/>
+                            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
               </entryLinks>
               <infoLinks>
                 <infoLink name="Guardsman" id="78d6-b4fb-5972-9f6f" hidden="false" targetId="f2c5-6b37-aac8-cece" type="profile"/>
@@ -1910,6 +2596,15 @@ See datafax for damage table</description>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Squad Mounts" id="e84d-2a59-f4ed-8cb4" hidden="false">
+          <selectionEntries>
+            <selectionEntry name="Mounted on Bikes" id="b55e-5a1c-7057-8165" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="3c2a-b103-b932-1712" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1962,6 +2657,75 @@ See datafax for damage table</description>
                 <constraint id="0f2d-6fae-1874-d04a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
                 <constraint id="e501-ccc0-8de7-32e2" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
+            </entryLink>
+            <entryLink name="Guardsman Bike" id="2602-e419-6374-f8fd" hidden="false" import="true" targetId="7e67-76ae-1bf8-7ec0" type="selectionEntry">
+              <constraints>
+                <constraint id="70cf-8a3c-faaa-467d" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="12c0-957c-478b-3614" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="d61e-4822-0236-7f56" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <modifiers>
+                <modifier field="70cf-8a3c-faaa-467d" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="12c0-957c-478b-3614" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="d61e-4822-0236-7f56" shared="true" type="atLeast" value="1"/>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink name="Guardsman Bike" id="ebf7-dbb8-bc4e-2c9a" hidden="false" import="true" targetId="91fb-015a-8009-c327" type="selectionEntry">
+              <constraints>
+                <constraint id="9735-b320-de53-3a77" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="12c0-957c-478b-3614" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="d61e-4822-0236-7f56" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <modifiers>
+                <modifier field="9735-b320-de53-3a77" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="12c0-957c-478b-3614" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="d61e-4822-0236-7f56" shared="true" type="atLeast" value="1"/>
+                        <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
           <infoLinks>
@@ -2050,6 +2814,75 @@ See datafax for damage table</description>
                 <constraint id="fa0b-fb47-c2a4-d905" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
             </entryLink>
+            <entryLink name="Guardsman Bike" id="3079-6eac-585a-d34a" hidden="false" import="true" targetId="7e67-76ae-1bf8-7ec0" type="selectionEntry">
+              <constraints>
+                <constraint id="0778-e27c-407c-c7c9" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="12c0-957c-478b-3614" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="d61e-4822-0236-7f56" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <modifiers>
+                <modifier field="0778-e27c-407c-c7c9" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="12c0-957c-478b-3614" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="d61e-4822-0236-7f56" shared="true" type="atLeast" value="1"/>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink name="Guardsman Bike" id="d9fa-0ec5-ee8e-7a90" hidden="false" import="true" targetId="91fb-015a-8009-c327" type="selectionEntry">
+              <constraints>
+                <constraint id="f025-79d3-2c99-4b18" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="12c0-957c-478b-3614" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="d61e-4822-0236-7f56" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <modifiers>
+                <modifier field="f025-79d3-2c99-4b18" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="12c0-957c-478b-3614" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="d61e-4822-0236-7f56" shared="true" type="atLeast" value="1"/>
+                        <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
           <infoLinks>
             <infoLink name="Guardsman" id="60c0-da1a-42b7-1aeb" hidden="false" targetId="f2c5-6b37-aac8-cece" type="profile"/>
@@ -2105,7 +2938,79 @@ See datafax for damage table</description>
             <constraint id="d3bb-8b02-fe4e-5e9d" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
           </constraints>
           <entryLinks>
-            <entryLink name="Veteran Sergeant" id="130c-92d7-7693-e271" hidden="false" import="true" targetId="62f3-2343-653a-474e" type="selectionEntry"/>
+            <entryLink name="Veteran Sergeant" id="130c-92d7-7693-e271" hidden="false" import="true" targetId="62f3-2343-653a-474e" type="selectionEntry">
+              <entryLinks>
+                <entryLink name="Guardsman Bike" id="fd1a-d114-916a-8320" hidden="false" import="true" targetId="7e67-76ae-1bf8-7ec0" type="selectionEntry">
+                  <constraints>
+                    <constraint id="4d1a-99af-0cee-88b3" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="20"/>
+                  </costs>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="12c0-957c-478b-3614" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="d61e-4822-0236-7f56" shared="true" type="lessThan" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                  <modifiers>
+                    <modifier field="4d1a-99af-0cee-88b3" type="set" value="1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="12c0-957c-478b-3614" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="d61e-4822-0236-7f56" shared="true" type="atLeast" value="1"/>
+                            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+                <entryLink name="Guardsman Bike" id="11a6-39ac-8fbe-53d6" hidden="false" import="true" targetId="91fb-015a-8009-c327" type="selectionEntry">
+                  <constraints>
+                    <constraint id="24c0-76bf-1b14-4b57" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                  </constraints>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="12c0-957c-478b-3614" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="d61e-4822-0236-7f56" shared="true" type="lessThan" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                  <modifiers>
+                    <modifier field="24c0-76bf-1b14-4b57" type="set" value="1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="12c0-957c-478b-3614" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="d61e-4822-0236-7f56" shared="true" type="atLeast" value="1"/>
+                            <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
           </entryLinks>
           <selectionEntries>
             <selectionEntry name="Sergeant" id="0db6-4803-5630-99bc" hidden="false" import="true" type="upgrade">
@@ -2127,6 +3032,75 @@ See datafax for damage table</description>
                     <constraint id="a66b-7a6c-fd08-5b28" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
                     <constraint id="fc73-abb8-e0c8-9dff" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
                   </constraints>
+                </entryLink>
+                <entryLink name="Guardsman Bike" id="9c63-d82d-17eb-91fa" hidden="false" import="true" targetId="7e67-76ae-1bf8-7ec0" type="selectionEntry">
+                  <constraints>
+                    <constraint id="6f6d-7823-b0f5-3393" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="20"/>
+                  </costs>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="12c0-957c-478b-3614" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="d61e-4822-0236-7f56" shared="true" type="lessThan" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                  <modifiers>
+                    <modifier field="6f6d-7823-b0f5-3393" type="set" value="1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="12c0-957c-478b-3614" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="d61e-4822-0236-7f56" shared="true" type="atLeast" value="1"/>
+                            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+                <entryLink name="Guardsman Bike" id="d35c-7603-8665-5da2" hidden="false" import="true" targetId="91fb-015a-8009-c327" type="selectionEntry">
+                  <constraints>
+                    <constraint id="5aaf-6723-3a60-c330" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+                  </constraints>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="12c0-957c-478b-3614" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="d61e-4822-0236-7f56" shared="true" type="lessThan" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                  <modifiers>
+                    <modifier field="5aaf-6723-3a60-c330" type="set" value="1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="12c0-957c-478b-3614" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="d61e-4822-0236-7f56" shared="true" type="atLeast" value="1"/>
+                            <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </entryLink>
               </entryLinks>
               <infoLinks>
@@ -2176,6 +3150,15 @@ See datafax for damage table</description>
                   </selectionEntries>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Squad Mounts" id="adce-4782-c444-a737" hidden="false">
+          <selectionEntries>
+            <selectionEntry name="Mounted on Bikes" id="12c0-957c-478b-3614" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="314d-1a12-a466-72cd" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -2335,6 +3318,75 @@ See datafax for damage table</description>
                 <constraint id="690d-1a0b-3ca2-a951" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
               </constraints>
             </entryLink>
+            <entryLink name="Guardsman Bike" id="ac14-a0bb-034a-3216" hidden="false" import="true" targetId="7e67-76ae-1bf8-7ec0" type="selectionEntry">
+              <constraints>
+                <constraint id="2a9f-c207-3299-55e0" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="4a02-bb30-ef14-75fd" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="4880-1415-304e-001d" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <modifiers>
+                <modifier field="2a9f-c207-3299-55e0" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="4a02-bb30-ef14-75fd" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="4880-1415-304e-001d" shared="true" type="atLeast" value="1"/>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink name="Guardsman Bike" id="0a93-f433-18ab-bf02" hidden="false" import="true" targetId="91fb-015a-8009-c327" type="selectionEntry">
+              <constraints>
+                <constraint id="8b90-51b9-2a54-b9d9" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="4a02-bb30-ef14-75fd" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="4880-1415-304e-001d" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <modifiers>
+                <modifier field="8b90-51b9-2a54-b9d9" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="4a02-bb30-ef14-75fd" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="4880-1415-304e-001d" shared="true" type="atLeast" value="1"/>
+                        <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
           <infoLinks>
             <infoLink name="Penitent" id="6318-2b8b-8c6e-db19" hidden="false" targetId="1aeb-7ba2-96c0-be5c" type="profile"/>
@@ -2353,6 +3405,15 @@ See datafax for damage table</description>
               </costs>
             </entryLink>
           </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Squad Mounts" id="8b1d-306e-b672-1e99" hidden="false">
+          <selectionEntries>
+            <selectionEntry name="Mounted on Bikes" id="4a02-bb30-ef14-75fd" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="66b3-8c3a-e762-0138" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -2527,6 +3588,11 @@ See datafax for damage table</description>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="category" type="remove" value="fe77-3d1c-8b63-cec9">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -2580,12 +3646,7 @@ See datafax for damage table</description>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
-          </modifiers>
-        </modifierGroup>
-        <modifierGroup type="and">
-          <comment>For Ally lists</comment>
-          <modifiers>
-            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+            <modifier field="category" type="remove" value="fe77-3d1c-8b63-cec9">
               <conditions>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
@@ -2676,13 +3737,18 @@ See datafax for damage table</description>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="category" type="remove" value="fe77-3d1c-8b63-cec9">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
       <selectionEntries>
         <selectionEntry name="Veterans" id="8ccb-2815-b4a0-ea23" collective="false" hidden="false" import="true" sortIndex="1" type="model">
           <constraints>
-            <constraint id="5d34-40b1-5b73-f649" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="4"/>
+            <constraint id="5d34-40b1-5b73-f649" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="5"/>
             <constraint id="d06f-5a17-d908-ff67" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="10"/>
           </constraints>
           <costs>
@@ -2706,6 +3772,75 @@ See datafax for damage table</description>
                 <constraint id="ae6d-f66b-1f0f-8b8a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
                 <constraint id="1f42-e9c4-96f2-755a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
               </constraints>
+            </entryLink>
+            <entryLink name="Guardsman Bike" id="5351-f018-6a16-3ed9" hidden="false" import="true" targetId="91fb-015a-8009-c327" type="selectionEntry">
+              <constraints>
+                <constraint id="3f59-39c0-6085-f604" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="781a-42d5-5b40-46ca" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cc22-4da0-aeab-8500" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <modifiers>
+                <modifier field="3f59-39c0-6085-f604" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="781a-42d5-5b40-46ca" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cc22-4da0-aeab-8500" shared="true" type="atLeast" value="1"/>
+                        <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink name="Guardsman Bike" id="f519-986c-8427-081c" hidden="false" import="true" targetId="7e67-76ae-1bf8-7ec0" type="selectionEntry">
+              <constraints>
+                <constraint id="dbbb-db7e-d8a2-36fd" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="781a-42d5-5b40-46ca" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cc22-4da0-aeab-8500" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <modifiers>
+                <modifier field="dbbb-db7e-d8a2-36fd" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="781a-42d5-5b40-46ca" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cc22-4da0-aeab-8500" shared="true" type="atLeast" value="1"/>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
           <infoLinks>
@@ -2737,7 +3872,7 @@ See datafax for damage table</description>
             </selectionEntryGroup>
           </selectionEntryGroups>
         </selectionEntry>
-        <selectionEntry name="Guardsman w/ Special Weapon" id="e241-9737-196c-2600" hidden="false" import="true" type="model">
+        <selectionEntry name="Veteran w/ Special Weapon" id="e241-9737-196c-2600" hidden="false" import="true" type="model">
           <constraints>
             <constraint id="4d1e-2c13-efa5-8bd1" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
@@ -2758,6 +3893,75 @@ See datafax for damage table</description>
               </constraints>
             </entryLink>
             <entryLink name="Special Weapons" id="51e5-8411-40b6-7eb1" hidden="false" import="true" targetId="572b-4ebe-caa0-b312" type="selectionEntryGroup"/>
+            <entryLink name="Guardsman Bike" id="0210-452d-d506-2c1f" hidden="false" import="true" targetId="91fb-015a-8009-c327" type="selectionEntry">
+              <constraints>
+                <constraint id="8bce-61c6-f08e-e9b8" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="781a-42d5-5b40-46ca" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cc22-4da0-aeab-8500" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <modifiers>
+                <modifier field="8bce-61c6-f08e-e9b8" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="781a-42d5-5b40-46ca" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cc22-4da0-aeab-8500" shared="true" type="atLeast" value="1"/>
+                        <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink name="Guardsman Bike" id="85b2-56c9-9430-b6d3" hidden="false" import="true" targetId="7e67-76ae-1bf8-7ec0" type="selectionEntry">
+              <constraints>
+                <constraint id="64e8-ec12-fbbc-2348" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="781a-42d5-5b40-46ca" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cc22-4da0-aeab-8500" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <modifiers>
+                <modifier field="64e8-ec12-fbbc-2348" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="781a-42d5-5b40-46ca" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cc22-4da0-aeab-8500" shared="true" type="atLeast" value="1"/>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
           <infoLinks>
             <infoLink name="Veteran" id="0bb3-d2a5-06b5-e62e" hidden="false" targetId="19f6-4cec-652e-c5f1" type="profile"/>
@@ -2771,7 +3975,7 @@ See datafax for damage table</description>
             </selectionEntryGroup>
           </selectionEntryGroups>
         </selectionEntry>
-        <selectionEntry name="Guardsman w/ Heavy Weapon" id="24ed-11bb-3b72-2680" hidden="false" import="true" type="model">
+        <selectionEntry name="Veteran w/ Heavy Weapon" id="24ed-11bb-3b72-2680" hidden="false" import="true" type="model">
           <constraints>
             <constraint id="fe51-3e46-b3fd-84a4" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
@@ -2792,9 +3996,81 @@ See datafax for damage table</description>
               </constraints>
             </entryLink>
             <entryLink name="Heavy Weapons" id="1be6-b057-6678-7c30" hidden="false" import="true" targetId="d508-e72c-9d64-3cfb" type="selectionEntryGroup">
+              <constraints>
+                <constraint id="1e57-909f-e29d-492d" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
               <entryLinks>
                 <entryLink name="Heavy Weapons" id="6b7a-5d9a-5aac-5e77" hidden="false" import="true" targetId="d508-e72c-9d64-3cfb" type="selectionEntryGroup"/>
               </entryLinks>
+            </entryLink>
+            <entryLink name="Guardsman Bike" id="7793-9c7c-fa28-d779" hidden="false" import="true" targetId="91fb-015a-8009-c327" type="selectionEntry">
+              <constraints>
+                <constraint id="ee98-a981-b8b0-46a7" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="781a-42d5-5b40-46ca" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cc22-4da0-aeab-8500" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <modifiers>
+                <modifier field="ee98-a981-b8b0-46a7" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="781a-42d5-5b40-46ca" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cc22-4da0-aeab-8500" shared="true" type="atLeast" value="1"/>
+                        <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink name="Guardsman Bike" id="c48e-7d7d-8649-1d29" hidden="false" import="true" targetId="7e67-76ae-1bf8-7ec0" type="selectionEntry">
+              <constraints>
+                <constraint id="f4ef-d66e-f90b-8cb1" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier field="hidden" type="set" value="true">
+                      <conditions>
+                        <condition childId="781a-42d5-5b40-46ca" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cc22-4da0-aeab-8500" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <modifiers>
+                <modifier field="f4ef-d66e-f90b-8cb1" type="set" value="1">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="781a-42d5-5b40-46ca" childName="Mounted on Bikes" field="selections" includeChildSelections="true" scope="cc22-4da0-aeab-8500" shared="true" type="atLeast" value="1"/>
+                        <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
           <infoLinks>
@@ -2821,6 +4097,17 @@ See datafax for damage table</description>
           </selectionEntryGroups>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Squad Mounts" id="80d9-aa93-4fee-8606" hidden="false">
+          <selectionEntries>
+            <selectionEntry name="Mounted on Bikes" id="781a-42d5-5b40-46ca" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="2624-441a-9ae8-1e6d" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Support Weapon" id="d823-3859-69a7-ad6a" hidden="false" import="true" type="unit">
       <categoryLinks>
@@ -2847,6 +4134,11 @@ See datafax for damage table</description>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="3787-66ba-1eb0-5a8e" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -2867,17 +4159,11 @@ See datafax for damage table</description>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier field="3787-66ba-1eb0-5a8e" type="set" value="3">
+        <modifier field="3787-66ba-1eb0-5a8e" type="increment" value="3">
           <comment>Need at least 1 Tech-priest</comment>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition childId="2b87-3654-70db-fd42" childName="Tech-Priest Engineer" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
-                  <comment>Need at least 1 Techmarine</comment>
-                </condition>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <repeats>
+            <repeat childId="2b87-3654-70db-fd42" childName="Tech-Priest Engineer" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+          </repeats>
         </modifier>
       </modifiers>
       <selectionEntries>
@@ -2912,6 +4198,209 @@ See datafax for damage table</description>
           </profiles>
         </selectionEntry>
       </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Guardsman Bike" id="91fb-015a-8009-c327" collective="false" hidden="false" import="true" page="63" publicationId="4590-6ba9-5482-a1fa" subType="mount" type="model">
+      <comment>mount for squads</comment>
+      <categoryLinks>
+        <categoryLink name="Ultramarines" id="bbe2-4bf5-aa6e-6e5e" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="Skimmer/Bike" id="2f9b-8764-253e-91b6" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="b942-3e45-a44b-bd5c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Auto-Launcher" id="aed3-c904-ee14-1789" collective="false" hidden="false" import="true" targetId="222b-075f-d34c-7093" type="selectionEntry">
+          <constraints>
+            <constraint id="d1cb-99bc-fc4d-c454" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <displayCosts>
+            <displayCost name="pts" typeId="points" value="5"/>
+          </displayCosts>
+        </entryLink>
+        <entryLink name="Targeter" id="d3bb-92a9-affa-c778" collective="false" hidden="false" import="true" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
+          <constraints>
+            <constraint id="6771-cffe-eb19-1880" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="1bb5-f25e-deea-5f83" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Twin Linked Bolters" id="9b7b-620f-b185-4611" collective="false" hidden="false" import="true" targetId="dd32-5d68-e4bc-9dff" type="selectionEntry">
+          <constraints>
+            <constraint id="8388-3e6d-2527-568c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="e850-de6e-7caa-fda9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Vehicle Wargear Cards" id="29c0-5e7c-880a-edb2" collective="false" hidden="false" import="true" targetId="ff2a-f619-938b-cd34" type="selectionEntryGroup"/>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Guardsman Bike Damage Table" id="2308-ce27-0f59-640a" hidden="false" targetId="b685-99e5-2e09-4baf" type="rule"/>
+        <infoLink name="Guardsman Bike" id="6a13-f0cb-de6e-a48e" hidden="false" targetId="ec00-1756-62bc-66e2" type="profile"/>
+      </infoLinks>
+      <modifiers>
+        <modifier field="info" type="add" value="All bikers in the group will get the same wargear applied if you add any. If you want to have individual gear, click the + sign at the top to add a separate biker"/>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry name="Support Points from Squad Upgrade (Bikes)" id="99e5-5595-8882-c8ef" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="3Support" id="2e91-a9f3-2287-6438" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="287e-1573-0c56-e5cd" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="1"/>
+        <constraint id="b104-9db7-d66d-bfd7" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="1"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>Bike</comment>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <comment>Wargear Cards</comment>
+              <modifiers>
+                <modifier field="points" type="increment" value="15">
+                  <comment>abalative armour</comment>
+                  <repeats>
+                    <repeat childId="934f-d4e6-86f8-9a0b" childName="Ablative Armour" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="5">
+                  <comment>auto launcher</comment>
+                  <repeats>
+                    <repeat childId="508f-cb3a-f569-5641" childName="Auto-Launcher" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="50">
+                  <comment>ceramite armour</comment>
+                  <repeats>
+                    <repeat childId="ab1b-e939-8a0d-8cf7" childName="Ceramite Armour" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="10">
+                  <comment>electro hull</comment>
+                  <repeats>
+                    <repeat childId="bc02-3758-b5af-3232" childName="Electro-Hull" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="35">
+                  <comment>null shield</comment>
+                  <repeats>
+                    <repeat childId="103e-a5e6-2c5e-a516" childName="Null-Shield" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="10">
+                  <comment>reinforced armour</comment>
+                  <repeats>
+                    <repeat childId="afe7-39e6-8099-26c0" childName="Reinforced Armour" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="5">
+                  <comment>searchlight</comment>
+                  <repeats>
+                    <repeat childId="add8-8923-b666-a98f" childName="Searchlight" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="5">
+                  <comment>supercharge engine</comment>
+                  <repeats>
+                    <repeat childId="0620-1cc9-e36b-052b" childName="Supercharged Engine" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="50">
+                  <comment>vortex det</comment>
+                  <repeats>
+                    <repeat childId="c3a9-51b7-7c55-f29b" childName="Vortex Detonator" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="5">
+                  <comment>aux storm bolters</comment>
+                  <repeats>
+                    <repeat childId="6eae-9369-8296-48e8" childName="Auxiliary Storm Bolters" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <modifiers>
+            <modifier field="points" type="increment" value="5">
+              <comment>Autolauncher</comment>
+              <repeats>
+                <repeat childId="aed3-c904-ee14-1789" childName="Auto-Launcher" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                <repeat childId="95a1-90b2-4fba-41c5" childName="Auto-Launcher" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+            <modifier field="points" type="increment" value="20">
+              <comment>Bike itself</comment>
+              <repeats>
+                <repeat childId="8cce-a27e-8273-e4b7" childName="Guardsman Bike" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+                <repeat childId="91fb-015a-8009-c327" childName="Guardsman Bike" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <modifiers>
+        <modifier field="b104-9db7-d66d-bfd7" type="set" value="0">
+          <conditions>
+            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="info" type="add" value="The points for Bikes and any upgrades purchased for them come from the Support section. This counter is here to add any points to the proper location. "/>
+      </modifiers>
+      <profiles>
+        <profile name="Support Upgrade Points Counter" id="516c-a5c8-71d0-f50b" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+          <characteristics>
+            <characteristic name="Special" typeId="f917-8cd8-7592-47dd">This adds the points from any Support upgrades in a unit from Squads (IE Attack Bikes)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Guardsman Bike" id="7e67-76ae-1bf8-7ec0" collective="false" hidden="false" import="true" page="63" publicationId="4590-6ba9-5482-a1fa" subType="mount" type="model">
+      <comment>for Ally lists (has points)</comment>
+      <categoryLinks>
+        <categoryLink name="Ultramarines" id="18a5-76db-dac6-518f" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
+        <categoryLink name="Skimmer/Bike" id="624a-8696-7860-8dff" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="d846-2946-4985-4b92" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="20"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Auto-Launcher" id="1b77-204a-d34a-ac0f" collective="false" hidden="false" import="true" targetId="222b-075f-d34c-7093" type="selectionEntry">
+          <constraints>
+            <constraint id="7840-238a-5c62-0184" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Targeter" id="d112-36b2-6c40-6d17" collective="false" hidden="false" import="true" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
+          <constraints>
+            <constraint id="641d-d100-9f41-637b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="4758-7655-cc8c-6894" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Twin Linked Bolters" id="aa2a-787a-64f5-a2d9" collective="false" hidden="false" import="true" targetId="dd32-5d68-e4bc-9dff" type="selectionEntry">
+          <constraints>
+            <constraint id="6f83-e1ba-c02f-b4dc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="72ff-ae65-a97f-5fa9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Vehicle Wargear Cards" id="5e05-c440-bcec-715a" hidden="false" import="true" targetId="adfa-fa13-50be-ca4d" type="selectionEntryGroup"/>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Guardsman Bike Damage Table" id="3bec-e36b-d2ad-b9fe" hidden="false" targetId="b685-99e5-2e09-4baf" type="rule"/>
+        <infoLink name="Guardsman Bike" id="dc24-8621-7d68-2f0a" hidden="false" targetId="ec00-1756-62bc-66e2" type="profile"/>
+      </infoLinks>
+      <modifiers>
+        <modifier field="info" type="add" value="All bikers in the group will get the same wargear applied if you add any. If you want to have individual gear, click the + sign at the top to add a separate biker"/>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -3283,6 +4772,107 @@ See datafax for damage table</description>
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Vehicle Wargear Cards" id="ff2a-f619-938b-cd34" collective="false" hidden="false" import="true">
+      <comment>for bikes</comment>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Generic Cards" id="d6cd-1a71-9d70-ac2d" hidden="false">
+          <entryLinks>
+            <entryLink name="Ablative Armour" id="934f-d4e6-86f8-9a0b" collective="false" hidden="false" import="true" targetId="26e2-4a44-2602-a3fd" type="selectionEntry">
+              <constraints>
+                <constraint id="9e7d-61b5-9718-9682" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <displayCosts>
+                <displayCost name="pts" typeId="points" value="15"/>
+              </displayCosts>
+            </entryLink>
+            <entryLink name="Auto-Launcher" id="508f-cb3a-f569-5641" collective="false" hidden="false" import="true" targetId="222b-075f-d34c-7093" type="selectionEntry">
+              <constraints>
+                <constraint id="14b7-ffe2-533e-b26e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <displayCosts>
+                <displayCost name="pts" typeId="points" value="5"/>
+              </displayCosts>
+            </entryLink>
+            <entryLink name="Ceramite Armour" id="ab1b-e939-8a0d-8cf7" collective="false" hidden="false" import="true" targetId="f74f-9e64-38c1-9503" type="selectionEntry">
+              <constraints>
+                <constraint id="4d81-19e5-106d-04e4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <displayCosts>
+                <displayCost name="pts" typeId="points" value="50"/>
+              </displayCosts>
+            </entryLink>
+            <entryLink name="Electro-Hull" id="bc02-3758-b5af-3232" collective="false" hidden="false" import="true" targetId="f927-24ed-15ca-0c96" type="selectionEntry">
+              <constraints>
+                <constraint id="ab9f-9cee-1788-09b9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <displayCosts>
+                <displayCost name="pts" typeId="points" value="10"/>
+              </displayCosts>
+            </entryLink>
+            <entryLink name="Null-Shield" id="103e-a5e6-2c5e-a516" collective="false" hidden="false" import="true" targetId="47cb-e484-5d6a-3911" type="selectionEntry">
+              <constraints>
+                <constraint id="c2b5-2afc-1677-22cf" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <displayCosts>
+                <displayCost name="pts" typeId="points" value="35"/>
+              </displayCosts>
+            </entryLink>
+            <entryLink name="Reinforced Armour" id="afe7-39e6-8099-26c0" collective="false" hidden="false" import="true" targetId="fa44-ccaf-6c06-bed4" type="selectionEntry">
+              <constraints>
+                <constraint id="0cbb-5436-97e8-202c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <displayCosts>
+                <displayCost name="pts" typeId="points" value="10"/>
+              </displayCosts>
+            </entryLink>
+            <entryLink name="Searchlight" id="add8-8923-b666-a98f" collective="false" hidden="false" import="true" targetId="64e7-1568-72da-bd59" type="selectionEntry">
+              <constraints>
+                <constraint id="6a6e-58a1-88ca-16a7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <displayCosts>
+                <displayCost name="pts" typeId="points" value="5"/>
+              </displayCosts>
+            </entryLink>
+            <entryLink name="Supercharged Engine" id="0620-1cc9-e36b-052b" collective="false" hidden="false" import="true" targetId="4635-9876-cb56-4aab" type="selectionEntry">
+              <constraints>
+                <constraint id="d2b5-c831-0f33-f159" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <displayCosts>
+                <displayCost name="pts" typeId="points" value="5"/>
+              </displayCosts>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="bcf7-c063-7aca-a066" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink name="Vortex Detonator" id="c3a9-51b7-7c55-f29b" collective="false" hidden="false" import="true" targetId="2976-4443-5709-a1a6" type="selectionEntry">
+              <constraints>
+                <constraint id="92bf-aef5-62d0-3581" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <displayCosts>
+                <displayCost name="pts" typeId="points" value="50"/>
+              </displayCosts>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Imperial Cards" id="e763-2065-6c94-c3c8" hidden="false">
+          <entryLinks>
+            <entryLink name="Auxiliary Storm Bolters" id="6eae-9369-8296-48e8" hidden="false" import="true" targetId="3da2-98c9-eec7-dbb9" type="selectionEntry">
+              <displayCosts>
+                <displayCost name="pts" typeId="points" value="5"/>
+              </displayCosts>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>

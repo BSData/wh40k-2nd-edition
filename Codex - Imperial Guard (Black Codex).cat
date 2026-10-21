@@ -35,6 +35,7 @@
     <entryLink name="Veteran Squad" id="1921-c644-9375-81b8" hidden="false" import="true" targetId="cc22-4da0-aeab-8500" type="selectionEntry"/>
     <entryLink name="Support Weapon" id="2028-27eb-cb34-7b5e" hidden="false" import="true" targetId="d823-3859-69a7-ad6a" type="selectionEntry"/>
     <entryLink name="Support Points from Squad Upgrade (Bikes)" id="ab37-6e73-2cf7-d423" hidden="false" import="true" targetId="99e5-5595-8882-c8ef" type="selectionEntry"/>
+    <entryLink name="50% Allies (Shared with Support)" id="37d8-a689-7f65-617c" hidden="false" import="true" targetId="6c7d-777e-bd55-d752" type="selectionEntry"/>
   </entryLinks>
   <sharedProfiles>
     <profile name="Battlecannon" id="7a33-7612-f6c6-2ecb" hidden="false" page="datafax" publicationId="a1e3-886b-e509-d15a" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
@@ -4400,6 +4401,23 @@ See datafax for damage table</description>
       </infoLinks>
       <modifiers>
         <modifier field="info" type="add" value="All bikers in the group will get the same wargear applied if you add any. If you want to have individual gear, click the + sign at the top to add a separate biker"/>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry name="50% Allies (Shared with Support)" id="6c7d-777e-bd55-d752" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="50%alies" id="14cc-516d-dcfe-1b82" hidden="false" primary="false" targetId="7fd7-54ab-c5a6-76ea"/>
+        <categoryLink name="Allied Force % Allotment" id="a109-aa9a-b5ef-082a" hidden="false" primary="true" targetId="6741-c4c6-274e-36cf"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="86dd-42f4-0494-4f1e" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="c311-46a7-b5da-a6ee" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Ultramarines" id="138e-c671-3180-f615" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="42" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Ultramarines" id="138e-c671-3180-f615" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="43" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>Ultramarines Codex</readme>
   <categoryEntries>
     <categoryEntry name="attackBikeUpgrade" id="1c58-7776-bcfe-864a" hidden="false"/>
@@ -43,6 +43,7 @@
     <entryLink name="Combat Squad - Veterans" id="2f9c-07e5-caab-5903" hidden="false" import="true" targetId="fdfe-accc-6eb3-a649" type="selectionEntry"/>
     <entryLink name="Space Marine Vindicator" id="df71-00bc-d957-94bd" hidden="false" import="true" targetId="53e9-c3d4-e1a2-de17" type="selectionEntry"/>
     <entryLink name="Support Points from Squad Upgrade (Attack Bike)" id="0d09-57a6-6bda-7c32" hidden="false" import="true" targetId="33f4-048f-23a7-4d60" type="selectionEntry"/>
+    <entryLink name="50% Allies (Shared with Support)" id="2816-cf87-3555-ac89" hidden="false" import="true" targetId="84f4-6078-35c0-210c" type="selectionEntry"/>
   </entryLinks>
   <rules>
     <rule name="Break Tests" id="957a-483e-3a28-6e67" hidden="false" page="49" publicationId="4590-6ba9-5482-a1fa">
@@ -6968,6 +6969,23 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
           </selectionEntryGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry name="50% Allies (Shared with Support)" id="84f4-6078-35c0-210c" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="50%alies" id="1076-c744-4376-6afa" hidden="false" primary="false" targetId="7fd7-54ab-c5a6-76ea"/>
+        <categoryLink name="Allied Force % Allotment" id="5d34-7fc2-fcba-a644" hidden="false" primary="true" targetId="6741-c4c6-274e-36cf"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="3b0a-ecd3-0527-b598" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="9b38-7037-b7e2-e387" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>

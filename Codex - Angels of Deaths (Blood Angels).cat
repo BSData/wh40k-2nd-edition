@@ -43,6 +43,7 @@
     <entryLink name="Combat Squad - Veteran Assault Squad" id="e9ef-cfd9-2550-611a" hidden="false" import="true" targetId="0edf-3c27-d2fa-4261" type="selectionEntry"/>
     <entryLink name="Space Marine Vindicator" id="0acf-4521-d1d4-98a4" hidden="false" import="true" targetId="aa9c-56b2-9661-3b66" type="selectionEntry"/>
     <entryLink name="Support Points from Squad Upgrade (Attack Bike)" id="5853-47a3-7348-fa29" hidden="false" import="true" targetId="57e4-b5ee-3d27-65ae" type="selectionEntry"/>
+    <entryLink name="50% Allies (Shared with Support)" id="d5fd-907c-de9b-306a" hidden="false" import="true" targetId="d28f-02cf-01f1-4031" type="selectionEntry"/>
   </entryLinks>
   <rules>
     <rule name="Break Tests" id="957a-483e-3a28-6e67" hidden="false" page="49" publicationId="4590-6ba9-5482-a1fa">
@@ -6884,6 +6885,23 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
           </characteristics>
         </profile>
       </profiles>
+    </selectionEntry>
+    <selectionEntry name="50% Allies (Shared with Support)" id="d28f-02cf-01f1-4031" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="50%alies" id="c1c2-a568-3ec3-d692" hidden="false" primary="false" targetId="7fd7-54ab-c5a6-76ea"/>
+        <categoryLink name="Allies" id="b662-9b3c-6a1e-8396" hidden="false" primary="true" targetId="6741-c4c6-274e-36cf"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="0e7e-688c-1c7b-0314" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="4010-9d01-6748-dd90" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>

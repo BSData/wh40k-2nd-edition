@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Genestealer Cults" id="b567-fa24-d74f-65ee" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="5" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Genestealer Cults" id="b567-fa24-d74f-65ee" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="6" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="Characters" id="f64c-bedf-004a-f142" hidden="false"/>
     <categoryEntry name="Broods" id="b70e-fd2c-12be-b090" hidden="false"/>
@@ -1843,6 +1843,22 @@ See datafax for damage table</description>
         <infoLink name="Predator Damage Table" id="61ba-ac20-0332-5329" hidden="false" targetId="9956-00d5-940f-cd28" type="rule"/>
         <infoLink name="Predator" id="24e7-c028-2bcd-445e" hidden="false" targetId="d902-dffa-496b-67ef" type="profile"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="25% Ally / Support Limit" id="2932-2699-1ac2-0869" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="25%allies" id="feab-8d48-3ee1-91f9" hidden="false" primary="false" targetId="12cc-6a93-a61e-381d"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="7196-673b-f0d4-224f" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="7a14-4401-738a-3117" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>

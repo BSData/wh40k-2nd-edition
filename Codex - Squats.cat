@@ -15,6 +15,7 @@
     <entryLink name="Land Raider" id="058e-eb15-653b-6bc7" hidden="false" import="true" targetId="a8f2-dc80-00a8-00e1" type="selectionEntry"/>
     <entryLink name="Hearthguard" id="062f-a7ff-7495-296a" hidden="false" import="true" targetId="45cf-ec53-ab52-b8a4" type="selectionEntry"/>
     <entryLink name="Hearthguard Bodyguard" id="46db-f387-8be4-d295" hidden="false" import="true" targetId="425c-bec0-18e5-977f" type="selectionEntry"/>
+    <entryLink name="50% Allies (Shared with Support)" id="8306-be37-22d3-b3a6" hidden="false" import="true" targetId="4449-81bd-4d7a-f497" type="selectionEntry"/>
   </entryLinks>
   <infoLinks>
     <infoLink name="Hatred" id="7294-4e59-fa14-9ba5" hidden="false" targetId="a572-823c-5114-ba17" type="rule">
@@ -1396,6 +1397,23 @@ Roll a D6 at the end of the turn:
       <infoLinks>
         <infoLink name="Squat Warrior" id="8d07-1c30-cbc4-76a2" hidden="false" targetId="d197-46ba-92b5-fa00" type="profile"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="50% Allies (Shared with Support)" id="4449-81bd-4d7a-f497" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="50%alies" id="904b-8430-5dac-eba0" hidden="false" primary="false" targetId="7fd7-54ab-c5a6-76ea"/>
+        <categoryLink name="Allied Force % Allotment" id="32a2-e3cd-5f2e-d6d7" hidden="false" primary="true" targetId="6741-c4c6-274e-36cf"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="072f-15b3-724e-8923" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="d08f-b089-52ad-6ef8" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>

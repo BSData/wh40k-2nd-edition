@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Chaos" id="5bd8-0ec7-a752-694d" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="15" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Chaos" id="5bd8-0ec7-a752-694d" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="16" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>Chaos Rewards note - You cannot give any 2 models the exact same combo of rewards. However, attempting to bulid that into this would cause unending pain. Just be mindful when gifting your little warriors</readme>
   <categoryEntries>
     <categoryEntry name="Characters" id="9497-ff1f-dffc-011f" hidden="false"/>
@@ -9239,6 +9239,22 @@ Enemy models may not attack Foulspawn in close combat.</description>
           </profiles>
         </selectionEntry>
       </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="25% Ally / Support Limit" id="bd70-0ee5-ef24-2781" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="25%allies" id="0dd1-9671-f60a-3ac7" hidden="false" primary="false" targetId="12cc-6a93-a61e-381d"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="f2ac-ef5a-a2a7-5b60" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="1155-1102-62a7-548f" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>

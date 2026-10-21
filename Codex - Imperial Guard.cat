@@ -77,6 +77,7 @@ Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct unit
     <entryLink name="Imperial Chimera" id="2b55-61e4-f0f1-ae24" collective="false" hidden="false" import="true" targetId="ec47-0a44-3b8e-df3b" type="selectionEntry"/>
     <entryLink name="Imperial Guard Shadowsword " id="f2bd-6dfb-672f-a071" hidden="false" import="true" targetId="3c26-6d97-a3a0-d677" type="selectionEntry"/>
     <entryLink name="Aspiring Champion" id="4f01-1508-ea15-d142" hidden="false" import="true" targetId="ff6e-9cf7-f75c-4a75" type="selectionEntry"/>
+    <entryLink name="25% Ally / Support Limit" id="5742-edb1-6f6a-61c9" hidden="false" import="true" targetId="da37-9704-f045-950b" type="selectionEntry"/>
   </entryLinks>
   <sharedProfiles>
     <profile name="Mortar" id="132a-b4f9-7b69-482e" hidden="false" page="22" publicationId="a1e3-886b-e509-d15a" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
@@ -6931,6 +6932,23 @@ Saving throws for shields or fields do not apply against hits from a misfiring p
           </selectionEntryGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry name="25% Ally / Support Limit" id="da37-9704-f045-950b" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="25%allies" id="2be3-a3a1-70b5-4258" hidden="false" primary="false" targetId="12cc-6a93-a61e-381d"/>
+        <categoryLink name="Allied Force % Allotment" id="e83b-438e-7af9-5f8d" hidden="false" primary="true" targetId="6741-c4c6-274e-36cf"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="3028-922a-7f44-c966" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="46ef-a87a-8590-1d6e" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>

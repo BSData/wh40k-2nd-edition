@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Orks" id="82c6-3e15-54c5-a35f" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="21" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Orks" id="82c6-3e15-54c5-a35f" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="22" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="Characters" id="23ab-e52d-6e65-01d5" hidden="false"/>
     <categoryEntry name="Mobs" id="f72b-82f4-2a38-7d26" hidden="false"/>
@@ -80,6 +80,7 @@
     <entryLink name="Evil Sunz Gobsmasha" id="d492-b388-26e3-1382" hidden="false" import="true" targetId="c4ff-735d-e308-e300" type="selectionEntry"/>
     <entryLink name="Ork Wartrukk" id="a607-b6fd-fca5-d478" hidden="false" import="true" targetId="78e3-fb14-2529-293e" type="selectionEntry"/>
     <entryLink name="Flash Gitz" id="068c-b2e4-75f8-ce22" hidden="false" import="true" targetId="f75b-dbbf-a63e-01bd" type="selectionEntry"/>
+    <entryLink name="50% Allies (Shared with Support)" id="46f6-77e8-187f-eb4d" hidden="false" import="true" targetId="466a-8eca-e122-e3c8" type="selectionEntry"/>
   </entryLinks>
   <forceEntries>
     <forceEntry name="Orks" id="d235-52bd-79b4-0b6e" hidden="false">
@@ -755,8 +756,7 @@ Instead of rolling D3 for the deviation of the jump, roll an Artillery dice inst
         <characteristic name="I" typeId="76cb-4fd1-7571-e697">3</characteristic>
         <characteristic name="A" typeId="6d89-52f1-9c48-ac8c">4</characteristic>
         <characteristic name="LD" typeId="dfcc-1070-ddf7-ad7d">6</characteristic>
-        <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0">
-</characteristic>
+        <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0"/>
         <characteristic name="Ram Strength" typeId="a025-016a-2152-7b47">7</characteristic>
         <characteristic name="Ram Damage" typeId="84ee-e518-c9ac-7b7e">D10</characteristic>
         <characteristic name="Ram Save Modifier" typeId="e929-6e42-f2a7-c76d">-4</characteristic>
@@ -6826,8 +6826,7 @@ See datafax for damage table results</description>
             <characteristic name="I" typeId="76cb-4fd1-7571-e697">3</characteristic>
             <characteristic name="A" typeId="6d89-52f1-9c48-ac8c">2</characteristic>
             <characteristic name="LD" typeId="dfcc-1070-ddf7-ad7d">7</characteristic>
-            <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0">
-</characteristic>
+            <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0"/>
             <characteristic name="Ram Strength" typeId="a025-016a-2152-7b47">6</characteristic>
             <characteristic name="Ram Damage" typeId="84ee-e518-c9ac-7b7e">D6</characteristic>
             <characteristic name="Ram Save Modifier" typeId="e929-6e42-f2a7-c76d">-3</characteristic>
@@ -7659,8 +7658,7 @@ See datafax for damage table</description>
             <characteristic name="I" typeId="76cb-4fd1-7571-e697">5</characteristic>
             <characteristic name="A" typeId="6d89-52f1-9c48-ac8c">3</characteristic>
             <characteristic name="LD" typeId="dfcc-1070-ddf7-ad7d">10</characteristic>
-            <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0">
-</characteristic>
+            <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0"/>
             <characteristic name="Ram Strength" typeId="a025-016a-2152-7b47">7</characteristic>
             <characteristic name="Ram Damage" typeId="84ee-e518-c9ac-7b7e">D10</characteristic>
             <characteristic name="Ram Save Modifier" typeId="e929-6e42-f2a7-c76d">-4</characteristic>
@@ -9247,6 +9245,23 @@ Weapon*</characteristic>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry name="50% Allies (Shared with Support)" id="466a-8eca-e122-e3c8" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="50%alies" id="23d9-9ab4-6490-a3d1" hidden="false" primary="false" targetId="7fd7-54ab-c5a6-76ea"/>
+        <categoryLink name="Allied Force % Allotment" id="6769-5508-6a84-70f4" hidden="false" primary="true" targetId="6741-c4c6-274e-36cf"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="f5b0-8b9b-d4ca-b9cb" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="1402-0bd8-bbc9-8f14" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>

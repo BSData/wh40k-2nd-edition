@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Eldar" id="3da1-2b23-4a40-323e" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="21" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Eldar" id="3da1-2b23-4a40-323e" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="22" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink name="Avatar of Khaine" id="c4c8-2b7c-889a-02dc" collective="false" hidden="false" import="true" targetId="6b71-72c9-9b6b-c5b4" type="selectionEntry"/>
     <entryLink name="Exarch" id="3f04-4845-ead6-1d29" collective="false" hidden="false" import="true" targetId="0e43-fd2c-3016-2375" type="selectionEntry"/>
@@ -40,6 +40,7 @@
     <entryLink name="Eldar Tempest" id="e0da-f267-4d79-29d7" collective="false" hidden="false" import="true" targetId="f9d0-c8f8-865c-1760" type="selectionEntry"/>
     <entryLink name="Pirate Captain" id="e502-65a1-b479-ef76" hidden="false" import="true" targetId="7050-98b1-ba8f-d0b6" type="selectionEntry"/>
     <entryLink name="Support Points from Squad Upgrade (Jet Bikes)" id="153d-c580-f805-aa7e" hidden="false" import="true" targetId="2653-92dd-98fd-7475" type="selectionEntry"/>
+    <entryLink name="50% Allies (Shared with Support)" id="2881-070e-551f-952e" hidden="false" import="true" targetId="ebf6-fb2e-8f63-916e" type="selectionEntry"/>
   </entryLinks>
   <profileTypes>
     <profileType name="Exarch Powers" id="acfa-400e-e0d9-a9fb">
@@ -6537,7 +6538,7 @@ When doing so the same to hit for long range shots apply and the +1 for Crack Sh
       <selectionEntryGroups>
         <selectionEntryGroup name="Vehicle Wargear Cards" id="a0f9-0d2b-3d43-b00a" hidden="false">
           <entryLinks>
-            <entryLink name="Wargear Cards (Vehicle - Eldar)" id="5126-5131-22c8-dca7" collapsible="true" hidden="false" import="true" targetId="eeca-b9e8-909e-8de2" type="selectionEntryGroup"/>
+            <entryLink name="Eldar" id="5126-5131-22c8-dca7" collapsible="true" hidden="false" import="true" targetId="eeca-b9e8-909e-8de2" type="selectionEntryGroup"/>
           </entryLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Generic" id="9a77-c22f-d782-89d2" collapsible="true" hidden="false">
@@ -6731,6 +6732,23 @@ When doing so the same to hit for long range shots apply and the +1 for Crack Sh
           </selectionEntryGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry name="50% Allies (Shared with Support)" id="ebf6-fb2e-8f63-916e" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="50%alies" id="0b4c-84bc-4fea-6645" hidden="false" primary="false" targetId="7fd7-54ab-c5a6-76ea"/>
+        <categoryLink name="Allied Force % Allotment" id="161a-855d-f444-b8a6" hidden="false" primary="true" targetId="6741-c4c6-274e-36cf"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="7317-a9e6-5ae6-63df" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="5a04-465e-7ac8-e7c7" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>

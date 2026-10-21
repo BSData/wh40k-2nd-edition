@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Necrons" id="f649-eb44-08cb-0ba3" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="5" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Necrons" id="f649-eb44-08cb-0ba3" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="6" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>V1 is just the White Dwarf units. May add the fan rules in later if people want</readme>
   <entryLinks>
     <entryLink name="Necron Lord" id="5e18-36c7-0d37-4cfb" collective="false" hidden="false" import="true" targetId="8a1f-c19a-1e19-d04f" type="selectionEntry"/>
@@ -367,6 +367,23 @@ control of the vehicle</description>
         <infoLink name="Metal Flayer" id="f6cb-862b-13a7-bf12" hidden="false" targetId="01b4-1353-5ffc-a871" type="rule"/>
         <infoLink name="Gaus Cannon" id="9247-2de0-e464-be66" hidden="false" targetId="91ed-210f-defd-6cb8" type="profile"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="50% Allies (Shared with Support)" id="75e2-c2d2-5027-6ae1" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="50%alies" id="c199-a635-2b1f-c0a3" hidden="false" primary="false" targetId="7fd7-54ab-c5a6-76ea"/>
+        <categoryLink name="Allied Force % Allotment" id="5380-7e42-4894-17c0" hidden="false" primary="true" targetId="6741-c4c6-274e-36cf"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="bb88-49a2-420a-b8d4" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="d08d-87f5-c644-634d" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
 </catalogue>

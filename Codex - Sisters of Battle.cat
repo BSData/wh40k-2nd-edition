@@ -2711,7 +2711,7 @@ The Sceptre may also be used in closed combat adding +1 to the wielder&apos;s St
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry name="25% Ally / Support Limit" id="c80a-668b-9dfe-fb76" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="25% Ally Limit" id="c80a-668b-9dfe-fb76" hidden="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink name="25%allies" id="e79a-2393-5fec-10f2" hidden="false" primary="false" targetId="12cc-6a93-a61e-381d"/>
       </categoryLinks>

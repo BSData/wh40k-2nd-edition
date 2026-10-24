@@ -44,6 +44,7 @@
     <entryLink name="Space Marine Vindicator" id="0acf-4521-d1d4-98a4" hidden="false" import="true" targetId="aa9c-56b2-9661-3b66" type="selectionEntry"/>
     <entryLink name="Support Points from Squad Upgrade (Attack Bike)" id="5853-47a3-7348-fa29" hidden="false" import="true" targetId="57e4-b5ee-3d27-65ae" type="selectionEntry"/>
     <entryLink name="50% Allies (Shared with Support)" id="d5fd-907c-de9b-306a" hidden="false" import="true" targetId="d28f-02cf-01f1-4031" type="selectionEntry"/>
+    <entryLink name="25% Imperial Agent Allies (Shared with Support)" id="c190-5b33-699a-77b4" hidden="false" import="true" targetId="d669-15a2-2f9e-6f24" type="selectionEntry"/>
   </entryLinks>
   <rules>
     <rule name="Break Tests" id="957a-483e-3a28-6e67" hidden="false" page="49" publicationId="4590-6ba9-5482-a1fa">
@@ -2986,6 +2987,11 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="534d-ae84-5926-58ef" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -3005,6 +3011,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="f5af-7608-d010-83e6" childName="Space Marine Attack Bike" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3096,7 +3103,11 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         <cost name="pts" typeId="points" value="115"/>
       </costs>
       <entryLinks>
-        <entryLink name="Dreadnought Weapons" id="fcf0-2085-b845-16e4" collective="false" hidden="false" import="true" targetId="4376-9815-c1dc-d321" type="selectionEntryGroup"/>
+        <entryLink name="Dreadnought Weapons" id="fcf0-2085-b845-16e4" collective="false" hidden="false" import="true" targetId="4376-9815-c1dc-d321" type="selectionEntryGroup">
+          <constraints>
+            <constraint id="0c21-a611-7ff3-7313" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="2"/>
+          </constraints>
+        </entryLink>
         <entryLink name="Auto-Launcher" id="2c74-49e1-8fe0-1b25" collective="false" hidden="false" import="true" targetId="222b-075f-d34c-7093" type="selectionEntry">
           <constraints>
             <constraint id="2a2a-25b8-b588-bdb6" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
@@ -3121,6 +3132,11 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="a462-c71c-e17f-2765" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -3137,6 +3153,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3205,6 +3222,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3217,6 +3235,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
             <conditionGroup type="and">
               <conditions>
                 <condition childId="7cef-91cc-d553-c1af" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1"/>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3299,6 +3318,11 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="7858-8391-1a7d-89ab" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -3310,6 +3334,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3322,6 +3347,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
             <conditionGroup type="and">
               <conditions>
                 <condition childId="4165-53ae-0eed-f9bd" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1"/>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3336,6 +3362,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3389,6 +3416,11 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="a797-dcf5-a5b6-895c" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -3401,10 +3433,18 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         <modifier field="error" type="add" value="{this} must have at least 1 Techmarine the list">
           <conditionGroups>
             <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
               <conditions>
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3483,6 +3523,11 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="d159-d592-d686-838c" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -3499,6 +3544,12 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3567,6 +3618,11 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="d1bc-eab3-cbd9-e6b2" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -3583,6 +3639,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3645,6 +3702,11 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="0822-c44f-2b88-29b6" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -3661,6 +3723,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3717,6 +3780,11 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="dace-eb4f-6fcc-8e92" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -3733,6 +3801,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3793,6 +3862,11 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="41f6-2fb0-d1a7-bbe5" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -3809,6 +3883,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -6252,6 +6327,11 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="e99d-f924-5a61-8df8" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -6268,6 +6348,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -6366,6 +6447,11 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="1e53-895e-201d-98de" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -6378,6 +6464,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -6392,6 +6479,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
                 <condition childId="5191-dde9-7525-27b8" childName="Space Marine Attack Bike" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -6889,7 +6977,7 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
     <selectionEntry name="50% Allies (Shared with Support)" id="d28f-02cf-01f1-4031" hidden="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink name="50%alies" id="c1c2-a568-3ec3-d692" hidden="false" primary="false" targetId="7fd7-54ab-c5a6-76ea"/>
-        <categoryLink name="Allies" id="b662-9b3c-6a1e-8396" hidden="false" primary="true" targetId="6741-c4c6-274e-36cf"/>
+        <categoryLink name="Allied Force % Allotment" id="b662-9b3c-6a1e-8396" hidden="false" primary="true" targetId="6741-c4c6-274e-36cf"/>
       </categoryLinks>
       <constraints>
         <constraint id="0e7e-688c-1c7b-0314" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
@@ -6899,6 +6987,28 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         <modifier field="hidden" type="set" value="true">
           <conditions>
             <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry name="25% Imperial Agent Allies (Shared with Support)" id="d669-15a2-2f9e-6f24" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="50%alies" id="6f19-3f85-fa2a-ae01" hidden="false" primary="false" targetId="7fd7-54ab-c5a6-76ea"/>
+        <categoryLink name="Allied Force % Allotment" id="ddb4-4652-0d4a-3949" hidden="false" primary="true" targetId="6741-c4c6-274e-36cf"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="cdab-f679-f863-606b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="2238-1d49-d917-a98c" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="7b75-aa9e-1b94-f4a5" childName="Imperial Agents" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
           </conditions>
         </modifier>
       </modifiers>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="49" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem name="Warhammer 40k 2nd Edition" id="9ea8-c89d-9104-ed03" authorName="Boff" battleScribeVersion="2.03" revision="50" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <comment>Warhammer 2nd Edition 40k</comment>
   <readme>Added more wargear cards</readme>
   <categoryEntries>
@@ -23,18 +23,40 @@
     <categoryEntry name="Imperial Agents" id="7b75-aa9e-1b94-f4a5" hidden="false"/>
     <categoryEntry name="Squats" id="e206-c273-bb7e-6132" hidden="false"/>
     <categoryEntry name="3Support" id="b6e4-2c66-e404-b10a" hidden="false"/>
-    <categoryEntry name="Characters" id="7576-d91f-083c-38a7" hidden="false"/>
-    <categoryEntry name="2Squads" id="bc01-5ece-b97e-96de" hidden="false"/>
+    <categoryEntry name="1Characters" id="7576-d91f-083c-38a7" hidden="false">
+      <modifiers>
+        <modifier field="name" type="set" value="Individuals">
+          <conditions>
+            <condition childId="4026-2a6f-5a07-ce65" childName="Codex - Tyranids" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </categoryEntry>
+    <categoryEntry name="2Squads" id="bc01-5ece-b97e-96de" hidden="false">
+      <modifiers>
+        <modifier field="name" type="set" value="Broods">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="4026-2a6f-5a07-ce65" childName="Codex - Tyranids" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                <condition childId="b567-fa24-d74f-65ee" childName="Codex - Tyranids (Genestealer Cults)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </categoryEntry>
     <categoryEntry name="Legion of the Damned" id="f7f4-2733-743a-8971" hidden="false"/>
     <categoryEntry name="Techmarine" id="a21c-767f-7ecf-94eb" hidden="false"/>
     <categoryEntry name="Harlequins" id="c1bb-1205-a4da-35c6" hidden="false"/>
     <categoryEntry name="LotD-PrimaryList" id="a864-b85d-f081-a0c8" hidden="false"/>
-    <categoryEntry name="Harlequin-PrimaryList" id="6dc4-8bb9-688d-1e49" hidden="false"/>
     <categoryEntry name="1Command" id="a38d-36bf-d4fc-bea5" hidden="false"/>
     <categoryEntry name="2Battle Line" id="bd53-987e-fa4e-a2c8" hidden="false"/>
     <categoryEntry name="Auxilia" id="7846-6429-29a8-f3db" hidden="false"/>
     <categoryEntry name="25%allies" id="12cc-6a93-a61e-381d" hidden="false"/>
     <categoryEntry name="50%alies" id="7fd7-54ab-c5a6-76ea" hidden="false"/>
+    <categoryEntry name="Tyranid-PrimaryList" id="1805-16ce-e100-585c" hidden="false"/>
+    <categoryEntry name="25%ImperialAgents" id="5d1a-8609-4918-9272" hidden="false"/>
   </categoryEntries>
   <costTypes>
     <costType name="pts" id="points" defaultCostLimit="-1" hidden="false"/>
@@ -45,8 +67,8 @@
         <categoryLink name="Allied Force % Allotment" id="57f6-17a5-b37b-a32d" hidden="false" targetId="6741-c4c6-274e-36cf"/>
         <categoryLink name="1Characters" id="957d-606e-6da7-3ac2" hidden="false" targetId="7576-d91f-083c-38a7">
           <constraints>
-            <constraint id="dab5-ad73-898e-1f58" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="0"/>
-            <constraint id="5667-7bfa-669d-d0c8" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="max" value="0"/>
+            <constraint id="dab5-ad73-898e-1f58" field="points" includeChildForces="true" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
+            <constraint id="5667-7bfa-669d-d0c8" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="force" shared="true" type="max" value="0"/>
           </constraints>
           <modifierGroups>
             <modifierGroup type="and">
@@ -98,8 +120,8 @@
         </categoryLink>
         <categoryLink name="2Squads" id="becc-cf75-2085-335d" hidden="false" targetId="bc01-5ece-b97e-96de">
           <constraints>
-            <constraint id="73f8-df2c-94fb-0483" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="min" value="0"/>
-            <constraint id="9140-48cc-65c2-744e" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="min" value="0"/>
+            <constraint id="73f8-df2c-94fb-0483" field="points" includeChildForces="true" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
+            <constraint id="9140-48cc-65c2-744e" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="force" shared="true" type="min" value="0"/>
           </constraints>
           <modifierGroups>
             <modifierGroup type="and">
@@ -182,6 +204,7 @@
                     <condition childId="8d30-f85a-223d-697c" childName="Codex - Legion of the Damned" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                     <condition childId="7bb5-646e-ec66-1cdd" childName="Codex - Assassins" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                     <condition childId="852c-a02d-2907-ce3f" childName="Codex - Imperial Guard (Black Codex)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="4026-2a6f-5a07-ce65" childName="Codex - Tyranids" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -287,8 +310,8 @@
         </categoryLink>
         <categoryLink name="Harlequins" id="8460-917c-e401-7a5e" hidden="false" targetId="c1bb-1205-a4da-35c6">
           <constraints>
-            <constraint id="be11-93f8-8506-2852" field="points" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="0"/>
-            <constraint id="83e3-c40b-2982-43bc" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="max" value="0"/>
+            <constraint id="be11-93f8-8506-2852" field="points" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="max" value="0"/>
+            <constraint id="83e3-c40b-2982-43bc" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="force" shared="true" type="max" value="0"/>
           </constraints>
           <modifierGroups>
             <modifierGroup type="and">
@@ -407,8 +430,8 @@
         </categoryLink>
         <categoryLink name="1Command" id="33fb-2973-cf13-4446" hidden="false" targetId="a38d-36bf-d4fc-bea5">
           <constraints>
-            <constraint id="aa81-5e4e-7b71-1e17" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="0"/>
-            <constraint id="9333-85b9-498a-a43d" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="max" value="0"/>
+            <constraint id="aa81-5e4e-7b71-1e17" field="points" includeChildForces="true" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
+            <constraint id="9333-85b9-498a-a43d" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="force" shared="true" type="max" value="0"/>
           </constraints>
           <modifierGroups>
             <modifierGroup type="and">
@@ -460,8 +483,8 @@
         </categoryLink>
         <categoryLink name="2Battle Line" id="1b8b-4c1a-a2ac-0888" hidden="false" targetId="bd53-987e-fa4e-a2c8">
           <constraints>
-            <constraint id="1cde-e6c2-d463-2468" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="min" value="0"/>
-            <constraint id="da47-14c5-5dd8-0493" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="min" value="0"/>
+            <constraint id="1cde-e6c2-d463-2468" field="points" includeChildForces="true" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
+            <constraint id="da47-14c5-5dd8-0493" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="force" shared="true" type="min" value="0"/>
           </constraints>
           <modifierGroups>
             <modifierGroup type="and">
@@ -519,8 +542,8 @@
         </categoryLink>
         <categoryLink name="Auxilia" id="ad12-9670-ccfd-eadf" hidden="false" targetId="7846-6429-29a8-f3db">
           <constraints>
-            <constraint id="8a43-bc2d-a287-596a" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="max" value="0"/>
-            <constraint id="695a-7661-12c4-d413" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="0"/>
+            <constraint id="8a43-bc2d-a287-596a" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="force" shared="true" type="max" value="0"/>
+            <constraint id="695a-7661-12c4-d413" field="points" includeChildForces="true" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
           </constraints>
           <modifierGroups>
             <modifierGroup type="and">
@@ -589,27 +612,37 @@
         <constraint id="522c-c513-203d-f358" field="forces" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="7bb5-646e-ec66-1cdd" childName="Codex - Assassins" field="selections" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+        </modifier>
         <modifier field="warning" type="add" value="Legion of the Damned cannot take allies">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                <condition childId="a864-b85d-f081-a0c8" childName="LotD-PrimaryList" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                <condition childId="8d30-f85a-223d-697c" childName="Codex - Legion of the Damned" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-        <modifier field="hidden" type="set" value="true">
-          <conditions>
-            <condition childId="7bb5-646e-ec66-1cdd" childName="Codex - Assassins" field="selections" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
-          </conditions>
         </modifier>
         <modifier field="warning" type="add" value="Harlequins cannot take allies">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                <condition childId="6dc4-8bb9-688d-1e49" childName="Harlequin-PrimaryList" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                <condition childId="547a-80cd-7988-a39f" childName="Codex - Eldar (Harlequins)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier field="warning" type="add" value="Tyranids cannot take allies">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                <condition childId="4026-2a6f-5a07-ce65" childName="Codex - Tyranids" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -641,6 +674,20 @@
                 <conditionGroup type="and">
                   <conditions>
                     <condition childId="7fd7-54ab-c5a6-76ea" childName="50%alies" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                    <condition childId="55ab-d359-73e5-0809" childName="Codex - Imperial Agents" field="forces" includeChildForces="true" includeChildSelections="true" scope="a60b-92d0-a03f-6c77" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <repeats>
+                <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="1" roundUp="false" scope="roster" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+            <modifier field="618f-8174-c4e1-c6d2" type="increment" value="0.25">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="12cc-6a93-a61e-381d" childName="25%allies" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                    <condition childId="55ab-d359-73e5-0809" childName="Codex - Imperial Agents" field="forces" includeChildForces="true" includeChildSelections="true" scope="a60b-92d0-a03f-6c77" shared="true" type="instanceOf" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>

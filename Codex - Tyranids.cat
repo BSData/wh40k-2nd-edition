@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue name="Codex - Tyranids" id="4026-2a6f-5a07-ce65" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" library="false" revision="3" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
-  <categoryEntries>
-    <categoryEntry name="Individuals" id="1439-f160-c1a8-1061" hidden="false"/>
-    <categoryEntry name="Broods" id="0de2-91d6-86dc-d0bc" hidden="false"/>
-    <categoryEntry name=" Support" id="795f-7f64-4e25-925e" hidden="false"/>
-  </categoryEntries>
   <entryLinks>
     <entryLink name="Hive Tyrant" id="b4c8-927d-0791-6fe1" collective="false" hidden="false" import="true" targetId="5047-398c-1218-a11c" type="selectionEntry"/>
     <entryLink name="Zoanthropes" id="154e-ad17-d83e-43f0" collective="false" hidden="false" import="true" targetId="927e-7594-fe18-1824" type="selectionEntry"/>
@@ -23,153 +18,6 @@
     <entryLink name="Hormagaunt Brood" id="9020-e4b0-ba1a-baea" collective="false" hidden="false" import="true" targetId="0207-1291-2587-cda4" type="selectionEntry"/>
     <entryLink name="Tyranid Dactylis" id="f518-1750-9b6b-69b3" collective="false" hidden="false" import="true" targetId="8398-c660-2467-1542" type="selectionEntry"/>
   </entryLinks>
-  <forceEntries>
-    <forceEntry name="Tyranids" id="3ac3-0c76-b06c-0af8" hidden="false">
-      <categoryLinks>
-        <categoryLink name="Broods" id="30e8-aede-bf64-cc3d" hidden="false" primary="false" targetId="0de2-91d6-86dc-d0bc">
-          <constraints>
-            <constraint id="066c-c46d-7291-d662" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="min" value="0"/>
-            <constraint id="580a-f821-3894-1c26" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="min" value="25"/>
-          </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <comment>When you have no points limit</comment>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-              <modifiers>
-                <modifier field="066c-c46d-7291-d662" type="set" value="-1"/>
-              </modifiers>
-            </modifierGroup>
-            <modifierGroup type="and">
-              <comment>When having a points limit</comment>
-              <modifiers>
-                <modifier field="066c-c46d-7291-d662" type="increment" value="1">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <repeats>
-                    <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="0.25" roundUp="false" scope="roster" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-                <modifier field="580a-f821-3894-1c26" type="set" value="-1">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-        </categoryLink>
-        <categoryLink name="Individuals" id="a7ab-392a-dbd5-f596" hidden="false" primary="false" targetId="1439-f160-c1a8-1061">
-          <constraints>
-            <constraint id="0fcb-b601-1d51-3e63" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="0"/>
-            <constraint id="363e-a5ef-4887-658a" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="max" value="50"/>
-          </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <comment>When you have no points limit</comment>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-              <modifiers>
-                <modifier field="0fcb-b601-1d51-3e63" type="set" value="-1"/>
-              </modifiers>
-            </modifierGroup>
-            <modifierGroup type="and">
-              <comment>When having a points limit</comment>
-              <modifiers>
-                <modifier field="0fcb-b601-1d51-3e63" type="increment" value="1">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <repeats>
-                    <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="0.5" roundUp="false" scope="roster" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-                <modifier field="363e-a5ef-4887-658a" type="set" value="-1">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-        </categoryLink>
-        <categoryLink name=" Support" id="927e-83f0-6ac7-1664" hidden="false" targetId="795f-7f64-4e25-925e">
-          <constraints>
-            <constraint id="a7e9-1175-8f97-4ab1" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="0"/>
-            <constraint id="5278-ee4a-a183-5c7c" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="roster" shared="true" type="max" value="50"/>
-          </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <comment>When you have no points limit</comment>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-              <modifiers>
-                <modifier field="a7e9-1175-8f97-4ab1" type="set" value="-1"/>
-              </modifiers>
-            </modifierGroup>
-            <modifierGroup type="and">
-              <comment>When having a points limit</comment>
-              <modifiers>
-                <modifier field="a7e9-1175-8f97-4ab1" type="increment" value="1">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <repeats>
-                    <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="0.5" roundUp="false" scope="roster" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-                <modifier field="5278-ee4a-a183-5c7c" type="set" value="-1">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-        </categoryLink>
-      </categoryLinks>
-    </forceEntry>
-  </forceEntries>
   <profileTypes>
     <profileType name="Biomorphs" id="584a-05fe-7c57-360c">
       <characteristicTypes>
@@ -396,7 +244,7 @@ Ork Squig Catapult: Any Tyranids not on the catapult list count as &quot;Tyranid
     </profile>
     <profile name="Bio-Plasma Attack" id="240e-8ca9-114f-3c4f" hidden="false" page="66" publicationId="4740-6730-10c0-9b25" typeId="584a-05fe-7c57-360c" typeName="Biomorphs">
       <characteristics>
-        <characteristic name="Biomorphs" typeId="b4c3-8624-ebe7-241c">Move or Fire attack. See Bio-Plasma profile</characteristic>
+        <characteristic name="Biomorphs" typeId="b4c3-8624-ebe7-241c">Move or Fire attack, may not fire another weapon if using Bio-Plasma Attack. See Bio-Plasma profile</characteristic>
       </characteristics>
     </profile>
     <profile name="Adrenaline Sac" id="107d-0c15-4c84-066a" hidden="false" page="66" publicationId="4740-6730-10c0-9b25" typeId="584a-05fe-7c57-360c" typeName="Biomorphs">
@@ -799,6 +647,19 @@ Arms*</characteristic>
         <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">2&quot; Blast. Bio Pods</characteristic>
       </characteristics>
     </profile>
+    <profile name="Teeth &amp; Claws" id="2257-9852-de07-75ae" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">CC Only</characteristic>
+        <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">CC Only</characteristic>
+        <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+        <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+        <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">*</characteristic>
+        <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
+        <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">*</characteristic>
+        <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">S*+D6</characteristic>
+        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Variable Strength / Modifier</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
   <sharedRules>
     <rule name="Lash Whip" id="6a1e-635c-1bed-ca7f" hidden="false" page="52" publicationId="4740-6730-10c0-9b25">
@@ -963,6 +824,21 @@ Closest to attacker is hit</description>
 
 When it rams or charges another vehicle, work out damage to the other vehicle as normal. For the Tyranid vehicle the location that actually touches the other vehicles is hit on a 4+ and other locations are hit on a 6+. Work out damage for any hit locations as normal.</description>
     </rule>
+    <rule name="Exoskeleton" id="a6a5-c706-2918-463e" hidden="false">
+      <description>Armour save cannot ever be modified beyond 5+. May also be taken even when saves are not normally allowed. If a Lictor dodges an attack which uses a template, it can move 2&quot; in any direction. If it fails to escape the area of effect it takes damage as normal. </description>
+    </rule>
+    <rule name="Teeth &amp; Claws" id="f1ea-6ef9-8064-ce7d" hidden="false">
+      <description>Consult the Strength to Save Modifier table:
+
+
+Strength 3 or less: 0
+Strength 4: -1
+Strength 5: -2
+Strength 6: -3
+Strength 7: -4
+Strength 8: -5
+Strength 9 or More: -6</description>
+    </rule>
   </sharedRules>
   <sharedSelectionEntries>
     <selectionEntry name="Bonesword" id="9fdd-6d9e-e4de-e3e4" collective="false" hidden="false" import="true" type="upgrade">
@@ -1076,22 +952,15 @@ When it rams or charges another vehicle, work out damage to the other vehicle as
         <infoLink name="Venom Cannon" id="0723-6a77-bc3a-6099" hidden="false" targetId="78e0-5e04-16da-1012" type="profile"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="Bio-Plasma" id="4a48-469a-c2a0-27a8" collective="false" hidden="false" import="true" type="upgrade">
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-      <infoLinks>
-        <infoLink name="Bio-Plasma" id="0861-2523-4b81-7d71" hidden="false" targetId="15a6-3e91-dfb9-d24a" type="profile"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry name="Hive Tyrant" id="5047-398c-1218-a11c" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Hive Tyrant" id="5047-398c-1218-a11c" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
-        <categoryLink name="Individuals" id="4898-20b6-80e2-652d" hidden="false" primary="true" targetId="1439-f160-c1a8-1061"/>
         <categoryLink name="Tyranids" id="f548-7cda-47c8-5dd1" hidden="false" primary="false" targetId="f209-8cb3-5cae-0f0b"/>
+        <categoryLink name="1Characters" id="6ddb-268d-5d37-37a8" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Tyranid-PrimaryList" id="1ace-fa95-1c9f-fb4a" hidden="false" primary="false" targetId="1805-16ce-e100-585c"/>
       </categoryLinks>
       <constraints>
-        <constraint id="1586-ff1d-b9eb-a0ff" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
-        <constraint id="dd52-e29d-e6cf-5959" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="min" value="1"/>
+        <constraint id="1586-ff1d-b9eb-a0ff" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="0"/>
+        <constraint id="dd52-e29d-e6cf-5959" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="min" value="0"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="points" value="164"/>
@@ -1100,8 +969,10 @@ When it rams or charges another vehicle, work out damage to the other vehicle as
         <entryLink name="Psyker" id="6631-d359-d59f-b1bb" collective="false" hidden="false" import="true" targetId="56e9-7608-b945-ac81" type="selectionEntry">
           <constraints>
             <constraint id="0da8-1b55-35ea-2829" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="1b16-64a4-6fda-204a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
+          <infoLinks>
+            <infoLink name="Psychic Level 4" id="4b4f-94bc-8cce-3e55" hidden="false" targetId="f988-2251-b863-a538" type="profile"/>
+          </infoLinks>
         </entryLink>
         <entryLink name="Army Commander" id="a070-a04d-a84c-b13e" collective="false" hidden="false" import="true" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
           <infoLinks>
@@ -1113,204 +984,47 @@ When it rams or charges another vehicle, work out damage to the other vehicle as
           </infoLinks>
         </entryLink>
         <entryLink name="Tyranid Psychic Powers" id="38dc-b922-0823-7b67" collective="false" hidden="false" import="true" targetId="a896-0e4a-7028-cd01" type="selectionEntryGroup"/>
+        <entryLink name="Chitin Carapace Armour" id="ccde-d066-371b-5865" hidden="false" import="true" targetId="ab33-dfba-9ffc-44ac" type="selectionEntry">
+          <constraints>
+            <constraint id="b355-7ba0-8287-bb2c" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="3ba5-89c5-cd74-d045" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Tyranid Biomorphs" id="ab6a-f7b6-72d1-d9cb" hidden="false" import="true" targetId="e765-eb2d-b1cb-0a96" type="selectionEntryGroup"/>
+        <entryLink name="Teeth &amp; Claws" id="44fc-98f4-8cbe-f524" hidden="false" import="true" targetId="a183-ed61-3d62-99b2" type="selectionEntry">
+          <constraints>
+            <constraint id="c7ce-2f02-5954-c073" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="86d0-4ec7-2f4d-099e" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Hive Tyrant" id="aca5-ade2-29a8-6449" hidden="false" targetId="82a0-d7ee-6f97-8195" type="profile"/>
+        <infoLink name="Hive Tyrant" id="aca5-ade2-29a8-6449" hidden="false" targetId="82a0-d7ee-6f97-8195" type="profile">
+          <modifiers>
+            <modifier field="2e7d-2383-f92f-16f9" type="increment" value="1">
+              <conditions>
+                <condition childId="9a14-7b0f-c912-ea54" childName="Toughened Exoskeleton" field="selections" includeChildSelections="true" scope="5047-398c-1218-a11c" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="5916-04ef-0fd1-6557" type="increment" value="2">
+              <conditions>
+                <condition childId="e587-c377-0421-5c88" childName="Sharpened Claws" field="selections" includeChildSelections="true" scope="5047-398c-1218-a11c" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Leadership" id="6f14-a71d-86b1-ce62" hidden="false" targetId="029d-d831-ac7e-79df" type="rule"/>
         <infoLink name="Terror" id="0135-f341-50bf-5e2f" hidden="false" targetId="05e0-cd40-2d9e-a9f9" type="rule"/>
         <infoLink name="Hive Mind - Tyrant" id="ed87-eb9f-8ec9-670e" hidden="false" targetId="fd95-6aac-8c28-27f0" type="rule"/>
-        <infoLink name="Psychic Level 4" id="cfce-33f1-1804-b3f5" hidden="false" targetId="f988-2251-b863-a538" type="profile"/>
-        <infoLink name="Chitin Carapace Armour" id="1734-7c62-d079-1f1b" hidden="false" targetId="7fa5-c5cb-96e4-4981" type="profile"/>
       </infoLinks>
       <modifiers>
         <modifier field="1586-ff1d-b9eb-a0ff" type="increment" value="1">
           <repeats>
-            <repeat childId="f209-8cb3-5cae-0f0b" field="points" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="roster" shared="true" value="1000"/>
+            <repeat field="limit::points" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="roster" shared="true" value="1000"/>
           </repeats>
         </modifier>
       </modifiers>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Tyranid Biomorphs" id="b049-66cb-3d84-b89c" collective="false" hidden="false" import="true">
-          <constraints>
-            <constraint id="031a-9df8-7b89-d8ef" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry name="Acid Blood" id="f1c3-b8c6-9c23-f35e" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="150c-17a6-dc4b-0200" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Acid Blood" id="2d08-ea28-8134-cbaf" hidden="false" targetId="132f-88ff-538a-df77" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Bio-Plasma Attack" id="cc76-1ff5-1262-3e7a" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="d6b7-72a7-6ae1-5462" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="40"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Bio-Plasma" id="4826-fc6d-adab-168a" hidden="false" targetId="15a6-3e91-dfb9-d24a" type="profile"/>
-                <infoLink name="Bio-Plasma Attack" id="d338-bd31-cddf-2d65" hidden="false" targetId="240e-8ca9-114f-3c4f" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Adrenaline Sac" id="41d3-0ccb-0a9e-98fb" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="ae18-0495-e082-5f98" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Adrenaline Sac" id="fe41-1f68-ba3e-47ad" hidden="false" targetId="107d-0c15-4c84-066a" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Aura of Torment" id="b3ac-1268-20ed-7bb3" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="58c6-bdb3-afbc-789d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Aura of Torment" id="6b74-f7f2-8f53-1937" hidden="false" targetId="e867-5cc5-e640-7611" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Enhanced Senses" id="fda7-757a-80fe-6ed6" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="d21d-9935-6144-6247" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Enhanced Senses" id="149f-3520-b28a-9351" hidden="false" targetId="5355-8025-ba2d-37ca" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Flesh Hooks" id="011e-2054-f403-616a" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="a04b-b32e-dc84-81d8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="7"/>
-              </costs>
-              <entryLinks>
-                <entryLink name="Flesh Hooks" id="0254-c3c7-b3cd-3282" collective="false" hidden="false" import="true" targetId="e7ee-39f7-5c7e-6f15" type="selectionEntry">
-                  <constraints>
-                    <constraint id="64c7-2844-4b43-f13c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                    <constraint id="6797-7105-a75e-6454" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-              <infoLinks>
-                <infoLink name="Flesh Hooks Biomorph" id="e94a-35ca-ad52-969f" hidden="false" targetId="451b-3c43-c56f-6291" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Hardened Carapace" id="2c53-0516-dcef-ac7f" collective="false" hidden="false" import="true" publicationId="4740-6730-10c0-9b25" type="upgrade">
-              <constraints>
-                <constraint id="5a9e-a53c-cf80-921f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Hardened Carapace" id="2ac9-0095-3f2d-b4d1" hidden="false" targetId="11f4-120f-d25e-5069" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Null Zone" id="5e29-38a5-6175-26a9" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="413b-73cf-8196-2c23" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="35"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Null Zone" id="3c9d-3df8-b7a8-59ae" hidden="false" targetId="e90d-359c-bfd3-f0f7" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Optic Membranes" id="cd2a-236b-0987-5bdb" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="ac90-7bed-438e-1b62" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Optic Membranes" id="29a1-79ac-a1ea-e33e" hidden="false" targetId="1a36-cb69-dd91-7fc3" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Regenerate" id="05df-1bb7-6bbb-b85d" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="f34b-dbe0-e7db-3957" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="50"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Regenerate" id="05eb-b6e7-6ddd-6c31" hidden="false" targetId="1c4d-b414-d0c1-e4e7" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Toughened Exoskeleton" id="0eb2-49b7-ad9c-a9b6" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="0cec-1948-d99e-ed18" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Toughened Exoskeleton" id="4f56-034b-fe57-cb92" hidden="false" targetId="82e0-1298-c78d-5b5e" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Sharpened Claws" id="d190-3daa-1ea7-1762" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="2547-08ce-6699-1329" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Sharpened Claws" id="4337-46b3-f533-43a8" hidden="false" targetId="66c3-9362-0c10-d2b8" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Venom Sacs" id="e659-e533-0695-8568" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="3697-7714-1dff-7edf" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Venom Sacs" id="1f40-5b41-bc95-c630" hidden="false" targetId="94ee-d665-a00a-009d" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Voltage Field" id="838c-76d0-137d-cfd3" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="d814-3ade-6724-b1cd" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Voltage Field" id="6e64-856f-cb92-f1ac" hidden="false" targetId="d5eb-113b-6747-b078" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Warp Field" id="df0c-da95-d7df-726c" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="91ef-933b-9656-6f7a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="40"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Warp Field" id="fb7e-6f88-90ee-8a9f" hidden="false" targetId="f9c8-9293-a5b1-917a" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
         <selectionEntryGroup name="Melee Weapons" id="6265-c46e-d096-9e54" collective="false" hidden="false" import="true">
           <constraints>
             <constraint id="df11-904b-0f81-717d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
@@ -1362,10 +1076,10 @@ When it rams or charges another vehicle, work out damage to the other vehicle as
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Zoanthropes" id="927e-7594-fe18-1824" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Zoanthropes" id="927e-7594-fe18-1824" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
-        <categoryLink name="Individuals" id="33a4-bcc4-bbb9-4d0e" hidden="false" primary="true" targetId="1439-f160-c1a8-1061"/>
         <categoryLink name="Tyranids" id="8c32-08d6-4bbd-0725" hidden="false" primary="false" targetId="f209-8cb3-5cae-0f0b"/>
+        <categoryLink name="1Characters" id="2525-c78a-5cc7-a20c" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
@@ -1374,13 +1088,30 @@ When it rams or charges another vehicle, work out damage to the other vehicle as
         <entryLink name="Psyker" id="1501-d8d2-3c90-ede5" collective="false" hidden="false" import="true" targetId="56e9-7608-b945-ac81" type="selectionEntry">
           <constraints>
             <constraint id="1abb-2ea7-e763-f8fc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="6fc5-1921-7d9d-876a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
+          <infoLinks>
+            <infoLink name="Psychic Level 2" id="e932-7a81-9e3e-e365" hidden="false" targetId="76f1-a9ec-f1f7-0162" type="profile"/>
+          </infoLinks>
         </entryLink>
         <entryLink name="Warp Blast" id="51e7-80e1-d20e-046d" collective="false" hidden="false" import="true" targetId="0b48-ca90-cd69-7c76" type="selectionEntry">
           <constraints>
             <constraint id="8fe5-7865-c63a-1f20" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
             <constraint id="068c-bd84-795c-f2c7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <profiles>
+            <profile name="Warp Blast" id="1e12-c483-1a46-c25c" hidden="false" typeId="8169-3a6a-f9ec-e20a" typeName="Psychic Powers">
+              <characteristics>
+                <characteristic name="Force" typeId="f579-6477-67fa-487a">0-3</characteristic>
+                <characteristic name="Range" typeId="cd38-4a91-bbeb-e5e3">24-60</characteristic>
+                <characteristic name="Psychic Power" typeId="0367-ede9-b5f6-4be3">Warp blast has 4 different profiles depending on how many force cards you use</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+        <entryLink name="Teeth &amp; Claws" id="152d-65ab-1873-3558" hidden="false" import="true" targetId="a183-ed61-3d62-99b2" type="selectionEntry">
+          <constraints>
+            <constraint id="1922-9291-1050-3a2a" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="78dc-6f18-408b-5ccd" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -1388,17 +1119,7 @@ When it rams or charges another vehicle, work out damage to the other vehicle as
         <infoLink name="Zoanthropes" id="922f-99ce-3705-f68d" hidden="false" targetId="a373-ade8-6ec9-2ef0" type="profile"/>
         <infoLink name="Leadership" id="d374-27c3-4bf6-d23e" hidden="false" targetId="029d-d831-ac7e-79df" type="rule"/>
         <infoLink name="Fear" id="4e00-d33f-42df-64c5" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
-        <infoLink name="Psychic Level 2" id="644d-3a46-c5b4-913d" hidden="false" targetId="76f1-a9ec-f1f7-0162" type="profile"/>
       </infoLinks>
-      <profiles>
-        <profile name="Warp Blast" id="7b87-135d-e3fd-084b" hidden="false" typeId="8169-3a6a-f9ec-e20a" typeName="Psychic Powers">
-          <characteristics>
-            <characteristic name="Force" typeId="f579-6477-67fa-487a">0-3</characteristic>
-            <characteristic name="Range" typeId="cd38-4a91-bbeb-e5e3">24-60</characteristic>
-            <characteristic name="Psychic Power" typeId="0367-ede9-b5f6-4be3">Warp blast has 4 different profiles depending on how many force cards you use</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <rules>
         <rule name="Zoanthrope Psyker" id="a541-6094-081d-1c03" hidden="false" publicationId="4740-6730-10c0-9b25">
           <description>Psyker but do not draw cards for their powers. They always know Warp Field and Warp Blast. They are fully affected by all the weapons and psychic powers which affect daemons and or psyskers. A Zoanthrope&apos;s close combat attacks count as psychic attacks.</description>
@@ -1478,10 +1199,10 @@ When it rams or charges another vehicle, work out damage to the other vehicle as
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry name="Lictors" id="0e28-f698-333d-1571" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Lictors" id="0e28-f698-333d-1571" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
-        <categoryLink name="Individuals" id="c95f-799b-18b9-35c6" hidden="false" primary="true" targetId="1439-f160-c1a8-1061"/>
         <categoryLink name="Tyranids" id="1adc-0daf-da9f-8cc0" hidden="false" primary="false" targetId="f209-8cb3-5cae-0f0b"/>
+        <categoryLink name="1Characters" id="34ca-86da-95e5-b690" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="96"/>
@@ -1489,215 +1210,61 @@ When it rams or charges another vehicle, work out damage to the other vehicle as
       <entryLinks>
         <entryLink name="Flesh Hooks" id="f735-30f3-fe3b-025f" collective="false" hidden="false" import="true" targetId="e7ee-39f7-5c7e-6f15" type="selectionEntry">
           <constraints>
-            <constraint id="d682-a053-02ba-d930" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="2"/>
-            <constraint id="49cd-00ef-3b59-59fe" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
+            <constraint id="d682-a053-02ba-d930" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="49cd-00ef-3b59-59fe" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Flesh Hooks" id="151b-15c0-2fc7-50fe" hidden="false" targetId="a0e6-e9d4-3c24-fc30" type="profile"/>
+          </infoLinks>
+        </entryLink>
+        <entryLink name="Chitin Carapace Armour" id="c594-3014-b032-5f58" hidden="false" import="true" targetId="ab33-dfba-9ffc-44ac" type="selectionEntry">
+          <constraints>
+            <constraint id="2645-fe44-612b-c472" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="c3b5-e9e7-c8ed-44b1" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Tyranid Biomorphs" id="c791-3d22-2f70-db14" hidden="false" import="true" targetId="e765-eb2d-b1cb-0a96" type="selectionEntryGroup"/>
+        <entryLink name="Teeth &amp; Claws" id="2042-8b63-930e-fe4c" hidden="false" import="true" targetId="a183-ed61-3d62-99b2" type="selectionEntry">
+          <constraints>
+            <constraint id="e236-46ec-4039-008f" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="fdbf-0133-9fad-eccd" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
           </constraints>
         </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Fear" id="7f6a-f070-3554-07f1" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
-        <infoLink name="Lictor" id="7ec4-dcca-26aa-d6fb" hidden="false" targetId="b2af-14ab-73f4-05ad" type="profile"/>
+        <infoLink name="Lictor" id="7ec4-dcca-26aa-d6fb" hidden="false" targetId="b2af-14ab-73f4-05ad" type="profile">
+          <modifiers>
+            <modifier field="2e7d-2383-f92f-16f9" type="increment" value="1">
+              <conditions>
+                <condition childId="9a14-7b0f-c912-ea54" childName="Toughened Exoskeleton" field="selections" includeChildSelections="true" scope="0e28-f698-333d-1571" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="5916-04ef-0fd1-6557" type="increment" value="2">
+              <conditions>
+                <condition childId="e587-c377-0421-5c88" childName="Sharpened Claws" field="selections" includeChildSelections="true" scope="0e28-f698-333d-1571" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Chameleon Scales" id="56f0-ffd8-673e-0d3f" hidden="false" targetId="c8b0-8316-107e-ab44" type="rule"/>
         <infoLink name="Leadership" id="aa16-2f62-c877-4a9b" hidden="false" targetId="029d-d831-ac7e-79df" type="rule"/>
         <infoLink name="Poison" id="6fda-3263-3c88-b55f" hidden="false" targetId="d31a-8352-14b8-27d6" type="rule"/>
         <infoLink name="Hiding" id="6667-0002-80a3-821f" hidden="false" targetId="0ed3-af90-812e-9646" type="rule"/>
         <infoLink name="Infiltration" id="250c-d828-2034-10ca" hidden="false" targetId="f4b6-ebd6-edee-8d7e" type="rule"/>
         <infoLink name="Acute Senses" id="520f-03fe-bf1b-f8a3" hidden="false" targetId="65ac-8308-b233-fe21" type="rule"/>
-        <infoLink name="Exoskeleton" id="ea1b-e0d6-5ffd-0373" hidden="false" targetId="683b-ffb8-4792-29ef" type="profile"/>
+        <infoLink name="Exoskeleton" id="161f-1794-564c-cf50" hidden="false" targetId="a6a5-c706-2918-463e" type="rule"/>
       </infoLinks>
       <rules>
         <rule name="Lictor Fleshhooks" id="a458-f10a-2a1b-89d4" hidden="false" page="21" publicationId="4740-6730-10c0-9b25">
           <description>A Lictor can fire 2 Flesh Hooks in the shooting phase</description>
         </rule>
       </rules>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Tyranid Biomorphs" id="30b5-1224-1f84-1df8" collective="false" hidden="false" import="true">
-          <constraints>
-            <constraint id="29b2-bc7b-4f94-f1f8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry name="Acid Blood" id="76c6-b863-ca1b-7499" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="bb84-9793-23fd-208c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Acid Blood" id="8daa-698a-d0f3-59c7" hidden="false" targetId="132f-88ff-538a-df77" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Bio-Plasma Attack" id="7a1d-0b5d-3856-f88f" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="756e-fb53-c715-eb25" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="40"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Bio-Plasma" id="cf20-3046-730f-3577" hidden="false" targetId="15a6-3e91-dfb9-d24a" type="profile"/>
-                <infoLink name="Bio-Plasma Attack" id="110d-45b9-e9cc-9247" hidden="false" targetId="240e-8ca9-114f-3c4f" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Adrenaline Sac" id="3300-d761-d231-dd5b" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="6162-f667-c270-0ac1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Adrenaline Sac" id="d8c0-7c72-2e91-5c90" hidden="false" targetId="107d-0c15-4c84-066a" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Aura of Torment" id="1636-a27a-6151-8ef6" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="9a12-4e17-1ea6-ddd8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Aura of Torment" id="6cc4-85aa-8597-a8a4" hidden="false" targetId="e867-5cc5-e640-7611" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Enhanced Senses" id="6aba-146b-23f0-6397" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="702a-a97d-82ab-d2d3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Enhanced Senses" id="e666-5aff-2337-d6c3" hidden="false" targetId="5355-8025-ba2d-37ca" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Flesh Hooks" id="f79b-05a7-6cfb-7adf" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="075a-3d46-3509-647e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="7"/>
-              </costs>
-              <entryLinks>
-                <entryLink name="Flesh Hooks" id="b7b0-36df-513e-ef88" collective="false" hidden="false" import="true" targetId="e7ee-39f7-5c7e-6f15" type="selectionEntry">
-                  <constraints>
-                    <constraint id="00dd-def0-02c4-f70b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                    <constraint id="b9f8-635a-357b-0f02" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-              <infoLinks>
-                <infoLink name="Flesh Hooks Biomorph" id="ad5f-88c2-b948-16c7" hidden="false" targetId="451b-3c43-c56f-6291" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Hardened Carapace" id="2544-3a1a-1d9f-329c" collective="false" hidden="false" import="true" publicationId="4740-6730-10c0-9b25" type="upgrade">
-              <constraints>
-                <constraint id="597c-ab57-2be8-1032" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Hardened Carapace" id="25a5-55db-f4e5-8bcc" hidden="false" targetId="11f4-120f-d25e-5069" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Null Zone" id="6d86-7729-0494-b538" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="a66d-6f4f-f3be-7538" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="35"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Null Zone" id="7e53-a158-a94b-f6e4" hidden="false" targetId="e90d-359c-bfd3-f0f7" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Optic Membranes" id="23a8-ef52-e371-6e0a" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="4599-8da5-30c7-e429" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Optic Membranes" id="5a80-13ea-38b9-c521" hidden="false" targetId="1a36-cb69-dd91-7fc3" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Regenerate" id="57dc-7b7c-3b89-d5cf" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="13d0-fbd8-c456-72f6" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="30"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Regenerate" id="7edc-64e0-b1c0-916a" hidden="false" targetId="1c4d-b414-d0c1-e4e7" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Toughened Exoskeleton" id="b4cf-15a6-9be4-2242" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="30ec-fd4b-af0b-a2b1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Toughened Exoskeleton" id="d218-199f-d95f-afcf" hidden="false" targetId="82e0-1298-c78d-5b5e" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Sharpened Claws" id="9bfb-ae1a-8604-26bd" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="80aa-647e-80e4-61ee" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Sharpened Claws" id="ee8d-c05a-4ad0-80d5" hidden="false" targetId="66c3-9362-0c10-d2b8" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Venom Sacs" id="4793-bed4-7591-d86f" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="e406-3e39-412e-f4b7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Venom Sacs" id="6463-5b66-e794-3e32" hidden="false" targetId="94ee-d665-a00a-009d" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Voltage Field" id="1cf4-7852-dfcb-ee9d" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="8baa-1d05-0ed6-9597" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Voltage Field" id="7740-85a0-d7b7-d564" hidden="false" targetId="d5eb-113b-6747-b078" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Warp Field" id="6e06-02a3-56bf-1166" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="6d71-86dc-b45c-9f87" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="40"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Warp Field" id="1192-eeaa-5908-4c03" hidden="false" targetId="f9c8-9293-a5b1-917a" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Tyranid Warrior Brood" id="7622-bab0-4e89-237d" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Tyranid Warrior Brood" id="7622-bab0-4e89-237d" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink name="Broods" id="1944-bfd2-a12f-aed6" hidden="false" primary="true" targetId="0de2-91d6-86dc-d0bc"/>
         <categoryLink name="Tyranids" id="e6b2-22b2-fe93-2047" hidden="false" primary="false" targetId="f209-8cb3-5cae-0f0b"/>
+        <categoryLink name="2Squads" id="6d9c-43b6-5134-b486" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
@@ -1716,9 +1283,29 @@ When it rams or charges another vehicle, work out damage to the other vehicle as
           <costs>
             <cost name="pts" typeId="points" value="55"/>
           </costs>
+          <entryLinks>
+            <entryLink name="Chitin Carapace Armour" id="e402-ad9d-d344-d244" hidden="false" import="true" targetId="ab33-dfba-9ffc-44ac" type="selectionEntry">
+              <constraints>
+                <constraint id="ce91-ea9c-a61d-e55d" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="ecf9-76d8-629a-a060" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
           <infoLinks>
-            <infoLink name="Tyranid Warrior" id="afe8-ed38-8e1a-02ea" hidden="false" targetId="5ed4-de11-9204-42f8" type="profile"/>
-            <infoLink name="Chitinous Armour" id="3f7d-085d-cbea-1c69" hidden="false" targetId="1a56-f7ec-afd4-de11" type="profile"/>
+            <infoLink name="Tyranid Warrior" id="afe8-ed38-8e1a-02ea" hidden="false" targetId="5ed4-de11-9204-42f8" type="profile">
+              <modifiers>
+                <modifier field="2e7d-2383-f92f-16f9" type="increment" value="1">
+                  <conditions>
+                    <condition childId="5791-176b-d039-e9c8" childName="Toughened Exoskeleton" field="selections" includeChildSelections="true" scope="7622-bab0-4e89-237d" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                </modifier>
+                <modifier field="5916-04ef-0fd1-6557" type="increment" value="2">
+                  <conditions>
+                    <condition childId="92b2-c95e-f0b1-541f" childName="Sharpened Claws" field="selections" includeChildSelections="true" scope="7622-bab0-4e89-237d" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Weapon Options" id="7762-0920-5b91-8c54" collective="false" defaultSelectionEntryId="528d-b868-ce4d-2083" hidden="false" import="true">
@@ -1776,6 +1363,9 @@ When it rams or charges another vehicle, work out damage to the other vehicle as
                   </modifiers>
                 </entryLink>
               </entryLinks>
+              <modifiers>
+                <modifier field="info" type="add" value="Each Warrior will have the same weapon chosen - if you want to have individual loadouts click the + sign at the top to give them unique equipment"/>
+              </modifiers>
               <selectionEntries>
                 <selectionEntry name="Two Boneswords" id="528d-b868-ce4d-2083" collective="false" hidden="false" import="true" type="upgrade">
                   <costs>
@@ -2122,10 +1712,10 @@ When it rams or charges another vehicle, work out damage to the other vehicle as
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Genestealer Brood" id="27e9-c638-cca6-7cd6" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Genestealer Brood" id="27e9-c638-cca6-7cd6" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink name="Broods" id="462e-7082-4615-748a" hidden="false" primary="true" targetId="0de2-91d6-86dc-d0bc"/>
         <categoryLink name="Tyranids" id="8810-814f-2103-d420" hidden="false" primary="false" targetId="f209-8cb3-5cae-0f0b"/>
+        <categoryLink name="2Squads" id="da3f-ceb2-aabd-eb62" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
@@ -2135,7 +1725,7 @@ When it rams or charges another vehicle, work out damage to the other vehicle as
         <infoLink name="Immune to Psychology" id="61c7-4457-a0bc-bd4f" hidden="false" targetId="8fb6-dd3b-4958-9616" type="rule"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry name="Genestealers" id="cb6e-bb1a-2fdc-38fd" collective="false" hidden="false" import="true" type="upgrade">
+        <selectionEntry name="Genestealers" id="cb6e-bb1a-2fdc-38fd" collective="false" hidden="false" import="true" type="model">
           <constraints>
             <constraint id="4e41-48d3-d722-c021" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="6"/>
             <constraint id="fffd-75ac-c2eb-dc2a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="12"/>
@@ -2143,23 +1733,36 @@ When it rams or charges another vehicle, work out damage to the other vehicle as
           <costs>
             <cost name="pts" typeId="points" value="28"/>
           </costs>
+          <entryLinks>
+            <entryLink name="Chitin Carapace Armour" id="054c-d77e-343f-80e9" hidden="false" import="true" targetId="ab33-dfba-9ffc-44ac" type="selectionEntry">
+              <constraints>
+                <constraint id="f679-8507-4d87-b74a" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="db91-2652-44e5-b19d" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+            <entryLink name="Teeth &amp; Claws" id="e797-db01-10d7-6f47" hidden="false" import="true" targetId="a183-ed61-3d62-99b2" type="selectionEntry">
+              <constraints>
+                <constraint id="28ec-0297-f3a6-3d51" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="3dd4-c350-6c4b-7668" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
           <infoLinks>
-            <infoLink name="Chitinous Armour" id="06b2-6c72-f035-9c37" hidden="false" targetId="1a56-f7ec-afd4-de11" type="profile"/>
             <infoLink name="Genestealers" id="8792-b2da-6158-f493" hidden="false" targetId="21ee-a1e4-8a60-e460" type="profile"/>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry name="Termagant Brood" id="8ef6-0800-7990-8c8b" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Termagant Brood" id="8ef6-0800-7990-8c8b" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink name="Broods" id="68af-11c5-5173-d932" hidden="false" primary="true" targetId="0de2-91d6-86dc-d0bc"/>
         <categoryLink name="Tyranids" id="9519-3df6-19ff-bf17" hidden="false" primary="false" targetId="f209-8cb3-5cae-0f0b"/>
+        <categoryLink name="2Squads" id="9d82-d7ee-e76a-4372" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <selectionEntries>
-        <selectionEntry name="Termagant" id="f1bc-15c8-0d15-ceca" collective="false" hidden="false" import="true" type="upgrade">
+        <selectionEntry name="Termagant" id="f1bc-15c8-0d15-ceca" collective="false" hidden="false" import="true" type="model">
           <constraints>
             <constraint id="7031-406f-c225-c73c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="6"/>
             <constraint id="b18d-1c97-354b-336b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="24"/>
@@ -2206,10 +1809,10 @@ When it rams or charges another vehicle, work out damage to the other vehicle as
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Hormagaunt Brood" id="0207-1291-2587-cda4" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Hormagaunt Brood" id="0207-1291-2587-cda4" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink name="Broods" id="b53f-1677-05a3-15b5" hidden="false" primary="true" targetId="0de2-91d6-86dc-d0bc"/>
         <categoryLink name="Tyranids" id="cac2-ba79-67cb-19c7" hidden="false" primary="false" targetId="f209-8cb3-5cae-0f0b"/>
+        <categoryLink name="2Squads" id="e6e6-271c-d01b-0ba2" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
@@ -2218,7 +1821,7 @@ When it rams or charges another vehicle, work out damage to the other vehicle as
         <infoLink name="Leap" id="717f-9d4d-0aad-ac55" hidden="false" targetId="bf61-3098-5a1c-4ffc" type="rule"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry name="Hormagaunt" id="8c4f-6e97-3d5f-9c98" collective="false" hidden="false" import="true" type="upgrade">
+        <selectionEntry name="Hormagaunt" id="8c4f-6e97-3d5f-9c98" collective="false" hidden="false" import="true" type="model">
           <constraints>
             <constraint id="1951-729a-bf47-e502" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="24"/>
             <constraint id="490b-1104-8152-1832" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="6"/>
@@ -2226,16 +1829,24 @@ When it rams or charges another vehicle, work out damage to the other vehicle as
           <costs>
             <cost name="pts" typeId="points" value="8"/>
           </costs>
+          <entryLinks>
+            <entryLink name="Teeth &amp; Claws" id="df96-0d13-0a33-b32e" hidden="false" import="true" targetId="a183-ed61-3d62-99b2" type="selectionEntry">
+              <constraints>
+                <constraint id="1e57-bf71-d23b-d592" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="7689-4f40-d775-3fc6" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
           <infoLinks>
             <infoLink name="Hormagaunt" id="ee60-ea75-d4fe-67cf" hidden="false" targetId="53a2-b04b-1d50-85b6" type="profile"/>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry name="Gargoyle Brood" id="4982-8ffd-8731-f0ef" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Gargoyle Brood" id="4982-8ffd-8731-f0ef" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink name="Broods" id="4590-ff23-6355-b768" hidden="false" primary="true" targetId="0de2-91d6-86dc-d0bc"/>
         <categoryLink name="Tyranids" id="c4e3-a897-e8fb-88a8" hidden="false" primary="false" targetId="f209-8cb3-5cae-0f0b"/>
+        <categoryLink name="2Squads" id="b0d8-2ce6-6417-4382" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
@@ -2253,7 +1864,7 @@ When it rams or charges another vehicle, work out damage to the other vehicle as
         <infoLink name="Gargoyle Close Combat" id="823a-757e-0036-5aaf" hidden="false" targetId="fbec-a6f0-8fc5-c910" type="rule"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry name="Gargoyle" id="1247-d419-330d-8ffc" collective="false" hidden="false" import="true" type="upgrade">
+        <selectionEntry name="Gargoyle" id="1247-d419-330d-8ffc" collective="false" hidden="false" import="true" type="model">
           <constraints>
             <constraint id="65b2-92b3-8c87-0d24" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="6"/>
             <constraint id="f49a-7e08-7511-cd5c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="12"/>
@@ -2267,18 +1878,45 @@ When it rams or charges another vehicle, work out damage to the other vehicle as
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry name="Carnifex" id="b51f-1350-df11-3ea8" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Carnifex" id="b51f-1350-df11-3ea8" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
-        <categoryLink name=" Support" id="6673-304a-20bc-6fc0" hidden="false" primary="true" targetId="795f-7f64-4e25-925e"/>
         <categoryLink name="Tyranids" id="6a8b-d449-eaa2-0502" hidden="false" primary="false" targetId="f209-8cb3-5cae-0f0b"/>
+        <categoryLink name="3Support" id="a0f7-7989-023c-4734" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="199"/>
       </costs>
+      <entryLinks>
+        <entryLink name="Teeth &amp; Claws" id="fbe5-6a2c-9585-1afe" hidden="false" import="true" targetId="a183-ed61-3d62-99b2" type="selectionEntry">
+          <constraints>
+            <constraint id="486c-93aa-5873-da0c" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="c0c0-a3d3-6dbd-7ca5" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Chitin Carapace Armour" id="1122-beb1-08ad-49b2" hidden="false" import="true" targetId="ab33-dfba-9ffc-44ac" type="selectionEntry">
+          <constraints>
+            <constraint id="7948-e775-843f-2df9" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="5ac9-3d59-a960-244e" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Tyranid Biomorphs" id="d8ac-103f-8bb4-3f1b" hidden="false" import="true" targetId="e765-eb2d-b1cb-0a96" type="selectionEntryGroup"/>
+      </entryLinks>
       <infoLinks>
-        <infoLink name="Carnifex" id="8fc0-b476-a72e-88e9" hidden="false" targetId="9752-ff55-3fbe-6d10" type="profile"/>
+        <infoLink name="Carnifex" id="8fc0-b476-a72e-88e9" hidden="false" targetId="9752-ff55-3fbe-6d10" type="profile">
+          <modifiers>
+            <modifier field="2e7d-2383-f92f-16f9" type="increment" value="1">
+              <conditions>
+                <condition childId="9a14-7b0f-c912-ea54" childName="Toughened Exoskeleton" field="selections" includeChildSelections="true" scope="b51f-1350-df11-3ea8" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="5916-04ef-0fd1-6557" type="increment" value="2">
+              <conditions>
+                <condition childId="e587-c377-0421-5c88" childName="Sharpened Claws" field="selections" includeChildSelections="true" scope="b51f-1350-df11-3ea8" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Terror" id="6558-d413-34e7-2172" hidden="false" targetId="05e0-cd40-2d9e-a9f9" type="rule"/>
-        <infoLink name="Carnifex Chitin Carapace" id="083e-a9c7-8421-ac5d" hidden="false" targetId="9eb8-0783-7700-2c25" type="profile"/>
         <infoLink name="Immune to Psychology" id="75c2-a5ad-a0ad-d4bd" hidden="false" targetId="8fb6-dd3b-4958-9616" type="rule"/>
       </infoLinks>
       <rules>
@@ -2301,194 +1939,11 @@ When it rams or charges another vehicle, work out damage to the other vehicle as
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Tyranid Biomorphs" id="201e-367f-1493-d867" collective="false" hidden="false" import="true">
-          <constraints>
-            <constraint id="81ae-36af-b920-3de7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry name="Acid Blood" id="308f-2268-e875-116d" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="0adb-3f7e-da50-1d6a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Acid Blood" id="89cb-1fc9-e450-0af2" hidden="false" targetId="132f-88ff-538a-df77" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Bio-Plasma Attack" id="7b21-4a25-cdb1-389b" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="59f5-1655-dfbb-cd6a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="40"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Bio-Plasma" id="91f7-5cc6-0a2c-1702" hidden="false" targetId="15a6-3e91-dfb9-d24a" type="profile"/>
-                <infoLink name="Bio-Plasma Attack" id="51bf-a4b7-eaa6-4557" hidden="false" targetId="240e-8ca9-114f-3c4f" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Adrenaline Sac" id="1211-88ff-b4a3-4e46" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="2396-8035-3156-fcd1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Adrenaline Sac" id="e28d-5639-be51-3a90" hidden="false" targetId="107d-0c15-4c84-066a" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Aura of Torment" id="4ac7-ddb7-1337-9296" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="adbf-7dfb-fbe8-dbc0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Aura of Torment" id="13ca-b70b-429b-412d" hidden="false" targetId="e867-5cc5-e640-7611" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Enhanced Senses" id="1f69-d950-f53f-6331" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="1a10-79a1-9100-ad36" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Enhanced Senses" id="9379-7c85-8eb0-e632" hidden="false" targetId="5355-8025-ba2d-37ca" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Flesh Hooks" id="d312-6dfe-407e-5dfa" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="5d76-a4a9-f67d-5973" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="7"/>
-              </costs>
-              <entryLinks>
-                <entryLink name="Flesh Hooks" id="d04e-48b3-71d7-7203" collective="false" hidden="false" import="true" targetId="e7ee-39f7-5c7e-6f15" type="selectionEntry">
-                  <constraints>
-                    <constraint id="de7d-6f5d-403b-0b8c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                    <constraint id="d52a-d62f-be5c-48b9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-              <infoLinks>
-                <infoLink name="Flesh Hooks Biomorph" id="4975-f1a9-5062-b7c0" hidden="false" targetId="451b-3c43-c56f-6291" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Hardened Carapace" id="c339-dbb1-31b4-5447" collective="false" hidden="false" import="true" publicationId="4740-6730-10c0-9b25" type="upgrade">
-              <constraints>
-                <constraint id="2f6e-dfd2-be30-a4ff" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Hardened Carapace" id="ddff-5e8a-271b-8572" hidden="false" targetId="11f4-120f-d25e-5069" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Null Zone" id="8321-4a5f-0e02-a471" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="fc40-bc08-5970-e3ed" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="35"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Null Zone" id="d246-d2a8-f599-0ccb" hidden="false" targetId="e90d-359c-bfd3-f0f7" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Optic Membranes" id="83c0-01c1-4649-bd62" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="6cf8-9db7-dccb-f602" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Optic Membranes" id="51b4-f77f-22f8-f76f" hidden="false" targetId="1a36-cb69-dd91-7fc3" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Regenerate" id="3f4b-e24c-0fe9-a299" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="195e-d4c9-d7bb-5ba0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="100"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Regenerate" id="ff47-a146-2805-4c83" hidden="false" targetId="1c4d-b414-d0c1-e4e7" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Toughened Exoskeleton" id="5f1e-c6f3-82e3-39b7" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="fc78-d0ab-dcb0-6521" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Toughened Exoskeleton" id="201e-e586-c931-f5f9" hidden="false" targetId="82e0-1298-c78d-5b5e" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Sharpened Claws" id="39e7-535c-5df7-4736" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="51fa-4d2a-e5e9-5d6b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Sharpened Claws" id="0a86-95ad-96cf-a1dc" hidden="false" targetId="66c3-9362-0c10-d2b8" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Venom Sacs" id="a91e-3b71-8245-2632" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="9f57-ad69-e13f-f3c9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Venom Sacs" id="7fb6-3022-d95c-d689" hidden="false" targetId="94ee-d665-a00a-009d" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Voltage Field" id="d5d3-6a01-c6de-4686" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="4a67-4af2-9294-6902" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Voltage Field" id="1c65-d7f1-618a-f954" hidden="false" targetId="d5eb-113b-6747-b078" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry name="Warp Field" id="c32b-56bb-0a3c-68fe" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="71fd-5888-d169-d3e3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="40"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Warp Field" id="d609-35a1-74f2-ee93" hidden="false" targetId="f9c8-9293-a5b1-917a" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Ripper Swarm" id="002d-4b1c-aae9-e6c4" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Ripper Swarm" id="002d-4b1c-aae9-e6c4" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink name=" Support" id="14e8-6117-871a-5982" hidden="false" primary="true" targetId="795f-7f64-4e25-925e"/>
         <categoryLink name="Tyranids" id="ec73-5cb4-7436-8508" hidden="false" primary="false" targetId="f209-8cb3-5cae-0f0b"/>
+        <categoryLink name="3Support" id="7d20-f2ea-f295-0c53" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <constraints>
         <constraint id="5ecc-a082-8333-fdbd" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -2504,20 +1959,31 @@ When it rams or charges another vehicle, work out damage to the other vehicle as
         <infoLink name="Leadership" id="e9a5-eba0-1950-105b" hidden="false" targetId="029d-d831-ac7e-79df" type="rule"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry name="Ripper Swarm" id="39d4-5c94-c568-21d2" collective="false" hidden="false" import="true" type="upgrade">
+        <selectionEntry name="Ripper Swarm" id="39d4-5c94-c568-21d2" collective="false" hidden="false" import="true" type="model">
+          <constraints>
+            <constraint id="2950-7d48-8aa7-c9b1" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
           <costs>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
+          <entryLinks>
+            <entryLink name="Teeth &amp; Claws" id="6a02-f87f-aba1-3251" hidden="false" import="true" targetId="a183-ed61-3d62-99b2" type="selectionEntry">
+              <constraints>
+                <constraint id="6e2c-3b60-5b65-c4db" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="b212-61fe-a21e-6dc9" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
           <infoLinks>
             <infoLink name="Ripper Swarm" id="16d0-e532-c8a6-46da" hidden="false" targetId="7d0c-a485-9852-7c48" type="profile"/>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry name="Biovores" id="f0aa-a3fc-e732-ce86" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Biovores" id="f0aa-a3fc-e732-ce86" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
-        <categoryLink name=" Support" id="4684-698b-3de8-04d2" hidden="false" primary="true" targetId="795f-7f64-4e25-925e"/>
         <categoryLink name="Tyranids" id="e433-b215-dfcf-4ed7" hidden="false" primary="false" targetId="f209-8cb3-5cae-0f0b"/>
+        <categoryLink name="3Support" id="62da-bbb1-a918-17e9" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <constraints>
         <constraint id="3628-ae16-2d81-b637" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -2531,6 +1997,12 @@ When it rams or charges another vehicle, work out damage to the other vehicle as
             <constraint id="697d-4dfa-b7db-4701" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="6"/>
           </constraints>
         </entryLink>
+        <entryLink name="Teeth &amp; Claws" id="b942-8bdc-a156-0d43" hidden="false" import="true" targetId="a183-ed61-3d62-99b2" type="selectionEntry">
+          <constraints>
+            <constraint id="6fca-3ccc-ba68-658d" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="772f-783b-9a9c-b2e1" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Biovore" id="9c90-fdac-4276-ee63" hidden="false" targetId="0065-5668-8986-4b9c" type="profile"/>
@@ -2538,7 +2010,7 @@ When it rams or charges another vehicle, work out damage to the other vehicle as
       <modifiers>
         <modifier field="3628-ae16-2d81-b637" type="increment" value="1">
           <repeats>
-            <repeat childId="f209-8cb3-5cae-0f0b" field="points" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="roster" shared="true" value="750"/>
+            <repeat field="limit::points" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="roster" shared="true" value="750"/>
           </repeats>
         </modifier>
       </modifiers>
@@ -2556,10 +2028,10 @@ If the spore mine lands within 1&quot; of the non-Tyranid model it explodes imme
         </rule>
       </rules>
     </selectionEntry>
-    <selectionEntry name="Spore Mine" id="3bbe-cef1-f452-5191" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Spore Mine" id="3bbe-cef1-f452-5191" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Tyranids" id="5505-e047-6f9c-3105" hidden="false" primary="false" targetId="f209-8cb3-5cae-0f0b"/>
-        <categoryLink name=" Support" id="d25c-156e-17c9-bcc4" hidden="false" primary="true" targetId="795f-7f64-4e25-925e"/>
+        <categoryLink name="3Support" id="0d5e-1a25-75d4-30c0" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="10"/>
@@ -2610,10 +2082,10 @@ Crewman hit by the spreading rot take their armour save or suffer 1 wound</descr
         </rule>
       </rules>
     </selectionEntry>
-    <selectionEntry name="Tyranid Haruspex" id="2387-26e1-f400-7bf0" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Tyranid Haruspex" id="2387-26e1-f400-7bf0" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
-        <categoryLink name=" Support" id="8774-3f5c-4ca3-95cf" hidden="false" primary="true" targetId="795f-7f64-4e25-925e"/>
         <categoryLink name="Tyranids" id="7c32-2547-f7f3-1816" hidden="false" primary="false" targetId="f209-8cb3-5cae-0f0b"/>
+        <categoryLink name="3Support" id="2f04-4c87-81dc-86ae" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="250"/>
@@ -2716,10 +2188,10 @@ Crewman hit by the spreading rot take their armour save or suffer 1 wound</descr
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry name="Tyranid Malefactor" id="0ea3-c0f5-5b5f-8756" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Tyranid Malefactor" id="0ea3-c0f5-5b5f-8756" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
-        <categoryLink name=" Support" id="ed52-4cab-0e7d-3175" hidden="false" primary="true" targetId="795f-7f64-4e25-925e"/>
         <categoryLink name="Tyranids" id="5e4c-7bd7-016a-1971" hidden="false" primary="false" targetId="f209-8cb3-5cae-0f0b"/>
+        <categoryLink name="3Support" id="c87e-8ed3-d5d3-e629" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="80"/>
@@ -2774,10 +2246,10 @@ Crewman hit by the spreading rot take their armour save or suffer 1 wound</descr
         </rule>
       </rules>
     </selectionEntry>
-    <selectionEntry name="Tyranid Exocrine" id="874b-b669-16bb-4404" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Tyranid Exocrine" id="874b-b669-16bb-4404" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
-        <categoryLink name=" Support" id="89eb-397e-3364-d9f5" hidden="false" primary="true" targetId="795f-7f64-4e25-925e"/>
         <categoryLink name="Tyranids" id="d286-d60e-f09f-eaa8" hidden="false" primary="false" targetId="f209-8cb3-5cae-0f0b"/>
+        <categoryLink name="3Support" id="7071-16d0-36e6-e444" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="165"/>
@@ -2819,10 +2291,10 @@ Crewman hit by the spreading rot take their armour save or suffer 1 wound</descr
         <infoLink name="Bio-Cannon" id="8da1-e55e-00a4-2a86" hidden="false" targetId="5848-e43c-41a4-62cd" type="profile"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="Tyranid Dactylis" id="8398-c660-2467-1542" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Tyranid Dactylis" id="8398-c660-2467-1542" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Tyranids" id="07da-b36c-904e-94ba" hidden="false" primary="false" targetId="f209-8cb3-5cae-0f0b"/>
-        <categoryLink name=" Support" id="6fef-c0bd-7aef-0406" hidden="false" primary="true" targetId="795f-7f64-4e25-925e"/>
+        <categoryLink name="3Support" id="a86e-6e13-dbef-1890" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="200"/>
@@ -2855,6 +2327,51 @@ Crewman hit by the spreading rot take their armour save or suffer 1 wound</descr
       <infoLinks>
         <infoLink name="Bile Pods" id="2ed1-4778-5ac4-1409" hidden="false" targetId="9c2f-8b39-6eb3-6f7c" type="rule"/>
         <infoLink name="Bile Pods" id="8555-e319-6f1f-48db" hidden="false" targetId="bd44-904c-6150-f055" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Chitin Carapace Armour" id="ab33-dfba-9ffc-44ac" hidden="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink name="Chitin Carapace Armour" id="8562-daa9-c270-7b4d" hidden="false" targetId="7fa5-c5cb-96e4-4981" type="profile">
+          <modifiers>
+            <modifier field="b439-323a-9cfe-6340" type="set" value="5+">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="0e28-f698-333d-1571" childName="Lictors" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="07b1-40d8-2b51-9225" childName="Tyranid Warrior" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="27e9-c638-cca6-7cd6" childName="Genestealer Brood" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="7622-bab0-4e89-237d" childName="Tyranid Warrior Brood" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="b7f1-73cd-d19d-26a6" type="set" value="Cannot be modified and may be taken even when saves are not allowed">
+              <conditions>
+                <condition childId="0e28-f698-333d-1571" childName="Lictors" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="b439-323a-9cfe-6340" type="set" value="3+">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="b51f-1350-df11-3ea8" childName="Carnifex" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="b7f1-73cd-d19d-26a6" type="set" value="Make save on 2D6">
+              <conditions>
+                <condition childId="b51f-1350-df11-3ea8" childName="Carnifex" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Teeth &amp; Claws" id="a183-ed61-3d62-99b2" hidden="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink name="Teeth &amp; Claws" id="1dc6-638f-a7ce-290d" hidden="false" targetId="2257-9852-de07-75ae" type="profile"/>
+        <infoLink name="Teeth &amp; Claws" id="1a8c-34f6-fd41-11a3" hidden="false" targetId="f1ea-6ef9-8064-ce7d" type="rule"/>
       </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -2979,6 +2496,23 @@ Crewman hit by the spreading rot take their armour save or suffer 1 wound</descr
           <infoLinks>
             <infoLink name="Regenerate" id="4db9-4092-a2ae-1439" hidden="false" targetId="1c4d-b414-d0c1-e4e7" type="profile"/>
           </infoLinks>
+          <modifiers>
+            <modifier field="points" type="set" value="50">
+              <conditions>
+                <condition childId="5047-398c-1218-a11c" childName="Hive Tyrant" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="points" type="set" value="30">
+              <conditions>
+                <condition childId="0e28-f698-333d-1571" childName="Lictors" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="points" type="set" value="100">
+              <conditions>
+                <condition childId="b51f-1350-df11-3ea8" childName="Carnifex" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry name="Toughened Exoskeleton" id="9a14-7b0f-c912-ea54" collective="false" hidden="false" import="true" type="upgrade">
           <constraints>

@@ -1347,7 +1347,7 @@ See datafax for full damage table</description>
     <selectionEntry name="Avatar of Khaine" id="6b71-72c9-9b6b-c5b4" collective="false" hidden="false" import="true" publicationId="71ba-82e2-d83c-d33d" type="model">
       <categoryLinks>
         <categoryLink name="Eldar" id="7d1b-1784-5f12-19ca" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
-        <categoryLink name="1Characters" id="2e72-0847-b630-89f4" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="2e72-0847-b630-89f4" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="eae1-5fef-9154-4205" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -1411,7 +1411,7 @@ See datafax for full damage table</description>
     <selectionEntry name="Exarch" id="0e43-fd2c-3016-2375" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Eldar" id="800a-9b7b-f2d6-c918" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
-        <categoryLink name="1Characters" id="1538-6b1a-4036-2ba7" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="1538-6b1a-4036-2ba7" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="64b9-a2fd-f6a7-da26" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="0"/>
@@ -1512,7 +1512,7 @@ See datafax for full damage table</description>
     <selectionEntry name="Farseer" id="d50f-39db-d7c3-2f0e" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Eldar" id="073d-d4e8-df37-cb02" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
-        <categoryLink name="1Characters" id="4efa-d6dd-2e8d-7c5f" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="4efa-d6dd-2e8d-7c5f" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="89e7-9508-75cb-f9a7" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="max" value="1"/>
@@ -1601,7 +1601,7 @@ See datafax for full damage table</description>
     <selectionEntry name="Exodite Lord" id="0eaf-25be-62e7-8fac" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Eldar" id="589a-12a3-8fa1-2037" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
-        <categoryLink name="1Characters" id="f54c-2681-99ee-fe96" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="f54c-2681-99ee-fe96" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="1f77-6038-4966-eebd" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="max" value="0"/>
@@ -1708,7 +1708,7 @@ See datafax for full damage table</description>
     <selectionEntry name="Warlock" id="51db-8a91-edf2-a33e" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Eldar" id="8025-2a0f-842c-5557" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
-        <categoryLink name="1Characters" id="7dec-b810-efc4-d58d" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="7dec-b810-efc4-d58d" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
@@ -1814,7 +1814,7 @@ See datafax for full damage table</description>
     <selectionEntry name="Pirate Captain" id="7050-98b1-ba8f-d0b6" collective="false" hidden="false" import="true" publicationId="71ba-82e2-d83c-d33d" type="model">
       <categoryLinks>
         <categoryLink name="Eldar" id="3c40-09e3-f5b3-5d79" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
-        <categoryLink name="1Characters" id="3f81-18b1-c299-66f3" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="3f81-18b1-c299-66f3" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="9765-fdb3-8038-f688" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="min" value="0"/>
@@ -4073,14 +4073,26 @@ See datafax for full damage table</description>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="37bb-e832-f0af-4690" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
       <modifiers>
         <modifier field="37bb-e832-f0af-4690" type="increment" value="1">
-          <repeats>
-            <repeat childId="e5b5-36e8-8494-8733" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="roster" shared="true" value="1"/>
-          </repeats>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+              <repeats>
+                <repeat childId="e5b5-36e8-8494-8733" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="roster" shared="true" value="1"/>
+              </repeats>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntryGroups>
@@ -4145,14 +4157,26 @@ See datafax for full damage table</description>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="8952-1a0a-b2f1-c80c" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
       <modifiers>
         <modifier field="8952-1a0a-b2f1-c80c" type="increment" value="1">
-          <repeats>
-            <repeat childId="e5b5-36e8-8494-8733" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="roster" shared="true" value="1"/>
-          </repeats>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+              <repeats>
+                <repeat childId="e5b5-36e8-8494-8733" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="roster" shared="true" value="1"/>
+              </repeats>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <rules>
@@ -4219,14 +4243,26 @@ Psychology: The Solitaire is immune to psychology. He is not affected by terror,
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="4d20-b6f7-54ab-9a68" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
       <modifiers>
         <modifier field="4d20-b6f7-54ab-9a68" type="increment" value="1">
-          <repeats>
-            <repeat childId="e5b5-36e8-8494-8733" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="force" shared="true" value="1"/>
-          </repeats>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+              <repeats>
+                <repeat childId="e5b5-36e8-8494-8733" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="roster" shared="true" value="1"/>
+              </repeats>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <rules>
@@ -4301,14 +4337,26 @@ Psychology: The Solitaire is immune to psychology. He is not affected by terror,
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="45d3-8396-cfed-7765" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
       <modifiers>
         <modifier field="45d3-8396-cfed-7765" type="increment" value="1">
-          <repeats>
-            <repeat childId="e5b5-36e8-8494-8733" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="roster" shared="true" value="1"/>
-          </repeats>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+              <repeats>
+                <repeat childId="e5b5-36e8-8494-8733" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="roster" shared="true" value="1"/>
+              </repeats>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntries>
@@ -5024,7 +5072,7 @@ Psychology: The Solitaire is immune to psychology. He is not affected by terror,
     <selectionEntry name="Asurmen" id="b1e8-432c-c703-8aca" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Eldar" id="57d5-0b75-c95b-e69d" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
-        <categoryLink name="1Characters" id="3db2-20fb-202e-3b2c" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="3db2-20fb-202e-3b2c" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="7fb8-f0f4-ecf5-c7ef" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -5100,7 +5148,7 @@ Psychology: The Solitaire is immune to psychology. He is not affected by terror,
     <selectionEntry name="Maugan Ra - The Harvester of Souls" id="6a1b-368f-08cf-56e2" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Eldar" id="252b-f691-d6d7-bd66" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
-        <categoryLink name="1Characters" id="9f43-8b87-93fd-90a6" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="9f43-8b87-93fd-90a6" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="a6c2-9a72-3bc6-1e36" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -5183,7 +5231,7 @@ Psychology: The Solitaire is immune to psychology. He is not affected by terror,
     <selectionEntry name="Karandras - The Shadow Hunter" id="fafc-401b-c5d6-2a48" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Eldar" id="be63-96e1-dc60-b28e" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
-        <categoryLink name="1Characters" id="fc2f-87c4-9a75-aa11" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="fc2f-87c4-9a75-aa11" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="e7f9-59f9-b63c-30f8" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -5278,7 +5326,7 @@ Psychology: The Solitaire is immune to psychology. He is not affected by terror,
     <selectionEntry name="Fuegan The Burning Lance" id="6f07-7b68-9d34-b4d8" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Eldar" id="92c0-801c-0c0f-840f" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
-        <categoryLink name="1Characters" id="8c63-5b9d-7244-6a22" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="8c63-5b9d-7244-6a22" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="0b54-21dd-79f2-2306" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -5347,7 +5395,7 @@ Psychology: The Solitaire is immune to psychology. He is not affected by terror,
     <selectionEntry name="Baharroth - The Cry of the Wind" id="adc1-1d63-0300-329f" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Eldar" id="ee89-e3de-3a87-ab55" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
-        <categoryLink name="1Characters" id="90c4-ee99-340a-fd76" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="90c4-ee99-340a-fd76" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="15f6-3454-a548-9f0a" field="selections" includeChildSelections="false" scope="roster" shared="true" type="max" value="1"/>
@@ -5421,7 +5469,7 @@ Psychology: The Solitaire is immune to psychology. He is not affected by terror,
     <selectionEntry name="Jain Zar - The Storm of Silence" id="f325-4b23-0c2f-824d" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Eldar" id="35ac-7d49-35df-52b6" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
-        <categoryLink name="1Characters" id="8cb0-18eb-89db-7164" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="8cb0-18eb-89db-7164" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="b831-0e08-caef-6d78" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -5490,7 +5538,7 @@ Psychology: The Solitaire is immune to psychology. He is not affected by terror,
     <selectionEntry name="Eldrad Ulthran" id="bd77-7b4e-33b0-8f2d" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Eldar" id="ba3a-6572-f656-ffe4" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
-        <categoryLink name="1Characters" id="10d4-e43f-a7da-f622" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="10d4-e43f-a7da-f622" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="7cbe-c4a5-9c09-714f" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -6133,7 +6181,7 @@ When doing so the same to hit for long range shots apply and the +1 for Crack Sh
       <categoryLinks>
         <categoryLink name="Eldar" id="c3ed-a2e8-b924-1833" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
         <categoryLink name="Skimmer/Bike" id="de42-8b87-7a0f-119f" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
-        <categoryLink name="1Characters" id="07e5-3694-aab6-7f38" hidden="false" primary="false" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="07e5-3694-aab6-7f38" hidden="false" primary="false" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <entryLinks>
         <entryLink name="Targeter" id="87f2-e953-97e2-b44f" collective="false" hidden="false" import="true" targetId="a17e-632e-5e7d-1882" type="selectionEntry">
@@ -6215,7 +6263,7 @@ When doing so the same to hit for long range shots apply and the +1 for Crack Sh
       <categoryLinks>
         <categoryLink name="Eldar" id="15aa-37e1-ea90-bdfa" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
         <categoryLink name="Skimmer/Bike" id="a1b1-e0fe-83d7-41d4" hidden="false" primary="false" targetId="9187-ca83-9433-d2c7"/>
-        <categoryLink name="1Characters" id="621c-f89f-d7d1-738d" hidden="false" primary="false" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="621c-f89f-d7d1-738d" hidden="false" primary="false" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="45"/>

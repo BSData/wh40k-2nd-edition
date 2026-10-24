@@ -421,8 +421,7 @@ See datafax for damage table</description>
     <selectionEntry name="Legion of the Damned Commander" id="b3bf-f27d-4c9a-ba36" collective="false" hidden="false" import="true" page="Issue 224" publicationId="8eed-45fd-d4be-9a1b" type="model">
       <categoryLinks>
         <categoryLink name="Legion of the Damned" id="f59e-ebfd-da33-43be" hidden="false" primary="false" targetId="f7f4-2733-743a-8971"/>
-        <categoryLink name="1Characters" id="cffe-f834-4b35-adc6" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
-        <categoryLink name="LotD-PrimaryList" id="de50-85eb-ea20-12fe" hidden="false" primary="false" targetId="a864-b85d-f081-a0c8"/>
+        <categoryLink name="Characters" id="cffe-f834-4b35-adc6" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="e794-bdbc-72fd-f785" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -477,11 +476,6 @@ See datafax for damage table</description>
           <comment>For Ally lists</comment>
           <modifiers>
             <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
-              <conditions>
-                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="category" type="remove" value="a864-b85d-f081-a0c8">
               <conditions>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
@@ -551,7 +545,7 @@ See datafax for damage table</description>
     <selectionEntry name="Company Icon" id="8fc1-1f5e-f6a1-a822" collective="false" hidden="false" import="true" page="Issue 224" publicationId="8eed-45fd-d4be-9a1b" type="model">
       <categoryLinks>
         <categoryLink name="Legion of the Damned" id="5c05-549b-1e23-1a8e" hidden="false" primary="false" targetId="f7f4-2733-743a-8971"/>
-        <categoryLink name="1Characters" id="5fa4-6f4f-33ee-f9ad" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="5fa4-6f4f-33ee-f9ad" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="adfc-5aa7-32e9-83f0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -618,7 +612,7 @@ See datafax for damage table</description>
     <selectionEntry name="Chaplain" id="19be-b66b-0dae-a781" collective="false" hidden="false" import="true" page="Issue 224" publicationId="8eed-45fd-d4be-9a1b" type="model">
       <categoryLinks>
         <categoryLink name="Legion of the Damned" id="9600-698d-fea5-065c" hidden="false" primary="false" targetId="f7f4-2733-743a-8971"/>
-        <categoryLink name="1Characters" id="7665-62d2-a5c4-6326" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="7665-62d2-a5c4-6326" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="30b5-de87-7b00-ebb8" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="1"/>
@@ -709,7 +703,7 @@ See datafax for damage table</description>
     <selectionEntry name="Librarian" id="5d8e-4205-8046-3068" collective="false" hidden="false" import="true" page="Issue 224" publicationId="8eed-45fd-d4be-9a1b" type="model">
       <categoryLinks>
         <categoryLink name="Legion of the Damned" id="1f0b-01db-9862-f7b8" hidden="false" primary="false" targetId="f7f4-2733-743a-8971"/>
-        <categoryLink name="1Characters" id="0f00-cbd5-fb19-3b70" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="0f00-cbd5-fb19-3b70" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="9189-dbe3-1dcd-ae38" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="1"/>
@@ -783,7 +777,7 @@ See datafax for damage table</description>
     <selectionEntry name="Techmarine" id="624a-9bfe-8850-e3bc" collective="false" hidden="false" import="true" page="Issue 224" publicationId="8eed-45fd-d4be-9a1b" type="model">
       <categoryLinks>
         <categoryLink name="Legion of the Damned" id="f666-d1d7-5104-6a4b" hidden="false" primary="false" targetId="f7f4-2733-743a-8971"/>
-        <categoryLink name="1Characters" id="5708-36e0-ce2d-79d9" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="5708-36e0-ce2d-79d9" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
         <categoryLink name="Techmarine" id="a8c8-7825-3700-3729" hidden="false" primary="false" targetId="a21c-767f-7ecf-94eb"/>
       </categoryLinks>
       <costs>

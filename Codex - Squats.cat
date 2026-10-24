@@ -279,7 +279,7 @@ See datafax for damage table</description>
     <selectionEntry name="Warlord" id="a79b-360c-aabd-7a3b" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Squats" id="b5cc-9449-314c-15e7" primary="false" targetId="e206-c273-bb7e-6132"/>
-        <categoryLink name="1Characters" id="ece1-20aa-9cd4-c562" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="ece1-20aa-9cd4-c562" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="7e6a-8793-7cc8-71ac" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="1"/>
@@ -409,7 +409,7 @@ See datafax for damage table</description>
     <selectionEntry name="Battle Standard" id="1896-5068-526c-657f" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Squats" id="7a4b-e5f6-ed76-a443" primary="false" targetId="e206-c273-bb7e-6132"/>
-        <categoryLink name="1Characters" id="abce-a9e1-16f9-ab51" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="abce-a9e1-16f9-ab51" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="a1f8-8be1-f9b8-44bc" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
@@ -493,7 +493,7 @@ See datafax for damage table</description>
     <selectionEntry name="Hearthguard" id="45cf-ec53-ab52-b8a4" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Squats" id="95d3-312e-6ca4-5046" primary="false" targetId="e206-c273-bb7e-6132"/>
-        <categoryLink name="1Characters" id="419f-0035-9993-dd46" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="419f-0035-9993-dd46" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="23"/>
@@ -573,7 +573,7 @@ See datafax for damage table</description>
     <selectionEntry name="Engineer Guildmaster" id="240f-67e6-cede-e2cc" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Squats" id="b7b8-a170-b60a-9f3f" primary="false" targetId="e206-c273-bb7e-6132"/>
-        <categoryLink name="1Characters" id="6553-bee1-df5b-c97b" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="6553-bee1-df5b-c97b" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="e2a1-8a28-fca1-07b1" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
@@ -676,7 +676,7 @@ Roll a D6 at the end of the turn:
     <selectionEntry name="Ancestor Lord" id="643c-0f77-aca9-a901" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Squats" id="6747-45ab-7ae2-3f2e" primary="false" targetId="e206-c273-bb7e-6132"/>
-        <categoryLink name="1Characters" id="20e3-e67c-01be-dd14" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="20e3-e67c-01be-dd14" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="fa1a-1f5e-fc25-fa80" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
@@ -1350,7 +1350,7 @@ Roll a D6 at the end of the turn:
     </selectionEntry>
     <selectionEntry name="Hearthguard Bodyguard" id="425c-bec0-18e5-977f" hidden="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink name="1Characters" id="5d91-0e55-b880-b1ab" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="5d91-0e55-b880-b1ab" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
         <categoryLink name="Squats" id="c5d2-0837-2286-e74a" hidden="false" primary="false" targetId="e206-c273-bb7e-6132"/>
       </categoryLinks>
       <constraints>

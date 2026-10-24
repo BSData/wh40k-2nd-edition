@@ -1121,7 +1121,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
     <selectionEntry name="Wolf Lord" id="e664-c21f-4492-a7dc" collective="false" hidden="false" import="true" page="56" publicationId="0f8d-af97-3972-324c" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="0583-b97d-4085-5a26" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
-        <categoryLink name="1Characters" id="cfe0-a287-6473-1c3f" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="cfe0-a287-6473-1c3f" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="5721-3574-fdd2-92dc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -1348,7 +1348,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
     <selectionEntry name="Wolf Priest" id="54de-be57-4ec3-3913" collective="false" hidden="false" import="true" page="56" publicationId="0f8d-af97-3972-324c" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="42e4-49c7-68d7-ae36" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
-        <categoryLink name="1Characters" id="414a-af03-8d10-d2a7" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="414a-af03-8d10-d2a7" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="7ee2-f77e-063b-15cc" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -1575,7 +1575,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
     <selectionEntry name="Rune Priest" id="4f11-67fa-3adf-e0e1" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="8c89-cc03-4c72-7ec3" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
-        <categoryLink name="1Characters" id="ac8e-f8ad-50b5-37c7" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="ac8e-f8ad-50b5-37c7" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="67f5-04f1-6693-13d9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
@@ -1789,7 +1789,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
     <selectionEntry name="Iron Priest" id="ee10-1b3b-ecac-e1e7" collective="false" hidden="false" import="true" page="57" publicationId="0f8d-af97-3972-324c" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="ebb9-4a0a-ce17-3414" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
-        <categoryLink name="1Characters" id="7d6a-280f-b0e6-9c64" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="7d6a-280f-b0e6-9c64" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
         <categoryLink name="Techmarine" id="6b67-ff2b-e234-3b63" hidden="false" primary="false" targetId="a21c-767f-7ecf-94eb"/>
       </categoryLinks>
       <constraints>
@@ -1936,7 +1936,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
     </selectionEntry>
     <selectionEntry name="Wolf Guard Champion" id="99e2-e911-aba3-1722" collective="false" hidden="false" import="true" page="57" publicationId="0f8d-af97-3972-324c" type="model">
       <categoryLinks>
-        <categoryLink name="1Characters" id="c25f-8014-59e8-9f15" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="c25f-8014-59e8-9f15" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
         <categoryLink name="Space Wolves" id="ed9e-eeb8-773d-72b7" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
       </categoryLinks>
       <costs>
@@ -4079,6 +4079,11 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="78ed-e94c-6484-4ed1" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -4091,6 +4096,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4102,6 +4108,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4135,6 +4142,11 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="1251-0778-c404-50a7" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -4147,6 +4159,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4158,6 +4171,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4256,6 +4270,11 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="10c9-746b-7612-16bd" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -4267,6 +4286,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4279,6 +4299,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4357,6 +4378,11 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="b840-1f01-0303-1dd7" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -4369,6 +4395,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4380,6 +4407,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4448,6 +4476,11 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="3458-ffba-00c3-bb18" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -4460,6 +4493,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4471,6 +4505,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4535,6 +4570,11 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="8bbe-54e6-1213-a09f" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -4547,6 +4587,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4558,6 +4599,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4618,6 +4660,11 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
+            <modifier field="181f-9719-33fc-0f47" type="set" value="-1">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -4630,6 +4677,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="atLeast" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4641,6 +4689,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
                 <condition childId="a21c-767f-7ecf-94eb" childName="Techmarine" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1">
                   <comment>Need at least 1 Techmarine</comment>
                 </condition>
+                <condition childId="df62-cecb-1bb6-bf47" childName="Standard List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4668,7 +4717,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
     <selectionEntry name="Njal Stormcaller" id="145c-21a0-1469-dae3" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="d860-24d5-9bec-03a9" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
-        <categoryLink name="1Characters" id="7c1d-e898-3ae0-547d" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="7c1d-e898-3ae0-547d" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="fc2b-f6db-6466-c912" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -4749,7 +4798,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
     <selectionEntry name="Great Wolf Logan Grimnar" id="a1dd-ee6c-ab43-cd6e" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="a660-1597-7199-3561" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
-        <categoryLink name="1Characters" id="959a-3553-611b-203e" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="959a-3553-611b-203e" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="77f0-4e9b-c6a7-a361" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -4812,7 +4861,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
     <selectionEntry name="Wolf Guard Ranulf" id="6029-55f6-5155-dcdc" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="e98d-c7e6-2eb4-be4b" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
-        <categoryLink name="1Characters" id="00ef-2a2a-743a-9c10" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="00ef-2a2a-743a-9c10" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="9922-8622-3c56-e66a" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -4888,7 +4937,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
     <selectionEntry name="Wolf Guard Durfast of Mordrak" id="ef78-2d4e-0226-4956" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="5918-312c-eee6-05f2" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
-        <categoryLink name="1Characters" id="2a1d-6100-7201-1889" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="2a1d-6100-7201-1889" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="7c2f-4044-c7ae-315a" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -5155,7 +5204,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
     <selectionEntry name="Wolf Priest Ulrik the Slayer" id="ceb0-ca0d-ad06-5a2b" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="5e8a-9b27-3724-3c5b" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
-        <categoryLink name="1Characters" id="5191-f3f1-98bb-38c4" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="5191-f3f1-98bb-38c4" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="6772-c769-54a1-d0d5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
@@ -5214,7 +5263,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
     <selectionEntry name="Wolf Lord Ragnar Blackmane" id="64fa-ece9-bf27-ecf6" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="1a76-85f3-3c19-b792" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
-        <categoryLink name="1Characters" id="d5a5-6f36-24c0-be55" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="d5a5-6f36-24c0-be55" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="05f5-4ae8-54ec-658e" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -5282,9 +5331,7 @@ The Battle Howl affects all Space Wolves except Long Fangs if you wish to ignore
         <categoryLink name="3Support" id="7d6c-31e5-ee0f-82b3" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <constraints>
-        <constraint id="f349-3b81-29c9-a268" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1">
-          <comment>Need at least 1 Techmarine</comment>
-        </constraint>
+        <constraint id="f349-3b81-29c9-a268" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="points" value="270"/>
@@ -5361,7 +5408,7 @@ You cannot reduce the damage result below 1 and cannot modify any further once y
     <selectionEntry name="Wolf Lord Kyrl Grimblood" id="6059-468c-d757-ec09" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="37fa-f960-af31-6708" hidden="false" primary="false" targetId="b686-76f8-6874-e3e9"/>
-        <categoryLink name="1Characters" id="96c8-b455-540f-089f" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="96c8-b455-540f-089f" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="669e-8889-5c12-c4ff" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -5492,7 +5539,7 @@ You cannot reduce the damage result below 1 and cannot modify any further once y
     <selectionEntry name="Chapter Master" id="0885-b3aa-198a-320b" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Space Wolves" id="082b-eb04-1fec-c10b" primary="false" targetId="b686-76f8-6874-e3e9"/>
-        <categoryLink name="1Characters" id="d883-db86-6e7f-57c2" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="d883-db86-6e7f-57c2" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="18c9-d503-d1f8-0005" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -5962,7 +6009,7 @@ You cannot reduce the damage result below 1 and cannot modify any further once y
     <selectionEntry name="Veteran Sergeant Centurius" id="3943-3ae2-62ff-c6a4" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Ultramarines" id="53bf-6759-1f59-4f09" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
-        <categoryLink name="1Characters" id="e4fd-bd84-af8a-dfeb" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Characters" id="e4fd-bd84-af8a-dfeb" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="c162-8a60-e92b-9daa" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>

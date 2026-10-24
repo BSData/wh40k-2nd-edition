@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Codex - Imperial Guard" id="82fc-8ad4-7b4b-dd4a" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="19" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Codex - Imperial Guard" id="82fc-8ad4-7b4b-dd4a" authorName="Boff" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" library="false" revision="20" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>I haven&apos;t put restrictions for the Regimental style to build a list, such as 1 Command HQ, 3 Guard/Heavy Weapons teams, 3 additional unit. Doing so would be rather messy and complicated with all the possible choices, and frankly isn&apos;t really a huge deal.
 
 Please see Imperial Guard Codex Pg. 79 to ensure you are adding the correct units.</readme>
@@ -6933,7 +6933,7 @@ Saving throws for shields or fields do not apply against hits from a misfiring p
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="25% Ally / Support Limit" id="da37-9704-f045-950b" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="25% Ally (Shared with Support)" id="da37-9704-f045-950b" hidden="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink name="25%allies" id="2be3-a3a1-70b5-4258" hidden="false" primary="false" targetId="12cc-6a93-a61e-381d"/>
         <categoryLink name="Allied Force % Allotment" id="e83b-438e-7af9-5f8d" hidden="false" primary="true" targetId="6741-c4c6-274e-36cf"/>

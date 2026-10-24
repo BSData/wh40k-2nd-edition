@@ -244,7 +244,7 @@ Any squad which has one or more of its members within 2&quot; of a shrieker vict
         </entryLink>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Eldar Jetibke Damage Table" id="6fd8-ceed-5f6e-80b7" hidden="false" targetId="36f9-b439-8410-abd3" type="rule"/>
+        <infoLink name="Eldar Jetbike Damage Table" id="6fd8-ceed-5f6e-80b7" hidden="false" targetId="36f9-b439-8410-abd3" type="rule"/>
         <infoLink name="Eldar Jetbike" id="4dd0-2a12-4cff-9d2b" hidden="false" targetId="6c71-da8e-9b02-b9f4" type="profile"/>
       </infoLinks>
     </selectionEntry>
@@ -275,7 +275,7 @@ Any squad which has one or more of its members within 2&quot; of a shrieker vict
         </entryLink>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Eldar Jetibke Damage Table" id="03f3-c57b-ab79-8ad2" hidden="false" targetId="36f9-b439-8410-abd3" type="rule"/>
+        <infoLink name="Eldar Jetbike Damage Table" id="03f3-c57b-ab79-8ad2" hidden="false" targetId="36f9-b439-8410-abd3" type="rule"/>
         <infoLink name="Eldar Jetbike" id="20af-59fd-c02a-b4ca" hidden="false" targetId="6c71-da8e-9b02-b9f4" type="profile"/>
       </infoLinks>
     </selectionEntry>
@@ -867,7 +867,6 @@ Psychology: The Solitaire is immune to psychology. He is not affected by terror,
       <categoryLinks>
         <categoryLink name="Eldar" id="f33f-872c-d338-1fbb" hidden="false" primary="false" targetId="261d-dcfd-16cf-3caf"/>
         <categoryLink name="Harlequins" id="f754-7b64-ccf3-79c7" hidden="false" primary="true" targetId="c1bb-1205-a4da-35c6"/>
-        <categoryLink name="Harlequin-PrimaryList" id="351f-f4ba-cb44-88a6" hidden="false" primary="false" targetId="6dc4-8bb9-688d-1e49"/>
       </categoryLinks>
       <constraints>
         <constraint id="cc46-fb47-2f21-2d46" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="max" value="0"/>
@@ -1136,7 +1135,7 @@ Psychology: The Solitaire is immune to psychology. He is not affected by terror,
         <entryLink name="Vehicle Wargear Cards" id="ff66-12b2-f50d-c934" collective="false" hidden="false" import="true" targetId="6526-cf18-5345-1050" type="selectionEntryGroup"/>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Eldar Jetibke Damage Table" id="e3fa-e1eb-7857-90fc" hidden="false" targetId="36f9-b439-8410-abd3" type="rule"/>
+        <infoLink name="Eldar Jetbike Damage Table" id="e3fa-e1eb-7857-90fc" hidden="false" targetId="36f9-b439-8410-abd3" type="rule"/>
         <infoLink name="Eldar Jetbike" id="dd0a-3264-cb1e-2d29" hidden="false" targetId="6c71-da8e-9b02-b9f4" type="profile"/>
       </infoLinks>
       <selectionEntryGroups>

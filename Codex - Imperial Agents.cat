@@ -458,7 +458,8 @@ May be setup using the Infiltration rules</description>
     <selectionEntry name="Judge" id="82a0-a445-5060-8d4c" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="Characters" id="6d13-9343-34a6-508d" hidden="false" primary="false" targetId="da81-fc0f-1f03-88bf"/>
-        <categoryLink name="Imperial Agents" id="046c-c1d6-6d97-d31c" primary="true" targetId="7b75-aa9e-1b94-f4a5"/>
+        <categoryLink name="1Characters" id="717d-dbae-0b80-5936" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Imperial Agents" id="c2de-2e34-7cf5-094f" hidden="false" primary="false" targetId="7b75-aa9e-1b94-f4a5"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="84"/>
@@ -2405,7 +2406,7 @@ See datafax for damage table</description>
     </selectionEntry>
     <selectionEntry name="Predator" id="a406-ead5-9ad8-f916" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>
-        <categoryLink name="Allies" id="225d-7cec-b73a-66ab" hidden="false" primary="false" targetId="6741-c4c6-274e-36cf"/>
+        <categoryLink name="Allied Force % Allotment" id="225d-7cec-b73a-66ab" hidden="false" primary="false" targetId="6741-c4c6-274e-36cf"/>
         <categoryLink name="Imperial Agents" id="d3bd-a8e4-2f65-5389" primary="true" targetId="7b75-aa9e-1b94-f4a5"/>
       </categoryLinks>
       <costs>

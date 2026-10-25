@@ -5347,7 +5347,7 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry name="Abaddon the Despoiler, Warmaster of Chaos" id="4322-6b60-18e2-5bc7" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Abaddon the Despoiler, Warmaster of Chaos" id="4322-6b60-18e2-5bc7" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Chaos" id="69db-b174-b3a7-9f85" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
         <categoryLink name="Characters" id="097d-ccc1-a947-37b5" hidden="false" primary="true" targetId="9497-ff1f-dffc-011f"/>

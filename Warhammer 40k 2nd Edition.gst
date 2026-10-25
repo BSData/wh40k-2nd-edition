@@ -612,11 +612,6 @@
         <constraint id="522c-c513-203d-f358" field="forces" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <modifiers>
-        <modifier field="hidden" type="set" value="true">
-          <conditions>
-            <condition childId="7bb5-646e-ec66-1cdd" childName="Codex - Assassins" field="selections" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
-          </conditions>
-        </modifier>
         <modifier field="warning" type="add" value="Legion of the Damned cannot take allies">
           <conditionGroups>
             <conditionGroup type="and">
@@ -643,6 +638,16 @@
               <conditions>
                 <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
                 <condition childId="4026-2a6f-5a07-ce65" childName="Codex - Tyranids" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier field="warning" type="add" value="Imperial Agents can only be allies">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                <condition childId="55ab-d359-73e5-0809" childName="Codex - Imperial Agents" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -674,7 +679,6 @@
                 <conditionGroup type="and">
                   <conditions>
                     <condition childId="7fd7-54ab-c5a6-76ea" childName="50%alies" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                    <condition childId="55ab-d359-73e5-0809" childName="Codex - Imperial Agents" field="forces" includeChildForces="true" includeChildSelections="true" scope="a60b-92d0-a03f-6c77" shared="true" type="notInstanceOf" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -682,12 +686,23 @@
                 <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="1" roundUp="false" scope="roster" shared="true" value="1"/>
               </repeats>
             </modifier>
-            <modifier field="618f-8174-c4e1-c6d2" type="increment" value="0.25">
+          </modifiers>
+        </categoryLink>
+      </categoryLinks>
+    </forceEntry>
+    <forceEntry name="Imperial Agent Allies" id="16b5-3768-c5ad-4582" hidden="false">
+      <categoryLinks>
+        <categoryLink name="Imperial Agents" id="2cd5-8ba5-fc42-ff1a" hidden="false" targetId="7b75-aa9e-1b94-f4a5">
+          <constraints>
+            <constraint id="f58f-1b86-5e56-1e16" field="points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="0"/>
+          </constraints>
+          <modifiers>
+            <modifier field="info" type="add" value="{this} Points are shared from your Support % of the main army"/>
+            <modifier field="f58f-1b86-5e56-1e16" type="increment" value="0.25">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition childId="12cc-6a93-a61e-381d" childName="25%allies" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
-                    <condition childId="55ab-d359-73e5-0809" childName="Codex - Imperial Agents" field="forces" includeChildForces="true" includeChildSelections="true" scope="a60b-92d0-a03f-6c77" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="16b5-3768-c5ad-4582" childName="Imperial Agent Allies" field="forces" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>

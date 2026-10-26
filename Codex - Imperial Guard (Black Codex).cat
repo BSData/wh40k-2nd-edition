@@ -400,6 +400,7 @@ See datafax for damage table</description>
       <categoryLinks>
         <categoryLink name="Imperial Guard" id="7b60-943a-7d75-5b6d" hidden="false" primary="false" targetId="ef00-5e3b-a59a-902f"/>
         <categoryLink name="1Characters" id="d148-6f67-c0bc-5516" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="ServoArmCapable" id="e071-ef58-3ca1-2bf7" hidden="false" primary="false" targetId="9538-36b9-3051-d97f"/>
       </categoryLinks>
       <constraints>
         <constraint id="c0fb-21fe-9ef6-9264" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="2"/>

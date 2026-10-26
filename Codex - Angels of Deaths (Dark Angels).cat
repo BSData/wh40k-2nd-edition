@@ -933,7 +933,7 @@ He has the Deathwing Special Rules</description>
     <selectionEntry name="Dark Angels Master" id="e664-c21f-4492-a7dc" collective="false" hidden="false" import="true" page="71" publicationId="308f-63b0-ee37-1c6b" type="model">
       <categoryLinks>
         <categoryLink name="Dark Angels" id="5f7e-b632-5e2b-4afd" hidden="false" primary="false" targetId="65bb-c554-1585-91d9"/>
-        <categoryLink name="Characters" id="358a-90e9-5547-1a99" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="358a-90e9-5547-1a99" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="5721-3574-fdd2-92dc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -1099,7 +1099,7 @@ He has the Deathwing Special Rules</description>
     <selectionEntry name="Master of the Deathwing" id="381f-f866-3d8a-4e03" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Dark Angels" id="6d6c-f012-35e0-6c0b" hidden="false" primary="false" targetId="65bb-c554-1585-91d9"/>
-        <categoryLink name="Characters" id="75e1-fbe0-a6fd-914e" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="75e1-fbe0-a6fd-914e" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="7f52-e049-9063-7865" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0"/>
@@ -1227,7 +1227,7 @@ He has the Deathwing Special Rules</description>
     <selectionEntry name="Company Standard" id="dd11-eede-074e-7b62" collective="false" hidden="false" import="true" page="63" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Dark Angels" id="32cc-5110-a365-913f" hidden="false" primary="false" targetId="65bb-c554-1585-91d9"/>
-        <categoryLink name="Characters" id="829f-62d8-435d-951f" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="829f-62d8-435d-951f" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="f392-4fa0-fdc9-c023" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -1332,7 +1332,7 @@ He has the Deathwing Special Rules</description>
     <selectionEntry name="Chaplain" id="54de-be57-4ec3-3913" collective="false" hidden="false" import="true" page="64" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Dark Angels" id="838a-e12e-8725-5bea" hidden="false" primary="false" targetId="65bb-c554-1585-91d9"/>
-        <categoryLink name="Characters" id="eec4-5420-65b2-bcac" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="eec4-5420-65b2-bcac" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
@@ -1636,7 +1636,7 @@ He has the Deathwing Special Rules</description>
     <selectionEntry name="Librarian" id="4f11-67fa-3adf-e0e1" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Dark Angels" id="6607-1964-7d70-4678" hidden="false" primary="false" targetId="65bb-c554-1585-91d9"/>
-        <categoryLink name="Characters" id="062a-65c8-de27-4b0c" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="062a-65c8-de27-4b0c" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
@@ -1823,7 +1823,7 @@ He has the Deathwing Special Rules</description>
     <selectionEntry name="Apothecary" id="d503-8428-85ee-d4d6" collective="false" hidden="false" import="true" page="65" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Dark Angels" id="8d8e-a7ec-54cb-1d5e" hidden="false" primary="false" targetId="65bb-c554-1585-91d9"/>
-        <categoryLink name="Characters" id="eebb-86f6-bced-1d8b" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="eebb-86f6-bced-1d8b" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="40"/>
@@ -1949,20 +1949,15 @@ He has the Deathwing Special Rules</description>
     <selectionEntry name="Techmarine" id="ee10-1b3b-ecac-e1e7" collective="false" hidden="false" import="true" page="65" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Dark Angels" id="a9df-2e95-ffb1-5ee5" hidden="false" primary="false" targetId="65bb-c554-1585-91d9"/>
-        <categoryLink name="Characters" id="aa04-aaf3-85f0-a5f1" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="aa04-aaf3-85f0-a5f1" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
         <categoryLink name="Techmarine" id="8d5c-c515-ce42-fec0" hidden="false" primary="false" targetId="a21c-767f-7ecf-94eb"/>
+        <categoryLink name="ServoArmCapable" id="abc8-e09e-45b0-2e8e" hidden="false" primary="false" targetId="9538-36b9-3051-d97f"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="33"/>
       </costs>
       <entryLinks>
         <entryLink name="Space Marine Bike" id="5ffe-1332-0b36-2374" collective="false" hidden="false" import="true" sortIndex="2" targetId="1b22-fc76-8ed0-5765" type="selectionEntry"/>
-        <entryLink name="ServoCapableWargear" id="b78f-a9fe-f164-0661" collective="false" hidden="false" import="true" targetId="a800-8c47-b465-29bc" type="selectionEntry">
-          <constraints>
-            <constraint id="97a2-c47f-b5a2-e96a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-            <constraint id="bcd4-c610-15d3-bcd1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-          </constraints>
-        </entryLink>
         <entryLink name="Wargear Cards" id="9f58-7c2c-220b-1961" collective="false" hidden="false" import="true" sortIndex="4" targetId="578d-7254-ab21-8b13" type="selectionEntryGroup">
           <constraints>
             <constraint id="32fd-ed6f-5982-4e53" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
@@ -2059,7 +2054,7 @@ He has the Deathwing Special Rules</description>
     <selectionEntry name="Veteran Sergeant" id="99e2-e911-aba3-1722" collective="false" hidden="false" import="true" page="65" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Dark Angels" id="2472-d7ce-e78f-d79a" hidden="false" primary="false" targetId="65bb-c554-1585-91d9"/>
-        <categoryLink name="Characters" id="6019-be64-93eb-5f09" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="6019-be64-93eb-5f09" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="5"/>
@@ -3572,7 +3567,7 @@ He has the Deathwing Special Rules</description>
     <selectionEntry name="Master of the Ravenwing" id="c173-d3e1-c187-f2cd" collective="false" hidden="false" import="true" page="71" publicationId="308f-63b0-ee37-1c6b" type="model">
       <categoryLinks>
         <categoryLink name="Dark Angels" id="e896-59a4-cd73-df0e" hidden="false" primary="false" targetId="65bb-c554-1585-91d9"/>
-        <categoryLink name="Characters" id="2a11-a5b2-a5d7-1304" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="2a11-a5b2-a5d7-1304" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="ee27-2bee-98b5-2a2f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -3821,7 +3816,7 @@ He has the Deathwing Special Rules</description>
     <selectionEntry name="Commander Azrael, Supreme Grand Master of the Dark Angels" id="2bfc-e2ed-a7c1-eb1e" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Dark Angels" id="e402-f3fd-eea8-d019" hidden="false" primary="false" targetId="65bb-c554-1585-91d9"/>
-        <categoryLink name="Characters" id="5718-03ec-3e4a-0457" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="5718-03ec-3e4a-0457" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="7daa-8ba6-7a85-3b1f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
@@ -3894,7 +3889,7 @@ He has the Deathwing Special Rules</description>
     <selectionEntry name="Ezekiel, Grand Master of the Librarians, Keeper of the Book of Salvation, Holder of the Keys" id="b417-d181-0a27-a082" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Dark Angels" id="e500-b2b9-eb1a-99e1" hidden="false" primary="false" targetId="65bb-c554-1585-91d9"/>
-        <categoryLink name="Characters" id="f076-01d1-3814-2bba" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="f076-01d1-3814-2bba" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="d65d-e4ac-aa2c-53c4" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -3959,7 +3954,7 @@ He has the Deathwing Special Rules</description>
     <selectionEntry name="Brother Bethor, Bearer of the Scared Standard" id="ba86-accd-3145-fd14" collective="false" hidden="false" import="true" page="81" publicationId="308f-63b0-ee37-1c6b" type="model">
       <categoryLinks>
         <categoryLink name="Dark Angels" id="69a8-eb4d-b01e-f3b8" hidden="false" primary="false" targetId="65bb-c554-1585-91d9"/>
-        <categoryLink name="Characters" id="3311-3833-6e3f-a7dd" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="3311-3833-6e3f-a7dd" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="2cd5-1dae-dda2-2181" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -4019,7 +4014,7 @@ He has the Deathwing Special Rules</description>
     <selectionEntry name="Sapphon, Grand Master of Chaplains, Finder of Secrets" id="91b8-f35f-e6c9-601b" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Dark Angels" id="54a6-c0e3-b0aa-e74b" hidden="false" primary="false" targetId="65bb-c554-1585-91d9"/>
-        <categoryLink name="Characters" id="9552-e7a2-0142-a6be" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="9552-e7a2-0142-a6be" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="ca4a-7832-c8dd-53ae" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -4110,7 +4105,7 @@ He has the Deathwing Special Rules</description>
     <selectionEntry name="Asmodai, Interrogator Chaplain" id="9480-14a8-c10f-6c25" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Dark Angels" id="5384-95bd-8a24-790d" hidden="false" primary="false" targetId="65bb-c554-1585-91d9"/>
-        <categoryLink name="Characters" id="a5dd-e91a-7cdf-663f" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="a5dd-e91a-7cdf-663f" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="ff9c-6fb8-4bb6-728e" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
@@ -4253,7 +4248,7 @@ He has the Deathwing Special Rules</description>
     <selectionEntry name="Dark Angels Veteran Sergeant Naaman" id="fa68-26b6-9dcb-edf5" collective="false" hidden="false" import="true" page="25" publicationId="fc53-90ff-24b0-a4ee" type="model">
       <categoryLinks>
         <categoryLink name="Dark Angels" id="f861-2b20-1f8c-803d" hidden="false" primary="false" targetId="65bb-c554-1585-91d9"/>
-        <categoryLink name="Characters" id="9c83-91cb-a90c-f374" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="9c83-91cb-a90c-f374" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="ca79-aac8-badb-630f" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
@@ -4363,7 +4358,7 @@ He has the Deathwing Special Rules</description>
     <selectionEntry name="Dark Angels Master Belial" id="2619-1cdf-d6a6-e6a8" collective="false" hidden="false" import="true" page="25" publicationId="fc53-90ff-24b0-a4ee" type="model">
       <categoryLinks>
         <categoryLink name="Dark Angels" id="a6ca-1efa-1ddc-3236" hidden="false" primary="false" targetId="65bb-c554-1585-91d9"/>
-        <categoryLink name="Characters" id="46e1-2729-54fb-6917" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="46e1-2729-54fb-6917" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="8f30-5a71-5192-d97c" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
@@ -4485,7 +4480,7 @@ He has the Deathwing Special Rules</description>
     <selectionEntry name="Chapter Master" id="892b-949d-4668-c59c" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Dark Angels" id="fa89-86a6-0674-d773" primary="false" targetId="65bb-c554-1585-91d9"/>
-        <categoryLink name="Characters" id="ab31-8913-17a5-6883" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="ab31-8913-17a5-6883" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="5481-3ef1-47b9-9e9d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -4985,7 +4980,7 @@ He has the Deathwing Special Rules</description>
     <selectionEntry name="Veteran Assault Sergeant" id="48d5-a1ce-202e-8fac" collective="false" hidden="false" import="true" page="65" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Dark Angels" id="73b2-2894-557f-9509" hidden="false" primary="false" targetId="65bb-c554-1585-91d9"/>
-        <categoryLink name="Characters" id="600f-7bb9-22ac-8626" hidden="false" primary="false" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="600f-7bb9-22ac-8626" hidden="false" primary="false" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
@@ -5665,7 +5660,7 @@ He has the Deathwing Special Rules</description>
     <selectionEntry name="Veteran Sergeant Centurius" id="5368-a7f7-3ab0-7387" collective="false" hidden="false" import="true" page="223" publicationId="8eed-45fd-d4be-9a1b" type="model">
       <comment>LotD</comment>
       <categoryLinks>
-        <categoryLink name="Characters" id="94b5-90b4-09aa-28b7" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="94b5-90b4-09aa-28b7" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
         <categoryLink name="Dark Angels" id="186f-bebb-2ca1-3a6a" hidden="false" primary="false" targetId="65bb-c554-1585-91d9"/>
       </categoryLinks>
       <constraints>

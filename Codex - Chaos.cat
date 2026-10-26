@@ -974,7 +974,7 @@ The whip counts as an additional hand weapon giving the Bloodthirster an extra A
     </profile>
     <profile name="Hellblade" id="7391-ac2f-e68b-e70e" hidden="false" page="53" publicationId="02e1-3f69-7ae7-f5c5" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
       <characteristics>
-        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">A hit from the Bloodletter causes D3 wounds instead of just 1. In addition, the axe adds +1 to the Bloodletters Strength in close combat.
+        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">A hit from a Hellblade adds +1 to the Bloodletters Strength and causes D3 wounds instead of 1.
 Allows the Bloodletter to Parry</characteristic>
       </characteristics>
     </profile>
@@ -9255,6 +9255,12 @@ Enemy models may not attack Foulspawn in close combat.</description>
           </conditions>
         </modifier>
       </modifiers>
+    </selectionEntry>
+    <selectionEntry name="Hellblade" id="2fef-94a9-b58f-1c30" hidden="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink name="Hellblade" id="9a62-01d9-f2f3-4aae" hidden="false" targetId="7391-ac2f-e68b-e70e" type="profile"/>
+        <infoLink name="Parry" id="2969-9dba-6d33-82fc" hidden="false" targetId="049d-3ed2-a1bf-86b0" type="rule"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>

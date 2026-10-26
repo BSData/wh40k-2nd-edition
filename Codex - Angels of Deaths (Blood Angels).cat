@@ -43,7 +43,7 @@
     <entryLink name="Combat Squad - Veteran Assault Squad" id="e9ef-cfd9-2550-611a" hidden="false" import="true" targetId="0edf-3c27-d2fa-4261" type="selectionEntry"/>
     <entryLink name="Space Marine Vindicator" id="0acf-4521-d1d4-98a4" hidden="false" import="true" targetId="aa9c-56b2-9661-3b66" type="selectionEntry"/>
     <entryLink name="Support Points from Squad Upgrade (Attack Bike)" id="5853-47a3-7348-fa29" hidden="false" import="true" targetId="57e4-b5ee-3d27-65ae" type="selectionEntry"/>
-    <entryLink name="50% Allies (Shared with Support)" id="d5fd-907c-de9b-306a" hidden="false" import="true" targetId="d28f-02cf-01f1-4031" type="selectionEntry"/>
+    <entryLink name="50% Allies (Shared with Support. If using Imperial Agents they will be limited to 25% and shared with Support totals))" id="d5fd-907c-de9b-306a" hidden="false" import="true" targetId="d28f-02cf-01f1-4031" type="selectionEntry"/>
   </entryLinks>
   <rules>
     <rule name="Break Tests" id="957a-483e-3a28-6e67" hidden="false" page="49" publicationId="4590-6ba9-5482-a1fa">
@@ -1882,18 +1882,13 @@ Have Frenzy (see Warhammer Rulebook Pg. 67), but cannot take a restraining test 
         <categoryLink name="Blood Angels" id="6bf9-37a9-dde7-a7d4" hidden="false" primary="false" targetId="9fec-6f81-5e76-3592"/>
         <categoryLink name="1Characters" id="10b1-8208-9654-a974" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
         <categoryLink name="Techmarine" id="2e1c-5b11-3200-2878" hidden="false" primary="false" targetId="a21c-767f-7ecf-94eb"/>
+        <categoryLink name="ServoArmCapable" id="7927-b53b-20c0-eae7" hidden="false" primary="false" targetId="9538-36b9-3051-d97f"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="33"/>
       </costs>
       <entryLinks>
         <entryLink name="Space Marine Bike" id="5ffe-1332-0b36-2374" collective="false" hidden="false" import="true" sortIndex="2" targetId="1b22-fc76-8ed0-5765" type="selectionEntry"/>
-        <entryLink name="ServoCapableWargear" id="b78f-a9fe-f164-0661" collective="false" hidden="false" import="true" targetId="a800-8c47-b465-29bc" type="selectionEntry">
-          <constraints>
-            <constraint id="97a2-c47f-b5a2-e96a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-            <constraint id="bcd4-c610-15d3-bcd1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-          </constraints>
-        </entryLink>
         <entryLink name="Wargear Cards" id="9f58-7c2c-220b-1961" collective="false" hidden="false" import="true" sortIndex="4" targetId="578d-7254-ab21-8b13" type="selectionEntryGroup">
           <constraints>
             <constraint id="32fd-ed6f-5982-4e53" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>

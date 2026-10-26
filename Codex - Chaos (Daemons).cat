@@ -1,0 +1,1243 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue name="Codex - Chaos (Daemon World)" id="b85e-e86e-7825-0e05" authorContact="Boff89" authorName="Boff89" authorUrl="https://github.com/BSData/wh40k-2nd-edition" battleScribeVersion="2.03" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="50" library="false" revision="1" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <entryLinks>
+    <entryLink name="Beast of Nurgle" id="0d96-7eee-bd0e-ff0b" hidden="false" import="true" targetId="8355-16c5-e9ee-691c" type="selectionEntry"/>
+    <entryLink name="Bloodletters" id="f37e-612f-7d05-445a" hidden="false" import="true" targetId="0b14-208c-1f4c-2907" type="selectionEntry"/>
+    <entryLink name="25% Ally (Shared with Support)" id="30cc-7f79-9dfc-62e6" hidden="false" import="true" targetId="9679-d813-1ab3-ac5b" type="selectionEntry"/>
+    <entryLink name="Flesh Hounds" id="3592-0071-68b6-2efb" hidden="false" import="true" targetId="fd9d-842a-d9b3-dd8d" type="selectionEntry"/>
+    <entryLink name="Daemon Prince" id="4184-9e32-6d58-361a" hidden="false" import="true" targetId="9fc2-1692-48d3-de15" type="selectionEntry"/>
+  </entryLinks>
+  <profileTypes>
+    <profileType name="Chaos Rewards" id="bc42-75af-4a0c-de00" hidden="false">
+      <characteristicTypes>
+        <characteristicType name="Gift" id="4f30-c481-04f2-1326"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="Mark of Chaos" id="05f8-5a7e-6011-6abf" hidden="false">
+      <characteristicTypes>
+        <characteristicType name="Special Rule" id="04da-f00b-a41f-b42d"/>
+      </characteristicTypes>
+    </profileType>
+  </profileTypes>
+  <rules>
+    <rule name="Daemonic Animosity" id="93e2-4115-0c37-8605" hidden="true" page="51" publicationId="02e1-3f69-7ae7-f5c5">
+      <description>Whenever you have daemons of rival Chaos Gods within 12&quot; of each other at the start of your turn, and they are not engaged in close combat, make a Daemon Animosity test for each Greater Daemon or each unit of Daemons to determine how it reacts to the proximity of its closest rivals. This does not affect daemonic creatures used as mounts or rewards
+1-2: Remove the rivals from play, but don&apos;t count as destroyed for VP
+3-4: The daemons will not move or do anything else this turn, but can fight back if in close combat
+5-6: Continue normally with no further effect</description>
+    </rule>
+  </rules>
+  <sharedProfiles>
+    <profile name="Beast of Nurgle" id="0e08-0016-a366-771b" hidden="false" page="58" publicationId="02e1-3f69-7ae7-f5c5" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Beast</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">3</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">3</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">0</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">3</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">5</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">3</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">3</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">D6</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">6</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Bloodletter" id="56ae-9951-6843-9279" hidden="false" page="53" publicationId="02e1-3f69-7ae7-f5c5" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Bloodletter</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">5</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">5</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">4</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">3</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">6</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">2</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Bloodthirster" id="c3d8-2621-afb2-ae31" hidden="false" page="52" publicationId="02e1-3f69-7ae7-f5c5" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Bloodthirster</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">6</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">10</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">10</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">8</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">7</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">10</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">8</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">10</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Blue Horror" id="25bf-fe5e-f405-f246" hidden="false" page="59" publicationId="02e1-3f69-7ae7-f5c5" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Blue Horror</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">3</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">3</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">3</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">3</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">7</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Daemonettes" id="87d4-e3e2-70bb-3960" hidden="false" page="55" publicationId="02e1-3f69-7ae7-f5c5" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Daemonettes</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">6</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">5</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">4</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">3</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">6</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">3</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Disc of Tzeentch" id="449a-ae2d-4852-ead5" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Disc</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">12</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">3</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">0</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">3</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">3</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">3</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Fiends of Slaanesh" id="4178-1cc9-9409-a5ba" hidden="false" page="56" publicationId="02e1-3f69-7ae7-f5c5" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Fiends of Slaanesh</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">6</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">3</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">0</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">3</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">3</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">3</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">3</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Flamers of Tzeentch" id="5d5e-213c-a375-974f" hidden="false" page="60" publicationId="02e1-3f69-7ae7-f5c5" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Flamer</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">9</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">3</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">5</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">5</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">4</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">2</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">4</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">2</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Flesh Hound" id="16c3-e368-71cf-f568" hidden="false" page="54" publicationId="02e1-3f69-7ae7-f5c5" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Flesh Hound</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">10</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">5</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">0</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">5</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">4</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">2</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">6</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Great Unclean One" id="33d8-3c1d-e02d-b07c" hidden="false" page="57" publicationId="02e1-3f69-7ae7-f5c5" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Great Unclean One</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">7</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">7</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">7</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">8</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">10</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">4</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">7</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Juggernaut of Khorne" id="2bd9-4000-4b00-0626" hidden="false" page="54" publicationId="02e1-3f69-7ae7-f5c5" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Juggernaut</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">7</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">3</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">0</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">5</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">5</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">3</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">2</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">2</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Keeper of Secrets" id="d607-4477-3ce9-47cb" hidden="false" page="55" publicationId="02e1-3f69-7ae7-f5c5" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Keeper of Secrets</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">6</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">9</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">10</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">7</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">7</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">8</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">7</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">6</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Lord of Change" id="aa61-adeb-3fee-0069" hidden="false" page="59" publicationId="02e1-3f69-7ae7-f5c5" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Lord of Change</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">8</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">9</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">10</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">7</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">7</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">7</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">10</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">6</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Nurglings" id="a2ea-601f-4c26-d02c" hidden="false" page="57" publicationId="02e1-3f69-7ae7-f5c5" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Nurglings</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">3</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">3</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">3</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">3</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">3</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">4</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">3</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">7</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Pink Horror" id="7f7b-e0c3-0b65-59e1" hidden="false" page="59" publicationId="02e1-3f69-7ae7-f5c5" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Pink Horror</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">5</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">5</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">4</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">3</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">6</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">2</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Plaguebearer of Nurgle" id="d111-8421-5543-b02f" hidden="false" page="58" publicationId="02e1-3f69-7ae7-f5c5" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Plaguebearer</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">5</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">5</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">4</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">3</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">6</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">2</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Steeds of Slaanesh" id="94f2-d515-8c19-dae2" hidden="false" page="56" publicationId="02e1-3f69-7ae7-f5c5" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Steed</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">12</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">3</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">0</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">4</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">5</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">6</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Stream of Corruption" id="56cf-05a3-fecc-2d48" hidden="false" page="57" publicationId="02e1-3f69-7ae7-f5c5" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+      <characteristics>
+        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">May unleash a stream during the shooting phase, using the Flamer template. Causes a S7 hit with a -2 save modifier and inflicts 1 Wound. May be used in close combat</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Scorpion Tail" id="ec56-7eb4-1adf-1c25" hidden="false" page="56" publicationId="02e1-3f69-7ae7-f5c5" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+      <characteristics>
+        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">If the Fiend wins close combat it gains 1 additional hit. This extra hit also has a +1 Strength bonus</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Plaguesword" id="778e-0bea-50ce-064b" hidden="false" page="58" publicationId="02e1-3f69-7ae7-f5c5" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+      <characteristics>
+        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">A wound from a Plaguesword will kill mortal creatures on a 4+ regardless of how many wounds they have. Allows the user to parry</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Huge Claws" id="f6ac-41ab-6b7e-6d9e" hidden="false" page="55" publicationId="02e1-3f69-7ae7-f5c5" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+      <characteristics>
+        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">The Daemonette&apos;s claws add +1 to its Strength in close combat. Not included in profile</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Hellblade" id="765a-8623-e514-d45a" hidden="false" page="53" publicationId="02e1-3f69-7ae7-f5c5" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+      <characteristics>
+        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Hellblade adds +1 to the Bloodletters Strength in close combat and causes D3 wounds instead of 1.
+Allows the Bloodletter to Parry</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Collar of Khorne" id="6d04-4c53-765a-5aea" hidden="false" page="54" publicationId="02e1-3f69-7ae7-f5c5" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+      <characteristics>
+        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Force weapons lose their Strength bonus and do not wound the Flesh Hound automatically. Psyhcic attacks that target the wearer or include it in their area of effect are nullified and will not work.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Bloodthirster&apos;s Whip" id="5dbf-3b0a-3475-3957" hidden="false" page="52" publicationId="02e1-3f69-7ae7-f5c5" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+      <characteristics>
+        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">At the start of close combat, a Bloodthirster can make a special attack with the whip against 1 enemy model in base contact. The model targeted must roll under its Initiative to avoid the whip (a 6 always fails). If it fails to avoid the attack it takes a S8 hit with a -5 save modifier. 
+The whip counts as an additional hand weapon giving the Bloodthirster an extra Attack dice</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Axe of Khorne" id="c29d-8541-753d-29b3" hidden="false" page="52" publicationId="02e1-3f69-7ae7-f5c5" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+      <characteristics>
+        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">A hit from the Axe of Khorne causes D3 wounds instead of just 1. In addition, the axe adds +1 to the Strength in close combat</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Blood Cannon" id="1b64-fb80-1b6d-f648" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">Template</characteristic>
+        <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">Template</characteristic>
+        <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+        <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+        <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">6</characteristic>
+        <characteristic name="Damage" typeId="8978-f9c3-8957-1481">D6</characteristic>
+        <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-4</characteristic>
+        <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">2D6+6</characteristic>
+        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Blood Cannon</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Plague Knife" id="9fdd-265e-9430-a44b" hidden="false" page="75" publicationId="02e1-3f69-7ae7-f5c5" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">CC Only</characteristic>
+        <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">CC Only</characteristic>
+        <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328"/>
+        <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c"/>
+        <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">As User</characteristic>
+        <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
+        <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">As User</characteristic>
+        <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">Var</characteristic>
+        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Plague  Knife</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Daemonic Aura" id="fb47-0137-317d-f1e5" hidden="false" page="51" publicationId="02e1-3f69-7ae7-f5c5" typeId="4657-2671-1065-d493" typeName="Armour">
+      <characteristics>
+        <characteristic name="Saving Throw" typeId="b439-323a-9cfe-6340">4+</characteristic>
+        <characteristic name="Special" typeId="b7f1-73cd-d19d-26a6">Cannot be modified. If hit by a psychic attack, or by a force weapon, it receives no saving throw.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Bloodthirster Chaos Armour" id="0407-cc46-9a9a-21ab" hidden="false" page="52" publicationId="02e1-3f69-7ae7-f5c5" typeId="4657-2671-1065-d493" typeName="Armour">
+      <characteristics>
+        <characteristic name="Saving Throw" typeId="b439-323a-9cfe-6340">3+ on 2D6</characteristic>
+        <characteristic name="Special" typeId="b7f1-73cd-d19d-26a6">Still affected by modifiers unlike standard Daemonic Aura. However, Chaos Armour is not negated by force weapons or psychic attacks</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Collar of Khorne" id="58e9-ecad-757f-413b" hidden="false" page="68" publicationId="02e1-3f69-7ae7-f5c5" typeId="bc42-75af-4a0c-de00" typeName="Chaos Rewards">
+      <characteristics>
+        <characteristic name="Gift" typeId="4f30-c481-04f2-1326"/>
+      </characteristics>
+    </profile>
+    <profile name="Nurgle&apos;s Cloud of Flies" id="15d8-22c6-d9cc-b662" hidden="false" page="68" publicationId="02e1-3f69-7ae7-f5c5" typeId="bc42-75af-4a0c-de00" typeName="Chaos Rewards">
+      <characteristics>
+        <characteristic name="Gift" typeId="4f30-c481-04f2-1326"/>
+      </characteristics>
+    </profile>
+    <profile name="Nurgle&apos;s Rot" id="ac29-e381-ea80-b1a1" hidden="false" page="68" publicationId="02e1-3f69-7ae7-f5c5" typeId="bc42-75af-4a0c-de00" typeName="Chaos Rewards">
+      <characteristics>
+        <characteristic name="Gift" typeId="4f30-c481-04f2-1326"/>
+      </characteristics>
+    </profile>
+    <profile name="Praise of Khorne" id="4344-aabf-732c-2883" hidden="false" page="58" publicationId="02e1-3f69-7ae7-f5c5" typeId="bc42-75af-4a0c-de00" typeName="Chaos Rewards">
+      <characteristics>
+        <characteristic name="Gift" typeId="4f30-c481-04f2-1326"/>
+      </characteristics>
+    </profile>
+    <profile name="Beastman" id="398c-5c4e-bf6e-5576" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Beastman</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">4</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">3</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">3</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">4</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">2</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">3</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">7</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Beastman Champion" id="e604-10ab-0b3d-87fd" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Beastman Champion</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">5</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">4</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">3</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">4</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">2</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">4</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">8</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Magus Lord" id="0ead-46b0-0e82-057a" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Magus Lord</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">6</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">6</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">4</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">4</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">4</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">6</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">3</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">8</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Magus Master" id="3026-e57e-8eb6-05e8" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Magus Master</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">5</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">5</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">4</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">4</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">3</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">5</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">2</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">7</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Chaos Steed" id="f472-b14a-1b24-2c9c" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Chaos Steed</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">8</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">4</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">0</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">4</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">4</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">4</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">5</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Exalted Champion" id="46d3-eb74-5183-eccc" hidden="false" page="28" publicationId="02e1-3f69-7ae7-f5c5" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Exalted Champion</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">7</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">7</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">5</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">5</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">3</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">7</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">3</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Mighty Champion" id="f277-a533-a068-246f" hidden="false" page="28" publicationId="02e1-3f69-7ae7-f5c5" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Mighty Champion</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">6</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">6</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">5</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">5</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">2</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">6</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">2</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">9</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Rod of Command" id="dd56-ae98-39a4-39b8" hidden="false" page="140" publicationId="02e1-3f69-7ae7-f5c5" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+      <characteristics>
+        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Once per battle may be used to command a friendly unit anywhere on the table to move twice in a single turn. The affected unit moves and then immediately has another movement phase. In addition, any friendly units within 24&quot; of N&apos;Kari may make Leadership tests using N&apos;Kari&apos;s Leadership of 11</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Doombolt" id="1ce0-83d3-745e-08ae" hidden="false" page="140" publicationId="02e1-3f69-7ae7-f5c5" typeId="11a6-8e13-a1ad-7e34" typeName="Unit Psychic Powers">
+      <characteristics>
+        <characteristic name="Name" typeId="f6df-d058-1a8b-c2f7">Doombolt</characteristic>
+        <characteristic name="Cast on" typeId="f4e5-8437-16be-8b1f">Automatically, but may be nullified</characteristic>
+        <characteristic name="Special" typeId="8ec1-f69b-9d13-1fff">Strike first model in it&apos;s path, up to 18&quot; away. Target suffers D6 S5 hits with a -2 save. Vehicles or buildings take a singlt hit with an armour penetration of D6x5</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Mark of Slaanesh" id="61ac-8b69-fa76-e00d" hidden="false" page="140" publicationId="02e1-3f69-7ae7-f5c5" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+      <characteristics>
+        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Immune to all psychology tests. Never needs to take a Break test. If N&apos;Kari is with a unit that is forced to flee then he is not affected and can continue to fight as normal</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Aura of Slaanesh" id="f87d-dc0d-097e-150f" hidden="false" page="140" publicationId="02e1-3f69-7ae7-f5c5" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+      <characteristics>
+        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">In close combat, enemy models must test against their Leadership on 3D6 to be able to strike N&apos;Kari. If they fail, they fight normally but if they win the combat they will not strike the model so any hits are wasted and the combat is a draw. If they pass they do not have to pass again</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="M&apos;Kachan, Daemon Prince of Tzeentch" id="5173-5317-593c-f9b6" hidden="false" page="141" publicationId="02e1-3f69-7ae7-f5c5" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">M&apos;Kachan</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">8</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">7</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">7</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">7</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">7</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">7</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">10</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">5</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Foulspawn" id="8e14-75f7-d3fe-1207" hidden="false" page="140" publicationId="02e1-3f69-7ae7-f5c5" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Foulspawn</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">2D6</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">3</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">5</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">7</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">7</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">18</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">3</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">7</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">8</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Rod of Khorne" id="559c-15d7-4cab-c89b" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+      <characteristics>
+        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Any creature with psychic powers that is in base to base contact with Doombreed at the start of the psychic phase loses D3 wounds. No save of any type is allowed against this. 
+
+In close combat can be used as an additional hand weapon, using Doombreeds Strength and save modifier (S8, -5 save)</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Doombreed" id="f083-6a43-03fa-5026" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Doombreed</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">6</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">10</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">9</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">7</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">8</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">8</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">10</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">7</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">12</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Doombreed Chaos Armour" id="b10f-9d74-10ff-2841" hidden="false" typeId="4657-2671-1065-d493" typeName="Armour">
+      <characteristics>
+        <characteristic name="Saving Throw" typeId="b439-323a-9cfe-6340">2+ (On 2D6)</characteristic>
+        <characteristic name="Special" typeId="b7f1-73cd-d19d-26a6">Not negated by force weapons or psychic attacks, but regular modifiers apply</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="N&apos;Kari" id="5ba3-08bf-f91b-7ef3" hidden="false" page="140" publicationId="02e1-3f69-7ae7-f5c5" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">N&apos;kari</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">6</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">10</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">10</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">7</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">7</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">9</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">8</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">7</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">11</characteristic>
+      </characteristics>
+    </profile>
+  </sharedProfiles>
+  <sharedRules>
+    <rule name="Aura of Slaanesh" id="58d9-2859-54a2-0a61" hidden="false" page="55" publicationId="02e1-3f69-7ae7-f5c5">
+      <description>In close ocmbat enemy models must test against their Leadership on 3D6 to be able to strike this model. If they fail the test then they fight normally, but if they win the combat they will not strike the model so any hits are wasted and the combat as treated as a draw. If the enemy model passes the test they do not need to test it again.</description>
+    </rule>
+    <rule name="Beast of Nurgle Attacks" id="11e9-a5b4-f0c3-5cc7" hidden="false" page="58" publicationId="02e1-3f69-7ae7-f5c5">
+      <description>The Beast of Nurgle has D6 Attacks in close combat, check each round. No armour saving throw is permitted for models wounded by the Beast</description>
+    </rule>
+    <rule name="Blood Scent" id="addd-de39-dcab-a95d" hidden="false" page="54" publicationId="02e1-3f69-7ae7-f5c5">
+      <description>Flesh Hounds do not have to charge the nearest enemy model when they charge. Instead they may charge any enemy model that is within range.</description>
+    </rule>
+    <rule name="Bound" id="fe02-db2c-cd6c-35be" hidden="false" page="60" publicationId="02e1-3f69-7ae7-f5c5">
+      <description>Flamers can move over any obstacles or intervening models without penalty</description>
+    </rule>
+    <rule name="Cloud of Flies" id="8671-aac0-7a74-9080" hidden="false" page="58" publicationId="02e1-3f69-7ae7-f5c5">
+      <description>Any enemy fighting a Plaguebearer must deduct -1 from their close combat score</description>
+    </rule>
+    <rule name="Crush" id="9110-c3b3-b696-8583" hidden="false" page="54" publicationId="02e1-3f69-7ae7-f5c5">
+      <description>If the Juggernaut charges into close combat then its attacks count as Crush attacks for that turn. If the Juggernaut wins the combat round then it automatically causes 1 wound for each hit struck regardless of the enemy&apos;s Toughness and ignoring any armour
+The Crush can also be used on vehicles. When fighting all attacks hit automatically and the attacker can choose the location struck. In the case of the Juggernaut the standard penetration is a 5 + 2D6. When making a Crush attack the Juggernaut&apos;s penetration is increased by a further D6 to 5 + 3D6</description>
+    </rule>
+    <rule name="Disc Movement" id="1de1-b9e9-5818-2574" hidden="false" page="60" publicationId="02e1-3f69-7ae7-f5c5">
+      <description>The Disc moves at head height. This as treated as normal movement penalties apply except that a Disc may move over water, marshes or other soft ground without penalty</description>
+    </rule>
+    <rule name="Furious Charge" id="0cd4-2e22-e9b4-e7ed" hidden="false" page="31" publicationId="02e1-3f69-7ae7-f5c5">
+      <description>Units with this rule triple their movement when they charge instead of doubling it. However, each model can only use this bonus if it allows it to get into close combat that turn. The tripled charge move may not be used by models that are not able to reach the enemy. This bonus also applies to any character model that has joined the unit, and who is on foot</description>
+    </rule>
+    <rule name="Flame Attacks" id="1c1b-11fc-17f6-8ae5" hidden="false" page="60" publicationId="02e1-3f69-7ae7-f5c5">
+      <description>Flamers can shoot flame in the shooting phase. The flame has a 6&quot; range and any target struck sustains D6 S3 hits.
+In close combat a successful strike from a Flamer causes D3 wounds</description>
+    </rule>
+    <rule name="Fly" id="1eae-bc57-fb7b-9461" hidden="false" page="52" publicationId="02e1-3f69-7ae7-f5c5">
+      <description>The model can fly using the same rules as a Jump Pack
+
+Can move 18&quot; in a straight line, or 12&quot; if jumping a single story building. Remove a further 6&quot; for each story higher.
++4&quot; to charge move after landing
+
+Further rules in Wargear book Pg. 71</description>
+    </rule>
+    <rule name="Infestations" id="698e-25d4-994f-5cfc" hidden="false" page="57" publicationId="02e1-3f69-7ae7-f5c5">
+      <description>Any Nurglings included in an army may be set up at the start of the battle if you want, and do not have to be summoned to the battlefield. Note that you can choose to summon Nurglings if you wish, it&apos;s just that you don&apos;t have to. 
+Nurglings cannot be banished back to the warp.</description>
+    </rule>
+    <rule name="Juggernaut Calavry" id="691d-d72e-e26c-645b" hidden="false" page="54" publicationId="02e1-3f69-7ae7-f5c5">
+      <description>When shooting at the Juggernaut and its rider roll to hit as normal, but randomize any hits between rider and mount. Work out any hits as normal and resolve damage against either the rider or the Juggernaut. If the rider is slain the Juggernaut may continue to fight on its own. If the Juggernaut is slain the rider can continue to fight on its own. 
+In the case of attacks from weapons with a burst area, treat the rider and Juggernaut as separate targets, so both will be hit if both lie within the template.
+In close combat both the Juggernaut and its rider fight separately. In effect, this works the same way as a multiple combat. Any enemy may choose to aim its attack at either the rider of the Juggernaut</description>
+    </rule>
+    <rule name="Nurgle War Altar Damage Table" id="2210-d381-f879-f3b6" hidden="false">
+      <description>1: Track*
+2-3: Hull
+4: Sponson*
+5: Turret
+6: Throne of Nurgle
+*Hit the one nearest to Attacker
+See datafax for damage table 1-5
+
+6: If the shot hits the Throne of Nurgle then the blast has hit the throne&apos;s Conversion Field. If the shot gets through this energy field then it will strike the High Priest Rancidguts. Roll to wound him as normal. If the High Priest is killed the Throne of Nurgle will no longer provide protection from psychic powers from the psychic field.</description>
+    </rule>
+    <rule name="Plague Knife" id="17c3-8ed1-aa82-dd8c" hidden="false">
+      <description>A wound from this weapon will kill mortal creatures on a D6 roll of a 6 regardless of how many wounds the target can sustain normally. On a 1-5, it inflicts 1 wound.</description>
+    </rule>
+    <rule name="Regeneration" id="9065-0dfd-542f-78c1" hidden="false" page="53" publicationId="02e1-3f69-7ae7-f5c5">
+      <description>Place slain Bloodletters on their side instead of removing them from play. In the rally phase at the end of the turn roll a D6 for each Bloodletter model. On a 4+ it regenerates any damage it suffered and stands back up, otherwise it is removed from play.</description>
+    </rule>
+    <rule name="Riding Beast" id="9ea5-7129-5842-6417" hidden="false" page="56" publicationId="02e1-3f69-7ae7-f5c5">
+      <description>Follows all the rules for Cavalry in the rulebook. Note that the effect of a mounts daemonic aura does not apply if the daemon is ridden by a mortal Champion. When ridden by a mortal Champion the normal armour saving throw of the Champion applies instead.</description>
+    </rule>
+    <rule name="Slime Trail" id="6867-1cd7-a670-ba83" hidden="false" page="58" publicationId="02e1-3f69-7ae7-f5c5">
+      <description>Multiple attackers do not receive the usual bonuses when attacking the Beast, no +1 for extra Attack for each opponent after the first, nor the +1 close combat modifier for each opponent after the first.</description>
+    </rule>
+    <rule name="Soporific Musk" id="d53d-9264-e3ab-5a87" hidden="false" page="56" publicationId="02e1-3f69-7ae7-f5c5">
+      <description>Any foe in close combat with the Fiend counts any fumble rolls at double value. At the same time, any critical hits caused by the Fiend&apos;s enemy are ignored</description>
+    </rule>
+    <rule name="Split" id="b47b-ce1f-969f-c5db" hidden="false" page="59" publicationId="02e1-3f69-7ae7-f5c5">
+      <description>When a Pink Horror is slain place it on its side rather than removing the model from play. At the end of the turn, remove the model and replace it with two Blue Horrors. 
+May not divide into Blue Horrors if killed by Vortex Grenades, any type of webber, Distortion cannon, Wraith cannon, and the Daemonic Attack force card. A Blue horror replacing a burning Pink Horror are not set on fire themselves</description>
+    </rule>
+    <rule name="Tongue Attack" id="2bd0-3e1d-9171-3829" hidden="false" page="56" publicationId="02e1-3f69-7ae7-f5c5">
+      <description>Attack is added to the rider&apos;s attacks in the normal way for cavalry models. If this attack dice is the highest scoring of the model&apos;s attack dice then the enemy&apos;s own combat score is reduced by D3 points.</description>
+    </rule>
+  </sharedRules>
+  <sharedSelectionEntries>
+    <selectionEntry name="Mark of Khorne" id="e417-f52b-f73c-b69a" collective="false" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="a258-2b12-eb74-44e0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Frenzy" id="a884-ebe4-cfea-45f2" hidden="false" targetId="0e86-209c-fe59-fe87" type="rule"/>
+      </infoLinks>
+      <profiles>
+        <profile name="Khorne" id="c327-8e6a-f28b-6c97" hidden="false" page="27" publicationId="02e1-3f69-7ae7-f5c5" typeId="05f8-5a7e-6011-6abf" typeName="Mark of Chaos">
+          <characteristics>
+            <characteristic name="Special Rule" typeId="04da-f00b-a41f-b42d">A model with the Mark of Khorne has an armour save of 2+. In addition, the model gains the Frenzy rule. However they may still Parry even though they have Frenzy.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Mark of Nurgle" id="7149-d0d9-5962-3852" collective="false" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="d2c7-8e83-38f6-f2e1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <profiles>
+        <profile name="Nurgle" id="9860-cd90-19d3-0a15" hidden="false" page="27" publicationId="02e1-3f69-7ae7-f5c5" typeId="05f8-5a7e-6011-6abf" typeName="Mark of Chaos">
+          <characteristics>
+            <characteristic name="Special Rule" typeId="04da-f00b-a41f-b42d">Model gains +1 Toughness</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Mark of Slaanesh" id="7657-9281-c658-aab3" collective="false" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="f46e-7223-c616-9b65" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <profiles>
+        <profile name="Slaanesh" id="586f-a4c9-4c99-f7e4" hidden="false" page="27" publicationId="02e1-3f69-7ae7-f5c5" typeId="05f8-5a7e-6011-6abf" typeName="Mark of Chaos">
+          <characteristics>
+            <characteristic name="Special Rule" typeId="04da-f00b-a41f-b42d">A model with the mark of Slaneesh is immune to Fear and Terror. They also never need to take a Break test. If a model with the Mark of Slaneesh is with a unit that is forced to flee it is not affected and can continue to fight as normal</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Mark of Tzeentch" id="f12b-beee-24c8-e604" collective="false" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="4532-adc3-4ec1-6db1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <profiles>
+        <profile name="Tzeentch" id="74f7-6b65-54b0-72a9" hidden="false" page="27" publicationId="02e1-3f69-7ae7-f5c5" typeId="05f8-5a7e-6011-6abf" typeName="Mark of Chaos">
+          <characteristics>
+            <characteristic name="Special Rule" typeId="04da-f00b-a41f-b42d">If a model with the Mark of Tzeentch is targeted or is caught in the area of a psychic attack then he may successfully nullify it by rolling a 4+. If he is successful the psychic attack does not work and causes no harm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Beast of Nurgle" id="8355-16c5-e9ee-691c" collective="false" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Daemons" id="f228-79dc-0142-1aa1" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
+        <categoryLink name="2Squads" id="6a3d-6c6e-fe30-809d" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
+        <categoryLink name="Chaos" id="8a00-a8e8-26be-fb05" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Fear" id="68d2-8123-f4f8-7fb4" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
+        <infoLink name="Beast of Nurgle Attacks" id="93cc-ba77-5aaf-8f45" hidden="false" targetId="11e9-a5b4-f0c3-5cc7" type="rule"/>
+        <infoLink name="Slime Trail" id="1c2c-8606-a15a-fede" hidden="false" targetId="6867-1cd7-a670-ba83" type="rule"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry name="Beast of Nurgle" id="c8c1-596a-9ed9-25cb" collective="false" hidden="false" import="true" type="model">
+          <categoryLinks>
+            <categoryLink name="Daemons" id="5dc8-09a0-5ad2-34c5" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
+          </categoryLinks>
+          <constraints>
+            <constraint id="e8d9-cfdd-025e-f148" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="30"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Daemonic Aura" id="5b4e-e783-649f-b911" hidden="false" import="true" targetId="dddf-e932-c9b6-90e4" type="selectionEntry">
+              <constraints>
+                <constraint id="4ee6-ae7c-e11c-9a06" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="5c94-00ce-92b9-254e" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Beast of Nurgle" id="9349-a1ed-1abb-995a" hidden="false" targetId="0e08-0016-a366-771b" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Daemonic Aura" id="dddf-e932-c9b6-90e4" hidden="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink name="Daemonic Aura" id="af00-0922-12d1-6321" hidden="false" targetId="fb47-0137-317d-f1e5" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Bloodletters" id="0b14-208c-1f4c-2907" collective="false" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="2Squads" id="da3f-e176-04ad-a74d" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
+        <categoryLink name="Daemons" id="d621-c16b-c668-06ef" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
+        <categoryLink name="Chaos" id="034f-64c4-3c32-8247" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Furious Charge" id="005b-4ac1-0c39-f319" hidden="false" targetId="0cd4-2e22-e9b4-e7ed" type="rule"/>
+        <infoLink name="Fear" id="b721-1999-068f-9b28" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
+        <infoLink name="Parry" id="e91e-2150-01a2-ea32" hidden="false" targetId="049d-3ed2-a1bf-86b0" type="rule"/>
+      </infoLinks>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="1f50-d7ce-b3dd-f8e0" childName="Doombreed, Daemon Prince of Khorne" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="warning" type="add" value="Army must be led by Doombreed">
+          <conditions>
+            <condition childId="1f50-d7ce-b3dd-f8e0" childName="Doombreed, Daemon Prince of Khorne" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <rules>
+        <rule name="Regeneration" id="78a1-d5ab-2a35-777b" hidden="false" page="53" publicationId="02e1-3f69-7ae7-f5c5">
+          <description>Place any Bloodletters that are slain onto their side instead of removing from play. At the Rally Phase, roll for each model. On a 4+ they regenerate any damage suffered and stand back up.</description>
+        </rule>
+      </rules>
+      <selectionEntries>
+        <selectionEntry name="Bloodletter" id="d6c6-d6ab-c4ae-dbd0" collective="false" hidden="false" import="true" type="model">
+          <constraints>
+            <constraint id="7a70-f0c4-c54f-a42b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
+            <constraint id="8370-efff-0006-5703" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="10"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Daemonic Aura" id="e984-0c60-82b0-e267" hidden="false" import="true" targetId="dddf-e932-c9b6-90e4" type="selectionEntry">
+              <constraints>
+                <constraint id="a045-6f87-eb04-a4af" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="9658-ffad-8591-3b77" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+            <entryLink name="Hellblade" id="e8a9-9e26-8ec0-825a" hidden="false" import="true" targetId="16c6-65f3-ac96-f313" type="selectionEntry">
+              <constraints>
+                <constraint id="dd3f-65d1-6049-7e69" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="492c-7ce6-4ea1-5b61" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+            <entryLink name="Juggernaut of Khorne" id="3d04-e893-a4b2-a863" hidden="false" import="true" targetId="1639-8246-851c-210f" type="selectionEntry">
+              <constraints>
+                <constraint id="7203-2891-bc61-9e44" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="692f-b22a-02b4-61ed" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="50"/>
+              </costs>
+              <modifiers>
+                <modifier field="692f-b22a-02b4-61ed" type="set" value="1">
+                  <conditions>
+                    <condition childId="e932-570f-0baf-c504" childName="Juggernauts of Khorne" field="selections" scope="0b14-208c-1f4c-2907" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="e932-570f-0baf-c504" childName="Juggernauts of Khorne" field="selections" scope="0b14-208c-1f4c-2907" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Bloodletter" id="0ce8-1981-9802-cd7e" hidden="false" targetId="56ae-9951-6843-9279" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Mount" id="3859-404c-fa70-d779" hidden="false">
+          <selectionEntries>
+            <selectionEntry name="Juggernauts of Khorne" id="e932-570f-0baf-c504" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="da24-e5b6-22a5-181b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry name="Hellblade" id="16c6-65f3-ac96-f313" hidden="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink name="Hellblade" id="5046-6625-0b97-46a4" hidden="false" targetId="765a-8623-e514-d45a" type="profile"/>
+        <infoLink name="Parry" id="544f-23f4-e4cd-d0ea" hidden="false" targetId="049d-3ed2-a1bf-86b0" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Juggernaut of Khorne" id="1639-8246-851c-210f" collective="false" hidden="false" import="true" subType="mount" type="model">
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Daemonic Aura" id="300d-ec09-e978-7a9c" hidden="false" import="true" targetId="dddf-e932-c9b6-90e4" type="selectionEntry">
+          <constraints>
+            <constraint id="3864-a426-66b6-c7a4" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="4bdc-6d06-e330-417c" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Crush" id="e8d1-c842-175a-2a1e" hidden="false" targetId="9110-c3b3-b696-8583" type="rule"/>
+        <infoLink name="Juggernaut Calavry" id="c415-57ad-50db-7f4f" hidden="false" targetId="691d-d72e-e26c-645b" type="rule"/>
+        <infoLink name="Fear" id="71cb-43a1-325f-9073" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
+        <infoLink name="Juggernaut of Khorne" id="8447-3799-8d0e-1d6a" hidden="false" targetId="2bd9-4000-4b00-0626" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="25% Ally (Shared with Support)" id="9679-d813-1ab3-ac5b" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="25%allies" id="1a1e-4108-f56f-9188" hidden="false" primary="false" targetId="12cc-6a93-a61e-381d"/>
+        <categoryLink name="Allied Force % Allotment" id="9389-c5c1-2773-3aaf" hidden="false" primary="true" targetId="6741-c4c6-274e-36cf"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="a127-7708-01f0-5be2" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+        <constraint id="4e7c-b102-eeaa-18e6" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="selections" includeChildSelections="true" scope="force" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry name="Flesh Hounds" id="fd9d-842a-d9b3-dd8d" collective="false" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Daemons" id="26e0-176d-2ba4-b7f0" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
+        <categoryLink name="2Squads" id="01f0-47f3-4054-1817" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Blood Scent" id="f8b7-cd44-8195-0409" hidden="false" targetId="addd-de39-dcab-a95d" type="rule"/>
+        <infoLink name="Fear" id="a279-886a-7b0f-9939" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
+      </infoLinks>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="1f50-d7ce-b3dd-f8e0" childName="Doombreed, Daemon Prince of Khorne" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="warning" type="add" value="Army must be led by Doombreed">
+          <conditions>
+            <condition childId="1f50-d7ce-b3dd-f8e0" childName="Doombreed, Daemon Prince of Khorne" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry name="Flesh Hound" id="1b76-357b-27f9-ecd3" collective="false" hidden="false" import="true" type="model">
+          <constraints>
+            <constraint id="83ea-4344-430f-362b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
+            <constraint id="5813-9342-4f21-0576" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="10"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="30"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Collar of Khorne" id="216b-07e8-9c46-5a36" hidden="false" import="true" targetId="85e1-70e6-a27c-a2d7" type="selectionEntry">
+              <constraints>
+                <constraint id="ad05-5096-ac08-2364" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="2eef-f592-4900-67a9" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </entryLink>
+            <entryLink name="Daemonic Aura" id="2223-6fc6-5f14-b7a7" hidden="false" import="true" targetId="dddf-e932-c9b6-90e4" type="selectionEntry">
+              <constraints>
+                <constraint id="5a3d-1585-b644-603c" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="7fd4-b443-d83f-ac94" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Flesh Hound" id="78bc-f89c-c707-ffbd" hidden="false" targetId="16c3-e368-71cf-f568" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Collar of Khorne" id="85e1-70e6-a27c-a2d7" hidden="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink name="Collar of Khorne" id="f64c-88c8-90a3-455a" hidden="false" targetId="6d04-4c53-765a-5aea" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="N&apos;Kari, Daemon Prince of Slaanesh" id="a105-1227-608e-300e" collective="false" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="1Characters" id="4dc9-a0c4-159e-0c72" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Daemons" id="e849-0321-4c68-c0b2" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="431"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Psyker" id="e505-7261-d054-7e5e" collective="false" hidden="false" import="true" targetId="56e9-7608-b945-ac81" type="selectionEntry">
+          <constraints>
+            <constraint id="88ea-fc7c-0c04-56be" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Psychic Level 4" id="b6d8-e3fe-318f-baa4" hidden="false" targetId="f988-2251-b863-a538" type="profile"/>
+          </infoLinks>
+        </entryLink>
+        <entryLink name="Daemonic Aura" id="785d-b43b-2812-3136" hidden="false" import="true" targetId="dddf-e932-c9b6-90e4" type="selectionEntry">
+          <constraints>
+            <constraint id="5515-92c9-6e46-e26b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="f716-0876-bc71-3409" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Mark of Slaanesh" id="c8b7-b974-7482-a0e2" hidden="false" import="true" targetId="7657-9281-c658-aab3" type="selectionEntry">
+          <constraints>
+            <constraint id="b3f0-ee87-4de5-2a3d" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Hatred" id="b992-911a-b4ba-6679" hidden="false" targetId="a572-823c-5114-ba17" type="rule">
+          <modifiers>
+            <modifier field="name" type="append" value="(Khorne)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Terror" id="7c94-2b6d-f712-0d37" hidden="false" targetId="05e0-cd40-2d9e-a9f9" type="rule"/>
+        <infoLink name="Immune to Psychology" id="812a-d782-d4da-4544" hidden="false" targetId="d8b2-410d-01df-0ce8" type="rule"/>
+        <infoLink name="Rod of Command" id="9237-5666-883b-ed56" hidden="false" targetId="dd56-ae98-39a4-39b8" type="profile"/>
+        <infoLink name="Aura of Slaanesh" id="0f79-9f96-e279-3f9d" hidden="false" targetId="f87d-dc0d-097e-150f" type="profile"/>
+        <infoLink name="Doombolt" id="5628-bd6f-e2f1-3b5a" hidden="false" targetId="1ce0-83d3-745e-08ae" type="profile"/>
+        <infoLink name="N&apos;Kari" id="40af-e9eb-2ef6-48cf" hidden="false" targetId="5ba3-08bf-f91b-7ef3" type="profile"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry name="Army Commander" id="4a88-c820-7bf3-f5a3" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="a33c-3c84-b42e-9709" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+            <constraint id="8150-e023-18d5-7b49" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Army Commander Strategy Rating" id="928e-d2f2-bd4f-ef89" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
+              <modifiers>
+                <modifier field="d0c8-e08c-1828-77b4" type="set" value="5"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="M&apos;Kachan, Daemon Prince of Tzeentch" id="2d86-bfa9-4388-7817" collective="false" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="Daemons" id="5c20-9954-989c-794a" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
+        <categoryLink name="1Characters" id="fb17-664d-74e2-6311" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="412"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Psyker" id="5a61-335d-b1ca-807f" collective="false" hidden="false" import="true" targetId="56e9-7608-b945-ac81" type="selectionEntry">
+          <constraints>
+            <constraint id="ba08-9d51-aa27-b87e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Psychic Level 4" id="12e0-6afb-5858-7b94" hidden="false" targetId="f988-2251-b863-a538" type="profile"/>
+          </infoLinks>
+        </entryLink>
+        <entryLink name="Daemonic Aura" id="56ce-b88a-4061-11f0" hidden="false" import="true" targetId="dddf-e932-c9b6-90e4" type="selectionEntry">
+          <constraints>
+            <constraint id="8f7f-07c9-ee67-cb39" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="b76a-d78a-ddc9-a3f8" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Hatred" id="fe94-95b2-a470-48f8" hidden="false" targetId="a572-823c-5114-ba17" type="rule">
+          <modifiers>
+            <modifier field="name" type="append" value="(Nurgle)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Terror" id="e258-e813-f409-0c21" hidden="false" targetId="05e0-cd40-2d9e-a9f9" type="rule"/>
+        <infoLink name="M&apos;Kachan, Daemon Prince of Tzeentch" id="2c61-7ec4-9f5a-8b8d" hidden="false" targetId="5173-5317-593c-f9b6" type="profile"/>
+      </infoLinks>
+      <rules>
+        <rule name="Fortune of Tzeentch" id="8ec0-b6b3-988c-0582" hidden="false" page="141" publicationId="02e1-3f69-7ae7-f5c5">
+          <description>M&apos;Kachan is allowed to use a nullify each psychic phase just as if he had been dealt a nullify card. This nullify always works on a roll of a 3+, no matter what the psychic levels of models involved.</description>
+        </rule>
+        <rule name="Master of Illusion" id="193d-3c36-119a-c2b8" hidden="false" page="141" publicationId="02e1-3f69-7ae7-f5c5">
+          <description>Using this ability, don&apos;t deploy M&apos;Kachan at the start of the game. Instead choose a single model in the army to be M&apos;Kachan in disguise. This may even be an allied model if desired. Once that model suffers a wound, or M&apos;Kachan chooses to reveal himself, remove the model and replace it with M&apos;Kachan. Any damage suffered by M&apos;Kachan while he was disguised still applies.</description>
+        </rule>
+        <rule name="Destiny of Tzeentch" id="9d64-147a-e832-5577" hidden="false" page="141" publicationId="02e1-3f69-7ae7-f5c5">
+          <description>Force cards are always dealt to M&apos;Kachan&apos;s side first, even in the psychic phase of an opponent&apos;s turn. In addition, his side always get to use the first psychic power</description>
+        </rule>
+        <rule name="Incredibily Cunning" id="591c-95be-332d-eaba" hidden="false" page="141" publicationId="02e1-3f69-7ae7-f5c5">
+          <description>May roll two dice and pick the one with the highest score when rolling to see who gets the first turn. May choose 1 extra strategy card at the start of the battle. May choose freely after all other cards dealt out. The opponent can they declare 1 card out loud and if it was the one M&apos;Kachan chose, it must be discarded</description>
+        </rule>
+      </rules>
+      <selectionEntries>
+        <selectionEntry name="Army Commander" id="513c-29ad-865a-d250" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="f1d4-30f3-084d-b5ba" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+            <constraint id="5ef1-1cac-fcc9-450a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Army Commander Strategy Rating" id="089d-6dfb-136e-03a3" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
+              <modifiers>
+                <modifier field="d0c8-e08c-1828-77b4" type="set" value="6"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Foulspawn, Daemon Prince of Nurgle" id="9cfb-f346-08c7-c3e0" collective="false" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="1Characters" id="266f-0571-3bb5-749d" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Daemons" id="b5ae-e742-ac3c-3afc" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="335"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Psyker" id="a4ed-b1b3-1895-901d" collective="false" hidden="false" import="true" targetId="56e9-7608-b945-ac81" type="selectionEntry">
+          <constraints>
+            <constraint id="505c-a397-bff6-7c31" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Psychic Level 4" id="03db-a2e7-c58a-35ef" hidden="false" targetId="f988-2251-b863-a538" type="profile"/>
+          </infoLinks>
+        </entryLink>
+        <entryLink name="Daemonic Aura" id="e3ba-c113-da1e-aab3" hidden="false" import="true" targetId="dddf-e932-c9b6-90e4" type="selectionEntry">
+          <constraints>
+            <constraint id="6591-dbdb-7c51-8eab" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="3178-9ea1-835c-8a1f" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Terror" id="5a9e-4a2e-428d-c81f" hidden="false" targetId="05e0-cd40-2d9e-a9f9" type="rule"/>
+        <infoLink name="Hatred" id="0c7a-9a2e-dc00-9876" hidden="false" targetId="a572-823c-5114-ba17" type="rule">
+          <modifiers>
+            <modifier field="name" type="append" value="(Tzeentch)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Foulspawn" id="549a-cdd0-160a-14a3" hidden="false" targetId="8e14-75f7-d3fe-1207" type="profile"/>
+      </infoLinks>
+      <rules>
+        <rule name="Chaos Spawn" id="1adf-05d0-1097-0ea5" hidden="false" page="141" publicationId="02e1-3f69-7ae7-f5c5">
+          <description>Moves 2D6&quot; each movement phase. Doesn&apos;t have to move in a random direction like other spawn, can choose direction. Any model Foulspawn moves over or touches sustains 1 automatic hit for each  attack Foulspawn has. Work out the result of any hits and saving throws normally, using Foulspawn&apos;s Strength and save modifier (S7, -4 save). Allocate hits on vehicles to random locations. Enemy models may not deliberately move over Foulspawn in their own turn. If they do because of compulsory or random movement, work out hits in the same way as if Foulspawn moved over them.
+
+Foulspawn suffers wounds if a double is rolled when determining his random movement, with no saving throw allowed for his Daemonic aura. The number of wounds he suffers is equal to the double rolled. A double 4 is 4 wounds, a double 6 is 6 wounds.. etc. 
+
+Enemy models may not attack Foulspawn in close combat.</description>
+        </rule>
+        <rule name="Absorb Bodily Tissue" id="d590-3909-2af2-aaa9" hidden="false" page="141" publicationId="02e1-3f69-7ae7-f5c5">
+          <description>Any wounds inflicted by Foulspawn may be used by him to replace any wounds he has lost himself. Cannot gain more wounds than he started with</description>
+        </rule>
+        <rule name="Toad-Like Tongue" id="1ffb-19b7-1b8e-7cf9" hidden="false" page="141" publicationId="02e1-3f69-7ae7-f5c5">
+          <description>Can attack with his tongue has a ranged weapon, with a 12&quot; range to his front. Roll to hit as normal. If the victim is hit they are dragged into base contact with Foulspawn, unless their Strength (or ram value for a vehicle) is equal to or higher than Foulspawn&apos;s Strength. Models dragged into base contact suffer damage as described above.</description>
+        </rule>
+        <rule name="Nurgle&apos;s Cloud of Flies" id="a079-9aa1-c423-b170" hidden="false" page="141" publicationId="02e1-3f69-7ae7-f5c5">
+          <description>All enemy models within 6&quot; of Foulspawn suffer a -1 modifier to their Weapon Skill and Ballistic Skill</description>
+        </rule>
+      </rules>
+      <selectionEntries>
+        <selectionEntry name="Army Commander" id="d433-4289-8fbe-d272" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="d039-1258-327b-1547" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+            <constraint id="e6b9-72d1-07fe-5940" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Army Commander Strategy Rating" id="e24d-74f2-5548-cef3" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
+              <modifiers>
+                <modifier field="d0c8-e08c-1828-77b4" type="set" value="5"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Doombreed, Daemon Prince of Khorne" id="1f50-d7ce-b3dd-f8e0" collective="false" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="1Characters" id="d0aa-651a-9e63-07fb" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Daemons" id="2d4d-265a-c7b1-b5f5" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="471"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Collar of Khorne" id="9d5f-31d9-8375-a89d" hidden="false" import="true" targetId="85e1-70e6-a27c-a2d7" type="selectionEntry">
+          <constraints>
+            <constraint id="2526-f929-5b0b-e4a4" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="cd8b-70e5-a611-991c" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Axe of Khorne" id="2a73-0995-a3a8-cce8" hidden="false" import="true" targetId="cea3-011e-bbe9-233f" type="selectionEntry">
+          <constraints>
+            <constraint id="901b-55db-d831-d835" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="64d3-4212-f111-5f08" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Chaos Armour" id="77b5-e3ca-1911-8218" hidden="false" import="true" targetId="7d7c-4f86-4be6-f975" type="selectionEntry">
+          <constraints>
+            <constraint id="e372-bd3e-c740-4b40" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="605a-a37c-dbae-bd14" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Hatred" id="c8ac-b8fb-d99d-fe21" hidden="false" targetId="a572-823c-5114-ba17" type="rule">
+          <modifiers>
+            <modifier field="name" type="append" value="(Slaanesh)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Axe of Khorne" id="a405-cbf8-3bad-7614" hidden="false" targetId="c29d-8541-753d-29b3" type="profile"/>
+        <infoLink name="Terror" id="e029-6a57-2a54-0070" hidden="false" targetId="05e0-cd40-2d9e-a9f9" type="rule"/>
+        <infoLink name="Fly" id="b8c1-518c-2a65-dff8" hidden="false" targetId="1eae-bc57-fb7b-9461" type="rule"/>
+        <infoLink name="Doombreed" id="660f-065e-44e0-974f" hidden="false" targetId="f083-6a43-03fa-5026" type="profile"/>
+      </infoLinks>
+      <profiles>
+        <profile name="Rod of Khorne" id="7cb3-1d0c-8237-a7ef" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+          <characteristics>
+            <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Any creature with psychic powers that is in base to base contact with Doombreed at the start of the psychic phase loses D3 wounds. No save of any type is allowed against this. 
+
+In close combat can be used as an additional hand weapon, using Doombreeds Strength and save modifier (S8, -5 save)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule name="Praise of Khrone" id="18e5-22ee-9de7-a2e9" hidden="false">
+          <description>Can retake any failed armour save.</description>
+        </rule>
+      </rules>
+      <selectionEntries>
+        <selectionEntry name="Army Commander" id="c1f5-6527-b375-dc82" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="5a7e-cce3-e47b-3052" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+            <constraint id="1702-e398-e12f-ce90" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Army Commander Strategy Rating" id="135d-ed59-9f5f-97b2" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
+              <modifiers>
+                <modifier field="d0c8-e08c-1828-77b4" type="set" value="5"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Axe of Khorne" id="cea3-011e-bbe9-233f" hidden="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink name="Axe of Khorne" id="48ad-fbb9-1437-07b9" hidden="false" targetId="c29d-8541-753d-29b3" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Chaos Armour" id="7d7c-4f86-4be6-f975" hidden="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink name="Doombreed Chaos Armour" id="1815-5463-129d-7258" hidden="false" targetId="b10f-9d74-10ff-2841" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Daemon Prince" id="9fc2-1692-48d3-de15" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="1Characters" id="4ad3-6933-293f-62f7" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="5d9a-62a5-2e33-466f" field="selections" includeChildSelections="false" scope="force" shared="true" type="max" value="1"/>
+        <constraint id="8b24-dab6-087f-e290" field="selections" includeChildSelections="false" scope="force" shared="true" type="min" value="1"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Choose Prince:" id="5880-02aa-c393-98d3" hidden="false">
+          <constraints>
+            <constraint id="b485-bb28-37ca-1f8e" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="0a28-b156-daa8-4453" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+          <entryLinks>
+            <entryLink name="M&apos;Kachan, Daemon Prince of Tzeentch" id="2e86-80fe-c83e-cbe8" hidden="false" import="true" targetId="2d86-bfa9-4388-7817" type="selectionEntry"/>
+            <entryLink name="Foulspawn, Daemon Prince of Nurgle" id="86d3-3c22-eaf8-255b" hidden="false" import="true" targetId="9cfb-f346-08c7-c3e0" type="selectionEntry"/>
+            <entryLink name="Doombreed, Daemon Prince of Khorne" id="611f-fcbe-3987-c1e8" hidden="false" import="true" targetId="1f50-d7ce-b3dd-f8e0" type="selectionEntry"/>
+            <entryLink name="N&apos;Kari, Daemon Prince of Slaanesh" id="6d94-65fe-4080-d4c6" hidden="false" import="true" targetId="a105-1227-608e-300e" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+  </sharedSelectionEntries>
+</catalogue>

@@ -44,6 +44,15 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier field="name" type="set" value="Daemons &amp; Warbands">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="b85e-e86e-7825-0e05" childName="Codex - Chaos (Daemon World)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </categoryEntry>
     <categoryEntry name="Legion of the Damned" id="f7f4-2733-743a-8971" hidden="false"/>
@@ -57,6 +66,7 @@
     <categoryEntry name="50%alies" id="7fd7-54ab-c5a6-76ea" hidden="false"/>
     <categoryEntry name="Tyranid-PrimaryList" id="1805-16ce-e100-585c" hidden="false"/>
     <categoryEntry name="25%ImperialAgents" id="5d1a-8609-4918-9272" hidden="false"/>
+    <categoryEntry name="ServoArmCapable" id="9538-36b9-3051-d97f" hidden="false"/>
   </categoryEntries>
   <costTypes>
     <costType name="pts" id="points" defaultCostLimit="-1" hidden="false"/>
@@ -73,6 +83,13 @@
           <modifierGroups>
             <modifierGroup type="and">
               <comment>50% max</comment>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="8d30-f85a-223d-697c" childName="Codex - Legion of the Damned" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
               <modifierGroups>
                 <modifierGroup type="and">
                   <comment>When you have no points limit</comment>
@@ -110,6 +127,58 @@
                       </conditionGroups>
                       <repeats>
                         <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="0.5" roundUp="false" scope="roster" shared="true" value="1"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <comment>25% max</comment>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="8d30-f85a-223d-697c" childName="Codex - Legion of the Damned" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <comment>When you have no points limit</comment>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier field="dab5-ad73-898e-1f58" type="set" value="-1"/>
+                    <modifier field="5667-7bfa-669d-d0c8" type="set" value="25"/>
+                  </modifiers>
+                </modifierGroup>
+                <modifierGroup type="and">
+                  <comment>When having a points limit</comment>
+                  <modifiers>
+                    <modifier field="5667-7bfa-669d-d0c8" type="set" value="-1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier field="dab5-ad73-898e-1f58" type="increment" value="1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                      <repeats>
+                        <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="0.25" roundUp="false" scope="roster" shared="true" value="1"/>
                       </repeats>
                     </modifier>
                   </modifiers>
@@ -205,6 +274,7 @@
                     <condition childId="7bb5-646e-ec66-1cdd" childName="Codex - Assassins" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                     <condition childId="852c-a02d-2907-ce3f" childName="Codex - Imperial Guard (Black Codex)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                     <condition childId="4026-2a6f-5a07-ce65" childName="Codex - Tyranids" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="9822-24a0-38e6-ee17" childName="Codex - Chaos (Chaos Cult)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -260,6 +330,7 @@
                     <condition childId="5bd8-0ec7-a752-694d" childName="Codex - Chaos" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                     <condition childId="b567-fa24-d74f-65ee" childName="Codex - Genestealer Cults" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                     <condition childId="b7a0-f77c-22d5-5989" childName="Codex - Sisters of Battle" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="b85e-e86e-7825-0e05" childName="Codex - Chaos (Daemon World)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -5793,7 +5864,7 @@ When rolling to see which side goes first, a Space Marine force that includes th
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition childId="a800-8c47-b465-29bc" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="notEqualTo" value="1"/>
+                    <condition childId="9538-36b9-3051-d97f" childName="ServoArmCapable" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="notInstanceOf" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>

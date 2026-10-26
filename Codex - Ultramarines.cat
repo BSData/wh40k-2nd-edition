@@ -385,7 +385,6 @@ Bike</characteristic>
         <characteristic name="I" typeId="76cb-4fd1-7571-e697">5</characteristic>
         <characteristic name="A" typeId="6d89-52f1-9c48-ac8c">3</characteristic>
         <characteristic name="LD" typeId="dfcc-1070-ddf7-ad7d">10</characteristic>
-        <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0"/>
         <characteristic name="Ram Strength" typeId="a025-016a-2152-7b47">7</characteristic>
         <characteristic name="Ram Damage" typeId="84ee-e518-c9ac-7b7e">D10</characteristic>
         <characteristic name="Ram Save Modifier" typeId="e929-6e42-f2a7-c76d">-4</characteristic>
@@ -921,7 +920,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     <selectionEntry name="Space Marine Captain" id="e664-c21f-4492-a7dc" collective="false" hidden="false" import="true" page="63" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Ultramarines" id="7baa-fafc-9bc1-eee0" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
-        <categoryLink name="Characters" id="c979-5111-3525-4b4e" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="c979-5111-3525-4b4e" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="5721-3574-fdd2-92dc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -1105,7 +1104,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     <selectionEntry name="Terminator Captain" id="381f-f866-3d8a-4e03" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Ultramarines" id="f309-a572-181b-e5d8" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
-        <categoryLink name="Characters" id="3a7a-0104-d676-6113" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="3a7a-0104-d676-6113" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="6986-c5af-d5a6-4800" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
@@ -1233,7 +1232,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     <selectionEntry name="Company Standard" id="dd11-eede-074e-7b62" collective="false" hidden="false" import="true" page="63" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Ultramarines" id="1210-cff0-57fc-c37b" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
-        <categoryLink name="Characters" id="dc23-1180-3267-5894" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="dc23-1180-3267-5894" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="f392-4fa0-fdc9-c023" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -1373,7 +1372,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     <selectionEntry name="Chaplain" id="54de-be57-4ec3-3913" collective="false" hidden="false" import="true" page="64" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Ultramarines" id="4756-62bf-2539-ea62" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
-        <categoryLink name="Characters" id="dbae-0da9-f2ae-e405" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="dbae-0da9-f2ae-e405" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
@@ -1640,7 +1639,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     <selectionEntry name="Librarian" id="4f11-67fa-3adf-e0e1" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Ultramarines" id="c2e7-1943-e214-e647" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
-        <categoryLink name="Characters" id="9174-2a63-dc09-fb6d" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="9174-2a63-dc09-fb6d" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
@@ -1824,7 +1823,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     <selectionEntry name="Apothecary" id="d503-8428-85ee-d4d6" collective="false" hidden="false" import="true" page="65" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Ultramarines" id="29a1-50aa-ed1b-db2d" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
-        <categoryLink name="Characters" id="f925-2ca9-0025-a88d" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="f925-2ca9-0025-a88d" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="40"/>
@@ -1950,20 +1949,15 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     <selectionEntry name="Techmarine" id="ee10-1b3b-ecac-e1e7" collective="false" hidden="false" import="true" page="65" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Ultramarines" id="45a3-3559-a3c6-2eba" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
-        <categoryLink name="Characters" id="62a6-b6a4-c172-246f" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="62a6-b6a4-c172-246f" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
         <categoryLink name="Techmarine" id="0bf7-fa35-2772-e738" hidden="false" primary="false" targetId="a21c-767f-7ecf-94eb"/>
+        <categoryLink name="ServoArmCapable" id="28f9-6e1a-b8c4-e32c" hidden="false" primary="false" targetId="9538-36b9-3051-d97f"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="33"/>
       </costs>
       <entryLinks>
         <entryLink name="Space Marine Bike" id="5ffe-1332-0b36-2374" collective="false" hidden="false" import="true" sortIndex="2" targetId="1b22-fc76-8ed0-5765" type="selectionEntry"/>
-        <entryLink name="ServoCapableWargear" id="b78f-a9fe-f164-0661" collective="false" hidden="false" import="true" targetId="a800-8c47-b465-29bc" type="selectionEntry">
-          <constraints>
-            <constraint id="97a2-c47f-b5a2-e96a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-            <constraint id="bcd4-c610-15d3-bcd1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-          </constraints>
-        </entryLink>
         <entryLink name="Wargear Cards" id="9f58-7c2c-220b-1961" collective="false" hidden="false" import="true" sortIndex="4" targetId="578d-7254-ab21-8b13" type="selectionEntryGroup">
           <constraints>
             <constraint id="32fd-ed6f-5982-4e53" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
@@ -2078,7 +2072,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     <selectionEntry name="Veteran Sergeant" id="99e2-e911-aba3-1722" collective="false" hidden="false" import="true" page="65" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Ultramarines" id="03fc-b480-2f77-1133" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
-        <categoryLink name="Characters" id="b60c-037a-6418-62f9" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="b60c-037a-6418-62f9" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="5"/>
@@ -4115,7 +4109,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     <selectionEntry name="Chief Librarian Tigurius" id="145c-21a0-1469-dae3" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Ultramarines" id="8ca1-384b-d744-0636" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
-        <categoryLink name="Characters" id="a923-23dc-da3d-981d" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="a923-23dc-da3d-981d" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="fc2b-f6db-6466-c912" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -4191,7 +4185,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     <selectionEntry name="Marneus Calgar Master of the Ultramarines" id="a1dd-ee6c-ab43-cd6e" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Ultramarines" id="4fb3-546a-6a2a-71bc" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
-        <categoryLink name="Characters" id="9cfd-d0b5-fc97-c872" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="9cfd-d0b5-fc97-c872" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="77f0-4e9b-c6a7-a361" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -4266,7 +4260,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     <selectionEntry name="Ultramarines Chaplain Cassius" id="4e2b-02c3-08b1-cb32" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Ultramarines" id="d992-8671-f9f3-cd1d" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
-        <categoryLink name="Characters" id="affb-a63c-86e4-5722" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="affb-a63c-86e4-5722" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="3669-f7e3-b774-5864" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -4342,7 +4336,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     <selectionEntry name="Ancient Helveticus, Bearer of the Battle Standard of Macragge" id="6029-55f6-5155-dcdc" collective="false" hidden="false" import="true" page="63" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Ultramarines" id="95b2-6eda-5d56-dfc8" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
-        <categoryLink name="Characters" id="732c-c2e3-4656-90a3" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="732c-c2e3-4656-90a3" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="6ad4-11ca-abaf-a35e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="0"/>
@@ -4439,7 +4433,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     <selectionEntry name="Captain Invictus of the Ultramarines First Company" id="ef78-2d4e-0226-4956" collective="false" hidden="false" import="true" page="74" publicationId="4590-6ba9-5482-a1fa" type="model">
       <categoryLinks>
         <categoryLink name="Ultramarines" id="9ef3-2a3b-999b-f919" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
-        <categoryLink name="Characters" id="fd18-a628-6c67-c0e2" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="fd18-a628-6c67-c0e2" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="7c2f-4044-c7ae-315a" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -4742,7 +4736,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     <selectionEntry name="Veteran Sergeant Centurius" id="0e4a-f45a-c58e-6800" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Ultramarines" id="8fc3-c996-9e8a-2e65" hidden="false" primary="false" targetId="6186-0c50-3540-dc37"/>
-        <categoryLink name="Characters" id="b111-07d2-44b2-7919" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="b111-07d2-44b2-7919" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="8d61-cf95-19ac-6589" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
@@ -4837,7 +4831,7 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
     <selectionEntry name="Chapter Master" id="5c0d-f1e5-52f5-8d7f" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Ultramarines" id="4d1d-d484-bb77-c7dc" primary="false" targetId="6186-0c50-3540-dc37"/>
-        <categoryLink name="Characters" id="ca15-2b79-1ad4-04f5" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="1Characters" id="ca15-2b79-1ad4-04f5" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
         <constraint id="ce74-541b-2597-6f42" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
@@ -7535,6 +7529,9 @@ The Legion of the Damned will always ignore any Leadership test it is called upo
             <constraint id="766c-9d24-77f4-38dc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
             <constraint id="9b2e-aa6d-0523-495e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="0"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="15"/>
+          </costs>
           <modifiers>
             <modifier field="9b2e-aa6d-0523-495e" type="set" value="1">
               <conditionGroups>

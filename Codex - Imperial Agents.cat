@@ -18,7 +18,7 @@
     <entryLink name="Sentinel" id="512d-cc1c-2ab5-1cfb" collective="false" hidden="false" import="true" targetId="14a1-cb0a-f7d8-39c0" type="selectionEntry"/>
     <entryLink name="Predator" id="ec29-6cc1-a077-41a3" collective="false" hidden="false" import="true" targetId="a406-ead5-9ad8-f916" type="selectionEntry"/>
     <entryLink name="Land Raider" id="3b71-c3c5-3f3b-d233" collective="false" hidden="false" import="true" targetId="2c6f-30a9-4928-549f" type="selectionEntry"/>
-    <entryLink name="Space Marine Rhino" id="6380-f51d-b3db-dff3" collective="false" hidden="false" import="true" targetId="c215-676f-a9c9-2f04" type="selectionEntry"/>
+    <entryLink name="Rhino" id="6380-f51d-b3db-dff3" collective="false" hidden="false" import="true" targetId="c215-676f-a9c9-2f04" type="selectionEntry"/>
     <entryLink name="Preacher" id="20ba-f04c-0e0b-925a" hidden="false" import="true" targetId="a311-3530-eb46-9543" type="selectionEntry"/>
     <entryLink name="Confessor" id="827a-0e72-88aa-6181" hidden="false" import="true" targetId="5959-b9ec-ddcc-f6c7" type="selectionEntry"/>
     <entryLink name="Sororitas Squad" id="3bc0-df02-27a6-d2b3" hidden="false" import="true" targetId="b630-6928-e677-6e59" type="selectionEntry"/>
@@ -481,6 +481,7 @@ May be setup using the Infiltration rules</description>
       <categoryLinks>
         <categoryLink name="Imperial Agents" id="e52a-d1ef-b6e4-0264" primary="true" targetId="7b75-aa9e-1b94-f4a5"/>
         <categoryLink name="3Support" id="021a-6ec4-6090-dfdd" hidden="false" primary="false" targetId="b6e4-2c66-e404-b10a"/>
+        <categoryLink name="ServoArmCapable" id="04af-f5e2-7682-58aa" hidden="false" primary="false" targetId="9538-36b9-3051-d97f"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
@@ -581,6 +582,7 @@ May be setup using the Infiltration rules</description>
       <categoryLinks>
         <categoryLink name="Imperial Agents" id="cf7e-1962-bb0e-50c5" primary="true" targetId="7b75-aa9e-1b94-f4a5"/>
         <categoryLink name="3Support" id="5c9b-7f3f-80e0-6647" hidden="false" primary="false" targetId="b6e4-2c66-e404-b10a"/>
+        <categoryLink name="ServoArmCapable" id="5a70-ca87-52e8-0da3" hidden="false" primary="false" targetId="9538-36b9-3051-d97f"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="30"/>

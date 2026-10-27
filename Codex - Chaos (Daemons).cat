@@ -6,6 +6,25 @@
     <entryLink name="25% Ally (Shared with Support)" id="30cc-7f79-9dfc-62e6" hidden="false" import="true" targetId="9679-d813-1ab3-ac5b" type="selectionEntry"/>
     <entryLink name="Flesh Hounds" id="3592-0071-68b6-2efb" hidden="false" import="true" targetId="fd9d-842a-d9b3-dd8d" type="selectionEntry"/>
     <entryLink name="Daemon Prince" id="4184-9e32-6d58-361a" hidden="false" import="true" targetId="9fc2-1692-48d3-de15" type="selectionEntry"/>
+    <entryLink name="Great Unclean One" id="f4a5-0773-2710-811f" hidden="false" import="true" targetId="0f78-e375-0cc3-cfe5" type="selectionEntry"/>
+    <entryLink name="Bloodthirster" id="1114-e301-5707-12ac" hidden="false" import="true" targetId="0812-3e13-f24a-ea20" type="selectionEntry"/>
+    <entryLink name="Plaguebearers" id="7e0c-f592-00b4-79ff" hidden="false" import="true" targetId="1c07-09eb-7b66-f47a" type="selectionEntry"/>
+    <entryLink name="Nurglings" id="1780-5d5c-b4bc-6ea3" hidden="false" import="true" targetId="3cae-0368-2960-580c" type="selectionEntry"/>
+    <entryLink name="Keeper of Secrets" id="a2b2-f7cc-3e95-48c7" hidden="false" import="true" targetId="4516-66bb-54f9-25b6" type="selectionEntry"/>
+    <entryLink name="Daemonettes" id="8990-8673-0684-0b4b" hidden="false" import="true" targetId="ffe5-d32b-1335-9ac5" type="selectionEntry"/>
+    <entryLink name="Fiends of Slaanesh" id="dd77-f7f8-72e8-7da7" hidden="false" import="true" targetId="5fe7-d003-1c1e-66bf" type="selectionEntry"/>
+    <entryLink name="The Lord of Change" id="37bf-7306-e826-8b28" hidden="false" import="true" targetId="5d5e-4c73-eb42-ac0a" type="selectionEntry"/>
+    <entryLink name="Flamers of Tzeentch" id="9655-b983-34fb-062c" hidden="false" import="true" targetId="5241-467b-a0b6-0bd3" type="selectionEntry"/>
+    <entryLink name="Horrors of Tzeentch" id="347c-d2f2-d05e-c21f" hidden="false" import="true" targetId="0284-067c-20ed-a146" type="selectionEntry"/>
+    <entryLink name="Daemonic Icon Bearer" id="621a-f333-c3c0-3d1c" hidden="false" import="true" targetId="03fa-5f32-90bf-cd2d" type="selectionEntry"/>
+    <entryLink name="Chaos Warrior Champion" id="cfc3-f12d-2c60-841f" hidden="false" import="true" targetId="ba4d-1a1c-abdf-b2d5" type="selectionEntry"/>
+    <entryLink name="Chaos Warrior Warband" id="459a-a2d0-1cba-d92d" hidden="false" import="true" targetId="4508-1fd2-6624-9643" type="selectionEntry"/>
+    <entryLink name="Chaos Magus" id="058d-33f5-ee54-ad20" hidden="false" import="true" targetId="1a56-4c40-2596-4f33" type="selectionEntry"/>
+    <entryLink name="Beastman Champion" id="d2a3-6bf9-bcc7-7226" hidden="false" import="true" targetId="ad49-5789-ec6e-0f11" type="selectionEntry"/>
+    <entryLink name="Chaos Hound Pack" id="9da0-28cb-1823-3cf3" hidden="false" import="true" targetId="3c7e-8605-fa2b-f21c" type="selectionEntry"/>
+    <entryLink name="Beastmen" id="c7a1-ebd2-3932-21e9" hidden="false" import="true" targetId="0c13-10f7-0384-d6ab" type="selectionEntry"/>
+    <entryLink name="Minotaurs" id="6955-dd04-e7ab-eb60" hidden="false" import="true" targetId="d68a-2cca-afdb-d60d" type="selectionEntry"/>
+    <entryLink name="Trolls" id="3c70-5550-5fed-4026" hidden="false" import="true" targetId="c4fd-3460-42cc-e8b4" type="selectionEntry"/>
   </entryLinks>
   <profileTypes>
     <profileType name="Chaos Rewards" id="bc42-75af-4a0c-de00" hidden="false">
@@ -346,24 +365,20 @@ The whip counts as an additional hand weapon giving the Bloodthirster an extra A
         <characteristic name="Special" typeId="b7f1-73cd-d19d-26a6">Still affected by modifiers unlike standard Daemonic Aura. However, Chaos Armour is not negated by force weapons or psychic attacks</characteristic>
       </characteristics>
     </profile>
-    <profile name="Collar of Khorne" id="58e9-ecad-757f-413b" hidden="false" page="68" publicationId="02e1-3f69-7ae7-f5c5" typeId="bc42-75af-4a0c-de00" typeName="Chaos Rewards">
-      <characteristics>
-        <characteristic name="Gift" typeId="4f30-c481-04f2-1326"/>
-      </characteristics>
-    </profile>
     <profile name="Nurgle&apos;s Cloud of Flies" id="15d8-22c6-d9cc-b662" hidden="false" page="68" publicationId="02e1-3f69-7ae7-f5c5" typeId="bc42-75af-4a0c-de00" typeName="Chaos Rewards">
       <characteristics>
-        <characteristic name="Gift" typeId="4f30-c481-04f2-1326"/>
+        <characteristic name="Gift" typeId="4f30-c481-04f2-1326">All enemy models in base to base suffer -1 modifier to their Weapon Skill, whether they are attacking the model with Cloud of Flies or another</characteristic>
       </characteristics>
     </profile>
     <profile name="Nurgle&apos;s Rot" id="ac29-e381-ea80-b1a1" hidden="false" page="68" publicationId="02e1-3f69-7ae7-f5c5" typeId="bc42-75af-4a0c-de00" typeName="Chaos Rewards">
       <characteristics>
-        <characteristic name="Gift" typeId="4f30-c481-04f2-1326"/>
+        <characteristic name="Gift" typeId="4f30-c481-04f2-1326">After making close combat attacks, roll a D6 for each mortal enemy model in base to base. On a 6 they contract Nurgle&apos;s Rot and suffer a single wound. 
+No saving throws of any kind are allowed against Nurgle&apos;s Rot - including fields, dodge, etc. This only applies to mortal foes and not other daemons, vehicles, Avatars etc</characteristic>
       </characteristics>
     </profile>
     <profile name="Praise of Khorne" id="4344-aabf-732c-2883" hidden="false" page="58" publicationId="02e1-3f69-7ae7-f5c5" typeId="bc42-75af-4a0c-de00" typeName="Chaos Rewards">
       <characteristics>
-        <characteristic name="Gift" typeId="4f30-c481-04f2-1326"/>
+        <characteristic name="Gift" typeId="4f30-c481-04f2-1326">May reroll any failed armour saves. This only works on armour saves</characteristic>
       </characteristics>
     </profile>
     <profile name="Beastman" id="398c-5c4e-bf6e-5576" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
@@ -420,20 +435,6 @@ The whip counts as an additional hand weapon giving the Bloodthirster an extra A
         <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">5</characteristic>
         <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">2</characteristic>
         <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">7</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="Chaos Steed" id="f472-b14a-1b24-2c9c" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
-      <characteristics>
-        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Chaos Steed</characteristic>
-        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">8</characteristic>
-        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">4</characteristic>
-        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">0</characteristic>
-        <characteristic name="S" typeId="5916-04ef-0fd1-6557">4</characteristic>
-        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">4</characteristic>
-        <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
-        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">4</characteristic>
-        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
-        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">5</characteristic>
       </characteristics>
     </profile>
     <profile name="Exalted Champion" id="46d3-eb74-5183-eccc" hidden="false" page="28" publicationId="02e1-3f69-7ae7-f5c5" typeId="219f-0faa-a2d8-f766" typeName="Unit">
@@ -553,6 +554,33 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">8</characteristic>
         <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">7</characteristic>
         <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">11</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Chaos Steed" id="2783-70e7-3424-6eb0" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+      <characteristics>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Chaos Steed</characteristic>
+        <characteristic name="M" typeId="4934-7872-3dd7-a8b6">8</characteristic>
+        <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">4</characteristic>
+        <characteristic name="BS" typeId="f859-88a3-fdd3-b298">0</characteristic>
+        <characteristic name="S" typeId="5916-04ef-0fd1-6557">4</characteristic>
+        <characteristic name="T" typeId="2e7d-2383-f92f-16f9">4</characteristic>
+        <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
+        <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">4</characteristic>
+        <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
+        <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">5</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Chain-axe" id="c5ee-a8c2-c6ae-5b13" hidden="false" page="75" publicationId="02e1-3f69-7ae7-f5c5" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">CC Only</characteristic>
+        <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">CC Only</characteristic>
+        <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328"/>
+        <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c"/>
+        <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">+1</characteristic>
+        <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
+        <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-2</characteristic>
+        <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">S+D6</characteristic>
+        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Close Combat</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
@@ -715,6 +743,18 @@ May not divide into Blue Horrors if killed by Vortex Grenades, any type of webbe
         <infoLink name="Beast of Nurgle Attacks" id="93cc-ba77-5aaf-8f45" hidden="false" targetId="11e9-a5b4-f0c3-5cc7" type="rule"/>
         <infoLink name="Slime Trail" id="1c2c-8606-a15a-fede" hidden="false" targetId="6867-1cd7-a670-ba83" type="rule"/>
       </infoLinks>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="9cfb-f346-08c7-c3e0" childName="Foulspawn, Daemon Prince of Nurgle" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="warning" type="add" value="Army must be led by Foulspawn">
+          <conditions>
+            <condition childId="9cfb-f346-08c7-c3e0" childName="Foulspawn, Daemon Prince of Nurgle" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <selectionEntries>
         <selectionEntry name="Beast of Nurgle" id="c8c1-596a-9ed9-25cb" collective="false" hidden="false" import="true" type="model">
           <categoryLinks>
@@ -722,6 +762,7 @@ May not divide into Blue Horrors if killed by Vortex Grenades, any type of webbe
           </categoryLinks>
           <constraints>
             <constraint id="e8d9-cfdd-025e-f148" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
+            <constraint id="9fd1-5449-3c53-e78b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="10"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="30"/>
@@ -757,7 +798,6 @@ May not divide into Blue Horrors if killed by Vortex Grenades, any type of webbe
       <infoLinks>
         <infoLink name="Furious Charge" id="005b-4ac1-0c39-f319" hidden="false" targetId="0cd4-2e22-e9b4-e7ed" type="rule"/>
         <infoLink name="Fear" id="b721-1999-068f-9b28" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
-        <infoLink name="Parry" id="e91e-2150-01a2-ea32" hidden="false" targetId="049d-3ed2-a1bf-86b0" type="rule"/>
       </infoLinks>
       <modifiers>
         <modifier field="hidden" type="set" value="true">
@@ -1211,7 +1251,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         <infoLink name="Axe of Khorne" id="48ad-fbb9-1437-07b9" hidden="false" targetId="c29d-8541-753d-29b3" type="profile"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="Chaos Armour" id="7d7c-4f86-4be6-f975" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Doombreed&apos;s Chaos Armour" id="7d7c-4f86-4be6-f975" hidden="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink name="Doombreed Chaos Armour" id="1815-5463-129d-7258" hidden="false" targetId="b10f-9d74-10ff-2841" type="profile"/>
       </infoLinks>
@@ -1239,5 +1279,2224 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
+    <selectionEntry name="Bloodthirster" id="0812-3e13-f24a-ea20" collective="false" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="1Characters" id="01d4-0139-f8d9-2bde" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Daemons" id="6f18-2c7b-097a-6cca" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
+        <categoryLink name="Chaos" id="26c5-a0dc-3ccb-dac8" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="f2d9-3511-4a15-0a88" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="285"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Axe of Khorne" id="1b28-f246-ae84-9dfd" hidden="false" import="true" targetId="cea3-011e-bbe9-233f" type="selectionEntry">
+          <constraints>
+            <constraint id="d6f5-1dcb-271d-0ed0" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="cfcb-723f-caf8-bcda" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Bloodthirster Armour" id="9aa6-d3c2-7d71-53ce" hidden="false" import="true" targetId="7af1-2b41-b778-b16c" type="selectionEntry">
+          <constraints>
+            <constraint id="044f-533b-2eeb-2d30" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="8ca6-cb6f-5727-d2a6" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Bloodthirster&apos;s Whip" id="374f-3055-9e63-b46a" hidden="false" import="true" targetId="8dea-ca19-cc5a-29f1" type="selectionEntry">
+          <constraints>
+            <constraint id="dd20-6e70-f3ab-4c53" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="5044-dd1d-921a-27a2" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Bloodthirster" id="f150-041f-515e-af36" hidden="false" targetId="c3d8-2621-afb2-ae31" type="profile"/>
+        <infoLink name="Fly" id="d801-a5d7-4d8d-fbf6" hidden="false" targetId="1eae-bc57-fb7b-9461" type="rule"/>
+        <infoLink name="Terror" id="4246-8c88-b7ee-3849" hidden="false" targetId="05e0-cd40-2d9e-a9f9" type="rule"/>
+      </infoLinks>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="1f50-d7ce-b3dd-f8e0" childName="Doombreed, Daemon Prince of Khorne" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="warning" type="add" value="Army must be led by Doombreed">
+          <conditions>
+            <condition childId="1f50-d7ce-b3dd-f8e0" childName="Doombreed, Daemon Prince of Khorne" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry name="Bloodthirster Armour" id="7af1-2b41-b778-b16c" hidden="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink name="Bloodthirster Chaos Armour" id="1020-631e-b8a9-98bd" hidden="false" targetId="0407-cc46-9a9a-21ab" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Bloodthirster&apos;s Whip" id="8dea-ca19-cc5a-29f1" hidden="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink name="Bloodthirster&apos;s Whip" id="5de7-b288-a195-aad4" hidden="false" targetId="5dbf-3b0a-3475-3957" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Great Unclean One" id="0f78-e375-0cc3-cfe5" collective="false" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="1Characters" id="3826-520c-9e6c-700f" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Daemons" id="876f-ae6a-0d03-5ceb" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
+        <categoryLink name="Chaos" id="d9e6-b570-d27d-b0c7" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="c0d1-a5a1-9904-d480" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="230"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Psyker" id="c16e-f582-005d-c64d" collective="false" hidden="false" import="true" targetId="56e9-7608-b945-ac81" type="selectionEntry">
+          <constraints>
+            <constraint id="d4a0-d854-8293-4ddc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Psychic Level 4" id="6b1f-3c07-a2a1-fcdc" hidden="false" targetId="f988-2251-b863-a538" type="profile"/>
+          </infoLinks>
+        </entryLink>
+        <entryLink name="Stream of Corruption" id="ba14-bf7d-a28b-1f32" hidden="false" import="true" targetId="cb50-128b-ba27-ea23" type="selectionEntry">
+          <constraints>
+            <constraint id="bb7e-bd80-892f-1795" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="aeec-96f2-3f24-4dc1" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Daemonic Aura" id="1d12-70b4-2412-0c52" hidden="false" import="true" targetId="dddf-e932-c9b6-90e4" type="selectionEntry">
+          <constraints>
+            <constraint id="a037-ae7d-853f-fe65" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="2f94-a47b-46b5-3c2b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Great Unclean One" id="3207-5969-8e17-f414" hidden="false" targetId="33d8-3c1d-e02d-b07c" type="profile"/>
+        <infoLink name="Terror" id="fd49-f3df-36df-c5ee" hidden="false" targetId="05e0-cd40-2d9e-a9f9" type="rule"/>
+      </infoLinks>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="9cfb-f346-08c7-c3e0" childName="Foulspawn, Daemon Prince of Nurgle" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="warning" type="add" value="Army must be led by Foulspawn">
+          <conditions>
+            <condition childId="9cfb-f346-08c7-c3e0" childName="Foulspawn, Daemon Prince of Nurgle" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry name="Stream of Corruption" id="cb50-128b-ba27-ea23" hidden="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink name="Stream of Corruption" id="e862-0ccd-84b6-2dfe" hidden="false" targetId="56cf-05a3-fecc-2d48" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Plaguebearers" id="1c07-09eb-7b66-f47a" collective="false" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="2Squads" id="560b-835c-29e1-0e08" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
+        <categoryLink name="Daemons" id="c3ed-0646-4bd4-c461" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
+        <categoryLink name="Chaos" id="b0ee-fdaa-cfdb-c6db" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Psyker" id="7d30-6a1e-d53a-a162" collective="false" hidden="false" import="true" targetId="56e9-7608-b945-ac81" type="selectionEntry">
+          <constraints>
+            <constraint id="b3ca-cdf7-9277-c6b5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="1c72-b1c7-8e16-7fe8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Cloud of Flies" id="b43a-b663-d7e7-47d2" hidden="false" targetId="8671-aac0-7a74-9080" type="rule"/>
+        <infoLink name="Fear" id="455c-c97b-1abd-b709" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
+      </infoLinks>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="9cfb-f346-08c7-c3e0" childName="Foulspawn, Daemon Prince of Nurgle" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="warning" type="add" value="Army must be led by Foulspawn">
+          <conditions>
+            <condition childId="9cfb-f346-08c7-c3e0" childName="Foulspawn, Daemon Prince of Nurgle" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <rules>
+        <rule name="Plaguebearers Psychic Level" id="2773-c84e-37af-bcd7" hidden="false" page="96" publicationId="02e1-3f69-7ae7-f5c5">
+          <description>Gain a psychic mastery level of 1 per five models, and one Nurgle Chaos power per five models</description>
+        </rule>
+      </rules>
+      <selectionEntries>
+        <selectionEntry name="Plaguebearer" id="66b6-c8b6-8f35-8659" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="433f-844e-5260-bfa9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
+            <constraint id="9b1c-63f3-2f4c-fb4a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="10"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Daemonic Aura" id="ef35-636e-eadc-b028" hidden="false" import="true" targetId="dddf-e932-c9b6-90e4" type="selectionEntry">
+              <constraints>
+                <constraint id="7755-04ea-cc4d-1d15" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="0957-7371-a7ca-c834" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+            <entryLink name="Plaguesword" id="0c58-a820-cb99-37e7" hidden="false" import="true" targetId="16b6-78bd-d4e8-e175" type="selectionEntry">
+              <constraints>
+                <constraint id="447f-b1ea-c4b4-7c45" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="3306-4b7b-3872-5c8a" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Plaguebearer of Nurgle" id="0aff-0ff8-5161-a053" hidden="false" targetId="d111-8421-5543-b02f" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Plaguesword" id="16b6-78bd-d4e8-e175" hidden="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink name="Plaguesword" id="8951-a9b0-34cc-f248" hidden="false" targetId="778e-0bea-50ce-064b" type="profile"/>
+        <infoLink name="Parry" id="cdb2-2890-8a42-df00" hidden="false" targetId="049d-3ed2-a1bf-86b0" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Nurglings" id="3cae-0368-2960-580c" collective="false" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="2Squads" id="62d4-7b38-2ce6-7ce1" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
+        <categoryLink name="Chaos" id="1ae9-701c-5fd8-aaed" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+        <categoryLink name="Daemons" id="3b47-53cb-43b6-9af3" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Infestations" id="5f21-6e95-7e3c-ea88" hidden="false" targetId="698e-25d4-994f-5cfc" type="rule"/>
+        <infoLink name="Fear" id="4284-1a68-4f66-6a30" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
+      </infoLinks>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="9cfb-f346-08c7-c3e0" childName="Foulspawn, Daemon Prince of Nurgle" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="warning" type="add" value="Army must be led by Foulspawn">
+          <conditions>
+            <condition childId="9cfb-f346-08c7-c3e0" childName="Foulspawn, Daemon Prince of Nurgle" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry name="Nurglings" id="6ea7-749d-4e82-358f" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="9ebd-9f03-8a00-d4be" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
+            <constraint id="0dee-ed68-aa95-3801" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="10"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Daemonic Aura" id="2532-7c3e-41f0-d21e" hidden="false" import="true" targetId="dddf-e932-c9b6-90e4" type="selectionEntry">
+              <constraints>
+                <constraint id="473f-d160-0e5a-31a7" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="16f1-1ed6-4473-e4d9" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Nurglings" id="bcd2-47a8-4282-2dbc" hidden="false" targetId="a2ea-601f-4c26-d02c" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Keeper of Secrets" id="4516-66bb-54f9-25b6" collective="false" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="1Characters" id="9bb1-2a80-90a7-d06e" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Chaos" id="4d8d-7c81-7a41-d81f" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+        <categoryLink name="Daemons" id="3af3-9f04-50d2-137c" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="7ec7-5c81-5318-de07" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="255"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Psyker" id="ca3d-4a75-c37a-28cf" collective="false" hidden="false" import="true" targetId="56e9-7608-b945-ac81" type="selectionEntry">
+          <constraints>
+            <constraint id="1438-b15e-be81-01a4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Psychic Level 4" id="206a-4669-4d3d-889b" hidden="false" targetId="f988-2251-b863-a538" type="profile"/>
+          </infoLinks>
+        </entryLink>
+        <entryLink name="Daemonic Aura" id="8af9-3bd7-1472-b4d1" hidden="false" import="true" targetId="dddf-e932-c9b6-90e4" type="selectionEntry">
+          <constraints>
+            <constraint id="e1d6-be1a-8f27-4116" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="7005-85b5-4309-84e0" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Keeper of Secrets" id="9083-6096-8cb6-579d" hidden="false" targetId="d607-4477-3ce9-47cb" type="profile"/>
+        <infoLink name="Aura of Slaanesh" id="d6f1-a91d-ff42-aacd" hidden="false" targetId="58d9-2859-54a2-0a61" type="rule"/>
+        <infoLink name="Terror" id="ec8b-f537-bddd-5ce4" hidden="false" targetId="05e0-cd40-2d9e-a9f9" type="rule"/>
+      </infoLinks>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="a105-1227-608e-300e" childName="N&apos;Kari, Daemon Prince of Slaanesh" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="warning" type="add" value="Army must be led by N&apos;Kari">
+          <conditions>
+            <condition childId="a105-1227-608e-300e" childName="N&apos;Kari, Daemon Prince of Slaanesh" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry name="Daemonettes" id="ffe5-d32b-1335-9ac5" collective="false" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="2Squads" id="bfa3-6383-be91-c391" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
+        <categoryLink name="Daemons" id="dad7-9759-8d8e-f9bd" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
+        <categoryLink name="Chaos" id="dce8-ae98-c3f8-14c6" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Fear" id="cf0b-e744-5fae-d3dd" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
+      </infoLinks>
+      <modifiers>
+        <modifier field="warning" type="add" value="Army must be led by N&apos;Kari">
+          <conditions>
+            <condition childId="a105-1227-608e-300e" childName="N&apos;Kari, Daemon Prince of Slaanesh" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="a105-1227-608e-300e" childName="N&apos;Kari, Daemon Prince of Slaanesh" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <rules>
+        <rule name="Daemonettes Psychic Level" id="5042-81e3-4bd1-6779" hidden="false" page="96" publicationId="02e1-3f69-7ae7-f5c5">
+          <description>Gain a psychic mastery level of 1 per five models, and one Slaanesh Chaos power per five models</description>
+        </rule>
+      </rules>
+      <selectionEntries>
+        <selectionEntry name="Daemonette" id="45a5-67a7-c39a-e2e5" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="5898-7858-a365-0120" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
+            <constraint id="788f-995f-7fa5-5dba" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="10"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Huge Claws" id="4ea0-725f-04af-b42a" collective="false" hidden="false" import="true" targetId="5482-73f8-b1e6-1c32" type="selectionEntry">
+              <constraints>
+                <constraint id="848a-3dd4-5044-7332" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="bdb8-04b8-6bb9-44cb" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+            <entryLink name="Daemonic Aura" id="17a2-3003-f299-9e04" collective="false" hidden="false" import="true" targetId="dddf-e932-c9b6-90e4" type="selectionEntry">
+              <constraints>
+                <constraint id="2660-d30d-daf0-5593" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="d80a-1419-09e5-8c14" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+            <entryLink name="Steeds of Slaneesh" id="baa4-0ffe-ce12-07fd" hidden="false" import="true" targetId="35f4-e1cf-9e61-bbdd" type="selectionEntry">
+              <constraints>
+                <constraint id="c14f-7c17-cdbb-7236" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="2cc8-1d14-21ed-85da" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+              <modifiers>
+                <modifier field="2cc8-1d14-21ed-85da" type="set" value="1">
+                  <conditions>
+                    <condition childId="fb2d-64f3-781c-c769" childName="Steeds of Slaneesh" field="selections" scope="ffe5-d32b-1335-9ac5" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="fb2d-64f3-781c-c769" childName="Steeds of Slaneesh" field="selections" scope="ffe5-d32b-1335-9ac5" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Daemonettes" id="f1c8-77d6-103c-a226" hidden="false" targetId="87d4-e3e2-70bb-3960" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Mount" id="49e2-17fe-b678-977a" hidden="false">
+          <selectionEntries>
+            <selectionEntry name="Steeds of Slaneesh" id="fb2d-64f3-781c-c769" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="1b52-958c-8ff2-86d1" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry name="Huge Claws" id="5482-73f8-b1e6-1c32" collective="false" hidden="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Huge Claws" id="4582-5321-ddc1-95ff" hidden="false" targetId="f6ac-41ab-6b7e-6d9e" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Fiends of Slaanesh" id="5fe7-d003-1c1e-66bf" collective="false" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="2Squads" id="416d-188e-c8ed-2a3a" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
+        <categoryLink name="Chaos" id="4ebe-19e4-68f7-1da6" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+        <categoryLink name="Daemons" id="9a32-5fb0-1f74-5523" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Fear" id="aadc-5624-25f2-238c" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
+        <infoLink name="Soporific Musk" id="9fa6-3daa-5d16-8967" hidden="false" targetId="d53d-9264-e3ab-5a87" type="rule"/>
+      </infoLinks>
+      <modifiers>
+        <modifier field="warning" type="add" value="Army must be led by N&apos;Kari">
+          <conditions>
+            <condition childId="a105-1227-608e-300e" childName="N&apos;Kari, Daemon Prince of Slaanesh" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="a105-1227-608e-300e" childName="N&apos;Kari, Daemon Prince of Slaanesh" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry name="Fiend" id="b502-553d-df8d-b81d" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="923f-0f3a-f603-d013" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
+            <constraint id="e0bf-72ca-71e8-b7e5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="10"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="15"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Huge Claws" id="f0a4-702e-e59d-b569" hidden="false" import="true" targetId="5482-73f8-b1e6-1c32" type="selectionEntry">
+              <constraints>
+                <constraint id="3222-5324-d9e7-147b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="a972-e0fc-d41a-d80f" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+            <entryLink name="Daemonic Aura" id="8eda-884f-feac-aa0f" hidden="false" import="true" targetId="dddf-e932-c9b6-90e4" type="selectionEntry">
+              <constraints>
+                <constraint id="ba8e-dc49-057d-e6cb" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="5c8c-1941-2971-579c" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+            <entryLink name="Scorpion Tail" id="47f9-fdb3-e0d2-1809" hidden="false" import="true" targetId="a3a0-bd1a-bc83-6ccb" type="selectionEntry">
+              <constraints>
+                <constraint id="ff16-fd51-72dd-8ed2" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="dc0b-75d6-a54d-6f24" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Fiends of Slaanesh" id="91f5-4c99-cc53-da56" hidden="false" targetId="4178-1cc9-9409-a5ba" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Scorpion Tail" id="a3a0-bd1a-bc83-6ccb" hidden="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink name="Scorpion Tail" id="80c5-31ee-f82c-3240" hidden="false" targetId="ec56-7eb4-1adf-1c25" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Steed of Slaneesh" id="35f4-e1cf-9e61-bbdd" collective="false" hidden="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Steeds of Slaanesh" id="3d15-e08b-d272-785b" hidden="false" targetId="94f2-d515-8c19-dae2" type="profile"/>
+        <infoLink name="Cavalry" id="ed72-16ba-c9c7-a6b7" hidden="false" targetId="cc6d-c869-82ab-fcaa" type="rule"/>
+        <infoLink name="Tongue Attack" id="edbb-b913-baea-c60c" hidden="false" targetId="2bd0-3e1d-9171-3829" type="rule"/>
+        <infoLink name="Fear" id="d0cc-2aec-526c-815c" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="The Lord of Change" id="5d5e-4c73-eb42-ac0a" collective="false" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="1Characters" id="dc57-6e20-f358-762a" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Daemons" id="6edf-33e5-9c82-e6da" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
+        <categoryLink name="Chaos" id="5710-e431-cf13-2efd" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="250"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Psyker" id="e724-96c9-7861-b695" collective="false" hidden="false" import="true" targetId="56e9-7608-b945-ac81" type="selectionEntry">
+          <constraints>
+            <constraint id="8f0b-7b99-34f5-3e92" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Psychic Level 4" id="9865-af64-d664-b958" hidden="false" targetId="f988-2251-b863-a538" type="profile"/>
+          </infoLinks>
+        </entryLink>
+        <entryLink name="Daemonic Aura" id="b3a9-eb4a-42bd-5729" hidden="false" import="true" targetId="dddf-e932-c9b6-90e4" type="selectionEntry">
+          <constraints>
+            <constraint id="46ea-c7e1-80e0-0a5c" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="f70b-9e97-4617-7a5c" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Fly" id="7eab-bdf8-d317-9b4c" hidden="false" targetId="1eae-bc57-fb7b-9461" type="rule"/>
+        <infoLink name="Lord of Change" id="9324-3a98-6186-b0bf" hidden="false" targetId="aa61-adeb-3fee-0069" type="profile"/>
+        <infoLink name="Psychic Level 4" id="4329-0d9a-dff6-2afb" hidden="false" targetId="f988-2251-b863-a538" type="profile"/>
+      </infoLinks>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="2d86-bfa9-4388-7817" childName="M&apos;Kachan, Daemon Prince of Tzeentch" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="warning" type="add" value="Army must be led by M&apos;Kachan">
+          <conditions>
+            <condition childId="2d86-bfa9-4388-7817" childName="M&apos;Kachan, Daemon Prince of Tzeentch" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry name="Flamers of Tzeentch" id="5241-467b-a0b6-0bd3" collective="false" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="2Squads" id="d5bd-b3dd-facb-e955" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
+        <categoryLink name="Daemons" id="e564-0466-0217-5628" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
+        <categoryLink name="Chaos" id="d8be-7c4d-779d-9246" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Flame Attacks" id="7fb3-d03e-2061-a408" hidden="false" targetId="1c1b-11fc-17f6-8ae5" type="rule"/>
+        <infoLink name="Fear" id="6c8a-1480-1c4d-ecd3" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
+        <infoLink name="Bound" id="1060-0382-ea81-6306" hidden="false" targetId="fe02-db2c-cd6c-35be" type="rule"/>
+      </infoLinks>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="2d86-bfa9-4388-7817" childName="M&apos;Kachan, Daemon Prince of Tzeentch" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="warning" type="add" value="Army must be led by M&apos;Kachan">
+          <conditions>
+            <condition childId="2d86-bfa9-4388-7817" childName="M&apos;Kachan, Daemon Prince of Tzeentch" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry name="Flamers of Tzeentch" id="41cd-71bd-d183-1ab3" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="1cf8-84d5-63e3-a845" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
+            <constraint id="10f3-02c8-b7a9-2708" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="10"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="40"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Daemonic Aura" id="fd05-b3b2-03de-b4a8" hidden="false" import="true" targetId="dddf-e932-c9b6-90e4" type="selectionEntry">
+              <constraints>
+                <constraint id="b003-9667-d773-a0c0" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="cf5d-4e84-772b-07c3" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Flamers of Tzeentch" id="aaa9-9915-0b9d-7833" hidden="false" targetId="5d5e-213c-a375-974f" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Horrors of Tzeentch" id="0284-067c-20ed-a146" collective="false" hidden="false" import="true" publicationId="02e1-3f69-7ae7-f5c5" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="2Squads" id="ae43-b0dd-0fbf-4203" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
+        <categoryLink name="Chaos" id="a0a0-2707-ba38-391e" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+        <categoryLink name="Daemons" id="23fd-db9c-e0be-8c52" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Split" id="db3a-64e8-5b20-c149" hidden="false" targetId="b47b-ce1f-969f-c5db" type="rule"/>
+        <infoLink name="Fear" id="0a58-c52f-36a3-701a" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
+      </infoLinks>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="2d86-bfa9-4388-7817" childName="M&apos;Kachan, Daemon Prince of Tzeentch" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="warning" type="add" value="Army must be led by M&apos;Kachan">
+          <conditions>
+            <condition childId="2d86-bfa9-4388-7817" childName="M&apos;Kachan, Daemon Prince of Tzeentch" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry name="Horrors" id="b139-6d76-1482-faa8" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="07d9-6c14-b162-0988" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
+            <constraint id="e996-5633-6dda-d1ef" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="10"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Pink Horror" id="7c50-cb4d-64f2-6280" hidden="false" targetId="7f7b-e0c3-0b65-59e1" type="profile"/>
+            <infoLink name="Blue Horror" id="e1db-fd6c-11fb-0f25" hidden="false" targetId="25bf-fe5e-f405-f246" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Daemonic Icon Bearer" id="03fa-5f32-90bf-cd2d" collective="false" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="1Characters" id="a362-6bbf-3bcf-94fc" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Chaos" id="22df-c1dd-8869-c691" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+        <categoryLink name="Daemons" id="ce3a-a56c-ec6d-0e6e" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="9453-e5d6-b2c6-c7ae" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="65"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Chaos Icons" id="a3f6-ad40-e9f8-1380" collective="false" hidden="false" import="true" sortIndex="2" targetId="05fe-3576-c2c0-e46d" type="selectionEntryGroup"/>
+        <entryLink name="Cult Assault Weapons" id="d9a6-02c1-8af7-5e80" collective="false" hidden="false" import="true" sortIndex="4" targetId="abfe-f95e-66e8-4e16" type="selectionEntryGroup"/>
+        <entryLink name="Cult Armour" id="78e7-7680-7fd6-409c" hidden="false" import="true" sortIndex="1" targetId="2ea4-e413-0be5-c790" type="selectionEntryGroup">
+          <constraints>
+            <constraint id="bb73-e53d-388a-acfe" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="cb90-1d33-f3e6-4dda" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Mark of Chaos" id="7e5c-2bd0-aa0f-e28a" hidden="false" import="true" sortIndex="3" targetId="c066-c059-dd47-78b9" type="selectionEntryGroup"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Icon Bearer" id="a730-c561-9a40-d571" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+          <characteristics>
+            <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Icon Bearer</characteristic>
+            <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+            <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">4</characteristic>
+            <characteristic name="BS" typeId="f859-88a3-fdd3-b298">4</characteristic>
+            <characteristic name="S" typeId="5916-04ef-0fd1-6557">3</characteristic>
+            <characteristic name="T" typeId="2e7d-2383-f92f-16f9">3</characteristic>
+            <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
+            <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">4</characteristic>
+            <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
+            <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">8</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier field="2e7d-2383-f92f-16f9" type="increment" value="1">
+              <conditions>
+                <condition childId="7149-d0d9-5962-3852" childName="Mark of Nurgle" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Wargear" id="5900-4205-b3d4-b293" hidden="false">
+          <entryLinks>
+            <entryLink name="Axe" id="1178-8074-f033-6f02" collective="false" hidden="false" import="true" targetId="c2ba-db92-5ff9-38c2" type="selectionEntry">
+              <constraints>
+                <constraint id="43aa-7522-103c-dff2" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="7b0b-525f-e8f0-6f81" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+            <entryLink name="Battle Standard" id="4ed9-b18c-815e-975f" collective="false" hidden="false" import="true" targetId="9310-3f4c-a4f1-47f2" type="selectionEntry">
+              <constraints>
+                <constraint id="ecf2-2319-d580-0e5e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="313c-c1a9-9b0c-b59b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Mount" id="4fcc-8cff-9692-1cf1" hidden="false">
+          <entryLinks>
+            <entryLink name="Chaos Steed" id="1948-7349-7aba-96b2" collective="false" hidden="false" import="true" targetId="1590-293c-ba53-1af2" type="selectionEntry">
+              <constraints>
+                <constraint id="dcac-84ec-7b8a-28e9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="4"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Shield" id="9f33-fa9e-f848-c14d" hidden="false">
+          <entryLinks>
+            <entryLink name="Primitive Shield" id="6adc-1d5a-b21b-65c9" collective="false" hidden="false" import="true" targetId="d0a4-3144-7085-3fcb" type="selectionEntry">
+              <constraints>
+                <constraint id="3256-856d-b3b0-446e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="1"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry name="Chaos Steed" id="1590-293c-ba53-1af2" collective="false" hidden="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Chaos Steed" id="8f8b-0746-4f6f-24dc" hidden="false" targetId="2783-70e7-3424-6eb0" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Chain-axe" id="68b5-8cd9-37a4-c2a6" collective="false" hidden="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Close Combat" id="238b-6a47-c1d0-bbeb" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
+        <infoLink name="Chain-axe" id="600c-5c21-0819-10c7" hidden="false" targetId="c5ee-a8c2-c6ae-5b13" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Chaos Warrior Champion" id="ba4d-1a1c-abdf-b2d5" collective="false" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="1Characters" id="6734-f6c9-5b5b-48a6" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Chaos" id="c2f0-1238-0398-9358" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Cult Assault Weapons" id="82bc-4234-ca46-6b88" collective="false" hidden="false" import="true" targetId="abfe-f95e-66e8-4e16" type="selectionEntryGroup"/>
+        <entryLink name="Wargear Cards" id="27de-0142-ee4c-fa9e" collective="false" hidden="false" import="true" targetId="48cb-3eed-1c74-903e" type="selectionEntryGroup">
+          <constraints>
+            <constraint id="4bfc-d824-38f7-ba1e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
+          </constraints>
+          <modifiers>
+            <modifier field="4bfc-d824-38f7-ba1e" type="decrement" value="1">
+              <repeats>
+                <repeat childId="3015-d1f8-235a-6c91" childName="Chaos Rewards" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink name="Chaos Rewards" id="3015-d1f8-235a-6c91" collective="false" hidden="false" import="true" sortIndex="4" targetId="1086-aa4e-f258-ba00" type="selectionEntryGroup">
+          <constraints>
+            <constraint id="6292-3ad9-f4ca-e828" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Cult Armour" id="7415-2502-b027-2194" hidden="false" import="true" sortIndex="2" targetId="2ea4-e413-0be5-c790" type="selectionEntryGroup">
+          <constraints>
+            <constraint id="a75f-5754-fa00-3cc8" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="2f86-cb23-7278-68a2" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Mark of Chaos" id="0cf5-fb17-ed02-f7dc" hidden="false" import="true" sortIndex="3" targetId="c066-c059-dd47-78b9" type="selectionEntryGroup"/>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Champion Type" id="e7b9-e513-1a53-c979" collective="false" defaultSelectionEntryId="4917-8a90-db26-8edb" hidden="false" import="true" sortIndex="1">
+          <constraints>
+            <constraint id="0886-f2aa-dc30-e3f9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="6674-fcb0-9c88-4477" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry name="Exalted Champion" id="2398-f63e-878e-a98c" collective="false" hidden="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="points" value="62"/>
+              </costs>
+              <profiles>
+                <profile name="Exalted Champion" id="0e05-41ce-0c84-b37a" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+                  <characteristics>
+                    <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Exalted Champion</characteristic>
+                    <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+                    <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">6</characteristic>
+                    <characteristic name="BS" typeId="f859-88a3-fdd3-b298">6</characteristic>
+                    <characteristic name="S" typeId="5916-04ef-0fd1-6557">4</characteristic>
+                    <characteristic name="T" typeId="2e7d-2383-f92f-16f9">4</characteristic>
+                    <characteristic name="W" typeId="ce31-f767-c572-72cc">3</characteristic>
+                    <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">6</characteristic>
+                    <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">3</characteristic>
+                    <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">9</characteristic>
+                  </characteristics>
+                  <modifiers>
+                    <modifier field="2e7d-2383-f92f-16f9" type="increment" value="1">
+                      <conditions>
+                        <condition childId="7149-d0d9-5962-3852" childName="Mark of Nurgle" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry name="Mighty Champion" id="4917-8a90-db26-8edb" collective="false" hidden="false" import="true" sortIndex="1" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="points" value="34"/>
+              </costs>
+              <profiles>
+                <profile name="Mighty Champion" id="ab9d-e98c-7384-2cda" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+                  <characteristics>
+                    <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Mighty Champion</characteristic>
+                    <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+                    <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">5</characteristic>
+                    <characteristic name="BS" typeId="f859-88a3-fdd3-b298">5</characteristic>
+                    <characteristic name="S" typeId="5916-04ef-0fd1-6557">4</characteristic>
+                    <characteristic name="T" typeId="2e7d-2383-f92f-16f9">4</characteristic>
+                    <characteristic name="W" typeId="ce31-f767-c572-72cc">2</characteristic>
+                    <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">5</characteristic>
+                    <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">2</characteristic>
+                    <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">8</characteristic>
+                  </characteristics>
+                  <modifiers>
+                    <modifier field="2e7d-2383-f92f-16f9" type="increment" value="1">
+                      <conditions>
+                        <condition childId="7149-d0d9-5962-3852" childName="Mark of Nurgle" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Wargear" id="d237-a757-db57-2f41" hidden="false">
+          <entryLinks>
+            <entryLink name="Axe" id="a468-e1f3-84fd-e519" collective="false" hidden="false" import="true" targetId="c2ba-db92-5ff9-38c2" type="selectionEntry">
+              <constraints>
+                <constraint id="9138-cca0-37a5-1910" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="8b0a-e6cb-d220-796a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Mount" id="e2b0-e406-3c5e-b0b8" hidden="false">
+          <entryLinks>
+            <entryLink name="Chaos Steed" id="8e84-3823-0980-5741" collective="false" hidden="false" import="true" targetId="1590-293c-ba53-1af2" type="selectionEntry">
+              <constraints>
+                <constraint id="e927-c6fe-974b-cc96" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="4"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Shield" id="d274-5011-9e0a-d132" hidden="false">
+          <entryLinks>
+            <entryLink name="Primitive Shield" id="ea29-cdaa-711b-bbb5" collective="false" hidden="false" import="true" targetId="d0a4-3144-7085-3fcb" type="selectionEntry">
+              <constraints>
+                <constraint id="8e52-24fc-a0d1-3dca" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="1"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry name="Chaos Warrior Warband" id="4508-1fd2-6624-9643" collective="false" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="2Squads" id="52e5-82fc-aa59-95dd" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
+        <categoryLink name="Chaos" id="d601-4b36-a73a-4188" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Cult Assault Weapons" id="7448-0e45-cb7b-95a3" collective="false" hidden="false" import="true" targetId="abfe-f95e-66e8-4e16" type="selectionEntryGroup"/>
+      </entryLinks>
+      <selectionEntries>
+        <selectionEntry name="Chaos Warrior" id="317c-240e-c955-99b6" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="9b30-9acb-1b47-296a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="5"/>
+            <constraint id="d321-599b-eb94-1828" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="20"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="15"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Axe" id="a733-f858-e585-a7a0" collective="false" hidden="false" import="true" targetId="c2ba-db92-5ff9-38c2" type="selectionEntry">
+              <constraints>
+                <constraint id="106b-52dd-8f09-a41d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="c09e-bfb6-80f7-f8a8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </entryLink>
+            <entryLink name="Carapace Armour" id="a103-4850-f312-b88c" collective="false" hidden="false" import="true" targetId="38a3-999a-3611-033a" type="selectionEntry">
+              <constraints>
+                <constraint id="246a-b242-471d-6de6" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="1965-4b46-a124-b43d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </entryLink>
+            <entryLink name="Chaos Steed" id="e698-ebd4-3c77-2bac" hidden="false" import="true" targetId="1590-293c-ba53-1af2" type="selectionEntry">
+              <constraints>
+                <constraint id="1ab9-5077-e998-c885" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="7e4f-4396-1525-5bd5" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="4"/>
+              </costs>
+              <modifiers>
+                <modifier field="7e4f-4396-1525-5bd5" type="set" value="1">
+                  <conditions>
+                    <condition childId="d5b3-aec2-ee91-2c6a" childName="Chaos Steeds" field="selections" scope="4508-1fd2-6624-9643" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                </modifier>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="d5b3-aec2-ee91-2c6a" childName="Chaos Steeds" field="selections" scope="4508-1fd2-6624-9643" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <profiles>
+            <profile name="Chaos Warrior" id="676e-252b-db51-05b4" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+              <characteristics>
+                <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Chaos Warrior</characteristic>
+                <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+                <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">4</characteristic>
+                <characteristic name="BS" typeId="f859-88a3-fdd3-b298">4</characteristic>
+                <characteristic name="S" typeId="5916-04ef-0fd1-6557">3</characteristic>
+                <characteristic name="T" typeId="2e7d-2383-f92f-16f9">3</characteristic>
+                <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
+                <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">4</characteristic>
+                <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
+                <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">6</characteristic>
+              </characteristics>
+              <modifiers>
+                <modifier field="2e7d-2383-f92f-16f9" type="increment" value="1">
+                  <conditions>
+                    <condition childId="7149-d0d9-5962-3852" childName="Mark of Nurgle" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Mounts" id="3fe2-ccb0-5262-8722" hidden="false">
+          <selectionEntries>
+            <selectionEntry name="Chaos Steeds" id="d5b3-aec2-ee91-2c6a" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="6afe-4eff-5319-ac20" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Mark of Chaos for Unit" id="7acf-cc64-de55-b32a" collective="false" hidden="false" import="true">
+          <constraints>
+            <constraint id="5fa7-2c6c-4121-f3ff" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <entryLinks>
+            <entryLink name="Mark of Slaanesh" id="eb28-2feb-4413-bd1f" collective="false" hidden="false" import="true" targetId="7657-9281-c658-aab3" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="a105-1227-608e-300e" childName="N&apos;Kari, Daemon Prince of Slaanesh" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+                <modifier field="points" type="increment" value="15">
+                  <repeats>
+                    <repeat childId="317c-240e-c955-99b6" childName="Chaos Warrior" field="selections" repeats="1" roundUp="false" scope="4508-1fd2-6624-9643" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink name="Mark of Nurgle" id="6574-8ff2-69a3-aa0c" collective="false" hidden="false" import="true" targetId="7149-d0d9-5962-3852" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="9cfb-f346-08c7-c3e0" childName="Foulspawn, Daemon Prince of Nurgle" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+                <modifier field="points" type="increment" value="10">
+                  <repeats>
+                    <repeat childId="317c-240e-c955-99b6" childName="Chaos Warrior" field="selections" repeats="1" roundUp="false" scope="4508-1fd2-6624-9643" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink name="Mark of Tzeentch" id="579d-27b5-2f8c-3a92" collective="false" hidden="false" import="true" targetId="f12b-beee-24c8-e604" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="2d86-bfa9-4388-7817" childName="M&apos;Kachan, Daemon Prince of Tzeentch" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+                <modifier field="points" type="increment" value="10">
+                  <repeats>
+                    <repeat childId="317c-240e-c955-99b6" childName="Chaos Warrior" field="selections" repeats="1" roundUp="false" scope="4508-1fd2-6624-9643" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink name="Mark of Khorne" id="b5d5-a6c2-be91-bdd6" collective="false" hidden="false" import="true" targetId="e417-f52b-f73c-b69a" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="1f50-d7ce-b3dd-f8e0" childName="Doombreed, Daemon Prince of Khorne" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+                <modifier field="points" type="increment" value="15">
+                  <repeats>
+                    <repeat childId="317c-240e-c955-99b6" childName="Chaos Warrior" field="selections" repeats="1" roundUp="false" scope="4508-1fd2-6624-9643" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Shields" id="8c7e-56ec-3a0c-8133" hidden="false">
+          <entryLinks>
+            <entryLink name="Primitive Shield" id="0efc-38ee-0c79-898a" collective="false" hidden="false" import="true" targetId="d0a4-3144-7085-3fcb" type="selectionEntry">
+              <constraints>
+                <constraint id="f452-74d6-25da-e483" field="selections" scope="parent" shared="true" type="max" value="0"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="1"/>
+              </costs>
+              <modifiers>
+                <modifier field="f452-74d6-25da-e483" type="increment" value="1">
+                  <repeats>
+                    <repeat childId="317c-240e-c955-99b6" childName="Chaos Warrior" field="selections" repeats="1" roundUp="false" scope="4508-1fd2-6624-9643" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry name="Disc of Tzeentch" id="6323-19b4-8b19-ffd2" collective="false" hidden="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Daemonic Aura" id="bf30-e76e-030d-79cc" hidden="false" import="true" targetId="dddf-e932-c9b6-90e4" type="selectionEntry">
+          <constraints>
+            <constraint id="31c2-7d72-4634-ab8a" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="9232-eeb3-178b-0afd" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Fear" id="5bc4-c22b-bf4d-ea4a" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
+        <infoLink name="Disc Movement" id="d815-38c1-d437-37a9" hidden="false" targetId="1de1-b9e9-5818-2574" type="rule"/>
+        <infoLink name="Riding Beast" id="e8a7-da7a-1310-a539" hidden="false" targetId="9ea5-7129-5842-6417" type="rule"/>
+        <infoLink name="Disc of Tzeentch" id="af26-1fdd-a4c5-f450" hidden="false" targetId="449a-ae2d-4852-ead5" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Chaos Magus" id="1a56-4c40-2596-4f33" collective="false" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="1Characters" id="c551-7159-a9af-7ef4" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Chaos" id="c50e-f3b4-87bd-0d4f" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Cult Armour" id="c662-6458-3323-87f1" collective="false" hidden="false" import="true" sortIndex="1" targetId="2ea4-e413-0be5-c790" type="selectionEntryGroup">
+          <constraints>
+            <constraint id="e76d-1fcf-6438-2a14" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Wargear Cards" id="cf37-689e-137c-cbf1" collective="false" hidden="false" import="true" targetId="48cb-3eed-1c74-903e" type="selectionEntryGroup">
+          <constraints>
+            <constraint id="3643-19d9-388a-424f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
+          </constraints>
+          <modifiers>
+            <modifier field="3643-19d9-388a-424f" type="decrement" value="1">
+              <repeats>
+                <repeat childId="1086-aa4e-f258-ba00" childName="Chaos Rewards" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink name="Chaos Rewards" id="14e2-842a-40c7-4f81" collective="false" hidden="false" import="true" sortIndex="3" targetId="1086-aa4e-f258-ba00" type="selectionEntryGroup">
+          <constraints>
+            <constraint id="42af-ed0f-629f-e43a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Mark of Chaos" id="4740-c061-6b58-91bc" hidden="false" import="true" sortIndex="2" targetId="c066-c059-dd47-78b9" type="selectionEntryGroup"/>
+        <entryLink name="Cult Assault Weapons" id="4f19-c463-f05e-ef03" collective="false" hidden="false" import="true" targetId="abfe-f95e-66e8-4e16" type="selectionEntryGroup"/>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Magus Type" id="e441-f684-9875-ac9f" collective="false" defaultSelectionEntryId="bbc5-363a-3e43-39c5" hidden="false" import="true" sortIndex="-1">
+          <constraints>
+            <constraint id="d3b9-e2fe-c7fb-e82b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="8e9f-b36e-6848-4c7f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry name="Magus Lord" id="3bc4-5649-85f5-f5fe" collective="false" hidden="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="points" value="161"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Psyker" id="9b69-1692-2667-d120" collective="false" hidden="false" import="true" targetId="56e9-7608-b945-ac81" type="selectionEntry">
+                  <constraints>
+                    <constraint id="51d5-729a-a7c5-0418" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Psychic Level 4" id="292c-b897-6a88-66c0" hidden="false" targetId="f988-2251-b863-a538" type="profile"/>
+                  </infoLinks>
+                </entryLink>
+              </entryLinks>
+              <profiles>
+                <profile name="Magus Lord" id="f520-f138-dce6-e0a7" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+                  <characteristics>
+                    <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Magus Lord</characteristic>
+                    <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+                    <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">6</characteristic>
+                    <characteristic name="BS" typeId="f859-88a3-fdd3-b298">6</characteristic>
+                    <characteristic name="S" typeId="5916-04ef-0fd1-6557">4</characteristic>
+                    <characteristic name="T" typeId="2e7d-2383-f92f-16f9">4</characteristic>
+                    <characteristic name="W" typeId="ce31-f767-c572-72cc">4</characteristic>
+                    <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">6</characteristic>
+                    <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">3</characteristic>
+                    <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">8</characteristic>
+                  </characteristics>
+                  <modifiers>
+                    <modifier field="2e7d-2383-f92f-16f9" type="increment" value="1">
+                      <conditions>
+                        <condition childId="7149-d0d9-5962-3852" childName="Mark of Nurgle" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry name="Magus Master" id="bbc5-363a-3e43-39c5" collective="false" hidden="false" import="true" sortIndex="1" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="points" value="110"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Psyker" id="db6f-eda9-85d4-9b3d" collective="false" hidden="false" import="true" targetId="56e9-7608-b945-ac81" type="selectionEntry">
+                  <constraints>
+                    <constraint id="cba0-dfc8-1e75-c34c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Psychic Level 3" id="fc96-e093-5610-0f69" hidden="false" targetId="6c73-5778-e524-130d" type="profile"/>
+                  </infoLinks>
+                </entryLink>
+              </entryLinks>
+              <profiles>
+                <profile name="Magus Master" id="5a82-1fd2-b8a7-5874" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+                  <characteristics>
+                    <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Magus Master</characteristic>
+                    <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+                    <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">5</characteristic>
+                    <characteristic name="BS" typeId="f859-88a3-fdd3-b298">5</characteristic>
+                    <characteristic name="S" typeId="5916-04ef-0fd1-6557">4</characteristic>
+                    <characteristic name="T" typeId="2e7d-2383-f92f-16f9">4</characteristic>
+                    <characteristic name="W" typeId="ce31-f767-c572-72cc">3</characteristic>
+                    <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">5</characteristic>
+                    <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">2</characteristic>
+                    <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">7</characteristic>
+                  </characteristics>
+                  <modifiers>
+                    <modifier field="2e7d-2383-f92f-16f9" type="increment" value="1">
+                      <conditions>
+                        <condition childId="7149-d0d9-5962-3852" childName="Mark of Nurgle" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Mount" id="6644-2f03-f4e0-85d0" hidden="false">
+          <entryLinks>
+            <entryLink name="Chaos Steed" id="8bd7-9adf-feef-952c" collective="false" hidden="false" import="true" targetId="1590-293c-ba53-1af2" type="selectionEntry">
+              <constraints>
+                <constraint id="d47f-f20e-d60c-12e8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="4"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry name="Beastman Champion" id="ad49-5789-ec6e-0f11" collective="false" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="1Characters" id="ed8f-bee1-36a8-b491" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
+        <categoryLink name="Chaos" id="245a-da82-c778-a7b5" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="23"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Cult Armour" id="0bb0-acda-1509-7bc9" collective="false" hidden="false" import="true" sortIndex="1" targetId="2ea4-e413-0be5-c790" type="selectionEntryGroup">
+          <constraints>
+            <constraint id="d87c-7b1b-327b-9934" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="f076-f782-4817-2dce" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <entryLinks>
+            <entryLink name="Primitive Armour" id="7be9-6a55-d020-cc03" collective="false" hidden="false" import="true" sortIndex="-1" targetId="7909-b24e-fe25-33b3" type="selectionEntry"/>
+          </entryLinks>
+        </entryLink>
+        <entryLink name="Cult Assault Weapons" id="a291-e318-fdc8-e34f" collective="false" hidden="false" import="true" targetId="abfe-f95e-66e8-4e16" type="selectionEntryGroup"/>
+        <entryLink name="Mark of Chaos" id="e263-4e60-f10b-a1cb" hidden="false" import="true" sortIndex="2" targetId="c066-c059-dd47-78b9" type="selectionEntryGroup"/>
+        <entryLink name="Chaos Rewards" id="1ce3-b719-3425-9516" collective="false" hidden="false" import="true" sortIndex="3" targetId="1086-aa4e-f258-ba00" type="selectionEntryGroup">
+          <constraints>
+            <constraint id="4eed-4e2d-00aa-cfc7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <profiles>
+        <profile name="Beastman Champion" id="dc98-30bc-1f2d-72c1" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+          <characteristics>
+            <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Beastman Champion</characteristic>
+            <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+            <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">5</characteristic>
+            <characteristic name="BS" typeId="f859-88a3-fdd3-b298">4</characteristic>
+            <characteristic name="S" typeId="5916-04ef-0fd1-6557">3</characteristic>
+            <characteristic name="T" typeId="2e7d-2383-f92f-16f9">4</characteristic>
+            <characteristic name="W" typeId="ce31-f767-c572-72cc">2</characteristic>
+            <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">4</characteristic>
+            <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
+            <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">8</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier field="2e7d-2383-f92f-16f9" type="increment" value="1">
+              <conditions>
+                <condition childId="7149-d0d9-5962-3852" childName="Mark of Nurgle" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Sword or Axe" id="b7b5-4327-9365-a20a" collective="false" defaultSelectionEntryId="d02d-bb70-8f61-1cae" hidden="false" import="true">
+          <constraints>
+            <constraint id="c5b6-c9fa-5f19-62f7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="4daa-7910-b980-4ed3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <entryLinks>
+            <entryLink name="Axe" id="41dd-a7f4-6cbf-3e69" collective="false" hidden="false" import="true" targetId="c2ba-db92-5ff9-38c2" type="selectionEntry"/>
+            <entryLink name="Sword" id="f713-e0cd-0553-1112" collective="false" hidden="false" import="true" targetId="808c-e433-c780-ec03" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Shield" id="39b7-9005-866f-34d0" hidden="false">
+          <entryLinks>
+            <entryLink name="Primitive Shield" id="3031-b991-cfb3-0164" collective="false" hidden="false" import="true" targetId="d0a4-3144-7085-3fcb" type="selectionEntry">
+              <constraints>
+                <constraint id="e7f5-c5c9-5c77-c5a1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="1"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry name="Chaos Hound Pack" id="3c7e-8605-fa2b-f21c" collective="false" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="2Squads" id="9573-aec9-353c-9e32" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
+        <categoryLink name="Chaos" id="fdde-0ff4-96b2-505b" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry name="Chaos Hounds" id="d797-112c-6224-e8bb" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="b8a5-1ae5-6239-26d9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="5"/>
+            <constraint id="3e0e-5858-ba6f-fa33" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="10"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="8"/>
+          </costs>
+          <profiles>
+            <profile name="Chaos Hounds" id="ca66-77cd-08c3-e445" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+              <characteristics>
+                <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Chaos Hounds</characteristic>
+                <characteristic name="M" typeId="4934-7872-3dd7-a8b6">6</characteristic>
+                <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">4</characteristic>
+                <characteristic name="BS" typeId="f859-88a3-fdd3-b298">0</characteristic>
+                <characteristic name="S" typeId="5916-04ef-0fd1-6557">4</characteristic>
+                <characteristic name="T" typeId="2e7d-2383-f92f-16f9">4</characteristic>
+                <characteristic name="W" typeId="ce31-f767-c572-72cc">1</characteristic>
+                <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">4</characteristic>
+                <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">2</characteristic>
+                <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">6</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Beastmen" id="0c13-10f7-0384-d6ab" collective="false" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="2Squads" id="25ec-ceb0-6b16-3b5e" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
+        <categoryLink name="Chaos" id="e38c-8e2a-881b-a484" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Cult Assault Weapons" id="e509-26f8-6198-c042" collective="false" hidden="false" import="true" targetId="abfe-f95e-66e8-4e16" type="selectionEntryGroup"/>
+      </entryLinks>
+      <selectionEntries>
+        <selectionEntry name="Beastmen" id="3faf-37c8-dc57-4ccf" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="5a3c-1e4a-ea48-d282" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="5"/>
+            <constraint id="5a6d-63ef-16ff-4a27" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="20"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="15"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Primitive Armour" id="45ec-9ff0-0b24-97bf" collective="false" hidden="false" import="true" targetId="7909-b24e-fe25-33b3" type="selectionEntry">
+              <constraints>
+                <constraint id="0490-2b81-5683-4280" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="d3e4-3fbc-3607-c02d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </entryLink>
+            <entryLink name="Axe" id="40c2-6eaa-b36f-60e3" collective="false" hidden="false" import="true" targetId="c2ba-db92-5ff9-38c2" type="selectionEntry">
+              <constraints>
+                <constraint id="ca6b-01f1-5634-4b25" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="fdc7-1818-aa16-3437" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <profiles>
+            <profile name="Beastman" id="be9b-0eb4-0ffe-0f9e" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+              <characteristics>
+                <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Beastman</characteristic>
+                <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
+                <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">4</characteristic>
+                <characteristic name="BS" typeId="f859-88a3-fdd3-b298">3</characteristic>
+                <characteristic name="S" typeId="5916-04ef-0fd1-6557">3</characteristic>
+                <characteristic name="T" typeId="2e7d-2383-f92f-16f9">4</characteristic>
+                <characteristic name="W" typeId="ce31-f767-c572-72cc">2</characteristic>
+                <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">3</characteristic>
+                <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
+                <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">7</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Shields" id="0554-f79e-49f2-e028" hidden="false">
+          <entryLinks>
+            <entryLink name="Primitive Shield" id="c4be-813d-650d-7851" collective="false" hidden="false" import="true" targetId="d0a4-3144-7085-3fcb" type="selectionEntry">
+              <constraints>
+                <constraint id="7b79-b3f6-d134-b3ce" field="selections" scope="parent" shared="true" type="max" value="0"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="1"/>
+              </costs>
+              <modifiers>
+                <modifier field="7b79-b3f6-d134-b3ce" type="increment" value="1">
+                  <repeats>
+                    <repeat childId="3faf-37c8-dc57-4ccf" childName="Beastmen" field="selections" repeats="1" roundUp="false" scope="0c13-10f7-0384-d6ab" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry name="Minotaurs" id="d68a-2cca-afdb-d60d" collective="false" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="2Squads" id="f278-bc2a-c2c9-091a" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
+        <categoryLink name="Chaos" id="9f66-6ef3-91e8-b5e9" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Cult Assault Weapons" id="1385-b8d0-d57d-4d5d" collective="false" hidden="false" import="true" targetId="abfe-f95e-66e8-4e16" type="selectionEntryGroup"/>
+      </entryLinks>
+      <rules>
+        <rule name="Blood-Greed" id="3a08-9bfa-0ff7-6266" hidden="false" page="136" publicationId="02e1-3f69-7ae7-f5c5">
+          <description>If a Minotaur slays a model in close combat, they are not allowed to make a follow-up move, but must remain where they are.</description>
+        </rule>
+      </rules>
+      <selectionEntries>
+        <selectionEntry name="Minotaurs" id="7f25-83e6-67cb-96cd" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="a2c1-51c7-51c7-9c1d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="10"/>
+            <constraint id="6ab5-f113-ed52-ad9f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="30"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Axe" id="3f9d-dfcc-6e60-5c91" collective="false" hidden="false" import="true" targetId="c2ba-db92-5ff9-38c2" type="selectionEntry">
+              <constraints>
+                <constraint id="5e23-7cf8-87b3-f988" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="5561-e8b7-ac6d-d1f8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <profiles>
+            <profile name="Minotaurs" id="13ec-4483-122a-d916" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+              <characteristics>
+                <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Minotaur</characteristic>
+                <characteristic name="M" typeId="4934-7872-3dd7-a8b6">6</characteristic>
+                <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">4</characteristic>
+                <characteristic name="BS" typeId="f859-88a3-fdd3-b298">3</characteristic>
+                <characteristic name="S" typeId="5916-04ef-0fd1-6557">4</characteristic>
+                <characteristic name="T" typeId="2e7d-2383-f92f-16f9">4</characteristic>
+                <characteristic name="W" typeId="ce31-f767-c572-72cc">3</characteristic>
+                <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">3</characteristic>
+                <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">2</characteristic>
+                <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">9</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry name="Trolls" id="c4fd-3460-42cc-e8b4" collective="false" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="2Squads" id="4dab-70b6-8092-0e8d" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
+        <categoryLink name="Chaos" id="f7dc-ce45-d6f9-433b" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Stupidity" id="8625-3c64-b42c-9bda" hidden="false" targetId="9df5-8c60-ed5b-8538" type="rule"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry name="Trolls" id="b512-d437-3499-4934" collective="false" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="9ac7-d04c-8993-b3ed" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
+            <constraint id="3ebb-ff29-102d-4c24" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="5"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Axe" id="0ea1-1025-d4a2-22b8" collective="false" hidden="false" import="true" targetId="c2ba-db92-5ff9-38c2" type="selectionEntry">
+              <constraints>
+                <constraint id="9284-8222-66ea-2f64" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="9c48-50ab-ed84-901c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <profiles>
+            <profile name="Trolls" id="f4ee-5593-24f5-78a1" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
+              <characteristics>
+                <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Troll</characteristic>
+                <characteristic name="M" typeId="4934-7872-3dd7-a8b6">6</characteristic>
+                <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">3</characteristic>
+                <characteristic name="BS" typeId="f859-88a3-fdd3-b298">1</characteristic>
+                <characteristic name="S" typeId="5916-04ef-0fd1-6557">5</characteristic>
+                <characteristic name="T" typeId="2e7d-2383-f92f-16f9">4</characteristic>
+                <characteristic name="W" typeId="ce31-f767-c572-72cc">3</characteristic>
+                <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">1</characteristic>
+                <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">3</characteristic>
+                <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">4</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntries>
+            <selectionEntry name="Troll Armour" id="92ca-8e5f-d5b5-3fd3" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="c674-e9ea-3aa4-c4e8" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="cbd4-6b6d-607c-3c6c" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+              <profiles>
+                <profile name="Troll Armour" id="8b99-9001-ae8a-6ee2" hidden="false" typeId="4657-2671-1065-d493" typeName="Armour">
+                  <characteristics>
+                    <characteristic name="Saving Throw" typeId="b439-323a-9cfe-6340">4+</characteristic>
+                    <characteristic name="Special" typeId="b7f1-73cd-d19d-26a6">Save cannot be modified</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
   </sharedSelectionEntries>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup name="Chaos Icons" id="05fe-3576-c2c0-e46d" collective="false" hidden="false" import="true">
+      <constraints>
+        <constraint id="b6b0-fcc9-f95c-3e76" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry name="The Banner of Rage" id="dbc6-ccfe-a755-deb0" collective="false" hidden="false" import="true" page="70" publicationId="02e1-3f69-7ae7-f5c5" type="upgrade">
+          <constraints>
+            <constraint id="ec3c-3911-b8ec-dcd4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="35"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Frenzy" id="efca-a771-5905-5f18" hidden="false" targetId="0e86-209c-fe59-fe87" type="rule"/>
+          </infoLinks>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="e417-f52b-f73c-b69a" childName="Mark of Khorne" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="The Banner of Rage" id="318e-4b95-6fd7-0131" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+              <characteristics>
+                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Any models from the Chaos army, apart from those bearing the Mark of Slaanesh, that are within 6&quot; of this icon become subject to the Frenzy rule</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry name="The Rapturous Standard" id="629b-b3d2-2f1e-b2aa" collective="false" hidden="false" import="true" page="70" publicationId="02e1-3f69-7ae7-f5c5" type="upgrade">
+          <constraints>
+            <constraint id="e9d3-339a-f320-23d0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="25"/>
+          </costs>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="7657-9281-c658-aab3" childName="Mark of Slaanesh" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="The Rapturous Standard" id="c160-ba22-aa6b-b9f6" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+              <characteristics>
+                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Any models from this Chaos army, apart from thoseb earing the Mark of Khorne, that are within 6&quot; of the standard are rendered immune to psychology. The models may also never be brokne.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry name="The Plague Banner" id="9a4a-56fc-acf1-4926" collective="false" hidden="false" import="true" page="70" publicationId="02e1-3f69-7ae7-f5c5" type="upgrade">
+          <constraints>
+            <constraint id="e7ef-baf9-c36e-ff91" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="15"/>
+          </costs>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="7149-d0d9-5962-3852" childName="Mark of Nurgle" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="The Plague Banner" id="03d7-5983-ef59-0b27" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+              <characteristics>
+                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Contains a spell which may be cast once per battle, during any psychic phase. Treat the spell as a psychic power cast with Ultimate Force but requires no Force cards to cast. The spell inflicts D6 Wounds which may be distributed on any enemy models or vehicle crew within 6” of the Standard. No more than 1 Wound may be applied per enemy model. No saving throws of any kind apply.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry name="The Blasted Standard" id="ab69-ab44-7f5a-dcbc" collective="false" hidden="false" import="true" page="70" publicationId="02e1-3f69-7ae7-f5c5" type="upgrade">
+          <constraints>
+            <constraint id="5e90-b2a6-f445-e598" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="f12b-beee-24c8-e604" childName="Mark of Tzeentch" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="The Blasted Standard" id="70e3-17d4-7b75-36f6" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+              <characteristics>
+                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Contains a spell which may be cast once per battle, during any psychic phase. Treat the spell as a psychic power cast with Ultimate Force but requires no Force cards to cast. The spell inflicts 2D6 S6 hits with a –3 save modifier, which may be distributed on any enemy models within 6” of the Standard. Any unit suffering one or more casualties from this effect must make an immediate Break test.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry name="Warp Banner" id="3130-dc68-910e-5bb5" collective="false" hidden="false" import="true" page="70" publicationId="02e1-3f69-7ae7-f5c5" type="upgrade">
+          <constraints>
+            <constraint id="80e4-8533-3300-a142" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="25"/>
+          </costs>
+          <profiles>
+            <profile name="Warp Banner" id="e4dc-c4e3-22d8-de33" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+              <characteristics>
+                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Once per battle, the Warp banner can be used in the psychic phase to generate 2D6 summoning points. Any of the points not used on the turn they are generated are lost. For the purposes of summoning daemons, the model bearing the Banner counts as a model with all Marks of Chaos.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry name="The Flesh Banner" id="4dca-3245-7bdc-9190" collective="false" hidden="false" import="true" page="70" publicationId="02e1-3f69-7ae7-f5c5" type="upgrade">
+          <constraints>
+            <constraint id="8b8a-0ce5-86a7-30ca" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+          <profiles>
+            <profile name="The Flesh Banner" id="6297-d54f-2f99-386b" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+              <characteristics>
+                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">In the hand-to-hand combat phase, the Flesh Banner inflicts D6 S5 hits with a –2 save modifier, which may be distributed amongst any of the Standard Bearer‘s close combat opponents. This attack is made at the start of the close combat phase, before any normal attacks are worked out</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Cult Assault Weapons" id="abfe-f95e-66e8-4e16" collective="false" hidden="false" import="true">
+      <entryLinks>
+        <entryLink name="Chainsword" id="6c1f-a5df-32d6-d26a" collective="false" hidden="false" import="true" targetId="0bf9-3a64-2700-ff30" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="2"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Autopistol" id="3b60-f08f-efae-2d39" collective="false" hidden="false" import="true" targetId="a1e7-fa16-a4fd-1cde" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="1"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Power Axe" id="0050-2f34-b975-40d3" collective="false" hidden="false" import="true" targetId="b690-d341-fa77-01b8" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="7"/>
+          </costs>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="66dc-df7d-76d8-64b9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notInstanceOf" value="0"/>
+                    <condition childId="4817-c1e2-2c76-e5ab" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notInstanceOf" value="0"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink name="Axe" id="5ec4-631b-6005-9981" collective="false" hidden="false" import="true" targetId="c2ba-db92-5ff9-38c2" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="1"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Laspistol" id="a870-89e8-3d10-05a6" collective="false" hidden="false" import="true" targetId="6e11-978c-f2f0-8477" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="1"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Power Fist" id="d6ef-283b-491a-dba4" collective="false" hidden="false" import="true" targetId="d6c8-382a-4d74-36af" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="66dc-df7d-76d8-64b9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notInstanceOf" value="0"/>
+                    <condition childId="4817-c1e2-2c76-e5ab" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notInstanceOf" value="0"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink name="Bolt Pistol" id="8fae-8210-7d1e-3762" collective="false" hidden="false" import="true" targetId="b5bb-7853-53cb-bec4" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="2"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Power Sword" id="67ab-3c68-a174-7a2b" collective="false" hidden="false" import="true" targetId="4e44-58a0-2af5-519c" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="6"/>
+          </costs>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="66dc-df7d-76d8-64b9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notInstanceOf" value="0"/>
+                    <condition childId="4817-c1e2-2c76-e5ab" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notInstanceOf" value="0"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink name="Chain-axe" id="17f6-2c2d-8f04-c491" collective="false" hidden="false" import="true" targetId="68b5-8cd9-37a4-c2a6" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="2"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Hand Flamer" id="e2ee-8671-4858-6042" collective="false" hidden="false" import="true" targetId="2e7d-f34c-b6c8-8d78" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="7"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Plasma Pistol" id="5ae3-aa04-c1f6-ec81" collective="false" hidden="false" import="true" targetId="87cb-d8fc-1889-18a9" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
+          </costs>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="66dc-df7d-76d8-64b9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notInstanceOf" value="0"/>
+                    <condition childId="4817-c1e2-2c76-e5ab" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notInstanceOf" value="0"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink name="Stub Gun" id="3fe3-6e71-9157-1c97" collective="false" hidden="false" import="true" targetId="81d8-699b-fb18-f3c8" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="1"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Sword" id="ad86-1e08-8385-b40c" collective="false" hidden="false" import="true" targetId="808c-e433-c780-ec03" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="1"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <selectionEntries>
+        <selectionEntry name="Double-handed Weapon" id="108d-fd1d-c278-1c66" collective="false" hidden="false" import="true" type="upgrade">
+          <costs>
+            <cost name="pts" typeId="points" value="1"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Close Combat" id="4c94-8377-5920-9c70" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Double-handed Weapon" id="b36b-65a3-b429-97d9" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">CC Only</characteristic>
+                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">CC Only</characteristic>
+                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">+2</characteristic>
+                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
+                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-</characteristic>
+                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">S+D6</characteristic>
+                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Close Combat, Lose combat on tie</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry name="Lance" id="c4cf-7ad0-8de7-081f" collective="false" hidden="false" import="true" type="upgrade">
+          <costs>
+            <cost name="pts" typeId="points" value="2"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Close Combat" id="86ff-fa66-ef63-99f9" hidden="false" targetId="c494-c170-605c-8959" type="rule"/>
+          </infoLinks>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="1590-293c-ba53-1af2" childName="Chaos Steed" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="lessThan" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Lance" id="c445-282c-4cee-8caf" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">CC Only</characteristic>
+                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">CC Only</characteristic>
+                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">User</characteristic>
+                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
+                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">As Str</characteristic>
+                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">S+D6</characteristic>
+                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">+2 S when charging, Close Combat</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Cult Armour" id="2ea4-e413-0be5-c790" collective="false" hidden="false" import="true">
+      <entryLinks>
+        <entryLink name="Mesh Armour" id="a588-1dbd-1548-aff9" collective="false" hidden="false" import="true" targetId="43b4-5745-9efd-c2e0" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="3"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Flak Armour" id="7a53-dc4d-f2d4-c435" collective="false" hidden="false" import="true" targetId="73c7-e55f-280c-5a3d" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="2"/>
+          </costs>
+        </entryLink>
+        <entryLink name="Carapace Armour" id="d726-c9f9-217d-5365" collective="false" hidden="false" import="true" targetId="38a3-999a-3611-033a" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="7"/>
+          </costs>
+          <modifiers>
+            <modifier field="points" type="set" value="0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="ba4d-1a1c-abdf-b2d5" childName="Chaos Warrior Champion" field="selections" includeChildSelections="true" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="03fa-5f32-90bf-cd2d" childName="Daemonic Icon Bearer" field="selections" includeChildSelections="true" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Mark of Chaos" id="c066-c059-dd47-78b9" collective="false" hidden="false" import="true">
+      <constraints>
+        <constraint id="f92e-5f5e-26dc-071a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <entryLinks>
+        <entryLink name="Mark of Slaanesh" id="2bd2-d8e4-1230-6916" collective="false" hidden="false" import="true" targetId="7657-9281-c658-aab3" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="a105-1227-608e-300e" childName="N&apos;Kari, Daemon Prince of Slaanesh" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink name="Mark of Nurgle" id="40d9-902f-2924-2aaa" collective="false" hidden="false" import="true" targetId="7149-d0d9-5962-3852" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="9cfb-f346-08c7-c3e0" childName="Foulspawn, Daemon Prince of Nurgle" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink name="Mark of Tzeentch" id="3013-46fd-7b77-db27" collective="false" hidden="false" import="true" targetId="f12b-beee-24c8-e604" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="2d86-bfa9-4388-7817" childName="M&apos;Kachan, Daemon Prince of Tzeentch" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="ba4d-1a1c-abdf-b2d5" childName="Chaos Warrior Champion" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink name="Mark of Khorne" id="7215-8370-8da0-c331" collective="false" hidden="false" import="true" targetId="e417-f52b-f73c-b69a" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="30"/>
+          </costs>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="1f50-d7ce-b3dd-f8e0" childName="Doombreed, Daemon Prince of Khorne" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1"/>
+                    <condition childId="1a56-4c40-2596-4f33" childName="Chaos Magus" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Chaos Rewards" id="1086-aa4e-f258-ba00" collective="false" hidden="false" import="true">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Slaanesh" id="6a5e-aa76-87c3-bbdc" collective="false" hidden="false" import="true">
+          <entryLinks>
+            <entryLink name="Steed of Slaneesh" id="e155-f320-9cea-d7c0" collective="false" hidden="false" import="true" targetId="35f4-e1cf-9e61-bbdd" type="selectionEntry">
+              <constraints>
+                <constraint id="27af-c934-26c1-319d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="7657-9281-c658-aab3" childName="Mark of Slaanesh" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="notEqualTo" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry name="Allure of Slaanesh" id="890e-ddab-50f3-c5a0" collective="false" hidden="false" import="true" page="69" publicationId="02e1-3f69-7ae7-f5c5" type="upgrade">
+              <constraints>
+                <constraint id="b4c3-6cae-7296-fca3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <profiles>
+                <profile name="Allure of Slaanesh" id="13dd-7c2b-baca-6558" hidden="false" page="69" typeId="bc42-75af-4a0c-de00" typeName="Chaos Rewards">
+                  <characteristics>
+                    <characteristic name="Gift" typeId="4f30-c481-04f2-1326">In close combat, enemy models must test against their Leadership on 3d6 to be able to strike this model.
+If they fail the test then they fight normally, but if they win the combat they will not strike the model and the combat is treated as a draw. Once an enemy model has passed the test, it need not test again.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry name="Gaze of Slaanesh" id="a70c-6764-4cf1-cabc" collective="false" hidden="false" import="true" page="69" publicationId="02e1-3f69-7ae7-f5c5" type="upgrade">
+              <constraints>
+                <constraint id="0089-4c6a-24ee-4199" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+              <profiles>
+                <profile name="Gaze of Slaanesh" id="fe97-7ba3-1109-73fe" hidden="false" page="69" typeId="bc42-75af-4a0c-de00" typeName="Chaos Rewards">
+                  <characteristics>
+                    <characteristic name="Gift" typeId="4f30-c481-04f2-1326">Any enemy models attempting to fight the models in close combat have their Attacks characteristic reduced by -1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry name="Scream of Slaanesh" id="3980-208a-1bcd-be71" collective="false" hidden="false" import="true" page="69" publicationId="02e1-3f69-7ae7-f5c5" type="upgrade">
+              <constraints>
+                <constraint id="7eb4-1c4e-db2c-8b1b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Fear" id="5081-e858-e7e6-4b45" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
+              </infoLinks>
+              <profiles>
+                <profile name="Scream of Slaanesh" id="66ad-93ec-127a-31de" hidden="false" typeId="bc42-75af-4a0c-de00" typeName="Chaos Rewards">
+                  <characteristics>
+                    <characteristic name="Gift" typeId="4f30-c481-04f2-1326">When charging, causes Fear</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Khorne" id="9d8d-a6a4-4b4d-4ce3" collective="false" hidden="false" import="true">
+          <entryLinks>
+            <entryLink name="Juggernaut of Khorne" id="3753-4d51-adbc-a919" collective="false" hidden="false" import="true" targetId="1639-8246-851c-210f" type="selectionEntry">
+              <constraints>
+                <constraint id="933b-e8d2-b57a-a80a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="50"/>
+              </costs>
+            </entryLink>
+            <entryLink name="Axe of Khorne" id="da7f-2384-7a09-1d02" hidden="false" import="true" targetId="cea3-011e-bbe9-233f" type="selectionEntry">
+              <constraints>
+                <constraint id="e78e-0a84-759d-d53b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+            </entryLink>
+            <entryLink name="Collar of Khorne" id="5e9b-72d3-02e1-f163" hidden="false" import="true" targetId="85e1-70e6-a27c-a2d7" type="selectionEntry">
+              <constraints>
+                <constraint id="841e-c07c-3815-cd62" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="30"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="e417-f52b-f73c-b69a" childName="Mark of Khorne" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="notEqualTo" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry name="Praise of Khorne" id="e416-255a-fa25-cc88" collective="false" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="5721-2617-d93a-3455" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Praise of Khorne" id="d06d-1816-9261-24e8" hidden="false" targetId="4344-aabf-732c-2883" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Tzeentch" id="0d23-21b8-3bd0-b011" collective="false" hidden="false" import="true">
+          <entryLinks>
+            <entryLink name="Disc of Tzeentch" id="7b3f-4317-62ba-5e4c" collective="false" hidden="false" import="true" targetId="6323-19b4-8b19-ffd2" type="selectionEntry">
+              <constraints>
+                <constraint id="1d56-c9b6-1ad8-4d14" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="30"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="f12b-beee-24c8-e604" childName="Mark of Tzeentch" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="notEqualTo" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry name="Breathe Fire" id="abfb-6cf2-85e9-0152" collective="false" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="c733-5cb4-b3f6-e1d3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Flamer" id="c90a-a637-0df9-3a47" collective="false" hidden="false" import="true" targetId="a1e4-59e5-1938-5372" type="selectionEntry">
+                  <constraints>
+                    <constraint id="3e9c-9c76-c483-495c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                    <constraint id="a039-69f9-b0a0-5e5c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <profiles>
+                <profile name="Breathe Fire" id="90b8-cfc3-a3f6-215a" hidden="false" page="68" typeId="bc42-75af-4a0c-de00" typeName="Chaos Rewards">
+                  <characteristics>
+                    <characteristic name="Gift" typeId="4f30-c481-04f2-1326">Counts as having a flamer and used like any regular weapon attack (so may not make further shots in the shooting phase - and cannot use this if engaged in close combat).</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry name="Destiny of Tzeentch" id="30d7-b40e-2de7-2816" collective="false" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="3124-5a7d-1d40-3499" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+              <profiles>
+                <profile name="Destiny of Tzeentch" id="e2ca-d24d-5836-9683" hidden="false" typeId="bc42-75af-4a0c-de00" typeName="Chaos Rewards">
+                  <characteristics>
+                    <characteristic name="Gift" typeId="4f30-c481-04f2-1326">If any army includes a model with this Reward then the Force cards are always dealt to that side first, even in the psychic phase of an opponent&apos;s turn. In addition, that side always gets to use the first psychic power. If both sides have a Sorcerer with this reward, the two cancel out and regular rules apply.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry name="Fortitude of Tzeentch" id="c482-e643-2fe5-5a0b" collective="false" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="243c-f337-2e50-e925" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="40"/>
+              </costs>
+              <profiles>
+                <profile name="Fortitude of Tzeentch" id="5108-b8b0-b907-d920" hidden="false" page="68" typeId="bc42-75af-4a0c-de00" typeName="Chaos Rewards">
+                  <characteristics>
+                    <characteristic name="Gift" typeId="4f30-c481-04f2-1326">May use a nullify each psychic phase just as if they had been dealt a Nullify card. This nullify always work on a 4+, no matter what the psychic levels of the models involved.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Nurgle" id="5c5b-ca5b-ce4b-c392" collective="false" hidden="false" import="true">
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="7149-d0d9-5962-3852" childName="Mark of Nurgle" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="notEqualTo" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry name="Nurgle&apos;s Rot" id="f4d8-1f04-5062-735b" collective="false" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="2f87-28d3-5c85-e7e4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Nurgle&apos;s Rot" id="678a-2368-7804-148e" hidden="false" targetId="ac29-e381-ea80-b1a1" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry name="Nurgle&apos;s Cloud of Flies" id="85ca-d7ac-771a-6680" collective="false" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="c4fe-fa73-62a5-cdc1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Nurgle&apos;s Cloud of Flies" id="2a9b-f76f-5007-20cd" hidden="false" targetId="15d8-22c6-d9cc-b662" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry name="Plaguesword" id="0d7f-98fc-fae9-7769" collective="false" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="b7b2-28d6-0ac4-cca4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Plaguesword" id="32c9-39d6-738d-6978" hidden="false" targetId="778e-0bea-50ce-064b" type="profile"/>
+                <infoLink name="Parry" id="1cdd-0705-762f-2305" hidden="false" targetId="049d-3ed2-a1bf-86b0" type="rule"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry name="Beast of Nurgle" id="90c9-a534-22c2-9eef" collective="false" hidden="false" import="true" type="model">
+              <categoryLinks>
+                <categoryLink name="Daemons" id="23b2-84ba-7e52-3885" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
+              </categoryLinks>
+              <constraints>
+                <constraint id="b81e-b44d-9bbf-d923" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="40"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Daemonic Aura" id="b7f1-de83-da84-786c" hidden="false" import="true" targetId="dddf-e932-c9b6-90e4" type="selectionEntry">
+                  <constraints>
+                    <constraint id="10e4-9028-e1ec-fbc4" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="1ad1-d06d-8a80-4580" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <infoLinks>
+                <infoLink name="Beast of Nurgle" id="7f89-738b-070c-d717" hidden="false" targetId="0e08-0016-a366-771b" type="profile"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Wargear Cards" id="48cb-3eed-1c74-903e" collective="false" hidden="false" import="true">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Cards" id="4735-c7af-cd03-f1ae" collective="false" hidden="false" import="true">
+          <entryLinks>
+            <entryLink name="Wargear Cards (Generic)" id="2344-08f7-a326-8e7a" collective="false" hidden="false" import="true" targetId="b5be-2d0f-67e2-6260" type="selectionEntryGroup"/>
+            <entryLink name="Chaos Wargear Cards" id="f44f-ed60-97f2-7bbf" collective="false" hidden="false" import="true" targetId="82fa-79b8-da86-0403" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Chaos Wargear Cards" id="82fa-79b8-da86-0403" collective="false" hidden="false" import="true">
+      <selectionEntries>
+        <selectionEntry name="Inferno Bolts" id="6117-d664-2dcc-a0ff" collective="false" hidden="true" import="true" type="upgrade">
+          <constraints>
+            <constraint id="7ee4-cdb2-c1ed-b832" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+          <modifiers>
+            <modifier field="hidden" type="set" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="da97-b3f7-1508-c78a" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="f12b-beee-24c8-e604" childName="Mark of Tzeentch" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Inferno Bolts" id="812c-47db-8a76-3238" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+              <characteristics>
+                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">The bolts can be used whenever the model fires in the shooting phase instead of ordinary bolt ammunition (though the bolts may not be used in conjunction with rapid fire). The bolts hit with the same effects as the psychic power Tzeentch&apos;s Fire Storm. The Strength value of the fire storm is equal to the mastery level of the Sorcerer using the bolts instead of its normal Strength of 5. Targets with saving throws against psychic attacks may take them as normal against Inferno bolts. Otherwise, armour and energy fields have no effect.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry name="Daemon Weapon" id="ff28-e3b9-eec5-1c32" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="1de0-e570-8d98-4cc3" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="2234-c0c6-f0fa-459d" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="2"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="25"/>
+          </costs>
+          <profiles>
+            <profile name="Daemon Weapon" id="61a5-af36-7440-6c85" hidden="false" page="battle bible 226" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+              <characteristics>
+                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">A model wielding a Daemon Weapon gains +2 to their WS and Strength, and always wounds psykers and daemons on a roll of 2+ regardless of their Toughness. Living models wounded by this weapon during hand-to-hand combat must pass a Leadership test; if they fail, they die.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
 </catalogue>

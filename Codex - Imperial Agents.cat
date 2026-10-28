@@ -2194,7 +2194,7 @@ See datafax for damage table</description>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <profiles>
-        <profile name="Solid Shot" id="7e59-da5c-1705-5328" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+        <profile name="Combat Shotgun - Solid Shot" id="7e59-da5c-1705-5328" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
           <characteristics>
             <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">4</characteristic>
             <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">18</characteristic>
@@ -2207,7 +2207,7 @@ See datafax for damage table</description>
             <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Knockback</characteristic>
           </characteristics>
         </profile>
-        <profile name="Scatter Shot" id="c663-aaea-ff81-37bf" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+        <profile name="Combat Shotgun - Scatter Shot" id="c663-aaea-ff81-37bf" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
           <characteristics>
             <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">4</characteristic>
             <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">18</characteristic>
@@ -2220,7 +2220,7 @@ See datafax for damage table</description>
             <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">1&quot; Blast</characteristic>
           </characteristics>
         </profile>
-        <profile name="Executioner Round" id="d1ff-d790-7a4c-72fc" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+        <profile name="Combat Shotgun - Executioner Round" id="d1ff-d790-7a4c-72fc" hidden="false" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
           <characteristics>
             <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">4</characteristic>
             <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">18</characteristic>

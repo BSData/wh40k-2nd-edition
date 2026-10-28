@@ -22,7 +22,19 @@
     <categoryEntry name="Necrons" id="722d-8a5c-d442-498a" hidden="false"/>
     <categoryEntry name="Imperial Agents" id="7b75-aa9e-1b94-f4a5" hidden="false"/>
     <categoryEntry name="Squats" id="e206-c273-bb7e-6132" hidden="false"/>
-    <categoryEntry name="3Support" id="b6e4-2c66-e404-b10a" hidden="false"/>
+    <categoryEntry name="3Support" id="b6e4-2c66-e404-b10a" hidden="false">
+      <modifiers>
+        <modifier field="name" type="set" value="Daemon Allies (Shared with Support)">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="9822-24a0-38e6-ee17" childName="Codex - Chaos (Chaos Cult)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </categoryEntry>
     <categoryEntry name="1Characters" id="7576-d91f-083c-38a7" hidden="false">
       <modifiers>
         <modifier field="name" type="set" value="Individuals">
@@ -49,6 +61,15 @@
             <conditionGroup type="or">
               <conditions>
                 <condition childId="b85e-e86e-7825-0e05" childName="Codex - Chaos (Daemon World)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier field="name" type="set" value="Cultists">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition childId="9822-24a0-38e6-ee17" childName="Codex - Chaos (Chaos Cult)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -678,6 +699,75 @@
             </modifier>
           </modifiers>
         </categoryLink>
+        <categoryLink name="Daemons" id="82e7-601a-182f-65ba" hidden="false" targetId="0f7a-2cd5-df51-dccd">
+          <constraints>
+            <constraint id="5610-b41f-c201-cf59" field="points" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="max" value="0"/>
+            <constraint id="19e1-2244-8fa1-ebe2" field="points" includeChildForces="true" includeChildSelections="true" percentValue="true" scope="force" shared="true" type="max" value="0"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <comment>25% Daemons</comment>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="9822-24a0-38e6-ee17" childName="Codex - Chaos (Chaos Cult)" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="5bd8-0ec7-a752-694d" childName="Codex - Chaos" field="forces" includeChildSelections="true" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <comment>When you have no points limit</comment>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier field="5610-b41f-c201-cf59" type="set" value="-1"/>
+                    <modifier field="19e1-2244-8fa1-ebe2" type="set" value="25"/>
+                  </modifiers>
+                </modifierGroup>
+                <modifierGroup type="and">
+                  <comment>When having a points limit</comment>
+                  <modifiers>
+                    <modifier field="19e1-2244-8fa1-ebe2" type="set" value="-1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier field="5610-b41f-c201-cf59" type="increment" value="1">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                      <repeats>
+                        <repeat childId="any" field="limit::points" includeChildForces="true" includeChildSelections="true" repeats="0.25" roundUp="false" scope="roster" shared="true" value="1"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+            </modifierGroup>
+          </modifierGroups>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="5bd8-0ec7-a752-694d" childName="Codex - Chaos" field="selections" includeChildSelections="true" scope="primary-catalogue" shared="true" type="notInstanceOf" value="1"/>
+                <condition childId="9822-24a0-38e6-ee17" childName="Codex - Chaos (Chaos Cult)" field="selections" includeChildSelections="true" scope="primary-catalogue" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
       </categoryLinks>
       <constraints>
         <constraint id="522c-c513-203d-f358" field="forces" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
@@ -929,7 +1019,8 @@
     </profile>
     <profile name="Army Commander Strategy Rating" id="742e-aa63-7b0f-8b56" hidden="false" typeId="4a47-f6d8-5780-3394" typeName="Army Commander">
       <characteristics>
-        <characteristic name="Strategy Rating" typeId="d0c8-e08c-1828-77b4"/>
+        <characteristic name="Strategy Rating" typeId="d0c8-e08c-1828-77b4">
+</characteristic>
       </characteristics>
     </profile>
     <profile name="Master-Crafted Bolt Pistol" id="c720-cb12-a072-7b1b" hidden="false" page="Wargear Card" publicationId="6d24-ac0a-2721-b4e2" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
@@ -3197,7 +3288,7 @@ destroyed. The missile cannot affect other models.</description>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <profiles>
-        <profile name="Solid Shell" id="084e-3c1b-3845-7e1d" hidden="false" page="31" publicationId="06e5-8e36-e8c8-aec3" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+        <profile name="Shotgun - Solid Shell" id="084e-3c1b-3845-7e1d" hidden="false" page="31" publicationId="06e5-8e36-e8c8-aec3" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
           <characteristics>
             <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">4</characteristic>
             <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">18</characteristic>
@@ -3210,7 +3301,7 @@ destroyed. The missile cannot affect other models.</description>
             <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Knockback</characteristic>
           </characteristics>
         </profile>
-        <profile name="Scatter Shot" id="5e24-6f10-60d2-2808" hidden="false" page="31" publicationId="06e5-8e36-e8c8-aec3" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+        <profile name="Shotgun - Scatter Shot" id="5e24-6f10-60d2-2808" hidden="false" page="31" publicationId="06e5-8e36-e8c8-aec3" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
           <characteristics>
             <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">4</characteristic>
             <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">18</characteristic>

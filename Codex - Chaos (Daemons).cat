@@ -302,7 +302,7 @@
     </profile>
     <profile name="Huge Claws" id="f6ac-41ab-6b7e-6d9e" hidden="false" page="55" publicationId="02e1-3f69-7ae7-f5c5" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
       <characteristics>
-        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">The Daemonette&apos;s claws add +1 to its Strength in close combat. Not included in profile</characteristic>
+        <characteristic name="Special" typeId="f917-8cd8-7592-47dd">The Daemonette&apos;s claws add +1 to its Strength in close combat. </characteristic>
       </characteristics>
     </profile>
     <profile name="Hellblade" id="765a-8623-e514-d45a" hidden="false" page="53" publicationId="02e1-3f69-7ae7-f5c5" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
@@ -743,6 +743,18 @@ May not divide into Blue Horrors if killed by Vortex Grenades, any type of webbe
         <infoLink name="Beast of Nurgle Attacks" id="93cc-ba77-5aaf-8f45" hidden="false" targetId="11e9-a5b4-f0c3-5cc7" type="rule"/>
         <infoLink name="Slime Trail" id="1c2c-8606-a15a-fede" hidden="false" targetId="6867-1cd7-a670-ba83" type="rule"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <modifiers>
         <modifier field="hidden" type="set" value="true">
           <conditions>
@@ -799,6 +811,18 @@ May not divide into Blue Horrors if killed by Vortex Grenades, any type of webbe
         <infoLink name="Furious Charge" id="005b-4ac1-0c39-f319" hidden="false" targetId="0cd4-2e22-e9b4-e7ed" type="rule"/>
         <infoLink name="Fear" id="b721-1999-068f-9b28" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <modifiers>
         <modifier field="hidden" type="set" value="true">
           <conditions>
@@ -868,7 +892,7 @@ May not divide into Blue Horrors if killed by Vortex Grenades, any type of webbe
       <selectionEntryGroups>
         <selectionEntryGroup name="Mount" id="3859-404c-fa70-d779" hidden="false">
           <selectionEntries>
-            <selectionEntry name="Juggernauts of Khorne" id="e932-570f-0baf-c504" hidden="false" import="true" type="upgrade">
+            <selectionEntry name="Juggernauts of Khorne" id="e932-570f-0baf-c504" hidden="false" import="true" subType="mount" type="model">
               <constraints>
                 <constraint id="da24-e5b6-22a5-181b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
@@ -931,6 +955,18 @@ May not divide into Blue Horrors if killed by Vortex Grenades, any type of webbe
         <infoLink name="Blood Scent" id="f8b7-cd44-8195-0409" hidden="false" targetId="addd-de39-dcab-a95d" type="rule"/>
         <infoLink name="Fear" id="a279-886a-7b0f-9939" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <modifiers>
         <modifier field="hidden" type="set" value="true">
           <conditions>
@@ -977,7 +1013,7 @@ May not divide into Blue Horrors if killed by Vortex Grenades, any type of webbe
         <infoLink name="Collar of Khorne" id="f64c-88c8-90a3-455a" hidden="false" targetId="6d04-4c53-765a-5aea" type="profile"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="N&apos;Kari, Daemon Prince of Slaanesh" id="a105-1227-608e-300e" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="N&apos;Kari, Daemon Prince of Slaanesh" id="a105-1227-608e-300e" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="1Characters" id="4dc9-a0c4-159e-0c72" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
         <categoryLink name="Daemons" id="e849-0321-4c68-c0b2" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
@@ -1005,6 +1041,15 @@ May not divide into Blue Horrors if killed by Vortex Grenades, any type of webbe
             <constraint id="b3f0-ee87-4de5-2a3d" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
           </constraints>
         </entryLink>
+        <entryLink name="Army Commander" id="760d-8d68-f3a0-486e" hidden="false" import="true" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
+          <infoLinks>
+            <infoLink name="Army Commander Strategy Rating" id="296f-ce00-09b3-f911" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
+              <modifiers>
+                <modifier field="d0c8-e08c-1828-77b4" type="set" value="5"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Hatred" id="b992-911a-b4ba-6679" hidden="false" targetId="a572-823c-5114-ba17" type="rule">
@@ -1019,26 +1064,20 @@ May not divide into Blue Horrors if killed by Vortex Grenades, any type of webbe
         <infoLink name="Doombolt" id="5628-bd6f-e2f1-3b5a" hidden="false" targetId="1ce0-83d3-745e-08ae" type="profile"/>
         <infoLink name="N&apos;Kari" id="40af-e9eb-2ef6-48cf" hidden="false" targetId="5ba3-08bf-f91b-7ef3" type="profile"/>
       </infoLinks>
-      <selectionEntries>
-        <selectionEntry name="Army Commander" id="4a88-c820-7bf3-f5a3" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="a33c-3c84-b42e-9709" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
-            <constraint id="8150-e023-18d5-7b49" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Army Commander Strategy Rating" id="928e-d2f2-bd4f-ef89" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
-              <modifiers>
-                <modifier field="d0c8-e08c-1828-77b4" type="set" value="5"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-        </selectionEntry>
-      </selectionEntries>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
-    <selectionEntry name="M&apos;Kachan, Daemon Prince of Tzeentch" id="2d86-bfa9-4388-7817" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="M&apos;Kachan, Daemon Prince of Tzeentch" id="2d86-bfa9-4388-7817" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Daemons" id="5c20-9954-989c-794a" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
         <categoryLink name="1Characters" id="fb17-664d-74e2-6311" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -1061,6 +1100,15 @@ May not divide into Blue Horrors if killed by Vortex Grenades, any type of webbe
             <constraint id="b76a-d78a-ddc9-a3f8" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
           </constraints>
         </entryLink>
+        <entryLink name="Army Commander" id="4e75-9121-6797-84e5" hidden="false" import="true" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
+          <infoLinks>
+            <infoLink name="Army Commander Strategy Rating" id="f037-7892-acff-3e28" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
+              <modifiers>
+                <modifier field="d0c8-e08c-1828-77b4" type="set" value="6"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Hatred" id="fe94-95b2-a470-48f8" hidden="false" targetId="a572-823c-5114-ba17" type="rule">
@@ -1071,6 +1119,18 @@ May not divide into Blue Horrors if killed by Vortex Grenades, any type of webbe
         <infoLink name="Terror" id="e258-e813-f409-0c21" hidden="false" targetId="05e0-cd40-2d9e-a9f9" type="rule"/>
         <infoLink name="M&apos;Kachan, Daemon Prince of Tzeentch" id="2c61-7ec4-9f5a-8b8d" hidden="false" targetId="5173-5317-593c-f9b6" type="profile"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <rules>
         <rule name="Fortune of Tzeentch" id="8ec0-b6b3-988c-0582" hidden="false" page="141" publicationId="02e1-3f69-7ae7-f5c5">
           <description>M&apos;Kachan is allowed to use a nullify each psychic phase just as if he had been dealt a nullify card. This nullify always works on a roll of a 3+, no matter what the psychic levels of models involved.</description>
@@ -1085,26 +1145,8 @@ May not divide into Blue Horrors if killed by Vortex Grenades, any type of webbe
           <description>May roll two dice and pick the one with the highest score when rolling to see who gets the first turn. May choose 1 extra strategy card at the start of the battle. May choose freely after all other cards dealt out. The opponent can they declare 1 card out loud and if it was the one M&apos;Kachan chose, it must be discarded</description>
         </rule>
       </rules>
-      <selectionEntries>
-        <selectionEntry name="Army Commander" id="513c-29ad-865a-d250" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="f1d4-30f3-084d-b5ba" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
-            <constraint id="5ef1-1cac-fcc9-450a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Army Commander Strategy Rating" id="089d-6dfb-136e-03a3" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
-              <modifiers>
-                <modifier field="d0c8-e08c-1828-77b4" type="set" value="6"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-        </selectionEntry>
-      </selectionEntries>
     </selectionEntry>
-    <selectionEntry name="Foulspawn, Daemon Prince of Nurgle" id="9cfb-f346-08c7-c3e0" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Foulspawn, Daemon Prince of Nurgle" id="9cfb-f346-08c7-c3e0" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="1Characters" id="266f-0571-3bb5-749d" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
         <categoryLink name="Daemons" id="b5ae-e742-ac3c-3afc" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
@@ -1127,6 +1169,15 @@ May not divide into Blue Horrors if killed by Vortex Grenades, any type of webbe
             <constraint id="3178-9ea1-835c-8a1f" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
           </constraints>
         </entryLink>
+        <entryLink name="Army Commander" id="6edd-0e6f-aec0-2a3b" hidden="false" import="true" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
+          <infoLinks>
+            <infoLink name="Army Commander Strategy Rating" id="87bc-32d6-b8c7-f431" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
+              <modifiers>
+                <modifier field="d0c8-e08c-1828-77b4" type="set" value="5"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Terror" id="5a9e-4a2e-428d-c81f" hidden="false" targetId="05e0-cd40-2d9e-a9f9" type="rule"/>
@@ -1137,6 +1188,18 @@ May not divide into Blue Horrors if killed by Vortex Grenades, any type of webbe
         </infoLink>
         <infoLink name="Foulspawn" id="549a-cdd0-160a-14a3" hidden="false" targetId="8e14-75f7-d3fe-1207" type="profile"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <rules>
         <rule name="Chaos Spawn" id="1adf-05d0-1097-0ea5" hidden="false" page="141" publicationId="02e1-3f69-7ae7-f5c5">
           <description>Moves 2D6&quot; each movement phase. Doesn&apos;t have to move in a random direction like other spawn, can choose direction. Any model Foulspawn moves over or touches sustains 1 automatic hit for each  attack Foulspawn has. Work out the result of any hits and saving throws normally, using Foulspawn&apos;s Strength and save modifier (S7, -4 save). Allocate hits on vehicles to random locations. Enemy models may not deliberately move over Foulspawn in their own turn. If they do because of compulsory or random movement, work out hits in the same way as if Foulspawn moved over them.
@@ -1155,26 +1218,8 @@ Enemy models may not attack Foulspawn in close combat.</description>
           <description>All enemy models within 6&quot; of Foulspawn suffer a -1 modifier to their Weapon Skill and Ballistic Skill</description>
         </rule>
       </rules>
-      <selectionEntries>
-        <selectionEntry name="Army Commander" id="d433-4289-8fbe-d272" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="d039-1258-327b-1547" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
-            <constraint id="e6b9-72d1-07fe-5940" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Army Commander Strategy Rating" id="e24d-74f2-5548-cef3" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
-              <modifiers>
-                <modifier field="d0c8-e08c-1828-77b4" type="set" value="5"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-        </selectionEntry>
-      </selectionEntries>
     </selectionEntry>
-    <selectionEntry name="Doombreed, Daemon Prince of Khorne" id="1f50-d7ce-b3dd-f8e0" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Doombreed, Daemon Prince of Khorne" id="1f50-d7ce-b3dd-f8e0" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="1Characters" id="d0aa-651a-9e63-07fb" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
         <categoryLink name="Daemons" id="2d4d-265a-c7b1-b5f5" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
@@ -1195,11 +1240,20 @@ Enemy models may not attack Foulspawn in close combat.</description>
             <constraint id="64d3-4212-f111-5f08" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
           </constraints>
         </entryLink>
-        <entryLink name="Chaos Armour" id="77b5-e3ca-1911-8218" hidden="false" import="true" targetId="7d7c-4f86-4be6-f975" type="selectionEntry">
+        <entryLink name="Doombreed&apos;s Chaos Armour" id="77b5-e3ca-1911-8218" hidden="false" import="true" targetId="7d7c-4f86-4be6-f975" type="selectionEntry">
           <constraints>
             <constraint id="e372-bd3e-c740-4b40" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
             <constraint id="605a-a37c-dbae-bd14" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
           </constraints>
+        </entryLink>
+        <entryLink name="Army Commander" id="13ba-51ee-0b87-cd7b" hidden="false" import="true" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
+          <infoLinks>
+            <infoLink name="Army Commander Strategy Rating" id="135d-ed59-9f5f-97b2" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
+              <modifiers>
+                <modifier field="d0c8-e08c-1828-77b4" type="set" value="5"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </entryLink>
       </entryLinks>
       <infoLinks>
@@ -1213,6 +1267,18 @@ Enemy models may not attack Foulspawn in close combat.</description>
         <infoLink name="Fly" id="b8c1-518c-2a65-dff8" hidden="false" targetId="1eae-bc57-fb7b-9461" type="rule"/>
         <infoLink name="Doombreed" id="660f-065e-44e0-974f" hidden="false" targetId="f083-6a43-03fa-5026" type="profile"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile name="Rod of Khorne" id="7cb3-1d0c-8237-a7ef" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
           <characteristics>
@@ -1227,24 +1293,6 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
           <description>Can retake any failed armour save.</description>
         </rule>
       </rules>
-      <selectionEntries>
-        <selectionEntry name="Army Commander" id="c1f5-6527-b375-dc82" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="5a7e-cce3-e47b-3052" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
-            <constraint id="1702-e398-e12f-ce90" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Army Commander Strategy Rating" id="135d-ed59-9f5f-97b2" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
-              <modifiers>
-                <modifier field="d0c8-e08c-1828-77b4" type="set" value="5"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-        </selectionEntry>
-      </selectionEntries>
     </selectionEntry>
     <selectionEntry name="Axe of Khorne" id="cea3-011e-bbe9-233f" hidden="false" import="true" type="upgrade">
       <infoLinks>
@@ -1256,7 +1304,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         <infoLink name="Doombreed Chaos Armour" id="1815-5463-129d-7258" hidden="false" targetId="b10f-9d74-10ff-2841" type="profile"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="Daemon Prince" id="9fc2-1692-48d3-de15" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Daemon Prince" id="9fc2-1692-48d3-de15" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="1Characters" id="4ad3-6933-293f-62f7" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
@@ -1264,6 +1312,23 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         <constraint id="5d9a-62a5-2e33-466f" field="selections" includeChildSelections="false" scope="force" shared="true" type="max" value="1"/>
         <constraint id="8b24-dab6-087f-e290" field="selections" includeChildSelections="false" scope="force" shared="true" type="min" value="1"/>
       </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="8b24-dab6-087f-e290" type="set" value="0">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <selectionEntryGroups>
         <selectionEntryGroup name="Choose Prince:" id="5880-02aa-c393-98d3" hidden="false">
           <constraints>
@@ -1279,7 +1344,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Bloodthirster" id="0812-3e13-f24a-ea20" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Bloodthirster" id="0812-3e13-f24a-ea20" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="1Characters" id="01d4-0139-f8d9-2bde" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
         <categoryLink name="Daemons" id="6f18-2c7b-097a-6cca" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
@@ -1316,6 +1381,18 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         <infoLink name="Fly" id="d801-a5d7-4d8d-fbf6" hidden="false" targetId="1eae-bc57-fb7b-9461" type="rule"/>
         <infoLink name="Terror" id="4246-8c88-b7ee-3849" hidden="false" targetId="05e0-cd40-2d9e-a9f9" type="rule"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <modifiers>
         <modifier field="hidden" type="set" value="true">
           <conditions>
@@ -1339,7 +1416,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         <infoLink name="Bloodthirster&apos;s Whip" id="5de7-b288-a195-aad4" hidden="false" targetId="5dbf-3b0a-3475-3957" type="profile"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="Great Unclean One" id="0f78-e375-0cc3-cfe5" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Great Unclean One" id="0f78-e375-0cc3-cfe5" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="1Characters" id="3826-520c-9e6c-700f" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
         <categoryLink name="Daemons" id="876f-ae6a-0d03-5ceb" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
@@ -1377,6 +1454,18 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         <infoLink name="Great Unclean One" id="3207-5969-8e17-f414" hidden="false" targetId="33d8-3c1d-e02d-b07c" type="profile"/>
         <infoLink name="Terror" id="fd49-f3df-36df-c5ee" hidden="false" targetId="05e0-cd40-2d9e-a9f9" type="rule"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <modifiers>
         <modifier field="hidden" type="set" value="true">
           <conditions>
@@ -1395,7 +1484,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         <infoLink name="Stream of Corruption" id="e862-0ccd-84b6-2dfe" hidden="false" targetId="56cf-05a3-fecc-2d48" type="profile"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="Plaguebearers" id="1c07-09eb-7b66-f47a" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Plaguebearers" id="1c07-09eb-7b66-f47a" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="2Squads" id="560b-835c-29e1-0e08" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
         <categoryLink name="Daemons" id="c3ed-0646-4bd4-c461" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
@@ -1416,6 +1505,18 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         <infoLink name="Cloud of Flies" id="b43a-b663-d7e7-47d2" hidden="false" targetId="8671-aac0-7a74-9080" type="rule"/>
         <infoLink name="Fear" id="455c-c97b-1abd-b709" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <modifiers>
         <modifier field="hidden" type="set" value="true">
           <conditions>
@@ -1434,7 +1535,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         </rule>
       </rules>
       <selectionEntries>
-        <selectionEntry name="Plaguebearer" id="66b6-c8b6-8f35-8659" collective="false" hidden="false" import="true" type="upgrade">
+        <selectionEntry name="Plaguebearer" id="66b6-c8b6-8f35-8659" collective="false" hidden="false" import="true" type="model">
           <constraints>
             <constraint id="433f-844e-5260-bfa9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
             <constraint id="9b1c-63f3-2f4c-fb4a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="10"/>
@@ -1468,7 +1569,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         <infoLink name="Parry" id="cdb2-2890-8a42-df00" hidden="false" targetId="049d-3ed2-a1bf-86b0" type="rule"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="Nurglings" id="3cae-0368-2960-580c" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Nurglings" id="3cae-0368-2960-580c" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="2Squads" id="62d4-7b38-2ce6-7ce1" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
         <categoryLink name="Chaos" id="1ae9-701c-5fd8-aaed" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
@@ -1481,6 +1582,18 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         <infoLink name="Infestations" id="5f21-6e95-7e3c-ea88" hidden="false" targetId="698e-25d4-994f-5cfc" type="rule"/>
         <infoLink name="Fear" id="4284-1a68-4f66-6a30" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <modifiers>
         <modifier field="hidden" type="set" value="true">
           <conditions>
@@ -1494,7 +1607,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         </modifier>
       </modifiers>
       <selectionEntries>
-        <selectionEntry name="Nurglings" id="6ea7-749d-4e82-358f" collective="false" hidden="false" import="true" type="upgrade">
+        <selectionEntry name="Nurglings" id="6ea7-749d-4e82-358f" collective="false" hidden="false" import="true" type="model">
           <constraints>
             <constraint id="9ebd-9f03-8a00-d4be" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
             <constraint id="0dee-ed68-aa95-3801" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="10"/>
@@ -1516,7 +1629,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry name="Keeper of Secrets" id="4516-66bb-54f9-25b6" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Keeper of Secrets" id="4516-66bb-54f9-25b6" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="1Characters" id="9bb1-2a80-90a7-d06e" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
         <categoryLink name="Chaos" id="4d8d-7c81-7a41-d81f" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
@@ -1549,6 +1662,18 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         <infoLink name="Aura of Slaanesh" id="d6f1-a91d-ff42-aacd" hidden="false" targetId="58d9-2859-54a2-0a61" type="rule"/>
         <infoLink name="Terror" id="ec8b-f537-bddd-5ce4" hidden="false" targetId="05e0-cd40-2d9e-a9f9" type="rule"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <modifiers>
         <modifier field="hidden" type="set" value="true">
           <conditions>
@@ -1562,7 +1687,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry name="Daemonettes" id="ffe5-d32b-1335-9ac5" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Daemonettes" id="ffe5-d32b-1335-9ac5" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="2Squads" id="bfa3-6383-be91-c391" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
         <categoryLink name="Daemons" id="dad7-9759-8d8e-f9bd" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
@@ -1574,6 +1699,18 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
       <infoLinks>
         <infoLink name="Fear" id="cf0b-e744-5fae-d3dd" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <modifiers>
         <modifier field="warning" type="add" value="Army must be led by N&apos;Kari">
           <conditions>
@@ -1592,7 +1729,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         </rule>
       </rules>
       <selectionEntries>
-        <selectionEntry name="Daemonette" id="45a5-67a7-c39a-e2e5" collective="false" hidden="false" import="true" type="upgrade">
+        <selectionEntry name="Daemonette" id="45a5-67a7-c39a-e2e5" collective="false" hidden="false" import="true" type="model">
           <constraints>
             <constraint id="5898-7858-a365-0120" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
             <constraint id="788f-995f-7fa5-5dba" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="10"/>
@@ -1613,7 +1750,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
                 <constraint id="d80a-1419-09e5-8c14" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
               </constraints>
             </entryLink>
-            <entryLink name="Steeds of Slaneesh" id="baa4-0ffe-ce12-07fd" hidden="false" import="true" targetId="35f4-e1cf-9e61-bbdd" type="selectionEntry">
+            <entryLink name="Steed of Slaneesh" id="baa4-0ffe-ce12-07fd" hidden="false" import="true" targetId="35f4-e1cf-9e61-bbdd" type="selectionEntry">
               <constraints>
                 <constraint id="c14f-7c17-cdbb-7236" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
                 <constraint id="2cc8-1d14-21ed-85da" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
@@ -1636,7 +1773,15 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
             </entryLink>
           </entryLinks>
           <infoLinks>
-            <infoLink name="Daemonettes" id="f1c8-77d6-103c-a226" hidden="false" targetId="87d4-e3e2-70bb-3960" type="profile"/>
+            <infoLink name="Daemonettes" id="f1c8-77d6-103c-a226" hidden="false" targetId="87d4-e3e2-70bb-3960" type="profile">
+              <modifiers>
+                <modifier field="5916-04ef-0fd1-6557" type="increment" value="1">
+                  <conditions>
+                    <condition childId="5482-73f8-b1e6-1c32" childName="Huge Claws" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
@@ -1660,7 +1805,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         <infoLink name="Huge Claws" id="4582-5321-ddc1-95ff" hidden="false" targetId="f6ac-41ab-6b7e-6d9e" type="profile"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="Fiends of Slaanesh" id="5fe7-d003-1c1e-66bf" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Fiends of Slaanesh" id="5fe7-d003-1c1e-66bf" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="2Squads" id="416d-188e-c8ed-2a3a" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
         <categoryLink name="Chaos" id="4ebe-19e4-68f7-1da6" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
@@ -1673,6 +1818,18 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         <infoLink name="Fear" id="aadc-5624-25f2-238c" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
         <infoLink name="Soporific Musk" id="9fa6-3daa-5d16-8967" hidden="false" targetId="d53d-9264-e3ab-5a87" type="rule"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <modifiers>
         <modifier field="warning" type="add" value="Army must be led by N&apos;Kari">
           <conditions>
@@ -1686,7 +1843,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         </modifier>
       </modifiers>
       <selectionEntries>
-        <selectionEntry name="Fiend" id="b502-553d-df8d-b81d" collective="false" hidden="false" import="true" type="upgrade">
+        <selectionEntry name="Fiend" id="b502-553d-df8d-b81d" collective="false" hidden="false" import="true" type="model">
           <constraints>
             <constraint id="923f-0f3a-f603-d013" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
             <constraint id="e0bf-72ca-71e8-b7e5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="10"/>
@@ -1715,7 +1872,15 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
             </entryLink>
           </entryLinks>
           <infoLinks>
-            <infoLink name="Fiends of Slaanesh" id="91f5-4c99-cc53-da56" hidden="false" targetId="4178-1cc9-9409-a5ba" type="profile"/>
+            <infoLink name="Fiends of Slaanesh" id="91f5-4c99-cc53-da56" hidden="false" targetId="4178-1cc9-9409-a5ba" type="profile">
+              <modifiers>
+                <modifier field="5916-04ef-0fd1-6557" type="increment" value="1">
+                  <conditions>
+                    <condition childId="5482-73f8-b1e6-1c32" childName="Huge Claws" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
@@ -1725,7 +1890,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         <infoLink name="Scorpion Tail" id="80c5-31ee-f82c-3240" hidden="false" targetId="ec56-7eb4-1adf-1c25" type="profile"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="Steed of Slaneesh" id="35f4-e1cf-9e61-bbdd" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Steed of Slaneesh" id="35f4-e1cf-9e61-bbdd" collective="false" hidden="false" import="true" subType="mount" type="model">
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
@@ -1736,7 +1901,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         <infoLink name="Fear" id="d0cc-2aec-526c-815c" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="The Lord of Change" id="5d5e-4c73-eb42-ac0a" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="The Lord of Change" id="5d5e-4c73-eb42-ac0a" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="1Characters" id="dc57-6e20-f358-762a" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
         <categoryLink name="Daemons" id="6edf-33e5-9c82-e6da" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
@@ -1766,6 +1931,18 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         <infoLink name="Lord of Change" id="9324-3a98-6186-b0bf" hidden="false" targetId="aa61-adeb-3fee-0069" type="profile"/>
         <infoLink name="Psychic Level 4" id="4329-0d9a-dff6-2afb" hidden="false" targetId="f988-2251-b863-a538" type="profile"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <modifiers>
         <modifier field="hidden" type="set" value="true">
           <conditions>
@@ -1779,7 +1956,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry name="Flamers of Tzeentch" id="5241-467b-a0b6-0bd3" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Flamers of Tzeentch" id="5241-467b-a0b6-0bd3" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="2Squads" id="d5bd-b3dd-facb-e955" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
         <categoryLink name="Daemons" id="e564-0466-0217-5628" hidden="false" primary="false" targetId="0f7a-2cd5-df51-dccd"/>
@@ -1793,6 +1970,18 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         <infoLink name="Fear" id="6c8a-1480-1c4d-ecd3" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
         <infoLink name="Bound" id="1060-0382-ea81-6306" hidden="false" targetId="fe02-db2c-cd6c-35be" type="rule"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <modifiers>
         <modifier field="hidden" type="set" value="true">
           <conditions>
@@ -1806,7 +1995,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         </modifier>
       </modifiers>
       <selectionEntries>
-        <selectionEntry name="Flamers of Tzeentch" id="41cd-71bd-d183-1ab3" collective="false" hidden="false" import="true" type="upgrade">
+        <selectionEntry name="Flamers of Tzeentch" id="41cd-71bd-d183-1ab3" collective="false" hidden="false" import="true" type="model">
           <constraints>
             <constraint id="1cf8-84d5-63e3-a845" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
             <constraint id="10f3-02c8-b7a9-2708" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="10"/>
@@ -1828,7 +2017,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry name="Horrors of Tzeentch" id="0284-067c-20ed-a146" collective="false" hidden="false" import="true" publicationId="02e1-3f69-7ae7-f5c5" type="upgrade">
+    <selectionEntry name="Horrors of Tzeentch" id="0284-067c-20ed-a146" collective="false" hidden="false" import="true" publicationId="02e1-3f69-7ae7-f5c5" type="unit">
       <categoryLinks>
         <categoryLink name="2Squads" id="ae43-b0dd-0fbf-4203" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
         <categoryLink name="Chaos" id="a0a0-2707-ba38-391e" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
@@ -1841,6 +2030,18 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         <infoLink name="Split" id="db3a-64e8-5b20-c149" hidden="false" targetId="b47b-ce1f-969f-c5db" type="rule"/>
         <infoLink name="Fear" id="0a58-c52f-36a3-701a" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <modifiers>
         <modifier field="hidden" type="set" value="true">
           <conditions>
@@ -1854,7 +2055,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         </modifier>
       </modifiers>
       <selectionEntries>
-        <selectionEntry name="Horrors" id="b139-6d76-1482-faa8" collective="false" hidden="false" import="true" type="upgrade">
+        <selectionEntry name="Horrors" id="b139-6d76-1482-faa8" collective="false" hidden="false" import="true" type="model">
           <constraints>
             <constraint id="07d9-6c14-b162-0988" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
             <constraint id="e996-5633-6dda-d1ef" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="10"/>
@@ -1869,7 +2070,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry name="Daemonic Icon Bearer" id="03fa-5f32-90bf-cd2d" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Daemonic Icon Bearer" id="03fa-5f32-90bf-cd2d" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="1Characters" id="a362-6bbf-3bcf-94fc" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
         <categoryLink name="Chaos" id="22df-c1dd-8869-c691" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
@@ -1892,6 +2093,18 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         </entryLink>
         <entryLink name="Mark of Chaos" id="7e5c-2bd0-aa0f-e28a" hidden="false" import="true" sortIndex="3" targetId="c066-c059-dd47-78b9" type="selectionEntryGroup"/>
       </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile name="Icon Bearer" id="a730-c561-9a40-d571" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
           <characteristics>
@@ -1958,7 +2171,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Chaos Steed" id="1590-293c-ba53-1af2" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Chaos Steed" id="1590-293c-ba53-1af2" collective="false" hidden="false" import="true" subType="mount" type="model">
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
@@ -1975,7 +2188,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         <infoLink name="Chain-axe" id="600c-5c21-0819-10c7" hidden="false" targetId="c5ee-a8c2-c6ae-5b13" type="profile"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="Chaos Warrior Champion" id="ba4d-1a1c-abdf-b2d5" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Chaos Warrior Champion" id="ba4d-1a1c-abdf-b2d5" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="1Characters" id="6734-f6c9-5b5b-48a6" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
         <categoryLink name="Chaos" id="c2f0-1238-0398-9358" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
@@ -2010,6 +2223,18 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         </entryLink>
         <entryLink name="Mark of Chaos" id="0cf5-fb17-ed02-f7dc" hidden="false" import="true" sortIndex="3" targetId="c066-c059-dd47-78b9" type="selectionEntryGroup"/>
       </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <selectionEntryGroups>
         <selectionEntryGroup name="Champion Type" id="e7b9-e513-1a53-c979" collective="false" defaultSelectionEntryId="4917-8a90-db26-8edb" hidden="false" import="true" sortIndex="1">
           <constraints>
@@ -2111,7 +2336,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Chaos Warrior Warband" id="4508-1fd2-6624-9643" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Chaos Warrior Warband" id="4508-1fd2-6624-9643" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="2Squads" id="52e5-82fc-aa59-95dd" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
         <categoryLink name="Chaos" id="d601-4b36-a73a-4188" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
@@ -2122,8 +2347,20 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
       <entryLinks>
         <entryLink name="Cult Assault Weapons" id="7448-0e45-cb7b-95a3" collective="false" hidden="false" import="true" targetId="abfe-f95e-66e8-4e16" type="selectionEntryGroup"/>
       </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <selectionEntries>
-        <selectionEntry name="Chaos Warrior" id="317c-240e-c955-99b6" collective="false" hidden="false" import="true" type="upgrade">
+        <selectionEntry name="Chaos Warrior" id="317c-240e-c955-99b6" collective="false" hidden="false" import="true" type="model">
           <constraints>
             <constraint id="9b30-9acb-1b47-296a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="5"/>
             <constraint id="d321-599b-eb94-1828" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="20"/>
@@ -2297,7 +2534,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Disc of Tzeentch" id="6323-19b4-8b19-ffd2" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Disc of Tzeentch" id="6323-19b4-8b19-ffd2" collective="false" hidden="false" import="true" subType="mount" type="model">
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
@@ -2316,7 +2553,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         <infoLink name="Disc of Tzeentch" id="af26-1fdd-a4c5-f450" hidden="false" targetId="449a-ae2d-4852-ead5" type="profile"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="Chaos Magus" id="1a56-4c40-2596-4f33" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Chaos Magus" id="1a56-4c40-2596-4f33" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="1Characters" id="c551-7159-a9af-7ef4" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
         <categoryLink name="Chaos" id="c50e-f3b4-87bd-0d4f" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
@@ -2350,6 +2587,18 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         <entryLink name="Mark of Chaos" id="4740-c061-6b58-91bc" hidden="false" import="true" sortIndex="2" targetId="c066-c059-dd47-78b9" type="selectionEntryGroup"/>
         <entryLink name="Cult Assault Weapons" id="4f19-c463-f05e-ef03" collective="false" hidden="false" import="true" targetId="abfe-f95e-66e8-4e16" type="selectionEntryGroup"/>
       </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <selectionEntryGroups>
         <selectionEntryGroup name="Magus Type" id="e441-f684-9875-ac9f" collective="false" defaultSelectionEntryId="bbc5-363a-3e43-39c5" hidden="false" import="true" sortIndex="-1">
           <constraints>
@@ -2449,7 +2698,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Beastman Champion" id="ad49-5789-ec6e-0f11" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Beastman Champion" id="ad49-5789-ec6e-0f11" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="1Characters" id="ed8f-bee1-36a8-b491" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
         <categoryLink name="Chaos" id="245a-da82-c778-a7b5" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
@@ -2475,6 +2724,18 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
           </constraints>
         </entryLink>
       </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile name="Beastman Champion" id="dc98-30bc-1f2d-72c1" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
           <characteristics>
@@ -2523,7 +2784,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Chaos Hound Pack" id="3c7e-8605-fa2b-f21c" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Chaos Hound Pack" id="3c7e-8605-fa2b-f21c" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="2Squads" id="9573-aec9-353c-9e32" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
         <categoryLink name="Chaos" id="fdde-0ff4-96b2-505b" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
@@ -2532,7 +2793,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <selectionEntries>
-        <selectionEntry name="Chaos Hounds" id="d797-112c-6224-e8bb" collective="false" hidden="false" import="true" type="upgrade">
+        <selectionEntry name="Chaos Hounds" id="d797-112c-6224-e8bb" collective="false" hidden="false" import="true" type="model">
           <constraints>
             <constraint id="b8a5-1ae5-6239-26d9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="5"/>
             <constraint id="3e0e-5858-ba6f-fa33" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="10"/>
@@ -2559,7 +2820,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry name="Beastmen" id="0c13-10f7-0384-d6ab" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Beastmen" id="0c13-10f7-0384-d6ab" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="2Squads" id="25ec-ceb0-6b16-3b5e" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
         <categoryLink name="Chaos" id="e38c-8e2a-881b-a484" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
@@ -2570,8 +2831,20 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
       <entryLinks>
         <entryLink name="Cult Assault Weapons" id="e509-26f8-6198-c042" collective="false" hidden="false" import="true" targetId="abfe-f95e-66e8-4e16" type="selectionEntryGroup"/>
       </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <selectionEntries>
-        <selectionEntry name="Beastmen" id="3faf-37c8-dc57-4ccf" collective="false" hidden="false" import="true" type="upgrade">
+        <selectionEntry name="Beastmen" id="3faf-37c8-dc57-4ccf" collective="false" hidden="false" import="true" type="model">
           <constraints>
             <constraint id="5a3c-1e4a-ea48-d282" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="5"/>
             <constraint id="5a6d-63ef-16ff-4a27" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="20"/>
@@ -2633,7 +2906,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Minotaurs" id="d68a-2cca-afdb-d60d" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Minotaurs" id="d68a-2cca-afdb-d60d" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="2Squads" id="f278-bc2a-c2c9-091a" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
         <categoryLink name="Chaos" id="9f66-6ef3-91e8-b5e9" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
@@ -2644,13 +2917,25 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
       <entryLinks>
         <entryLink name="Cult Assault Weapons" id="1385-b8d0-d57d-4d5d" collective="false" hidden="false" import="true" targetId="abfe-f95e-66e8-4e16" type="selectionEntryGroup"/>
       </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <rules>
         <rule name="Blood-Greed" id="3a08-9bfa-0ff7-6266" hidden="false" page="136" publicationId="02e1-3f69-7ae7-f5c5">
           <description>If a Minotaur slays a model in close combat, they are not allowed to make a follow-up move, but must remain where they are.</description>
         </rule>
       </rules>
       <selectionEntries>
-        <selectionEntry name="Minotaurs" id="7f25-83e6-67cb-96cd" collective="false" hidden="false" import="true" type="upgrade">
+        <selectionEntry name="Minotaurs" id="7f25-83e6-67cb-96cd" collective="false" hidden="false" import="true" type="model">
           <constraints>
             <constraint id="a2c1-51c7-51c7-9c1d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="10"/>
             <constraint id="6ab5-f113-ed52-ad9f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
@@ -2685,7 +2970,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry name="Trolls" id="c4fd-3460-42cc-e8b4" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Trolls" id="c4fd-3460-42cc-e8b4" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="2Squads" id="4dab-70b6-8092-0e8d" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
         <categoryLink name="Chaos" id="f7dc-ce45-d6f9-433b" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
@@ -2696,8 +2981,20 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
       <infoLinks>
         <infoLink name="Stupidity" id="8625-3c64-b42c-9bda" hidden="false" targetId="9df5-8c60-ed5b-8538" type="rule"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <comment>For Ally lists</comment>
+          <modifiers>
+            <modifier field="category" type="set-primary" value="b6e4-2c66-e404-b10a">
+              <conditions>
+                <condition childId="a60b-92d0-a03f-6c77" childName="Ally List" field="forces" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <selectionEntries>
-        <selectionEntry name="Trolls" id="b512-d437-3499-4934" collective="false" hidden="false" import="true" type="upgrade">
+        <selectionEntry name="Trolls" id="b512-d437-3499-4934" collective="false" hidden="false" import="true" type="model">
           <constraints>
             <constraint id="9ac7-d04c-8993-b3ed" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
             <constraint id="3ebb-ff29-102d-4c24" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="5"/>
@@ -2915,8 +3212,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition childId="66dc-df7d-76d8-64b9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notInstanceOf" value="0"/>
-                    <condition childId="4817-c1e2-2c76-e5ab" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notInstanceOf" value="0"/>
+                    <condition childId="7576-d91f-083c-38a7" childName="1Characters" field="selections" scope="ancestor" shared="true" type="notInstanceOf" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2942,8 +3238,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition childId="66dc-df7d-76d8-64b9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notInstanceOf" value="0"/>
-                    <condition childId="4817-c1e2-2c76-e5ab" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notInstanceOf" value="0"/>
+                    <condition childId="7576-d91f-083c-38a7" childName="1Characters" field="selections" scope="ancestor" shared="true" type="notInstanceOf" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2964,8 +3259,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition childId="66dc-df7d-76d8-64b9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notInstanceOf" value="0"/>
-                    <condition childId="4817-c1e2-2c76-e5ab" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notInstanceOf" value="0"/>
+                    <condition childId="7576-d91f-083c-38a7" childName="1Characters" field="selections" scope="ancestor" shared="true" type="notInstanceOf" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2991,8 +3285,7 @@ In close combat can be used as an additional hand weapon, using Doombreeds Stren
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition childId="66dc-df7d-76d8-64b9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notInstanceOf" value="0"/>
-                    <condition childId="4817-c1e2-2c76-e5ab" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notInstanceOf" value="0"/>
+                    <condition childId="7576-d91f-083c-38a7" childName="1Characters" field="selections" scope="ancestor" shared="true" type="notInstanceOf" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>

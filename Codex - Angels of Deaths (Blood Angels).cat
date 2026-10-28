@@ -376,7 +376,6 @@ and  courage  in  the face of death. Once broken, a Space Marine squad may rally
         <characteristic name="I" typeId="76cb-4fd1-7571-e697">5</characteristic>
         <characteristic name="A" typeId="6d89-52f1-9c48-ac8c">3</characteristic>
         <characteristic name="LD" typeId="dfcc-1070-ddf7-ad7d">10</characteristic>
-        <characteristic name="Ram Value" typeId="5911-75e9-1f4f-87d0"/>
         <characteristic name="Ram Strength" typeId="a025-016a-2152-7b47">7</characteristic>
         <characteristic name="Ram Damage" typeId="84ee-e518-c9ac-7b7e">D10</characteristic>
         <characteristic name="Ram Save Modifier" typeId="e929-6e42-f2a7-c76d">-4</characteristic>

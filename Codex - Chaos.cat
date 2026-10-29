@@ -16,7 +16,7 @@
     <entryLink name="Chaos Space Marine Sorcerer" id="4f33-c986-7611-8abf" collective="false" hidden="false" import="true" targetId="da97-b3f7-1508-c78a" type="selectionEntry"/>
     <entryLink name="Greater Daemon" id="4cd0-1c10-63be-0c94" collective="false" hidden="false" import="true" targetId="70b8-e189-d988-a72f" type="selectionEntry"/>
     <entryLink name="Chaos Champion" id="98ed-f210-1b92-65d4" collective="false" hidden="false" import="true" targetId="5d78-a88b-49ce-e50e" type="selectionEntry"/>
-    <entryLink name="Chaos Space Marine Terminators" id="dab7-8313-0ea3-80f2" collective="false" hidden="false" import="true" targetId="806c-9703-b972-537f" type="selectionEntry"/>
+    <entryLink name="Chaos Space Marine Terminators" id="dab7-8313-0ea3-80f2" collective="false" hidden="false" import="true" targetId="bda0-827f-fb4a-aefb" type="selectionEntry"/>
     <entryLink name="Veteran Chaos Space Marine Squad" id="13a9-de01-4869-3d04" collective="false" hidden="false" import="true" targetId="2f2f-9f5c-501f-e0df" type="selectionEntry"/>
     <entryLink name="Chaos Space Marine Squad" id="2afa-565c-0cf7-5c6e" collective="false" hidden="false" import="true" targetId="05ca-994e-cb71-bb33" type="selectionEntry"/>
     <entryLink name="Plague Marines" id="ab59-63ab-b5e5-edd7" collective="false" hidden="false" import="true" targetId="3623-3100-9f0c-5349" type="selectionEntry"/>
@@ -47,6 +47,7 @@
     <entryLink name="Cypher, Fallen Dark Angel Champion" id="021c-97f1-00e0-8b8d" collective="false" hidden="false" import="true" targetId="23a5-6f69-0e31-5955" type="selectionEntry"/>
     <entryLink name="Fallen Angels" id="602c-aa10-4605-823e" collective="false" hidden="false" import="true" targetId="35b3-756b-b545-d1c5" type="selectionEntry"/>
     <entryLink name="Huron Blackheart" id="8994-dff0-b363-b7fe" hidden="false" import="true" targetId="5785-abb3-0a25-ed37" type="selectionEntry"/>
+    <entryLink name="Abaddon&apos;s Terminator Bodyguard" id="753f-e64f-5ac2-57e1" hidden="false" import="true" targetId="90c2-59a3-0ab2-0a0a" type="selectionEntry"/>
   </entryLinks>
   <forceEntries>
     <forceEntry name="Chaos" id="7428-ade3-bde5-7955" hidden="false">
@@ -2014,15 +2015,22 @@ The model is protected by a Daemonic Aura (4+ unmodified save).</description>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry name="Juggernaut of Khorne" id="9807-0d4f-e20c-0d68" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Juggernaut of Khorne" id="9807-0d4f-e20c-0d68" collective="false" hidden="false" import="true" subType="mount" type="model">
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <entryLinks>
+        <entryLink name="Daemonic Aura" id="afa8-62dd-bbfe-7e5b" hidden="false" import="true" targetId="d311-73f3-763a-ea30" type="selectionEntry">
+          <constraints>
+            <constraint id="f3c2-7725-2309-bb73" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="2ff2-8137-183c-fe46" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
       <infoLinks>
         <infoLink name="Crush" id="a045-d9eb-9697-59cf" hidden="false" targetId="7b15-0e08-7050-18e5" type="rule"/>
         <infoLink name="Juggernaut Calavry" id="6d3b-0a91-c9cd-7b07" hidden="false" targetId="3eab-ce79-e971-ac0c" type="rule"/>
         <infoLink name="Fear" id="8122-7815-bc0b-45fb" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
-        <infoLink name="Daemonic Aura" id="89c9-cab6-802b-fa2b" hidden="false" targetId="938e-6cf7-fdbe-7090" type="profile"/>
         <infoLink name="Juggernaut of Khorne" id="84fd-9a1a-72c7-9c32" hidden="false" targetId="61f2-1d47-29e0-bed2" type="profile"/>
       </infoLinks>
     </selectionEntry>
@@ -2282,11 +2290,18 @@ The model is protected by a Daemonic Aura (4+ unmodified save).</description>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <entryLinks>
+        <entryLink name="Daemonic Aura" id="bba9-2643-a7c7-17bd" hidden="false" import="true" targetId="d311-73f3-763a-ea30" type="selectionEntry">
+          <constraints>
+            <constraint id="05f7-7ed1-0678-4875" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="03a2-3eba-069c-1723" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
       <infoLinks>
         <infoLink name="Fear" id="85f2-7c1c-205b-5e45" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
         <infoLink name="Disc Movement" id="5453-9cfc-e2f0-e25a" hidden="false" targetId="0593-8976-363f-8824" type="rule"/>
         <infoLink name="Riding Beast" id="17c2-575d-a375-250a" hidden="false" targetId="4db7-f3f5-bfc3-4cff" type="rule"/>
-        <infoLink name="Daemonic Aura" id="b87c-2e5d-bb7a-aef2" hidden="false" targetId="938e-6cf7-fdbe-7090" type="profile"/>
         <infoLink name="Disc of Tzeentch" id="d0e5-bd6c-362f-9938" hidden="false" targetId="7751-9964-0d4f-8ab3" type="profile"/>
       </infoLinks>
     </selectionEntry>
@@ -2949,7 +2964,7 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry name="Chaos Space Marine Bike" id="b6ef-5aa8-e87e-9422" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Chaos Space Marine Bike" id="b6ef-5aa8-e87e-9422" collective="false" hidden="false" import="true" subType="mount" type="model">
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
@@ -2975,41 +2990,27 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
         <infoLink name="Chaos Marine Bike" id="2cb0-2dcd-e0b2-171e" hidden="false" targetId="0b0e-e7b2-4cf7-e87c" type="profile"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry name="Army Icon" id="8a58-bcf6-ca49-373e" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Army Icon" id="8a58-bcf6-ca49-373e" collective="false" hidden="false" import="true" type="model">
+      <comment>left off here</comment>
       <categoryLinks>
-        <categoryLink name="Characters" id="5065-d587-25fb-def5" hidden="false" primary="true" targetId="9497-ff1f-dffc-011f"/>
         <categoryLink name="Chaos" id="5017-bc55-8b75-b350" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+        <categoryLink name="1Characters" id="a46b-d8ca-2e69-da83" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <constraints>
-        <constraint id="3de7-e788-1ead-76c8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+        <constraint id="3de7-e788-1ead-76c8" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="points" value="55"/>
       </costs>
       <entryLinks>
-        <entryLink name="Chaos Space Marine Bike" id="ad18-757a-bbd6-bd80" collective="false" hidden="false" import="true" targetId="b6ef-5aa8-e87e-9422" type="selectionEntry">
-          <constraints>
-            <constraint id="8fc8-7e28-b3b1-3ede" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-          <modifiers>
-            <modifier field="hidden" type="set" value="true">
-              <conditions>
-                <condition childId="223b-6b82-1907-d976" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="notEqualTo" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink name="Chaos Rewards" id="c601-3c60-54b6-e3c8" collective="false" hidden="false" import="true" targetId="f130-ec76-3fd2-cfdc" type="selectionEntryGroup">
+        <entryLink name="Chaos Rewards" id="c601-3c60-54b6-e3c8" collective="false" hidden="false" import="true" sortIndex="4" targetId="f130-ec76-3fd2-cfdc" type="selectionEntryGroup">
           <constraints>
             <constraint id="40b5-818f-ce64-d40f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
         </entryLink>
         <entryLink name="Wargear Cards" id="73de-61d7-9447-0c3a" collective="false" hidden="false" import="true" targetId="0c12-c9a3-9886-7ce2" type="selectionEntryGroup">
           <constraints>
-            <constraint id="5107-8e72-b7fb-fca3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
+            <constraint id="5107-8e72-b7fb-fca3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
           <modifiers>
             <modifier field="5107-8e72-b7fb-fca3" type="decrement" value="1">
@@ -3019,14 +3020,23 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink name="Chaos Icons" id="ba57-8cca-9300-84dc" collective="false" hidden="false" import="true" targetId="3ebe-ea48-c7df-936f" type="selectionEntryGroup"/>
+        <entryLink name="Chaos Icons" id="ba57-8cca-9300-84dc" collective="false" hidden="false" import="true" sortIndex="2" targetId="3ebe-ea48-c7df-936f" type="selectionEntryGroup"/>
+        <entryLink name="Mark of Chaos" id="9362-d448-b2e5-0795" hidden="false" import="true" sortIndex="5" targetId="0f9b-6151-dc53-6113" type="selectionEntryGroup"/>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Icon Bearer" id="a35e-e393-1fea-f617" hidden="false" targetId="bc17-3570-4c6f-ae87" type="profile"/>
+        <infoLink name="Icon Bearer" id="a35e-e393-1fea-f617" hidden="false" targetId="bc17-3570-4c6f-ae87" type="profile">
+          <modifiers>
+            <modifier field="2e7d-2383-f92f-16f9" type="increment" value="1">
+              <conditions>
+                <condition childId="6e38-ffd3-93de-5667" childName="Mark of Nurgle" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
         <infoLink name="Icon Bearer" id="2990-41ca-cfd7-e5e1" hidden="false" targetId="dbd2-368d-b766-f55d" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Armour Type" id="6a83-8c54-be3c-51fd" collective="false" hidden="false" import="true">
+        <selectionEntryGroup name="Armour Type" id="6a83-8c54-be3c-51fd" collective="false" defaultSelectionEntryId="c6ad-07cf-4b54-b14a" hidden="false" import="true" sortIndex="1">
           <constraints>
             <constraint id="0907-d70f-f3d5-e6da" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
             <constraint id="83e4-6dd6-6615-d103" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
@@ -3038,79 +3048,59 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
               </constraints>
             </entryLink>
             <entryLink name="Power Armour" id="c6ad-07cf-4b54-b14a" collective="false" hidden="false" import="true" targetId="223b-6b82-1907-d976" type="selectionEntry">
-              <constraints>
-                <constraint id="6939-ba00-80f2-2df8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Frag Grenade" id="6f81-ddc5-742f-22a6" hidden="false" targetId="122b-b17a-4e87-5994" type="profile"/>
-                <infoLink name="Bolt Pistol" id="8d14-7f95-bf53-f3cf" hidden="false" targetId="3741-3592-b694-79b4" type="profile"/>
-              </infoLinks>
-              <modifiers>
-                <modifier field="2b3c-98b8-49bc-d086" type="set" value="0"/>
-              </modifiers>
+              <entryLinks>
+                <entryLink name="Bolt Pistol" id="3420-3754-f0f1-3014" hidden="false" import="true" targetId="b5bb-7853-53cb-bec4" type="selectionEntry">
+                  <constraints>
+                    <constraint id="aaf1-2f15-a35e-2394" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="7c01-660d-5af2-31b4" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                </entryLink>
+                <entryLink name="Frag Grenade" id="008b-ffbc-ac45-635d" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+                  <constraints>
+                    <constraint id="fc5b-ee4c-ea4f-f4f7" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="ad60-3825-692d-8466" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Mark of Chaos" id="d5b3-88d9-f908-1dd2" collective="false" hidden="false" import="true">
+        <selectionEntryGroup name="Weapons" id="4604-6c5c-eae9-e7b7" collective="false" hidden="false" import="true" sortIndex="3">
           <entryLinks>
-            <entryLink name="Mark of Nurgle" id="c443-c64b-ad5a-af77" collective="false" hidden="false" import="true" targetId="6e38-ffd3-93de-5667" type="selectionEntry">
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-            </entryLink>
-            <entryLink name="Mark of Khorne" id="3105-56f7-6b4e-b0e7" collective="false" hidden="false" import="true" targetId="36e6-7b5f-1e06-2e95" type="selectionEntry">
-              <costs>
-                <cost name="pts" typeId="points" value="15"/>
-              </costs>
-            </entryLink>
-            <entryLink name="Mark of Slaanesh" id="0946-91a5-f69e-3818" collective="false" hidden="false" import="true" targetId="c885-9d1b-76e7-6d83" type="selectionEntry">
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Weapons" id="4604-6c5c-eae9-e7b7" collective="false" hidden="false" import="true">
-          <entryLinks>
-            <entryLink name="Assault Weapons" id="c666-dfd3-b411-dc26" collective="false" hidden="false" import="true" targetId="bf95-e4e4-5614-9c8a" type="selectionEntryGroup">
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="1909-d063-e86d-0920" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Grenades" id="12f0-e3d1-66e8-ef0c" collective="false" hidden="false" import="true" targetId="1d95-a696-1664-22ee" type="selectionEntryGroup">
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="1909-d063-e86d-0920" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
+            <entryLink name="Assault Weapons" id="c666-dfd3-b411-dc26" collective="false" hidden="false" import="true" targetId="bf95-e4e4-5614-9c8a" type="selectionEntryGroup"/>
+            <entryLink name="Grenades" id="12f0-e3d1-66e8-ef0c" collective="false" hidden="false" import="true" targetId="1d95-a696-1664-22ee" type="selectionEntryGroup"/>
             <entryLink name="Special Weapons" id="0f68-4509-2f89-8b06" collective="false" hidden="false" import="true" targetId="4d14-423e-9e23-ebe0" type="selectionEntryGroup">
               <constraints>
                 <constraint id="a32a-b3b2-fa7a-414d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
+            </entryLink>
+          </entryLinks>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="1909-d063-e86d-0920" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Mount" id="4ba9-0de5-57b8-f267" hidden="false">
+          <entryLinks>
+            <entryLink name="Chaos Space Marine Bike" id="4ff5-cb06-a1fd-7e50" collective="false" hidden="false" import="true" targetId="b6ef-5aa8-e87e-9422" type="selectionEntry">
+              <constraints>
+                <constraint id="de90-cac7-eda6-9484" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
               <modifiers>
                 <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="1909-d063-e86d-0920" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                  <conditions>
+                    <condition childId="223b-6b82-1907-d976" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="notEqualTo" value="1"/>
+                  </conditions>
                 </modifier>
               </modifiers>
             </entryLink>
@@ -3891,367 +3881,6 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Chaos Space Marine Terminators" id="806c-9703-b972-537f" collective="false" hidden="false" import="true" type="upgrade">
-      <categoryLinks>
-        <categoryLink name="Squads" id="8edf-ff89-faa2-742a" hidden="false" primary="true" targetId="6185-accd-3c7f-2fc2"/>
-        <categoryLink name="Chaos" id="5715-b390-de64-44e5" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
-      </categoryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-      <entryLinks>
-        <entryLink name="Terminator Assault Weapons" id="fdd8-7199-00f6-2883" collective="false" hidden="false" import="true" targetId="7a4d-48c2-0a27-4067" type="selectionEntryGroup">
-          <constraints>
-            <constraint id="904a-4e01-bbcc-c8ea" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0"/>
-            <constraint id="e14d-f590-8170-95a9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="0"/>
-          </constraints>
-          <modifiers>
-            <modifier field="904a-4e01-bbcc-c8ea" type="increment" value="1">
-              <repeats>
-                <repeat childId="c78d-bae4-7e8a-0ab8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-              </repeats>
-            </modifier>
-            <modifier field="e14d-f590-8170-95a9" type="increment" value="1">
-              <repeats>
-                <repeat childId="c78d-bae4-7e8a-0ab8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink name="Terminator Ranged Weapons" id="ed07-47df-5af0-938e" collective="false" hidden="false" import="true" targetId="017a-7cc9-9961-aa60" type="selectionEntryGroup">
-          <constraints>
-            <constraint id="0462-6155-8cbe-d1b7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0"/>
-            <constraint id="5d74-11a9-5949-2e60" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="0"/>
-          </constraints>
-          <modifiers>
-            <modifier field="5d74-11a9-5949-2e60" type="increment" value="1">
-              <repeats>
-                <repeat childId="c78d-bae4-7e8a-0ab8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-              </repeats>
-            </modifier>
-            <modifier field="0462-6155-8cbe-d1b7" type="increment" value="1">
-              <repeats>
-                <repeat childId="c78d-bae4-7e8a-0ab8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-              </repeats>
-            </modifier>
-            <modifier field="0462-6155-8cbe-d1b7" type="decrement" value="1">
-              <repeats>
-                <repeat childId="db61-1435-4ef0-34e3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-              </repeats>
-            </modifier>
-            <modifier field="5d74-11a9-5949-2e60" type="decrement" value="1">
-              <repeats>
-                <repeat childId="8cdc-7dd6-ba8e-72d3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-              </repeats>
-            </modifier>
-            <modifier field="5d74-11a9-5949-2e60" type="decrement" value="1">
-              <repeats>
-                <repeat childId="7d86-8686-0232-6914" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-              </repeats>
-            </modifier>
-            <modifier field="0462-6155-8cbe-d1b7" type="decrement" value="1">
-              <repeats>
-                <repeat childId="7d86-8686-0232-6914" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink name="Terminator Heavy Weapons" id="fa76-9510-6823-4a03" collective="false" hidden="false" import="true" targetId="7d86-8686-0232-6914" type="selectionEntryGroup">
-          <constraints>
-            <constraint id="ffa8-c174-8f52-6f88" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
-          </constraints>
-        </entryLink>
-        <entryLink name="Noise Marine Weapons" id="db61-1435-4ef0-34e3" collective="false" hidden="true" import="true" targetId="8cdc-7dd6-ba8e-72d3" type="selectionEntryGroup">
-          <constraints>
-            <constraint id="5ce7-f193-cb57-a906" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0"/>
-          </constraints>
-          <modifiers>
-            <modifier field="5ce7-f193-cb57-a906" type="decrement" value="1">
-              <repeats>
-                <repeat childId="7d86-8686-0232-6914" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-              </repeats>
-            </modifier>
-            <modifier field="5ce7-f193-cb57-a906" type="increment" value="1">
-              <repeats>
-                <repeat childId="c78d-bae4-7e8a-0ab8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-              </repeats>
-            </modifier>
-            <modifier field="hidden" type="set" value="false">
-              <conditions>
-                <condition childId="4e7e-6105-5c92-ad00" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="5ce7-f193-cb57-a906" type="decrement" value="1">
-              <repeats>
-                <repeat childId="017a-7cc9-9961-aa60" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink name="Enhanced Warriors" id="14c1-65c4-6e1a-3329" collective="false" hidden="false" import="true" targetId="78e7-9f14-2bb2-3f43" type="selectionEntry">
-          <modifiers>
-            <modifier field="points" type="increment" value="5">
-              <repeats>
-                <repeat childId="c78d-bae4-7e8a-0ab8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-        </entryLink>
-      </entryLinks>
-      <infoLinks>
-        <infoLink name="Chaos Terminator Armour" id="0467-1aa0-76a4-081d" hidden="false" targetId="6c8c-438d-9db3-3404" type="profile"/>
-      </infoLinks>
-      <selectionEntries>
-        <selectionEntry name="Terminator" id="c78d-bae4-7e8a-0ab8" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="01f6-e3e4-760b-06ab" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
-            <constraint id="3238-baa0-a26b-2ff1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="9"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="51"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Legion Terminator Cult Upgrade" id="3a32-a2dc-299f-f64d" collective="false" defaultSelectionEntryId="b624-c44d-593e-33fd" hidden="false" import="true">
-          <constraints>
-            <constraint id="c4b3-9c0f-027f-4516" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-            <constraint id="97ce-4d0c-ce4c-e69d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry name="Khorne Berzerker" id="4011-ff59-c37a-cf5c" collective="false" hidden="false" import="true" type="upgrade">
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <entryLinks>
-                <entryLink name="Mark of Khorne" id="10d1-6925-71e6-66b4" collective="false" hidden="false" import="true" targetId="36e6-7b5f-1e06-2e95" type="selectionEntry">
-                  <constraints>
-                    <constraint id="bd42-6e18-67b1-a4bc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                    <constraint id="927b-72b9-e3dc-330e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-              <infoLinks>
-                <infoLink name="Furious Charge" id="7fd6-46e1-17b3-2c28" hidden="false" targetId="696e-5f55-fee4-3a83" type="rule"/>
-                <infoLink name="Khorne Bezerker Terminators" id="e1d9-b51c-c2c6-27ef" hidden="false" targetId="58b0-e404-1fc5-cd08" type="profile"/>
-              </infoLinks>
-              <modifiers>
-                <modifier field="points" type="increment" value="20">
-                  <repeats>
-                    <repeat childId="c78d-bae4-7e8a-0ab8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry name="Plague Marine" id="3686-dd96-e621-2318" collective="false" hidden="false" import="true" type="upgrade">
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Plague Marines Terminators" id="d2b3-6591-1c90-d875" hidden="false" targetId="e85f-5f10-c371-4a79" type="profile"/>
-              </infoLinks>
-              <modifiers>
-                <modifier field="points" type="increment" value="20">
-                  <repeats>
-                    <repeat childId="c78d-bae4-7e8a-0ab8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <selectionEntries>
-                <selectionEntry name="Mark of Nurgle" id="67a6-9b26-9af4-0727" collective="false" hidden="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint id="1b36-0df4-0f76-cac4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                    <constraint id="8e79-852c-87ad-ad40" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                  </constraints>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                  <profiles>
-                    <profile name="Nurgle" id="7068-5107-1827-ff17" hidden="false" page="27" publicationId="02e1-3f69-7ae7-f5c5" typeId="4fa6-d4f7-781c-53f9" typeName="Mark of Chaos">
-                      <characteristics>
-                        <characteristic name="Special Rule" typeId="6299-cb13-a123-d9ec">Model gains +1 Toughness (included in profile already)</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntry>
-            <selectionEntry name="Thousand Sons Marine" id="709b-39c9-ded4-1d70" collective="false" hidden="false" import="true" type="upgrade">
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <entryLinks>
-                <entryLink name="Mark of Tzeentch" id="b03a-77de-badc-d92d" collective="false" hidden="false" import="true" targetId="ec82-b75b-46df-7ba2" type="selectionEntry">
-                  <constraints>
-                    <constraint id="ee4e-a7bb-ea85-ee87" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                    <constraint id="1065-398b-df37-393f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-              <infoLinks>
-                <infoLink name="Spirit Warriors" id="e142-c580-5f13-efe3" hidden="false" targetId="a716-b7a1-3088-030e" type="rule"/>
-                <infoLink name="Immune to Psychology" id="dd01-420c-8dca-10cc" hidden="false" targetId="2e73-71d0-e4b8-58e1" type="rule"/>
-                <infoLink name="Thousand Sons Terminators" id="e07a-6827-0ada-c4d7" hidden="false" targetId="aecb-4fd1-1999-b256" type="profile"/>
-              </infoLinks>
-              <modifiers>
-                <modifier field="points" type="increment" value="10">
-                  <repeats>
-                    <repeat childId="c78d-bae4-7e8a-0ab8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry name="Noise Marine" id="4e7e-6105-5c92-ad00" collective="false" hidden="false" import="true" type="upgrade">
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <entryLinks>
-                <entryLink name="Mark of Slaanesh" id="8048-ecda-bf03-af5f" collective="false" hidden="false" import="true" targetId="c885-9d1b-76e7-6d83" type="selectionEntry">
-                  <constraints>
-                    <constraint id="c15b-aadc-6231-58c3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                    <constraint id="3d01-d9c2-4e53-e183" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-              <infoLinks>
-                <infoLink name="Psychic Cacophony" id="c992-1e06-4381-66f0" hidden="false" targetId="e9e7-658e-1d94-07e7" type="rule"/>
-                <infoLink name="Noise Marines Terminators" id="dae2-8f1e-07e5-91f1" hidden="false" targetId="522c-b877-4b90-1dd6" type="profile"/>
-              </infoLinks>
-              <modifiers>
-                <modifier field="points" type="increment" value="10">
-                  <repeats>
-                    <repeat childId="c78d-bae4-7e8a-0ab8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry name="Chaos Undivided" id="b624-c44d-593e-33fd" collective="false" hidden="false" import="true" type="upgrade">
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Chaos Space Marine Terminators" id="0d80-5f69-2f24-3116" hidden="false" targetId="122c-0723-b20a-bad3" type="profile"/>
-              </infoLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Unit Options" id="8344-b918-9e13-67af" collective="false" hidden="false" import="true">
-          <selectionEntries>
-            <selectionEntry name="Aspiring Champion" id="d867-15ae-b9ab-a8e0" collective="false" hidden="false" import="true" type="upgrade">
-              <categoryLinks>
-                <categoryLink name="Characters" id="1d57-91b3-68ba-f27b" hidden="false" primary="true" targetId="9497-ff1f-dffc-011f"/>
-                <categoryLink name="Chaos" id="1ced-fd2f-5c2e-9520" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
-              </categoryLinks>
-              <constraints>
-                <constraint id="b398-5ab3-3cae-93ed" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="30"/>
-              </costs>
-              <entryLinks>
-                <entryLink name="Wargear Cards" id="282e-2f17-9c52-ebb4" collective="false" hidden="false" import="true" targetId="0c12-c9a3-9886-7ce2" type="selectionEntryGroup">
-                  <constraints>
-                    <constraint id="40c1-497f-0cc8-4a26" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier field="40c1-497f-0cc8-4a26" type="decrement" value="1">
-                      <repeats>
-                        <repeat childId="f130-ec76-3fd2-cfdc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-                      </repeats>
-                    </modifier>
-                  </modifiers>
-                </entryLink>
-                <entryLink name="Chaos Rewards" id="ce4f-90e4-4793-c5cf" collective="false" hidden="false" import="true" targetId="f130-ec76-3fd2-cfdc" type="selectionEntryGroup">
-                  <constraints>
-                    <constraint id="349d-3361-1787-9559" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-              <infoLinks>
-                <infoLink name="Aspiring Champion" id="f936-6dcc-84fe-f24b" hidden="false" targetId="704f-b870-4e36-f518" type="profile"/>
-              </infoLinks>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Armour Type" id="dbec-c0f5-65f3-11ee" collective="false" hidden="false" import="true">
-                  <constraints>
-                    <constraint id="5ef3-e4b3-4a04-eb6d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                    <constraint id="b96e-0098-40a2-858e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                  </constraints>
-                  <entryLinks>
-                    <entryLink name="Terminator Loadouts" id="36ad-7e51-66dd-4a39" collective="false" hidden="false" import="true" targetId="1909-d063-e86d-0920" type="selectionEntryGroup">
-                      <constraints>
-                        <constraint id="6921-7226-8220-00f2" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntryGroup>
-                <selectionEntryGroup name="Mark of Chaos" id="1723-2da8-791a-9945" collective="false" hidden="false" import="true">
-                  <entryLinks>
-                    <entryLink name="Mark of Nurgle" id="e4ca-48dc-388b-738b" collective="false" hidden="false" import="true" targetId="6e38-ffd3-93de-5667" type="selectionEntry">
-                      <costs>
-                        <cost name="pts" typeId="points" value="10"/>
-                      </costs>
-                    </entryLink>
-                    <entryLink name="Mark of Khorne" id="9642-9794-6c6d-367d" collective="false" hidden="false" import="true" targetId="36e6-7b5f-1e06-2e95" type="selectionEntry">
-                      <costs>
-                        <cost name="pts" typeId="points" value="15"/>
-                      </costs>
-                    </entryLink>
-                    <entryLink name="Mark of Slaanesh" id="9275-feda-3b9a-92fe" collective="false" hidden="false" import="true" targetId="c885-9d1b-76e7-6d83" type="selectionEntry">
-                      <costs>
-                        <cost name="pts" typeId="points" value="5"/>
-                      </costs>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntryGroup>
-                <selectionEntryGroup name="Weapons" id="2a94-3c53-e829-679d" collective="false" hidden="false" import="true">
-                  <entryLinks>
-                    <entryLink name="Assault Weapons" id="1cbd-bf3b-16d6-845e" collective="false" hidden="false" import="true" targetId="bf95-e4e4-5614-9c8a" type="selectionEntryGroup">
-                      <modifiers>
-                        <modifier field="hidden" type="set" value="true">
-                          <conditionGroups>
-                            <conditionGroup type="and">
-                              <conditions>
-                                <condition childId="1909-d063-e86d-0920" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                              </conditions>
-                            </conditionGroup>
-                          </conditionGroups>
-                        </modifier>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink name="Grenades" id="d677-b2d3-6eeb-b1b8" collective="false" hidden="false" import="true" targetId="1d95-a696-1664-22ee" type="selectionEntryGroup">
-                      <modifiers>
-                        <modifier field="hidden" type="set" value="true">
-                          <conditionGroups>
-                            <conditionGroup type="and">
-                              <conditions>
-                                <condition childId="1909-d063-e86d-0920" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                              </conditions>
-                            </conditionGroup>
-                          </conditionGroups>
-                        </modifier>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink name="Special Weapons" id="73ae-4478-07c8-7dab" collective="false" hidden="false" import="true" targetId="4d14-423e-9e23-ebe0" type="selectionEntryGroup">
-                      <modifiers>
-                        <modifier field="hidden" type="set" value="true">
-                          <conditionGroups>
-                            <conditionGroup type="and">
-                              <conditions>
-                                <condition childId="1909-d063-e86d-0920" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                              </conditions>
-                            </conditionGroup>
-                          </conditionGroups>
-                        </modifier>
-                      </modifiers>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-    </selectionEntry>
     <selectionEntry name="Veteran Chaos Space Marine Squad" id="2f2f-9f5c-501f-e0df" collective="false" hidden="false" import="true" publicationId="02e1-3f69-7ae7-f5c5" type="upgrade">
       <categoryLinks>
         <categoryLink name="Chaos" id="cc8a-83cc-2a14-ef22" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
@@ -5021,6 +4650,9 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
         <categoryLink name="Chaos" id="69db-b174-b3a7-9f85" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
         <categoryLink name="1Characters" id="4e3a-8200-dac4-7349" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
+      <constraints>
+        <constraint id="e549-85be-8a64-1cb2" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
@@ -5044,7 +4676,10 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
       </infoLinks>
       <rules>
         <rule name="Teleport" id="8eaa-2117-742d-066d" hidden="false" page="99" publicationId="02e1-3f69-7ae7-f5c5">
-          <description>Abaddon may teleport into battle at no additional points. If accompanied by a bodygiard of terminators they may also teleport with him at no additional points</description>
+          <description>Abaddon may teleport into battle at no additional points. If accompanied by a bodyguard of Terminators they may also teleport with him at no additional points</description>
+        </rule>
+        <rule name="The Marks of Chaos" id="8888-4b66-9a1f-35c4" hidden="false">
+          <description>Abaddon has all 4 Marks of Chaos, the effects of those already built into his rules and profile. They do not grant psychic powers or Frenzy for example.</description>
         </rule>
       </rules>
       <selectionEntries>
@@ -5108,247 +4743,6 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
               <description>This causes Terror against all Imperial Forces, except for Blood Angels who gain Hatred</description>
             </rule>
           </rules>
-        </selectionEntry>
-        <selectionEntry name="Terminator Bodyguard" id="fb8b-7a40-78ac-d87e" collective="false" hidden="false" import="true" type="upgrade">
-          <categoryLinks>
-            <categoryLink name="Squads" id="e4f9-5d62-2c9b-4bc1" hidden="false" primary="true" targetId="6185-accd-3c7f-2fc2"/>
-            <categoryLink name="Chaos" id="22f6-5fdf-d386-25e7" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
-          </categoryLinks>
-          <constraints>
-            <constraint id="38b0-36eb-23e6-cddc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-          <entryLinks>
-            <entryLink name="Terminator Assault Weapons" id="2374-770a-183d-e9c9" collective="false" hidden="false" import="true" targetId="7a4d-48c2-0a27-4067" type="selectionEntryGroup">
-              <constraints>
-                <constraint id="fb9f-6db9-e27d-7bfc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0"/>
-                <constraint id="fdbb-41e2-7cc0-8fbf" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="0"/>
-              </constraints>
-              <modifiers>
-                <modifier field="fdbb-41e2-7cc0-8fbf" type="increment" value="1">
-                  <repeats>
-                    <repeat childId="99be-a54c-f860-dfce" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-                <modifier field="fb9f-6db9-e27d-7bfc" type="increment" value="1">
-                  <repeats>
-                    <repeat childId="99be-a54c-f860-dfce" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Terminator Ranged Weapons" id="ebe8-2761-1058-6faa" collective="false" hidden="false" import="true" targetId="017a-7cc9-9961-aa60" type="selectionEntryGroup">
-              <constraints>
-                <constraint id="767c-36d9-6637-5f9d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0"/>
-                <constraint id="0f34-6c09-71b0-5584" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="0"/>
-              </constraints>
-              <modifiers>
-                <modifier field="0f34-6c09-71b0-5584" type="increment" value="1">
-                  <repeats>
-                    <repeat childId="99be-a54c-f860-dfce" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-                <modifier field="767c-36d9-6637-5f9d" type="increment" value="1">
-                  <repeats>
-                    <repeat childId="99be-a54c-f860-dfce" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-                <modifier field="767c-36d9-6637-5f9d" type="decrement" value="1">
-                  <repeats>
-                    <repeat childId="db61-1435-4ef0-34e3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-                <modifier field="0f34-6c09-71b0-5584" type="decrement" value="1">
-                  <repeats>
-                    <repeat childId="8cdc-7dd6-ba8e-72d3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-                <modifier field="767c-36d9-6637-5f9d" type="decrement" value="1">
-                  <repeats>
-                    <repeat childId="7d86-8686-0232-6914" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-                <modifier field="0f34-6c09-71b0-5584" type="decrement" value="1">
-                  <repeats>
-                    <repeat childId="7d86-8686-0232-6914" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Terminator Heavy Weapons" id="820b-0ce5-fb46-fec4" collective="false" hidden="false" import="true" targetId="7d86-8686-0232-6914" type="selectionEntryGroup">
-              <constraints>
-                <constraint id="3630-1689-b690-f1a4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
-              </constraints>
-            </entryLink>
-            <entryLink name="Noise Marine Weapons" id="347a-d8f3-9700-77c6" collective="false" hidden="true" import="true" targetId="8cdc-7dd6-ba8e-72d3" type="selectionEntryGroup">
-              <constraints>
-                <constraint id="0c1a-6b93-4441-ecd7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0"/>
-              </constraints>
-              <modifiers>
-                <modifier field="0c1a-6b93-4441-ecd7" type="decrement" value="1">
-                  <repeats>
-                    <repeat childId="7d86-8686-0232-6914" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-                <modifier field="0c1a-6b93-4441-ecd7" type="increment" value="1">
-                  <repeats>
-                    <repeat childId="99be-a54c-f860-dfce" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-                <modifier field="hidden" type="set" value="false">
-                  <conditions>
-                    <condition childId="cd48-d5d5-f47b-66cd" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                  </conditions>
-                </modifier>
-                <modifier field="0c1a-6b93-4441-ecd7" type="decrement" value="1">
-                  <repeats>
-                    <repeat childId="017a-7cc9-9961-aa60" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-          <infoLinks>
-            <infoLink name="Chaos Terminator Armour" id="3b89-80da-8936-1c49" hidden="false" targetId="6c8c-438d-9db3-3404" type="profile"/>
-            <infoLink name="Dispersed Formations" id="aa19-f5c0-f9b4-a7a9" hidden="false" targetId="0540-4f49-13ce-7a98" type="rule"/>
-          </infoLinks>
-          <selectionEntries>
-            <selectionEntry name="Terminator" id="99be-a54c-f860-dfce" collective="false" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="a933-0282-3288-cd65" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                <constraint id="18c1-eb5c-3e9e-0970" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="4"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="51"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Legion Terminator Cult Upgrade" id="b425-1b8c-9eaa-260e" collective="false" defaultSelectionEntryId="a118-3c43-c0b7-db8d" hidden="false" import="true">
-              <constraints>
-                <constraint id="254e-44eb-09d8-ffaa" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                <constraint id="e54a-4f48-ad6f-3a07" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry name="Khorne Berzerker" id="45af-f351-2987-f728" collective="false" hidden="false" import="true" type="upgrade">
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                  <entryLinks>
-                    <entryLink name="Mark of Khorne" id="3d07-2a7c-ad75-374c" collective="false" hidden="false" import="true" targetId="36e6-7b5f-1e06-2e95" type="selectionEntry">
-                      <constraints>
-                        <constraint id="26c9-16c0-29b1-b94b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                        <constraint id="6964-5bba-af42-30d3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                  <infoLinks>
-                    <infoLink name="Furious Charge" id="e8fe-4bfe-8a6b-cb5d" hidden="false" targetId="696e-5f55-fee4-3a83" type="rule"/>
-                    <infoLink name="Khorne Bezerker Terminators" id="1bae-b3a8-35a4-764b" hidden="false" targetId="58b0-e404-1fc5-cd08" type="profile"/>
-                  </infoLinks>
-                  <modifiers>
-                    <modifier field="points" type="increment" value="20">
-                      <repeats>
-                        <repeat childId="c78d-bae4-7e8a-0ab8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-                      </repeats>
-                    </modifier>
-                  </modifiers>
-                </selectionEntry>
-                <selectionEntry name="Plague Marine" id="683f-2cde-8aac-d330" collective="false" hidden="false" import="true" type="upgrade">
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                  <infoLinks>
-                    <infoLink name="Plague Marines Terminators" id="527b-3fdb-c3ff-d0eb" hidden="false" targetId="e85f-5f10-c371-4a79" type="profile"/>
-                  </infoLinks>
-                  <modifiers>
-                    <modifier field="points" type="increment" value="20">
-                      <repeats>
-                        <repeat childId="c78d-bae4-7e8a-0ab8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-                      </repeats>
-                    </modifier>
-                  </modifiers>
-                  <selectionEntries>
-                    <selectionEntry name="Mark of Nurgle" id="912b-dc48-5593-5593" collective="false" hidden="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint id="4034-0221-1192-2c01" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                        <constraint id="5b5b-6cb2-4650-ce67" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                      </constraints>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                      <profiles>
-                        <profile name="Nurgle" id="7193-7c96-4d9a-358f" hidden="false" page="27" publicationId="02e1-3f69-7ae7-f5c5" typeId="4fa6-d4f7-781c-53f9" typeName="Mark of Chaos">
-                          <characteristics>
-                            <characteristic name="Special Rule" typeId="6299-cb13-a123-d9ec">Model gains +1 Toughness (included in profile already)</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntry>
-                <selectionEntry name="Thousand Sons Marine" id="6d9b-2d04-6136-5846" collective="false" hidden="false" import="true" type="upgrade">
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                  <entryLinks>
-                    <entryLink name="Mark of Tzeentch" id="69cf-2862-690a-f707" collective="false" hidden="false" import="true" targetId="ec82-b75b-46df-7ba2" type="selectionEntry">
-                      <constraints>
-                        <constraint id="6d3a-e67d-dbc0-3aae" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                        <constraint id="1980-6db2-295d-0d34" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                  <infoLinks>
-                    <infoLink name="Spirit Warriors" id="98e7-b571-cd64-3be6" hidden="false" targetId="a716-b7a1-3088-030e" type="rule"/>
-                    <infoLink name="Immune to Psychology" id="b4a0-9c17-0b71-cef0" hidden="false" targetId="2e73-71d0-e4b8-58e1" type="rule"/>
-                    <infoLink name="Thousand Sons Terminators" id="689b-ff90-785e-af88" hidden="false" targetId="aecb-4fd1-1999-b256" type="profile"/>
-                  </infoLinks>
-                  <modifiers>
-                    <modifier field="points" type="increment" value="10">
-                      <repeats>
-                        <repeat childId="c78d-bae4-7e8a-0ab8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-                      </repeats>
-                    </modifier>
-                  </modifiers>
-                </selectionEntry>
-                <selectionEntry name="Noise Marine" id="cd48-d5d5-f47b-66cd" collective="false" hidden="false" import="true" type="upgrade">
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                  <entryLinks>
-                    <entryLink name="Mark of Slaanesh" id="9118-90c3-b39d-7e8f" collective="false" hidden="false" import="true" targetId="c885-9d1b-76e7-6d83" type="selectionEntry">
-                      <constraints>
-                        <constraint id="d747-f839-1fe9-e951" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                        <constraint id="875d-6869-25f5-95db" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                  <infoLinks>
-                    <infoLink name="Psychic Cacophony" id="da87-d366-652a-be35" hidden="false" targetId="e9e7-658e-1d94-07e7" type="rule"/>
-                    <infoLink name="Noise Marines Terminators" id="2bdc-db1b-22a6-2f3c" hidden="false" targetId="522c-b877-4b90-1dd6" type="profile"/>
-                  </infoLinks>
-                  <modifiers>
-                    <modifier field="points" type="increment" value="10">
-                      <repeats>
-                        <repeat childId="c78d-bae4-7e8a-0ab8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
-                      </repeats>
-                    </modifier>
-                  </modifiers>
-                </selectionEntry>
-                <selectionEntry name="Chaos Undivided" id="a118-3c43-c0b7-db8d" collective="false" hidden="false" import="true" type="upgrade">
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                  <infoLinks>
-                    <infoLink name="Chaos Space Marine Terminators" id="de45-def4-6ba6-f6eb" hidden="false" targetId="122c-0723-b20a-bad3" type="profile"/>
-                  </infoLinks>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
         </selectionEntry>
         <selectionEntry name="Abaddon&apos;s Chaos Terminator Armour" id="ac78-5e1e-ad2a-21b9" collective="false" hidden="false" import="true" page="99" publicationId="02e1-3f69-7ae7-f5c5" type="upgrade">
           <constraints>
@@ -5503,26 +4897,23 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
     <selectionEntry name="Fabius Bile" id="719b-71a6-2809-47b8" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>
         <categoryLink name="Chaos" id="036b-6c76-14bf-78af" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
-        <categoryLink name="Characters" id="ec37-c854-7e78-923d" hidden="false" primary="true" targetId="9497-ff1f-dffc-011f"/>
+        <categoryLink name="1Characters" id="d11b-3137-dcda-8bb1" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
+      <constraints>
+        <constraint id="04b7-2515-2eff-de40" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
+      </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="200"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
       <entryLinks>
-        <entryLink name="Frenzon" id="5ed7-a99b-4511-12a1" collective="false" hidden="false" import="true" targetId="1b9c-07a0-11db-984f" type="selectionEntry">
-          <constraints>
-            <constraint id="14d6-0a0f-61b0-3a49" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="6578-6dc4-a401-ba98" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
+        <entryLink name="Army Commander" id="81ba-492b-23f2-031b" hidden="false" import="true" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
           <infoLinks>
-            <infoLink name="Frenzy" id="b572-cc8c-cf52-ddc9" hidden="false" targetId="0e86-209c-fe59-fe87" type="rule"/>
+            <infoLink name="Army Commander Strategy Rating" id="c835-55d0-879c-a347" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
+              <modifiers>
+                <modifier field="d0c8-e08c-1828-77b4" type="set" value="5"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
-        </entryLink>
-        <entryLink name="Power Armour" id="b3c0-a7b5-e851-1738" collective="false" hidden="false" import="true" targetId="223b-6b82-1907-d976" type="selectionEntry">
-          <constraints>
-            <constraint id="3fca-ee48-c4d3-5bdd" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="9155-c588-cfcc-4d07" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
         </entryLink>
       </entryLinks>
       <infoLinks>
@@ -5543,166 +4934,157 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
             <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
           </characteristics>
         </profile>
-        <profile name="The Chirurgeon" id="0065-9453-bf14-096c" hidden="false" page="104" publicationId="02e1-3f69-7ae7-f5c5" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
-          <characteristics>
-            <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Grants Frenzon. +2 Attacks in close combat, which are added after the effects of any doubling via Frenzy. Immune to Toxin and Gas weapons. If wounded, Bile takes no wounds if he can roll greater than wounds suffered on 1 D6. A roll of a 6 will always negate any wounds, but cannot save him from a Vortex grenade, Distort cannon, Wraith cannon etc.</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <rules>
         <rule name="Fabius&apos; Characteristics" id="be1a-53bf-b39c-50c8" hidden="false" page="104" publicationId="02e1-3f69-7ae7-f5c5">
           <description>Roll for all of Fabius&apos; Characteristics before the game begins</description>
         </rule>
       </rules>
-      <selectionEntries>
-        <selectionEntry name="Weapons" id="c4fa-b158-cd6a-38e3" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="e6ef-3620-f470-c86a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="9088-bb14-61c9-4f3c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Wargear" id="8937-0aae-b14a-e4b2" hidden="false">
           <entryLinks>
-            <entryLink name="Bolt Pistol" id="b361-caaf-1102-3094" collective="false" hidden="false" import="true" targetId="b5bb-7853-53cb-bec4" type="selectionEntry">
+            <entryLink name="Bolt Pistol" id="bb20-c523-974e-cf44" collective="false" hidden="false" import="true" targetId="b5bb-7853-53cb-bec4" type="selectionEntry">
               <constraints>
-                <constraint id="287f-3510-fc54-60f0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-                <constraint id="bb71-c18c-758e-f189" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="06ea-bdec-1c49-9ffc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="d6ba-cf9f-ae50-f656" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
             </entryLink>
-            <entryLink name="Frag Grenade" id="a12d-442d-fca1-15f1" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+            <entryLink name="Frag Grenade" id="3ebf-57b3-48ff-2745" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
               <constraints>
-                <constraint id="5a8f-c379-32a2-1e96" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                <constraint id="b7f5-5028-488c-5a7e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="e4fc-3e42-f43b-a525" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="c6f9-6416-0ac7-2f4c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
               </constraints>
             </entryLink>
-            <entryLink name="Krak Grenade" id="a498-89e4-4664-efcd" collective="false" hidden="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
+            <entryLink name="Krak Grenade" id="3561-8aeb-6ee3-5d1e" collective="false" hidden="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
               <constraints>
-                <constraint id="7362-610c-53cd-4410" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-                <constraint id="93f4-0955-4320-cbc0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="77db-f6a4-966d-5739" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="929d-b2d7-c406-c62f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
               </constraints>
+            </entryLink>
+            <entryLink name="Power Armour" id="d899-bad9-94ab-528f" collective="false" hidden="false" import="true" targetId="223b-6b82-1907-d976" type="selectionEntry">
+              <constraints>
+                <constraint id="1557-1039-93c4-03f4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="e6ac-72f9-f931-1408" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </entryLink>
+            <entryLink name="Frenzon" id="1136-a506-44a1-d228" collective="false" hidden="false" import="true" targetId="1b9c-07a0-11db-984f" type="selectionEntry">
+              <constraints>
+                <constraint id="c991-2135-8349-398e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="0b37-31d8-68b4-4738" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Frenzy" id="c9e5-4849-fc3b-edc6" hidden="false" targetId="0e86-209c-fe59-fe87" type="rule"/>
+              </infoLinks>
             </entryLink>
           </entryLinks>
-          <profiles>
-            <profile name="Rod of Torment" id="3bbe-f419-17ce-52a8" hidden="false" page="104" publicationId="02e1-3f69-7ae7-f5c5" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">CC Only</characteristic>
-                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">CC Only</characteristic>
-                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
-                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
-                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">As user</characteristic>
-                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
-                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">As user</characteristic>
-                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">Var</characteristic>
-                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Rod of Torment</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Xyclos Needler" id="0a2b-87d8-8a4c-92f8" hidden="false" page="104" publicationId="02e1-3f69-7ae7-f5c5" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">12</characteristic>
-                <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">24</characteristic>
-                <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">+2</characteristic>
-                <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">+1</characteristic>
-                <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">(3)</characteristic>
-                <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
-                <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-1</characteristic>
-                <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">3+D6</characteristic>
-                <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Close Combat, Sustained Fire - 1 Dice, Xyclos Ammo</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <rules>
-            <rule name="Rod of Torment" id="a8d0-a9cf-1dc2-24d3" hidden="false" page="104" publicationId="02e1-3f69-7ae7-f5c5">
-              <description>Any model suffering 1 or more wounds is immediately removed as a casualty regardless of how many wounds they have. The model must pass a Ld test on 2D6, if failed any friendly models within 8&quot; must take a Break test</description>
-            </rule>
-            <rule name="Xyclos Needler" id="5df4-7af9-2d28-8332" hidden="false" page="104" publicationId="02e1-3f69-7ae7-f5c5">
-              <description>Pick a type of ammo to use every time you shoot. Make saving throws against hits as normal, but if failed check how the serum affects the model. No roll to wound is needed. Only effects living creatures, not Wraithguard/vehicles/daemons/ etc. For those targets, use the weapons basic profile
+          <selectionEntries>
+            <selectionEntry name="Rod of Torment" id="7849-4e1d-fe8e-a3d7" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="736a-3ef6-8031-dc29" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="821a-e315-c416-3faa" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+              <profiles>
+                <profile name="Rod of Torment" id="0c44-81d9-c29d-b85e" hidden="false" page="104" publicationId="02e1-3f69-7ae7-f5c5" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">CC Only</characteristic>
+                    <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">CC Only</characteristic>
+                    <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+                    <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+                    <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">As user</characteristic>
+                    <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
+                    <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">As user</characteristic>
+                    <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">Var</characteristic>
+                    <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Rod of Torment</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule name="Rod of Torment" id="92d3-10df-fc47-9181" hidden="false" page="104" publicationId="02e1-3f69-7ae7-f5c5">
+                  <description>Any model suffering 1 or more wounds is immediately removed as a casualty regardless of how many wounds they have. The model must pass a Ld test on 2D6, if failed any friendly models within 8&quot; must take a Break test</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry name="Xyclos Needler" id="c6fe-7b78-137e-4b4b" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="3189-d1a0-c24a-7263" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="5638-c62b-57d3-3606" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+              <profiles>
+                <profile name="Xyclos Needler" id="1c7f-390b-e621-292e" hidden="false" page="104" publicationId="02e1-3f69-7ae7-f5c5" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">12</characteristic>
+                    <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">24</characteristic>
+                    <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">+2</characteristic>
+                    <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">+1</characteristic>
+                    <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">(3)</characteristic>
+                    <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
+                    <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-1</characteristic>
+                    <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">3+D6</characteristic>
+                    <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Close Combat, Sustained Fire - 1 Dice, Xyclos Ammo</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule name="Xyclos Ammo" id="d71b-1371-0356-a3f3" hidden="false" page="104" publicationId="02e1-3f69-7ae7-f5c5">
+                  <description>Pick a type of ammo to use every time you shoot. Make saving throws against hits as normal, but if failed check how the serum affects the model. No roll to wound is needed. Only effects living creatures, not Wraithguard/vehicles/daemons/ etc. For those targets, use the weapons basic profile
 
 Xyclos A: Wounds living creatures automatically, inflicting D3 wounds per hit
 Xyclos B: The target suffers psychotic visions. Roll a D6+2 instead of a D10 on the Hallucinogen Effects Table (p59 of Wargear book).
 Xyclos C: The target model combusts as if set on fire by a 4-6 on the Flamer Hit Chart. Friendly models cannot help put out the flame, but it may go out on its own. If the model dies, it explodes using the effects of a Plasma grenade</description>
-            </rule>
-          </rules>
-        </selectionEntry>
-        <selectionEntry name="Army Commander" id="d0da-fe63-a14e-d09e" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="d14f-20e7-9a57-723d" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
-            <constraint id="b3d6-b17d-e2f8-049e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Army Commander Strategy Rating" id="c835-55d0-879c-a347" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
-              <modifiers>
-                <modifier field="d0c8-e08c-1828-77b4" type="set" value="5"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-        </selectionEntry>
-      </selectionEntries>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry name="The Chirurgeon" id="684b-6ecd-45f1-e198" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="3ab2-0dc9-2b43-c935" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="409a-46d6-f70f-28d0" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="30"/>
+              </costs>
+              <profiles>
+                <profile name="The Chirurgeon" id="5200-8660-0c5e-a295" hidden="false" page="104" publicationId="02e1-3f69-7ae7-f5c5" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+                  <characteristics>
+                    <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Grants Frenzon. +2 Attacks in close combat, which are added after the effects of any doubling via Frenzy. Immune to Toxin and Gas weapons. If wounded, Bile takes no wounds if he can roll greater than wounds suffered on 1 D6. A roll of a 6 will always negate any wounds, but cannot save him from a Vortex grenade, Distort cannon, Wraith cannon etc.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Enhanced Warriors" id="78e7-9f14-2bb2-3f43" collective="false" hidden="true" import="true" type="upgrade">
+    <selectionEntry name="Enhanced Warriors" id="78e7-9f14-2bb2-3f43" collective="false" hidden="false" import="true" type="upgrade">
       <constraints>
-        <constraint id="cb09-1147-4728-a3b5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-        <constraint id="31ee-04e8-237f-1f05" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
+        <constraint id="31ee-04e8-237f-1f05" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
-      <modifiers>
-        <modifier field="hidden" type="set" value="false">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition childId="d0da-fe63-a14e-d09e" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="equalTo" value="1"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier field="hidden" type="set" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition childId="4e7e-6105-5c92-ad00" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                <condition childId="3686-dd96-e621-2318" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                <condition childId="4011-ff59-c37a-cf5c" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                <condition childId="709b-39c9-ded4-1d70" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <rules>
         <rule name="Enhanced Warriors" id="5351-2a3d-310c-6095" hidden="false" page="104" publicationId="02e1-3f69-7ae7-f5c5">
           <description>Immunte to Fear and Terror. Automatically rally if they are broken and in cover at the end of the turn, even if they were broken or had to flee to reach cover in the same turn.</description>
         </rule>
       </rules>
     </selectionEntry>
-    <selectionEntry name="Ahriman" id="ed46-5374-3801-0d90" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Ahriman" id="ed46-5374-3801-0d90" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Chaos" id="90ab-b9c1-7414-dcdb" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
-        <categoryLink name="Characters" id="e28b-8ae5-b955-89bc" hidden="false" primary="true" targetId="9497-ff1f-dffc-011f"/>
+        <categoryLink name="1Characters" id="e7ab-bb21-32d6-1821" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="316"/>
+        <cost name="pts" typeId="points" value="246"/>
       </costs>
       <entryLinks>
-        <entryLink name="Power Armour" id="5055-c714-91c7-cf44" collective="false" hidden="false" import="true" targetId="223b-6b82-1907-d976" type="selectionEntry">
-          <constraints>
-            <constraint id="3278-241c-fe87-4b8a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="7a3a-7c13-65db-fee7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Frag Grenade" id="e326-ef4f-2e5f-7ada" hidden="false" targetId="122b-b17a-4e87-5994" type="profile"/>
-            <infoLink name="Bolt Pistol" id="10de-4f1b-96e7-13a8" hidden="false" targetId="3741-3592-b694-79b4" type="profile"/>
-            <infoLink name="Krak Grenade" id="d746-b973-02a2-057f" hidden="false" targetId="92bb-c543-83b0-5755" type="profile"/>
-          </infoLinks>
-        </entryLink>
-        <entryLink name="Psyker" id="3114-36f5-6740-b004" collective="false" hidden="false" import="true" targetId="56e9-7608-b945-ac81" type="selectionEntry">
+        <entryLink name="Psyker" id="3114-36f5-6740-b004" collective="false" hidden="false" import="true" sortIndex="2" targetId="56e9-7608-b945-ac81" type="selectionEntry">
           <constraints>
             <constraint id="f6f4-02a1-2de1-1d1b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="0ffa-6191-5d4c-c2c0" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
           <infoLinks>
             <infoLink name="Psychic Level 4" id="83fa-5086-3eb9-bd23" hidden="false" targetId="f988-2251-b863-a538" type="profile"/>
@@ -5711,7 +5093,6 @@ Xyclos C: The target model combusts as if set on fire by a 4-6 on the Flamer Hit
         <entryLink name="Mark of Tzeentch" id="f59a-6f46-693a-8b83" collective="false" hidden="false" import="true" targetId="ec82-b75b-46df-7ba2" type="selectionEntry">
           <constraints>
             <constraint id="df7f-c7a9-e412-ce43" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="7545-4205-e083-ba37" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
         </entryLink>
         <entryLink name="Chaos Rewards" id="834e-de17-9d88-3ad6" collective="false" hidden="false" import="true" targetId="f130-ec76-3fd2-cfdc" type="selectionEntryGroup">
@@ -5721,7 +5102,7 @@ Xyclos C: The target model combusts as if set on fire by a 4-6 on the Flamer Hit
         </entryLink>
         <entryLink name="Wargear Cards" id="2233-bcbb-0390-192e" collective="false" hidden="false" import="true" targetId="0c12-c9a3-9886-7ce2" type="selectionEntryGroup">
           <constraints>
-            <constraint id="ade2-b043-3e40-c590" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
+            <constraint id="ade2-b043-3e40-c590" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
           <modifiers>
             <modifier field="ade2-b043-3e40-c590" type="decrement" value="1">
@@ -5731,7 +5112,7 @@ Xyclos C: The target model combusts as if set on fire by a 4-6 on the Flamer Hit
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink name="Army Commander" id="70da-78dc-d79e-934b" collective="false" hidden="false" import="true" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
+        <entryLink name="Army Commander" id="70da-78dc-d79e-934b" collective="false" hidden="false" import="true" sortIndex="1" targetId="b6ca-03b2-9301-c1c9" type="selectionEntry">
           <infoLinks>
             <infoLink name="Army Commander Strategy Rating" id="0254-cd59-e774-6f18" hidden="false" targetId="742e-aa63-7b0f-8b56" type="profile">
               <modifiers>
@@ -5764,12 +5145,6 @@ Xyclos C: The target model combusts as if set on fire by a 4-6 on the Flamer Hit
             <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">10</characteristic>
           </characteristics>
         </profile>
-        <profile name="The Black Staff of Ahriman" id="f702-993d-5519-bc00" hidden="false" page="108" publicationId="02e1-3f69-7ae7-f5c5" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
-          <characteristics>
-            <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Whenever Ahriman uses a psychic power the Black Staff reduces the number of force cards needed to power it by -1 to a minimum of 1. 
-In close combat, the Black Staff adds +4 to Ahrimans Strength</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <rules>
         <rule name="Strategy Cards" id="6b66-b247-4b2a-ce62" hidden="false" page="108" publicationId="02e1-3f69-7ae7-f5c5">
@@ -5777,29 +5152,13 @@ In close combat, the Black Staff adds +4 to Ahrimans Strength</characteristic>
         </rule>
       </rules>
       <selectionEntries>
-        <selectionEntry name="Inferno Bolts" id="1973-2b0f-1ffc-573c" collective="false" hidden="false" import="true" type="upgrade">
-          <constraints>
-            <constraint id="23b4-f28a-abe0-a7d9" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="6e64-02e8-6521-9b0d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-          <profiles>
-            <profile name="Inferno Bolts" id="e4e7-5672-0007-7f6d" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
-              <characteristics>
-                <characteristic name="Special" typeId="f917-8cd8-7592-47dd">The bolts can be used whenever the model fires in the shooting phase instead of ordinary bolt ammunition (though the bolts may not be used in conjunction with rapid fire). The bolts hit with the same effects as the psychic power Tzeentch&apos;s Fire Storm. The Strength value of the fire storm is equal to the mastery level of the Sorcerer using the bolts instead of its normal Strength of 5. Targets with saving throws against psychic attacks may take them as normal against Inferno bolts. Otherwise, armour and energy fields have no effect.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
         <selectionEntry name="Destiny of Tzeentch" id="31cb-14f6-2cbf-3876" collective="false" hidden="false" import="true" type="upgrade">
           <constraints>
             <constraint id="503b-8cc3-2c52-9493" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
             <constraint id="344b-47f3-4507-7d9d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="0"/>
+            <cost name="pts" typeId="points" value="25"/>
           </costs>
           <profiles>
             <profile name="Destiny of Tzeentch" id="79b3-64d5-5b37-483f" hidden="false" typeId="aa04-135c-b9c2-b9e7" typeName="Chaos Rewards">
@@ -5810,6 +5169,71 @@ In close combat, the Black Staff adds +4 to Ahrimans Strength</characteristic>
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Wargear" id="a649-994a-ae1c-7b15" hidden="false" sortIndex="3">
+          <entryLinks>
+            <entryLink name="Power Armour" id="bbd4-ac83-fe80-4012" collective="false" hidden="false" import="true" targetId="223b-6b82-1907-d976" type="selectionEntry">
+              <constraints>
+                <constraint id="7d00-b517-d4d4-3c39" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="670f-6655-aab2-92f5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </entryLink>
+            <entryLink name="Bolt Pistol" id="f5a0-b502-10e1-c110" collective="false" hidden="false" import="true" targetId="b5bb-7853-53cb-bec4" type="selectionEntry">
+              <constraints>
+                <constraint id="9a5c-b2ac-60aa-1249" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="b527-4329-e0c5-811f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </entryLink>
+            <entryLink name="Frag Grenade" id="5f43-3d73-c8ad-38d1" collective="false" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+              <constraints>
+                <constraint id="7b3d-bbe2-aaad-edea" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="2afe-c78b-2386-bf19" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </entryLink>
+            <entryLink name="Krak Grenade" id="a745-1b97-d828-05a0" collective="false" hidden="false" import="true" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
+              <constraints>
+                <constraint id="74a3-d1df-0590-a84c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="07bc-e919-486b-2790" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <selectionEntries>
+            <selectionEntry name="Inferno Bolts" id="240d-61a1-9b28-4c72" collective="false" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="69b3-ca56-5d8f-24bb" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="3941-701a-ebcb-ab31" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <profiles>
+                <profile name="Inferno Bolts" id="28d6-5703-408d-ebf5" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+                  <characteristics>
+                    <characteristic name="Special" typeId="f917-8cd8-7592-47dd">The bolts can be used whenever the model fires in the shooting phase instead of ordinary bolt ammunition (though the bolts may not be used in conjunction with rapid fire). The bolts hit with the same effects as the psychic power Tzeentch&apos;s Fire Storm. The Strength value of the fire storm is equal to the mastery level of the Sorcerer using the bolts instead of its normal Strength of 5. Targets with saving throws against psychic attacks may take them as normal against Inferno bolts. Otherwise, armour and energy fields have no effect.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry name="Black Staff of Ahriman" id="0db6-76a2-8793-5a69" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="d094-2fff-adf1-e4f7" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="62f5-a48a-5b52-07fb" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+              <profiles>
+                <profile name="Black Staff of Ahriman" id="a210-6079-ef41-29a5" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
+                  <characteristics>
+                    <characteristic name="Special" typeId="f917-8cd8-7592-47dd">Whenever Ahriman uses a psychic power the Black Staff reduces the number of Force Cards needed to power it by -1 to a minimum of 1. 
+In Close Combat, the powerful energies of the Black Staff add +4 to Ahriman&apos;s Strength</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry name="Chaos Cannon of Khorne" id="fe5d-f8c0-c7de-cf40" collective="false" hidden="false" import="true" type="upgrade">
       <categoryLinks>
@@ -6808,6 +6232,773 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
         <infoLink name="Parry" id="2969-9dba-6d33-82fc" hidden="false" targetId="049d-3ed2-a1bf-86b0" type="rule"/>
       </infoLinks>
     </selectionEntry>
+    <selectionEntry name="Abaddon&apos;s Terminator Bodyguard" id="90c2-59a3-0ab2-0a0a" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="2Squads" id="6fcb-ebcc-2866-0b2e" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
+        <categoryLink name="Chaos" id="9e0b-4c95-038e-9394" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="f287-6e1e-a195-42ef" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
+      </constraints>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="4322-6b60-18e2-5bc7" childName="Abaddon the Despoiler, Warmaster of Chaos" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry name="Terminator" id="003b-f232-cba1-ee8d" collective="false" hidden="false" import="true" type="model">
+          <constraints>
+            <constraint id="a9ee-4740-8dd7-035b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="4"/>
+            <constraint id="4c64-275d-f92d-17a7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="4"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="51"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Terminator Armour" id="fb27-d0ad-367c-d4e8" hidden="false" import="true" targetId="9d43-a036-5991-2470" type="selectionEntry">
+              <constraints>
+                <constraint id="8472-c09f-f669-5425" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="1da0-10e4-c67c-3408" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Chaos Space Marine Terminators" id="6182-75fb-a05e-1a1a" hidden="false" targetId="122c-0723-b20a-bad3" type="profile">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition childId="fce6-540d-c23a-e1de" childName="Khorne Berzerker" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                        <condition childId="0f89-4097-8674-4475" childName="Noise Marine" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                        <condition childId="cacd-bc79-e55a-6708" childName="Plague Marine" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                        <condition childId="928e-978c-5452-6a57" childName="Thousand Sons Marine" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Khorne Bezerker Terminators" id="6de3-b04e-9d22-35be" hidden="false" targetId="58b0-e404-1fc5-cd08" type="profile">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="fce6-540d-c23a-e1de" childName="Khorne Berzerker" field="selections" includeChildSelections="true" scope="parent" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Noise Marines Terminators" id="dded-5498-b1fd-f647" hidden="false" targetId="522c-b877-4b90-1dd6" type="profile">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="0f89-4097-8674-4475" childName="Noise Marine" field="selections" includeChildSelections="true" scope="parent" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Plague Marines Terminators" id="cfa5-1ef7-0b5c-46c2" hidden="false" targetId="e85f-5f10-c371-4a79" type="profile">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="cacd-bc79-e55a-6708" childName="Plague Marine" field="selections" includeChildSelections="true" scope="parent" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Thousand Sons Terminators" id="c0cd-4b0e-e661-7048" hidden="false" targetId="aecb-4fd1-1999-b256" type="profile">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="928e-978c-5452-6a57" childName="Thousand Sons Marine" field="selections" includeChildSelections="true" scope="parent" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier field="a9ee-4740-8dd7-035b" type="decrement" value="1">
+              <repeats>
+                <repeat childId="b4ed-2dd7-3c3e-1edc" childName="Terminator w/ Heavy Weapon" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+            <modifier field="4c64-275d-f92d-17a7" type="decrement" value="1">
+              <repeats>
+                <repeat childId="b4ed-2dd7-3c3e-1edc" childName="Terminator w/ Heavy Weapon" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+            <modifier field="info" type="add" value="Each Terminator in the group will have the same weapons selected. If you want individual loadouts, click the + sign at the top to separate Terminators"/>
+          </modifiers>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Weapon Options" id="ea0d-7b43-0993-680d" hidden="false">
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Combi Weapon" id="252b-0404-fbfe-ef95" hidden="false">
+                  <constraints>
+                    <constraint id="9c31-e452-4bfa-72ab" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="cc36-db8d-2a05-a984" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink name="Terminator Ranged Weapons" id="0d44-e970-e46e-2096" hidden="false" import="true" sortIndex="1" targetId="017a-7cc9-9961-aa60" type="selectionEntryGroup"/>
+                    <entryLink name="Noise Marine Weapons" id="477d-cb00-d3ea-7bd6" hidden="false" import="true" targetId="8cdc-7dd6-ba8e-72d3" type="selectionEntryGroup">
+                      <modifiers>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="0f89-4097-8674-4475" childName="Noise Marine" field="selections" includeChildSelections="true" scope="90c2-59a3-0ab2-0a0a" shared="true" type="lessThan" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup name="Melee Weapons" id="cfa5-2d0e-8d35-7285" hidden="false">
+                  <constraints>
+                    <constraint id="8685-117d-8fa3-0978" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="6434-534d-8114-d921" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink name="Terminator Assault Weapons" id="836c-e82d-214a-ab89" hidden="false" import="true" targetId="7a4d-48c2-0a27-4067" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+        <selectionEntry name="Terminator w/ Heavy Weapon" id="b4ed-2dd7-3c3e-1edc" collective="false" hidden="false" import="true" type="model">
+          <constraints>
+            <constraint id="4fc6-9b27-d876-47a5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="51"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Terminator Armour" id="a7b3-ef5d-049b-52c3" hidden="false" import="true" targetId="9d43-a036-5991-2470" type="selectionEntry">
+              <constraints>
+                <constraint id="ac88-c07c-9dac-752d" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="b623-e2c2-edfa-c7f8" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Chaos Space Marine Terminators" id="93ef-2fcf-f101-964b" hidden="false" targetId="122c-0723-b20a-bad3" type="profile">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition childId="fce6-540d-c23a-e1de" childName="Khorne Berzerker" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                        <condition childId="0f89-4097-8674-4475" childName="Noise Marine" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                        <condition childId="cacd-bc79-e55a-6708" childName="Plague Marine" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                        <condition childId="928e-978c-5452-6a57" childName="Thousand Sons Marine" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Khorne Bezerker Terminators" id="782e-a210-0401-5054" hidden="false" targetId="58b0-e404-1fc5-cd08" type="profile">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="fce6-540d-c23a-e1de" childName="Khorne Berzerker" field="selections" includeChildSelections="true" scope="parent" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Noise Marines Terminators" id="046b-4a94-9f73-d945" hidden="false" targetId="522c-b877-4b90-1dd6" type="profile">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="0f89-4097-8674-4475" childName="Noise Marine" field="selections" includeChildSelections="true" scope="parent" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Plague Marines Terminators" id="2ff6-6aca-5c2a-68ef" hidden="false" targetId="e85f-5f10-c371-4a79" type="profile">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="cacd-bc79-e55a-6708" childName="Plague Marine" field="selections" includeChildSelections="true" scope="parent" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Thousand Sons Terminators" id="a329-8fe5-1122-6469" hidden="false" targetId="aecb-4fd1-1999-b256" type="profile">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="928e-978c-5452-6a57" childName="Thousand Sons Marine" field="selections" includeChildSelections="true" scope="parent" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier field="info" type="add" value="Each Terminator in the group will have the same weapons selected. If you want individual loadouts, click the + sign at the top to separate Terminators"/>
+          </modifiers>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Weapon Options" id="7fb9-a446-c6dd-0bf1" hidden="false">
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Heavy Weapon" id="474f-90d6-204f-7f3b" hidden="false">
+                  <constraints>
+                    <constraint id="9462-a9c4-f2c2-4254" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="e78b-e735-dda1-bf84" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink name="Terminator Heavy Weapons" id="4fd6-5e65-28d2-8ff6" hidden="false" import="true" sortIndex="1" targetId="7d86-8686-0232-6914" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup name="Melee Weapons" id="8666-db96-de1f-9439" hidden="false">
+                  <constraints>
+                    <constraint id="a6e6-eebc-0f2e-0e6d" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="1331-ddb0-6bba-2a38" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink name="Terminator Assault Weapons" id="13c5-3f28-c68b-35ac" hidden="false" import="true" targetId="7a4d-48c2-0a27-4067" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Legion Terminator Cult Upgrade" id="8568-5000-d9f7-4d74" collective="false" defaultSelectionEntryId="b624-c44d-593e-33fd" hidden="false" import="true">
+          <constraints>
+            <constraint id="286d-7b95-1799-5a23" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry name="Khorne Berzerker" id="fce6-540d-c23a-e1de" collective="false" hidden="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Mark of Khorne" id="e3d0-a206-5d80-c782" collective="false" hidden="false" import="true" targetId="36e6-7b5f-1e06-2e95" type="selectionEntry">
+                  <constraints>
+                    <constraint id="b9b0-150e-18e3-3832" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                    <constraint id="d353-6e24-7ed7-8e54" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <infoLinks>
+                <infoLink name="Furious Charge" id="45e0-263f-1cf2-6d69" hidden="false" targetId="696e-5f55-fee4-3a83" type="rule"/>
+              </infoLinks>
+              <modifiers>
+                <modifier field="points" type="increment" value="20">
+                  <repeats>
+                    <repeat childId="003b-f232-cba1-ee8d" childName="Terminator" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="20">
+                  <repeats>
+                    <repeat childId="b4ed-2dd7-3c3e-1edc" childName="Terminator w/ Heavy Weapon" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry name="Plague Marine" id="cacd-bc79-e55a-6708" collective="false" hidden="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier field="points" type="increment" value="20">
+                  <repeats>
+                    <repeat childId="003b-f232-cba1-ee8d" childName="Terminator" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="20">
+                  <repeats>
+                    <repeat childId="b4ed-2dd7-3c3e-1edc" childName="Terminator w/ Heavy Weapon" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <selectionEntries>
+                <selectionEntry name="Mark of Nurgle" id="8fb3-74fd-c8cb-dd6e" collective="false" hidden="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint id="5e6e-6da5-db4e-9523" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="d701-d394-a09d-4538" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                  <profiles>
+                    <profile name="Nurgle" id="6b30-eb98-570a-64b8" hidden="false" page="27" publicationId="02e1-3f69-7ae7-f5c5" typeId="4fa6-d4f7-781c-53f9" typeName="Mark of Chaos">
+                      <characteristics>
+                        <characteristic name="Special Rule" typeId="6299-cb13-a123-d9ec">Model gains +1 Toughness (included in profile already)</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntry>
+            <selectionEntry name="Thousand Sons Marine" id="928e-978c-5452-6a57" collective="false" hidden="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Mark of Tzeentch" id="a432-e935-c89c-1813" collective="false" hidden="false" import="true" targetId="ec82-b75b-46df-7ba2" type="selectionEntry">
+                  <constraints>
+                    <constraint id="ebc8-748d-ea2b-75f1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                    <constraint id="bda0-7fdd-0676-dcb5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <infoLinks>
+                <infoLink name="Spirit Warriors" id="ad5c-8fb4-4c28-d20d" hidden="false" targetId="a716-b7a1-3088-030e" type="rule"/>
+                <infoLink name="Immune to Psychology" id="d7a9-c4af-3269-a61c" hidden="false" targetId="2e73-71d0-e4b8-58e1" type="rule"/>
+              </infoLinks>
+              <modifiers>
+                <modifier field="points" type="increment" value="10">
+                  <repeats>
+                    <repeat childId="003b-f232-cba1-ee8d" childName="Terminator" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="10">
+                  <repeats>
+                    <repeat childId="b4ed-2dd7-3c3e-1edc" childName="Terminator w/ Heavy Weapon" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry name="Noise Marine" id="0f89-4097-8674-4475" collective="false" hidden="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Mark of Slaanesh" id="fa42-4e88-fffe-b46f" collective="false" hidden="false" import="true" targetId="c885-9d1b-76e7-6d83" type="selectionEntry">
+                  <constraints>
+                    <constraint id="94a2-afdd-dcbc-54a3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                    <constraint id="6dd0-58d6-cb0f-e1e2" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <infoLinks>
+                <infoLink name="Psychic Cacophony" id="0d8c-fa6a-dec8-11ea" hidden="false" targetId="e9e7-658e-1d94-07e7" type="rule"/>
+              </infoLinks>
+              <modifiers>
+                <modifier field="points" type="increment" value="10">
+                  <repeats>
+                    <repeat childId="003b-f232-cba1-ee8d" childName="Terminator" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="10">
+                  <repeats>
+                    <repeat childId="b4ed-2dd7-3c3e-1edc" childName="Terminator w/ Heavy Weapon" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry name="Chaos Space Marine Terminators" id="bda0-827f-fb4a-aefb" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="2Squads" id="9349-a3f4-a6a5-1bdc" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
+        <categoryLink name="Chaos" id="a3ac-e841-52bc-0cb5" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="c41e-8851-8c76-db7b" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
+      </constraints>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="4322-6b60-18e2-5bc7" childName="Abaddon the Despoiler, Warmaster of Chaos" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry name="Terminator" id="118e-cb13-5e93-f45f" collective="false" hidden="false" import="true" sortIndex="1" type="model">
+          <constraints>
+            <constraint id="43b7-a5cd-59c7-24a7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
+            <constraint id="71c3-b028-9a07-afe6" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="9"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="51"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Terminator Armour" id="2237-4cf8-bb78-0403" hidden="false" import="true" targetId="9d43-a036-5991-2470" type="selectionEntry">
+              <constraints>
+                <constraint id="2e36-fc2b-34e8-0f5d" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="e144-9ebc-955f-ecf8" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Chaos Space Marine Terminators" id="7995-57f2-6df9-d111" hidden="false" targetId="122c-0723-b20a-bad3" type="profile">
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <comment>Enhanced Warriors</comment>
+                  <conditions>
+                    <condition childId="c4c1-5b85-cd86-182b" childName="Enhanced Warriors" field="selections" scope="parent" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier field="4934-7872-3dd7-a8b6" type="increment" value="1"/>
+                    <modifier field="5916-04ef-0fd1-6557" type="increment" value="1"/>
+                    <modifier field="2e7d-2383-f92f-16f9" type="increment" value="1"/>
+                    <modifier field="e39a-b0ee-e6d1-e661" type="increment" value="1"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition childId="5662-0b0f-0db7-73f5" childName="Khorne Berzerker" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                        <condition childId="1395-01e9-271f-1913" childName="Noise Marine" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                        <condition childId="0a17-0bdb-66a3-480a" childName="Plague Marine" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                        <condition childId="3ff4-d4eb-f3c6-e39a" childName="Thousand Sons Marine" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Khorne Bezerker Terminators" id="408c-f438-d4ee-e367" hidden="false" targetId="58b0-e404-1fc5-cd08" type="profile">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="5662-0b0f-0db7-73f5" childName="Khorne Berzerker" field="selections" includeChildSelections="true" scope="parent" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Noise Marines Terminators" id="5a9a-6c01-44ad-1b6b" hidden="false" targetId="522c-b877-4b90-1dd6" type="profile">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="1395-01e9-271f-1913" childName="Noise Marine" field="selections" includeChildSelections="true" scope="parent" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Plague Marines Terminators" id="dafd-2547-b36a-ca4b" hidden="false" targetId="e85f-5f10-c371-4a79" type="profile">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="0a17-0bdb-66a3-480a" childName="Plague Marine" field="selections" includeChildSelections="true" scope="parent" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Thousand Sons Terminators" id="7af4-9743-c5d8-2b1f" hidden="false" targetId="aecb-4fd1-1999-b256" type="profile">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="3ff4-d4eb-f3c6-e39a" childName="Thousand Sons Marine" field="selections" includeChildSelections="true" scope="parent" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier field="43b7-a5cd-59c7-24a7" type="decrement" value="1">
+              <repeats>
+                <repeat childId="1534-6b7f-db0e-e224" childName="Terminator w/ Heavy Weapon" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+            <modifier field="71c3-b028-9a07-afe6" type="decrement" value="1">
+              <repeats>
+                <repeat childId="1534-6b7f-db0e-e224" childName="Terminator w/ Heavy Weapon" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+            <modifier field="info" type="add" value="Each Terminator in the group will have the same weapons selected. If you want individual loadouts, click the + sign at the top to separate Terminators"/>
+          </modifiers>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Weapon Options" id="ae28-cd56-2f69-7f98" hidden="false">
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Combi Weapon" id="ae67-003c-2761-c78a" hidden="false">
+                  <constraints>
+                    <constraint id="ce2c-79a5-638e-315e" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="9bdd-e3b5-55af-80da" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink name="Terminator Ranged Weapons" id="75ae-87fa-06f4-df71" hidden="false" import="true" sortIndex="1" targetId="017a-7cc9-9961-aa60" type="selectionEntryGroup"/>
+                    <entryLink name="Noise Marine Weapons" id="21c9-5ad2-89a4-161d" hidden="false" import="true" targetId="8cdc-7dd6-ba8e-72d3" type="selectionEntryGroup">
+                      <modifiers>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="1395-01e9-271f-1913" childName="Noise Marine" field="selections" includeChildSelections="true" scope="bda0-827f-fb4a-aefb" shared="true" type="lessThan" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup name="Melee Weapons" id="00d2-5d63-049d-c6f7" hidden="false">
+                  <constraints>
+                    <constraint id="9ec4-d50d-674e-e12e" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="97dc-741c-f7f4-db56" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink name="Terminator Assault Weapons" id="f76d-d26f-08d8-4c7a" hidden="false" import="true" targetId="7a4d-48c2-0a27-4067" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+        <selectionEntry name="Terminator w/ Heavy Weapon" id="1534-6b7f-db0e-e224" collective="false" hidden="false" import="true" sortIndex="2" type="model">
+          <constraints>
+            <constraint id="d75e-ac24-aa2c-6da4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="51"/>
+          </costs>
+          <entryLinks>
+            <entryLink name="Terminator Armour" id="640a-f256-b613-285c" hidden="false" import="true" targetId="9d43-a036-5991-2470" type="selectionEntry">
+              <constraints>
+                <constraint id="3daf-a1ad-1054-847e" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="450f-1c2f-e875-593b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Chaos Space Marine Terminators" id="1f79-99e3-8d71-82d2" hidden="false" targetId="122c-0723-b20a-bad3" type="profile">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition childId="5662-0b0f-0db7-73f5" childName="Khorne Berzerker" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                        <condition childId="1395-01e9-271f-1913" childName="Noise Marine" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                        <condition childId="0a17-0bdb-66a3-480a" childName="Plague Marine" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                        <condition childId="3ff4-d4eb-f3c6-e39a" childName="Thousand Sons Marine" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Khorne Bezerker Terminators" id="7aa7-163c-b624-82c5" hidden="false" targetId="58b0-e404-1fc5-cd08" type="profile">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="5662-0b0f-0db7-73f5" childName="Khorne Berzerker" field="selections" includeChildSelections="true" scope="parent" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Noise Marines Terminators" id="a35d-fd1a-345e-8c50" hidden="false" targetId="522c-b877-4b90-1dd6" type="profile">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="1395-01e9-271f-1913" childName="Noise Marine" field="selections" includeChildSelections="true" scope="parent" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Plague Marines Terminators" id="7421-278d-c506-25af" hidden="false" targetId="e85f-5f10-c371-4a79" type="profile">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="0a17-0bdb-66a3-480a" childName="Plague Marine" field="selections" includeChildSelections="true" scope="parent" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Thousand Sons Terminators" id="d91f-d616-91df-90d5" hidden="false" targetId="aecb-4fd1-1999-b256" type="profile">
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="3ff4-d4eb-f3c6-e39a" childName="Thousand Sons Marine" field="selections" includeChildSelections="true" scope="parent" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier field="info" type="add" value="Each Terminator in the group will have the same weapons selected. If you want individual loadouts, click the + sign at the top to separate Terminators"/>
+          </modifiers>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Weapon Options" id="9b3d-e0ec-c2a2-4b56" hidden="false">
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Heavy Weapon" id="cd4c-d9b7-78b5-31bd" hidden="false">
+                  <constraints>
+                    <constraint id="dace-4e60-6a98-06eb" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="411a-3ff5-bad0-11c9" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink name="Terminator Heavy Weapons" id="4d30-0467-dc5d-e538" hidden="false" import="true" sortIndex="1" targetId="7d86-8686-0232-6914" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup name="Melee Weapons" id="18f5-8bf4-d18b-d112" hidden="false">
+                  <constraints>
+                    <constraint id="0d0e-a3a8-d7ff-e285" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="2a06-14cd-dca7-6dd7" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink name="Terminator Assault Weapons" id="a41b-4fd8-25f3-671f" hidden="false" import="true" targetId="7a4d-48c2-0a27-4067" type="selectionEntryGroup"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Legion Terminator Cult Upgrade" id="0ef8-6eda-2322-2ae8" collective="false" defaultSelectionEntryId="b624-c44d-593e-33fd" hidden="false" import="true">
+          <constraints>
+            <constraint id="3e2d-2ac8-49fd-2c61" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry name="Khorne Berzerker" id="5662-0b0f-0db7-73f5" collective="false" hidden="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Mark of Khorne" id="6c0e-3d1b-2946-8efc" collective="false" hidden="false" import="true" targetId="36e6-7b5f-1e06-2e95" type="selectionEntry">
+                  <constraints>
+                    <constraint id="a46b-835a-52a2-2efb" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                    <constraint id="a33d-ea31-4f6b-2b11" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <infoLinks>
+                <infoLink name="Furious Charge" id="f6e4-f4dd-bbf0-e1f2" hidden="false" targetId="696e-5f55-fee4-3a83" type="rule"/>
+              </infoLinks>
+              <modifiers>
+                <modifier field="points" type="increment" value="20">
+                  <repeats>
+                    <repeat childId="118e-cb13-5e93-f45f" childName="Terminator" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="20">
+                  <repeats>
+                    <repeat childId="1534-6b7f-db0e-e224" childName="Terminator w/ Heavy Weapon" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry name="Plague Marine" id="0a17-0bdb-66a3-480a" collective="false" hidden="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier field="points" type="increment" value="20">
+                  <repeats>
+                    <repeat childId="118e-cb13-5e93-f45f" childName="Terminator" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="20">
+                  <repeats>
+                    <repeat childId="1534-6b7f-db0e-e224" childName="Terminator w/ Heavy Weapon" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <selectionEntries>
+                <selectionEntry name="Mark of Nurgle" id="8aa9-7d34-5e55-4f4d" collective="false" hidden="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint id="4e49-9c23-9283-b059" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="f7e2-3135-48c8-df70" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                  <profiles>
+                    <profile name="Nurgle" id="c006-3aec-e42c-5f7b" hidden="false" page="27" publicationId="02e1-3f69-7ae7-f5c5" typeId="4fa6-d4f7-781c-53f9" typeName="Mark of Chaos">
+                      <characteristics>
+                        <characteristic name="Special Rule" typeId="6299-cb13-a123-d9ec">Model gains +1 Toughness (included in profile already)</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntry>
+            <selectionEntry name="Thousand Sons Marine" id="3ff4-d4eb-f3c6-e39a" collective="false" hidden="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Mark of Tzeentch" id="3ba4-ee98-9aa8-315f" collective="false" hidden="false" import="true" targetId="ec82-b75b-46df-7ba2" type="selectionEntry">
+                  <constraints>
+                    <constraint id="795d-9fb4-f2e9-2d9a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                    <constraint id="dfd6-5058-b939-ff0a" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <infoLinks>
+                <infoLink name="Spirit Warriors" id="496a-8c76-6edf-a4ed" hidden="false" targetId="a716-b7a1-3088-030e" type="rule"/>
+                <infoLink name="Immune to Psychology" id="6aa8-9eb9-dace-55bd" hidden="false" targetId="2e73-71d0-e4b8-58e1" type="rule"/>
+              </infoLinks>
+              <modifiers>
+                <modifier field="points" type="increment" value="10">
+                  <repeats>
+                    <repeat childId="118e-cb13-5e93-f45f" childName="Terminator" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="10">
+                  <repeats>
+                    <repeat childId="1534-6b7f-db0e-e224" childName="Terminator w/ Heavy Weapon" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry name="Noise Marine" id="1395-01e9-271f-1913" collective="false" hidden="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <entryLinks>
+                <entryLink name="Mark of Slaanesh" id="7266-31e0-a8b0-8afa" collective="false" hidden="false" import="true" targetId="c885-9d1b-76e7-6d83" type="selectionEntry">
+                  <constraints>
+                    <constraint id="f34b-3c68-d801-09d6" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
+                    <constraint id="1acd-d42e-f89d-88a1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <infoLinks>
+                <infoLink name="Psychic Cacophony" id="fecc-c9c3-ad96-183e" hidden="false" targetId="e9e7-658e-1d94-07e7" type="rule"/>
+              </infoLinks>
+              <modifiers>
+                <modifier field="points" type="increment" value="10">
+                  <repeats>
+                    <repeat childId="118e-cb13-5e93-f45f" childName="Terminator" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+                <modifier field="points" type="increment" value="10">
+                  <repeats>
+                    <repeat childId="1534-6b7f-db0e-e224" childName="Terminator w/ Heavy Weapon" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Fabius&apos; Enhanced Warriors" id="1300-d8ed-387f-946b" hidden="false">
+          <entryLinks>
+            <entryLink name="Enhanced Warriors" id="c4c1-5b85-cd86-182b" hidden="false" import="true" targetId="78e7-9f14-2bb2-3f43" type="selectionEntry">
+              <modifiers>
+                <modifier field="points" type="increment" value="5">
+                  <repeats>
+                    <repeat childId="118e-cb13-5e93-f45f" childName="Terminator" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                    <repeat childId="1534-6b7f-db0e-e224" childName="Terminator w/ Heavy Weapon" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="parent" shared="true" value="1"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="719b-71a6-2809-47b8" childName="Fabius Bile" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="0ef8-6eda-2322-2ae8" childName="Legion Terminator Cult Upgrade" field="selections" includeChildForces="true" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry name="Daemonic Aura" id="d311-73f3-763a-ea30" hidden="false" import="true" type="upgrade">
+      <infoLinks>
+        <infoLink name="Daemonic Aura" id="f2c5-9c3a-3454-49b2" hidden="false" targetId="938e-6cf7-fdbe-7090" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Chaos Rewards" id="f130-ec76-3fd2-cfdc" collective="false" hidden="false" import="true">
@@ -6828,6 +7019,7 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
                       <conditions>
                         <condition childId="1909-d063-e86d-0920" childName="Terminator Loadouts" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
                         <condition childId="b6ef-5aa8-e87e-9422" childName="Chaos Space Marine Bike" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
+                        <condition childId="9d43-a036-5991-2470" childName="Terminator Armour" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -6912,6 +7104,8 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
                     <conditionGroup type="or">
                       <conditions>
                         <condition childId="b6ef-5aa8-e87e-9422" childName="Chaos Space Marine Bike" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
+                        <condition childId="9d43-a036-5991-2470" childName="Terminator Armour" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
+                        <condition childId="1909-d063-e86d-0920" childName="Terminator Loadouts" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -7117,23 +7311,20 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
               <costs>
                 <cost name="pts" typeId="points" value="40"/>
               </costs>
+              <entryLinks>
+                <entryLink name="Daemonic Aura" id="94f8-66ee-865a-302f" hidden="false" import="true" targetId="d311-73f3-763a-ea30" type="selectionEntry">
+                  <constraints>
+                    <constraint id="79b1-7233-bcd8-861b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="356c-f28c-c9d9-fc32" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
               <infoLinks>
                 <infoLink name="Fear" id="9a6d-c3ee-3d8c-1943" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
                 <infoLink name="Beast of Nurgle Attacks" id="986f-7daf-03d3-d226" hidden="false" targetId="9d2a-5d74-b2bb-f02c" type="rule"/>
                 <infoLink name="Slime Trail" id="b850-2afb-dc1c-b7be" hidden="false" targetId="3b5f-c057-2959-e017" type="rule"/>
                 <infoLink name="Beast of Nurgle" id="2e7a-0369-d7be-5dd1" hidden="false" targetId="808f-00dc-6a86-e38a" type="profile"/>
               </infoLinks>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition childId="b6ef-5aa8-e87e-9422" childName="Chaos Space Marine Bike" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
               <rules>
                 <rule name="Beast of Nurgle Gift" id="b6fa-b287-f735-a5c2" hidden="false" page="68" publicationId="02e1-3f69-7ae7-f5c5">
                   <description>The Beast will attempt to remain within 6&quot; of its master at all times. The two form a special unit and must obey unit coherency rules</description>
@@ -7799,7 +7990,7 @@ The Tear attack nominates a single location on the target. Roll penetration as n
     </selectionEntryGroup>
     <selectionEntryGroup name="Terminator Assault Weapons" id="7a4d-48c2-0a27-4067" collective="false" defaultSelectionEntryId="2a4b-90cb-2b45-ecef" hidden="false" import="true">
       <entryLinks>
-        <entryLink name="Chain-axe" id="2a4b-90cb-2b45-ecef" collective="false" hidden="false" import="true" targetId="10be-86b5-cbec-8131" type="selectionEntry"/>
+        <entryLink name="Chain-axe" id="2a4b-90cb-2b45-ecef" collective="false" hidden="false" import="true" sortIndex="1" targetId="10be-86b5-cbec-8131" type="selectionEntry"/>
         <entryLink name="Power Mace" id="472e-19ea-279f-748c" collective="false" hidden="false" import="true" targetId="02f8-f442-7f85-b1ed" type="selectionEntry">
           <costs>
             <cost name="pts" typeId="points" value="4"/>
@@ -7867,30 +8058,12 @@ The Tear attack nominates a single location on the target. Roll penetration as n
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Wargear Cards" id="0c12-c9a3-9886-7ce2" collective="false" hidden="false" import="true">
-      <entryLinks>
-        <entryLink name="Show Wargear Cards" id="e111-1be4-fea7-dc97" collective="false" hidden="false" import="true" targetId="0316-f054-534a-d96b" type="selectionEntry">
-          <constraints>
-            <constraint id="5cf6-5e8e-d385-4ae3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Cards" id="a371-6dda-e668-c2f5" collective="false" hidden="false" import="true">
           <entryLinks>
             <entryLink name="Wargear Cards (Generic)" id="94cf-2bfd-6405-b412" collective="false" hidden="false" import="true" targetId="b5be-2d0f-67e2-6260" type="selectionEntryGroup"/>
             <entryLink name="Chaos Wargear Cards" id="0a20-f18b-8e53-1bd4" collective="false" hidden="false" import="true" targetId="2bd4-4582-5caf-420f" type="selectionEntryGroup"/>
           </entryLinks>
-          <modifiers>
-            <modifier field="hidden" type="set" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="0316-f054-534a-d96b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="notEqualTo" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
@@ -7941,9 +8114,9 @@ The Tear attack nominates a single location on the target. Roll penetration as n
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Terminator Ranged Weapons" id="017a-7cc9-9961-aa60" collective="false" hidden="false" import="true">
+    <selectionEntryGroup name="Terminator Ranged Weapons" id="017a-7cc9-9961-aa60" collective="false" defaultSelectionEntryId="7f9c-892b-5774-f72d" hidden="false" import="true">
       <entryLinks>
-        <entryLink name="Twin Bolter" id="7f9c-892b-5774-f72d" collective="false" hidden="false" import="true" targetId="f82d-f5e2-2e7c-c3a7" type="selectionEntry"/>
+        <entryLink name="Twin Bolter" id="7f9c-892b-5774-f72d" collective="false" hidden="false" import="true" sortIndex="1" targetId="f82d-f5e2-2e7c-c3a7" type="selectionEntry"/>
         <entryLink name="Combi-Melta" id="69a9-9bbf-806d-b3dc" collective="false" hidden="false" import="true" targetId="b00e-bbb9-e4a9-af42" type="selectionEntry">
           <costs>
             <cost name="pts" typeId="points" value="6"/>
@@ -8131,6 +8304,67 @@ throw modifier of –1 for each point of Strength above 3. Surviving enemy model
           </profiles>
         </selectionEntry>
       </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Mark of Chaos" id="0f9b-6151-dc53-6113" collective="false" hidden="false" import="true">
+      <entryLinks>
+        <entryLink name="Mark of Tzeentch" id="c2f4-7c69-be19-fe64" collective="false" hidden="false" import="true" targetId="ec82-b75b-46df-7ba2" type="selectionEntry">
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="8a58-bcf6-ca49-373e" childName="Army Icon" field="selections" includeChildSelections="true" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="f231-689b-05ce-27f6" childName="Aspiring Champion" field="selections" includeChildSelections="true" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="5d78-a88b-49ce-e50e" childName="Chaos Champion" field="selections" includeChildSelections="true" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink name="Mark of Nurgle" id="6e7b-7890-4a4c-32fc" collective="false" hidden="false" import="true" targetId="6e38-ffd3-93de-5667" type="selectionEntry">
+          <modifiers>
+            <modifier field="points" type="set" value="10">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="8a58-bcf6-ca49-373e" childName="Army Icon" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="f231-689b-05ce-27f6" childName="Aspiring Champion" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink name="Mark of Khorne" id="4cbb-3413-0e8d-3e84" collective="false" hidden="false" import="true" targetId="36e6-7b5f-1e06-2e95" type="selectionEntry">
+          <modifiers>
+            <modifier field="points" type="set" value="15">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="8a58-bcf6-ca49-373e" childName="Army Icon" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="f231-689b-05ce-27f6" childName="Aspiring Champion" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink name="Mark of Slaanesh" id="514b-90d8-5434-e453" collective="false" hidden="false" import="true" targetId="c885-9d1b-76e7-6d83" type="selectionEntry">
+          <modifiers>
+            <modifier field="points" type="set" value="5">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="8a58-bcf6-ca49-373e" childName="Army Icon" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="f231-689b-05ce-27f6" childName="Aspiring Champion" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
 </catalogue>

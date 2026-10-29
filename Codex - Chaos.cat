@@ -48,6 +48,7 @@
     <entryLink name="Fallen Angels" id="602c-aa10-4605-823e" collective="false" hidden="false" import="true" targetId="35b3-756b-b545-d1c5" type="selectionEntry"/>
     <entryLink name="Huron Blackheart" id="8994-dff0-b363-b7fe" hidden="false" import="true" targetId="5785-abb3-0a25-ed37" type="selectionEntry"/>
     <entryLink name="Abaddon&apos;s Terminator Bodyguard" id="753f-e64f-5ac2-57e1" hidden="false" import="true" targetId="90c2-59a3-0ab2-0a0a" type="selectionEntry"/>
+    <entryLink name="Aspiring Champion" id="5443-c10b-5366-9101" hidden="false" import="true" targetId="f231-689b-05ce-27f6" type="selectionEntry"/>
   </entryLinks>
   <forceEntries>
     <forceEntry name="Chaos" id="7428-ade3-bde5-7955" hidden="false">
@@ -1379,7 +1380,7 @@ Nurglings cannot be banished back to the warp.</description>
       <description>Any enemy fighting a Plaguebearer must deduct -1 from their close combat score</description>
     </rule>
     <rule name="Beast of Nurgle Attacks" id="9d2a-5d74-b2bb-f02c" hidden="false" page="58" publicationId="02e1-3f69-7ae7-f5c5">
-      <description>The Beast of Nurgle has D6 Attacks in close combat, check each round. No armour saving throw is permitted for models wounded by the Beast</description>
+      <description>The Beast of Nurgle has D6 Attacks in close combat, check each round. No armour saving throw is permitted for models wounded by the Beast - though Fields work normally.</description>
     </rule>
     <rule name="Slime Trail" id="3b5f-c057-2959-e017" hidden="false" page="58" publicationId="02e1-3f69-7ae7-f5c5">
       <description>Multiple attackers do not receive the usual bonuses when attacking the Beast, no +1 for extra Attack for each opponent after the first, nor the +1 close combat modifier for each opponent after the first.</description>
@@ -1929,7 +1930,7 @@ The model is protected by a Daemonic Aura (4+ unmodified save).</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Bloodletters" id="d26c-c01a-8527-0cf8" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Bloodletters" id="d26c-c01a-8527-0cf8" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="Chaos" id="f7c1-e6ee-3b0a-a236" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
         <categoryLink name="Daemons" id="6fbf-5533-b2ba-cb0a" hidden="false" primary="true" targetId="a0e0-2325-a03b-f876"/>
@@ -1940,16 +1941,13 @@ The model is protected by a Daemonic Aura (4+ unmodified save).</description>
       <infoLinks>
         <infoLink name="Furious Charge" id="0b25-468d-fbce-6b70" hidden="false" targetId="696e-5f55-fee4-3a83" type="rule"/>
         <infoLink name="Fear" id="fdb4-a212-f677-db35" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
-        <infoLink name="Daemonic Aura" id="10c7-4bb1-764f-68ed" hidden="false" targetId="938e-6cf7-fdbe-7090" type="profile"/>
-        <infoLink name="Parry" id="3274-84ac-2bf4-e3fe" hidden="false" targetId="049d-3ed2-a1bf-86b0" type="rule"/>
-        <infoLink name="Hellblade" id="e14d-1a63-9719-903c" hidden="false" targetId="7391-ac2f-e68b-e70e" type="profile"/>
       </infoLinks>
       <modifiers>
         <modifier field="hidden" type="set" value="true">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="36e6-7b5f-1e06-2e95" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1"/>
+                <condition childId="36e6-7b5f-1e06-2e95" childName="Mark of Khorne" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1"/>
                 <condition childId="8e92-d7fd-51f0-a14e" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1"/>
               </conditions>
             </conditionGroup>
@@ -1962,13 +1960,27 @@ The model is protected by a Daemonic Aura (4+ unmodified save).</description>
         </rule>
       </rules>
       <selectionEntries>
-        <selectionEntry name="Bloodletter" id="15b8-2564-c221-35de" collective="false" hidden="false" import="true" type="upgrade">
+        <selectionEntry name="Bloodletter" id="15b8-2564-c221-35de" collective="false" hidden="false" import="true" type="model">
           <constraints>
-            <constraint id="5d7b-4ace-ceaf-8f2b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
+            <constraint id="5d7b-4ace-ceaf-8f2b" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="35"/>
           </costs>
+          <entryLinks>
+            <entryLink name="Daemonic Aura" id="8cdb-1727-ba71-112b" hidden="false" import="true" targetId="d311-73f3-763a-ea30" type="selectionEntry">
+              <constraints>
+                <constraint id="250d-48d2-1d59-aa78" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="b64c-8f5a-db7d-26d1" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+            <entryLink name="Hellblade" id="4b58-5ce9-537c-2cc4" hidden="false" import="true" targetId="2fef-94a9-b58f-1c30" type="selectionEntry">
+              <constraints>
+                <constraint id="12d2-f343-ead3-1cdb" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="b316-cba1-68da-45fe" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
           <infoLinks>
             <infoLink name="Bloodletter" id="536b-69b8-5d28-e788" hidden="false" targetId="cae6-c475-5893-1be9" type="profile"/>
           </infoLinks>
@@ -2223,10 +2235,10 @@ The model is protected by a Daemonic Aura (4+ unmodified save).</description>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry name="Beast of Nurgle" id="eee2-7358-255c-3fed" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Beast of Nurgle" id="eee2-7358-255c-3fed" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="Chaos" id="45ab-b19a-b988-7100" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
-        <categoryLink name="Daemons" id="628e-39bf-d464-04aa" hidden="false" primary="true" targetId="a0e0-2325-a03b-f876"/>
+        <categoryLink name="Daemons" id="52ca-381c-3534-a0f8" hidden="false" primary="true" targetId="0f7a-2cd5-df51-dccd"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
@@ -2235,28 +2247,35 @@ The model is protected by a Daemonic Aura (4+ unmodified save).</description>
         <infoLink name="Fear" id="ed04-932b-8503-162d" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
         <infoLink name="Beast of Nurgle Attacks" id="9e8e-327c-aad5-b85c" hidden="false" targetId="9d2a-5d74-b2bb-f02c" type="rule"/>
         <infoLink name="Slime Trail" id="66fc-b6a7-8840-a55f" hidden="false" targetId="3b5f-c057-2959-e017" type="rule"/>
-        <infoLink name="Daemonic Aura" id="f1c3-69cb-cb66-9885" hidden="false" targetId="938e-6cf7-fdbe-7090" type="profile"/>
       </infoLinks>
       <modifiers>
         <modifier field="hidden" type="set" value="true">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition childId="6e38-ffd3-93de-5667" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1"/>
-                <condition childId="8e92-d7fd-51f0-a14e" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="1"/>
+                <condition childId="8e92-d7fd-51f0-a14e" field="selections" includeChildForces="true" includeChildSelections="true" percentValue="false" scope="force" shared="true" type="lessThan" value="1"/>
+                <condition childId="6e38-ffd3-93de-5667" childName="Mark of Nurgle" field="selections" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntries>
-        <selectionEntry name="Beast of Nurgle" id="3fae-91d6-ab2d-04f2" collective="false" hidden="false" import="true" type="upgrade">
+        <selectionEntry name="Beast of Nurgle" id="3fae-91d6-ab2d-04f2" collective="false" hidden="false" import="true" type="model">
           <constraints>
-            <constraint id="efeb-8cfa-d37a-8fd3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
+            <constraint id="efeb-8cfa-d37a-8fd3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="38"/>
           </costs>
+          <entryLinks>
+            <entryLink name="Daemonic Aura" id="97e7-4f89-5078-b38a" hidden="false" import="true" targetId="d311-73f3-763a-ea30" type="selectionEntry">
+              <constraints>
+                <constraint id="973b-14bf-b967-8426" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="1ad5-8618-4d8e-9c70" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
           <infoLinks>
             <infoLink name="Beast of Nurgle" id="4ed8-873a-a369-b763" hidden="false" targetId="808f-00dc-6a86-e38a" type="profile"/>
           </infoLinks>
@@ -2680,6 +2699,7 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
       </rules>
     </selectionEntry>
     <selectionEntry name="Chaos Lord" id="9075-c5e9-0912-0340" collective="false" hidden="false" import="true" type="upgrade">
+      <comment>lefth ere</comment>
       <categoryLinks>
         <categoryLink name="Characters" id="8183-8fab-b1dc-c904" hidden="false" primary="true" targetId="9497-ff1f-dffc-011f"/>
         <categoryLink name="Chaos" id="bf15-b48b-db7d-0f7a" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
@@ -2991,7 +3011,6 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
       </infoLinks>
     </selectionEntry>
     <selectionEntry name="Army Icon" id="8a58-bcf6-ca49-373e" collective="false" hidden="false" import="true" type="model">
-      <comment>left off here</comment>
       <categoryLinks>
         <categoryLink name="Chaos" id="5017-bc55-8b75-b350" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
         <categoryLink name="1Characters" id="a46b-d8ca-2e69-da83" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
@@ -3003,7 +3022,7 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
         <cost name="pts" typeId="points" value="55"/>
       </costs>
       <entryLinks>
-        <entryLink name="Chaos Rewards" id="c601-3c60-54b6-e3c8" collective="false" hidden="false" import="true" sortIndex="4" targetId="f130-ec76-3fd2-cfdc" type="selectionEntryGroup">
+        <entryLink name="Chaos Rewards" id="c601-3c60-54b6-e3c8" collective="false" hidden="false" import="true" sortIndex="5" targetId="f130-ec76-3fd2-cfdc" type="selectionEntryGroup">
           <constraints>
             <constraint id="40b5-818f-ce64-d40f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
@@ -3021,7 +3040,7 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
           </modifiers>
         </entryLink>
         <entryLink name="Chaos Icons" id="ba57-8cca-9300-84dc" collective="false" hidden="false" import="true" sortIndex="2" targetId="3ebe-ea48-c7df-936f" type="selectionEntryGroup"/>
-        <entryLink name="Mark of Chaos" id="9362-d448-b2e5-0795" hidden="false" import="true" sortIndex="5" targetId="0f9b-6151-dc53-6113" type="selectionEntryGroup"/>
+        <entryLink name="Mark of Chaos" id="9362-d448-b2e5-0795" hidden="false" import="true" sortIndex="4" targetId="0f9b-6151-dc53-6113" type="selectionEntryGroup"/>
       </entryLinks>
       <infoLinks>
         <infoLink name="Icon Bearer" id="a35e-e393-1fea-f617" hidden="false" targetId="bc17-3570-4c6f-ae87" type="profile">
@@ -3098,9 +3117,17 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
               </costs>
               <modifiers>
                 <modifier field="hidden" type="set" value="true">
-                  <conditions>
-                    <condition childId="223b-6b82-1907-d976" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="notEqualTo" value="1"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition childId="fdd9-d56c-68d3-140d" childName="Chaos Steed" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
+                        <condition childId="9d43-a036-5991-2470" childName="Terminator Armour" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
+                        <condition childId="1909-d063-e86d-0920" childName="Terminator Loadouts" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
+                        <condition childId="0a0e-ecec-358c-34a9" childName="Steed of Slaneesh" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
+                        <condition childId="9807-0d4f-e20c-0d68" childName="Juggernaut of Khorne" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </entryLink>
@@ -3495,46 +3522,31 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Chaos Champion" id="5d78-a88b-49ce-e50e" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Chaos Champion" id="5d78-a88b-49ce-e50e" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
-        <categoryLink name="Characters" id="9808-2682-3fd2-4d50" hidden="false" primary="true" targetId="9497-ff1f-dffc-011f"/>
         <categoryLink name="Chaos" id="e14a-a44e-ff56-ceba" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+        <categoryLink name="1Characters" id="347b-0fd1-747a-45ce" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <entryLinks>
-        <entryLink name="Chaos Space Marine Bike" id="776f-3853-14b1-3eb2" collective="false" hidden="false" import="true" targetId="b6ef-5aa8-e87e-9422" type="selectionEntry">
-          <constraints>
-            <constraint id="020c-c468-35fe-38e3" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-          <modifiers>
-            <modifier field="hidden" type="set" value="true">
-              <conditions>
-                <condition childId="223b-6b82-1907-d976" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="notEqualTo" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink name="Chaos Rewards" id="1fa2-e63d-3c71-16c0" collective="false" hidden="false" import="true" targetId="f130-ec76-3fd2-cfdc" type="selectionEntryGroup">
+        <entryLink name="Chaos Rewards" id="1fa2-e63d-3c71-16c0" collective="false" hidden="false" import="true" sortIndex="5" targetId="f130-ec76-3fd2-cfdc" type="selectionEntryGroup">
           <constraints>
             <constraint id="61e2-35a4-c97c-74bb" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
           </constraints>
         </entryLink>
         <entryLink name="Wargear Cards" id="7d86-d3c2-0e98-7730" collective="false" hidden="false" import="true" targetId="0c12-c9a3-9886-7ce2" type="selectionEntryGroup">
           <constraints>
-            <constraint id="652e-0a39-27a3-cfbb" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="3"/>
+            <constraint id="652e-0a39-27a3-cfbb" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="0"/>
           </constraints>
           <modifiers>
-            <modifier field="652e-0a39-27a3-cfbb" type="set" value="4">
+            <modifier field="652e-0a39-27a3-cfbb" type="set" value="3">
               <conditions>
                 <condition childId="c244-6339-64c3-b05e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
               </conditions>
             </modifier>
-            <modifier field="652e-0a39-27a3-cfbb" type="set" value="3">
+            <modifier field="652e-0a39-27a3-cfbb" type="set" value="2">
               <conditions>
                 <condition childId="0830-7e82-ff2c-99f8" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
               </conditions>
@@ -3546,15 +3558,16 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink name="Mark of Chaos" id="9f88-8cc7-e252-d32c" hidden="false" import="true" sortIndex="4" targetId="0f9b-6151-dc53-6113" type="selectionEntryGroup"/>
       </entryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Champion Type" id="c8b1-c2d8-0397-4ffe" collective="false" defaultSelectionEntryId="0830-7e82-ff2c-99f8" hidden="false" import="true">
+        <selectionEntryGroup name="Champion Type" id="c8b1-c2d8-0397-4ffe" collective="false" defaultSelectionEntryId="0830-7e82-ff2c-99f8" hidden="false" import="true" sortIndex="1">
           <constraints>
             <constraint id="0e5f-13dd-e29d-7bd5" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
             <constraint id="dbe7-6ecf-846e-1aa7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry name="Mighty Champion" id="0830-7e82-ff2c-99f8" collective="false" hidden="false" import="true" type="upgrade">
+            <selectionEntry name="Mighty Champion" id="0830-7e82-ff2c-99f8" collective="false" hidden="false" import="true" sortIndex="1" type="upgrade">
               <constraints>
                 <constraint id="b5f3-3837-4a6d-8f1e" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
@@ -3562,7 +3575,15 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
                 <cost name="pts" typeId="points" value="58"/>
               </costs>
               <infoLinks>
-                <infoLink name="Mighty Champion" id="1169-dec8-9001-a6f8" hidden="false" targetId="7376-724e-3731-751d" type="profile"/>
+                <infoLink name="Mighty Champion" id="1169-dec8-9001-a6f8" hidden="false" targetId="7376-724e-3731-751d" type="profile">
+                  <modifiers>
+                    <modifier field="2e7d-2383-f92f-16f9" type="increment" value="1">
+                      <conditions>
+                        <condition childId="6e38-ffd3-93de-5667" childName="Mark of Nurgle" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
             </selectionEntry>
             <selectionEntry name="Exalted Champion" id="c244-6339-64c3-b05e" collective="false" hidden="false" import="true" type="upgrade">
@@ -3573,12 +3594,20 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
                 <cost name="pts" typeId="points" value="91"/>
               </costs>
               <infoLinks>
-                <infoLink name="Exalted Champion" id="ab8b-d317-20f9-b601" hidden="false" targetId="6cbf-68f7-4df3-82a3" type="profile"/>
+                <infoLink name="Exalted Champion" id="ab8b-d317-20f9-b601" hidden="false" targetId="6cbf-68f7-4df3-82a3" type="profile">
+                  <modifiers>
+                    <modifier field="2e7d-2383-f92f-16f9" type="increment" value="1">
+                      <conditions>
+                        <condition childId="6e38-ffd3-93de-5667" childName="Mark of Nurgle" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Armour Type" id="af8f-6515-940c-f728" collective="false" defaultSelectionEntryId="ed49-2f30-e6d8-52e2" hidden="false" import="true">
+        <selectionEntryGroup name="Armour Type" id="af8f-6515-940c-f728" collective="false" defaultSelectionEntryId="ed49-2f30-e6d8-52e2" hidden="false" import="true" sortIndex="2">
           <constraints>
             <constraint id="68b1-7ccb-7cb1-1c99" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
             <constraint id="48fa-dab8-3753-dbc4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
@@ -3603,26 +3632,7 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Mark of Chaos" id="794e-55c0-c5c8-41ec" collective="false" hidden="false" import="true">
-          <entryLinks>
-            <entryLink name="Mark of Nurgle" id="e224-f34b-d698-4da4" collective="false" hidden="false" import="true" targetId="6e38-ffd3-93de-5667" type="selectionEntry">
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
-            </entryLink>
-            <entryLink name="Mark of Khorne" id="1db7-e645-081f-4e14" collective="false" hidden="false" import="true" targetId="36e6-7b5f-1e06-2e95" type="selectionEntry">
-              <costs>
-                <cost name="pts" typeId="points" value="30"/>
-              </costs>
-            </entryLink>
-            <entryLink name="Mark of Slaanesh" id="8a96-6f45-c18d-746d" collective="false" hidden="false" import="true" targetId="c885-9d1b-76e7-6d83" type="selectionEntry">
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Weapons" id="8a55-d0a1-b92e-3c82" collective="false" hidden="false" import="true">
+        <selectionEntryGroup name="Weapons" id="8a55-d0a1-b92e-3c82" collective="false" hidden="false" import="true" sortIndex="3">
           <entryLinks>
             <entryLink name="Assault Weapons" id="63c8-2018-6bc8-590e" collective="false" hidden="false" import="true" targetId="bf95-e4e4-5614-9c8a" type="selectionEntryGroup">
               <modifiers>
@@ -3665,12 +3675,39 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Mount" id="948a-dfad-849b-db66" hidden="false">
+          <entryLinks>
+            <entryLink name="Chaos Space Marine Bike" id="3438-2963-1e36-59e1" collective="false" hidden="false" import="true" targetId="b6ef-5aa8-e87e-9422" type="selectionEntry">
+              <constraints>
+                <constraint id="226f-277e-2c4e-4ae4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition childId="fdd9-d56c-68d3-140d" childName="Chaos Steed" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
+                        <condition childId="9d43-a036-5991-2470" childName="Terminator Armour" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
+                        <condition childId="1909-d063-e86d-0920" childName="Terminator Loadouts" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
+                        <condition childId="0a0e-ecec-358c-34a9" childName="Steed of Slaneesh" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
+                        <condition childId="9807-0d4f-e20c-0d68" childName="Juggernaut of Khorne" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Aspiring Champion" id="f231-689b-05ce-27f6" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Aspiring Champion" id="f231-689b-05ce-27f6" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
-        <categoryLink name="Characters" id="9fb2-8ae7-7ef4-faa9" hidden="false" primary="true" targetId="9497-ff1f-dffc-011f"/>
         <categoryLink name="Chaos" id="4296-dec8-bfbf-58c9" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
+        <categoryLink name="1Characters" id="5460-da5e-1a69-21d1" hidden="false" primary="true" targetId="7576-d91f-083c-38a7"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="30"/>
@@ -3678,7 +3715,7 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
       <entryLinks>
         <entryLink name="Wargear Cards" id="fc5f-4ae1-2790-4872" collective="false" hidden="false" import="true" targetId="0c12-c9a3-9886-7ce2" type="selectionEntryGroup">
           <constraints>
-            <constraint id="981b-0331-b695-7e4c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="2"/>
+            <constraint id="981b-0331-b695-7e4c" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
           <modifiers>
             <modifier field="981b-0331-b695-7e4c" type="decrement" value="1">
@@ -3688,17 +3725,26 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink name="Chaos Rewards" id="3b65-1919-f10b-6a6b" collective="false" hidden="false" import="true" targetId="f130-ec76-3fd2-cfdc" type="selectionEntryGroup">
+        <entryLink name="Chaos Rewards" id="3b65-1919-f10b-6a6b" collective="false" hidden="false" import="true" sortIndex="4" targetId="f130-ec76-3fd2-cfdc" type="selectionEntryGroup">
           <constraints>
             <constraint id="4e65-5b8f-b238-3c4d" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
         </entryLink>
+        <entryLink name="Mark of Chaos" id="3ded-0d10-20f1-a312" hidden="false" import="true" sortIndex="3" targetId="0f9b-6151-dc53-6113" type="selectionEntryGroup"/>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Aspiring Champion" id="1b34-7fd4-20aa-3745" hidden="false" targetId="704f-b870-4e36-f518" type="profile"/>
+        <infoLink name="Aspiring Champion" id="1b34-7fd4-20aa-3745" hidden="false" targetId="704f-b870-4e36-f518" type="profile">
+          <modifiers>
+            <modifier field="2e7d-2383-f92f-16f9" type="increment" value="1">
+              <conditions>
+                <condition childId="6e38-ffd3-93de-5667" childName="Mark of Nurgle" field="selections" includeChildSelections="true" scope="parent" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Armour Type" id="a515-9315-71a6-f5f4" collective="false" defaultSelectionEntryId="9425-6627-8321-c2ad" hidden="false" import="true">
+        <selectionEntryGroup name="Armour Type" id="a515-9315-71a6-f5f4" collective="false" defaultSelectionEntryId="3e8e-8dd8-a817-f18b" hidden="false" import="true" sortIndex="1">
           <constraints>
             <constraint id="4a43-2265-ee74-35fc" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
             <constraint id="83a4-9e13-f87d-d0f7" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="1"/>
@@ -3716,115 +3762,25 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink name="Power Armour" id="9425-6627-8321-c2ad" collective="false" hidden="false" import="true" targetId="223b-6b82-1907-d976" type="selectionEntry">
-              <constraints>
-                <constraint id="c525-a834-f913-83e4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Frag Grenade" id="0891-e3cf-e678-9b2a" hidden="false" targetId="122b-b17a-4e87-5994" type="profile"/>
-                <infoLink name="Bolt Pistol" id="ccc2-1f11-dd36-0131" hidden="false" targetId="3741-3592-b694-79b4" type="profile"/>
-              </infoLinks>
-              <modifiers>
-                <modifier field="2b3c-98b8-49bc-d086" type="set" value="0"/>
-              </modifiers>
+            <entryLink name="Power Armour" id="3e8e-8dd8-a817-f18b" collective="false" hidden="false" import="true" targetId="223b-6b82-1907-d976" type="selectionEntry">
+              <entryLinks>
+                <entryLink name="Bolt Pistol" id="8668-8dfe-09e6-a729" hidden="false" import="true" targetId="b5bb-7853-53cb-bec4" type="selectionEntry">
+                  <constraints>
+                    <constraint id="3ad6-d97c-a002-b3e7" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="079c-9937-5d8c-6b47" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                </entryLink>
+                <entryLink name="Frag Grenade" id="5923-a1d8-8cae-3278" hidden="false" import="true" targetId="cc7b-eac9-7cc5-a156" type="selectionEntry">
+                  <constraints>
+                    <constraint id="c100-f27e-1cda-0f4f" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                    <constraint id="69bb-9fcb-fffa-05d0" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Mark of Chaos" id="0902-008f-53f3-ecad" collective="false" hidden="false" import="true">
-          <constraints>
-            <constraint id="7299-68dd-749e-a7d1" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <entryLinks>
-            <entryLink name="Mark of Nurgle" id="903f-67a3-d2f0-b987" collective="false" hidden="false" import="true" targetId="6e38-ffd3-93de-5667" type="selectionEntry">
-              <constraints>
-                <constraint id="88fa-1b5f-3794-cc07" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="0"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <modifiers>
-                <modifier field="88fa-1b5f-3794-cc07" type="set" value="1">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition childId="3623-3100-9f0c-5349" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition childId="2f21-cb67-eaae-ea51" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="1"/>
-                        <condition childId="8312-48e0-948c-5c6c" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Mark of Khorne" id="5b6b-248e-7eee-a280" collective="false" hidden="false" import="true" targetId="36e6-7b5f-1e06-2e95" type="selectionEntry">
-              <constraints>
-                <constraint id="3e2b-1e81-ad01-0cf4" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="0"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="15"/>
-              </costs>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition childId="3623-3100-9f0c-5349" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="1"/>
-                        <condition childId="2f21-cb67-eaae-ea51" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier field="3e2b-1e81-ad01-0cf4" type="set" value="1">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition childId="8312-48e0-948c-5c6c" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink name="Mark of Slaanesh" id="35ce-b0cd-a98a-ce28" collective="false" hidden="false" import="true" targetId="c885-9d1b-76e7-6d83" type="selectionEntry">
-              <constraints>
-                <constraint id="5d0d-08a1-edda-0595" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="0"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition childId="3623-3100-9f0c-5349" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="1"/>
-                        <condition childId="8312-48e0-948c-5c6c" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier field="5d0d-08a1-edda-0595" type="set" value="1">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition childId="2f21-cb67-eaae-ea51" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="ancestor" shared="true" type="instanceOf" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Weapons" id="15b2-08dc-51ac-23cc" collective="false" hidden="false" import="true">
+        <selectionEntryGroup name="Weapons" id="15b2-08dc-51ac-23cc" collective="false" hidden="false" import="true" sortIndex="2">
           <entryLinks>
             <entryLink name="Assault Weapons" id="8e20-885b-4290-3e00" collective="false" hidden="false" import="true" targetId="bf95-e4e4-5614-9c8a" type="selectionEntryGroup">
               <modifiers>
@@ -3874,6 +3830,33 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
                   <conditions>
                     <condition childId="2f21-cb67-eaae-ea51" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="ancestor" shared="true" type="notInstanceOf" value="1"/>
                   </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Mount" id="ea35-61dd-b1ae-0860" hidden="false">
+          <entryLinks>
+            <entryLink name="Chaos Space Marine Bike" id="d060-fed0-9c22-1682" collective="false" hidden="false" import="true" targetId="b6ef-5aa8-e87e-9422" type="selectionEntry">
+              <constraints>
+                <constraint id="4d1c-6a0a-69cf-6f00" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition childId="fdd9-d56c-68d3-140d" childName="Chaos Steed" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
+                        <condition childId="9d43-a036-5991-2470" childName="Terminator Armour" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
+                        <condition childId="1909-d063-e86d-0920" childName="Terminator Loadouts" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
+                        <condition childId="0a0e-ecec-358c-34a9" childName="Steed of Slaneesh" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
+                        <condition childId="9807-0d4f-e20c-0d68" childName="Juggernaut of Khorne" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="parent" shared="true" type="equalTo" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </entryLink>
@@ -4141,10 +4124,10 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Plague Marines" id="3623-3100-9f0c-5349" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Plague Marines" id="3623-3100-9f0c-5349" collective="false" hidden="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink name="Chaos" id="16b2-be30-60f8-e948" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
-        <categoryLink name="Squads" id="6fe8-ade9-91d6-416c" hidden="false" primary="true" targetId="6185-accd-3c7f-2fc2"/>
+        <categoryLink name="2Squads" id="0327-9ba2-1718-fcc8" hidden="false" primary="true" targetId="bc01-5ece-b97e-96de"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
@@ -4187,7 +4170,7 @@ The launcher cannot be hit separetely but any hit which penetrates the body will
         </entryLink>
       </entryLinks>
       <selectionEntries>
-        <selectionEntry name="Plague Marines" id="2186-e6fb-c499-d496" collective="false" hidden="false" import="true" type="upgrade">
+        <selectionEntry name="Plague Marines" id="2186-e6fb-c499-d496" collective="false" hidden="false" import="true" type="model">
           <constraints>
             <constraint id="6236-de90-96e3-12dd" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="min" value="3"/>
             <constraint id="f78d-60a9-ef7e-fc3f" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="9"/>
@@ -5235,22 +5218,27 @@ In Close Combat, the powerful energies of the Black Staff add +4 to Ahriman&apos
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Chaos Cannon of Khorne" id="fe5d-f8c0-c7de-cf40" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Chaos Cannon of Khorne" id="fe5d-f8c0-c7de-cf40" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Chaos" id="f868-f4a9-04a9-8b15" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
-        <categoryLink name="Support" id="c306-22a8-8317-1536" hidden="false" primary="true" targetId="db1a-73a1-08a2-0e88"/>
+        <categoryLink name="3Support" id="eb8b-0675-3ab6-269c" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="140"/>
       </costs>
       <entryLinks>
         <entryLink name="Vehicle Wargear Cards" id="5649-2320-4526-0cd2" collective="false" hidden="false" import="true" targetId="a9e9-0b23-7746-0aa6" type="selectionEntryGroup"/>
+        <entryLink name="Chaos Cultist Crew" id="71ff-5855-675a-e8d9" hidden="false" import="true" targetId="ad3a-bb22-3782-fc4a" type="selectionEntry">
+          <constraints>
+            <constraint id="2fa6-5992-d58a-c915" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="2"/>
+            <constraint id="d737-68d5-1505-3397" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="2"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Chaos Cannon of Khorne" id="0974-71d1-16df-4189" hidden="false" targetId="e56a-f1c1-2fe9-a23c" type="profile"/>
         <infoLink name="Cannon of Khorne Movement" id="bef1-bc3e-3ca6-71df" hidden="false" targetId="a68e-66dc-752f-21dc" type="rule"/>
         <infoLink name="Chaos Cauldron of Blood Damage Table" id="ac0f-4596-7267-27a9" hidden="false" targetId="6c26-e0af-398f-2acb" type="rule"/>
-        <infoLink name="Chaos Cultist" id="ff32-f06d-b654-94d4" hidden="false" targetId="90c2-b316-88d1-93fc" type="profile"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry name="Warpcannon" id="8215-456d-8397-89fe" collective="false" hidden="false" import="true" type="upgrade">
@@ -5268,10 +5256,10 @@ In Close Combat, the powerful energies of the Black Staff add +4 to Ahriman&apos
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry name="Chaos Cauldron of Blood" id="6f63-abc1-f5b9-8116" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Chaos Cauldron of Blood" id="6f63-abc1-f5b9-8116" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Chaos" id="758d-9413-9bc8-1a79" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
-        <categoryLink name="Support" id="b3f3-7095-6197-0ef0" hidden="false" primary="true" targetId="db1a-73a1-08a2-0e88"/>
+        <categoryLink name="3Support" id="533c-82d4-0882-349a" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="180"/>
@@ -5280,9 +5268,31 @@ In Close Combat, the powerful energies of the Black Staff add +4 to Ahriman&apos
         <entryLink name="Vehicle Wargear Cards" id="72fd-f605-b0aa-e48e" collective="false" hidden="false" import="true" targetId="a9e9-0b23-7746-0aa6" type="selectionEntryGroup"/>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Blood Cannon" id="9ce2-20b6-08bd-af87" hidden="false" targetId="d072-d869-de3c-77ae" type="profile"/>
         <infoLink name="Chaos Cauldron of Blood Damage Table" id="12eb-f3de-158f-cdfc" hidden="false" targetId="6c26-e0af-398f-2acb" type="rule"/>
       </infoLinks>
+      <profiles>
+        <profile name="Chaos Cauldron of Blood" id="2478-1cd4-6932-626e" hidden="false" typeId="371a-1ec9-2157-1eb6" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="Slow Speed" typeId="7c52-da5f-7f1a-95fd">5</characteristic>
+            <characteristic name="Combat Speed" typeId="87a6-dd16-ba8f-ff71">10</characteristic>
+            <characteristic name="Fast Speed" typeId="92f6-98b4-3770-d8d9">15</characteristic>
+            <characteristic name="Type" typeId="8567-afc3-f137-4d64">Wheeled</characteristic>
+            <characteristic name="Crew" typeId="7ee3-c2ef-4b92-55e1">Bound Daemon</characteristic>
+            <characteristic name="Ram Strength" typeId="13de-7be1-9f05-c48a">10</characteristic>
+            <characteristic name="Ram Damage" typeId="2ddf-d6d1-359f-bc9d">D20</characteristic>
+            <characteristic name="Ram Save Modfier" typeId="40ae-53ec-dee8-af1f">-6</characteristic>
+            <characteristic name="Armour Location" typeId="30da-ce76-ecb6-61ab">Wheels
+Hull
+Blood Cannon</characteristic>
+            <characteristic name="Front Armour" typeId="fafe-592c-1a65-1376">18
+23
+20</characteristic>
+            <characteristic name="Side/Rear Armour" typeId="fbc3-8073-078a-ac79">18
+23
+20</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <rules>
         <rule name="Daemon Engine of Khorne" id="9093-c915-1243-9526" hidden="false">
           <description>Comes equipped with Daemonic Possession and Destroyer upgrade which are factored into the points and stats already</description>
@@ -5305,10 +5315,8 @@ In Close Combat, the powerful energies of the Black Staff add +4 to Ahriman&apos
         <selectionEntry name="Destroyer (Khorne Only)" id="55dd-f859-991e-8177" collective="false" hidden="false" import="true" type="upgrade">
           <constraints>
             <constraint id="6959-04f0-14b5-e774" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="33e5-ac05-6d2e-9b15" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
           </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="25"/>
-          </costs>
           <profiles>
             <profile name="Destroyer" id="0568-9751-6253-87fc" hidden="false" typeId="cc8b-49d5-829c-bfaf" typeName="Wargear">
               <characteristics>
@@ -5317,10 +5325,10 @@ In Close Combat, the powerful energies of the Black Staff add +4 to Ahriman&apos
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry name="Daemonic Possession (Add 25% points)" id="c1fb-5c59-cb30-cf39" collective="false" hidden="false" import="true" type="upgrade">
-          <comment>You must manually add the Percentage of the points for this using the options under Daemonic Possession</comment>
+        <selectionEntry name="Daemonic Possession" id="c1fb-5c59-cb30-cf39" collective="false" hidden="false" import="true" type="upgrade">
           <constraints>
             <constraint id="dcb0-88c9-5f4d-4861" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="9902-c5e6-0bf1-9b07" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
@@ -5515,10 +5523,10 @@ May move in all directions without turning. May turn like a regular Walker if it
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Nurgle War Alter" id="fb48-cfca-df49-1605" collective="false" hidden="false" import="true" type="upgrade">
+    <selectionEntry name="Nurgle War Alter" id="fb48-cfca-df49-1605" collective="false" hidden="false" import="true" type="model">
       <categoryLinks>
         <categoryLink name="Chaos" id="4d19-8e24-3f1f-a687" hidden="false" primary="false" targetId="b373-19ca-9b61-1a4c"/>
-        <categoryLink name="Support" id="f7bf-29cc-340e-e591" hidden="false" primary="true" targetId="db1a-73a1-08a2-0e88"/>
+        <categoryLink name="3Support" id="0a67-242b-bcbe-7d69" hidden="false" primary="true" targetId="b6e4-2c66-e404-b10a"/>
       </categoryLinks>
       <constraints>
         <constraint id="01df-68ba-51be-ea45" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="true" type="max" value="1"/>
@@ -5559,7 +5567,8 @@ May move in all directions without turning. May turn like a regular Walker if it
             <conditionGroup type="and">
               <conditions>
                 <condition childId="3623-3100-9f0c-5349" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="2"/>
-                <condition childId="e224-f34b-d698-4da4" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="2"/>
+                <condition childId="5d78-a88b-49ce-e50e" childName="Chaos Champion" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="2"/>
+                <condition childId="6e38-ffd3-93de-5667" childName="Mark of Nurgle" field="selections" includeChildForces="false" includeChildSelections="true" percentValue="false" scope="roster" shared="true" type="lessThan" value="2"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -6999,6 +7008,19 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
         <infoLink name="Daemonic Aura" id="f2c5-9c3a-3454-49b2" hidden="false" targetId="938e-6cf7-fdbe-7090" type="profile"/>
       </infoLinks>
     </selectionEntry>
+    <selectionEntry name="Chaos Cultist Crew" id="ad3a-bb22-3782-fc4a" hidden="false" import="true" subType="crew" type="model">
+      <entryLinks>
+        <entryLink name="Axe" id="44fa-87e4-138f-5349" hidden="false" import="true" targetId="c2ba-db92-5ff9-38c2" type="selectionEntry">
+          <constraints>
+            <constraint id="fcc7-889c-af8d-28eb" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="da67-cc69-66e5-70e5" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Chaos Cultist" id="2b7d-c35e-ce6d-76f3" hidden="false" targetId="90c2-b316-88d1-93fc" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Chaos Rewards" id="f130-ec76-3fd2-cfdc" collective="false" hidden="false" import="true">
@@ -8320,6 +8342,16 @@ throw modifier of –1 for each point of Strength above 3. Surviving enemy model
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier field="points" type="set" value="20">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="9075-c5e9-0912-0340" childName="Chaos Lord" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="da97-b3f7-1508-c78a" childName="Chaos Space Marine Sorcerer" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
         </entryLink>
         <entryLink name="Mark of Nurgle" id="6e7b-7890-4a4c-32fc" collective="false" hidden="false" import="true" targetId="6e38-ffd3-93de-5667" type="selectionEntry">
@@ -8330,6 +8362,16 @@ throw modifier of –1 for each point of Strength above 3. Surviving enemy model
                   <conditions>
                     <condition childId="8a58-bcf6-ca49-373e" childName="Army Icon" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
                     <condition childId="f231-689b-05ce-27f6" childName="Aspiring Champion" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="points" type="set" value="20">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="5d78-a88b-49ce-e50e" childName="Chaos Champion" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="9075-c5e9-0912-0340" childName="Chaos Lord" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -8348,6 +8390,16 @@ throw modifier of –1 for each point of Strength above 3. Surviving enemy model
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier field="points" type="set" value="30">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="5d78-a88b-49ce-e50e" childName="Chaos Champion" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="9075-c5e9-0912-0340" childName="Chaos Lord" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
         </entryLink>
         <entryLink name="Mark of Slaanesh" id="514b-90d8-5434-e453" collective="false" hidden="false" import="true" targetId="c885-9d1b-76e7-6d83" type="selectionEntry">
@@ -8358,6 +8410,16 @@ throw modifier of –1 for each point of Strength above 3. Surviving enemy model
                   <conditions>
                     <condition childId="8a58-bcf6-ca49-373e" childName="Army Icon" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
                     <condition childId="f231-689b-05ce-27f6" childName="Aspiring Champion" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="points" type="set" value="10">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="5d78-a88b-49ce-e50e" childName="Chaos Champion" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="9075-c5e9-0912-0340" childName="Chaos Lord" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>

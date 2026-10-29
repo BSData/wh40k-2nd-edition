@@ -1019,8 +1019,7 @@
     </profile>
     <profile name="Army Commander Strategy Rating" id="742e-aa63-7b0f-8b56" hidden="false" typeId="4a47-f6d8-5780-3394" typeName="Army Commander">
       <characteristics>
-        <characteristic name="Strategy Rating" typeId="d0c8-e08c-1828-77b4">
-</characteristic>
+        <characteristic name="Strategy Rating" typeId="d0c8-e08c-1828-77b4"/>
       </characteristics>
     </profile>
     <profile name="Master-Crafted Bolt Pistol" id="c720-cb12-a072-7b1b" hidden="false" page="Wargear Card" publicationId="6d24-ac0a-2721-b4e2" typeId="d8e8-6c66-f558-30ee" typeName="Weapon">

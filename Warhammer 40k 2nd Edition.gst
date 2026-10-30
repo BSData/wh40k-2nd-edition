@@ -2674,7 +2674,7 @@ Still affected by Break tests like other troops</description>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <infoLinks>
-        <infoLink name="Power Armour" id="49e5-2df2-e637-2385" hidden="false" targetId="3f80-695d-2a45-93e8" type="profile"/>
+        <infoLink name="Power Armour" id="28a5-6f27-a6a8-257a" hidden="false" targetId="3f80-695d-2a45-93e8" type="profile"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry name="Chainsword" id="0bf9-3a64-2700-ff30" collective="false" hidden="false" import="true" page="7" publicationId="06e5-8e36-e8c8-aec3" type="upgrade">
